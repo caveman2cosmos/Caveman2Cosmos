@@ -13,10 +13,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
@@ -95,10 +92,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -170,7 +164,6 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -265,11 +258,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_ROCK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
@@ -376,11 +365,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_PLUS_SHIELD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SHIELD_SMALL</SubCombatType>
@@ -483,7 +468,6 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
@@ -618,10 +602,7 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
@@ -752,11 +733,7 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
@@ -930,10 +907,7 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_ROCK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
@@ -1044,10 +1018,7 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
@@ -1157,10 +1128,7 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
@@ -1382,10 +1350,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
@@ -1453,10 +1418,7 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
@@ -1571,14 +1533,8 @@
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_AXE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_BACKUP_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -1680,11 +1636,7 @@
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_AXE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -1796,10 +1748,7 @@
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_OAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2035,10 +1984,7 @@
 				<SubCombatType>UNITCOMBAT_SIEGE_WOODEN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -2140,7 +2086,6 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED_PLUS_SHIELD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
@@ -2263,10 +2208,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
@@ -2364,10 +2306,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2469,10 +2408,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
@@ -2568,10 +2504,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2667,10 +2600,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2772,10 +2702,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2880,10 +2807,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_MACE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2981,10 +2905,7 @@
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_MACE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3091,11 +3012,7 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_JAVELIN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
@@ -3208,11 +3125,7 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
@@ -3327,7 +3240,6 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3446,7 +3358,6 @@
                 <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
                 <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3568,11 +3479,7 @@
                 <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
                 <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
                 <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3686,11 +3593,7 @@
                 <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
                 <SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
-                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
                 <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
                 <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3805,11 +3708,7 @@
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>

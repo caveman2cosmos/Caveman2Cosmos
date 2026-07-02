@@ -902,46 +902,11 @@
 		<Polish>[ICON_BULLET]Modyfikator Obrony: %d1_Amount%%</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION</Tag>
-		<English>[ICON_BULLET]Demoralization: Loses %d1_Amount%% strength per defense in a given round.</English>
-		<French>[ICON_BULLET]Démoralisation: perd %d1_Amount%% de puissance en défense lors d'un round.</French>
-		<Italian>[ICON_BULLET]Demoralizzazione: perde %d1_Amount%% di forza alla difesa in un certo turno.</Italian>
-		<Polish>[ICON_BULLET]Demoralizacja: Zabiera %d1_Amount%% Si&#179;y na obron&#234; przez kilka rund.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION_TOTAL</Tag>
-		<English>[ICON_BULLET]Demoralization: Loses %d1_Amount%% Strength/defense.</English>
-		<French>[ICON_BULLET]Démoralisation: perd %d1_Amount%% Force/défense.</French>
-		<Italian>[ICON_BULLET]Demoralizzazione: perde %d1_Amount%% forza/difesa.</Italian>
-		<Polish>[ICON_BULLET]Demoralizacja: Zabiera %d1_Amount%% Si&#179;y/Rund&#234;.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_DEMORALIZATION_TOTAL_SHORT</Tag>
-		<English>[ICON_BULLET]Demoralization: -%d1_Amount%% strength/defense</English>
-		<French>[ICON_BULLET]Démoralisation: -%d1_Amount%% Force/défense</French>
-		<Italian>[ICON_BULLET]Demoralizzazione: -%d1_Amount%% forza/difesa</Italian>
-		<Polish>[ICON_BULLET]Demoralizacja: -%d1_Amount%% Si&#179;y/Rund&#234;</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DETERMINATION</Tag>
 		<English>[ICON_BULLET]Determination: Gains +%d1_Amount%% additional strength per defense in a given round.</English>
 		<French>[ICON_BULLET]Détermination: gagne +%d1_Amount%% de puissance supplémentaire en défense lors d'un round.</French>
 		<Italian>[ICON_BULLET]Determinazione: ottiene +%d1_Amount%% di forza supplementare alla difesa in un certo turno.</Italian>
 		<Polish>[ICON_BULLET]Determinacja: Daje +%d1_Amount%% dodatkowej Si&#179;y na obron&#234; przez kilka rund.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_DETERMINATION_TOTAL</Tag>
-		<English>[ICON_BULLET]Determination: Gains %d1_Amount%% Strength/defense.</English>
-		<French>[ICON_BULLET]Détermination: gagne %d1_Amount%% Force/défense.</French>
-		<Italian>[ICON_BULLET]Determinazione: ottiene %d1_Amount%% forza/difesa.</Italian>
-		<Polish>[ICON_BULLET]Determinacja: Daje %d1_Amount%% Si&#179;y/Rund&#234;.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_DETERMINATION_TOTAL_SHORT</Tag>
-		<English>[ICON_BULLET]Determination: +%d1_Amount%% strength/defense</English>
-		<French>[ICON_BULLET]Détermination: +%d1_Amount%% Force/défense</French>
-		<Italian>[ICON_BULLET]Determinazione: +%d1_Amount%% forza/difesa</Italian>
-		<Polish>[ICON_BULLET]Determinacja: +%d1_Amount%% Si&#179;y/Rund&#234;</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DODGE_MODIFIER</Tag>
@@ -1126,22 +1091,6 @@
 		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% di forza a turno di battaglia durante i combattimenti.</Italian>
 		<Polish>[ICON_BULLET]Zm&#234;czenie: Zabiera %d1_Amount%% do Si&#179;y na rund&#234; przez czas walki.</Polish>
 		<Russian>[ICON_BULLET]Истощение: потеря %d1_Amount%% силы за раунд битвы во время сражения.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FATIGUE_TOTAL</Tag>
-		<English>[ICON_BULLET]Fatigue: Loses %d1_Amount%% Strength/round.</English>
-		<French>[ICON_BULLET]Fatigue: perd %d1_Amount%% Force/round.</French>
-		<Italian>[ICON_BULLET]Fatica: perde %d1_Amount%% forza/turno.</Italian>
-		<Polish>[ICON_BULLET]Zm&#234;czenie: Zabiera %d1_Amount%% Si&#179;y/Rund&#234;.</Polish>
-		<Russian>[ICON_BULLET]Истощение: теряет %d1_Amount%% Сила/раунд.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_FATIGUE_TOTAL_SHORT</Tag>
-		<English>[ICON_BULLET]Fatigue: -%d1_Amount%% strength/rnd</English>
-		<French>[ICON_BULLET]Fatigue: -%d1_Amount%% Force/round</French>
-		<Italian>[ICON_BULLET]Fatica: -%d1_Amount%% forza/turno</Italian>
-		<Polish>[ICON_BULLET]Zm&#234;czenie: -%d1_Amount%% Si&#179;y/Rund&#234;</Polish>
-		<Russian>[ICON_BULLET]Истощение: -%d1_Amount%% силы/раунд</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FLANK_SUPPORT_PERCENT</Tag>
@@ -1889,46 +1838,6 @@
 		<Italian>[ICON_BULLET]Ira: ottiene +%d1_Amount%% di forza supplementare per ogni turno di battaglia durante i combattimenti.</Italian>
 		<Polish>[ICON_BULLET]W&#156;ciek&#179;o&#156;&#230;: Daje +%d1_Amount%% do Si&#179;y na rund&#234; przez czas walki.</Polish>
 		<Russian>[ICON_BULLET]Раж: получает +%d1_Amount%% прирост силы в сражении за раунд.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_RAGE_TOTAL</Tag>
-		<English>[ICON_BULLET]Rage: Gains %d1_Amount%% Strength/round.</English>
-		<French>[ICON_BULLET]Rage: gagne %d1_Amount%% Force/round.</French>
-		<Italian>[ICON_BULLET]Ira: ottiene %d1_Amount%% forza/turno.</Italian>
-		<Polish>[ICON_BULLET]W&#156;ciek&#179;o&#156;&#230;: Daje %d1_Amount%% Si&#179;y/Rund&#234;.</Polish>
-		<Russian>[ICON_BULLET]Раж: получает %d1_Amount%% к Силе/раунд.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_RAGE_TOTAL_SHORT</Tag>
-		<English>[ICON_BULLET]Rage: +%d1_Amount%% strength/rnd</English>
-		<French>[ICON_BULLET]Rage: +%d1_Amount%% Force/round</French>
-		<Italian>[ICON_BULLET]Ira: +%d1_Amount%% forza/turno</Italian>
-		<Polish>[ICON_BULLET]W&#156;ciek&#179;o&#156;&#230;: +%d1_Amount%% Si&#179;y/Rund&#234;</Polish>
-		<Russian>[ICON_BULLET]Раж: +%d1_Amount%% силы/раунд</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_RAMPAGE</Tag>
-		<English>[ICON_BULLET]Rampage: Gains +%d1_Amount%% additional strength per attack in a given round.</English>
-		<French>[ICON_BULLET]Frénésie: gagne +%d1_Amount%% de puissance supplémentaire en attaque lors d'un round.</French>
-		<Italian>[ICON_BULLET]Frenesia: ottiene +%d1_Amount%% di forza supplementare per ogni attacco in un certo turno.</Italian>
-		<Polish>[ICON_BULLET]Sza&#179;: Daje +%d1_Amount%% dodtkowej si&#179;y na atak przez kilka rund.</Polish>
-		<Russian>[ICON_BULLET]Ярость: получает +%d1_Amount%% прирост силы за атаку в данном раунде.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_RAMPAGE_TOTAL</Tag>
-		<English>[ICON_BULLET]Rampage: Gains %d1_Amount%% Strength/attack.</English>
-		<French>[ICON_BULLET]Frénésie: gagne %d1_Amount%% Force/attaque.</French>
-		<Italian>[ICON_BULLET]Frenesia: ottiene %d1_Amount%% forza/turno.</Italian>
-		<Polish>[ICON_BULLET]Sza&#179;: Daje %d1_Amount%% Si&#179;y/Rund&#234;.</Polish>
-		<Russian>[ICON_BULLET]Ярость: получает %d1_Amount%% к Силе/атаке.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_RAMPAGE_TOTAL_SHORT</Tag>
-		<English>[ICON_BULLET]Rampage: +%d1_Amount%% strength/attack</English>
-		<French>[ICON_BULLET]Frénésie: +%d1_Amount%% Force/attaque</French>
-		<Italian>[ICON_BULLET]Frenesia: +%d1_Amount%% forza/turno</Italian>
-		<Polish>[ICON_BULLET]Sza&#179;: +%d1_Amount%% Si&#179;y/Rund&#234;</Polish>
-		<Russian>[ICON_BULLET]Ярость: +%d1_Amount%% силы/атаки</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_REFLEXES</Tag>

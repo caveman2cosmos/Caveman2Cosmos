@@ -24,6 +24,7 @@
 #include "CvGameTextMgr.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
+#include "Utils/PlotSnapshot.h"
 #include "CvPython.h"
 #include "CvReplayInfo.h"
 #include "CvReplayMessage.h"
@@ -36,6 +37,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvBuildingFilters.h"
 #include "CvUnitFilters.h"
+#include "Repos/UnitsRepo.h"
 
 #ifdef NO_RANDOM
 	int iNumAlea;
@@ -494,7 +496,10 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
 
-	// Game has been initialized fully when reaching this point.
+	// Some in-session load paths reach us with the flag still true from the
+    // previous game (reset() isn't reliably called between loads). The function
+    // is idempotent w.r.t. this flag, so just (re)assert the true state rather
+    // than relying on an external precondition.
 	m_bFinalInitialized = true;
 	// First code flow opportunity after fully loading a save is here
 	if (!bNewGame)
@@ -582,6 +587,52 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
+
+	// Capture a CSV reference of every plot's state for cross-referencing with
+    // BuildEvaluation.log. Tag "start" for new games, "load" for save-loads.
+    // regenerateMap fires its own writePlotSnapshot("regen") because that path
+    // doesn't route through onFinalInitialized.
+    writePlotSnapshot(bNewGame ? "start" : "load");
+
+    // [GAME/*] -- one-time session header so every other AI log can be read against
+    // the active game setup. Emitted whenever any AI logging level is enabled.
+    if (gPlayerLogLevel > 0 || gTeamLogLevel > 0 || gCityLogLevel > 0 || gUnitLogLevel > 0)
+    {
+        logGameInfo("[GAME/begin] %s turn=%d speed=%s handicap=%s startEra=%s map=%dx%d maxTurns=%d civsAlive=%d",
+            bNewGame ? "NEW_GAME" : "LOAD", getGameTurn(),
+            GC.getGameSpeedInfo(getGameSpeedType()).getType(),
+            GC.getHandicapInfo(getHandicapType()).getType(),
+            GC.getEraInfo(getStartEra()).getType(),
+            GC.getMap().getGridWidth(), GC.getMap().getGridHeight(),
+            getMaxTurns(), countCivPlayersAlive());
+
+        for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+        {
+            if (isOption((GameOptionTypes)iI))
+            {
+                logGameInfo("[GAME/option] %s", GC.getGameOptionInfo((GameOptionTypes)iI).getType());
+            }
+        }
+        for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
+        {
+            if (isVictoryValid((VictoryTypes)iI))
+            {
+                logGameInfo("[GAME/victory] %s", GC.getVictoryInfo((VictoryTypes)iI).getType());
+            }
+        }
+        for (int iI = 0; iI < MAX_PLAYERS; iI++)
+        {
+            const CvPlayer& kP = GET_PLAYER((PlayerTypes)iI);
+            if (kP.isAlive())
+            {
+                logGameInfo("[GAME/player] id=%d team=%d human=%d leader=%s civ=%s",
+                    iI, (int)kP.getTeam(), kP.isHumanPlayer() ? 1 : 0,
+                    GC.getLeaderHeadInfo(kP.getLeaderType()).getType(),
+                    GC.getCivilizationInfo(kP.getCivilizationType()).getType());
+            }
+        }
+    }
+
 	OutputDebugString("onFinalInitialized: End\n");
 
 	writeRealtimeLogMetadata(true);
@@ -758,6 +809,10 @@ void CvGame::regenerateMap()
 	CvEventReporter::getInstance().mapRegen();
 
 	doPreTurn0();
+
+	// Fresh plot snapshot for the regenerated map. Distinguished from the
+    // "start" snapshot (which runs from onFinalInitialized) by tag.
+    writePlotSnapshot("regen");
 }
 
 void CvGame::uninit()
@@ -4648,24 +4703,21 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 
 		if (eHandicap != NO_HANDICAP)
 		{
-			for (int i = 0; i < GC.getNumUnitInfos(); i++)
+			foreach_(const UnitTypes eFounder, UnitsRepo::get().founderUnits())
 			{
-				if (GC.getUnitInfo((UnitTypes)i).isFound())
-				{
-					for (int j = 0; j < MAX_PLAYERS; j++)
-					{
-						// Skip empty/leaderless player slots: getNewCityProductionValue() ->
-                        // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
-                        // unused slots, and dead/never-used players have no city production to cost.
-                        // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
-                        // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
-                        // of MB and stalling the load on Assert builds.
-                        if (GET_PLAYER((PlayerTypes)j).isAlive())
-                        {
-                            GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
-                        }
-					}
-				}
+                for (int j = 0; j < MAX_PLAYERS; j++)
+                {
+                    // Skip empty/leaderless player slots: getNewCityProductionValue() ->
+                    // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
+                    // unused slots, and dead/never-used players have no city production to cost.
+                    // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
+                    // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
+                    // of MB and stalling the load on Assert builds.
+                    if (GET_PLAYER((PlayerTypes)j).isAlive())
+                    {
+                        GET_PLAYER((PlayerTypes)j).setUnitExtraCost(eFounder, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+                    }
+                }
 			}
 			for (int j = 0; j < MAX_PLAYERS; j++)
 			{
@@ -5743,6 +5795,13 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 void CvGame::doTurn()
 {
 	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
+
+	// Capture a snapshot of every plot's state at the start of the turn so the
+    // BuildEvaluation.log entries that follow can be cross-referenced against
+    // a frozen view of the world the AI saw when it made each decision. One
+    // file per turn (PlotSnapshot_turn_t<N>.csv) -- complements the one-off
+    // "start" / "load" / "regen" snapshots from onFinalInitialized.
+    writePlotSnapshot("turn");
 
 	writeRealtimeLogMetadata(false);
 
@@ -7786,11 +7845,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 		CvPlayer& kPlayer = GET_PLAYER(kData.kVoteOption.ePlayer);
 		const TeamTypes eTeam = kPlayer.getTeam();
 
-		if (gTeamLogLevel >= 1)
-		{
-			logBBAI("  Vote for forcing peace against team %d (%S) passes", eTeam, kPlayer.getCivilizationDescription(0) );
-		}
-
 		for (int iI = 0; iI < MAX_PC_PLAYERS; ++iI)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eTeam)
@@ -7824,11 +7878,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 		FAssert(NO_PLAYER != kData.kVoteOption.ePlayer);
 		CvPlayer& kPlayer = GET_PLAYER(kData.kVoteOption.ePlayer);
 
-		if (gTeamLogLevel >= 1)
-		{
-			logBBAI("  Vote for war against team %d (%S) passes", kPlayer.getTeam(), kPlayer.getCivilizationDescription(0) );
-		}
-
 		for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
 		{
 			CvPlayer& playerX = GET_PLAYER((PlayerTypes)iPlayer);
@@ -7849,15 +7898,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 
 		if (NULL != pCity && NO_PLAYER != kData.kVoteOption.eOtherPlayer && kData.kVoteOption.eOtherPlayer != pCity->getOwner())
 		{
-			if (gTeamLogLevel >= 1)
-			{
-				logBBAI(
-					"  Vote for assigning %S to %d (%S) passes",
-					pCity->getName().GetCString(),
-					GET_PLAYER(kData.kVoteOption.eOtherPlayer).getTeam(),
-					GET_PLAYER(kData.kVoteOption.eOtherPlayer).getCivilizationDescription(0)
-				);
-			}
 			GET_PLAYER(kData.kVoteOption.eOtherPlayer).acquireCity(pCity, false, true, true);
 		}
 		setVoteOutcome(kData, NO_PLAYER_VOTE);
@@ -9427,7 +9467,7 @@ void CvGame::doVoteResults()
 					szBuffer += NEWLINE + gDLL->getText("TXT_KEY_POPUP_DIPLOMATIC_VOTING_VICTORY", GET_TEAM(eTeam).getName().GetCString(), countVote(*pVoteTriggered, (PlayerVoteTypes)eTeam), getVoteRequired(eVote, eVoteSource), countPossibleVote(eVote, eVoteSource));
 				}
 
-				for (int iI = MAX_PC_TEAMS -1; iI >= 0; --iI)
+				for (int iI = MAX_PC_TEAMS - 1; iI >= 0; --iI)
 				{
 					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{

@@ -96,9 +96,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FP_PROFILE_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
@@ -110,9 +110,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FP_PROFILE_EXTRA_ENABLE;USE_INTERNAL_PROFILER</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput />
   </PropertyGroup>
@@ -123,9 +123,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FASSERT_ENABLE</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
@@ -137,7 +137,7 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FASSERT_ENABLE;FASSERT_LOGGING</NMakePreprocessorDefinitions>
     <NMakeOutput>
     </NMakeOutput>
@@ -149,9 +149,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
@@ -163,9 +163,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FINAL_RELEASE;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
@@ -175,9 +175,9 @@
     <NMakeBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) build deploy</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) rebuild deploy</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>call "$(SolutionDir)..\Tools\_MakeDLL.bat" $(Configuration) clean</NMakeCleanCommandLine>
-    <IncludePath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
+    <IncludePath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.55.0\include;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</IncludePath>
     <NMakePreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;XERCES_STATIC_LIBRARY;_MOD_SENTRY;_MOD_FRACTRADE;_MOD_GOVWORKERS;FASSERT_ENABLE</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath>$(SolutionDir).;$(SolutionDir)Infos;$(SolutionDir)include;$(SolutionDir)..\Build\deps\Microsoft Visual C++ Toolkit 2003\include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include;$(SolutionDir)..\Build\deps\Microsoft SDKs\Windows\v6.0\Include\mfc;$(SolutionDir)..\Build\deps\Boost-1.32.0\include;$(SolutionDir)..\Build\deps\Python24\include</NMakeIncludeSearchPath>
     <AdditionalOptions>/DBOOST_FUNCTION_PARMS=0 /DBOOST_FUNCTION_PARM=0</AdditionalOptions>
     <NMakeOutput>
     </NMakeOutput>
@@ -223,7 +223,7 @@
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvArmy.cpp" />
-    <ClCompile Include="CvBonusInfo.cpp" />
+    <ClCompile Include="Infos\CvBonusInfo.cpp" />
     <ClCompile Include="CvDiplomacyClasses.cpp" />
     <ClCompile Include="CvHallOfFameInfo.cpp" />
     <ClCompile Include="CvPlayerOptionInfo.cpp" />
@@ -241,8 +241,10 @@
     <ClCompile Include="CvUnitCombatInfo.cpp" />
     <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvValueService.cpp" />
+    <ClCompile Include="CvCombatModel.cpp" />
+    <ClCompile Include="CvDecisionAI.cpp" />
+    <ClCompile Include="CvHunterAI.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
-    <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyCityOutputHistoryInterface.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="CvHeritageInfo.cpp" />
@@ -287,6 +289,109 @@
     <ClCompile Include="CvGameObject.cpp" />
     <ClCompile Include="CvGameTextMgr.cpp" />
     <ClCompile Include="CvGlobals.cpp" />
+    <ClCompile Include="Infos\CvActionInfo.cpp" />
+    <ClCompile Include="Infos\CvAdvisorInfo.cpp" />
+    <ClCompile Include="Infos\CvAnimationCategoryInfo.cpp" />
+    <ClCompile Include="Infos\CvAnimationPathInfo.cpp" />
+    <ClCompile Include="Infos\CvArtInfoAsset.cpp" />
+    <ClCompile Include="Infos\CvArtInfoBonus.cpp" />
+    <ClCompile Include="Infos\CvArtInfoBuilding.cpp" />
+    <ClCompile Include="Infos\CvArtInfoCivilization.cpp" />
+    <ClCompile Include="Infos\CvArtInfoFeature.cpp" />
+    <ClCompile Include="Infos\CvArtInfoImprovement.cpp" />
+    <ClCompile Include="Infos\CvArtInfoLeaderhead.cpp" />
+    <ClCompile Include="Infos\CvArtInfoMovie.cpp" />
+    <ClCompile Include="Infos\CvArtInfoScalableAsset.cpp" />
+    <ClCompile Include="Infos\CvArtInfoTerrain.cpp" />
+    <ClCompile Include="Infos\CvArtInfoUnit.cpp" />
+    <ClCompile Include="Infos\CvAssetInfoBase.cpp" />
+    <ClCompile Include="Infos\CvAttachableInfo.cpp" />
+    <ClCompile Include="Infos\CvAutomateInfo.cpp" />
+    <ClCompile Include="Infos\CvBonusClassInfo.cpp" />
+    <ClCompile Include="Infos\CvBuildInfo.cpp" />
+    <ClCompile Include="Infos\CvCategoryInfo.cpp" />
+    <ClCompile Include="Infos\CvCivicInfo.cpp" />
+    <ClCompile Include="Infos\CvCivicOptionInfo.cpp" />
+    <ClCompile Include="Infos\CvCivilizationInfo.cpp" />
+    <ClCompile Include="Infos\CvClimateInfo.cpp" />
+    <ClCompile Include="Infos\CvColorInfo.cpp" />
+    <ClCompile Include="Infos\CvCommandInfo.cpp" />
+    <ClCompile Include="Infos\CvCommerceInfo.cpp" />
+    <ClCompile Include="Infos\CvControlInfo.cpp" />
+    <ClCompile Include="Infos\CvCorporationInfo.cpp" />
+    <ClCompile Include="Infos\CvCultureLevelInfo.cpp" />
+    <ClCompile Include="Infos\CvCursorInfo.cpp" />
+    <ClCompile Include="Infos\CvDiplomacyTextInfo.cpp" />
+    <ClCompile Include="Infos\CvEffectInfo.cpp" />
+    <ClCompile Include="Infos\CvEmphasizeInfo.cpp" />
+    <ClCompile Include="Infos\CvEntityEventInfo.cpp" />
+    <ClCompile Include="Infos\CvEraInfo.cpp" />
+    <ClCompile Include="Infos\CvEspionageMissionInfo.cpp" />
+    <ClCompile Include="Infos\CvEventInfo.cpp" />
+    <ClCompile Include="Infos\CvEventTriggerInfo.cpp" />
+    <ClCompile Include="Infos\CvFeatureInfo.cpp" />
+    <ClCompile Include="Infos\CvForceControlInfo.cpp" />
+    <ClCompile Include="Infos\CvGameOptionInfo.cpp" />
+    <ClCompile Include="Infos\CvGameSpeedInfo.cpp" />
+    <ClCompile Include="Infos\CvGameText.cpp" />
+    <ClCompile Include="Infos\CvGoodyInfo.cpp" />
+    <ClCompile Include="Infos\CvGraphicOptionInfo.cpp" />
+    <ClCompile Include="Infos\CvHandicapInfo.cpp" />
+    <ClCompile Include="Infos\CvHotkeyInfo.cpp" />
+    <ClCompile Include="Infos\CvHurryInfo.cpp" />
+    <ClCompile Include="Infos\CvIdeaClassInfo.cpp" />
+    <ClCompile Include="Infos\CvIdeaInfo.cpp" />
+    <ClCompile Include="Infos\CvImprovementBonusInfo.cpp" />
+    <ClCompile Include="Infos\CvInfoBase.cpp" />
+    <ClCompile Include="Infos\CvInterfaceModeInfo.cpp" />
+    <ClCompile Include="Infos\CvInvisibleInfo.cpp" />
+    <ClCompile Include="Infos\CvLandscapeInfo.cpp" />
+    <ClCompile Include="Infos\CvLeaderHeadInfo.cpp" />
+    <ClCompile Include="Infos\CvMPOptionInfo.cpp" />
+    <ClCompile Include="Infos\CvMainMenuInfo.cpp" />
+    <ClCompile Include="Infos\CvMapCategoryInfo.cpp" />
+    <ClCompile Include="Infos\CvMapInfo.cpp" />
+    <ClCompile Include="Infos\CvMissionInfo.cpp" />
+    <ClCompile Include="Infos\CvModLoadControlInfo.cpp" />
+    <ClCompile Include="Infos\CvOutcomeInfo.cpp" />
+    <ClCompile Include="Infos\CvPlayerColorInfo.cpp" />
+    <ClCompile Include="Infos\CvProcessInfo.cpp" />
+    <ClCompile Include="Infos\CvProjectInfo.cpp" />
+    <ClCompile Include="Infos\CvPromotionInfo.cpp" />
+    <ClCompile Include="Infos\CvPromotionLineInfo.cpp" />
+    <ClCompile Include="Infos\CvPropertyInfo.cpp" />
+    <ClCompile Include="Infos\CvReligionInfo.cpp" />
+    <ClCompile Include="Repos\BuildingsRepo.cpp" />
+    <ClCompile Include="Repos\UnitsRepo.cpp" />
+    <ClCompile Include="Repos\BuildsRepo.cpp" />
+    <ClCompile Include="Utils\PlotSnapshot.cpp" />
+    <ClCompile Include="Infos\CvRiverModelInfo.cpp" />
+    <ClCompile Include="Infos\CvRouteInfo.cpp" />
+    <ClCompile Include="Infos\CvRouteModelInfo.cpp" />
+    <ClCompile Include="Infos\CvScalableInfo.cpp" />
+    <ClCompile Include="Infos\CvSeaLevelInfo.cpp" />
+    <ClCompile Include="Infos\CvSlideShowInfo.cpp" />
+    <ClCompile Include="Infos\CvSlideShowRandomInfo.cpp" />
+    <ClCompile Include="Infos\CvSpaceShipInfo.cpp" />
+    <ClCompile Include="Infos\CvSpawnInfo.cpp" />
+    <ClCompile Include="Infos\CvSpecialBuildingInfo.cpp" />
+    <ClCompile Include="Infos\CvSpecialUnitInfo.cpp" />
+    <ClCompile Include="Infos\CvSpecialistInfo.cpp" />
+    <ClCompile Include="Infos\CvTechInfo.cpp" />
+    <ClCompile Include="Infos\CvTerrainInfo.cpp" />
+    <ClCompile Include="Infos\CvThroneRoomCamera.cpp" />
+    <ClCompile Include="Infos\CvThroneRoomInfo.cpp" />
+    <ClCompile Include="Infos\CvThroneRoomStyleInfo.cpp" />
+    <ClCompile Include="Infos\CvTurnTimerInfo.cpp" />
+    <ClCompile Include="Infos\CvUnitArtStyleTypeInfo.cpp" />
+    <ClCompile Include="Infos\CvUnitFormationInfo.cpp" />
+    <ClCompile Include="Infos\CvUpkeepInfo.cpp" />
+    <ClCompile Include="Infos\CvVictoryInfo.cpp" />
+    <ClCompile Include="Infos\CvVoteInfo.cpp" />
+    <ClCompile Include="Infos\CvVoteSourceInfo.cpp" />
+    <ClCompile Include="Infos\CvWorldInfo.cpp" />
+    <ClCompile Include="Infos\CvWorldPickerInfo.cpp" />
+    <ClCompile Include="Infos\CvYieldInfo.cpp" />
     <ClCompile Include="CvInfos.cpp" />
     <ClCompile Include="CvInfoWater.cpp" />
     <ClCompile Include="CvInitCore.cpp" />
@@ -329,7 +434,7 @@
     <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
-    <ClCompile Include="CvUnitInfo.cpp" />
+    <ClCompile Include="Infos\CvUnitInfo.cpp" />
     <ClCompile Include="CvUnitList.cpp" />
     <ClCompile Include="CvUnitSort.cpp" />
     <ClCompile Include="CvViewport.cpp" />
@@ -406,8 +511,10 @@
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="CvSettlerAI.h" />
     <ClInclude Include="CvValueService.h" />
+    <ClInclude Include="CvCombatModel.h" />
+    <ClInclude Include="CvDecisionAI.h" />
+    <ClInclude Include="CvHunterAI.h" />
     <ClInclude Include="CvWorkerAI.h" />
-    <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
@@ -484,6 +591,123 @@
     <ClInclude Include="CvHallOfFameInfo.h" />
     <ClInclude Include="CvInfoReplacements.h" />
     <ClInclude Include="CvInfoClassTraits.h" />
+    <ClInclude Include="Infos\CvActionInfo.h" />
+    <ClInclude Include="Infos\CvAdvisorInfo.h" />
+    <ClInclude Include="Infos\CvAnimationCategoryInfo.h" />
+    <ClInclude Include="Infos\CvAnimationPathInfo.h" />
+    <ClInclude Include="Infos\CvArtInfoAsset.h" />
+    <ClInclude Include="Infos\CvArtInfoBonus.h" />
+    <ClInclude Include="Infos\CvArtInfoBuilding.h" />
+    <ClInclude Include="Infos\CvArtInfoCivilization.h" />
+    <ClInclude Include="Infos\CvArtInfoFeature.h" />
+    <ClInclude Include="Infos\CvArtInfoImprovement.h" />
+    <ClInclude Include="Infos\CvArtInfoInterface.h" />
+    <ClInclude Include="Infos\CvArtInfoLeaderhead.h" />
+    <ClInclude Include="Infos\CvArtInfoMisc.h" />
+    <ClInclude Include="Infos\CvArtInfoMovie.h" />
+    <ClInclude Include="Infos\CvArtInfoScalableAsset.h" />
+    <ClInclude Include="Infos\CvArtInfoTerrain.h" />
+    <ClInclude Include="Infos\CvArtInfoUnit.h" />
+    <ClInclude Include="Infos\CvAssetInfoBase.h" />
+    <ClInclude Include="Infos\CvAttachableInfo.h" />
+    <ClInclude Include="Infos\CvAttitudeInfo.h" />
+    <ClInclude Include="Infos\CvAutomateInfo.h" />
+    <ClInclude Include="Infos\CvBonusClassInfo.h" />
+    <ClInclude Include="Infos\CvBuildInfo.h" />
+    <ClInclude Include="Infos\CvCalendarInfo.h" />
+    <ClInclude Include="Infos\CvCategoryInfo.h" />
+    <ClInclude Include="Infos\CvCityTabInfo.h" />
+    <ClInclude Include="Infos\CvCivicInfo.h" />
+    <ClInclude Include="Infos\CvCivicOptionInfo.h" />
+    <ClInclude Include="Infos\CvCivilizationInfo.h" />
+    <ClInclude Include="Infos\CvClimateInfo.h" />
+    <ClInclude Include="Infos\CvColorInfo.h" />
+    <ClInclude Include="Infos\CvCommandInfo.h" />
+    <ClInclude Include="Infos\CvCommerceInfo.h" />
+    <ClInclude Include="Infos\CvConceptInfo.h" />
+    <ClInclude Include="Infos\CvControlInfo.h" />
+    <ClInclude Include="Infos\CvCorporationInfo.h" />
+    <ClInclude Include="Infos\CvCultureLevelInfo.h" />
+    <ClInclude Include="Infos\CvCursorInfo.h" />
+    <ClInclude Include="Infos\CvDenialInfo.h" />
+    <ClInclude Include="Infos\CvDiplomacyTextInfo.h" />
+    <ClInclude Include="Infos\CvDomainInfo.h" />
+    <ClInclude Include="Infos\CvEffectInfo.h" />
+    <ClInclude Include="Infos\CvEmphasizeInfo.h" />
+    <ClInclude Include="Infos\CvEntityEventInfo.h" />
+    <ClInclude Include="Infos\CvEraInfo.h" />
+    <ClInclude Include="Infos\CvEspionageMissionInfo.h" />
+    <ClInclude Include="Infos\CvEventInfo.h" />
+    <ClInclude Include="Infos\CvEventTriggerInfo.h" />
+    <ClInclude Include="Infos\CvFeatureInfo.h" />
+    <ClInclude Include="Infos\CvForceControlInfo.h" />
+    <ClInclude Include="Infos\CvGameOptionInfo.h" />
+    <ClInclude Include="Infos\CvGameSpeedInfo.h" />
+    <ClInclude Include="Infos\CvGameText.h" />
+    <ClInclude Include="Infos\CvGoodyInfo.h" />
+    <ClInclude Include="Infos\CvGraphicOptionInfo.h" />
+    <ClInclude Include="Infos\CvHandicapInfo.h" />
+    <ClInclude Include="Infos\CvHintInfo.h" />
+    <ClInclude Include="Infos\CvHurryInfo.h" />
+    <ClInclude Include="Infos\CvIdeaClassInfo.h" />
+    <ClInclude Include="Infos\CvIdeaInfo.h" />
+    <ClInclude Include="Infos\CvImprovementBonusInfo.h" />
+    <ClInclude Include="Infos\CvInfoBase.h" />
+    <ClInclude Include="Infos\CvInterfaceModeInfo.h" />
+    <ClInclude Include="Infos\CvInvisibleInfo.h" />
+    <ClInclude Include="Infos\CvLandscapeInfo.h" />
+    <ClInclude Include="Infos\CvLeaderHeadInfo.h" />
+    <ClInclude Include="Infos\CvMPOptionInfo.h" />
+    <ClInclude Include="Infos\CvMainMenuInfo.h" />
+    <ClInclude Include="Infos\CvMapCategoryInfo.h" />
+    <ClInclude Include="Infos\CvMapInfo.h" />
+    <ClInclude Include="Infos\CvMemoryInfo.h" />
+    <ClInclude Include="Infos\CvMissionInfo.h" />
+    <ClInclude Include="Infos\CvModLoadControlInfo.h" />
+    <ClInclude Include="Infos\CvMonthInfo.h" />
+    <ClInclude Include="Infos\CvNewConceptInfo.h" />
+    <ClInclude Include="Infos\CvOutcomeInfo.h" />
+    <ClInclude Include="Infos\CvPlayerColorInfo.h" />
+    <ClInclude Include="Infos\CvProcessInfo.h" />
+    <ClInclude Include="Infos\CvProjectInfo.h" />
+    <ClInclude Include="Infos\CvPromotionInfo.h" />
+    <ClInclude Include="Infos\CvPromotionLineInfo.h" />
+    <ClInclude Include="Infos\CvPropertyInfo.h" />
+    <ClInclude Include="Infos\CvReligionInfo.h" />
+    <ClInclude Include="Repos\BuildingsRepo.h" />
+    <ClInclude Include="Repos\UnitsRepo.h" />
+    <ClInclude Include="Repos\BuildsRepo.h" />
+    <ClInclude Include="Utils\PlotSnapshot.h" />
+    <ClInclude Include="Infos\CvRiverModelInfo.h" />
+    <ClInclude Include="Infos\CvRouteInfo.h" />
+    <ClInclude Include="Infos\CvRouteModelInfo.h" />
+    <ClInclude Include="Infos\CvSeaLevelInfo.h" />
+    <ClInclude Include="Infos\CvSeasonInfo.h" />
+    <ClInclude Include="Infos\CvSlideShowInfo.h" />
+    <ClInclude Include="Infos\CvSlideShowRandomInfo.h" />
+    <ClInclude Include="Infos\CvSpaceShipInfo.h" />
+    <ClInclude Include="Infos\CvSpawnInfo.h" />
+    <ClInclude Include="Infos\CvSpecialBuildingInfo.h" />
+    <ClInclude Include="Infos\CvSpecialUnitInfo.h" />
+    <ClInclude Include="Infos\CvSpecialistInfo.h" />
+    <ClInclude Include="Infos\CvTechInfo.h" />
+    <ClInclude Include="Infos\CvTerrainInfo.h" />
+    <ClInclude Include="Infos\CvThroneRoomCamera.h" />
+    <ClInclude Include="Infos\CvThroneRoomInfo.h" />
+    <ClInclude Include="Infos\CvThroneRoomStyleInfo.h" />
+    <ClInclude Include="Infos\CvTurnTimerInfo.h" />
+    <ClInclude Include="Infos\CvUnitAIInfo.h" />
+    <ClInclude Include="Infos\CvUnitArtStyleTypeInfo.h" />
+    <ClInclude Include="Infos\CvUnitEntry.h" />
+    <ClInclude Include="Infos\CvUnitFormationInfo.h" />
+    <ClInclude Include="Infos\CvUnitInfo.h" />
+    <ClInclude Include="Infos\CvUpkeepInfo.h" />
+    <ClInclude Include="Infos\CvVictoryInfo.h" />
+    <ClInclude Include="Infos\CvVoteInfo.h" />
+    <ClInclude Include="Infos\CvVoteSourceInfo.h" />
+    <ClInclude Include="Infos\CvWorldInfo.h" />
+    <ClInclude Include="Infos\CvWorldPickerInfo.h" />
+    <ClInclude Include="Infos\CvYieldInfo.h" />
     <ClInclude Include="CvInfos.h" />
     <ClInclude Include="CvInfoUtil.h" />
     <ClInclude Include="CvInfoWater.h" />

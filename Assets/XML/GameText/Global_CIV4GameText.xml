@@ -50,14 +50,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_TIRING_TOTAL_SHORT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_TIRING_TOTAL</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TRAP_DAMAGE</Tag>
 		<English>TBD</English>
 	</TEXT>
@@ -602,6 +594,14 @@
 		<German>EP</German>
 		<Italian>punti esperienza</Italian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_ACO_FIRST_STRIKE</Tag>
+        <English>First strikes [COLOR_POSITIVE_TEXT]%d1[COLOR_REVERT] vs [COLOR_NEGATIVE_TEXT]%d2[COLOR_REVERT]  (%s3 to win chance)</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_ACO_ROUNDS</Tag>
+        <English>Hits to kill [COLOR_POSITIVE_TEXT]%d1[COLOR_REVERT], hits to fall [COLOR_NEGATIVE_TEXT]%d2[COLOR_REVERT]</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_ADVISOR_BRIBE</Tag>
 		<English>Click to bribe</English>
@@ -4689,14 +4689,6 @@
 		<German>Einheit befördern</German>
 		<Italian>Promuovi unità</Italian>
 		<Spanish>Ascender unidad</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMMAND_REEQUIP</Tag>
-		<English>Replace Equipment for Unit (ends turn)</English>
-		<French>Remplacer l'Equipement de l'unité (termine le tour)</French>
-		<Italian>Sostituisci equipaggiamento (fine turno)</Italian>
-		<Polish>Zamie&#241; Ekwipunek dla Jednostki</Polish>
-		<Russian>Сменить снаряжение подразделению (завершает ход)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMMAND_SPLIT</Tag>
@@ -20972,14 +20964,6 @@
 		<Spanish>Daño por turno: %d1_Amt%%</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PLOT_DAMAGE_IS_COLD</Tag>
-		<English>Damage Dealt by this plot is Cold Damage</English>
-		<French>Cette case inflige des dégâts liés au froid.</French>
-		<Italian>Il danno inflitto da questa casella è Danno da freddo</Italian>
-		<Polish>Obra&#191;enia Zadane na tym Polu s&#185; Obra&#191;eniami od Zimna</Polish>
-		<Russian>Характер повреждения от данной области - Урон от холода</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Your units cannot enter this tile because it is inside of a nearby city's Zone of Control. Capture the city to restore normal movement.[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Vos unités ne peuvent entrer dans cette case car celle-ci fait partie de la zone protégée par la ville. Capturez la ville pour pouvoir y pénétrer.[COLOR_REVERT]</French>
@@ -30937,15 +30921,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Alle Warenzeichen sind Eigentum der jeweiligen Inhaber.</German>
 		<Italian>Tutti i marchi registrati sono proprietà dei rispettivi detentori.</Italian>
 		<Spanish>Todas las marcas comerciales pertenecen a sus respectivos titulares.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_TB_PRESSALT_STR</Tag>
-		<English>Press ALT to view all Strength In Numbers Modifiers</English>
-		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
-		<German>[COLOR_HIGHLIGHT_TEXT]&lt;ALT&gt;[COLOR_REVERT] für Gemeinsam-sind-wir-stark-Modifikatoren[COLOR_REVERT]</German>
-		<Italian>Premi ALT per vedere tutti i modificatori riguardanti La forza nel numero</Italian>
-		<Polish>Naci&#156;nij ALT aby zobaczy&#230; Modyfikatory Si&#179;y-w-Grupie</Polish>
-		<Russian>Нажмите ALT, чтобы просмотреть все модификаторы Силы в числах</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_TB_PRESSCTRL</Tag>

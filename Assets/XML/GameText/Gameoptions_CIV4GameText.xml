@@ -215,24 +215,6 @@
 		<Russian>Варвары начинают с бесплатным городом для каждой цивилизации в игре, а лимит городов варваров и неандертальцев (по отношению к количеству городов обычных цивилизаций) гораздо выше.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_BATTLEWORN</Tag>
-		<English>Combat - Battleworn</English>
-		<French>Combat - Épuisement</French>
-		<German>C2C-Kampfmod - Schlachtauswirkungen</German>
-		<Polish>C2C Modyfikacja Bojowa - Zm&#234;czenie</Polish>
-		<Russian>Боевая усталость</Russian>
-		<Italian>Fatica della battaglia (mod di combattimento per C2C)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_BATTLEWORN_HELP</Tag>
-		<English>Units suffer from fatigue and exhaustion and benefit from rage and determination.</English>
-		<French>Les Unités souffrent de fatigue et d'épuisement à l'issue des combats, ainsi que de la rage et de la détermination.</French>
-		<German>Einheiten erleiden nun Schwäche und Erschöpfung im Kampf, können aber auch von Wut und Entschlossenheit profitieren.</German>
-		<Polish>Jednostki m&#234;cz&#185; si&#234; i trac&#185; wigor do walki.</Polish>
-		<Russian>Подразделения будут страдать от усталости и истощения, но и получать пользу от ярости и решительности.</Russian>
-		<Italian>Le unità soffrono di stanchezza e sfinimento e beneficiano di rabbia e determinazione</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Tag>
 		<English>Tech - Cutting edge cuts</English>
 	</TEXT>
@@ -425,24 +407,6 @@
 		<Italian>Si ottiene oro dallo scioglimento delle unità</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT</Tag>
-		<English>Combat - Arms and Equipment</English>
-		<French>Combat - Armes et Équipement</French>
-		<German>C2C-Kampfmod - Waffen und Ausrüstung</German>
-		<Polish>C2C Modyfikacja Bojowa - Wyposa&#191;enie i uzbrojenie.</Polish>
-		<Russian>Оружие и снаряжение</Russian>
-		<Italian>Armi e equipaggiamento (mod di combattimento per C2C)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT_HELP</Tag>
-		<English>Units gain and use equipment Promotions</English>
-		<French>Les Unités peuvent bénéficier de promotion sous forme d'équipement</French>
-		<German>Einheiten erhalten über Beförderungen Waffen und Ausrüstung, die sie im Kampf verwenden können.</German>
-		<Polish>Jednostki otrzymuj&#185; i u&#191;ywaj&#185; promocje wyposa&#191;enia.</Polish>
-		<Russian>Подразделения будут получать квалификации, зависящие от оружия и брони.</Russian>
-		<Italian>Le unità guadagnano e usano promozioni sotto forma di equipaggiamento</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT</Tag>
 		<English>Combat - Fight or Flight</English>
 		<French>Combat - Bataille ou Fuite</French>
@@ -527,24 +491,6 @@
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_GREAT_COMMODORES_HELP</Tag>
 		<English>Great Commodores lead their fleets into open combat on the open seas.</English>
 		<French>Les Amiraux de terrain (Commodores) conduisent leurs flottes au combat ouvert en haute mer.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR</Tag>
-		<English>Combat - Heart of War</English>
-		<French>Combat - Coeur de Guerre</French>
-		<German>C2C-Kampfmod - Herz des Krieges</German>
-		<Polish>C2C Modyfikacja Bojowa - Serce Wojny</Polish>
-		<Russian>Сердце войны</Russian>
-		<Italian>Cuore di guerra (mod di combattimento per C2C)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR_HELP</Tag>
-		<English>Enables Repel, Knockback, Unyielding Abilities, and Effects. Will eventually include a Morale System.</English>
-		<French>Active les compétences de Répulsion, Piétinement, d'Inflexibilité. Un système de Moral sera également inclus.</French>
-		<German>Diese Mod ermöglicht das Zurückdrängen und Niederwerfen von Einheiten, bietet aber im Gegenzug auch Effekte und Fähigkeiten, die Einheiten Standhaftigkeit verleihen. Eventuell wird auch ein Moral-System integriert.</German>
-		<Polish>Pozwala na Odpieranie, Odrzucanie i Ust&#234;powanie w ogniu walki. Docelowo b&#234;dzie zawiera&#230; system Morale.</Polish>
-		<Russian>Включить способности и эффекты отражения, отбрасывания и стойкости, а также систему боевого духа.</Russian>
-		<Italian>Introduce le abilità respingimento, contraccolpo e inflessibile e i loro effetti[NEWLINE][NEWLINE]Includerà un sistema morale</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_HIDE_SEEK</Tag>
@@ -1050,22 +996,6 @@
 		<Russian>Игрок-человек не сможет контролировать больше одиного города.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Tag>
-		<English>Combat - Outbreaks and Afflictions</English>
-		<French>Combat - Éclosions et afflictions</French>
-		<German>C2C-Kampfmod - Zivile Notstände</German>
-		<Russian>Эпидемии и криминал</Russian>
-		<Italian>Focolai e afflizioni (mod di combattimento per C2C)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS_HELP</Tag>
-		<English>A more advanced system for the emergence and recovery for Diseases and Crimes. Units may carry Diseases, and Criminal mindsets which may spread to local cities and other units, sometimes even through battle. Outbreaks of Diseases and waves of Crime are not automatic and static; instead, they are tied to the Disease and Crime levels within your empire. Higher levels will increase the likelihood of outbreaks and surges of Crime. There are levels of severity to each Disease and Crime wave type. It can usually get worse and sometimes it has to before it's going to get better. Cities can develop biological resistance to previously encountered Diseases. The goal of this game option is a dynamic system which introduces new challenges to running an empire and a deeper level of immersion. (IN DEVELOPMENT - ONLY PARTIALLY IMPLEMENTED)</English>
-		<French>Un système plus avancé d'émergence et de guérison des maladies et des délits. Les unités peuvent être porteuses de maladies et de mentalités criminelles et déteindre sur les villes locales et d'autres unités, parfois même transférées au combat. Les éclosions de maladies et les vagues de criminalité ne sont pas automatiques à certains niveaux de maladie ou de criminalité, mais deviennent plus probables et plus difficiles à surmonter, plus ces propriétés s'aggravent. Il existe des niveaux de gravité pour chaque type de vague de maladie et de crime. Elle peut généralement s'aggraver et parfois elle doit avant de s'améliorer. Les villes peuvent devenir résistantes à des maladies déjà connues. L'objectif est un système dynamique qui émule de plus près les transferts réels de ces expériences d'une communauté à l'autre. (EN DÉVELOPPEMENT - UNIQUEMENT PARTIELLEMENT MIS EN ŒUVRE)</French>
-		<German>Hierbei handelt es sich um ein ausgeklügelteres System der Entstehung und Eindämmung von Krankheiten und Straftaten. Einheiten können Krankheiten und kriminelles Gedankengut mitbringen und auf die eigenen Städte und andere Einheiten übertragen, manchmal sogar während der Schlacht. Krankheitsausbrüche und Verbrechenswellen entstehen nicht automatisch auf bestimmten Stufen, aber sie werden je nach Krankheits- und Kriminalitätsrate immer wahrscheinlicher und können immer schwerer überwunden werden. Es gibt Schweregrade für jeden Typ von Seuchenzug oder Verbrechenswelle. Außerdem können Städte nun resistent gegen bereits überstandene Krankheiten werden. Das Ziel ist ein dynamisches System, das die Übertragung von einer Gesellschaft zur anderen besser nachbildet. (NOCH IN DER ENTWICKLUNG UND NUR TEILWEISE IMPLEMENTIERT)</German>
-		<Russian>Включить более продвинутую система возникновения и восстановления после болезней и преступлений. Подразделения смогут переносить недуги и беззаконие, распространяя их на окрестные города и другие подразделения, иногда даже во время боя. Вспышки заболеваний и волны преступности не возникают автоматически при достижении определенных значений, а становятся более вероятными и труднопреодолимыми при усугублении. Для каждых болезней и волны преступности существуют уровни тяжести. Обычно они только увеличиваются, но иногда могут и уменьшиться. Города могут стать устойчивее к уже перенесенным недугам. Цель - динамическая система, более точно имитирующая реальную передачу этого опыта от одного общества к другому. (Находится в разработке: работает лишь отчасти)</Russian>
-		<Italian>Un sistema più avanzato di emergenza e recupero da malattie e reati, le unità possono portare malattie e mentalità criminale e contagiare città locali e altre unità, a volte anche trasmettendole durante la battaglia[NEWLINE][NEWLINE]Le epidemie di malattie e le ondate di criminalità non sono automatiche a determinati livelli di malattia o criminalità, ma diventano più probabili e più difficili da superare quanto più peggiorano le proprietà[NEWLINE][NEWLINE]Ci sono livelli di gravità per ogni malattia e tipo di ondata criminale. Le città possono diventare resistenti alle malattie sperimentate in precedenza (l'obiettivo è un sistema dinamico che emuli più da vicino i trasferimenti reali di queste esperienze da una comunità all'altra)[NEWLINE][NEWLINE](IN SVILUPPO - SOLO PARZIALMENTE IMPLEMENTATO)</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_OVEREXPANSION_PENALTIES</Tag>
 		<English>Expansion - Happiness Penalties</English>
 		<French>Expansion - Pénalités de Bonheur</French>
@@ -1412,24 +1342,6 @@
 		<Russian>С начала игры у лидеров не будет каких-либо положительных качеств. Также из-за данной опции - если активирована «Развивающиеся лидеры» - отключится первое негативное качество и выбор нового качества произойдет раньше.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS</Tag>
-		<English>Combat - Strength in Numbers</English>
-		<French>Combat - La Force du nombre</French>
-		<German>C2C-Kampfmod - Gemeinsam sind wir stark</German>
-		<Italian>Forza nel numero (mod di combattimento per C2C)</Italian>
-		<Polish>Si&#179;a w Liczbach</Polish>
-		<Russian>Сила в количестве</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS_HELP</Tag>
-		<English>Units support each other in their stacks.</English>
-		<French>Les Unités se soutiennent mutuellement dans les Groupes d'unités.</French>
-		<German>Die Einheiten in einer Gruppe unterstützen sich gegenseitig.</German>
-		<Italian>Le unità si supportano a vicenda all'interno di un gruppo sulla stessa casella</Italian>
-		<Polish>Jednostki wspomagaj&#185; si&#234; nawzajem w grupie.</Polish>
-		<Russian>Подразделения поддерживают друг друга в своих стеках.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TECH_DIFFUSION</Tag>
 		<English>Tech - Diffusion</English>
 		<French>Tech - Diffusion</French>
@@ -1522,24 +1434,6 @@
 		<Spanish>Quita la restricción en el número de maravillas realizables en una ciudad.</Spanish>
 		<Polish>Usuwa ograniczenie budowy ilo&#156;ci cud&#243;w na miasto</Polish>
 		<Russian>Удалить ограничение на число чудес, которые можно построить в одном городе.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_UPRANGE</Tag>
-		<English>Combat - Uprange and Personal</English>
-		<French>Combat - Portée et proximité</French>
-		<German>C2C-Kampfmod - Nah und fern</German>
-		<Polish>C2C Modyfikacja Bojowa - Walka wr&#234;cz i dystansowa</Polish>
-		<Russian>Лично, и в лицо</Russian>
-		<Italian>Portata e prossimità (mod di combattimento per C2C)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_COMBAT_UPRANGE_HELP</Tag>
-		<English>Advanced First Strike and Differentiation between Distance and Hand to Hand Combat among unit abilities.</English>
-		<French>Mode Première attaque avancé, et différenciation entre les compétences de combat au corps à corps et de combat à distance.</French>
-		<German>Erweiterte Erstschlagmöglichkeiten und bessere Differenzierung zwischen Fern- und Nahkampf bei den Fähigkeiten der einzelnen Einheiten.</German>
-		<Polish>Zaawansowane walka wr&#234;cz i dystansowa i poprawiony atak z zaskoczenia.</Polish>
-		<Russian>Усилить первый удар и разницу между дистанционным и рукопашным боем среди способностей отряда.</Russian>
-		<Italian>Primo attacco avanzato e differenziazione tra combattimento a distanza e corpo a corpo tra le abilità delle unità</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>

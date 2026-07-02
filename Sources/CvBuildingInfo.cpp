@@ -250,16 +250,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_pExprConstructCondition(NULL)
 //TB Combat Mods (Buildings) begin
 ,m_iLinePriority(0)
-,m_iOutbreakBase(0)
-,m_iOvercomeBase(0)
-,m_iTradeCommunicability(0)
-#ifdef STRENGTH_IN_NUMBERS
-,m_iFrontSupportPercentModifier(0)
-,m_iShortRangeSupportPercentModifier(0)
-,m_iMediumRangeSupportPercentModifier(0)
-,m_iLongRangeSupportPercentModifier(0)
-,m_iFlankSupportPercentModifier(0)
-#endif
 //TB Combat Mods (Buildings) end
 ,m_bAutoBuild(false)
 ,m_bEnablesOtherBuildings(false)
@@ -272,7 +262,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iLocalCaptureResistanceModifier(0)
 ,m_iLocalDynamicDefense(0)
 ,m_iRiverDefensePenalty(0)
-,m_iLocalRepel(0)
 ,m_iMinDefense(0)
 ,m_iBuildingDefenseRecoverySpeedModifier(0)
 ,m_iCityDefenseRecoverySpeedModifier(0)
@@ -284,7 +273,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iInvestigation(0)
 ,m_iPopulationChange(0)
 // booleans
-,m_bDamageToAttackerIgnoresArmor(false)
 ,m_bDamageAllAttackers(false)
 ,m_bDamageAttackerCapable(false)
 ,m_bQuarantine(false)
@@ -1085,21 +1073,6 @@ int CvBuildingInfo::getLinePriority() const
 	return m_iLinePriority;
 }
 
-int CvBuildingInfo::getOutbreakBase() const
-{
-	return m_iOutbreakBase;
-}
-
-int CvBuildingInfo::getOvercomeBase() const
-{
-	return m_iOvercomeBase;
-}
-
-int CvBuildingInfo::getTradeCommunicability() const
-{
-	return m_iTradeCommunicability;
-}
-
 int CvBuildingInfo::getNationalCaptureProbabilityModifier() const
 {
 	return m_iNationalCaptureProbabilityModifier;
@@ -1128,15 +1101,6 @@ int CvBuildingInfo::getLocalDynamicDefense() const
 int CvBuildingInfo::getRiverDefensePenalty() const
 {
 	return m_iRiverDefensePenalty;
-}
-
-int CvBuildingInfo::getLocalRepel() const
-{
-	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
-	{
-		return 0;
-	}
-	return m_iLocalRepel;
 }
 
 int CvBuildingInfo::getMinDefense() const
@@ -1202,10 +1166,6 @@ int CvBuildingInfo::getPopulationChange() const
 }
 
 //Booleans
-bool CvBuildingInfo::isDamageToAttackerIgnoresArmor() const
-{
-	return m_bDamageToAttackerIgnoresArmor;
-}
 
 bool CvBuildingInfo::isDamageAllAttackers() const
 {
@@ -1296,52 +1256,6 @@ bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 	return algo::any_of_equal(m_aiMayDamageAttackingUnitCombatTypes, i);
 }
 
-int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
-{
-	return m_aUnitCombatRepelModifiers.size();
-}
-
-int CvBuildingInfo::getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad) const
-{
-	PROFILE_EXTRA_FUNC();
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
-	{
-		return 0;
-	}
-	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatRepelModifiers.begin(); it != m_aUnitCombatRepelModifiers.end(); ++it)
-	{
-		if ((*it).first == (UnitCombatTypes)iUnitCombat)
-		{
-			return (*it).second;
-		}
-	}
-
-	return 0;
-}
-
-int CvBuildingInfo::getNumUnitCombatRepelAgainstModifiers() const
-{
-	return m_aUnitCombatRepelAgainstModifiers.size();
-}
-
-int CvBuildingInfo::getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad) const
-{
-	PROFILE_EXTRA_FUNC();
-	if (!bForLoad && !GC.getGame().isOption(GAMEOPTION_COMBAT_HEART_OF_WAR))
-	{
-		return 0;
-	}
-	for (UnitCombatModifierArray::const_iterator it = m_aUnitCombatRepelAgainstModifiers.begin(); it != m_aUnitCombatRepelAgainstModifiers.end(); ++it)
-	{
-		if ((*it).first == (UnitCombatTypes)iUnitCombat)
-		{
-			return (*it).second;
-		}
-	}
-
-	return 0;
-}
-
 int CvBuildingInfo::getNumUnitCombatDefenseAgainstModifiers() const
 {
 	return m_aUnitCombatDefenseAgainstModifiers.size();
@@ -1377,43 +1291,6 @@ int CvBuildingInfo::getUnitCombatProdModifier(int iUnitCombat) const
 		}
 	}
 
-	return 0;
-}
-
-int CvBuildingInfo::getNumAfflictionOutbreakLevelChanges() const
-{
-	return m_aAfflictionOutbreakLevelChanges.size();
-}
-
-int CvBuildingInfo::getAfflictionOutbreakLevelChange(int iAfflictionLine) const
-{
-	PROFILE_EXTRA_FUNC();
-	for (PromotionLineModifierArray::const_iterator it = m_aAfflictionOutbreakLevelChanges.begin(); it != m_aAfflictionOutbreakLevelChanges.end(); ++it)
-	{
-		if ((*it).first == (PromotionLineTypes)iAfflictionLine)
-		{
-			return (*it).second;
-		}
-	}
-
-	return 0;
-}
-
-int CvBuildingInfo::getNumTechOutbreakLevelChanges() const
-{
-	return m_aTechOutbreakLevelChanges.size();
-}
-
-int CvBuildingInfo::getTechOutbreakLevelChange(int iTech) const
-{
-	PROFILE_EXTRA_FUNC();
-	for (TechModifierArray::const_iterator it = m_aTechOutbreakLevelChanges.begin(); it != m_aTechOutbreakLevelChanges.end(); ++it)
-	{
-		if ((*it).first == (TechTypes)iTech)
-		{
-			return (*it).second;
-		}
-	}
 	return 0;
 }
 
@@ -1926,23 +1803,12 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, (int)m_ePromotionLineType);
 	//integers
 	CheckSum(iSum, m_iLinePriority);
-	CheckSum(iSum, m_iOutbreakBase);
-	CheckSum(iSum, m_iOvercomeBase);
-	CheckSum(iSum, m_iTradeCommunicability);
-#ifdef STRENGTH_IN_NUMBERS
-	CheckSum(iSum, m_iFrontSupportPercentModifier);
-	CheckSum(iSum, m_iShortRangeSupportPercentModifier);
-	CheckSum(iSum, m_iMediumRangeSupportPercentModifier);
-	CheckSum(iSum, m_iLongRangeSupportPercentModifier);
-	CheckSum(iSum, m_iFlankSupportPercentModifier);
-#endif
 	CheckSum(iSum, m_iNationalCaptureProbabilityModifier);
 	CheckSum(iSum, m_iNationalCaptureResistanceModifier);
 	CheckSum(iSum, m_iLocalCaptureProbabilityModifier);
 	CheckSum(iSum, m_iLocalCaptureResistanceModifier);
 	CheckSum(iSum, m_iLocalDynamicDefense);
 	CheckSum(iSum, m_iRiverDefensePenalty);
-	CheckSum(iSum, m_iLocalRepel);
 	CheckSum(iSum, m_iMinDefense);
 	CheckSum(iSum, m_iBuildingDefenseRecoverySpeedModifier);
 	CheckSum(iSum, m_iCityDefenseRecoverySpeedModifier);
@@ -1953,7 +1819,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iInsidiousness);
 	CheckSum(iSum, m_iInvestigation);
 	CheckSum(iSum, m_iPopulationChange);
-	CheckSum(iSum, m_bDamageToAttackerIgnoresArmor);
 	CheckSum(iSum, m_bDamageAllAttackers);
 	CheckSum(iSum, m_bDamageAttackerCapable);
 	CheckSum(iSum, m_bQuarantine);
@@ -1998,12 +1863,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiUnitCombatRetrainTypes);
 	CheckSumC(iSum, m_aiMayDamageAttackingUnitCombatTypes);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
-	CheckSumC(iSum, m_aUnitCombatRepelModifiers);
-	CheckSumC(iSum, m_aUnitCombatRepelAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatDefenseAgainstModifiers);
 	CheckSumC(iSum, m_aUnitCombatProdModifiers);
-	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
-	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
 	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
@@ -3058,23 +2919,12 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_ePromotionLineType = (PromotionLineTypes) pXML->GetInfoClass(szTextVal);
 	//integers
 	pXML->GetOptionalChildXmlValByName(&m_iLinePriority, L"iLinePriority");
-	pXML->GetOptionalChildXmlValByName(&m_iOutbreakBase, L"iOutbreakBase");
-	pXML->GetOptionalChildXmlValByName(&m_iOvercomeBase, L"iOvercomeBase");
-	pXML->GetOptionalChildXmlValByName(&m_iTradeCommunicability, L"iTradeCommunicability");
-#ifdef STRENGTH_IN_NUMBERS
-	pXML->GetOptionalChildXmlValByName(&m_iFrontSupportPercentModifier, L"iFrontSupportPercentModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iShortRangeSupportPercentModifier, L"iShortRangeSupportPercentModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iMediumRangeSupportPercentModifier, L"iMediumRangeSupportPercentModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iLongRangeSupportPercentModifier, L"iLongRangeSupportPercentModifier");
-	pXML->GetOptionalChildXmlValByName(&m_iFlankSupportPercentModifier, L"iFlankSupportPercentModifier");
-#endif
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureProbabilityModifier, L"iNationalCaptureProbabilityModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNationalCaptureResistanceModifier, L"iNationalCaptureResistanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLocalCaptureProbabilityModifier, L"iLocalCaptureProbabilityModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLocalCaptureResistanceModifier, L"iLocalCaptureResistanceModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iLocalDynamicDefense, L"iLocalDynamicDefense");
 	pXML->GetOptionalChildXmlValByName(&m_iRiverDefensePenalty, L"iRiverDefensePenalty");
-	pXML->GetOptionalChildXmlValByName(&m_iLocalRepel, L"iLocalRepel");
 	pXML->GetOptionalChildXmlValByName(&m_iMinDefense, L"iMinDefense");
 	pXML->GetOptionalChildXmlValByName(&m_iBuildingDefenseRecoverySpeedModifier, L"iBuildingDefenseRecoverySpeedModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iCityDefenseRecoverySpeedModifier, L"iCityDefenseRecoverySpeedModifier");
@@ -3085,7 +2935,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iInsidiousness, L"iInsidiousness");
 	pXML->GetOptionalChildXmlValByName(&m_iInvestigation, L"iInvestigation");
 	pXML->GetOptionalChildXmlValByName(&m_iPopulationChange, L"iPopulationChange");
-	pXML->GetOptionalChildXmlValByName(&m_bDamageToAttackerIgnoresArmor, L"bDamageToAttackerIgnoresArmor");
 	pXML->GetOptionalChildXmlValByName(&m_bDamageAllAttackers, L"bDamageAllAttackers");
 	if (m_bDamageAllAttackers)
 	{
@@ -3228,17 +3077,9 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
 
 	// int vector utilizing pairing without delayed resolution
-	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatRepelModifiers, L"UnitCombatRepelModifiers");
-
-	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatRepelAgainstModifiers, L"UnitCombatRepelAgainstModifiers");
-
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatDefenseAgainstModifiers, L"UnitCombatDefenseAgainstModifiers");
 
 	pXML->SetOptionalPairVector<UnitCombatModifierArray, UnitCombatTypes, int>(&m_aUnitCombatProdModifiers, L"UnitCombatProdModifiers");
-
-	pXML->SetOptionalPairVector<PromotionLineModifierArray, PromotionLineTypes, int>(&m_aAfflictionOutbreakLevelChanges, L"AfflictionOutbreakLevelChanges");
-
-	pXML->SetOptionalPairVector<TechModifierArray, TechTypes, int>(&m_aTechOutbreakLevelChanges, L"TechOutbreakLevelChanges");
 
 	//Arrays
 	pXML->SetVariableListTagPair(&m_pabHurry, L"Hurrys", GC.getNumHurryInfos());
@@ -4124,23 +3965,12 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getPromotionLineType() == NO_PROMOTIONLINE) m_ePromotionLineType = pClassInfo->getPromotionLineType();
 	//integers
 	if (getLinePriority() == iDefault) m_iLinePriority = pClassInfo->getLinePriority();
-	if (getOutbreakBase() == iDefault) m_iOutbreakBase = pClassInfo->getOutbreakBase();
-	if (getOvercomeBase() == iDefault) m_iOvercomeBase = pClassInfo->getOvercomeBase();
-	if (getTradeCommunicability() == iDefault) m_iTradeCommunicability = pClassInfo->getTradeCommunicability();
-#ifdef STRENGTH_IN_NUMBERS
-	if (getFrontSupportPercentModifier() == iDefault) m_iFrontSupportPercentModifier = pClassInfo->getFrontSupportPercentModifier();
-	if (getShortRangeSupportPercentModifier() == iDefault) m_iShortRangeSupportPercentModifier = pClassInfo->getShortRangeSupportPercentModifier();
-	if (getMediumRangeSupportPercentModifier() == iDefault) m_iMediumRangeSupportPercentModifier = pClassInfo->getMediumRangeSupportPercentModifier();
-	if (getLongRangeSupportPercentModifier() == iDefault) m_iLongRangeSupportPercentModifier = pClassInfo->getLongRangeSupportPercentModifier();
-	if (getFlankSupportPercentModifier() == iDefault) m_iFlankSupportPercentModifier = pClassInfo->getFlankSupportPercentModifier();
-#endif
 	if (getNationalCaptureProbabilityModifier() == iDefault) m_iNationalCaptureProbabilityModifier = pClassInfo->getNationalCaptureProbabilityModifier();
 	if (getNationalCaptureResistanceModifier() == iDefault) m_iNationalCaptureResistanceModifier = pClassInfo->getNationalCaptureResistanceModifier();
 	if (getLocalCaptureProbabilityModifier() == iDefault) m_iLocalCaptureProbabilityModifier = pClassInfo->getLocalCaptureProbabilityModifier();
 	if (getLocalCaptureResistanceModifier() == iDefault) m_iLocalCaptureResistanceModifier = pClassInfo->getLocalCaptureResistanceModifier();
 	if (getLocalDynamicDefense() == iDefault) m_iLocalDynamicDefense = pClassInfo->getLocalDynamicDefense();
 	if (getRiverDefensePenalty() == iDefault) m_iRiverDefensePenalty = pClassInfo->getRiverDefensePenalty();
-	if (m_iLocalRepel == iDefault) m_iLocalRepel = pClassInfo->m_iLocalRepel;
 	if (m_iMinDefense == iDefault) m_iMinDefense = pClassInfo->m_iMinDefense;
 	if (getBuildingDefenseRecoverySpeedModifier() == iDefault) m_iBuildingDefenseRecoverySpeedModifier = pClassInfo->getBuildingDefenseRecoverySpeedModifier();
 	if (getCityDefenseRecoverySpeedModifier() == iDefault) m_iCityDefenseRecoverySpeedModifier = pClassInfo->getCityDefenseRecoverySpeedModifier();
@@ -4152,7 +3982,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (getInvestigation() == iDefault) m_iInvestigation = pClassInfo->getInvestigation();
 	if (getPopulationChange() == iDefault) m_iPopulationChange = pClassInfo->getPopulationChange();
 	//Booleans
-	if (isDamageToAttackerIgnoresArmor() == bDefault) m_bDamageToAttackerIgnoresArmor = pClassInfo->isDamageToAttackerIgnoresArmor();
 	if (isDamageAllAttackers() == bDefault) m_bDamageAllAttackers = pClassInfo->isDamageAllAttackers();
 	if (isQuarantine() == bDefault) m_bQuarantine = pClassInfo->isQuarantine();
 	if (isDamageAllAttackers() || pClassInfo->isDamageAllAttackers())
@@ -4197,26 +4026,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	}
 
 	// int vector utilizing pairing without delayed resolution
-	if (getNumUnitCombatRepelModifiers()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumUnitCombatRepelModifiers(); i++)
-		{
-			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
-			const int iChange = pClassInfo->getUnitCombatRepelModifier(i, true);
-			m_aUnitCombatRepelModifiers.push_back(std::make_pair(eUnitCombat, iChange));
-		}
-	}
-
-	if (getNumUnitCombatRepelAgainstModifiers()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumUnitCombatRepelAgainstModifiers(); i++)
-		{
-			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
-			const int iChange = pClassInfo->getUnitCombatRepelAgainstModifier(i, true);
-			m_aUnitCombatRepelAgainstModifiers.push_back(std::make_pair(eUnitCombat, iChange));
-		}
-	}
-
 	if (getNumUnitCombatDefenseAgainstModifiers()==0)
 	{
 		for (int i=0; i < pClassInfo->getNumUnitCombatDefenseAgainstModifiers(); i++)
@@ -4234,26 +4043,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			const UnitCombatTypes eUnitCombat = ((UnitCombatTypes)i);
 			const int iChange = pClassInfo->getUnitCombatProdModifier(i);
 			m_aUnitCombatProdModifiers.push_back(std::make_pair(eUnitCombat, iChange));
-		}
-	}
-
-	if (getNumAfflictionOutbreakLevelChanges()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumAfflictionOutbreakLevelChanges(); i++)
-		{
-			const PromotionLineTypes ePromotionLine = ((PromotionLineTypes)i);
-			const int iChange = pClassInfo->getAfflictionOutbreakLevelChange(i);
-			m_aAfflictionOutbreakLevelChanges.push_back(std::make_pair(ePromotionLine, iChange));
-		}
-	}
-
-	if (getNumTechOutbreakLevelChanges()==0)
-	{
-		for (int i=0; i < pClassInfo->getNumTechOutbreakLevelChanges(); i++)
-		{
-			const TechTypes eTech = ((TechTypes)i);
-			const int iChange = pClassInfo->getTechOutbreakLevelChange(i);
-			m_aTechOutbreakLevelChanges.push_back(std::make_pair(eTech, iChange));
 		}
 	}
 

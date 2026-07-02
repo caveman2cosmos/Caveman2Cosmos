@@ -11610,284 +11610,6 @@
 			<iCaptureProbabilityModifierChange>5</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-2</iCaptureResistanceModifierChange>
 		</PromotionInfo>
-		<!-- <PromotionInfo>
-			<Type>PROMOTION_STONE_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_STONE_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>1</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>3</iPunctureChange>
-			<iStrengthChange>1</iStrengthChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_PRIME_TIMBER_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_PRIME_TIMBER_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>2</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>6</iPunctureChange>
-			<iStrengthChange>1</iStrengthChange>
-			<iCombatPercent>10</iCombatPercent>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_OBSIDIAN_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_OBSIDIAN_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>3</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>8</iPunctureChange>
-			<iStrengthChange>2</iStrengthChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_IVORY_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_IVORY_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>4</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>8</iPunctureChange>
-			<iStrengthChange>3</iStrengthChange>
-			<iCollateralDamageChange>10</iCollateralDamageChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_COPPER_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_COPPER_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>5</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>8</iPunctureChange>
-			<iStrengthChange>3</iStrengthChange>
-			<iCombatPercent>20</iCombatPercent>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BRONZE_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_BRONZE_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>6</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>12</iPunctureChange>
-			<iStrengthChange>4</iStrengthChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_IRON_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_IRON_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>7</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>15</iPunctureChange>
-			<iStrengthChange>5</iStrengthChange>
-			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_TEMPERED_IRON_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_TEMPERED_IRON_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>8</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>20</iPunctureChange>
-			<iStrengthChange>5</iStrengthChange>
-			<iCityAttack>5</iCityAttack>
-			<iCityDefense>5</iCityDefense>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_STEEL_WEAPONS</Type>
-			<Description>TXT_KEY_PROMOTION_STEEL_WEAPONS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</PromotionLine>
-			<iLinePriority>9</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>25</iPunctureChange>
-			<iStrengthChange>7</iStrengthChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_RHINO_HIDE_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_RHINO_HIDE_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>3</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>15</iArmorChange>
-			<iEnemyHealChange>5</iEnemyHealChange>
-			<iNeutralHealChange>5</iNeutralHealChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_COPPER_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_COPPER_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>2</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>12</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_PRIME_TIMBER_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_PRIME_TIMBER_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>1</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>7</iArmorChange>
-			<iCombatPercent>5</iCombatPercent>
-			<iCityAttack>5</iCityAttack>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_LEATHER_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_LEATHER_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</PromotionLine>
-			<iLinePriority>2</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>8</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BONE_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_BONE_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</PromotionLine>
-			<iLinePriority>1</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>5</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BRONZE_CHAIN_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_BRONZE_CHAIN_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</PromotionLine>
-			<iLinePriority>3</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>12</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_IRON_CHAIN_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_IRON_CHAIN_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</PromotionLine>
-			<iLinePriority>4</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>20</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BRONZE_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_BRONZE_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>4</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>25</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_IRON_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_IRON_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>5</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>35</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_STEEL_ARMOR</Type>
-			<Description>TXT_KEY_PROMOTION_STEEL_ARMOR</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</PromotionLine>
-			<iLinePriority>6</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iArmorChange>42</iArmorChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_CLOVIS_POINTS</Type>
-			<Description>TXT_KEY_PROMOTION_CLOVIS_POINTS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</PromotionLine>
-			<iLinePriority>1</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>5</iPunctureChange>
-			<iFirstStrikesChange>1</iFirstStrikesChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_COPPER_POINTS</Type>
-			<Description>TXT_KEY_PROMOTION_COPPER_POINTS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</PromotionLine>
-			<iLinePriority>2</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>8</iPunctureChange>
-			<iFirstStrikesChange>1</iFirstStrikesChange>
-			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_BRONZE_POINTED_ARROWS</Type>
-			<Description>TXT_KEY_PROMOTION_BRONZE_POINTED_ARROWS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</PromotionLine>
-			<iLinePriority>3</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>12</iPunctureChange>
-			<iFirstStrikesChange>2</iFirstStrikesChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_IRON_POINTED_ARROWS</Type>
-			<Description>TXT_KEY_PROMOTION_IRON_POINTED_ARROWS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_DUMMY</TechPrereq>
-			<PromotionLine>PROMOTIONLINE_EQUIPMENT_RANGED_WEAPONS</PromotionLine>
-			<iLinePriority>4</iLinePriority>
-			<bEquipment>1</bEquipment>
-			<iPunctureChange>24</iPunctureChange>
-			<iFirstStrikesChange>2</iFirstStrikesChange>
-			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
-			<Button>Art/Interface/Buttons/Techtree/replaceme.dds</Button>
-		</PromotionInfo> -->
 		<PromotionInfo>
 			<Type>PROMOTION_AGGRESSIVE</Type>
 			<Description>TXT_KEY_PROMOTION_AGGRESSIVE</Description>
@@ -13692,7 +13414,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iAttackCombatModifierChange>20</iAttackCombatModifierChange>
-			<iUnyieldingChange>15</iUnyieldingChange>
 			<iStealthDefenseChange>1</iStealthDefenseChange>
 			<iAnimalIgnoresBordersChange>-1</iAnimalIgnoresBordersChange>
 			<Button>Art/Interface/Buttons/Promotions/Feral1.dds</Button>
@@ -13706,7 +13427,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iAttackCombatModifierChange>25</iAttackCombatModifierChange>
-			<iUnyieldingChange>20</iUnyieldingChange>
 			<iDefenseOnlyChange>-1</iDefenseOnlyChange>
 			<iAnimalIgnoresBordersChange>1</iAnimalIgnoresBordersChange>
 			<Button>Art/Interface/Buttons/Promotions/Feral2.dds</Button>
@@ -13720,7 +13440,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iAttackCombatModifierChange>30</iAttackCombatModifierChange>
-			<iUnyieldingChange>25</iUnyieldingChange>
 			<iAnimalIgnoresBordersChange>2</iAnimalIgnoresBordersChange>
 			<bStampedeChange>1</bStampedeChange>
 			<Button>Art/Interface/Buttons/Promotions/Feral3.dds</Button>
@@ -13733,7 +13452,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iAttackCombatModifierChange>15</iAttackCombatModifierChange>
-			<iUnyieldingChange>10</iUnyieldingChange>
 			<Button>art/Buttons/Promotions/SavageBeast1Promotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13745,7 +13463,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iWithdrawalChange>-5</iWithdrawalChange>
 			<iAttackCombatModifierChange>15</iAttackCombatModifierChange>
-			<iUnyieldingChange>15</iUnyieldingChange>
 			<iStealthDefenseChange>1</iStealthDefenseChange>
 			<Button>art/Buttons/Promotions/SavageBeast2Promotion.dds</Button>
 		</PromotionInfo>
@@ -13758,7 +13475,6 @@
 			<iLinePriority>3</iLinePriority>
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iAttackCombatModifierChange>15</iAttackCombatModifierChange>
-			<iUnyieldingChange>20</iUnyieldingChange>
 			<Button>art/Buttons/Promotions/SavageBeast3Promotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -13770,7 +13486,6 @@
 			<iLinePriority>4</iLinePriority>
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iAttackCombatModifierChange>15</iAttackCombatModifierChange>
-			<iUnyieldingChange>25</iUnyieldingChange>
 			<bStampedeChange>1</bStampedeChange>
 			<Button>art/Buttons/Promotions/SavageBeast4Promotion.dds</Button>
 		</PromotionInfo>
@@ -13783,7 +13498,6 @@
 			<iLinePriority>5</iLinePriority>
 			<iWithdrawalChange>-10</iWithdrawalChange>
 			<iAttackCombatModifierChange>15</iAttackCombatModifierChange>
-			<iUnyieldingChange>30</iUnyieldingChange>
 			<Button>art/Buttons/Promotions/SavageBeast5Promotion.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -14456,7 +14170,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iNeutralHealChange>1</iNeutralHealChange>
-			<!-- <iFortitudeChange>5</iFortitudeChange> -->
 			<iMaxHPChange>1</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfHeal1Promotion.dds</Button>
@@ -14471,7 +14184,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iNeutralHealChange>1</iNeutralHealChange>
-			<!-- <iFortitudeChange>5</iFortitudeChange> -->
 			<iMaxHPChange>2</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfHeal2Promotion.dds</Button>
@@ -14485,7 +14197,6 @@
 			<PromotionLine>PROMOTIONLINE_SELF_HEAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iSelfHealModifier>2</iSelfHealModifier>
-			<!-- <iFortitudeChange>5</iFortitudeChange> -->
 			<iMaxHPChange>3</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfHeal3Promotion.dds</Button>
@@ -14500,7 +14211,6 @@
 			<iLinePriority>4</iLinePriority>
 			<iSelfHealModifier>2</iSelfHealModifier>
 			<iEnemyHealChange>1</iEnemyHealChange>
-			<!-- <iFortitudeChange>5</iFortitudeChange> -->
 			<iMaxHPChange>4</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfHeal4Promotion.dds</Button>
@@ -14515,7 +14225,6 @@
 			<iLinePriority>5</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iEnemyHealChange>3</iEnemyHealChange>
-			<!-- <iFortitudeChange>5</iFortitudeChange> -->
 			<iMaxHPChange>5</iMaxHPChange>
 			<iVictoryHeal>4</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfHeal5Promotion.dds</Button>
@@ -14528,7 +14237,6 @@
 			<iLinePriority>1</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iNeutralHealChange>1</iNeutralHealChange>
-			<iFortitudeChange>5</iFortitudeChange>
 			<iMaxHPChange>1</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfRepair1Promotion.dds</Button>
@@ -14542,7 +14250,6 @@
 			<iLinePriority>2</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iNeutralHealChange>1</iNeutralHealChange>
-			<iFortitudeChange>5</iFortitudeChange>
 			<iMaxHPChange>2</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfRepair2Promotion.dds</Button>
@@ -14556,7 +14263,6 @@
 			<PromotionLine>PROMOTIONLINE_SELF_REPAIR</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iSelfHealModifier>2</iSelfHealModifier>
-			<iFortitudeChange>5</iFortitudeChange>
 			<iMaxHPChange>3</iMaxHPChange>
 			<iVictoryHeal>3</iVictoryHeal>
 			<Button>,Art/Buttons/Promotions/SelfRepair3Promotion.dds</Button>
@@ -14571,7 +14277,6 @@
 			<iLinePriority>4</iLinePriority>
 			<iSelfHealModifier>2</iSelfHealModifier>
 			<iEnemyHealChange>1</iEnemyHealChange>
-			<iFortitudeChange>5</iFortitudeChange>
 			<iMaxHPChange>4</iMaxHPChange>
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<iVictoryHeal>3</iVictoryHeal>
@@ -14587,7 +14292,6 @@
 			<iLinePriority>5</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>
 			<iEnemyHealChange>3</iEnemyHealChange>
-			<iFortitudeChange>5</iFortitudeChange>
 			<iMaxHPChange>5</iMaxHPChange>
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<iVictoryHeal>4</iVictoryHeal>

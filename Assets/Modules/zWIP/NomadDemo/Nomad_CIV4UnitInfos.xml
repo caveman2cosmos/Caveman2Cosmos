@@ -10,10 +10,7 @@
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_BATTALION</SubCombatType>

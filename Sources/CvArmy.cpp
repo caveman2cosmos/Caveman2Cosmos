@@ -3,6 +3,7 @@
 #include "CvSelectionGroup.h"
 #include "CvString.h"
 #include "CvPlayerAI.h"
+#include "BetterBTSAI.h"
 
 #define NO_INDEX -1
 
@@ -192,25 +193,6 @@ CvSelectionGroup* CvArmy::findNewLeader()
         m_iLeaderGroupID = iBestGroupID;
         pLeader = GET_PLAYER(getOwner()).getSelectionGroup(iBestGroupID);
         FAssert(pLeader);
-        CvUnit * pLeaderUnit = pLeader->getHeadUnit();
-        if (pLeaderUnit != NULL)
-        {
-            UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
-            FAssert(pLeader);
-            MissionAITypes eMissionAI = pLeader->AI_getMissionAIType();
-            CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-            CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-            CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-            LOG_UNIT_BLOCK(3, {
-                if (StrUnitName.length() == 0)
-                {
-                    StrUnitName = pLeaderUnit->getName(0).GetCString();
-                }
-
-                logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], is new Leader of Army %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pLeader->getNumUnits(), m_iID);
-                //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
-            });
-        }
         return GET_PLAYER(getOwner()).getSelectionGroup(iBestGroupID);
     }
 
@@ -244,6 +226,13 @@ void CvArmy::doTurn()
     CvPlot* pLeaderPlot = pLeaderGroup->plot();
     if (pLeaderPlot == NULL)
         return;
+
+    // [GRP/army] -- army-level coordination: its mission, leader and target each turn.
+    logGroupAI(2, "[GRP/army] owner=%d army=%d mission=%d leaderUnit=%d at=(%d,%d) target=(%d,%d)",
+        (int)getOwner(), m_iID, (int)m_eMission,
+        pLeaderGroup->getHeadUnit() ? pLeaderGroup->getHeadUnit()->getID() : -1,
+        pLeaderPlot->getX(), pLeaderPlot->getY(),
+        m_pTargetPlot ? m_pTargetPlot->getX() : -1, m_pTargetPlot ? m_pTargetPlot->getY() : -1);
 
     switch (m_eMission)
     {
@@ -302,28 +291,6 @@ void CvArmy::doTurn()
                     pLeaderPlot
                 );
 
-                if (pGroup != NULL)
-                {
-                    const CvUnit* pLeaderUnit = pGroup->getHeadUnit();
-                    if (pLeaderUnit != NULL)
-                    {
-                        UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
-                        FAssert(pGroup);
-                        MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
-                        CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-                        CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-                        CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-                        LOG_UNIT_BLOCK(3, {
-                            if (StrUnitName.length() == 0)
-                            {
-                                StrUnitName = pLeaderUnit->getName(0).GetCString();
-                            }
-
-                            logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d, is joining its leader at (%d,%d), distance %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), m_iID, pLeaderPlot->getX(), pLeaderPlot->getY(), iDist);
-                            //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
-                        });
-                    }
-                }
             }
         }
 
@@ -379,26 +346,6 @@ void CvArmy::doTurn()
                         pLeaderUnit->AI_setUnitAIType(UNITAI_ATTACK_CITY);
                         addGroup(pGroup);
 
-                        //UnitAITypes eUnitAi = pLeaderUnit->AI_getUnitAIType();
-                        MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
-                        CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-                        CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-                        CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-
-                        LOG_UNIT_BLOCK(3, {                            
-                            //UnitAITypes eUnitAi = pGroup->getHeadUnit()->AI_getUnitAIType();
-                            //MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
-                            //CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-                            //CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-                            //CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-                            if (StrUnitName.length() == 0)
-                            {
-                                StrUnitName = pLeaderUnit->getName(0).GetCString();
-                            }
-
-                            logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d is forced incorporation to Attack at (%d,%d) distance %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), m_iID, m_pTargetPlot->getX(), m_pTargetPlot->getY(), dist);
-                            //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
-                        });
                         pGroup->pushMission(MISSION_SKIP);
                         pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pLeaderGroup->getOwner(), pLeaderGroup->getHeadUnit()->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pLeaderGroup->getHeadUnit());
 
@@ -406,21 +353,6 @@ void CvArmy::doTurn()
                 }
             }
             
-            LOG_UNIT_BLOCK(3, {
-                const CvUnit * pLeaderUnit = pLeaderGroup->getHeadUnit();
-                UnitAITypes eUnitAi = pLeaderGroup->getHeadUnit()->AI_getUnitAIType();
-                MissionAITypes eMissionAI = pLeaderGroup->AI_getMissionAIType();
-                CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-                CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-                CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-                if (StrUnitName.length() == 0)
-                {
-                    StrUnitName = pLeaderUnit->getName(0).GetCString();
-                }
-
-                logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d is Ready will Command Attack at (%d,%d) distance %d...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pLeaderGroup->getNumUnits(), m_iID, m_pTargetPlot->getX(), m_pTargetPlot->getY(), distToTarget);
-                //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
-            });
             // Leader avance
             //m_pLeader->pushMission(
             //    MISSION_MOVE_TO,
@@ -453,21 +385,6 @@ void CvArmy::doTurn()
                 //    MISSIONAI_ASSAULT,
                 //    m_pTargetPlot
                 //);
-                LOG_UNIT_BLOCK(3, {
-                    const CvUnit * pLeaderUnit = pGroup->getHeadUnit();
-                    UnitAITypes eUnitAi = pGroup->getHeadUnit()->AI_getUnitAIType();
-                    MissionAITypes eMissionAI = pGroup->AI_getMissionAIType();
-                    CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-                    CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-                    CvWString StrUnitName = pLeaderUnit->getNameNoDesc();
-                    if (StrUnitName.length() == 0)
-                    {
-                        StrUnitName = pLeaderUnit->getName(0).GetCString();
-                    }
-
-                    logBBAI("Player %d Unit ID %d, %S of Type %S, at (%d, %d), Mission %S [stack size %d], Army %d is Ready and follow leader to Attack at (%d,%d)...", getOwner(), pLeaderUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pLeaderUnit->getX(), pLeaderUnit->getY(), MissionInfos.GetCString(), pGroup->getNumUnits(), m_iID, m_pTargetPlot->getX(), m_pTargetPlot->getY());
-                    //logBBAI("       Attack (estim after Bomb.) : %d, AttackRatio : %d", iComparePostBombard, iAttackRatio);
-                });
             }
         }
         break;
@@ -575,6 +492,9 @@ void CvArmy::setLeader(CvSelectionGroup* pLeader)
     {
         m_iLeaderGroupID = pLeader->getID();
         pLeader->setArmyID(m_iID);
+        // [GRP/leader] -- army leader (group) assignment.
+        logGroupAI(2, "[GRP/leader] owner=%d army=%d leaderGroup=%d",
+            (int)getOwner(), m_iID, pLeader->getID());
     }
     else
     {

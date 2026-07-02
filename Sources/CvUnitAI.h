@@ -32,6 +32,17 @@ class ConstructionNeeds;
  */
 class CvUnitAI : public CvUnit
 {
+    // CvWorkerAI hosts the unified improveBonus planner that calls AI_plotValid,
+    // AI_betterPlotBuild, and AI_connectPlot. Granting friend access here avoids
+    // promoting those methods to public for one caller.
+    friend class CvWorkerAI;
+
+    // CvHunterAI hosts hunterMove/autoHuntMove (the AUTOMATE_HUNT routines split out
+    // of AI_SearchAndDestroyMove). It calls AI_huntRange, AI_safety, AI_heal,
+    // AI_moveToBorders, AI_patrol, AI_explore, etc. via friend access, mirroring the
+    // CvWorkerAI seam, so those helpers stay non-public on CvUnitAI.
+    friend class CvHunterAI;
+
 public:
     /**
      * Constructor for CvUnitAI.
@@ -201,6 +212,20 @@ public:
      * Sets the unit as a garrison for a city.
      */
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+
+    /**
+     * The city this worker is currently committed to improving, or NULL.
+     * Resolves m_iTargetImproveCity against the owner's cities; returns NULL
+     * if the city no longer exists or is on a different area (unreachable).
+     * Used so a worker straying through another city's working radius does not
+     * abandon the city it was assigned to.
+     */
+    CvCity* AI_getTargetImproveCity() const;
+
+    /**
+     * Commits this worker to improving pCity (pass NULL to clear).
+     */
+    void AI_setTargetImproveCity(const CvCity* pCity);
 
     /**
      * Calculates the search range for the unit.
@@ -472,6 +497,8 @@ protected:
 
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
+
+	int m_iTargetImproveCity; // city this worker is committed to improving (-1 = none)
 
 	BuildingTypes m_eIntendedConstructBuilding; // Used to coordinate subdued animal and great person builds
 	HeritageTypes m_eIntendedHeritage; // Used to coordinate subdued animal and great person builds
@@ -1136,6 +1163,12 @@ protected:
      */
 	bool AI_guardCityBestDefender();
 
+    // [UNT/act] -- emit the "why" line naming the decision helper that won this unit's
+	// move cascade this turn (read together with AI_update's [UNT/move]). Called at each
+	// instrumented helper's commit point. szReason/pTarget may be NULL (target falls back
+	// to the unit's plot). gUnitLogLevel-gated at level 2, like [UNT/move]/[UNT/mission].
+	void AI_logAct(const char* szDecision, const char* szReason, const CvPlot* pTarget) const;
+
     /**
      * Determines if this unit is needed as a minimum defender for a city.
      * @brief Assigns the unit as a minimum defender if required.
@@ -1275,17 +1308,6 @@ protected:
      *   3. Returns true if the religion was founded.
      */
 	bool AI_foundReligion();
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-    /**
-     * Attempts to cure an affliction using this unit.
-     * @brief Executes logic for curing a specific affliction line.
-     * Steps:
-     *   1. Checks if the unit has the ability to cure the specified affliction.
-     *   2. Performs the cure action if possible.
-     *   3. Returns true if the affliction was cured.
-     */
-	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
-#endif
 
     /**
      * Attempts to trigger a Golden Age with this unit.
@@ -1990,16 +2012,6 @@ protected:
 	bool AI_fortTerritory(bool bCanal, bool bAirbase);
 
     /**
-     * Attempts to improve a bonus resource.
-     * @brief Executes logic for building improvements on resource tiles.
-     * Steps:
-     *   1. Identifies resource tiles needing improvement.
-     *   2. Moves to and builds improvement.
-     *   3. Returns true if improvement was performed.
-     */
-	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
-
-    /**
      * Attempts to improve a plot.
      * @brief Executes logic for building a specific improvement on a plot.
      * Steps:
@@ -2593,7 +2605,7 @@ public:
      *   2. Moves to and attacks the best target.
      *   3. Returns true if hunting was performed.
      */
-	bool AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders = false,  int iMinValue = 0);
+	bool AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders = false,  int iMinValue = 0, bool bRawOdds = false);
 
     /**
      * Performs city defense actions.

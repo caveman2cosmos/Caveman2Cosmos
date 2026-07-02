@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "BetterBTSAI.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
@@ -60,6 +61,11 @@ namespace {
 
 	void separateIf(CvSelectionGroup* group, bst::function<bool(const CvUnit*)> predicateFn)
 	{
+	    // Capture identity up front: a full separate empties the group, which can
+        // delete it during the last joinGroup(NULL) -- so don't deref it afterwards.
+        const PlayerTypes eOwner = group->getOwner();
+        const int iGroupId = group->getID();
+        int iSeparated = 0;
 		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
 			unit->joinGroup(NULL);
@@ -68,7 +74,14 @@ namespace {
 			{
 				unit->getGroup()->pushMission(MISSION_SKIP);
 			}
+			iSeparated++;
 		}
+		// [GRP/split] -- a stack breaks up (units peeled off into their own groups).
+        if (iSeparated > 0)
+        {
+            logGroupAI(2, "[GRP/split] owner=%d group=%d separated=%d",
+                (int)eOwner, iGroupId, iSeparated);
+        }
 	}
 }
 
@@ -118,19 +131,6 @@ bool CvSelectionGroupAI::AI_update()
 	if (isForceUpdate())
 	{
 		
-		LOG_UNIT_BLOCK(4, {
-			UnitAITypes eUnitAi = this->getHeadUnit()->AI_getUnitAIType();
-			MissionAITypes eMissionAI = AI_getMissionAIType();
-			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-			CvWString StrUnitName = this->getHeadUnit()->getNameNoDesc();
-			if (StrUnitName.length() == 0)
-			{
-				StrUnitName = this->getHeadUnit()->getName(0).GetCString();
-			}
-
-			logBBAI("Player %d Group ID %d, men� par %d %S of Type %S, at (%d, %d), Mission %S [stack size %d], Was fortified/BuildUp, Force to Awake...", getOwner(), m_iID, this->getHeadUnit()->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
-		});
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
 		setForceUpdate(false);
@@ -159,11 +159,6 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-				LOG_PLAYER_BLOCK(1, {
-					logAiEvaluations(1, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
-					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
-				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
@@ -184,11 +179,6 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-				LOG_PLAYER_BLOCK(1, {
-					logAiEvaluations(1, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
-					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
-				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
@@ -205,19 +195,6 @@ bool CvSelectionGroupAI::AI_update()
 			else if (readyToMove())
 			{
 				FErrorMsg("splitting group");
-				LOG_PLAYER_BLOCK(1, {
-					CvPlot * pPlot = this->plot();
-					int XCoord = -99;
-					int YCoord = -99;
-					if (pPlot != NULL)
-					{
-						XCoord = pPlot->getX();
-						YCoord = pPlot->getY();
-					}
-					logAiEvaluations(1, "pHeadUnit NULL, Splitting Group %d [%d, %d]",
-					this->m_iID,
-					XCoord, YCoord);
-				});
 				splitGroup(1);
 				break;
 			}
@@ -578,6 +555,12 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		}
 	}
 
+	// [COM/odds] -- attack odds the AI computed for a target plot (the core combat
+    // decision input; compare against the [COM/threshold] bar for the go/no-go).
+    logCombatAI(3, "[COM/odds] owner=%d unit=%d target=(%d,%d) odds=%d win=%d",
+        (int)getOwner(), getHeadUnit() ? getHeadUnit()->getID() : -1,
+        pPlot ? pPlot->getX() : -1, pPlot ? pPlot->getY() : -1, iResult, bIsWin ? 1 : 0);
+
 	return iResult;
 }
 
@@ -860,21 +843,6 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 		defenderSum /= 100;
 	}
 	compareRatio /= std::max(1, defenderSum);
-	LOG_UNIT_BLOCK(4, {
-		CvUnit* pUnit = this->getHeadUnit();
-		FAssert(pUnit != NULL);
-		UnitAITypes eUnitAi = pUnit->AI_getUnitAIType();
-		MissionAITypes eMissionAI = this->AI_getMissionAIType();
-		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
-		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
-		CvWString StrUnitName = pUnit->getName();
-		if (StrUnitName.length() == 0)
-		{
-			StrUnitName = pUnit->getName(0).GetCString();
-		}
-		logAiEvaluations(4,"Player %d Group ID %d Head ID %d, %S of Type %S, at (%d, %d), Evaluation of Combat Odds [stack size %d], Attack %d Defense %d, Ratio %d", 
-			getOwner(), m_iID, pUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pPlot->getX(), pPlot->getY(), getNumUnits(), iAttackStrength, defenderSum, compareRatio);
-	});
 
 	return compareRatio;
 }
@@ -1112,10 +1080,38 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	const CvPlot* oldPlot = AI_getMissionAIPlot();
 	const MissionAITypes eOldMissionAI = m_eMissionAIType;
 
+    // [UNT/mission] -- a group/unit commits to a mission AI + target. This is the
+    // authoritative per-unit decision outcome and the safe place to log it (the
+    // group is valid here, unlike post-routine state in doUnitAIMove where a unit
+    // may have been consumed). The CvUnitAI move loops are the prime refactor
+    // target, so trace every committed mission intent here.
+    if (eNewMissionAI != NO_MISSIONAI && (eNewMissionAI != eOldMissionAI || newPlot != oldPlot))
+    {
+        const CvUnit* pHead = getHeadUnit();
+        logUnitAI(2, "[UNT/mission] owner=%d unit=%d unitAI=%d missionAI=%d -> target=(%d,%d) stack=%d",
+            (int)getOwner(), pHead ? pHead->getID() : -1, pHead ? (int)pHead->AI_getUnitAIType() : -1,
+            (int)eNewMissionAI, newPlot ? newPlot->getX() : -1, newPlot ? newPlot->getY() : -1, getNumUnits());
+    }
+
 	if (oldPlot && eOldMissionAI != NO_MISSIONAI)
 	{
 		GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(eOldMissionAI, oldPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
 	}
+
+	// Release worker plot claims when the group pivots away from a MISSIONAI_BUILD
+    // target. Covers explicit clearMissionQueue, popMission finishing the queue,
+    // switch to a different MISSIONAI, and switch to a different plot under the
+    // same MISSIONAI. Unit death is handled separately in CvUnit::killUnconditional.
+    if (eOldMissionAI == MISSIONAI_BUILD && oldPlot != NULL
+    && !(eNewMissionAI == MISSIONAI_BUILD && newPlot == oldPlot))
+    {
+        CvWorkerAI& workerAI = GET_PLAYER(getOwner()).getWorkerAI();
+        const int oldPlotIdx = GC.getMap().plotNum(oldPlot->getX(), oldPlot->getY());
+        foreach_(const CvUnit* unitX, units())
+        {
+            workerAI.releaseClaim(oldPlotIdx, unitX->getID());
+        }
+    }
 
 	// Worker city tracking
 	{
@@ -1138,10 +1134,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 							CvCity* city = GET_PLAYER(getOwner()).getCity(iAssignedCityID);
 							if (city)
 							{
-								if (gUnitLogLevel > 2)
-								{
-									logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
-								}
 								city->setWorkerHave(unitX->getID(), false);
 							}
 							else
@@ -1149,10 +1141,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 								FErrorMsg("Worker assigned to a NULL city...")
 								workerComp->setCityAssignment(-1);
 							}
-						}
-						if (gUnitLogLevel > 2)
-						{
-							logBBAI("Worker (%d) at (%d,%d) attaching to mission for city %S\n", unitX->getID(), unitX->getX(), unitX->getY(), cityX->getName().GetCString());
 						}
 						cityX->setWorkerHave(unitX->getID(), true);
 					}
@@ -1162,10 +1150,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 					CvCity* city = GET_PLAYER(getOwner()).getCity(iAssignedCityID);
 					if (city)
 					{
-						if (gUnitLogLevel > 2)
-						{
-							logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
-						}
 						city->setWorkerHave(unitX->getID(), false);
 					}
 					else

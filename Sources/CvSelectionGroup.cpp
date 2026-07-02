@@ -1030,12 +1030,6 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_CURE:
 			{
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-				if (unitX->canCure(pPlot, ((PromotionLineTypes)iData1)))
-				{
-					return true;
-				}
-#endif
 				break;
 			}
 			case MISSION_GOTO:
@@ -1663,12 +1657,6 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_CURE:
 						{
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-							if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
-							{
-								bAction = true;
-							}
-#endif
 							break;
 						}
 						case MISSION_JOIN:
@@ -3178,8 +3166,6 @@ int CvSelectionGroup::getBombardTurns(const CvCity* pCity) const
 		iBombardTurns += (GC.getMAX_CITY_DEFENSE_DAMAGE() * iTotalBombardRate) - 1;
 		iBombardTurns /= std::max(1, (GC.getMAX_CITY_DEFENSE_DAMAGE() * iTotalBombardRate));
 	}
-
-	//if( gUnitLogLevel > 2 ) logBBAI("      Bombard of %S will take %d turns at rate %d and current damage %d with bombard def %d", pCity->getName().GetCString(), iBombardTurns, iTotalBombardRate, pCity->getDefenseDamage(), (bIgnoreBuildingDefense ? 0 : pCity->getBuildingBombardDefense()));
 
 	return iBombardTurns;
 }

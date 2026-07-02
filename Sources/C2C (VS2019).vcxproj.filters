@@ -79,6 +79,12 @@
     <Filter Include="Source\Base\Infos\PythonInterface">
       <UniqueIdentifier>{9d62ef56-42ed-47fd-b44b-6688fadd8cfc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Base\Repos">
+      <UniqueIdentifier>{8a2c4f1d-7b3e-4d52-9a6f-1c2e3b4a5d6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Base\Utils">
+      <UniqueIdentifier>{c4e2a371-9b86-4f4d-bd57-2e8f3a517d04}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Base\Properties">
       <UniqueIdentifier>{534a1ab8-2aff-4b46-aa86-ae1735a3ccd8}</UniqueIdentifier>
     </Filter>
@@ -336,6 +342,12 @@
     <ClCompile Include="CvWorkerAI.cpp">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClCompile>
+    <ClCompile Include="CvHunterAI.cpp">
+      <Filter>Source\Base\Unit\Capabilities</Filter>
+    </ClCompile>
+    <ClCompile Include="CvCombatModel.cpp">
+      <Filter>Source\Base\Unit\Capabilities</Filter>
+    </ClCompile>
     <ClCompile Include="CvBuildingFilters.cpp">
       <Filter>Source\UI\City\BuildMenu</Filter>
     </ClCompile>
@@ -420,7 +432,7 @@
     <ClCompile Include="CvGlobals.cpp">
       <Filter>Source\Globals</Filter>
     </ClCompile>
-    <ClCompile Include="CvBonusInfo.cpp">
+    <ClCompile Include="Infos\CvBonusInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
     <ClCompile Include="CvBuildingInfo.cpp">
@@ -432,13 +444,322 @@
     <ClCompile Include="CvHeritageInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
+    <ClCompile Include="Infos\CvActionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAdvisorInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAnimationCategoryInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAnimationPathInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoAsset.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoBonus.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoBuilding.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoCivilization.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoFeature.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoImprovement.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoLeaderhead.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoMovie.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoScalableAsset.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoTerrain.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvArtInfoUnit.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAssetInfoBase.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAttachableInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvAutomateInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvBonusClassInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvBuildInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCategoryInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCivicInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCivicOptionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCivilizationInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvClimateInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvColorInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCommandInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCommerceInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvControlInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCorporationInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCultureLevelInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvCursorInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvDiplomacyTextInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEffectInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEmphasizeInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEntityEventInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEraInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEspionageMissionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEventInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvEventTriggerInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvFeatureInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvForceControlInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvGameOptionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvGameSpeedInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvGameText.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvGoodyInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvGraphicOptionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvHandicapInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvHotkeyInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvHurryInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvIdeaClassInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvIdeaInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvImprovementBonusInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvInfoBase.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvInterfaceModeInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvInvisibleInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvLandscapeInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvLeaderHeadInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvMPOptionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvMainMenuInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvMapCategoryInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvMapInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvMissionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvModLoadControlInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvOutcomeInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvPlayerColorInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvProcessInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvProjectInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvPromotionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvPromotionLineInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvPropertyInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvReligionInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Repos\BuildingsRepo.cpp">
+      <Filter>Source\Base\Repos</Filter>
+    </ClCompile>
+    <ClCompile Include="Repos\UnitsRepo.cpp">
+      <Filter>Source\Base\Repos</Filter>
+    </ClCompile>
+    <ClCompile Include="Repos\BuildsRepo.cpp">
+      <Filter>Source\Base\Repos</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\PlotSnapshot.cpp">
+      <Filter>Source\Base\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvRiverModelInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvRouteInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvRouteModelInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvScalableInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSeaLevelInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSlideShowInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSlideShowRandomInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSpaceShipInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSpawnInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSpecialBuildingInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSpecialUnitInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvSpecialistInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvTechInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvTerrainInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvThroneRoomCamera.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvThroneRoomInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvThroneRoomStyleInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvTurnTimerInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvUnitArtStyleTypeInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvUnitFormationInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvUpkeepInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvVictoryInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvVoteInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvVoteSourceInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvWorldInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvWorldPickerInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="Infos\CvYieldInfo.cpp">
+      <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
     <ClCompile Include="CvInfos.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
     <ClCompile Include="CvInfoWater.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
-    <ClCompile Include="CvUnitInfo.cpp">
+    <ClCompile Include="Infos\CvUnitInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
     </ClCompile>
     <ClCompile Include="CvMap.cpp">
@@ -693,9 +1014,6 @@
     <ClCompile Include="SCvInternalGlobals.cpp">
       <Filter>Source\Globals</Filter>
     </ClCompile>
-    <ClCompile Include="CvWorkerService.cpp">
-      <Filter>Source\Base\Unit\Services</Filter>
-    </ClCompile>
     <ClCompile Include="CvValueService.cpp">
       <Filter>Source\Base\Player\Services</Filter>
     </ClCompile>
@@ -840,6 +1158,12 @@
       <Filter>Source\Base\Unit</Filter>
     </ClInclude>
     <ClInclude Include="CvWorkerAI.h">
+      <Filter>Source\Base\Unit\Capabilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CvHunterAI.h">
+      <Filter>Source\Base\Unit\Capabilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCombatModel.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClInclude>
     <ClInclude Include="CvSettlerAI.h">
@@ -1106,6 +1430,357 @@
     <ClInclude Include="CvInfoReplacements.h">
       <Filter>Source\Base\Infos</Filter>
     </ClInclude>
+    <ClInclude Include="Infos\CvActionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAdvisorInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAnimationCategoryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAnimationPathInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoAsset.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoBonus.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoBuilding.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoCivilization.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoFeature.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoImprovement.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoInterface.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoLeaderhead.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoMisc.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoMovie.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoScalableAsset.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoTerrain.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvArtInfoUnit.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAssetInfoBase.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAttachableInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAttitudeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvAutomateInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvBonusClassInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvBuildInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCalendarInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCategoryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCityTabInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCivicInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCivicOptionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCivilizationInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvClimateInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvColorInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCommandInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCommerceInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvConceptInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvControlInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCorporationInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCultureLevelInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvCursorInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvDenialInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvDiplomacyTextInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvDomainInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEffectInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEmphasizeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEntityEventInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEraInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEspionageMissionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEventInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvEventTriggerInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvFeatureInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvForceControlInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvGameOptionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvGameSpeedInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvGameText.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvGoodyInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvGraphicOptionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvHandicapInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvHintInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvHurryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvIdeaClassInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvIdeaInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvImprovementBonusInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvInfoBase.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvInterfaceModeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvInvisibleInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvLandscapeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvLeaderHeadInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMPOptionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMainMenuInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMapCategoryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMapInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMemoryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMissionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvModLoadControlInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvMonthInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvNewConceptInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvOutcomeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvPlayerColorInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvProcessInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvProjectInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvPromotionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvPromotionLineInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvPropertyInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvReligionInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Repos\BuildingsRepo.h">
+      <Filter>Source\Base\Repos</Filter>
+    </ClInclude>
+    <ClInclude Include="Repos\UnitsRepo.h">
+      <Filter>Source\Base\Repos</Filter>
+    </ClInclude>
+    <ClInclude Include="Repos\BuildsRepo.h">
+      <Filter>Source\Base\Repos</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\PlotSnapshot.h">
+      <Filter>Source\Base\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvRiverModelInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvRouteInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvRouteModelInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSeaLevelInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSeasonInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSlideShowInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSlideShowRandomInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSpaceShipInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSpawnInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSpecialBuildingInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSpecialUnitInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvSpecialistInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvTechInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvTerrainInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvThroneRoomCamera.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvThroneRoomInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvThroneRoomStyleInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvTurnTimerInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUnitAIInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUnitArtStyleTypeInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUnitEntry.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUnitFormationInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUnitInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvUpkeepInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvVictoryInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvVoteInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvVoteSourceInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvWorldInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvWorldPickerInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
+    <ClInclude Include="Infos\CvYieldInfo.h">
+      <Filter>Source\Base\Infos</Filter>
+    </ClInclude>
     <ClInclude Include="CvInfos.h">
       <Filter>Source\Base\Infos</Filter>
     </ClInclude>
@@ -1177,9 +1852,6 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Source\Base\GameCore</Filter>
-    </ClInclude>
-    <ClInclude Include="CvWorkerService.h">
-      <Filter>Source\Base\Unit\Services</Filter>
     </ClInclude>
     <ClInclude Include="CvValueService.h">
       <Filter>Source\Base\Player\Services</Filter>

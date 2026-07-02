@@ -198,11 +198,11 @@ public:
 	bool canTrainInternal(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
 
-	bool canConstruct(BuildingTypes eType, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreAmount = false, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
+	bool canConstruct(BuildingTypes eType, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreAmount = false, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 
 	//	KOSHLING - cache can build results
 	void FlushCanConstructCache(BuildingTypes eType = NO_BUILDING);
-	bool canConstructInternal(BuildingTypes eType, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingTypes withExtraBuilding = NO_BUILDING, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
+	bool canConstructInternal(BuildingTypes eType, bool bContinue, bool bTestVisible, bool bIgnoreCost, bool bIgnoreAmount, BuildingTypes withExtraBuilding = NO_BUILDING, bool bIgnoreBuildings = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	void NoteBuildingNoLongerConstructable(BuildingTypes eType) const;
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
@@ -389,72 +389,10 @@ public:
 	int getReligionCount() const;
 	int getCorporationCount() const;
 
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	//TB Combat Mods (Buildings) begin
-	int getUnitAidPresent(PropertyTypes eProperty) const;
-	int getCityAidTotal(PromotionLineTypes ePromotionLineType) const;
-	int getAidRate(PropertyTypes ePropertyType) const;
-	void changeAidRate(PropertyTypes ePropertyType, int iChange);
-	void setAidRate(PropertyTypes ePropertyType, int iChange);
-
-	bool hasAfflictionType(PromotionLineTypes ePromotionLineType) const;
-	void changeAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);
-	void setAfflictionTypeCount(PromotionLineTypes ePromotionLineType, int iChange);
-
-	int getExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType) const;
-	void changeExtraBonusAidModifier(BonusTypes eBonusType, PropertyTypes ePropertyType, int iChange);
-
-	int getExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine) const;
-	void changeExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setExtraAfflictionOutbreakLevelChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getAfflictionToleranceChange(PromotionLineTypes ePromotionLine) const;
-	void changeAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setAfflictionToleranceChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getCurrentOvercomeChange(PromotionLineTypes ePromotionLine) const;
-	void changeCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
-	void setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
-
-	int getTotalTechOutbreakLevelChange(BuildingTypes eType) const;
-	int getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	int getOvercomeChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	int getUnitCommunicability(PromotionLineTypes eAfflictionLine) const;
-	int getTradeCommunicabilityTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
-	bool canAcquireAffliction(BuildingTypes eDisease, PromotionLineTypes eAfflictionLine) const;
-	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
-	void doOutbreakCheck(PromotionLineTypes eAfflictionLine);
-	void doOvercomeCheck(PromotionLineTypes eAfflictionLine);
-	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
-	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
-	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
-
-	int getPropertyValue(PropertyTypes eProperty) const;
-#endif // OUTBREAKS_AND_AFFLICTIONS
-
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
-	int getUnitCombatRepelModifierTotal(UnitCombatTypes eIndex) const;
-	void changeUnitCombatRepelModifierTotal(UnitCombatTypes eIndex, int iChange);
-	int getUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex) const;
-	void changeUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex) const;
 	void changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
-
-#ifdef STRENGTH_IN_NUMBERS
-	int getTotalFrontSupportPercentModifier() const;
-	void changeTotalFrontSupportPercentModifier(int iChange);
-	int getTotalShortRangeSupportPercentModifier() const;
-	void changeTotalShortRangeSupportPercentModifier(int iChange);
-	int getTotalMediumRangeSupportPercentModifier() const;
-	void changeTotalMediumRangeSupportPercentModifier(int iChange);
-	int getTotalLongRangeSupportPercentModifier() const;
-	void changeTotalLongRangeSupportPercentModifier(int iChange);
-	int getTotalFlankSupportPercentModifier() const;
-	void changeTotalFlankSupportPercentModifier(int iChange);
-#endif // STRENGTH_IN_NUMBERS
-
-	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
 	void assignPromotionsFromBuildingChecked(const CvBuildingInfo& kBuilding, CvUnit* pLoopUnit) const;
 
@@ -1748,30 +1686,15 @@ protected:
 	int m_iReinforcementCounter;
 
 	//TB Combat Mod (Buildings)
-#ifdef STRENGTH_IN_NUMBERS
-	int m_iTotalFrontSupportPercentModifier;
-	int m_iTotalShortRangeSupportPercentModifier;
-	int m_iTotalMediumRangeSupportPercentModifier;
-	int m_iTotalLongRangeSupportPercentModifier;
-	int m_iTotalFlankSupportPercentModifier;
-#endif
-	int* m_paiNewAfflictionTypeCount;
 	int* m_paiAidRate;
 	int** m_ppaaiExtraBonusAidModifier;
-	int* m_paiNewExtraAfflictionOutbreakLevelChange;
-	int* m_paiNewAfflictionToleranceChange;
-	int* m_paiNewCurrentOvercomeChange;
 	int* m_paiUnitCombatProductionModifier;
-	int* m_paiUnitCombatRepelModifier;
-	int* m_paiUnitCombatRepelAgainstModifier;
 	int* m_paiUnitCombatDefenseAgainstModifier;
-	int* m_paiPromotionLineAfflictionAttackCommunicability;
 	//TB Building Tags
 	int m_iExtraLocalCaptureProbabilityModifier;
 	int m_iExtraLocalCaptureResistanceModifier;
 	int m_iExtraLocalDynamicDefense;
 	int m_iExtraRiverDefensePenalty;
-	int m_iExtraLocalRepel;
 	int m_iExtraMinDefense;
 	int m_iExtraBuildingDefenseRecoverySpeedModifier;
 	int m_iModifiedBuildingDefenseRecoverySpeedCap;
@@ -1993,10 +1916,6 @@ public:
 	int getExtraRiverDefensePenalty() const;
 	void setExtraRiverDefensePenalty(int iValue);
 	void changeExtraRiverDefensePenalty(int iChange);
-
-	int getExtraLocalRepel() const;
-	void setExtraLocalRepel(int iValue);
-	void changeExtraLocalRepel(int iChange);
 
 	int getExtraMinDefense() const;
 	void setExtraMinDefense(int iValue);

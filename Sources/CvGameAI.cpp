@@ -93,14 +93,7 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 	{
 		iValue *= unit.getCombat();
 		//TB Combat Mods Begin
-		// Inactive
-		//iValue += (((100 + unit.getArmor())/100)/5);
-		//iValue += (((100 + unit.getPuncture())/100)/5);
-		// Inactive END
-
 		// TOOD: rethink these calculations
-		//iValue += (((100 * unit.getPrecisionModifier())/100)/5);
-		//iValue += (((100 * unit.getDodgeModifier())/100)/5);
 		//iValue += (((100 * unit.getDamageModifier())/100)/5);
 		//TB Combat Mods End
 

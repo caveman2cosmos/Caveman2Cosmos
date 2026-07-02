@@ -768,29 +768,15 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 		else
 		{
 			//TB Combat Mods begin
-			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
-			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
-				promoFlags |= PromotionRequirements::Equip;
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
-				promoFlags |= PromotionRequirements::Afflict;
-#endif
-			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment()
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-				&& !GC.getPromotionInfo(kPromotion.ePromotion).isAffliction()
-#endif
-				)
-			{
-				promoFlags |= PromotionRequirements::Promote;
-			}
-			if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, promoFlags))
-			//TB Combat Mods end
-			{
-				if (!bHasPromotion)
-				{
-					m_pUnit->setHasPromotion(kPromotion.ePromotion, true);
-				}
-			}
+            PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas | PromotionRequirements::Promote;
+            if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, promoFlags))
+            //TB Combat Mods end
+            {
+                if (!bHasPromotion)
+                {
+                    m_pUnit->setHasPromotion(kPromotion.ePromotion, true);
+                }
+            }
 			else
 			{
 				if (bHasPromotion)
