@@ -106,6 +106,10 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_SIZE_MATTERS_RANK_GROUPS</Description>
 		</CategoryInfo>
 		<CategoryInfo>
+			<Type>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Type>
+			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Description>
+		</CategoryInfo>
+		<CategoryInfo>
 			<Type>CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Type>
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Description>
 		</CategoryInfo>
@@ -145,6 +149,7 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ATTACK_FORM</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>
@@ -152,6 +157,15 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_METHOD</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
+			</Categories>
+		</CategoryInfo>
+		<CategoryInfo>
+			<Type>CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Type>
+			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>
@@ -159,6 +173,14 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+			</Categories>
+		</CategoryInfo>
+		<CategoryInfo>
+			<Type>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Type>
+			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>
@@ -173,6 +195,7 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>
@@ -180,6 +203,7 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DETONATE</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>
@@ -187,6 +211,7 @@
 			<Description>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_AIR2GROUND</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUPS</Category>
+				<Category>CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Category>
 			</Categories>
 		</CategoryInfo>
 		<CategoryInfo>

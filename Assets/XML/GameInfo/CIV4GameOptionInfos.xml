@@ -483,6 +483,13 @@
             <bVisible>1</bVisible>
         </GameOptionInfo>
         <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
             <Type>GAMEOPTION_COMBAT_SURROUND_DESTROY</Type>
             <Description>TXT_KEY_GAMEOPTION_COMBAT_SURROUND_DESTROY</Description>
             <Help>TXT_KEY_GAMEOPTION_COMBAT_SURROUND_DESTROY_HELP</Help>
@@ -512,6 +519,44 @@
             <Help>TXT_KEY_GAMEOPTION_COMBAT_FIGHT_OR_FLIGHT_HELP</Help>
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_OUTBREAKS_AND_AFFLICTIONS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_HEART_OF_WAR</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_HEART_OF_WAR_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_BATTLEWORN</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_BATTLEWORN</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_BATTLEWORN_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_UPRANGE</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_UPRANGE</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_UPRANGE_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_EQUIPMENT</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_EQUIPMENT_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>0</bVisible>
+            <EnforcesGameOptionOnTypes>
+                <GameOptionType>GAMEOPTION_COMBAT_UPRANGE</GameOptionType>
+            </EnforcesGameOptionOnTypes>
         </GameOptionInfo>
         <GameOptionInfo>
             <Type>GAMEOPTION_COMBAT_REALISTIC_SIEGE</Type>

@@ -50,6 +50,16 @@ struct PromotionLineModifier
 	operator int() const {return (int)ePromotionLine;}
 	bool operator< (const PromotionLineModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
 };
+struct AfflictOnAttackChange
+{
+	PromotionLineTypes eAfflictionLine;
+	int iProbabilityChange;
+	int iMelee;
+	int iDistance;
+	int iImmediate;
+	operator int() const {return (int)eAfflictionLine;}
+	bool operator< (const AfflictOnAttackChange& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+};
 struct PlotTeamVisibilityIntensity
 {
 	TeamTypes eTeam;
@@ -68,6 +78,16 @@ struct FreePromoTypes
 	bool operator< (const FreePromoTypes& rhs) const {return (int)ePromotion < (int)rhs.ePromotion;}
 };
 
+struct AfflictOnAttack
+{
+	PromotionLineTypes eAfflictionLine;
+	int iProbability;
+	int iMelee;
+	int iDistance;
+	int iImmediate;
+	operator int() const {return (int)eAfflictionLine;}
+	bool operator< (const AfflictOnAttack& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+};
 struct TerrainModifier
 {
 	TerrainTypes eTerrain;
@@ -206,6 +226,13 @@ struct EnabledCivilizations
 	operator int() const {return (int)eCivilization;}
 	bool operator< (const EnabledCivilizations& rhs) const {return (int)eCivilization < (int)rhs.eCivilization;}
 };
+struct AfflictionLineChanges
+{
+	PromotionLineTypes eAfflictionLine;
+	int iChange;
+	operator int() const {return (int)eAfflictionLine;}
+	bool operator< (const AfflictionLineChanges& rhs) const {return (int)eAfflictionLine < (int)rhs.eAfflictionLine;}
+};
 struct BonusAidModifiers
 {
 	BonusTypes eBonusType;
@@ -247,6 +274,16 @@ struct PlaceBonusTypes
 	MapCategoryTypes ePrereqMapCategory;
 	operator int() const {return (int)eBonus;}
 	bool operator< (const PlaceBonusTypes& rhs) const {return (int)eBonus < (int)rhs.eBonus;}
+};
+struct PromotionLineAfflictionModifier
+{
+	PromotionLineTypes ePromotionLine;
+	int iModifier;
+	bool bWorkedTile;
+	bool bVicinity;
+	bool bAccessVolume;
+	operator int() const {return (int)ePromotionLine;}
+	bool operator< (const PromotionLineAfflictionModifier& rhs) const {return (int)ePromotionLine < (int)rhs.ePromotionLine;}
 };
 //TB Combat Mod end
 

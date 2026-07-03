@@ -120,6 +120,16 @@
 		<Italian>Unità utilizzabili:</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
+		<English>(P) Afflictions</English>
+		<French>(P) Afflictions</French>
+		<Italian>Alterazioni di stato</Italian>
+		<German>Beschwerden</German>
+		<Spanish>Alteraciones de estado</Spanish>
+		<Polish>Os&#179;abienia</Polish>
+		<Russian>Бедствия</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ALL_ERAS</Tag>
 		<English>All Eras</English>
 		<French>Toutes les Eres</French>
@@ -311,6 +321,16 @@
 		<Italian>Unità culturali</Italian>
 		<German>Kulturspezifisch</German>
 		<Russian>Культурные подразделения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CATEGORY_EQUIPMENT_PROMOTION</Tag>
+		<English>(P) Equipments</English>
+		<French>(P) Equipements</French>
+		<Italian>Equipaggiamento</Italian>
+		<German>Ausrüstung</German>
+		<Spanish>Equipamiento</Spanish>
+		<Polish>Ekwipunek</Polish>
+		<Russian>Арматура</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ERAS</Tag>

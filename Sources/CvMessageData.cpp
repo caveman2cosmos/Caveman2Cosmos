@@ -1778,6 +1778,14 @@ void CvNetChooseMergeUnit::Execute()
 							pkMergedUnit->changeLevel(1);
 						}
 					}
+					if (pUnit1->isHasPromotion(ePromotion))
+					{
+						if (GC.getPromotionInfo(ePromotion).isEquipment())
+						{
+							pkMergedUnit->setHasPromotion(ePromotion, true, true);
+						}
+					}
+					// Must include an adjustment here when equipments are able to be inventoried - Shouldn't just lose the 2nd and 3rd unit's equipment.
 				}
 				else if (GC.getPromotionInfo(ePromotion).getQualityChange() != 0)
 				{
@@ -1905,9 +1913,14 @@ void CvNetConfirmSplitUnit::Execute()
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
 						}
-						else if (pUnit0->isPromotionFree(ePromotion))
+						else if (pUnit0->isPromotionFree(ePromotion) || GC.getPromotionInfo(ePromotion).isEquipment())
 						{
 							pUnit1->setHasPromotion(ePromotion, true, true);
+							if (GC.getPromotionInfo(ePromotion).isEquipment())
+							{
+								pUnit2->setHasPromotion(ePromotion, true, true);
+								pUnit3->setHasPromotion(ePromotion, true, true);
+							}
 						}
 						else
 						{

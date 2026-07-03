@@ -5342,9 +5342,20 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					{
 						iValue += kBuilding.getLocalDynamicDefense() / 2;
 					}
+#ifdef STRENGTH_IN_NUMBERS
+					if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
+					{
+						iValue += kBuilding.getFrontSupportPercentModifier() / 4;
+						iValue += kBuilding.getShortRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getMediumRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getLongRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getFlankSupportPercentModifier() / 4;
+					}
+#endif
 					iValue += kBuilding.getLocalCaptureProbabilityModifier() / 6;
 					iValue += kBuilding.getLocalCaptureResistanceModifier() / 3;
 					iValue -= kBuilding.getRiverDefensePenalty() / 2;
+					iValue += kBuilding.getLocalRepel();
 					iValue += kBuilding.getMinDefense();
 					iValue += kBuilding.getBuildingDefenseRecoverySpeedModifier() / 20;
 					iValue += kBuilding.getCityDefenseRecoverySpeedModifier() / 5;
@@ -5357,6 +5368,8 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 				//more intricate and accurate.  These are just semi-sufficient patches 'for now'.
 				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 				{
+					iValue += kBuilding.getUnitCombatRepelModifier(iI) / 2;
+					iValue += kBuilding.getUnitCombatRepelAgainstModifier(iI) / 2;
 					iValue += kBuilding.getUnitCombatDefenseAgainstModifier(iI) / 2;
 					if (kBuilding.isMayDamageAttackingUnitCombatType(iI))
 					{
@@ -12453,6 +12466,19 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 	}
 	if ((iFocusFlags & BUILDINGFOCUS_DEFENSE) != 0)
 	{
+#ifdef STRENGTH_IN_NUMBERS
+		if (GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS))
+		{
+			if (kBuilding.getFrontSupportPercentModifier() > 0
+				|| kBuilding.getShortRangeSupportPercentModifier() > 0
+				|| kBuilding.getMediumRangeSupportPercentModifier() > 0
+				|| kBuilding.getLongRangeSupportPercentModifier() > 0
+				|| kBuilding.getFlankSupportPercentModifier() > 0)
+			{
+				return true;
+			}
+		}
+#endif
 		if (kBuilding.getDefenseModifier() > 0 ||
 			kBuilding.getBombardDefenseModifier() > 0 ||
 			kBuilding.getAllCityDefenseModifier() > 0 ||
@@ -12471,10 +12497,13 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 			kBuilding.getLocalCaptureProbabilityModifier() > 0 ||
 			kBuilding.getLocalCaptureResistanceModifier() > 0 ||
 			kBuilding.getNationalCaptureResistanceModifier() > 0 ||
+			kBuilding.getNumUnitCombatRepelModifiers() > 0 ||
 			kBuilding.getRiverDefensePenalty() < 0 ||
+			kBuilding.getLocalRepel() > 0 ||
 			kBuilding.getMinDefense() > 0 ||
 			kBuilding.getBuildingDefenseRecoverySpeedModifier() > 0 ||
 			kBuilding.getCityDefenseRecoverySpeedModifier() > 0 ||
+			kBuilding.getNumUnitCombatRepelAgainstModifiers() > 0 ||
 			kBuilding.getNumUnitCombatDefenseAgainstModifiers() > 0 ||
 			(kBuilding.getDamageAttackerChance() > 0 && kBuilding.getDamageToAttacker() > 0))
 		{
@@ -12640,6 +12669,9 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bAreaAlone = kOwner.AI_isAreaAlone(pArea);
 	const bool bZOC = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL);
 	const bool bSAD = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_COMBAT_SURROUND_DESTROY);
+#ifdef STRENGTH_IN_NUMBERS
+	const bool bSIN = bAreaAlone ? false : GC.getGame().isOption(GAMEOPTION_COMBAT_STRENGTH_IN_NUMBERS);
+#endif
 	const UnitTypes eBestLandUnit = bAreaAlone ? NO_UNIT : GC.getGame().getBestLandUnit();
 
 	const int iGoldValueAssessmentModifier = kOwner.AI_goldValueAssessmentModifier();
@@ -12958,9 +12990,20 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 					{
 						iValue += kBuilding.getLocalDynamicDefense() / 2;
 					}
+#ifdef STRENGTH_IN_NUMBERS
+					if (bSIN)
+					{
+						iValue += kBuilding.getFrontSupportPercentModifier() / 4;
+						iValue += kBuilding.getShortRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getMediumRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getLongRangeSupportPercentModifier() / 4;
+						iValue += kBuilding.getFlankSupportPercentModifier() / 4;
+					}
+#endif
 					iValue += kBuilding.getLocalCaptureProbabilityModifier() / 6;
 					iValue += kBuilding.getLocalCaptureResistanceModifier() / 3;
 					iValue -= kBuilding.getRiverDefensePenalty() / 2;
+					iValue += kBuilding.getLocalRepel();
 					iValue += kBuilding.getMinDefense();
 					iValue += kBuilding.getBuildingDefenseRecoverySpeedModifier() / 20;
 					iValue += kBuilding.getCityDefenseRecoverySpeedModifier() / 5;
@@ -12972,6 +13015,8 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				//more intricate and accurate.  These are just semi-sufficient patches 'for now'.
 				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 				{
+					iValue += kBuilding.getUnitCombatRepelModifier(iI) / 2;
+					iValue += kBuilding.getUnitCombatRepelAgainstModifier(iI) / 2;
 					iValue += kBuilding.getUnitCombatDefenseAgainstModifier(iI) / 2;
 					if (kBuilding.isMayDamageAttackingUnitCombatType(iI))
 					{

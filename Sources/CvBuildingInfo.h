@@ -198,12 +198,23 @@ public:
 	int getHappinessPercentPerPopulation() const	{ return m_iHappinessPercentPerPopulation; }
 	int getHealthPercentPerPopulation() const		{ return m_iHealthPercentPerPopulation; }
 	int getLinePriority() const;
+	int getOutbreakBase() const;
+	int getOvercomeBase() const;
+	int getTradeCommunicability() const;
+#ifdef STRENGTH_IN_NUMBERS
+	int getFrontSupportPercentModifier() const			{ return m_iFrontSupportPercentModifier; }
+	int getShortRangeSupportPercentModifier() const		{ return m_iShortRangeSupportPercentModifier; }
+	int getMediumRangeSupportPercentModifier() const	{ return m_iMediumRangeSupportPercentModifier; }
+	int getLongRangeSupportPercentModifier() const		{ return m_iLongRangeSupportPercentModifier; }
+	int getFlankSupportPercentModifier() const			{ return m_iFlankSupportPercentModifier; }
+#endif // STRENGTH_IN_NUMBERS
 	int getNationalCaptureProbabilityModifier() const;
 	int getNationalCaptureResistanceModifier() const;
 	int getLocalCaptureProbabilityModifier() const;
 	int getLocalCaptureResistanceModifier() const;
 	int getLocalDynamicDefense() const;
 	int getRiverDefensePenalty() const;
+	int getLocalRepel() const;
 	int getMinDefense() const;
 	int getBuildingDefenseRecoverySpeedModifier() const;
 	int getCityDefenseRecoverySpeedModifier() const;
@@ -397,11 +408,23 @@ public:
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
+	int getNumUnitCombatRepelModifiers() const;
+	int getUnitCombatRepelModifier(int iUnitCombat, bool bForLoad = false) const;
+
+	int getNumUnitCombatRepelAgainstModifiers() const;
+	int getUnitCombatRepelAgainstModifier(int iUnitCombat, bool bForLoad = false) const;
+
 	int getNumUnitCombatDefenseAgainstModifiers() const;
 	int getUnitCombatDefenseAgainstModifier(int iUnitCombat) const;
 
 	int getNumUnitCombatProdModifiers() const;
 	int getUnitCombatProdModifier(int iUnitCombat) const;
+
+	int getNumAfflictionOutbreakLevelChanges() const;
+	int getAfflictionOutbreakLevelChange(int iAfflictionLine) const;
+
+	int getNumTechOutbreakLevelChanges() const;
+	int getTechOutbreakLevelChange(int iTech) const;
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
@@ -648,12 +671,23 @@ private:
 	int m_iMaxPlayerInstances;
 	int m_iExtraPlayerInstances;
 	int m_iLinePriority;
+	int m_iOutbreakBase;
+	int m_iOvercomeBase;
+	int m_iTradeCommunicability;
+#ifdef STRENGTH_IN_NUMBERS
+	int m_iFrontSupportPercentModifier;
+	int m_iShortRangeSupportPercentModifier;
+	int m_iMediumRangeSupportPercentModifier;
+	int m_iLongRangeSupportPercentModifier;
+	int m_iFlankSupportPercentModifier;
+#endif
 	int m_iNationalCaptureProbabilityModifier;
 	int m_iNationalCaptureResistanceModifier;
 	int m_iLocalCaptureProbabilityModifier;
 	int m_iLocalCaptureResistanceModifier;
 	int m_iLocalDynamicDefense;
 	int m_iRiverDefensePenalty;
+	int m_iLocalRepel;
 	int m_iMinDefense;
 	int m_iBuildingDefenseRecoverySpeedModifier;
 	int m_iCityDefenseRecoverySpeedModifier;
@@ -744,8 +778,12 @@ private:
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
 	std::vector<AidRateChanges> m_aAidRateChanges;
+	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
+	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatProdModifiers;
+	PromotionLineModifierArray m_aAfflictionOutbreakLevelChanges;
+	TechModifierArray m_aTechOutbreakLevelChanges;
 	IDValueMap<BonusTypes, int> m_piBonusHealthChanges;
 	IDValueMap<BonusTypes, int> m_piBonusHappinessChanges;
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;

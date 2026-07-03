@@ -1379,70 +1379,87 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	}
 
 	{
-        const int iTotal = iNumPromoInfos;
+		const int iTotal = iNumPromoInfos;
 
-        int* piIndexList = new int[iNumPromoInfos];
-        int* piPriorityList = new int[iNumPromoInfos];
+		int* piIndexList = new int[iNumPromoInfos];
+		int* piPriorityList = new int[iNumPromoInfos];
 
-        const int iStatusPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_STATUS")).getOrderPriority();
-        const int iBigLimit = iStatusPriority;
-        const int iSmallLimit = iBigLimit - 1;
+		const int iStatusPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_STATUS")).getOrderPriority();
+		const int iEquipPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_REEQUIP")).getOrderPriority();
+		const int iBigLimit = std::max(iStatusPriority, iEquipPriority);
+		const int iSmallLimit = std::min(std::min(iStatusPriority, iEquipPriority), iBigLimit - 1);
 
-        int n = 0;
+		int n = 0;
 
-        for (int i = 0; i < iNumPromoInfos; i++)
-        {
-            const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
 
-            if (promo.isStatus())
-            {
-                piIndexList[n] = i;
-                piPriorityList[n] = std::max(iBigLimit, iStatusPriority + promo.getOrderPriority());
-                n++;
-            }
-        }
+			if (promo.isStatus())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = std::max(iBigLimit, iStatusPriority + promo.getOrderPriority());
+				n++;
+			}
+		}
 
-        for (int i = 0; i < iNumPromoInfos; i++)
-        {
-            const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
 
-            if (!promo.isStatus())
-            {
-                piIndexList[n] = i;
-                piPriorityList[n] = std::min(promo.getOrderPriority(), iSmallLimit - 1);
-                n++;
-            }
-        }
-        FAssert(n == iNumPromoInfos);
+			if (promo.isEquipment())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = range(iEquipPriority + promo.getOrderPriority(), iSmallLimit, iBigLimit - 1);
+				n++;
+			}
+		}
 
-        int* piOrderedIndex = new int[iNumPromoInfos];
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
 
-        orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumPromoInfos);
+			if (!promo.isStatus() && !promo.isEquipment())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = std::min(promo.getOrderPriority(), iSmallLimit - 1);
+				n++;
+			}
+		}
+		FAssert(n == iNumPromoInfos);
 
-        for (int i = 0; i < iNumPromoInfos; i++)
-        {
-            CvActionInfo* pActionInfo = new CvActionInfo;
-            pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
-            pActionInfo->setSubType(ACTIONSUBTYPE_PROMOTION);
+		int* piOrderedIndex = new int[iNumPromoInfos];
 
-            CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]);
+		orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumPromoInfos);
 
-            if (promo.isStatus())
-            {
-                promo.setCommandType(GetInfoClass("COMMAND_STATUS"));
-            }
-            else
-            {
-                promo.setCommandType(GetInfoClass("COMMAND_PROMOTION"));
-            }
-            promo.setActionInfoIndex(iActionInfoIndex++);
-            promo.setHotKeyDescription(
-                promo.getTextKeyWide(), GC.getCommandInfo((CommandTypes)promo.getCommandType()).getTextKeyWide(),
-                CreateHotKeyFromDescription(promo.getHotKey(), promo.isShiftDown(), promo.isAltDown(), promo.isCtrlDown())
-            );
-            GC.m_paActionInfo.push_back(pActionInfo);
-        }
-    }
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			CvActionInfo* pActionInfo = new CvActionInfo;
+			pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
+			pActionInfo->setSubType(ACTIONSUBTYPE_PROMOTION);
+
+			CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]);
+
+			if (promo.isEquipment())
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_REEQUIP"));
+			}
+			else if (promo.isStatus())
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_STATUS"));
+			}
+			else
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_PROMOTION"));
+			}
+			promo.setActionInfoIndex(iActionInfoIndex++);
+			promo.setHotKeyDescription(
+				promo.getTextKeyWide(), GC.getCommandInfo((CommandTypes)promo.getCommandType()).getTextKeyWide(),
+				CreateHotKeyFromDescription(promo.getHotKey(), promo.isShiftDown(), promo.isAltDown(), promo.isCtrlDown())
+			);
+			GC.m_paActionInfo.push_back(pActionInfo);
+		}
+	}
 }
 
 

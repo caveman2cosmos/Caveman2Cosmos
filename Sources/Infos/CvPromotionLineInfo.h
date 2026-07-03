@@ -25,6 +25,12 @@ public:
 	TechTypes getPrereqTech() const	{ return m_ePrereqTech; }
 	TechTypes getObsoleteTech() const;
 	PropertyTypes getPropertyType() const;
+	bool isEquipment() const;
+	bool isCritical() const;
+	bool isNoSpreadonBattle() const;
+	bool isNoSpreadUnitProximity() const;
+	bool isNoSpreadUnittoCity() const;
+	bool isNoSpreadCitytoUnit() const;
 	bool isBuildUp() const;
 	bool isPoison() const;
 
@@ -48,6 +54,10 @@ public:
 	int getNumNotOnGameOptions() const;
 	bool isNotOnGameOption(int i) const;
 
+	int getCriticalOriginCombatClassType(int i) const;
+	int getNumCriticalOriginCombatClassTypes() const;
+	bool isCriticalOriginCombatClassType(int i) const;
+
 	int getCategory(int i) const;
 	int getNumCategories() const;
 	bool isCategory(int i) const;
@@ -57,9 +67,17 @@ public:
 	int getUnitCombatContractChanceChange(int iUnitCombat) const;
 	bool isUnitCombatContractChanceChange(int iUnitCombat) const;
 
+	int getNumUnitCombatOvercomeChanges() const;
+	int getUnitCombatOvercomeChange(int iUnitCombat) const;
+	bool isUnitCombatOvercomeChange(int iUnitCombat) const;
+
 	int getNumTechContractChanceChanges() const;
 	int getTechContractChanceChange(int iTech) const;
 	bool isTechContractChanceChange(int iTech) const;
+
+	int getNumTechOvercomeChanges() const;
+	int getTechOvercomeChange(int iTech) const;
+	bool isTechOvercomeChange(int iTech) const;
 
 	//Post Load
 
@@ -80,6 +98,12 @@ protected:
 	TechTypes m_ePrereqTech;
 	TechTypes m_eObsoleteTech;
 	PropertyTypes m_ePropertyType;
+	bool m_bEquipment;
+	bool m_bCritical;
+	bool m_bNoSpreadonBattle;
+	bool m_bNoSpreadUnitProximity;
+	bool m_bNoSpreadUnittoCity;
+	bool m_bNoSpreadCitytoUnit;
 	bool m_bBuildUp;
 	bool m_bPoison;
 
@@ -90,13 +114,16 @@ protected:
 	std::vector<int> m_aiNotOnDomainTypes;
 	std::vector<int> m_aiOnGameOptions;
 	std::vector<int> m_aiNotOnGameOptions;
+	std::vector<int> m_aiCriticalOriginCombatClassTypes;
 	std::vector<int> m_aiPromotions;
 	std::vector<int> m_aiBuildings;
 	std::vector<int> m_aiCategories;
 
 	// int vector utilizing pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatContractChanceChanges;
+	UnitCombatModifierArray m_aUnitCombatOvercomeChanges;
 	TechModifierArray m_aTechContractChanceChanges;
+	TechModifierArray m_aTechOvercomeChanges;
 };
 
 #endif // CV_PROMOTION_LINE_INFO_H

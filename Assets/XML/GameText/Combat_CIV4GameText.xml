@@ -1,6 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ADJUST_FATIGUE_PER_ROUND</Tag>
+		<English>Fatigue: Strength/rnd</English>
+		<French>Fatigue: Force/rnd</French>
+		<Italian>Fatica: Forza/turno</Italian>
+		<Polish>Zm&#234;czenie: Si&#179;a/Runda</Polish>
+		<Russian>Усталость: сила/ход</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ADJUST_RAGE_PER_ROUND</Tag>
+		<English>Rage: Strength/rnd</English>
+		<French>Rage: Force/rnd</French>
+		<Italian>Rabbia: Forza/turno</Italian>
+		<Polish>W&#156;ciek&#179;o&#156;&#230;: Si&#179;a/Runda</Polish>
+		<Russian>Ярость: Сила/ход</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMBAT_AID_PRESENT</Tag>
 		<English>Aid present:</English>
 		<French>Aide actuelle:</French>
@@ -292,6 +308,22 @@
 		<Italian>[ICON_BULLET]%D1_Bonus%% dai modificatori della difesa</Italian>
 		<Polish>[ICON_BULLET]%D1_Bonus%% z modyfikatora obrony</Polish>
 		<Russian>[ICON_BULLET]%D1_Bonus%% от модификатора защиты</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_DEMORALIZATION</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Demoralization penalty</English>
+		<French>[ICON_BULLET]%D1_Bonus%% Pénalité (Démoralisation)</French>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Demoralizzazione</Italian>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Demoralizacji</Polish>
+		<Russian>[ICON_BULLET]%D1_Bonus%% штраф от Деморализации</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_DETERMINATION</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Determination bonus</English>
+		<French>[ICON_BULLET]%D1_Bonus%% Bonus (Détermination)</French>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Determinazione</Italian>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Determinacji</Polish>
+		<Russian>[ICON_BULLET]%D1_Bonus%% бонус от Воодушевления</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_FIGHT_TO_DEATH</Tag>
@@ -600,6 +632,13 @@
 		<Russian>[ICON_BULLET]Шанс отступить в бою с %s2_Type: %D1_Bonus%%</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMBAT_RAMPAGE</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Rampage bonus</English>
+		<French>[ICON_BULLET]%D1_Bonus%% Bonus (Frénésie)</French>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Frenesia</Italian>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Sza&#179;u</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_ATTACKER_GRAND_TOTAL</Tag>
 		<English>Total Attacker Chance for Round Stun:</English>
 		<French>Probabilité totale d'étourdissement par Round (Attaquant):</French>
@@ -678,6 +717,13 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% por rodear al enemigo</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% dla otoczenia wroga</Polish>
 		<Russian>[ICON_BULLET]%D1_Change%% äëÿ îêðóæåíèÿ âðàãà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_TIRES</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Tires penalty</English>
+		<French>[ICON_BULLET]%D1_Bonus%% Pénalité (Lassitude)</French>
+		<Italian>[ICON_BULLET]%D1_Bonus%% dalla Stanchezza</Italian>
+		<Polish>[ICON_BULLET]%D1_Bonus%% z Przem&#234;czenia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_TOLERANCE</Tag>
@@ -12727,6 +12773,125 @@
 		<Italian>Arma secondaria a antimateria</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_AXE</Tag>
+		<English>Wields (Dist Backup Axe)</English>
+		<French>
+			<Text>(Équipement secondaire) Hache - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Hacha (de reserva):Unidades con hacha (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Top&#243;r)</Polish>
+		<Russian>Îðóæèå(Äèñò. òîïîðû)</Russian>
+		<Italian>Arma secondaria a distanza ascia</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BALLISTA</Tag>
+		<English>Wields (Dist Backup Ballista)</English>
+		<French>
+			<Text>(Équipement secondaire) Balliste - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Balista (de reserva):Unidades con balista (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Balista)</Polish>
+		<Russian>Îðóæèå(Äèñò. áàëëèñòà)</Russian>
+		<Italian>Arma secondaria a distanza ballista</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BLOWGUN</Tag>
+		<English>Wields (Dist Backup Blowgun)</English>
+		<French>
+			<Text>(Équipement secondaire) Sarbacane - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Cerbatana (de reserva):Unidades con cerbatana (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dmuchawka)</Polish>
+		<Russian>Îðóæèå(Dist Backup Blowgun)</Russian>
+		<Italian>Arma secondaria a distanza cerbottana</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOLA</Tag>
+		<English>Wields (Dist Backup Bola)</English>
+		<French>
+			<Text>(Équipement secondaire) Bolas - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Boleadoras (de reserva):Unidades con boleadoras (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Bola)</Polish>
+		<Russian>Îðóæèå(Dist Backup Bola)</Russian>
+		<Italian>Arma secondaria a distanza bola</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_BOOMERANG</Tag>
+		<English>Wields (Dist Backup Boomerang)</English>
+		<French>
+			<Text>(Équipement secondaire) Boomerang - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Bumerán (de reserva):Unidades con bumerán (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Boomerang )</Polish>
+		<Russian>Îðóæèå(Dist Backup Boomerang)</Russian>
+		<Italian>Arma secondaria a distanza boomerang</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CANNONBALL</Tag>
+		<English>Wields (Dist Backup Cannonball)</English>
+		<French>
+			<Text>(Équipement secondaire) Boulet de Canon - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Balas de cañón (de reserva):Unidades con balas de cañón (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dzia&#179;o)</Polish>
+		<Russian>Îðóæèå(Dist Backup Cannonball)</Russian>
+		<Italian>Arma secondaria a distanza palle di cannone</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_CLUB</Tag>
+		<English>Wields (Dist Backup Club)</English>
+		<French>
+			<Text>(Équipement secondaire) Gourdin - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Garrote (de reserva):Unidades con garrote (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pa&#179;ka)</Polish>
+		<Russian>Îðóæèå(Dist Backup Club)</Russian>
+		<Italian>Arma secondaria a distanza clava</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_COILGUN</Tag>
 		<English>Wields (Backup Coilgun)</English>
 		<French>(Équipement secondaire) Canon magnétique</French>
@@ -12741,6 +12906,142 @@
 		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dezintegrator)</Polish>
 		<Russian>Îðóæèå(Äèçèíòåãðàöèÿ)</Russian>
 		<Italian>Arma secondaria disintegrante</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_DYNAMITE</Tag>
+		<English>Wields (Dist Backup Dynamite)</English>
+		<French>
+			<Text>(Équipement secondaire) Dynamite - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Dinamita (de reserva):Unidades con dinamita (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Dynamit)</Polish>
+		<Russian>Îðóæèå(Dist Backup Dynamite)</Russian>
+		<Italian>Arma secondaria a distanza dinamite</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ELECTRICAL</Tag>
+		<English>Wields (Dist Backup Electrical)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Électrique - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas de electricidad (de reserva):Unidades con armas de electricidad (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Elektryczne)</Polish>
+		<Russian>Îðóæèå(Dist Backup Electrical)</Russian>
+		<Italian>Arma secondaria a distanza elettrica</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EMP</Tag>
+		<English>Wields (Dist Backup Electromagnetic)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Électromagnétique - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas electromagnéticas (de reserva):Unidades con armas electromagnéticas (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Elektromagnetyczna)</Polish>
+		<Russian>Îðóæèå(Dist Backup Electromagnetic)</Russian>
+		<Italian>Arma secondaria a distanza a impulsi elettromagnetici</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_EXPLOSIVE_FLASK</Tag>
+		<English>Wields (Dist Backup Explosive Flask)</English>
+		<French>
+			<Text>(Équipement secondaire) Bouteille Explosive - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Frasco de explosivos (de reserva):Unidades con frasco de explosivos (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Mo&#179;otow)</Polish>
+		<Russian>Îðóæèå(Dist Backup Explosive Flask)</Russian>
+		<Italian>Arma secondaria a distanza bottiglia incendiaria</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FIREWORKS</Tag>
+		<English>Wields (Dist Backup Fireworks)</English>
+		<French>
+			<Text>(Équipement secondaire) Pétards - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Petardos (de reserva):Unidades con petardos (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Fajerwerki )</Polish>
+		<Russian>Îðóæèå(Dist Backup Fireworks)</Russian>
+		<Italian>Arma secondaria a distanza petardo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FLAME</Tag>
+		<English>Wields (Dist Backup Flame Jet)</English>
+		<French>
+			<Text>(Équipement secondaire) Lance-Flamme - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas de llamarada (de reserva):Unidades con armas de llamarada (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa P&#179;omie&#241; Jet Dyst.)</Polish>
+		<Russian>Îðóæèå(Dist Backup Flame Jet)</Russian>
+		<Italian>Arma secondaria a distanza getto di fuoco</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FROST</Tag>
+		<English>Wields (Dist Backup Frost)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Frigorifiante - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas de hielo (de reserva):Unidades con armas de hielo (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Mr&#243;z)</Polish>
+		<Russian>Îðóæèå(Dist Backup Frost)</Russian>
+		<Italian>Arma secondaria a distanza congelante</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FULLY_AUTOMATIC</Tag>
+		<English>Wields (Dist Backup Fully-Automatic)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Automatique - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Arma automática (de reserva):Unidades con arma automática (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Automatyczna)</Polish>
+		<Russian>Îðóæèå(Dist Backup Fully-Automatic)</Russian>
+		<Italian>Arma secondaria a distanza totalmente autonoma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_FUSION_CANNON</Tag>
@@ -12759,12 +13060,97 @@
 		<Italian>Arma secondaria a gravità</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_GRENADE</Tag>
+		<English>Wields (Dist Backup Grenade)</English>
+		<French>
+			<Text>(Équipement secondaire) Grenade - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Granada (de reserva):Unidades con granada (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Granat)</Polish>
+		<Russian>Îðóæèå(Dist Backup Grenade)</Russian>
+		<Italian>Arma secondaria a distanza granata</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HAMMER</Tag>
+		<English>Wields (Dist Backup Hammer)</English>
+		<French>
+			<Text>(Équipement secondaire) Marteau - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Martillo (de reserva):Unidades con martillo (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. M&#179;ot)</Polish>
+		<Russian>Îðóæèå(Dist Backup Hammer)</Russian>
+		<Italian>Arma secondaria a distanza martello</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDGUN</Tag>
+		<English>Wields (Dist Backup Handgun)</English>
+		<French>
+			<Text>(Équipement secondaire) Pistolet - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Pistola (de reserva):Unidades con pistola (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pistolet)</Polish>
+		<Russian>Îðóæèå(Dist Backup Handgun)</Russian>
+		<Italian>Arma secondaria a distanza pistola</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HANDHELD_RAILGUN</Tag>
 		<English>Wields (Backup Handheld Railgun)</English>
 		<French>(Équipement secondaire) Railgun</French>
 		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. R&#234;czny Railgun)</Polish>
 		<Russian>Îðóæèå(Ðó÷íîé ðåëüñîòðîí)</Russian>
 		<Italian>Arma secondaria cannone a rotaia portatile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAT</Tag>
+		<English>Wields (Dist Backup Heat)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme de Chaleur - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas de calor (de reserva):Unidades con armas de calor (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ciep&#179;o)</Polish>
+		<Russian>Îðóæèå(Dist Backup Heat)</Russian>
+		<Italian>Arma secondaria a distanza di calore</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_CROSSBOW</Tag>
+		<English>Wields (Dist Backup Heavy Crossbow)</English>
+		<French>
+			<Text>(Équipement secondaire) Arbalète lourde - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Ballesta pesada (de reserva):Unidades con ballesta pesada (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ci&#234;&#191;ka Kusza )</Polish>
+		<Russian>Îðóæèå(Dist Backup Heavy Crossbow)</Russian>
+		<Italian>Arma secondaria a distanza balestra pesante</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_HEAVY_RAILGUN</Tag>
@@ -12831,6 +13217,142 @@
 		<Italian>Arma secondaria sonica migliorata</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ION</Tag>
+		<English>Wields (Dist Backup Ion)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme à ions - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas iónicas (de reserva):Unidades con armas iónicas (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Jonowa)</Polish>
+		<Russian>Îðóæèå(Dist Backup Ion)</Russian>
+		<Italian>Arma secondaria a distanza ionica</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_JAVELIN</Tag>
+		<English>Wields (Dist Backup Javelin)</English>
+		<French>
+			<Text>(Équipement secondaire) Javelot - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Jabalina (de reserva):Unidades con jabalina (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ostrzep)</Polish>
+		<Russian>Îðóæèå(Dist Backup Javelin)</Russian>
+		<Italian>Arma secondaria a distanza giavellotto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_KNIFE</Tag>
+		<English>Wields (Dist Backup Knife)</English>
+		<French>
+			<Text>(Équipement secondaire) Couteau - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Daga (de reserva):Unidades con daga (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. N&#243;&#191;)</Polish>
+		<Russian>Îðóæèå(Dist Backup Knife)</Russian>
+		<Italian>Arma secondaria a distanza coltello</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LASER</Tag>
+		<English>Wields (Dist Backup Laser)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Laser - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas láser (de reserva):Unidades con armas láser (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Laser)</Polish>
+		<Russian>Îðóæèå(Dist Backup Laser)</Russian>
+		<Italian>Arma secondaria a distanza laser</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LAUNCHED_STONE</Tag>
+		<English>Wields (Dist Backup Launched Stone)</English>
+		<French>
+			<Text>(Équipement secondaire) Pierres à lancer - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Piedras impulsadas (de reserva):Unidades con piedras impulsadas (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kamie&#241; Rozpocz&#234;ty)</Polish>
+		<Russian>Îðóæèå(Dist Backup Launched Stone)</Russian>
+		<Italian>Arma secondaria a distanza pietra lanciata</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LIGHT_CROSSBOW</Tag>
+		<English>Wields (Dist Backup Light Crossbow)</English>
+		<French>
+			<Text>(Équipement secondaire) Arbalète légère - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Ballesta ligera (de reserva):Unidades con ballesta ligera (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Lekka Kusza )</Polish>
+		<Russian>Îðóæèå(Dist Backup Light Crossbow)</Russian>
+		<Italian>Arma secondaria a distanza balestra leggera</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONGBOW</Tag>
+		<English>Wields (Dist Backup Longbow)</English>
+		<French>
+			<Text>(Équipement secondaire) Arc long - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Arco largo (de reserva):Unidades con arco largo (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. D&#179;ugi &#179;uk)</Polish>
+		<Russian>Îðóæèå(Dist Backup Longbow)</Russian>
+		<Italian>Arma secondaria a distanza arco lungo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_LONG_RANGE_MISSILE</Tag>
+		<English>Wields (Dist Backup Long Range Missiles)</English>
+		<French>
+			<Text>(Équipement secondaire) Missile à longue porté - A Distance</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de largo alcance (de reserva):Unidades con misiles de largo alcance (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Dalekiego Zasi&#234;gu)</Polish>
+		<Russian>Îðóæèå(Dist Backup Long Range Missiles)</Russian>
+		<Italian>Arma secondaria a distanza missili a lungo raggio</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MAGNETIC</Tag>
 		<English>Wields (Backup Magnetic)</English>
 		<French>(Équipement) Magnétique</French>
@@ -12839,12 +13361,42 @@
 		<Italian>Arma secondaria magnetica</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MARTIAL_ART</Tag>
+		<English>Wields (Dist Backup Martial Arts Weaponry)</English>
+		<French>(Équipement) Armes Surriken - secondaire</French>
+		<Spanish>
+			<Text>Armas de artes marciales (de reserva):Unidades con armas de artes marciales (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Sztuki Walki)</Polish>
+		<Russian>Îðóæèå(Dist Backup Martial Arts Weaponry)</Russian>
+		<Italian>Arma secondaria a distanza arti marziali</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MASS_DRIVER</Tag>
 		<English>Wields (Backup Mass Driver)</English>
 		<French>(Équipement) Conducteur de masse</French>
 		<Polish>Uzbrojenie (Bro&#241; Zapasowa Tworzenie Sterownik&#243;w Mass)</Polish>
 		<Russian>Îðóæèå(Óëó÷ø. äâèæîê)</Russian>
 		<Italian>Arma secondaria catapulta elettromagnetica</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_MEDIUM_RANGE_MISSILE</Tag>
+		<English>Wields (Dist Backup Medium Range Missiles)</English>
+		<French>
+			<Text>(Équipement secondaire) Missiles à portée moyenne - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de medio alcance (de reserva):Unidades con misiles de medio alcance (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Sredniego Zasi&#234;gu)</Polish>
+		<Russian>Îðóæèå(Dist Backup Medium Range Missiles)</Russian>
+		<Italian>Arma secondaria a distanza missili a medio raggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_NANOSPRAY</Tag>
@@ -12887,6 +13439,159 @@
 		<Italian>Arma secondaria cannone a rotaia rapido</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_REPEATING_CROSSBOW</Tag>
+		<English>Wields (Dist Backup Repeating Crossbow)</English>
+		<French>
+			<Text>(Équipement secondaire) Arbalète à répétition - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Ballesta de repetición (de reserva):Unidades con ballesta de repetición (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Powtarzanie Crossbow)</Polish>
+		<Russian>Îðóæèå(Dist Backup Repeating Crossbow)</Russian>
+		<Italian>Arma secondaria a distanza balestra a ripetizione</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_RIFLE</Tag>
+		<English>Wields (Dist Backup Rifle)</English>
+		<French>
+			<Text>(Équipement secondaire) Fusil - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Fusil (de reserva):Unidades con fusil (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Karabin)</Polish>
+		<Russian>Îðóæèå(Dist Backup Rifle)</Russian>
+		<Italian>Arma secondaria a distanza fucile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_ROCK</Tag>
+		<English>Wields (Dist Backup Rock)</English>
+		<French>
+			<Text>(Équipement secondaire) Rocher - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Piedras (de reserva):Unidades con piedras (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kamie&#241;)</Polish>
+		<Russian>Îðóæèå(Dist Backup Rock)</Russian>
+		<Italian>Arma secondaria a distanza pietra</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SEMI_AUTOMATIC</Tag>
+		<English>Wields (Dist Backup Semi-Automatic)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Semi-Automatique - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Arma semiautomática (de reserva):Unidades con arma semiautomática (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. P&#243;&#179;automatyczne)</Polish>
+		<Russian>Îðóæèå(Dist Backup Semi-Automatic)</Russian>
+		<Italian>Arma secondaria a distanza semi automatica</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHELLFIRE</Tag>
+		<English>Wields (Dist Backup Shellfire)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme à munitions enflammées - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Fuego de artillería (de reserva):Unidades con fuego de artillería (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Ostrza&#179; Artyleryjski)</Polish>
+		<Russian>Îðóæèå(Dist Backup Shellfire)</Russian>
+		<Italian>Arma secondaria a distanza esplosiva</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORTBOW</Tag>
+		<English>Wields (Dist Backup Shortbow)</English>
+		<French>
+			<Text>(Équipement secondaire) Arc court - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Arco corto (de reserva):Unidades con arco corto (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Kr&#243;tki &#163;uk)</Polish>
+		<Russian>Îðóæèå(Dist Backup Shortbow)</Russian>
+		<Italian>Arma secondaria a distanza arco corto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SHORT_RANGE_MISSILE</Tag>
+		<English>Wields (Dist Backup Short Range Missiles)</English>
+		<French>
+			<Text>(Équipement secondaire) Missiles à courte portée - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Misiles de corto alcance (de reserva):Unidades con misiles de corto alcance (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Pociski Kr&#243;tkiego Zasi&#234;gu)</Polish>
+		<Russian>Îðóæèå(Dist Backup Short Range Missiles)</Russian>
+		<Italian>Arma secondaria a distanza missili a corto raggio</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SLING</Tag>
+		<English>Wields (Dist Backup Sling)</English>
+		<French>
+			<Text>(Équipement secondaire) Fronde - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Honda (de reserva):Unidades con honda (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Proca)</Polish>
+		<Russian>Îðóæèå(Dist Backup Sling)</Russian>
+		<Italian>Arma secondaria a distanza fionda</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_SONIC</Tag>
+		<English>Wields (Dist Backup Sonic)</English>
+		<French>
+			<Text>(Équipement secondaire) Arme Sonique - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Armas sónicas (de reserva):Unidades con armas sónicas (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Soniczna)</Polish>
+		<Russian>Îðóæèå(Dist Backup Sonic)</Russian>
+		<Italian>Arma secondaria a distanza sonica</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TECHNO_TELEPATHIC</Tag>
 		<English>Wields (Backup Technological Telepathy)</English>
 		<French>(Équipement) Télépathie - Soutien</French>
@@ -12901,6 +13606,23 @@
 		<Polish>Uzbrojenie (Bro&#241; Zapasowa Telepatia)</Polish>
 		<Russian>Îðóæèå(Âíóøåíèå)</Russian>
 		<Italian>Arma secondaria telepatia</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_BACKUP_TORPEDO</Tag>
+		<English>Wields (Dist Backup Torpedos)</English>
+		<French>
+			<Text>(Équipement secondaire) Torpilles - secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Spanish>
+			<Text>Torpedos (de reserva):Unidades con torpedos (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Uzbrojenie (Bro&#241; Zapasowa Dyst. Torpedy)</Polish>
+		<Russian>Îðóæèå(Dist Backup Torpedos)</Russian>
+		<Italian>Arma secondaria a distanza siluro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_DETONATE_BIOLOGICAL</Tag>
@@ -14421,6 +15143,870 @@
 		<Polish>System Przenoszenia G&#179;owic</Polish>
 		<Russian>Áîåãîëîâêè</Russian>
 		<Italian>Metodo di combattimento consegna testate nucleari</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_AXE</Tag>
+		<English>Wields (Sidearm Axe)</English>
+		<French>
+			<Text>(Équipement) Hache - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Axt (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Hacha (secundaria):Unidades con hacha (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Top&#243;r)</Polish>
+		<Russian>Îðóæèå(Sidearm Axe)</Russian>
+		<Italian>Arma da fianco ascia</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_BAYONETTE</Tag>
+		<English>Wields (Sidearm Bayonette)</English>
+		<French>
+			<Text>(Équipement) Bayonnette - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Bajonett (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Bayoneta (secundaria):Unidades con bayoneta (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Bagnet)</Polish>
+		<Russian>Îðóæèå(Sidearm Bayonette)</Russian>
+		<Italian>Arma secondaria da corpo a corpo baionetta</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CLUB</Tag>
+		<English>Wields (Sidearm Club)</English>
+		<French>
+			<Text>(Équipement) Gourdin - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Keule (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Garrote (secundaria):Unidades con garrote (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pa&#179;ka)</Polish>
+		<Russian>Îðóæèå(Sidearm Club)</Russian>
+		<Italian>Arma da fianco clava</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_CROWBAR</Tag>
+		<English>Wields (Sidearm Crowbar)</English>
+		<French>
+			<Text>(Équipement) Pied de biche - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Brecheisen (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Alzaprima (secundaria):Unidades con alzaprima (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna &#163;om)</Polish>
+		<Russian>Îðóæèå(Sidearm Crowbar)</Russian>
+		<Italian>Arma da fianco piede di porco</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_EMP</Tag>
+		<English>Wields (Sidearm Electromagnetic)</English>
+		<French>
+			<Text>(Équipement) Gant Électromagnétique - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Elektromagnet (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Armas electromagnéticas (secundaria):Unidades con armas electromagnéticas (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Elektromagnetyczna)</Polish>
+		<Russian>Îðóæèå(Sidearm Electromagnetic)</Russian>
+		<Italian>Arma da fianco a impulsi elettromagnetici</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ENERGY_GLOVES</Tag>
+		<English>Wields (Sidearm Energy Gloves)</English>
+		<French>
+			<Text>(Équipement) Gant énergétique - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Energiehandschuhe (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Guantes de energía (secundaria):Unidades con guantes de energía (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna R&#234;kawica Energetyczna)</Polish>
+		<Russian>Îðóæèå(Sidearm Energy Gloves)</Russian>
+		<Italian>Arma da fianco guanti energetici</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FIST</Tag>
+		<English>Wields (Sidearm Fists)</English>
+		<French>
+			<Text>(Équipement) Poing - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Fäuste (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Puños (secundaria):Unidades con puños (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pi&#234;&#156;ci)</Polish>
+		<Russian>Îðóæèå(Sidearm Fists)</Russian>
+		<Italian>Arma da fianco pugni</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAIL</Tag>
+		<English>Wields (Sidearm Flail)</English>
+		<French>
+			<Text>(Équipement) Fléau - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Dreschflegel (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Mayal (secundaria):Unidades con mayal (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Korbacz)</Polish>
+		<Russian>Îðóæèå(Sidearm Flail)</Russian>
+		<Italian>Arma da fianco mazzafrusto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_FLAMETHROWER</Tag>
+		<English>Wields (Sidearm Flamethrower)</English>
+		<French>
+			<Text>(Équipement) Lance-Flammes - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Flammenwerfer (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Lanzallamas (secundaria):Unidades con lanzallamas (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Miotacz Ognia)</Polish>
+		<Russian>Îðóæèå(Sidearm Flamethrower)</Russian>
+		<Italian>Arma da fianco lanciafiamme</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HAMMER</Tag>
+		<English>Wields (Sidearm Hammer)</English>
+		<French>
+			<Text>(Équipement) Marteau - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Hammer (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Martillo (secundaria):Unidades con martillo (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna M&#179;ot)</Polish>
+		<Russian>Îðóæèå(Sidearm Hammer)</Russian>
+		<Italian>Arma da fianco martello</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HANDGUN</Tag>
+		<English>Wields (Sidearm Handgun)</English>
+		<French>
+			<Text>(Équipement) Pistolet - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Pistole (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Pistola (secundaria):Unidades con pistola (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Pistolet)</Polish>
+		<Russian>Îðóæèå(Sidearm Handgun)</Russian>
+		<Italian>Arma da fianco pistola</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_HYDRAULIC_APPENDAGE</Tag>
+		<English>Wields (Sidearm Hydraulic Appendage)</English>
+		<French>
+			<Text>(Équipement) Arme Hydraulique - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Hydraulischer Arm (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Apéndice hidráulico (secundaria):Unidades con apéndice hidráulico (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Hydrauliczny Kolec)</Polish>
+		<Russian>Îðóæèå(Sidearm Hydraulic Appendage)</Russian>
+		<Italian>Arma da fianco appendice idraulica</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_KNIFE</Tag>
+		<English>Wields (Sidearm Knife)</English>
+		<French>
+			<Text>(Équipement) Couteau - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Messer (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Daga (secundaria):Unidades con daga (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna N&#243;&#191;)</Polish>
+		<Russian>Îðóæèå(Sidearm Knife)</Russian>
+		<Italian>Arma da fianco coltello</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LASER</Tag>
+		<English>Wields (Sidearm Laser)</English>
+		<French>
+			<Text>(Équipement) Laser - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Laser (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Armas láser (secundaria):Unidades con armas láser (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Laser)</Polish>
+		<Russian>Îðóæèå(Sidearm Laser)</Russian>
+		<Italian>Arma da fianco laser</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_BLADE</Tag>
+		<English>Wields (Sidearm Long Blade)</English>
+		<French>
+			<Text>(Équipement) Épée Longue - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Langschwert (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Espada larga (secundaria):Unidades con espada larga (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna D&#179;ugie Ostrze)</Polish>
+		<Russian>Îðóæèå(Sidearm Long Blade)</Russian>
+		<Italian>Arma da fianco spada lunga</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_LONG_POLEARM</Tag>
+		<English>Wields (Sidearm Long Polearm)</English>
+		<French>
+			<Text>(Équipement) Lance à long Manche - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Lanze (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Alabarda larga (secundaria):Unidades con alabarda larga (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Drzewcowa)</Polish>
+		<Russian>Îðóæèå(Sidearm Long Polearm)</Russian>
+		<Italian>Arma da fianco lancia lunga</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MACE</Tag>
+		<English>Wields (Sidearm Mace)</English>
+		<French>
+			<Text>(Équipement) Masse - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Streitkolben (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Maza (secundaria):Unidades con maza (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Maczuga)</Polish>
+		<Russian>Îðóæèå(Sidearm Mace)</Russian>
+		<Italian>Arma da fianco mazza</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_MARTIAL_ART</Tag>
+		<English>Wields (Sidearm Martial Arts)</English>
+		<French>
+			<Text>(Équipement) Arts Martiaux - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Kampfsport (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Artes marciales (secundaria):Unidades con artes marciales (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Sztuki Walki)</Polish>
+		<Russian>Îðóæèå(Sidearm Martial Arts)</Russian>
+		<Italian>Arma da fianco arti marziali</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_OAR</Tag>
+		<English>Wields (Sidearm Oar)</English>
+		<French>
+			<Text>(Équipement) Rames - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Ruder (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Remo (secundaria):Unidades con remo (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Wios&#179;o)</Polish>
+		<Russian>Îðóæèå(Sidearm Oar)</Russian>
+		<Italian>Arma da fianco remo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_RIFLE_BUTT</Tag>
+		<English>Wields (Sidearm Rifle Butt)</English>
+		<French>
+			<Text>(Équipement) Crosse de Fusil - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Gewehrkolben (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Culata de fusil (secundaria):Unidades con culata de fusil (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kolba)</Polish>
+		<Russian>Îðóæèå(Sidearm Rifle Butt)</Russian>
+		<Italian>Arma da fianco calcio del fucile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_ROCK</Tag>
+		<English>Wields (Sidearm Rocks)</English>
+		<French>
+			<Text>(Équipement) Pierres - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Steine (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Piedras (secundaria):Unidades con piedras (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kamienie)</Polish>
+		<Russian>Îðóæèå(Sidearm Rocks)</Russian>
+		<Italian>Arma da fianco pietra</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</Tag>
+		<English>Wields (Sidearm Short Blade)</English>
+		<French>
+			<Text>(Équipement) Épée Courte - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Kurzschwert (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Espada corta (secundaria):Unidades con espada corta (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kr&#243;tkie Ostrze)</Polish>
+		<Russian>Îðóæèå(Sidearm Short Blade)</Russian>
+		<Italian>Arma da fianco spada corta</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SHORT_POLEARM</Tag>
+		<English>Wields (Sidearm Short Polearm)</English>
+		<French>
+			<Text>(Équipement) Lance à Manche Court - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Speer (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Alabarda corta (secundaria):Unidades con alabarda corta (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Kr&#243;tka Drzewcowa)</Polish>
+		<Russian>Îðóæèå(Sidearm Short Polearm)</Russian>
+		<Italian>Arma da fianco lancia corta</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_SPRAY</Tag>
+		<English>Wields (Sidearm Spray Cannister)</English>
+		<French>
+			<Text>(Équipement) Spray - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Abwehrspray (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Bote de spray (secundaria):Unidades con bote de spray (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Karnister Spreju)</Polish>
+		<Russian>Îðóæèå(Sidearm Spray Cannister)</Russian>
+		<Italian>Arma da fianco spray</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_STAFF</Tag>
+		<English>Wields (Sidearm Staff)</English>
+		<French>
+			<Text>(Équipement) Baton - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Stab (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Bastón (secundaria):Unidades con bastón (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Laska)</Polish>
+		<Russian>Îðóæèå(Sidearm Staff)</Russian>
+		<Italian>Arma da fianco bastone</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_SIDEARM_TASER</Tag>
+		<English>Wields (Sidearm Taser)</English>
+		<French>
+			<Text>(Équipement) Taser - Arme secondaire</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Waffe) Elektroschocker (Sekundärwaffe)</German>
+		<Spanish>
+			<Text>Pistola táser (secundaria):Unidades con pistola táser (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>U&#191;ywa (Bro&#241; Boczna Taser)</Polish>
+		<Russian>Îðóæèå(Sidearm Taser)</Russian>
+		<Italian>Arma da fianco taser</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_PRIMARY_PLUS_SECONDARY</Tag>
+		<English>Style (Distance Backup Dual Weapons)</English>
+		<French>
+			<Text>(Style secondaire) Armes à Distance, à deux armes)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf mit zwei Ersatzwaffen</German>
+		<Spanish>
+			<Text>Dos armas (de reserva):Unidades con dos armas (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Zapas. Dwie Bronie)</Polish>
+		<Russian>Ñòèëü(Äèñò. Backup Dual Weapons)</Russian>
+		<Italian>Stile secondario a distanza con due armi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</Tag>
+		<English>Style (Distance Backup One-Handed)</English>
+		<French>
+			<Text>(Style Arme secondaire) Armes à Distance, Une main)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) einhändig</German>
+		<Spanish>
+			<Text>Arma a una mano (de reserva):Unidades con arma a una mano (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Zapas. Jedno R&#234;czny)</Polish>
+		<Russian>Ñòèëü(Äèñò. Backup One-Handed)</Russian>
+		<Italian>Stile secondario a distanza con arma a una mano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_PLUS_SHIELD</Tag>
+		<English>Style (Distance Backup One-Hand w/Shield)</English>
+		<French>
+			<Text>(Style Arme secondaire) Arme à Distance, à une main et Bouclier)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) einhändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a una mano y escudo (de reserva):Unidades con arma a una mano y escudo (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Zapas. Jedno R&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(Äèñò. Backup One-Hand w/Shield)</Russian>
+		<Italian>Stile secondario a distanza con arma a una mano e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED</Tag>
+		<English>Style (Distance Backup Two-Handed)</English>
+		<French>
+			<Text>(Style Arme secondaire) Arme à Distance, à deux mains)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) zweihändig</German>
+		<Spanish>
+			<Text>Arma a dos manos (de reserva):Unidades con arma a dos manos (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Zapas. Dwur&#234;czny)</Polish>
+		<Russian>Ñòèëü(Äèñò. Backup Two-Handed)</Russian>
+		<Italian>Stile secondario a distanza con arma a due mani</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_BACKUP_TWO_HANDED_PLUS_SHIELD</Tag>
+		<English>Style (Distance Backup Two-Hand w/Shield)</English>
+		<French>
+			<Text>(Style Arme secondaire) Arme à Distance, 2 mains et bouclier)</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf (Ersatzwaffe) zweihändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a dos manos y escudo (de reserva):Unidades con arma a dos manos y escudo (de reserva)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Zapas. Dwur&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(Äèñò. Backup Two-Hand w/Shield)</Russian>
+		<Italian>Stile secondario a distanza con arma a due mani e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_PRIMARY_PLUS_SECONDARY</Tag>
+		<English>Style (Distance Dual Weapons)</English>
+		<French>
+			<Text>(Style) Arme à Distance double</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf mit zwei Waffen</German>
+		<Spanish>
+			<Text>Dos armas (a distancia):Unidades con dos armas (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Dwie Bronie)</Polish>
+		<Russian>Ñòèëü(Äèñò. ïàðíîå îðóæèå)</Russian>
+		<Italian>Stile a distanza con arma a due armi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</Tag>
+		<English>Style (Distance One-Handed)</English>
+		<French>
+			<Text>(Style) Arme à Distance à Une Main</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf einhändig</German>
+		<Spanish>
+			<Text>Arma a una mano (a distancia):Unidades con arma a una mano (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Jedno R&#234;czny)</Polish>
+		<Russian>Ñòèëü(Äèñò. îäíîðó÷íîå)</Russian>
+		<Italian>Stile a distanza con arma a una mano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_PLUS_SHIELD</Tag>
+		<English>Style (Distance One-Hand w/Shield)</English>
+		<French>
+			<Text>(Style) Arme à Distance, une main + Bouclier</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf einhändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a una mano y escudo (a distancia):Unidades con arma a una mano y escudo (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Jedno R&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(Äèñò. Îðóæèå/Ùèò)</Russian>
+		<Italian>Stile a distanza con arma a una mano e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED</Tag>
+		<English>Style (Distance Two-Handed)</English>
+		<French>
+			<Text>(Style) Arme à Distance, à 2 mains</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf zweihändig</German>
+		<Spanish>
+			<Text>Arma a dos manos (a distancia):Unidades con arma a dos manos (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Dwur&#234;czny)</Polish>
+		<Russian>Ñòèëü(Äèñò. Äâóðó÷íîå)</Russian>
+		<Italian>Stile a distanza con arma a due mani</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_TWO_HANDED_PLUS_SHIELD</Tag>
+		<English>Style (Distance Two-Hand w/Shield)</English>
+		<French>
+			<Text>(Style) Arme à Distance, 2 mains et Bouclier</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf zweihändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a dos manos y escudo (a distancia):Unidades con arma a dos manos y escudo (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Dwur&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(Äèñò. Äâóðó÷íîå/Ùèò)</Russian>
+		<Italian>Stile a distanza con arma a due mani e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_DIST_VEHICULAR</Tag>
+		<English>Style (Distance Vehicular Weaponry)</English>
+		<French>
+			<Text>(Style) Arme à Distance, Armement mobile</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Fernkampf mit Fahrzeugbewaffnung</German>
+		<Spanish>
+			<Text>Armamento vehicular (a distancia):Unidades con armamento vehicular (a distancia)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (Dystansowy Bro&#241; Pok&#179;adowa)</Polish>
+		<Russian>Ñòèëü(Äèñò. ìåõàíè÷åñêîå)</Russian>
+		<Italian>Stile a distanza con armamento del veicolo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</Tag>
+		<English>Style (H2H Dual Weapons)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, Armes doubles</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf mit zwei Waffen</German>
+		<Spanish>
+			<Text>Dos armas (CaC):Unidades con dos armas (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Dwie Bronie)</Polish>
+		<Russian>Ñòèëü(H2H Ïàðíîå îðóæèå)</Russian>
+		<Italian>Stile corpo a corpo con due armi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</Tag>
+		<English>Style (H2H One-Handed)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, à une main</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf einhändig</German>
+		<Spanish>
+			<Text>Arma a una mano (CaC):Unidades con arma a una mano (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Jedno R&#234;czny)</Polish>
+		<Russian>Ñòèëü(H2H Îäíîðó÷íûé)</Russian>
+		<Italian>Stile corpo a corpo con arma a una mano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</Tag>
+		<English>Style (H2H One-Hand w/Shield)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, Arme à une main et Bouclier</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf einhändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a una mano y escudo (CaC):Unidades con arma a una mano y escudo (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Jedno R&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(H2H Îðóæèå/Ùèò)</Russian>
+		<Italian>Stile corpo a corpo con arma a una mano e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</Tag>
+		<English>Style (H2H Two-Handed)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, Arme à deux mains</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf zweihändig</German>
+		<Spanish>
+			<Text>Arma a dos manos (CaC):Unidades con arma a dos manos (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Dwureczny)</Polish>
+		<Russian>Ñòèëü(H2H Äâóðó÷íîå)</Russian>
+		<Italian>Stile corpo a corpo con arma a due mani</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED_PLUS_SHIELD</Tag>
+		<English>Style (H2H Two-Hand w/Shield)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, Arme à deux mains et protection</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf zweihändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a dos manos y escudo (CaC):Unidades con arma a dos manos y escudo (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Dwureczny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(H2H Äâóðó÷íèê/Ùèò)</Russian>
+		<Italian>Stile corpo a corpo con arma a due mani e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</Tag>
+		<English>Style (H2H Vehicular Weaponry)</English>
+		<French>
+			<Text>(Style) Au Corps à Corps, Armement motorisé</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf mit Fahrzeugbewaffnung</German>
+		<Spanish>
+			<Text>Armamento vehicular (CaC):Unidades con armamento vehicular (CaC)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz Bro&#241; Pok&#179;adowa)</Polish>
+		<Russian>Ñòèëü(H2H Ìåõ. îðóæèå)</Russian>
+		<Italian>Stile corpo a corpo con armamento del veicolo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</Tag>
+		<English>Style (H2H Sidearm Dual Weapons)</English>
+		<French>
+			<Text>(Style Arme secondaire) Arme double</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf mit zwei Sekundärwaffen</German>
+		<Spanish>
+			<Text>Dos armas (secundaria):Unidades con dos armas (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwie Bronie)</Polish>
+		<Russian>Ñòèëü(H2H Sidearm Dual Weapons)</Russian>
+		<Italian>Stile corpo a corpo con due armi da fianco</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</Tag>
+		<English>Style (H2H Sidearm One-Handed)</English>
+		<French>
+			<Text>(Style Arme secondaire) Au Corps à Corps, Arme à une main</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) einhändig</German>
+		<Spanish>
+			<Text>Arma a una mano (secundaria):Unidades con arma de mano cuerpo a cuerpo</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Jedno R&#234;czny)</Polish>
+		<Russian>Ñòèëü(H2H Sidearm One-Handed)</Russian>
+		<Italian>Stile corpo a corpo con arma a da fianco una mano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_PLUS_SHIELD</Tag>
+		<English>Style (H2H Sidearm One-Hand w/Shield)</English>
+		<French>
+			<Text>(Style Arme secondaire) Au Corps à Corps, Arme et Bouclier</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) einhändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a una mano y escudo (secundaria):Unidades con arma a una mano y escudo (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Jedno R&#234;czny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(H2H Sidearm One-Hand w/Shield)</Russian>
+		<Italian>Stile corpo a corpo con arma da fianco a una mano e scudo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED</Tag>
+		<English>Style (H2H Sidearm Two-Handed)</English>
+		<French>
+			<Text>(Style Arme secondaire) Au Corps à Corps, Arme à 2 mains</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) zweihändig</German>
+		<Spanish>
+			<Text>Arma a dos manos (secundaria):Unidades con arma a dos manos (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwureczny)</Polish>
+		<Russian>Ñòèëü(H2H Sidearm Two-Handed)</Russian>
+		<Italian>Stile corpo a corpo con arma da fianco a due mani</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WEAPON_STYLE_SIDEARM_TWO_HANDED_PLUS_SHIELD</Tag>
+		<English>Style (H2H Sidearm Two-Hand w/Shield)</English>
+		<French>
+			<Text>(Style Arme secondaire) Au Corps à Corps, Arme à 2 mains + Protection</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>(Kampfstil) Nahkampf (Sekundärwaffe) zweihändig mit Schild</German>
+		<Spanish>
+			<Text>Arma a dos manos y escudo (secundaria):Unidades con arma a dos manos y escudo (secundaria)</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Styl (W.Wr&#234;cz B.Boczna Dwureczny z Tarcz&#185;)</Polish>
+		<Russian>Ñòèëü(H2H Sidearm Two-Hand w/Shield)</Russian>
+		<Italian>Stile corpo a corpo con arma da fianco a due mani e scudo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WHALE</Tag>

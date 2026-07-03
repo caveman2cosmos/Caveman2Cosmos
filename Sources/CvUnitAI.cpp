@@ -1354,7 +1354,46 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
 		y = AdjustedWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 	}
 	const int EvaluatedWithdrawOdds = z;
-	const int iOddsModifier = EvaluatedWithdrawOdds;
+
+	// Figure out odds of repel
+	const int iFortRepelWithOverrun = pDefender->fortifyRepelModifier() - overrunTotal();
+
+	const int iFortRepelZero = iFortRepelWithOverrun < 0 ? 0 : iFortRepelWithOverrun;
+	const int iFortRepelTotal = iFortRepelZero > 100 ? 100 : iFortRepelZero;
+
+	const int iRepelWithUnyielding = pDefender->repelTotal() + iFortRepelTotal - unyieldingTotal();
+
+	const int iRepelZero = iRepelWithUnyielding < 0 ? 0 : iRepelWithUnyielding;
+	const int iRepelTotal = iRepelZero > 100 ? 100 : iRepelZero;
+
+	y = iRepelTotal;
+	z = iRepelTotal;
+
+	for (int Time = 0; Time < expectedRndCnt; ++Time)
+	{
+		z += iRepelTotal * y / 100;
+		y = iRepelTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
+	}
+	const int EvaluatedRepelOdds = z;
+
+	// Figure out odds of knockback
+	const int iKnockbackVsUnyielding = knockbackVSOpponentProbTotal(pDefender) - pDefender->unyieldingTotal();
+
+	const int iKnockbackZero = iKnockbackVsUnyielding < 0 ? 0 : iKnockbackVsUnyielding;
+	const int iKnockbackTotal = iKnockbackZero > 100 ? 100 : iKnockbackZero;
+
+	const int iAttackerKnockbackTries = knockbackRetriesTotal();
+	y = iKnockbackTotal;
+	z = iKnockbackTotal;
+
+	for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
+	{
+		z += iKnockbackTotal * y / 100;
+		y = iKnockbackTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
+	}
+	const int EvaluatedKnockbackOdds = z;
+
+	const int iOddsModifier = EvaluatedWithdrawOdds + EvaluatedKnockbackOdds - EvaluatedRepelOdds;
 
 	//	Surviving is not winning - give survival by withdrawal/knockback half the value of a win
 	iOdds += (iOdds * 2 * GET_PLAYER(getOwner()).AI_getAttackOddsChange() + (100 - iOdds) * iOddsModifier / 2) / 100;
@@ -1369,12 +1408,12 @@ int CvUnitAI::AI_attackOddsAtPlotInternal(const CvPlot* pPlot, CvUnit* pDefender
     // can pinpoint which term collapses the win chance against ~0-strength prey.
     if (gUnitLogLevel >= 3 && iOdds < 60 && pDefender->isAnimal())
     {
-        logHunterAI(3, "[HAI/oddscalc] atk=%d def=%s ourStr=%d theirStr=%d dmgUs=%d dmgThem=%d nrUs=%d nrThem=%d climit=%d hitLimit=%d base=%d wd=%d final=%d",
+        logHunterAI(3, "[HAI/oddscalc] atk=%d def=%s ourStr=%d theirStr=%d dmgUs=%d dmgThem=%d nrUs=%d nrThem=%d climit=%d hitLimit=%d base=%d wd=%d rep=%d kb=%d final=%d",
             getID(),
             (pDefender->getUnitType() != NO_UNIT ? pDefender->getUnitInfo().getType() : "?"),
             iOurStrength, iTheirStrength, iDamageToUs, iDamageToThem,
             iNeededRoundsUs, iNeededRoundsThem, combatLimit(pDefender), iHitLimitThem,
-            iBaseOdds, EvaluatedWithdrawOdds, iOdds);
+            iBaseOdds, EvaluatedWithdrawOdds, EvaluatedRepelOdds, EvaluatedKnockbackOdds, iOdds);
     }
 	return range(iOdds, 1, 99);
 }
@@ -1610,9 +1649,26 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 		}
 		const int EvaluatedWithdrawOdds = z;
 
+		//* figure out odds of knockback
+		const int iAttackerKnockback = knockbackTotal();
+		const int iAttackerKnockbackTries = knockbackRetriesTotal();
+		const int iKnockbackZero = iAttackerKnockback < 0 ? 0 : iAttackerKnockback;
+		const int iKnockbackTotal = iKnockbackZero > 100 ? 100 : iKnockbackZero;
+
+		y = iKnockbackTotal;
+		z = iKnockbackTotal;
+		for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
+		{
+			z += iKnockbackTotal * y / 100;
+			y = iKnockbackTotal * y / 100;
+		}
+		const int EvaluatedKnockbackOdds = z;
+
 		iValue *= 100 + iCollateralDamageValue;
 		iValue /= 100 + cityDefenseModifier();
 		iValue *= 100 + EvaluatedWithdrawOdds;
+		iValue /= 100;
+		iValue *= 100 + EvaluatedKnockbackOdds;
 		iValue /= 100;
 		//TB Combat Mods End (above EvaluationalWithdrawOdds replaces EvaluatedWithdrawOdds)
 

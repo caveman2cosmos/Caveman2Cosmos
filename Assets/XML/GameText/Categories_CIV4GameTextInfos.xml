@@ -97,6 +97,12 @@
 		<Italian>Categorie per dimensione</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Tag>
+		<English>Equipment Option Activated Unit Capabilities</English>
+		<French>Capacités d'unité activées par l'option équipement</French>
+		<Italian>Capacità unità con opzione equipaggiamento attiva</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Tag>
 		<English>Animal Designations</English>
 		<French>Désignations animales</French>
@@ -139,10 +145,22 @@
 		<Italian>Metodo dell'arma</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Tag>
+		<English>Armament Style</English>
+		<French>Style d'armement</French>
+		<Italian>Stile di armamento</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Tag>
 		<English>Primary Hand to Hand Weapon</English>
 		<French>Arme principale de corps à corps</French>
 		<Italian>Arma primaria da corpo a corpo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Tag>
+		<English>Sidearm Close Combat Weapon</English>
+		<French>Arme de poing en combat rapproché</French>
+		<Italian>Arma da combattimento ravvicinato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Tag>
