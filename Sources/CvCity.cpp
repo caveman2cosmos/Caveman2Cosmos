@@ -4057,6 +4057,26 @@ void CvCity::hurry(HurryTypes eHurry)
 
 	changeProduction(hurryProduction(eHurry));
 
+	if (gCityLogLevel >= 2)
+	{
+		CvWStringBuffer szBuffer;
+		CvWString szString;
+		if (isProductionUnit())
+		{
+			szString = GC.getUnitInfo(getProductionUnit()).getDescription(getCivilizationType());
+		}
+		else if (isProductionBuilding())
+		{
+			szString = GC.getBuildingInfo(getProductionBuilding()).getDescription();
+		}
+		else if (isProductionProject())
+		{
+			szString = GC.getProjectInfo(getProductionProject()).getDescription();
+		}
+
+		logBBAI("    City %S hurrying production of %S at cost of %d pop, %I64d gold, %d anger length", getName().GetCString(), szString.GetCString(), iHurryPopulation, iHurryGold, iHurryAngerLength);
+	}
+
 	if (isCitySelected())
 	{
 		gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
@@ -4259,6 +4279,10 @@ void CvCity::conscript(bool bOnCapture)
 		CvUnit* pUnit = initConscriptedUnit();
 		FAssertMsg(pUnit != NULL, "pUnit expected to be assigned (not NULL)");
 
+		if (NULL != pUnit && gCityLogLevel >= 2)
+		{
+			logBBAI("      City %S does conscript of %d %S at cost of %d anger", getName().GetCString(), iNumConscripts, pUnit->getName().GetCString(), iAngerLength);
+		}
 	}
 }
 
@@ -15401,6 +15425,11 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				//don't add the same unit if already 2 of them (if prod take more than 2 turns), and the first item in queue is not already finished, and the cost of the order is more than 3 turns
 				if (!bIsHuman && (bAppend && !bForce) && ((alreadyQueued > 1 && getProductionTurnsLeft(unitType, 2) > 2) || alreadyQueued > 4)) {
+					if (gCityLogLevel >= 3)
+					{
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+						logBBAI("    City %S unit %S for type %S is already in queue", getName().GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
+					}
 					return;
 				}
 
@@ -15411,6 +15440,13 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				CvEventReporter::getInstance().cityBuildingUnit(this, unitType);
 				setUnitListInvalid();
+				if (gCityLogLevel >= 1)
+				{
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(order.getUnitAIType()).getType();
+					logBBAI("    City %S %S production of unit %S for type %S", getName().GetCString(), verb.GetCString(), GC.getUnitInfo(unitType).getDescription(getCivilizationType()), szStringUnitAi.GetCString());
+				}
 				bValid = true;
 			}
 			break;
@@ -15431,6 +15467,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				//don't add the same building after
 				if (!bIsHuman && (bAppend && !bForce) && alreadyQueued > 0) {
+					if (gCityLogLevel >= 3)
+					{
+						logBBAI("    City %S building %S already in queue", getName().GetCString(), GC.getBuildingInfo(buildingType).getDescription());
+					}
 					return;
 				}
 
@@ -15446,6 +15486,12 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 				CvEventReporter::getInstance().cityBuildingBuilding(this, buildingType);
 				setBuildingListInvalid();
+				if (gCityLogLevel >= 1)
+				{
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
+					logBBAI("    City %S %S production of building %S", getName().GetCString(), verb.GetCString(), GC.getBuildingInfo(buildingType).getDescription());
+				}
 				bValid = true;
 			}
 			break;
@@ -15458,6 +15504,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				order = OrderData::createProjectOrder(projectType, bSave);
 				GET_TEAM(getTeam()).changeProjectMaking(projectType, 1);
 				CvEventReporter::getInstance().cityBuildingProject(this, projectType);
+				if (gCityLogLevel >= 1)
+				{
+					logBBAI("    City %S pushes production of project %S", getName().GetCString(), GC.getProjectInfo(projectType).getDescription());
+				}
 				bValid = true;
 			}
 			break;
@@ -15469,6 +15519,12 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 			{
 				order = OrderData::createProcessOrder(processType, bSave);
 				CvEventReporter::getInstance().cityBuildingProcess(this, processType);
+				if (gCityLogLevel >= 1)
+				{
+					CvWString verb = "pushes";
+					if (!bAppend) verb = "inserts";
+					logBBAI("    City %S %S production of process %S", getName().GetCString(), verb.GetCString(), GC.getProcessInfo(processType).getDescription());
+				}
 				bValid = true;
 				//if (!bForce) bAppend = true;
 				bJustAddedProcess = true;
@@ -15527,6 +15583,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	//Check the Queue, and remove process if there's something else to do
 	if (!bJustAddedProcess && getOrderQueueLength() > 1 && m_orderQueue[0].eOrderType == ORDER_MAINTAIN)
 	{
+		CvString str = GC.getProcessInfo(m_orderQueue[0].getProcessType()).getType();
 		const PlayerTypes eOwner = getOwner();
 		CvPlayerAI& player = GET_PLAYER(eOwner);
 		const bool bFinancialTrouble = player.AI_isFinancialTrouble();
@@ -15534,6 +15591,7 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		{ // IF financial Trouble, keep the process if needed
 			popOrder(0);
 		}
+		LOG_BBAI_CITY(3, ("    City %S has process on head, and queue added. Removing  %S", getName().GetCString(), str.GetCString()));
 	}
 
 
@@ -15609,6 +15667,10 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				AI_trained(eTrainUnit, eTrainAIUnit);
 
 				
+				LOG_CITY_BLOCK(2, {
+					const CvWString szStringUnitAi = GC.getUnitAIInfo(eTrainAIUnit).getType();
+					logBBAI("      City %S builds unit %S for Type %S", getName().GetCString(), GC.getUnitInfo(eTrainUnit).getDescription(), szStringUnitAi.GetCString());
+				});
 				const int iProgress = getProgressOnUnit(eTrainUnit);
 				const int iRawOverflow = iProgress - getProductionNeeded(eTrainUnit);
 				const int iMaxOverflow = getMaxProductionOverflow();
@@ -15645,6 +15707,13 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					iFlags = MOVE_NO_ENEMY_TERRITORY;
 					pRallyPlot = GC.getMap().plotByIndex(iPlotIndex);
+					if (pRallyPlot != NULL && gUnitLogLevel >= 3)
+					{
+						logBBAI("    New unit %S at (%d,%d) headed to contractual delivery plot (%d,%d)",
+							pUnit->getUnitInfo().getDescription(),
+							getX(), getY(),
+							pRallyPlot->getX(), pRallyPlot->getY());
+					}
 				}
 				else
 				{
@@ -15717,6 +15786,11 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				pUnit = owner.getUnit(iUnitId);
 				if (pUnit != NULL)
 				{
+					if (gCityLogLevel >= 1)
+					{
+						const CvWString szStringUnitAi = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+						logBBAI("    City %S finishes production of unit %S for Type %S", getName().GetCString(), pUnit->getName(0).GetCString(), szStringUnitAi.GetCString());
+					}
 
 					if (GC.getUnitInfo(eTrainUnit).getDomainType() == DOMAIN_AIR)
 					{
@@ -15761,6 +15835,12 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 				AI_setPropertyControlBuildingQueued(false);
 
+				if (gCityLogLevel >= 2)
+				{
+					logBBAI("      City %S builds building %S",
+						getName().GetCString(),
+						GC.getBuildingInfo(eConstructBuilding).getDescription());
+				}
 				const int iProgress = getProgressOnBuilding(eConstructBuilding);
 				const int iRawOverflow = iProgress - getProductionNeeded(eConstructBuilding);
 				const int iMaxOverflow = getMaxProductionOverflow();
@@ -21271,6 +21351,7 @@ void CvCity::doCorporation()
 			iRandThreshold /= 100;
 			iRandThreshold /= 1 + getCorporationCount() / 2;
 
+			logBBAI("  City (%S) Has Rand Threshold of %d for Corporation %S", getName().GetCString(), iRandThreshold, GC.getCorporationInfo((CorporationTypes)iI).getDescription());
 			int iRand = GC.getCORPORATION_SPREAD_RAND();
 			iRand *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 			iRand /= 100;
@@ -23159,7 +23240,9 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 				{
 					iTarget = GC.getPropertyInfo(pProperty).getTargetLevel();
 				}
+				int iNeedori = iTarget - iCurrentValue; 
 				int iNeed = iTarget - iCurrentValue;
+				CvWString szProperty = GC.getPropertyInfo(pProperty).getType();
 				int iAIPropertyWeight = GC.getPropertyInfo(pProperty).getAIWeight() / 50;
 				if (iAIPropertyWeight > 0) //Properties that are positive (EDU,TOURISM)
 				{ 
@@ -23184,6 +23267,13 @@ int CvCity::getPropertyNeed(PropertyTypes eProperty) const
 					}
 				}
 				m_cachedPropertyNeeds[iI] = iNeed;//(iNeed * (GC.getPropertyInfo(pProperty).getAIWeight() / 50));
+				if (gCityLogLevel > 3)
+				{
+					logAiEvaluations(3, "	City %S need for Property %S : (Base value : %d, Final with AIWeight : %d)", getName().GetCString(), szProperty.GetCString(), iNeedori, m_cachedPropertyNeeds[iI]);
+				}
+
+
+
 			}
 		}
 		m_icachedPropertyNeedsTurn = GC.getGame().getGameTurn();

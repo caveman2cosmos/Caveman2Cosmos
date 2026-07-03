@@ -11,7 +11,6 @@
 #include "CvContractBroker.h"
 #include "CvWorkerAI.h"
 #include "CvHunterAI.h"
-#include "CvDecisionAI.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 #include "CvPlotGroup.h"
@@ -209,6 +208,8 @@ public:
 
 	void recordHistory();
 
+	//	Dump stats to BBAI log
+	void dumpStats() const;
 	void NoteAnimalSubdued();
 	void NoteUnitConstructed(BuildingTypes eBuilding);
 	void NoteCivicsSwitched(int iNumChanges);
@@ -2331,7 +2332,6 @@ public:
 	CvContractBroker& getContractBroker();
 	CvWorkerAI& getWorkerAI() { return m_workerAI; }
 	CvHunterAI& getHunterAI() { return m_hunterAI; }
-	CvDecisionAI& getDecisionAI() { return m_decisionAI; }
 
 	void addPlotDangerSource(const CvPlot* pPlot, int iStrength);
 
@@ -2398,7 +2398,6 @@ private:
 	CvContractBroker m_contractBroker;
 	CvWorkerAI m_workerAI;
 	CvHunterAI m_hunterAI;
-	CvDecisionAI m_decisionAI;
 
 	mutable bst::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 

@@ -157,6 +157,15 @@ bool CvHunterAI::hunterMove(CvUnitAI* unit, bool bWithCommander)
 		{
 			//return;
 			logHunterAI(2, "[HAI/escort] unit=%d merge with hunter escort", unit->getID());
+			LOG_UNIT_BLOCK(3, {
+				CvWString StrunitAIType = GC.getUnitAIInfo(unit->AI_getUnitAIType()).getType();
+				CvWString StrUnitName = unit->getNameNoDesc();
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = unit->getName(0).GetCString();
+				}
+				logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] merge with a Hunter Escort", unit->getOwner(), unit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), unit->getX(), unit->getY(), unit->getGroup()->getNumUnits());
+			});
 
 			//if Hunter if not the group Head, trick to obtain it
 			if (unit->getGroup()->getNumUnits() == 2)
@@ -264,6 +273,15 @@ bool CvHunterAI::hunterMove(CvUnitAI* unit, bool bWithCommander)
 			);
 
 			logHunterAI(2, "[HAI/escort] unit=%d advertise hunter-escort work", unit->getID());
+			LOG_UNIT_BLOCK(3, {
+				CvWString StrunitAIType = GC.getUnitAIInfo(unit->AI_getUnitAIType()).getType();
+				CvWString StrUnitName = unit->getNameNoDesc();
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = unit->getName(0).GetCString();
+				}
+				logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] requests hunter escort at priority %d", unit->getOwner(), unit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), unit->getX(), unit->getY(), unit->getGroup()->getNumUnits(), HIGHEST_PRIORITY_ESCORT_PRIORITY);
+			});
 			// Limited operations gravitating close to borders while waiting.
 			if (unit->exposedToDanger(unit->plot(), 90))
 			{
@@ -341,6 +359,10 @@ bool CvHunterAI::hunterMove(CvUnitAI* unit, bool bWithCommander)
 		if (iHasHunters > iNeededHunters)
 		{
 			logHunterAI(2, "[HAI/scrap] unit=%d scrap (has=%d needed=%d financial)", unit->getID(), iHasHunters, iNeededHunters);
+			if (gUnitLogLevel >= 2)
+			{
+				logBBAI("%S has %d hunters (%d needed) - scrapping", player.getCivilizationDescription(0), iHasHunters, iNeededHunters);
+			}
 			unit->scrap();
 			return true;
 		}

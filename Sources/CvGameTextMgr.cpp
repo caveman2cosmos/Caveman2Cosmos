@@ -18445,10 +18445,8 @@ void CvGameTextMgr::setHeritageHelp(CvWStringBuffer &szBuffer, const HeritageTyp
 		}
 	}
 
-	const IDValueMap<EraTypes, CommerceArray>& kEraChanges = heritage.getEraCommerceChanges100();
-    for (IDValueMap<EraTypes, CommerceArray>::const_iterator itEra = kEraChanges.begin(), itEraEnd = kEraChanges.end(); itEra != itEraEnd; ++itEra)
-    {
-        const EraCommerceArray& pair = *itEra;
+	foreach_(const EraCommerceArray& pair, heritage.getEraCommerceChanges100())
+	{
 		bool bFirst = true;
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 		{

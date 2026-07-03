@@ -242,7 +242,6 @@
     <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvCombatModel.cpp" />
-    <ClCompile Include="CvDecisionAI.cpp" />
     <ClCompile Include="CvHunterAI.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CyCityOutputHistoryInterface.cpp" />
@@ -512,7 +511,6 @@
     <ClInclude Include="CvSettlerAI.h" />
     <ClInclude Include="CvValueService.h" />
     <ClInclude Include="CvCombatModel.h" />
-    <ClInclude Include="CvDecisionAI.h" />
     <ClInclude Include="CvHunterAI.h" />
     <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="EnumFlags.h" />

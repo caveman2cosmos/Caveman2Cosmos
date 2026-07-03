@@ -3135,6 +3135,17 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY()
 				);
 			}
+			LOG_UNIT_BLOCK(3, {
+				CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+				CvWString StrUnitName = m_szName;
+				if (StrUnitName.length() == 0)
+				{
+					StrUnitName = getName(0).GetCString();
+				}
+				logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] died.", getOwner(), getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), getGroup()->getNumUnits());
+			});
+
+
 
 			if (bHumanDefender)
 			{
@@ -5263,6 +5274,25 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 
 	//GC.getGame().logOOSSpecial(16, getID(), pPlot->getX(), pPlot->getY());
 	OutputDebugString(CvString::format("%S (%d) CvUnit::move (%d,%d)-->(%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY, pPlot->getX(), pPlot->getY()).c_str());
+	LOG_UNIT_BLOCK(4, {
+		UnitAITypes eUnitAi = AI_getUnitAIType();
+		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = m_szName;
+		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
+		CvWString MissionTarget = "";
+		if (pMissionPlot != NULL)
+		{
+			MissionTarget = CvWString::format(L"--> (%d, %d)", pMissionPlot->getX(), pMissionPlot->getY());
+		}
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = getName(0).GetCString();
+		}
+
+		logBBAI("Player %d Unit ID %d, %S of Type %S, move (%d, %d)-->(%d,%d), in Mission %S [stack size %d]%S", getOwner(), m_iID, StrUnitName.GetCString(), StrunitAIType.GetCString(), m_iX, m_iY, pPlot->getX(), pPlot->getY(), MissionInfos.GetCString(), getGroup()->getNumUnits(), MissionTarget.GetCString());
+	});
 
 	setXY(pPlot->getX(), pPlot->getY(), true, true, bShow && pPlot->isVisibleToWatchingHuman(), bShow);
 
@@ -5758,6 +5788,13 @@ void CvUnit::scrap()
 	if (!canScrap())
 	{
 		return;
+	}
+
+	if (gUnitLogLevel > 2)
+	{
+		CvWString szString;
+		getUnitAIString(szString, AI_getUnitAIType());
+		logBBAI("    %S scraps %S (%d) with %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getID(), szString.GetCString());
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_UNIT_DOWNSIZING_IS_PROFITABLE) && plot()->getOwner() == getOwner())
@@ -10957,6 +10994,13 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 
 	CvEventReporter::getInstance().unitUpgraded(this, pUpgradeUnit, iPrice);
 
+	if (gUnitLogLevel > 2)
+	{
+		CvWString szString;
+		getUnitAIString(szString, pUpgradeUnit->AI_getUnitAIType());
+		logBBAI("    %S spends %d to upgrade %S to %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), upgradePrice(eUnit), getName(0).GetCString(), pUpgradeUnit->getName(0).GetCString(), szString.GetCString());
+	}
+
 	return true;
 }
 
@@ -13924,6 +13968,16 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 				{
 					m_iGroupID = FFreeList::INVALID_INDEX;
 				}
+
+				LOG_UNIT_BLOCK(4, {
+					CvWString StrunitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+					CvWString StrUnitName = m_szName;
+					if (StrUnitName.length() == 0)
+					{
+						StrUnitName = getName(0).GetCString();
+					}
+					logBBAI("	Player %d Unit ID %d, %S of Type %S at (%d,%d) [stack size %d] groups have joigned here, new GroupID %d.", getOwner(), getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), getGroup()->getNumUnits(), m_iGroupID);
+				});
 			}
 			else
 			{
@@ -17069,10 +17123,12 @@ void CvUnit::testPromotionReady()
 	bool bPromotionReady = false;
 	if (getExperience() >= experienceNeeded() && canAcquirePromotionAny())
 	{
+		logBBAI("Exp for promotion present (%d vs %d)\n", getExperience(), experienceNeeded());
 		bPromotionReady = true;
 	}
 	if (getRetrainsAvailable() > 0 && canAcquirePromotionAny())
 	{
+		logBBAI("Retrain available (%d left)\n", getRetrainsAvailable());
 		bPromotionReady = true;
 	}
 
@@ -17260,6 +17316,8 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bQuick, bo
 					getOwner(), getID(), GET_PLAYER(getOwner()).getName(), getName().GetCString(), currCombatStr(NULL, NULL),
 					pCombatUnit->getOwner(), pCombatUnit->getID(), GET_PLAYER(pCombatUnit->getOwner()).getName(), pCombatUnit->getName().GetCString(), pCombatUnit->currCombatStr(pCombatUnit->plot(), this));
 				gDLL->messageControlLog(szOut);
+				CvString CombatInfos = szOut;
+				LOG_BBAI_UNIT(3, ("%S", CombatInfos.GetCString()));
 			}
 
 			if (showSeigeTower(pCombatUnit) && !isUsingDummyEntities()  && isInViewport())
@@ -29547,8 +29605,28 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 
 					if (iValue > iBestValue)
 					{
+						if (gUnitLogLevel > 3) //TO DO
+						{
+								const CvWString strUnitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+								CvWString szDesc = GC.getPromotionInfo(ePromotion).getDescription();
+								//const CvWString strCriteria = criteria.GetDescription();
+								logAiEvaluations(4,"    %S find better Eval (%d > %d) to buildup %S with %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), iValue, iBestValue, getName(0).GetCString(), szDesc.GetCString(), strUnitAIType.GetCString());
+						}
 						iBestValue = iValue;
 						eAssignPromotionLine = ePotentialPromotionLine;
+
+
+					}
+					else
+					{
+						if (gUnitLogLevel > 3) //TO DO
+						{
+							const CvWString strUnitAIType = GC.getUnitAIInfo(AI_getUnitAIType()).getType();
+							CvWString szDesc = GC.getPromotionInfo(ePromotion).getDescription();
+							//const CvWString strCriteria = criteria.GetDescription();
+
+							logAiEvaluations(2, "    %S will not choose that prom (%d <= %d) to buildup %S with %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), iValue, iBestValue, getName(0).GetCString(), szDesc.GetCString(), strUnitAIType.GetCString());
+						}
 					}
 				}
 			}

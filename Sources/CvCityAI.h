@@ -755,7 +755,6 @@ protected:
 
 	// added so under cheat mode we can call protected functions for testing
 	friend class CvGameTextMgr;
-	friend class CvDecisionAI;
 
 public:
 	//	KOSHLING MOD - pre-calculate building values for all buildings/focuses

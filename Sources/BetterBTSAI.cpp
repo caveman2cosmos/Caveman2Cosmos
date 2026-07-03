@@ -12,6 +12,17 @@ int gTeamLogLevel = 0;
 int gCityLogLevel = 0;
 int gUnitLogLevel = 0;
 
+// AI decision making logging
+void logBBAI(const char* format, ...)
+{
+	static char buf[2048];
+	_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+	gDLL->logMsg("BBAI.log", buf);
+
+	// Echo to debugger
+	strcat(buf, "\n");
+	OutputDebugString(buf);
+}
 void logContractBroker(int level, const char* format, ...)
 {
 	if (level <= gPlayerLogLevel)
@@ -25,6 +36,20 @@ void logContractBroker(int level, const char* format, ...)
 		OutputDebugString(buf);
 	}
 
+}
+
+void logAiEvaluations(int level, const char* format, ...)
+{
+	if (level <= gPlayerLogLevel)
+	{
+		static char buf[2048];
+		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
+		gDLL->logMsg("AiEvaluation.log", buf);
+
+		// Echo to debugger
+		strcat(buf, "\n");
+		OutputDebugString(buf);
+	}
 }
 
 void logBuildEvaluation(int level, const char* format, ...)
@@ -48,39 +73,6 @@ void logHunterAI(int level, const char* format, ...)
 		static char buf[2048];
 		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("HunterAI.log", buf);
-
-		// Echo to debugger
-		strcat(buf, "\n");
-		OutputDebugString(buf);
-	}
-}
-
-// AI player flavour & decision logging -- gated by gPlayerLogLevel, mirrors the
-// CvWorkerAI/CvHunterAI tagged-taxonomy model. Tags: [DAI/*]; see CvDecisionAI.h.
-void logDecisionAI(int level, const char* format, ...)
-{
-	if (level <= gPlayerLogLevel)
-	{
-		static char buf[2048];
-		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("DecisionAI.log", buf);
-
-		// Echo to debugger
-		strcat(buf, "\n");
-		OutputDebugString(buf);
-	}
-}
-
-// AI diplomacy / trade-deal decision logging -- [DIP/*] tags, gated by gPlayerLogLevel.
-// Explains how the AI values and accepts/rejects trade offers (CvPlayerAI::AI_dealVal /
-// AI_considerOffer). Part of the per-subsystem tagged-log family ([WAI]/[HAI]/[DAI]/[DIP]).
-void logDiploAI(int level, const char* format, ...)
-{
-	if (level <= gPlayerLogLevel)
-	{
-		static char buf[2048];
-		_vsnprintf(buf, 2048 - 4, format, (char*)(&format + 1));
-		gDLL->logMsg("DiploAI.log", buf);
 
 		// Echo to debugger
 		strcat(buf, "\n");
