@@ -24,9 +24,6 @@
 #include "CvXMLLoadUtility.h"
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvXMLLoadUtilitySetMod.h"
-#include "Repos/BuildingsRepo.h"
-#include "Repos/UnitsRepo.h"
-#include "Repos/BuildsRepo.h"
 #include "FVariableSystem.h"
 #include <iostream>
 
@@ -1050,10 +1047,6 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 	GC.getInitCore().calculateAssetCheckSum();
 
 	GC.cacheInfoTypes();
-
-	BuildingsRepo::get().rebuild();
-	UnitsRepo::get().rebuild();
-	BuildsRepo::get().rebuild();
 
 	OutputDebugString("Loading PostMenu Infos: End\n");
 

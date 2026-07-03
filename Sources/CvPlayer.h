@@ -9,8 +9,6 @@
 #include "CvBuildLists.h"
 #include "CvCityAI.h"
 #include "CvContractBroker.h"
-#include "CvWorkerAI.h"
-#include "CvHunterAI.h"
 #include "CvGameObject.h"
 #include "CvBuildLists.h"
 #include "CvPlotGroup.h"
@@ -2331,8 +2329,6 @@ public:
 
 	void RecalculatePlotGroupHashes();
 	CvContractBroker& getContractBroker();
-	CvWorkerAI& getWorkerAI() { return m_workerAI; }
-	CvHunterAI& getHunterAI() { return m_hunterAI; }
 
 	void addPlotDangerSource(const CvPlot* pPlot, int iStrength);
 
@@ -2397,8 +2393,6 @@ private:
 	mutable std::map<int, bool>	m_canHaveBuilder;
 
 	CvContractBroker m_contractBroker;
-	CvWorkerAI m_workerAI;
-	CvHunterAI m_hunterAI;
 
 	mutable bst::scoped_ptr<CvUpgradeCache> m_upgradeCache;
 
@@ -2424,6 +2418,13 @@ protected:
 	void clearCanConstructCacheForGroup(SpecialBuildingTypes eSpecialBuilding, bool bIncludeCities = false) const;
 
 public:
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType) const;
+	void changePlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
+	void setPlayerWideAfflictionCount(PromotionLineTypes ePromotionLineType, int iChange);
+	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
+	void recalculateAfflictedUnitCount();
+#endif
 	virtual void AI_invalidateAttitudeCache(PlayerTypes ePlayer) = 0;
 	virtual void AI_setHasInquisitionTarget() = 0;
 };

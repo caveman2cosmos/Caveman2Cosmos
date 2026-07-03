@@ -270,10 +270,22 @@
 	<ElementType name="iPrecisionModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iDamageModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iDamageModifierChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShots" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotsChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotCombatModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotCombatModifierChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotPunctureModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotPunctureModifierChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotPrecisionModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotPrecisionModifierChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotCriticalModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iPowerShotCriticalModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iCriticalModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCriticalModifierChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iEndurance" content="textOnly" dt:type="int"/>
 	<ElementType name="iEnduranceChange" content="textOnly" dt:type="int"/>
+	<ElementType name="iRoundStunProb" content="textOnly" dt:type="int"/>
+	<ElementType name="iRoundStunProbChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorseningProbabilityIncrementModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorsenedCommunicabilityIncrementModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorsenedOvercomeIncrementModifier" content="textOnly" dt:type="int"/>
@@ -381,6 +393,12 @@
 	<ElementType name="bNoSpreadUnitProximity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoSpreadUnittoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoSpreadCitytoUnit" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bDealsColdDamage" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bMakesDamageCold" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bMakesDamageNotCold" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bColdImmune" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bAddsColdImmunity" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRemovesColdImmunity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCritical" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCities" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesAdd" content="textOnly" dt:type="boolean"/>
@@ -763,6 +781,24 @@
 	<ElementType name="CriticalVSUnitCombatChangeTypes" content="eltOnly">
 		<element type="CriticalVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="RoundStunVSUnitCombat" content="textOnly"/>
+	<ElementType name="iRoundStunVSUnitCombat" content="textOnly" dt:type="int"/>
+	<ElementType name="RoundStunVSUnitCombatType" content="eltOnly">
+		<element type="RoundStunVSUnitCombat"/>
+		<element type="iRoundStunVSUnitCombat"/>
+	</ElementType>
+	<ElementType name="RoundStunVSUnitCombatTypes" content="eltOnly">
+		<element type="RoundStunVSUnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RoundStunVSUnitCombatChange" content="textOnly"/>
+	<ElementType name="iRoundStunVSUnitCombatChange" content="textOnly" dt:type="int"/>
+	<ElementType name="RoundStunVSUnitCombatChangeType" content="eltOnly">
+		<element type="RoundStunVSUnitCombatChange"/>
+		<element type="iRoundStunVSUnitCombatChange"/>
+	</ElementType>
+	<ElementType name="RoundStunVSUnitCombatChangeTypes" content="eltOnly">
+		<element type="RoundStunVSUnitCombatChangeType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="AIWeightbyUnitCombatType" content="eltOnly">
 		<element type="UnitCombatType"/>
 		<element type="iAIWeight"/>
@@ -1038,6 +1074,13 @@
 		<element type="CriticalVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="CriticalVSUnitCombatTypesChange" content="eltOnly">
+		<element type="UnitCombatType"/>
+		<element type="iModifier"/>
+	</ElementType>
+	<ElementType name="RoundStunVSUnitCombatTypesChanges" content="eltOnly">
+		<element type="RoundStunVSUnitCombatTypesChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="RoundStunVSUnitCombatTypesChange" content="eltOnly">
 		<element type="UnitCombatType"/>
 		<element type="iModifier"/>
 	</ElementType>
@@ -1961,9 +2004,17 @@
 		<element type="AfflictOnAttackTypes" minOccurs="0"/>
 		<element type="CureAfflictionTypes" minOccurs="0"/>
 		<element type="AfflictionFortitudeModifiers" minOccurs="0"/>
+		<element type="iPowerShots" minOccurs="0"/>
+		<element type="iPowerShotCombatModifier" minOccurs="0"/>
+		<element type="iPowerShotPunctureModifier" minOccurs="0"/>
+		<element type="iPowerShotPrecisionModifier" minOccurs="0"/>
+		<element type="iPowerShotCriticalModifier" minOccurs="0"/>
 		<element type="iCriticalModifier" minOccurs="0"/>
 		<element type="iEndurance" minOccurs="0"/>
+		<element type="bDealsColdDamage" minOccurs="0"/>
+		<element type="bColdImmune" minOccurs="0"/>
 		<element type="FlankingStrikesbyUnitCombat" minOccurs="0"/>
+		<element type="iRoundStunProb" minOccurs="0"/>
 		<element type="WithdrawVSUnitCombatTypes" minOccurs="0"/>
 		<element type="PursuitVSUnitCombatTypes" minOccurs="0"/>
 		<element type="RepelVSUnitCombatTypes" minOccurs="0"/>
@@ -1973,6 +2024,7 @@
 		<element type="DodgeVSUnitCombatTypes" minOccurs="0"/>
 		<element type="PrecisionVSUnitCombatTypes" minOccurs="0"/>
 		<element type="CriticalVSUnitCombatTypes" minOccurs="0"/>
+		<element type="RoundStunVSUnitCombatTypes" minOccurs="0"/>
 		<element type="TerrainWorkRateModifierTypes" minOccurs="0"/>
 		<element type="FeatureWorkRateModifierTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierTypes" minOccurs="0"/>
@@ -2393,10 +2445,20 @@
 		<element type="AfflictOnAttackChangeTypes" minOccurs="0"/>
 		<element type="CureAfflictionChangeTypes" minOccurs="0"/>
 		<element type="AfflictionFortitudeChangeModifiers" minOccurs="0"/>
+		<element type="iPowerShotsChange" minOccurs="0"/>
+		<element type="iPowerShotCombatModifierChange" minOccurs="0"/>
+		<element type="iPowerShotPunctureModifierChange" minOccurs="0"/>
+		<element type="iPowerShotPrecisionModifierChange" minOccurs="0"/>
+		<element type="iPowerShotCriticalModifierChange" minOccurs="0"/>
 		<element type="iCriticalModifierChange" minOccurs="0"/>
 		<element type="iEnduranceChange" minOccurs="0"/>
 		<element type="iGatherHerdChange" minOccurs="0"/>
+		<element type="bMakesDamageCold" minOccurs="0"/>
+		<element type="bMakesDamageNotCold" minOccurs="0"/>
+		<element type="bAddsColdImmunity" minOccurs="0"/>
+		<element type="bRemovesColdImmunity" minOccurs="0"/>
 		<element type="FlankingStrikesbyUnitCombatChange" minOccurs="0"/>
+		<element type="iRoundStunProbChange" minOccurs="0"/>
 		<element type="WithdrawVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="PursuitVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="RepelVSUnitCombatChangeTypes" minOccurs="0"/>
@@ -2406,6 +2468,7 @@
 		<element type="DodgeVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="PrecisionVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="CriticalVSUnitCombatChangeTypes" minOccurs="0"/>
+		<element type="RoundStunVSUnitCombatChangeTypes" minOccurs="0"/>
 		<element type="BuildWorkRateModifierChangeTypes" minOccurs="0"/>
 		<element type="AddsBuildTypes" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
@@ -2924,8 +2987,14 @@
 		<element type="iDodgeModifierChange" minOccurs="0"/>
 		<element type="iPrecisionModifierChange" minOccurs="0"/>
 		<element type="iDamageModifierChange" minOccurs="0"/>
+		<element type="iPowerShotsChange" minOccurs="0"/>
+		<element type="iPowerShotCombatModifierChange" minOccurs="0"/>
+		<element type="iPowerShotPunctureModifierChange" minOccurs="0"/>
+		<element type="iPowerShotPrecisionModifierChange" minOccurs="0"/>
+		<element type="iPowerShotCriticalModifierChange" minOccurs="0"/>
 		<element type="iCriticalModifierChange" minOccurs="0"/>
 		<element type="iEnduranceChange" minOccurs="0"/>
+		<element type="iRoundStunProbChange" minOccurs="0"/>
 		<element type="iPoisonProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureProbabilityModifierChange" minOccurs="0"/>
 		<element type="iCaptureResistanceModifierChange" minOccurs="0"/>
@@ -2983,6 +3052,10 @@
 		<element type="iAnimalIgnoresBordersChange" minOccurs="0"/>
 		<element type="iNoDefensiveBonusChange" minOccurs="0"/>
 		<element type="bOnslaughtChange" minOccurs="0"/>
+		<element type="bMakesDamageCold" minOccurs="0"/>
+		<element type="bMakesDamageNotCold" minOccurs="0"/>
+		<element type="bAddsColdImmunity" minOccurs="0"/>
+		<element type="bRemovesColdImmunity" minOccurs="0"/>
 		<element type="bAttackOnlyCitiesAdd" minOccurs="0"/>
 		<element type="bAttackOnlyCitiesSubtract" minOccurs="0"/>
 		<element type="bIgnoreNoEntryLevelAdd" minOccurs="0"/>
@@ -3023,6 +3096,7 @@
 		<element type="DodgeVSUnitCombatTypesChanges" minOccurs="0"/>
 		<element type="PrecisionVSUnitCombatTypesChanges" minOccurs="0"/>
 		<element type="CriticalVSUnitCombatTypesChanges" minOccurs="0"/>
+		<element type="RoundStunVSUnitCombatTypesChanges" minOccurs="0"/>
 		<element type="AfflictOnAttackChangeTypes" minOccurs="0"/>
 		<element type="TrapAvoidanceUnitCombatTypes" minOccurs="0"/>
 		<element type="TrapImmunityUnitCombatTypes" minOccurs="0"/>

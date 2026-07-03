@@ -771,8 +771,15 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
 			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
 				promoFlags |= PromotionRequirements::Equip;
-
-			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+				promoFlags |= PromotionRequirements::Afflict;
+#endif
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment()
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+				&& !GC.getPromotionInfo(kPromotion.ePromotion).isAffliction()
+#endif
+				)
 			{
 				promoFlags |= PromotionRequirements::Promote;
 			}

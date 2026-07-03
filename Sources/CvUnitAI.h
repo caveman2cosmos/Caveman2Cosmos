@@ -32,17 +32,6 @@ class ConstructionNeeds;
  */
 class CvUnitAI : public CvUnit
 {
-    // CvWorkerAI hosts the unified improveBonus planner that calls AI_plotValid,
-    // AI_betterPlotBuild, and AI_connectPlot. Granting friend access here avoids
-    // promoting those methods to public for one caller.
-    friend class CvWorkerAI;
-
-    // CvHunterAI hosts hunterMove/autoHuntMove (the AUTOMATE_HUNT routines split out
-    // of AI_SearchAndDestroyMove). It calls AI_huntRange, AI_safety, AI_heal,
-    // AI_moveToBorders, AI_patrol, AI_explore, etc. via friend access, mirroring the
-    // CvWorkerAI seam, so those helpers stay non-public on CvUnitAI.
-    friend class CvHunterAI;
-
 public:
     /**
      * Constructor for CvUnitAI.
@@ -1286,6 +1275,17 @@ protected:
      *   3. Returns true if the religion was founded.
      */
 	bool AI_foundReligion();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+    /**
+     * Attempts to cure an affliction using this unit.
+     * @brief Executes logic for curing a specific affliction line.
+     * Steps:
+     *   1. Checks if the unit has the ability to cure the specified affliction.
+     *   2. Performs the cure action if possible.
+     *   3. Returns true if the affliction was cured.
+     */
+	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
+#endif
 
     /**
      * Attempts to trigger a Golden Age with this unit.
@@ -1990,6 +1990,16 @@ protected:
 	bool AI_fortTerritory(bool bCanal, bool bAirbase);
 
     /**
+     * Attempts to improve a bonus resource.
+     * @brief Executes logic for building improvements on resource tiles.
+     * Steps:
+     *   1. Identifies resource tiles needing improvement.
+     *   2. Moves to and builds improvement.
+     *   3. Returns true if improvement was performed.
+     */
+	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
+
+    /**
      * Attempts to improve a plot.
      * @brief Executes logic for building a specific improvement on a plot.
      * Steps:
@@ -2583,7 +2593,7 @@ public:
      *   2. Moves to and attacks the best target.
      *   3. Returns true if hunting was performed.
      */
-	bool AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders = false,  int iMinValue = 0, bool bRawOdds = false);
+	bool AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders = false,  int iMinValue = 0);
 
     /**
      * Performs city defense actions.

@@ -1030,6 +1030,12 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_CURE:
 			{
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+				if (unitX->canCure(pPlot, ((PromotionLineTypes)iData1)))
+				{
+					return true;
+				}
+#endif
 				break;
 			}
 			case MISSION_GOTO:
@@ -1657,6 +1663,12 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_CURE:
 						{
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+							if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
+							{
+								bAction = true;
+							}
+#endif
 							break;
 						}
 						case MISSION_JOIN:

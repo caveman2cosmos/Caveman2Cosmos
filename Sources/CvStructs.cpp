@@ -19,7 +19,6 @@
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlot.h"
-#include "CvUnit.h"
 #include "CvOutcomeMission.h"
 #include "CvInfos.h"
 

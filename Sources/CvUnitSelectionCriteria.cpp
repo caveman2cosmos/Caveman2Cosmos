@@ -10,7 +10,6 @@
 #include "CvString.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
-#include "CvUnitCombatInfo.h"
 #include "CvUnitSelectionCriteria.h"
 
 

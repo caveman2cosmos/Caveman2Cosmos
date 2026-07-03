@@ -62,6 +62,7 @@ public:
 	bool isCenterInCity() const						{ return m_bCenterInCity; }
 	bool needStateReligionInCity() const			{ return m_bStateReligionInCity; }
 	bool isAllowsNukes() const						{ return m_bAllowsNukes; }
+	bool isDamageToAttackerIgnoresArmor() const;
 	bool isDamageAllAttackers() const;
 	bool isDamageAttackerCapable() const;
 	bool isQuarantine() const;
@@ -537,6 +538,7 @@ private:
 	bool m_bCenterInCity;
 	bool m_bStateReligionInCity;
 	bool m_bAllowsNukes;
+	bool m_bDamageToAttackerIgnoresArmor;
 	bool m_bDamageAllAttackers;
 	bool m_bDamageAttackerCapable;
 	bool m_bAutoBuild;

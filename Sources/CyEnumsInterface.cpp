@@ -1194,7 +1194,6 @@ void CyEnumsPythonInterface()
 		.value("MISSIONAI_CLAIM_TERRITORY", MISSIONAI_CLAIM_TERRITORY)
 		.value("MISSIONAI_HURRY_FOOD", MISSIONAI_HURRY_FOOD)
 		.value("MISSIONAI_INQUISITION", MISSIONAI_INQUISITION)
-		.value("MISSIONAI_HUNT", MISSIONAI_HUNT)
 	;
 
 	// any additions need to be reflected in GlobalTypes.xml

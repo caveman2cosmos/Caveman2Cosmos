@@ -16,7 +16,6 @@
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvTeamAI.h"
-#include "Repos/BuildingsRepo.h"
 
 // statics
 
@@ -1492,13 +1491,14 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 		}
 	}
 
-	foreach_(const BuildingTypes eWonder, BuildingsRepo::get().worldWonders())
-    {
-        if (isTechRequiredForBuilding(eTech, eWonder) && getBuildingMaking(eWonder) > 0)
-        {
-            return DENIAL_MYSTERY;
-        }
-    }
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		if (isTechRequiredForBuilding(eTech, (BuildingTypes)iI)
+		&& isWorldWonder((BuildingTypes)iI) && getBuildingMaking((BuildingTypes)iI) > 0)
+		{
+			return DENIAL_MYSTERY;
+		}
+	}
 
 	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
 	{

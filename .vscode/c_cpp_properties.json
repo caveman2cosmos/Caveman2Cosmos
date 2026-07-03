@@ -17,10 +17,8 @@
         "_UNICODE",
         "_MSC_VER=900",
         "FP_PROFILE_EXTRA_ENABLE",
-        "_MOD_FRACTRADE",
-        "__INTELLISENSE__"
+        "_MOD_FRACTRADE"
       ],
-      "compilerPath": "",
       "windowsSdkVersion": "10.0.22621.0",
       "cStandard": "c99",
       "cppStandard": "c++03",

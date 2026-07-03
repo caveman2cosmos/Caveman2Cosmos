@@ -61,14 +61,8 @@
 #include <boost155/range/numeric.hpp>
 
 // Make boost foreach look nice enough to actually use
-// the macros inside __INTELLISENSE__ are only to ensure intellisense does not show false error when parsing the macros
-#ifdef __INTELLISENSE__
-#define foreach_(variable, collection) for (variable = {};;)
-#define reverse_foreach_(variable, collection) for (variable = {};;)
-#else
 #define foreach_		 BOOST_155_FOREACH
 #define reverse_foreach_ BOOST_155_REVERSE_FOREACH
-#endif
 
 // Alias our latest boost version
 namespace bst = boost155;

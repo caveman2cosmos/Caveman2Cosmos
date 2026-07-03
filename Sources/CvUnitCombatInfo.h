@@ -93,6 +93,8 @@ public:
 	int getPursuitChange() const;
 	int getEarlyWithdrawChange() const;
 	int getVSBarbsChange() const;
+	int getArmorChange() const;
+	int getPunctureChange() const;
 	int getOverrunChange() const;
 	int getRepelChange() const;
 	int getFortRepelChange() const;
@@ -118,8 +120,16 @@ public:
 	int getLongRangeSupportPercentChange() const;
 	int getFlankSupportPercentChange() const;
 #endif // STRENGTH_IN_NUMBERS
+	int getDodgeModifierChange() const;
+	int getPrecisionModifierChange() const;
+	int getPowerShotsChange() const;
+	int getPowerShotCombatModifierChange() const;
+	int getPowerShotPunctureModifierChange() const;
+	int getPowerShotPrecisionModifierChange() const;
+	int getPowerShotCriticalModifierChange() const;
 	int getCriticalModifierChange() const;
 	int getEnduranceChange() const;
+	int getRoundStunProbChange() const;
 	int getPoisonProbabilityModifierChange() const;
 	int getCaptureProbabilityModifierChange() const;
 	int getCaptureResistanceModifierChange() const;
@@ -184,6 +194,10 @@ public:
 	bool isStampedeChange() const;
 	bool isRemoveStampede() const;
 	bool isOnslaughtChange() const;
+	bool isMakesDamageCold() const;
+	bool isMakesDamageNotCold() const;
+	bool isAddsColdImmunity() const;
+	bool isRemovesColdImmunity() const;
 	bool isAttackOnlyCitiesAdd() const;
 	bool isAttackOnlyCitiesSubtract() const;
 	bool isIgnoreNoEntryLevelAdd() const;
@@ -271,6 +285,22 @@ public:
 	int getVisibilityIntensitySameTileChangeType(int iInvisibility) const;
 	bool isVisibilityIntensitySameTileChangeType(int iInvisibility) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getNumAidChanges() const;
+	int getAidChange(int iProperty) const;
+	bool isAidChange(int iProperty) const;
+
+	int getCureAfflictionChangeType(int i) const;
+	int getNumCureAfflictionChangeTypes() const;
+	bool isCureAfflictionChangeType(int i) const;
+
+	int getNumAfflictionFortitudeChangeModifiers() const;
+	const PromotionLineModifier& getAfflictionFortitudeChangeModifier(int iAfflictionLine) const;
+
+	int getNumAfflictOnAttackChangeTypes() const;
+	const AfflictOnAttackChange& getAfflictOnAttackChangeType(int iAfflictionLine) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	int getNumTerrainAttackChangeModifiers() const;
 	const TerrainModifier& getTerrainAttackChangeModifier(int iTerrain) const;
 
@@ -313,8 +343,23 @@ public:
 	int getNumKnockbackVSUnitCombatTypesChange() const;
 	const UnitCombatModifier& getKnockbackVSUnitCombatTypeChange(int iUnitCombat) const;
 
+	int getNumPunctureVSUnitCombatTypesChange() const;
+	const UnitCombatModifier& getPunctureVSUnitCombatTypeChange(int iUnitCombat) const;
+
+	int getNumArmorVSUnitCombatTypesChange() const;
+	const UnitCombatModifier& getArmorVSUnitCombatTypeChange(int iUnitCombat) const;
+
+	int getNumDodgeVSUnitCombatTypesChange() const;
+	const UnitCombatModifier& getDodgeVSUnitCombatTypeChange(int iUnitCombat) const;
+
+	int getNumPrecisionVSUnitCombatTypesChange() const;
+	const UnitCombatModifier& getPrecisionVSUnitCombatTypeChange(int iUnitCombat) const;
+
 	int getNumCriticalVSUnitCombatTypesChange() const;
 	const UnitCombatModifier& getCriticalVSUnitCombatTypeChange(int iUnitCombat) const;
+
+	int getNumRoundStunVSUnitCombatTypesChange() const;
+	const UnitCombatModifier& getRoundStunVSUnitCombatTypeChange(int iUnitCombat) const;
 
 	int getNumTrapAvoidanceUnitCombatTypes() const;
 	const UnitCombatModifier& getTrapAvoidanceUnitCombatType(int iIndex) const;
@@ -410,6 +455,8 @@ protected:
 	int m_iPursuitChange;
 	int m_iEarlyWithdrawChange;
 	int m_iVSBarbsChange;
+	int m_iArmorChange;
+	int m_iPunctureChange;
 	int m_iOverrunChange;
 	int m_iRepelChange;
 	int m_iFortRepelChange;
@@ -435,8 +482,16 @@ protected:
 	int m_iLongRangeSupportPercentChange;
 	int m_iFlankSupportPercentChange;
 #endif // STRENGTH_IN_NUMBERS
+	int m_iDodgeModifierChange;
+	int m_iPrecisionModifierChange;
+	int m_iPowerShotsChange;
+	int m_iPowerShotCombatModifierChange;
+	int m_iPowerShotPunctureModifierChange;
+	int m_iPowerShotPrecisionModifierChange;
+	int m_iPowerShotCriticalModifierChange;
 	int m_iCriticalModifierChange;
 	int m_iEnduranceChange;
+	int m_iRoundStunProbChange;
 	int m_iPoisonProbabilityModifierChange;
 	int m_iCaptureProbabilityModifierChange;
 	int m_iCaptureResistanceModifierChange;
@@ -506,6 +561,10 @@ protected:
 	bool m_bStampedeChange;
 	bool m_bRemoveStampede;
 	bool m_bOnslaughtChange;
+	bool m_bMakesDamageCold;
+	bool m_bMakesDamageNotCold;
+	bool m_bAddsColdImmunity;
+	bool m_bRemovesColdImmunity;
 	bool m_bAttackOnlyCitiesAdd;
 	bool m_bAttackOnlyCitiesSubtract;
 	bool m_bIgnoreNoEntryLevelAdd;
@@ -545,6 +604,9 @@ protected:
 	InvisibilityArray m_aInvisibilityIntensityChangeTypes;
 	InvisibilityArray m_aVisibilityIntensityRangeChangeTypes;
 	InvisibilityArray m_aVisibilityIntensitySameTileChangeTypes;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	AidArray m_aAidChanges;
+#endif
 	// int vector utilizing struct with delayed resolution
 	std::vector<TerrainModifier> m_aTerrainAttackChangeModifiers;
 	std::vector<TerrainModifier> m_aTerrainDefenseChangeModifiers;
@@ -559,8 +621,19 @@ protected:
 	std::vector<UnitCombatModifier> m_aPursuitVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aRepelVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aKnockbackVSUnitCombatTypeChange;
+	std::vector<UnitCombatModifier> m_aPunctureVSUnitCombatTypeChange;
+	std::vector<UnitCombatModifier> m_aArmorVSUnitCombatTypeChange;
+	std::vector<UnitCombatModifier> m_aDodgeVSUnitCombatTypeChange;
+	std::vector<UnitCombatModifier> m_aPrecisionVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aCriticalVSUnitCombatTypeChange;
+	std::vector<UnitCombatModifier> m_aRoundStunVSUnitCombatTypeChange;
 	std::vector<UnitCombatModifier> m_aTrapAvoidanceUnitCombatTypes;
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	std::vector<int> m_aiCureAfflictionChangeTypes;
+	std::vector<PromotionLineModifier> m_aAfflictionFortitudeChangeModifiers;
+	std::vector<AfflictOnAttackChange> m_aAfflictOnAttackChangeTypes;
+	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 	std::vector<InvisibleTerrainChanges> m_aInvisibleTerrainChanges;
 	std::vector<InvisibleFeatureChanges> m_aInvisibleFeatureChanges;
 	std::vector<InvisibleImprovementChanges> m_aInvisibleImprovementChanges;

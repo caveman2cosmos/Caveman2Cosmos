@@ -4,6 +4,7 @@
 	<ElementType name="ReplacementCondition"/>
 	<ElementType name="ReplacementID"/>
 	<!--TB's Tags Begin -->
+	<ElementType name="bColdDamage" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCanMoveSeaUnits" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bChangeRemove" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNotOnAnyBonus" content="textOnly" dt:type="boolean"/>
@@ -214,6 +215,7 @@
 		<element type="iHealthPercent" minOccurs="0"/>
 		<!--Afforess-->
 		<!--TB's Tags begin -->
+		<element type="bColdDamage" minOccurs="0"/>
 		<element type="bNational" minOccurs="0"/>
 		<element type="bGlobal" minOccurs="0"/>
 		<element type="AfflictionCommunicabilityTypes" minOccurs="0"/>
