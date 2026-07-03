@@ -214,20 +214,6 @@ public:
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
 
     /**
-     * The city this worker is currently committed to improving, or NULL.
-     * Resolves m_iTargetImproveCity against the owner's cities; returns NULL
-     * if the city no longer exists or is on a different area (unreachable).
-     * Used so a worker straying through another city's working radius does not
-     * abandon the city it was assigned to.
-     */
-    CvCity* AI_getTargetImproveCity() const;
-
-    /**
-     * Commits this worker to improving pCity (pass NULL to clear).
-     */
-    void AI_setTargetImproveCity(const CvCity* pCity);
-
-    /**
      * Calculates the search range for the unit.
      * - Used for missions and movement.
      */
@@ -497,8 +483,6 @@ protected:
 
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
-
-	int m_iTargetImproveCity; // city this worker is committed to improving (-1 = none)
 
 	BuildingTypes m_eIntendedConstructBuilding; // Used to coordinate subdued animal and great person builds
 	HeritageTypes m_eIntendedHeritage; // Used to coordinate subdued animal and great person builds

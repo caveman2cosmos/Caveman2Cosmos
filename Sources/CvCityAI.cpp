@@ -31,7 +31,7 @@
 #include "OutputRatios.h"
 #include "PlotInfo.h"
 #include "CvValueService.h"
-#include "CvWorkerAI.h"
+#include "CvWorkerService.h"
 #include "Repos/UnitsRepo.h"
 
 
@@ -10615,7 +10615,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;
 
-		BuildTypes eBestBuild = CvWorkerAI::getFastestBuildForImprovementType(player, ePotentialImprovement, pPlot);
+		BuildTypes eBestBuild = CvWorkerService::GetFastestBuildForImprovementType(player, ePotentialImprovement, pPlot);
 
 		// if we cannot build any of the valid builds for the improvement, skip to next improvement
 		if (eBestBuild == NO_BUILD) continue;
