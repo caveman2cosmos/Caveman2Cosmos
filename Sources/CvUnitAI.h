@@ -1163,12 +1163,6 @@ protected:
      */
 	bool AI_guardCityBestDefender();
 
-    // [UNT/act] -- emit the "why" line naming the decision helper that won this unit's
-	// move cascade this turn (read together with AI_update's [UNT/move]). Called at each
-	// instrumented helper's commit point. szReason/pTarget may be NULL (target falls back
-	// to the unit's plot). gUnitLogLevel-gated at level 2, like [UNT/move]/[UNT/mission].
-	void AI_logAct(const char* szDecision, const char* szReason, const CvPlot* pTarget) const;
-
     /**
      * Determines if this unit is needed as a minimum defender for a city.
      * @brief Assigns the unit as a minimum defender if required.

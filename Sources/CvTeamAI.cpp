@@ -3939,13 +3939,6 @@ void CvTeamAI::AI_doWar()
 	}
 	// Afforess - End
 
-	// [WAR/begin] -- once/turn baseline so the war subsystem is observable even when no
-    // posture/warplan transition fires this turn (the [WAR/area]/[WAR/warplan] sites only
-    // log on change). Carries the enemy-power and funding context AI_doWar decides against.
-    logWarAI(1, "[WAR/begin] team=%d turn=%d enemyPowerPct=%d fundedPct=%d safePct=%d atWar=%d warPlans=%d",
-        (int)getID(), GC.getGame().getGameTurn(), iEnemyPowerPercent, (int)iFundedPercent, iSafePercent,
-        getAtWarCount(true), getAnyWarPlanCount(true));
-
 	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive() && isHasMet((TeamTypes)iI) && AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)

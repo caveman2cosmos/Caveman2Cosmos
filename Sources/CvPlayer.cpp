@@ -13544,12 +13544,6 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
    	}
    }
 
-   // Check against the ACTUAL (era-scaled) cap, not the raw base. Exceeding it slightly is
-   // still possible via non-training acquisition (upgrade/capture), so this is a soft signal.
-   FAssertMsg(iMaxUnits == 0 || getUnitCount(eIndex) <= iMaxUnits,
-       CvString::format("getUnitCount=%d exceeds era-scaled cap=%d for %s",
-       getUnitCount(eIndex), iMaxUnits, GC.getUnitInfo(eIndex).getType()).c_str());
-
    return (getUnitCount(eIndex) + iExtra) >= iMaxUnits;
 }
 

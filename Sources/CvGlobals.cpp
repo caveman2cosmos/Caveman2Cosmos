@@ -3033,16 +3033,10 @@ void cvInternalGlobals::setIsBug()
 void cvInternalGlobals::refreshOptionsBUG()
 {
 	m_bGraphicalPaging = getBugOptionBOOL("MainInterface__EnableGraphicalPaging", true);
-	// One unified AI-log verbosity knob for now: every subsystem log (player/team/city/unit)
-	// follows the single Player level. The per-scope Team/City/Unit BUG options are left in the
-	// UI but currently ignored; we may re-split these globals later if scope-specific gating is
-	// wanted again. Driving them all from the known-good Player option removes any doubt about a
-	// given scope's option being mis-wired (e.g. WarAI.log staying empty at gTeamLogLevel).
-	const int iAILogLevel = getBugOptionINT("Autolog__LogLevelPlayerBBAI", 0);
-	gPlayerLogLevel = iAILogLevel;
-	gTeamLogLevel = iAILogLevel;
-	gCityLogLevel = iAILogLevel;
-	gUnitLogLevel = iAILogLevel;
+	gPlayerLogLevel = getBugOptionINT("Autolog__LogLevelPlayerBBAI", 0);
+	gTeamLogLevel = getBugOptionINT("Autolog__LogLevelTeamBBAI", 0);
+	gCityLogLevel = getBugOptionINT("Autolog__LogLevelCityBBAI", 0);
+	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
 	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
 
 #ifdef _DEBUG

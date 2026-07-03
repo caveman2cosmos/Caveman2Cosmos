@@ -571,7 +571,7 @@ void CvContractBroker::finalizeTenderContracts()
 
 								if (pCity->area() != pDestPlot->area() && !IS_NAVAL_AITYPE(eAIType) && !IS_AIR_AITYPE(eAIType))
 								{
-								    log(4, "[CTB/tender/cand] workRequest=%d city=%S (%d) skipped (land unit aiType=%d cannot cross from city area to dest area)",
+								    log(3, "[CTB/tender/cand] workRequest=%d city=%S (%d) skipped (land unit aiType=%d cannot cross from city area to dest area)",
                                     	m_workRequests[iI].iWorkRequestId, pCity->getName().GetCString(), pCity->getID(), (int)eAIType);
 									continue;
 								}
@@ -596,7 +596,7 @@ void CvContractBroker::finalizeTenderContracts()
 								//if the nb of turns is too high for a small city, don't consider the unit, unless there are no other options
 								if (iTurns > 20 && pCity->getPopulation() < 5 && m_advertisingTenders.size() > 3)
 								{
-									log(4,
+									log(3,
                                         "[CTB/tender/giveup] workRequest=%d city=%S (%d) unit=%S baseValue=%d turns=%d depreciatedValue=%d (too slow for small city) - skipped",
                                         m_workRequests[iI].iWorkRequestId,
                                         pCity->getName().GetCString(),
@@ -643,14 +643,14 @@ void CvContractBroker::finalizeTenderContracts()
 								}
 								else
                                 {
-                                log(4, "[CTB/tender/cand] workRequest=%d city=%S (%d) unit=%S has no usable path to dest (maxPath=%d) - cannot supply",
+                                log(3, "[CTB/tender/cand] workRequest=%d city=%S (%d) unit=%S has no usable path to dest (maxPath=%d) - cannot supply",
                                     m_workRequests[iI].iWorkRequestId, pCity->getName().GetCString(), pCity->getID(),
                                     GC.getUnitInfo(eUnit).getDescription(), m_workRequests[iI].iMaxPath);
                                }
 							}
 							else
 							{
-                                log(4, "[CTB/tender/nosuit] workRequest=%d city=%S (%d) has no suitable unit to offer for aiType=%d",
+                                log(3, "[CTB/tender/nosuit] workRequest=%d city=%S (%d) has no suitable unit to offer for aiType=%d",
                                     m_workRequests[iI].iWorkRequestId, pCity->getName().GetCString(), pCity->getID(), (int)m_workRequests[iI].eAIType);
                             }
 						}
@@ -670,10 +670,10 @@ void CvContractBroker::finalizeTenderContracts()
 							break;
 						}
 					}
-					else if (gPlayerLogLevel >= 4)
+					else if (gPlayerLogLevel >= 3)
                     {
                         CvCity* pSkipCity = GET_PLAYER(m_eOwner).getCity(m_advertisingTenders[iJ].iCityId);
-                        log(4, "[CTB/tender/cand] workRequest=%d tender[%d] city=%S (%d) skipped (city=%s destPlot=%s wrong-area/null)",
+                        log(3, "[CTB/tender/cand] workRequest=%d tender[%d] city=%S (%d) skipped (city=%s destPlot=%s wrong-area/null)",
                             m_workRequests[iI].iWorkRequestId, iJ,
                             pSkipCity ? pSkipCity->getName().GetCString() : L"<null>",
                             m_advertisingTenders[iJ].iCityId,
@@ -683,7 +683,7 @@ void CvContractBroker::finalizeTenderContracts()
 				}
 				else
                 {
-                    log(4, "[CTB/tender/cand] workRequest=%d tender[%d] city=%d skipped (cityMinPriority=%d > reqPriority=%d)",
+                    log(3, "[CTB/tender/cand] workRequest=%d tender[%d] city=%d skipped (cityMinPriority=%d > reqPriority=%d)",
                         m_workRequests[iI].iWorkRequestId, iJ, m_advertisingTenders[iJ].iCityId,
                         m_advertisingTenders[iJ].iMinPriority, m_workRequests[iI].iPriority);
                 }
@@ -894,11 +894,11 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
                     pJoinUnit ? pJoinUnit->getID() : -1, iWorkRequest);
 				return true;
 			}
-			log(4, "[CTB/contract] unit=%d has no contracted work this pass (no match found)", pUnit->getID());
+			log(3, "[CTB/contract] unit=%d has no contracted work this pass (no match found)", pUnit->getID());
 			return false;
 		}
 	}
-	log(4, "[CTB/contract] unit=%d not present in advertising list (no contract)", pUnit->getID());
+	log(3, "[CTB/contract] unit=%d not present in advertising list (no contract)", pUnit->getID());
 	return false;
 }
 
@@ -949,7 +949,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 			const CvUnit* unitX = findUnit(unitInfo.iUnitId);
 			if (unitX == NULL || request.eAIType != NO_UNITAI && unitX->AI_getUnitAIType() != request.eAIType)
 			{
-			    log(4, "[CTB/assess] unit=%d rejected for workRequest=%d (%s)",
+			    log(3, "[CTB/assess] unit=%d rejected for workRequest=%d (%s)",
                     unitInfo.iUnitId, request.iWorkRequestId,
                     unitX == NULL ? "unit gone" : "wrong unitAI type");
 				continue;
@@ -1027,16 +1027,16 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 					}
 					else
                     {
-                        log(4, "[CTB/assess] unit=%d rejected for workRequest=%d (no path to (%d,%d) within maxPathTurns=%d, thisPlotOnly=%d)",
+                        log(3, "[CTB/assess] unit=%d rejected for workRequest=%d (no path to (%d,%d) within maxPathTurns=%d, thisPlotOnly=%d)",
                             unitInfo.iUnitId, request.iWorkRequestId, pTargetPlot->getX(), pTargetPlot->getY(), iMaxPathTurns, bThisPlotOnly ? 1 : 0);
                     }
 				}
 				OutputDebugString(CvString::format("Assessed unit %d suitability for work request %d (iValue = %d)\n", unitInfo.iUnitId, request.iWorkRequestId, iValue).c_str());
-				log(4, "[CTB/assess] unit=%d suitability for workRequest=%d iValue=%d (currentBest=%d)", unitInfo.iUnitId, request.iWorkRequestId, iValue, iBestValue);
+				log(3, "[CTB/assess] unit=%d suitability for workRequest=%d iValue=%d (currentBest=%d)", unitInfo.iUnitId, request.iWorkRequestId, iValue, iBestValue);
 			}
-			else if (gPlayerLogLevel >= 4)
+			else if (gPlayerLogLevel >= 3)
             {
-                log(4, "[CTB/assess] unit=%d rejected for workRequest=%d (%s)",
+                log(3, "[CTB/assess] unit=%d rejected for workRequest=%d (%s)",
                     unitInfo.iUnitId, request.iWorkRequestId,
                     !unitX->meetsUnitSelectionCriteria(&request.criteria) ? "fails selection criteria" : "unit minPriority above request priority");
             }
@@ -1050,7 +1050,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 		return &m_advertisingUnits[iBestUnitIndex];
 	}
 
-	log(4, "[CTB/assess] no suitable unit found for workRequest=%d among %d advertisers", request.iWorkRequestId, m_advertisingUnits.size());
+	log(3, "[CTB/assess] no suitable unit found for workRequest=%d among %d advertisers", request.iWorkRequestId, m_advertisingUnits.size());
 	return NULL;
 }
 
@@ -1121,13 +1121,13 @@ void CvContractBroker::postProcessUnitsLookingForWork()
 
 		if (unitX)
 		{
-			log(4, "[CTB/postprocess] unit=%d contractedWorkRequest=%d -> processContracts()",
+			log(3, "[CTB/postprocess] unit=%d contractedWorkRequest=%d -> processContracts()",
 				m_advertisingUnits[iI].iUnitId, m_advertisingUnits[iI].iContractedWorkRequest);
 			unitX->getGroup()->getHeadUnit()->processContracts();
 		}
 		else
 		{
-			log(4, "[CTB/postprocess] unit=%d no longer exists, skipping", m_advertisingUnits[iI].iUnitId);
+			log(3, "[CTB/postprocess] unit=%d no longer exists, skipping", m_advertisingUnits[iI].iUnitId);
 		}
 	}
 }
