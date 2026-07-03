@@ -4,7 +4,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "BetterBTSAI.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
@@ -61,11 +60,6 @@ namespace {
 
 	void separateIf(CvSelectionGroup* group, bst::function<bool(const CvUnit*)> predicateFn)
 	{
-	    // Capture identity up front: a full separate empties the group, which can
-        // delete it during the last joinGroup(NULL) -- so don't deref it afterwards.
-        const PlayerTypes eOwner = group->getOwner();
-        const int iGroupId = group->getID();
-        int iSeparated = 0;
 		foreach_(CvUnit* unit, group->units() | filtered(predicateFn))
 		{
 			unit->joinGroup(NULL);
@@ -74,14 +68,7 @@ namespace {
 			{
 				unit->getGroup()->pushMission(MISSION_SKIP);
 			}
-			iSeparated++;
 		}
-		// [GRP/split] -- a stack breaks up (units peeled off into their own groups).
-        if (iSeparated > 0)
-        {
-            logGroupAI(2, "[GRP/split] owner=%d group=%d separated=%d",
-                (int)eOwner, iGroupId, iSeparated);
-        }
 	}
 }
 
@@ -554,12 +541,6 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 			(*g_attackOddsCache)[pPlot] = (iResult & ODDS_CACHE_VALUE_MASK) + (bIsWin ? ODDS_CACHE_WIN_BIT : 0);
 		}
 	}
-
-	// [COM/odds] -- attack odds the AI computed for a target plot (the core combat
-    // decision input; compare against the [COM/threshold] bar for the go/no-go).
-    logCombatAI(3, "[COM/odds] owner=%d unit=%d target=(%d,%d) odds=%d win=%d",
-        (int)getOwner(), getHeadUnit() ? getHeadUnit()->getID() : -1,
-        pPlot ? pPlot->getX() : -1, pPlot ? pPlot->getY() : -1, iResult, bIsWin ? 1 : 0);
 
 	return iResult;
 }
@@ -1079,19 +1060,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	PROFILE_FUNC();
 	const CvPlot* oldPlot = AI_getMissionAIPlot();
 	const MissionAITypes eOldMissionAI = m_eMissionAIType;
-
-    // [UNT/mission] -- a group/unit commits to a mission AI + target. This is the
-    // authoritative per-unit decision outcome and the safe place to log it (the
-    // group is valid here, unlike post-routine state in doUnitAIMove where a unit
-    // may have been consumed). The CvUnitAI move loops are the prime refactor
-    // target, so trace every committed mission intent here.
-    if (eNewMissionAI != NO_MISSIONAI && (eNewMissionAI != eOldMissionAI || newPlot != oldPlot))
-    {
-        const CvUnit* pHead = getHeadUnit();
-        logUnitAI(2, "[UNT/mission] owner=%d unit=%d unitAI=%d missionAI=%d -> target=(%d,%d) stack=%d",
-            (int)getOwner(), pHead ? pHead->getID() : -1, pHead ? (int)pHead->AI_getUnitAIType() : -1,
-            (int)eNewMissionAI, newPlot ? newPlot->getX() : -1, newPlot ? newPlot->getY() : -1, getNumUnits());
-    }
 
 	if (oldPlot && eOldMissionAI != NO_MISSIONAI)
 	{

@@ -594,45 +594,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
     // doesn't route through onFinalInitialized.
     writePlotSnapshot(bNewGame ? "start" : "load");
 
-    // [GAME/*] -- one-time session header so every other AI log can be read against
-    // the active game setup. Emitted whenever any AI logging level is enabled.
-    if (gPlayerLogLevel > 0 || gTeamLogLevel > 0 || gCityLogLevel > 0 || gUnitLogLevel > 0)
-    {
-        logGameInfo("[GAME/begin] %s turn=%d speed=%s handicap=%s startEra=%s map=%dx%d maxTurns=%d civsAlive=%d",
-            bNewGame ? "NEW_GAME" : "LOAD", getGameTurn(),
-            GC.getGameSpeedInfo(getGameSpeedType()).getType(),
-            GC.getHandicapInfo(getHandicapType()).getType(),
-            GC.getEraInfo(getStartEra()).getType(),
-            GC.getMap().getGridWidth(), GC.getMap().getGridHeight(),
-            getMaxTurns(), countCivPlayersAlive());
-
-        for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
-        {
-            if (isOption((GameOptionTypes)iI))
-            {
-                logGameInfo("[GAME/option] %s", GC.getGameOptionInfo((GameOptionTypes)iI).getType());
-            }
-        }
-        for (int iI = 0; iI < GC.getNumVictoryInfos(); iI++)
-        {
-            if (isVictoryValid((VictoryTypes)iI))
-            {
-                logGameInfo("[GAME/victory] %s", GC.getVictoryInfo((VictoryTypes)iI).getType());
-            }
-        }
-        for (int iI = 0; iI < MAX_PLAYERS; iI++)
-        {
-            const CvPlayer& kP = GET_PLAYER((PlayerTypes)iI);
-            if (kP.isAlive())
-            {
-                logGameInfo("[GAME/player] id=%d team=%d human=%d leader=%s civ=%s",
-                    iI, (int)kP.getTeam(), kP.isHumanPlayer() ? 1 : 0,
-                    GC.getLeaderHeadInfo(kP.getLeaderType()).getType(),
-                    GC.getCivilizationInfo(kP.getCivilizationType()).getType());
-            }
-        }
-    }
-
 	OutputDebugString("onFinalInitialized: End\n");
 
 	writeRealtimeLogMetadata(true);

@@ -3,7 +3,6 @@
 #include "CvSelectionGroup.h"
 #include "CvString.h"
 #include "CvPlayerAI.h"
-#include "BetterBTSAI.h"
 
 #define NO_INDEX -1
 
@@ -226,13 +225,6 @@ void CvArmy::doTurn()
     CvPlot* pLeaderPlot = pLeaderGroup->plot();
     if (pLeaderPlot == NULL)
         return;
-
-    // [GRP/army] -- army-level coordination: its mission, leader and target each turn.
-    logGroupAI(2, "[GRP/army] owner=%d army=%d mission=%d leaderUnit=%d at=(%d,%d) target=(%d,%d)",
-        (int)getOwner(), m_iID, (int)m_eMission,
-        pLeaderGroup->getHeadUnit() ? pLeaderGroup->getHeadUnit()->getID() : -1,
-        pLeaderPlot->getX(), pLeaderPlot->getY(),
-        m_pTargetPlot ? m_pTargetPlot->getX() : -1, m_pTargetPlot ? m_pTargetPlot->getY() : -1);
 
     switch (m_eMission)
     {
@@ -492,9 +484,6 @@ void CvArmy::setLeader(CvSelectionGroup* pLeader)
     {
         m_iLeaderGroupID = pLeader->getID();
         pLeader->setArmyID(m_iID);
-        // [GRP/leader] -- army leader (group) assignment.
-        logGroupAI(2, "[GRP/leader] owner=%d army=%d leaderGroup=%d",
-            (int)getOwner(), m_iID, pLeader->getID());
     }
     else
     {
