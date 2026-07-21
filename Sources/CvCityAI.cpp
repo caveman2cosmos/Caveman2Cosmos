@@ -14746,6 +14746,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				int iCurrentPercent = ((iCurrentValue - iOperationRangeMin) * 100) / (iOperationRangeMax - iOperationRangeMin);
 
 				int iEval = getPropertyNeed(eProperty);
+				const int iRawNeed = iEval; // unscaled need, kept for the turns-to-goal estimate below
 				int iTrainReluctance = GC.getPropertyInfo(eProperty).getTrainReluctance();
 				int iCheck = iTriggerPercentOfPropertyOpRange;
 				iEval /= iCheck;
@@ -14785,6 +14786,16 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 					logAiEvaluations(3, "City %S, step %d %%, property %S can be a problem in future, but not now. value(%d) change(%d)", getName().GetCString(), iTriggerPercentOfPropertyOpRange, szProperty.GetCString(), iCurrentValue, iCurrentChange);
 
 				}
+
+                if (isGettingBetter && iCurrentChange != 0)
+                {
+                    const int iAbsChange = std::abs(iCurrentChange);
+                    if (iAbsChange >= iAcceptanceRate
+                    || (iAcceptanceLimit > 0 && std::abs(iRawNeed) / iAbsChange <= iAcceptanceLimit))
+                    {
+                        isGoodEnough = true;
+                    }
+                }
 				
 				//Count the percent of Prop Control units in the total army. Maximal allowed : 20% (TODO set param depend on leader)
 				int iPropControlInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_PROPERTY_CONTROL);

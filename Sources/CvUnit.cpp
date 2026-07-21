@@ -25039,6 +25039,9 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 			pUnit->setColdDamage(iDamage);
 		}
 		//TB Combat mod end
+		// BUG - Combat Events - start
+        		CvEventReporter::getInstance().combatLogFlanking(this, pUnit, iDamageDone);
+        // BUG - Combat Events - end
 		if (pUnit->isDead())
 		{
 			{
@@ -25051,9 +25054,6 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 
 			pUnit->kill(false, NO_PLAYER, true);
 		}
-// BUG - Combat Events - start
-		CvEventReporter::getInstance().combatLogFlanking(this, pUnit, iDamageDone);
-// BUG - Combat Events - end
 
 		listFlankedUnits.erase(std::remove(listFlankedUnits.begin(), listFlankedUnits.end(), listFlankedUnits[iIndexHit]));
 	}

@@ -69,7 +69,7 @@ void CvContractBroker::cleanup()
 	m_contractedUnits.clear();
 	m_advertisingTenders.clear();
 	m_iEmployedUnits = 0;
-	for (unsigned int iI = 0; iI < (int)m_workRequests.size(); iI++)
+	for (unsigned int iI = 0; iI < (int)m_workRequests.size();)
 	{
 		if (m_workRequests[iI].bFulfilled)
 		{
@@ -77,6 +77,10 @@ void CvContractBroker::cleanup()
 			m_workRequests.erase(wr);
 			fulfilledContracts++;
 		}
+        else
+        {
+            iI++;
+        }
 
 	}
 	logContractBroker(1, "     <%S>Fulfilled Contracts last turn: %d", m_ownerName, fulfilledContracts);
@@ -318,7 +322,7 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 {
 	PROFILE_FUNC();
 
-	int iNumTenders = 1; // par défaut
+	int iNumTenders = 1; // par dï¿½faut
 
 	iNumTenders = 1 + (pCity->getPopulation() / 10) + (pCity->getYieldRate(YIELD_PRODUCTION) / 100);
 	if (pCity->isCapital())
@@ -833,7 +837,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 			{
 				int	iValue = 1;
 
-				if ((request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 || (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
+				if ((request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 && (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
 				{
 					if (request.eAIType == NO_UNITAI || unitX->AI_getUnitAIType() == request.eAIType)
 					{

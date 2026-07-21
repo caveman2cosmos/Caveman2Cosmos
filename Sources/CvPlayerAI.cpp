@@ -6013,33 +6013,41 @@ int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnable
 				case UNITAI_HEALER:
 					iUnitValue += 200;
 					iMilitaryValue += 200;
+					break;
 
 				case UNITAI_HEALER_SEA:
 					iUnitValue += 200;
 					iMilitaryValue += 200;
+					break;
 
 				case UNITAI_PROPERTY_CONTROL:
 					iUnitValue += 400;
 					iMilitaryValue += 50;
+					break;
 
 				case UNITAI_PROPERTY_CONTROL_SEA:
 					iUnitValue += 350;
 					iMilitaryValue += 50;
+					break;
 
 				case UNITAI_INVESTIGATOR:
 					iUnitValue += 400;
+					break;
 
 				case UNITAI_INFILTRATOR:
 					iUnitValue += 200;
 					iMilitaryValue += 75;
+					break;
 
 				case UNITAI_ESCORT:
 					iUnitValue += 100;
 					iMilitaryValue += 400;
+					break;
 
 				case UNITAI_SEE_INVISIBLE:
 					iUnitValue += 400;
 					iMilitaryValue += 100;
+					break;
 
 				case UNITAI_ATTACK:
 					iMilitaryValue += ((bWarPlan) ? 600 : 300);
