@@ -67,7 +67,6 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>3</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
-			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
 			<bTrade>1</bTrade>
 			<bGoodyTech>1</bGoodyTech>
