@@ -87,15 +87,9 @@ class NaturalWonders:
 
 
     def checkReveal(self, pPlot, iTeam):
-        ## Defensive guards up front — any of these failing silently in the
-        ## old code caused "Error in plotRevealed event handler" spam. Better
-        ## to return early on bad input than explode inside the handler.
-        if pPlot is None:
-            return
-        try:
-            if pPlot.isNone():
-                return
-        except:
+        ## Defensive guard up front — CyPlot has no isNone() binding, so use
+        ## plain truthiness like the rest of this file (e.g. placeNaturalWonders).
+        if not pPlot:
             return
 
         iFeature = pPlot.getFeatureType()
@@ -127,7 +121,7 @@ class NaturalWonders:
             if player is None:
                 continue
             pCapital = player.getCapitalCity()
-            if pCapital and not pCapital.isNone():
+            if pCapital:
                 pCapital.changeCulture(iP, c, True)
             else:
                 remaining.append((iP, c))
@@ -197,7 +191,7 @@ class NaturalWonders:
                 CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_WONDERDISCOVERED_YOU",(FeatureInfo.getDescription(),)), iPlayerX, 12, FeatureInfo.getButton(), ColorTypes(44), pPlot.getX(), pPlot.getY(), True, True, bForce=False)
             if bFirst:
                 pCapital = CyPlayerX.getCapitalCity()
-                if pCapital and not pCapital.isNone():
+                if pCapital:
                     pCapital.changeCulture(iPlayerX, iCulture, True)
                 else:
                     self.pendingCulture.append((iPlayerX, iCulture))
