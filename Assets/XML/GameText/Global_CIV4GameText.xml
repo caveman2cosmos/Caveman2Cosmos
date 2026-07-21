@@ -19149,7 +19149,7 @@
 		<Russian>[COLOR_TECH_TEXT]Ñòàíåò âàññàëîì: %s1[COLOR_REVERT]</Russian>
 	</TEXT>
     <TEXT>
-        <Tag>TXT_KEY_MORECIV4LERTS_VASSAL_NOT_LOST</Tag>
+        <Tag>TXT_KEY_MORECIV4LERTS_VASSAL_LOST</Tag>
         <English>[COLOR_WARNINGTEXT]Will Not Become a Vassal: %s1[COLOR_REVERT]</English>
     </TEXT>
 	<TEXT>
