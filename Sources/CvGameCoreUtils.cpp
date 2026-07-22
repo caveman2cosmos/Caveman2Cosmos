@@ -337,6 +337,59 @@ bool isLimitedUnit(UnitTypes eUnit)
 	return (isWorldUnit(eUnit) || isNationalUnit(eUnit));
 }
 
+const std::vector<UnitTypes>& getUnitUpgradeChainGroup(UnitTypes eUnit)
+{
+	static std::vector< std::vector<UnitTypes> > s_aChainGroups;
+	static std::vector<int> s_aiUnitToChainGroup;
+
+	if (s_aiUnitToChainGroup.empty())
+	{
+		const int iNumUnits = GC.getNumUnitInfos();
+		s_aiUnitToChainGroup.assign(iNumUnits, -1);
+
+		std::vector< std::vector<int> > aiAdjacent(iNumUnits);
+		for (int iI = 0; iI < iNumUnits; iI++)
+		{
+			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+			for (int iJ = 0; iJ < kUnit.getNumUnitUpgrades(); iJ++)
+			{
+				const int iUpgrade = kUnit.getUnitUpgrade(iJ);
+				aiAdjacent[iI].push_back(iUpgrade);
+				aiAdjacent[iUpgrade].push_back(iI);
+			}
+		}
+
+		for (int iI = 0; iI < iNumUnits; iI++)
+		{
+			if (s_aiUnitToChainGroup[iI] != -1)
+			{
+				continue;
+			}
+			const int iGroup = (int)s_aChainGroups.size();
+			s_aChainGroups.push_back(std::vector<UnitTypes>());
+
+			std::vector<int> aiStack(1, iI);
+			s_aiUnitToChainGroup[iI] = iGroup;
+			while (!aiStack.empty())
+			{
+				const int iCurrent = aiStack.back();
+				aiStack.pop_back();
+				s_aChainGroups[iGroup].push_back((UnitTypes)iCurrent);
+
+				foreach_(const int iAdjacent, aiAdjacent[iCurrent])
+				{
+					if (s_aiUnitToChainGroup[iAdjacent] == -1)
+					{
+						s_aiUnitToChainGroup[iAdjacent] = iGroup;
+						aiStack.push_back(iAdjacent);
+					}
+				}
+			}
+		}
+	}
+	return s_aChainGroups[s_aiUnitToChainGroup[eUnit]];
+}
+
 bool isWorldWonder(BuildingTypes building)
 {
 	return GC.getBuildingInfo(building).getMaxGlobalInstances() != -1;

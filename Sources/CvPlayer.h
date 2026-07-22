@@ -299,7 +299,7 @@ public:
 	DllExport bool canFound(int iX, int iY, bool bTestVisible = false) const;
 	void found(int iX, int iY, CvUnit* pUnit = NULL);
 
-	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false) const;
+	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false, UnitTypes eUpgradeFromUnit = NO_UNIT) const;
 	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
@@ -984,7 +984,7 @@ public:
 	void changeUnitCount(const UnitTypes eUnit, const int iChange);
 	int getUnitCountSM(const UnitTypes eUnit) const;
 	void changeUnitCountSM(const UnitTypes eUnit, const int iChange);
-	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0) const;
+	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0, const UnitTypes eExcludeUnit = NO_UNIT) const;
 	int getUnitMaking(const UnitTypes eUnit) const;
 	void changeUnitMaking(const UnitTypes eUnit, int iChange);
 	int getUnitCountPlusMaking(const UnitTypes eUnit) const;

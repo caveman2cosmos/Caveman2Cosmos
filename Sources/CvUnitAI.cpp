@@ -28021,7 +28021,7 @@ void CvUnitAI::AI_borderPatrol()
 {
 	PROFILE_FUNC();
 
-	if (AI_returnToBorders())
+	if (!(isMadeAttack() && canAttackNow()) && AI_returnToBorders())
 	{
 		return;
 	}

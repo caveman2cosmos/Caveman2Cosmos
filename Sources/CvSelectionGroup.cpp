@@ -717,7 +717,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_AUTO_BUILDUP:
 			{
-				if (unitX->canBuildUp() || unitX->canFortify() || unitX->canSleep())
+				if (unitX->canBuildUp())
 				{
 					return true;
 				}

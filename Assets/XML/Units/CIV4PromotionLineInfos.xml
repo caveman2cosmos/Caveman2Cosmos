@@ -2952,6 +2952,7 @@
 				<NotOnUnitCombatType>UNITCOMBAT_IDEA</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+                <NotOnUnitCombatType>UNITCOMBAT_MISSIONARY</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>

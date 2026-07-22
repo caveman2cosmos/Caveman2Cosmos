@@ -13511,7 +13511,6 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_CHEMISTRY</PrereqTech>
-				<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_BIOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_BIOLOGY</Sound>

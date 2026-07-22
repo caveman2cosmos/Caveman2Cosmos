@@ -38122,7 +38122,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CARAVEL_MESO_AMERICAN</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/trireme.dds</Button>
+			<Button>Art/Interface/Buttons/Units/sparth/caravel.dds</Button>
 			<fScale>0.1</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Units/meso_american_sparth/caravel/trireme_fx.nif</NIF>
