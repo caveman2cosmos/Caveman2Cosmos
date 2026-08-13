@@ -34,7 +34,6 @@
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>0</bNoImprovement>
 			<bVisibleAlways>0</bVisibleAlways>
-			<bNukeImmune>0</bNukeImmune>
 			<OnUnitChangeTo/>
 			<TerrainBooleans/>
 			<FootstepSounds>
@@ -129,7 +128,6 @@
 			<bNoCity>0</bNoCity>
 			<bNoImprovement>0</bNoImprovement>
 			<bVisibleAlways>0</bVisibleAlways>
-			<bNukeImmune>0</bNukeImmune>
 			<OnUnitChangeTo/>
 			<TerrainBooleans/>
 			<FootstepSounds>
@@ -236,7 +234,6 @@
 			<bNoCity>0</bNoCity>
 			<bNoImprovement>0</bNoImprovement>
 			<bVisibleAlways>0</bVisibleAlways>
-			<bNukeImmune>0</bNukeImmune>
 			<OnUnitChangeTo/>
 			<TerrainBooleans/>
 			<FootstepSounds>

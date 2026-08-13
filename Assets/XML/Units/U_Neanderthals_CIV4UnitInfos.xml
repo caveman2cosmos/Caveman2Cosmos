@@ -3916,7 +3916,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_FOOD</BuildingType>

@@ -3801,7 +3801,7 @@
 			<Civilopedia>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Civilopedia>
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
-			<bNegativeTrait>1</bNegativeTrait>
+			<bNegativeTrait>0</bNegativeTrait>
 			<bImpurePromotions>1</bImpurePromotions>
 			<Flavors>
 				<Flavor>
@@ -3829,13 +3829,13 @@
 			<iRevIdxNational>2</iRevIdxNational>
 			<!-- Revolution Trait Effects End -->
 			<CommerceChanges>
-				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -7739,7 +7739,7 @@
 			<Button>art/Buttons/Traits/TraitRevolutionary.dds</Button>
 			<PromotionLine>PROMOTIONLINE_REVOLUTIONARY</PromotionLine>
 			<iLinePriority>-1</iLinePriority>
-			<bNegativeTrait>1</bNegativeTrait>
+			<bNegativeTrait>0</bNegativeTrait>
 			<bImpurePromotions>1</bImpurePromotions>
 			<Flavors>
 				<Flavor>
@@ -7767,13 +7767,13 @@
 			<iRevIdxNational>1</iRevIdxNational>
 			<!-- Revolution Trait Effects End -->
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
-				<iCommerce>-10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>

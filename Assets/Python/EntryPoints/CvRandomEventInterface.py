@@ -1337,6 +1337,11 @@ def canTriggerGreatMediator(argsList):
   player = GC.getPlayer(data.ePlayer)
   destPlayer = GC.getPlayer(data.eOtherPlayer)
 
+  # Minor civ teams can't use normal war/peace diplomacy, so making peace here would
+  # leave them stuck unable to ever declare war again.
+  if GAME.isOption(GameOptionTypes.GAMEOPTION_UNSUPPORTED_START_AS_MINORS):
+    return False
+
   if not GC.getTeam(player.getTeam()).canChangeWarPeace(destPlayer.getTeam()):
     return False
 
@@ -1395,7 +1400,7 @@ def greatMediator2Callback(argsList):
 def getHelpGreatMediator2(argsList):
 	data = argsList[1]
 	destPlayer = GC.getPlayer(data.eOtherPlayer)
-	return TRNSLTR.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getNameKey()))
+	return TRNSLTR.getText("TXT_KEY_EVENT_ATTITUDE_GOOD", (1, destPlayer.getCivilizationShortDescriptionKey()))
 
 ######## ANCIENT_TEXTS ###########
 

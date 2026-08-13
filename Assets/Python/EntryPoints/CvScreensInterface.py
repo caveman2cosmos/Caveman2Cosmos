@@ -307,9 +307,7 @@ def showWorldBuilderScreen():
 
 def WorldBuilderExitCB():
 	print "WorldBuilderExitCB"
-	if CyInterface().isInAdvancedStart():
-		CyInterface().setWorldBuilder(False)
-	else: CyGame().exitWorldBuilder()
+	CyGame().exitWorldBuilder()
 
 def hideWorldBuilderScreen():
 	print "hideWorldBuilderScreen"

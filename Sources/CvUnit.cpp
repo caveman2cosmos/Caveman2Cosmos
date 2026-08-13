@@ -1848,6 +1848,12 @@ void CvUnit::doCityPassiveExperience()
             changeExperience100(5);
             return;
         }
+
+        if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_BUILD_UP_PATRIOTISM"))
+        {
+            changeExperience100(5);
+            return;
+        }
     }
 }
 

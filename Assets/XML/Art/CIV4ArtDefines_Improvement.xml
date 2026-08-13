@@ -245,6 +245,15 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildTown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,3,10</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
+			<Type>ART_DEF_IMPROVEMENT_SUBURBS</Type>
+			<bExtraAnimations>0</bExtraAnimations>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Improvements/Town/Town.nif</NIF>
+			<KFM>Art/Structures/Improvements/Town/Town.kfm</KFM>
+			<Button>art/Housing/Art/hourseera3ldmw.dds</Button>
+		</ImprovementArtInfo>
+		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FORT</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.5</fScale>

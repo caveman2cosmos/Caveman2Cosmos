@@ -5785,6 +5785,9 @@
 			<Sound>AS2D_PING</Sound>
 			<PromotionLine>PROMOTIONLINE_SECURITY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
 			<Button>Art/Interface/Buttons/Promotions/Security1.dds</Button>
@@ -5796,6 +5799,9 @@
 			<PromotionPrereqOr1>PROMOTION_SECURITY1</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_SECURITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
 			<Button>Art/Interface/Buttons/Promotions/Security2.dds</Button>
@@ -5807,6 +5813,9 @@
 			<PromotionPrereqOr1>PROMOTION_SECURITY2</PromotionPrereqOr1>
 			<PromotionLine>PROMOTIONLINE_SECURITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_CIVILIAN</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>10</iInterceptChange>
 			<Button>Art/Interface/Buttons/Promotions/Security3.dds</Button>
@@ -16409,6 +16418,10 @@
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
@@ -16439,9 +16452,17 @@
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombatMods>
 				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_SEA_ANIMAL</UnitCombatType>
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 					<iUnitCombatMod>25</iUnitCombatMod>
@@ -16468,6 +16489,10 @@
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>

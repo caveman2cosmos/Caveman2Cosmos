@@ -340,54 +340,72 @@ bool isLimitedUnit(UnitTypes eUnit)
 const std::vector<UnitTypes>& getUnitUpgradeChainGroup(UnitTypes eUnit)
 {
 	static std::vector< std::vector<UnitTypes> > s_aChainGroups;
-	static std::vector<int> s_aiUnitToChainGroup;
 
-	if (s_aiUnitToChainGroup.empty())
+	if (s_aChainGroups.empty())
 	{
 		const int iNumUnits = GC.getNumUnitInfos();
-		s_aiUnitToChainGroup.assign(iNumUnits, -1);
+		s_aChainGroups.resize(iNumUnits);
 
-		std::vector< std::vector<int> > aiAdjacent(iNumUnits);
+		// eUnit's group is its ancestors and descendants only - units reachable by always
+		// upgrading forward, or always upgrading forward into eUnit. Two units are NOT related
+		// just because they both happen to upgrade into (or out of) some common unit; that would
+		// pull unrelated national units (eg. two different cultures' unique replacements that
+		// both upgrade into the same generic unit) into the same shared limit.
+		std::vector< std::vector<int> > aiUpgradesFrom(iNumUnits);
+		std::vector< std::vector<int> > aiUpgradesInto(iNumUnits);
 		for (int iI = 0; iI < iNumUnits; iI++)
 		{
 			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 			for (int iJ = 0; iJ < kUnit.getNumUnitUpgrades(); iJ++)
 			{
 				const int iUpgrade = kUnit.getUnitUpgrade(iJ);
-				aiAdjacent[iI].push_back(iUpgrade);
-				aiAdjacent[iUpgrade].push_back(iI);
+				aiUpgradesInto[iI].push_back(iUpgrade);
+				aiUpgradesFrom[iUpgrade].push_back(iI);
 			}
 		}
 
 		for (int iI = 0; iI < iNumUnits; iI++)
 		{
-			if (s_aiUnitToChainGroup[iI] != -1)
-			{
-				continue;
-			}
-			const int iGroup = (int)s_aChainGroups.size();
-			s_aChainGroups.push_back(std::vector<UnitTypes>());
+			std::vector<bool> abInGroup(iNumUnits, false);
+			abInGroup[iI] = true;
+			s_aChainGroups[iI].push_back((UnitTypes)iI);
 
+			// Descendants: units eUnit can become, however many upgrades removed.
 			std::vector<int> aiStack(1, iI);
-			s_aiUnitToChainGroup[iI] = iGroup;
 			while (!aiStack.empty())
 			{
 				const int iCurrent = aiStack.back();
 				aiStack.pop_back();
-				s_aChainGroups[iGroup].push_back((UnitTypes)iCurrent);
-
-				foreach_(const int iAdjacent, aiAdjacent[iCurrent])
+				foreach_(const int iNext, aiUpgradesInto[iCurrent])
 				{
-					if (s_aiUnitToChainGroup[iAdjacent] == -1)
+					if (!abInGroup[iNext])
 					{
-						s_aiUnitToChainGroup[iAdjacent] = iGroup;
-						aiStack.push_back(iAdjacent);
+						abInGroup[iNext] = true;
+						s_aChainGroups[iI].push_back((UnitTypes)iNext);
+						aiStack.push_back(iNext);
+					}
+				}
+			}
+
+			// Ancestors: units that eventually upgrade into eUnit, however many upgrades removed.
+			aiStack.assign(1, iI);
+			while (!aiStack.empty())
+			{
+				const int iCurrent = aiStack.back();
+				aiStack.pop_back();
+				foreach_(const int iPrev, aiUpgradesFrom[iCurrent])
+				{
+					if (!abInGroup[iPrev])
+					{
+						abInGroup[iPrev] = true;
+						s_aChainGroups[iI].push_back((UnitTypes)iPrev);
+						aiStack.push_back(iPrev);
 					}
 				}
 			}
 		}
 	}
-	return s_aChainGroups[s_aiUnitToChainGroup[eUnit]];
+	return s_aChainGroups[eUnit];
 }
 
 bool isWorldWonder(BuildingTypes building)

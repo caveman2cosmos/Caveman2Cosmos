@@ -229,8 +229,10 @@ bool isWorldUnit(UnitTypes eUnit);
 bool isNationalUnit(UnitTypes eUnit);
 bool isLimitedUnit(UnitTypes eUnit);
 
-// All unit types transitively linked to eUnit via UnitUpgrades (in either direction), including
-// eUnit itself. Static XML-derived data, cached on first use for the life of the process.
+// eUnit plus all its UnitUpgrades ancestors and descendants (units directly reachable by
+// repeatedly upgrading forward, or that repeatedly upgrade forward into eUnit). Does NOT include
+// unrelated units that merely share a common upgrade target/source with eUnit. Static XML-derived
+// data, cached on first use for the life of the process.
 const std::vector<UnitTypes>& getUnitUpgradeChainGroup(UnitTypes eUnit);
 
 bool isWorldWonder(BuildingTypes eBuilding);

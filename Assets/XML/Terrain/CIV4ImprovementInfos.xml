@@ -7478,7 +7478,7 @@
 			<Type>IMPROVEMENT_SUBURBS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUBURBS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUBURBS</ArtDefineTag>
 			<PrereqNatureYields>
 				<iYield>1</iYield>
 			</PrereqNatureYields>

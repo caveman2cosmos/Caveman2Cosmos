@@ -851,6 +851,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	//	and it is necessary as the game type is GAME_NONE in that specific instance as it kinda takes you to the main menu,
 	//	but reset won't be called again unless one aborts loading the scenario when it asks what options you want for it.
 	const bool bStartingGameSession = !bConstructorCall && (GC.getInitCore().getType() != GAME_NONE || m_bWorldBuilder);
+	if (m_bWorldBuilder && !bConstructorCall)
+	{
+		// Notify the engine that WorldBuilder mode has ended so it clears any fog/reveal override it applied;
+		//	a plain assignment here would desync m_bWorldBuilder from the engine's real WorldBuilder state.
+		gDLL->getInterfaceIFace()->setWorldBuilder(false);
+	}
 	m_bWorldBuilder = false;
 
 	if (bStartingGameSession && isFinalInitialized())
@@ -2312,7 +2318,7 @@ again:
 		if (NO_PLAYER != getActivePlayer() && playerAct.getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
 			gDLL->getInterfaceIFace()->setInAdvancedStart(true);
-			gDLL->getInterfaceIFace()->setWorldBuilder(true);
+			setWorldBuilder(true);
 		}
 	}
 

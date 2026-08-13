@@ -5037,9 +5037,10 @@ bool CvTeamAI::AI_hasAdjacentLandPlots(TeamTypes eTeam) const
 #ifdef ENABLE_FOGWAR_DECAY
 short CvTeamAI::getVisibilityDecay(bool pSeaPlot)
 {
-	const TeamTypes& team = GC.getGame().getActiveTeam();
-	const PlayerTypes myID = GC.getGame().getActivePlayer();
-	const bool bIsHuman = GET_TEAM(team).isHuman() || GC.getGame().getAIAutoPlay(myID) > 0 || gDLL->GetAutorun();
+	// Must check against this team, not whichever team happens to have UI focus right now -
+	// otherwise hotseat calls made on behalf of a non-active team (e.g. CvPlayer::doTurn)
+	// evaluate the wrong team's human/autoplay status.
+	const bool bIsHuman = isHuman() || GC.getGame().getAIAutoPlay(getLeaderID()) > 0 || gDLL->GetAutorun();
 	m_iDefaultDecay = GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_NBTURNS);
 
 	if ((pSeaPlot && m_bPermanentMapSea) || !bIsHuman || !GC.getGame().getModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY)) return NO_DECAY;

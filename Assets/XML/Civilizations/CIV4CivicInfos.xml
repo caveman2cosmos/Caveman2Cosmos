@@ -8818,7 +8818,7 @@
 			</CapitalCommerceModifiers>
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
@@ -9043,10 +9043,10 @@
 			<Strategy>TXT_KEY_CIVIC_CASTE_SYSTEM_STRATEGY</Strategy>
 			<Button>art/Interface/buttons/civics/sparth/society_caste.dds</Button>
 			<TechPrereq>TECH_CASTE_SYSTEM</TechPrereq>
-			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iAnarchyLength>3</iAnarchyLength>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iAIWeight>0</iAIWeight>
-			<iGreatPeopleRateModifier>-10</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>-20</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
@@ -9066,7 +9066,7 @@
 			<bNoUnhealthyPopulation>0</bNoUnhealthyPopulation>
 			<iExpInBorderModifier>0</iExpInBorderModifier>
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
-			<iLargestCityHappiness>-1</iLargestCityHappiness>
+			<iLargestCityHappiness>-3</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
 			<iFreeSpecialist>0</iFreeSpecialist>
 			<iTradeRoutes>0</iTradeRoutes>
@@ -12611,6 +12611,7 @@
 			<iGreatPeopleRateModifier>0</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
+            <iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
 			<iNumCitiesMaintenanceModifier>0</iNumCitiesMaintenanceModifier>
@@ -20641,7 +20642,7 @@
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
-			<iPopulationgrowthratepercentage>50</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>60</iPopulationgrowthratepercentage>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -20779,7 +20780,7 @@
 			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
-			<iPopulationgrowthratepercentage>25</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>30</iPopulationgrowthratepercentage>
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
@@ -21710,7 +21711,7 @@
 			<ImprovementYieldChanges/>
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
-			<iPopulationgrowthratepercentage>25</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>30</iPopulationgrowthratepercentage>
 			<CivicAttitudeChanges>
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_WASTE_TO_SEA</CivicType>
@@ -21845,7 +21846,7 @@
 					</TerrainYields>
 				</TerrainYieldChange>
 			</TerrainYieldChanges>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iPopulationgrowthratepercentage>15</iPopulationgrowthratepercentage>
 			<CivicAttitudeChanges>
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_WASTE_TO_SEA</CivicType>

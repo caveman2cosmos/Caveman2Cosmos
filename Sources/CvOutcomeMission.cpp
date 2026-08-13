@@ -76,8 +76,8 @@ void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
 	PROFILE_EXTRA_FUNC();
-	//if (!bTestVisible)
-	//{
+	if (!bTestVisible)
+	{
 		if (m_iCost)
 		{
 			if (GET_PLAYER(pUnit->getOwner()).getGold() < m_iCost->evaluate(pUnit->getGameObject()))
@@ -89,7 +89,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 		if (m_pPlotCondition)
 			if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
 				return false;
-	//}
+	}
 
 	if (m_pUnitCondition)
 		if (!m_pUnitCondition->evaluate(pUnit->getGameObject()))
@@ -100,8 +100,8 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 		return false;
 	}
 
-	//if (!bTestVisible)
-	//{
+	if (!bTestVisible)
+	{
 		if (!getPropertyCost()->isEmpty())
 		{
 			const CvGameObject* pPayer = NULL;
@@ -124,7 +124,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 				return false;
 			}
 		}
-	//}
+	}
 
 	return true;
 }

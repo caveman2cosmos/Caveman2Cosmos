@@ -10277,6 +10277,66 @@
 		</EventInfo>
 
 		<EventInfo>
+			<Type>EVENT_CITYFIRE_1</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_2</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_3</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_4</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_5</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_6</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_7</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_8</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_9</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_10</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_11</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_12</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_MINOR_1</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_MAJOR_1</Type>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_CITYFIRE_CATASTROPHIC_1</Type>
+		</EventInfo>
+
+		<EventInfo>
 			<Type>EVENT_GLOBALWARMING_1</Type>
 			<Description>TXT_KEY_EVENT_GLOBAL_WARMING</Description>
 			<PythonCallback>doGlobalWarming</PythonCallback>

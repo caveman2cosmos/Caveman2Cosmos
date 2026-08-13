@@ -192,6 +192,9 @@ public:
 #ifdef ENABLE_FOGWAR_DECAY
 	void InitFogDecay(const bool pWithRandom = false);
 	short getVisibilityDecayBonus(const bool pSeaPlot = false);
+	short getVisibilityDecay(TeamTypes eTeam) const;
+	void setVisibilityDecay(TeamTypes eTeam, short iNewValue);
+	void changeVisibilityDecay(TeamTypes eTeam, short iChange);
 #endif
 
 	void updateSymbolDisplay();
@@ -1043,7 +1046,7 @@ protected:
 	short* m_aiLastSeenTurn;
 
 #ifdef ENABLE_FOGWAR_DECAY
-	short m_iVisibilityDecay;
+	short* m_aiVisibilityDecay;
 #endif
 
 	//	This array will be sparsely populated on most plots so not worth

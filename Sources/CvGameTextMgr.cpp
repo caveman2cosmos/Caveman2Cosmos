@@ -17800,7 +17800,7 @@ void CvGameTextMgr::setTechHelp(CvWStringBuffer &szBuffer, TechTypes eTech, bool
 			}
 			else
 			{
-				szTempBuffer.Format(L", <link=%s>%s</link>", CvWString(GC.getPromotionInfo((PromotionTypes)iI).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)iI).getDescription());
+				szTempBuffer.Format(SETCOLR L", <link=%s>%s</link>" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), CvWString(GC.getPromotionInfo((PromotionTypes)iI).getType()).GetCString(), GC.getPromotionInfo((PromotionTypes)iI).getDescription());
 				szBuffer.append(szTempBuffer);
 			}
 		}

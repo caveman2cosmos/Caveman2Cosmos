@@ -15925,6 +15925,26 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CITY_FIRE_LOWEST</Type>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CITY_FIRE_LOW</Type>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CITY_FIRE_MEDIUM</Type>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CITY_FIRE_HIGH</Type>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_CITY_FIRE_HIGHEST</Type>
+		</EventTriggerInfo>
+
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_GLOBALWARMING</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_GLOBALWARMING</Text>

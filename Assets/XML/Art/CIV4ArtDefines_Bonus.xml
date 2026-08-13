@@ -167,7 +167,7 @@
 			<KFM></KFM>
 			<SHADERNIF>Art/Terrain/Resources/Papaya/Papaya.nif</SHADERNIF>
 			<Button>Art/Interface/Buttons/Bonus/Papaya.dds</Button>
-			<FontButtonIndex>135</FontButtonIndex>
+			<FontButtonIndex>233</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_PISTACHIO</Type>
@@ -385,7 +385,7 @@
 			<NIF>Art/Terrain/Resources/vanilla/wine.nif</NIF>
 			<KFM>Art/Terrain/Resources/vanilla/wine.kfm</KFM>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,8,7</Button>
-			<FontButtonIndex>140</FontButtonIndex>
+			<FontButtonIndex>234</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_GRAPES</Type>
@@ -690,7 +690,7 @@
 			<KFM>Art/Terrain/Resources/Amber/Gems.kfm</KFM>
 			<SHADERNIF>Art/Terrain/Resources/Amber/Gems.nif</SHADERNIF>
 			<Button>,Art/blank.dds,Art/Interface/Buttons/AtlasMapBonus.dds,2,4</Button>
-			<FontButtonIndex>48</FontButtonIndex>
+			<FontButtonIndex>235</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_BAUXITE_ORE</Type>

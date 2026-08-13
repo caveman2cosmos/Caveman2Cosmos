@@ -117,7 +117,7 @@ CvPlot::CvPlot()
 	m_iCurrentRoundofUpgradeCache = -1;
 	// ! Toffer
 #ifdef ENABLE_FOGWAR_DECAY
-	m_iVisibilityDecay = MAX_DECAY;
+	m_aiVisibilityDecay = NULL;
 #endif
 	m_iImprovementCurrentValue = 0;
 
@@ -170,7 +170,7 @@ void CvPlot::init(int iX, int iY)
 	//--------------------------------
 	// Init non-saved data
 #ifdef ENABLE_FOGWAR_DECAY
-	m_iVisibilityDecay = MAX_DECAY;
+	m_aiVisibilityDecay = NULL;
 #endif
 	//--------------------------------
 	// Init other game data
@@ -197,6 +197,9 @@ void CvPlot::uninit()
 
 	SAFE_DELETE_ARRAY(m_aiVisibilityCount);
 	SAFE_DELETE_ARRAY(m_aiLastSeenTurn);
+#ifdef ENABLE_FOGWAR_DECAY
+	SAFE_DELETE_ARRAY(m_aiVisibilityDecay);
+#endif
 	SAFE_DELETE_ARRAY(m_aiDangerCount);
 	SAFE_DELETE_ARRAY(m_aiStolenVisibilityCount);
 	SAFE_DELETE_ARRAY(m_aiBlockadedCount);
@@ -1195,11 +1198,12 @@ void CvPlot::updateFog(const bool bApplyDecay)
 			if (bIsHuman && (bApplyDecay || !bOptionDecay))
 			{
 				bool bSeaPlot = isWater() && !isCoastal();
-				m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
-				if (m_iVisibilityDecay != NO_DECAY)
+				short iDecay = GET_TEAM(team).getVisibilityDecay(bSeaPlot);
+				if (iDecay != NO_DECAY)
 				{
-					m_iVisibilityDecay += getVisibilityDecayBonus(bSeaPlot);
+					iDecay += getVisibilityDecayBonus(bSeaPlot);
 				}
+				setVisibilityDecay(team, iDecay);
 			}
 #endif
 			gDLL->getEngineIFace()->LightenVisibility(getFOWIndex());
@@ -1207,7 +1211,8 @@ void CvPlot::updateFog(const bool bApplyDecay)
 		else
 		{
 #ifdef ENABLE_FOGWAR_DECAY
-			if (!bIsHuman || m_iVisibilityDecay == NO_DECAY || !bOptionDecay)
+			const short iDecay = getVisibilityDecay(team);
+			if (!bIsHuman || iDecay == NO_DECAY || !bOptionDecay)
 			{
 #endif
 				gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
@@ -1215,19 +1220,19 @@ void CvPlot::updateFog(const bool bApplyDecay)
 			}
 			else
 			{
-				if (m_iVisibilityDecay > 0)
+				if (iDecay > 0)
 				{
 					gDLL->getEngineIFace()->DarkenVisibility(getFOWIndex());
 
 
 
 					if (bApplyDecay && GC.getGame().getSorenRandNum(12, "Map decay") > 8)
-						m_iVisibilityDecay--;
+						changeVisibilityDecay(team, -1);
 				}
-				else if (m_iVisibilityDecay > REMOVE_PLOT_DECAY)
+				else if (iDecay > REMOVE_PLOT_DECAY)
 				{
 					gDLL->getEngineIFace()->BlackenVisibility(getFOWIndex());
-					m_iVisibilityDecay--;
+					changeVisibilityDecay(team, -1);
 				}
 				else
 				{
@@ -1268,18 +1273,52 @@ void CvPlot::updateVisibility()
 void CvPlot::InitFogDecay(const bool pWithRandom)
 {
 	const TeamTypes& team = GC.getGame().getActiveTeam();
-	if (team != NO_TEAM)
+	if (team == NO_TEAM)
 	{
-		m_iVisibilityDecay = GET_TEAM(team).getVisibilityDecay();
+		return;
 	}
-	if (m_iVisibilityDecay <= 0)
+
+	short iDecay = GET_TEAM(team).getVisibilityDecay();
+	if (iDecay <= 0)
 	{
-		m_iVisibilityDecay = 6;
+		iDecay = 6;
 	}
-	m_iVisibilityDecay += getVisibilityDecayBonus();
+	iDecay += getVisibilityDecayBonus();
 	if (pWithRandom)
 	{
-		m_iVisibilityDecay = GC.getGame().getSorenRandNum((std::max(m_iVisibilityDecay * 2 / 3, 2)), "InitFog Decay") + m_iVisibilityDecay / 3;
+		iDecay = GC.getGame().getSorenRandNum((std::max(iDecay * 2 / 3, 2)), "InitFog Decay") + iDecay / 3;
+	}
+	setVisibilityDecay(team, iDecay);
+}
+
+// Per-team decay counter - keeps each team's fogged-tile "staleness" independent
+// so switching the active player (hotseat) can't clobber another team's fog state.
+short CvPlot::getVisibilityDecay(TeamTypes eTeam) const
+{
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	return m_aiVisibilityDecay ? m_aiVisibilityDecay[eTeam] : MAX_DECAY;
+}
+
+void CvPlot::setVisibilityDecay(TeamTypes eTeam, short iNewValue)
+{
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+
+	if (NULL == m_aiVisibilityDecay)
+	{
+		m_aiVisibilityDecay = new short[MAX_TEAMS];
+		for (int iI = 0; iI < MAX_TEAMS; ++iI)
+		{
+			m_aiVisibilityDecay[iI] = MAX_DECAY;
+		}
+	}
+	m_aiVisibilityDecay[eTeam] = iNewValue;
+}
+
+void CvPlot::changeVisibilityDecay(TeamTypes eTeam, short iChange)
+{
+	if (iChange != 0)
+	{
+		setVisibilityDecay(eTeam, getVisibilityDecay(eTeam) + iChange);
 	}
 }
 
@@ -7196,16 +7235,14 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			}
 		}
 
-		// Remove improvement that requries old feature unless prevented by bImprovementSet arg
-		if (getFeatureType() == NO_FEATURE)
+		// Remove improvement if it's no longer valid for the new feature state, unless prevented by bImprovementSet arg
+		if (getImprovementType() != NO_IMPROVEMENT && !bImprovementSet
+		&& !canHaveImprovement(getImprovementType(), getTeam()))
 		{
-			if (getImprovementType() != NO_IMPROVEMENT && !bImprovementSet
-			&& GC.getImprovementInfo(getImprovementType()).isRequiresFeature())
-			{
-				setImprovementType(NO_IMPROVEMENT);
-			}
+			setImprovementType(NO_IMPROVEMENT);
 		}
-		else if (GC.getFeatureInfo(getFeatureType()).getTurnDamage() > 0)
+
+		if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).getTurnDamage() > 0)
 		{
 			foreach_(const CvUnit* pLoopUnit, units())
 			{

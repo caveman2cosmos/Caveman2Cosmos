@@ -1433,6 +1433,19 @@
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_CIVILIAN</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PRODIGY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_MISSIONARY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SEA_WORKER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SETTLER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TRADE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SPY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_EXECUTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ADMINISTRATOR</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBDUED</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_PACK_HUNTER</Type>
