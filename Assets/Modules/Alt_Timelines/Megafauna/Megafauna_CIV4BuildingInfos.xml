@@ -273,10 +273,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -337,10 +337,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BEARS</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -382,10 +382,10 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_CAT</Bonus>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
@@ -445,10 +445,10 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -489,10 +489,10 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<CommerceChanges>
@@ -551,10 +551,10 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BISON</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -594,10 +594,10 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_DEER</Bonus>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
 			<iAsset>4</iAsset>
@@ -658,10 +658,10 @@
 			<iMinLatitude>45</iMinLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_DEER</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -700,10 +700,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMaxLatitude>45</iMaxLatitude>
 			<iAsset>4</iAsset>
@@ -759,10 +759,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_GIRAFFES</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -839,10 +839,10 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iMinLatitude>40</iMinLatitude>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -903,10 +903,10 @@
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_MAMMOTHS</FreeBuilding>
 			<iMinLatitude>40</iMinLatitude>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -986,10 +986,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>800</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -1027,10 +1027,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -1089,10 +1089,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_RHINOS</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -1160,10 +1160,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>1038</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -1221,10 +1221,10 @@
 			<iMaxLatitude>45</iMaxLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_ZEBRAS</FreeBuilding>
 			<iCost>139</iCost>
-			<iCostSizeModifier>1</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>

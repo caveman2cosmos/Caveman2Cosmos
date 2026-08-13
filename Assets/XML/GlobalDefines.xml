@@ -948,6 +948,42 @@
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>BUILDINGCOST_SIZE_SMALL_PERCENT</DefineName>
+		<iDefineIntVal>-20</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_SIZE_BIG_PERCENT</DefineName>
+		<iDefineIntVal>15</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_SIZE_HUGE_PERCENT</DefineName>
+		<iDefineIntVal>30</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_COUNT_ONE_PERCENT</DefineName>
+		<iDefineIntVal>-5</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_COUNT_MANY_PERCENT</DefineName>
+		<iDefineIntVal>15</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_MATERIALS_CHEAP_PERCENT</DefineName>
+		<iDefineIntVal>-10</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_MATERIALS_EXPENSIVE_PERCENT</DefineName>
+		<iDefineIntVal>15</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_COMPLEXITY_SIMPLE_PERCENT</DefineName>
+		<iDefineIntVal>-20</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>BUILDINGCOST_COMPLEXITY_COMPLEX_PERCENT</DefineName>
+		<iDefineIntVal>20</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>UNIT_PRODUCTION_PERCENT_SM</DefineName>
 		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
@@ -1164,6 +1200,34 @@
 		<DefineName>WE_LOVE_THE_KING_POPULATION_MIN_POPULATION</DefineName>
 		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
+    <Define>
+        <DefineName>FIRE_EVENT_RAND</DefineName>
+        <iDefineIntVal>1000</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_MIN_FLAMMABILITY</DefineName>
+        <iDefineIntVal>5</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_MAJOR_FLAMMABILITY</DefineName>
+        <iDefineIntVal>50</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_CATASTROPHIC_FLAMMABILITY</DefineName>
+        <iDefineIntVal>100</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_MAJOR_CHANCE_PERCENT</DefineName>
+        <iDefineIntVal>30</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_CATASTROPHIC_CHANCE_PERCENT</DefineName>
+        <iDefineIntVal>15</iDefineIntVal>
+    </Define>
+    <Define>
+        <DefineName>FIRE_EFFECT_DURATION_TURNS</DefineName>
+        <iDefineIntVal>3</iDefineIntVal>
+    </Define>
 	<Define>
 		<DefineName>PLOT_SIZE</DefineName>
 		<fDefineFloatVal>180.0</fDefineFloatVal>

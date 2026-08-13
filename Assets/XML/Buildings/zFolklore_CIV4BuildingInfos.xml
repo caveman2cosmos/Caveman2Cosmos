@@ -25,10 +25,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_CORAL_REEF</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_CORAL_REEF</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -127,10 +127,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_STONE_FROM_THE_SKY</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_STONE_FROM_THE_SKY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -225,10 +225,10 @@
 			</PrereqAmountBuildings>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -315,10 +315,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_METAL</ArtDefineTag>
 			<FreeBuilding>BUILDING_FOLKLORE_E_METAL</FreeBuilding>
 			<iCost>30</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -432,10 +432,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_OASIS</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_OASIS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -534,10 +534,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_LANDFORM</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_LANDFORM</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -636,10 +636,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_REEF</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_REEF</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -724,10 +724,10 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_STONE</ArtDefineTag>
 			<FreeBuilding>BUILDING_FOLKLORE_E_STONE</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -831,10 +831,10 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<FreeBuilding>BUILDING_FOLKLORE_E_VOLCANO</FreeBuilding>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_VOLCANO</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -925,10 +925,10 @@
 				<BuildingType>BUILDING_FOLKLORE_E_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_DRAGON</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_DRAGON</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1025,10 +1025,10 @@
 			</PrereqAmountBuildings>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_EARTH</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_EARTH</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1119,10 +1119,10 @@
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_MERMAID</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_MERMAID</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1214,10 +1214,10 @@
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_PHOENIX</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_PHOENIX</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1314,10 +1314,10 @@
 			</PrereqAmountBuildings>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_SEA</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_SEA</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1407,10 +1407,10 @@
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>20</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_E_SKY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_E_SKY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -1511,10 +1511,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WILDEBEEST</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -1866,10 +1866,10 @@
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_BEAR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_BEAR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -2061,10 +2061,10 @@
 				<Type>HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -2602,10 +2602,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WILDEBEEST</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -3849,10 +3849,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -4013,10 +4013,10 @@
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -5564,10 +5564,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_LEVIATHAN</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_LEVIATHAN</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -5747,10 +5747,10 @@
 				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_TALES_OF_FISH</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6409,10 +6409,10 @@
 				<BuildingType>BUILDING_FOLKLORE_CAPUCHIN_MONKEY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -6576,10 +6576,10 @@
 				<BuildingType>BUILDING_FOLKLORE_ORANGUTAN</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -6673,10 +6673,10 @@
 				<BuildingType>BUILDING_FOLKLORE_MANDRILL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -7596,10 +7596,10 @@
 				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -7754,10 +7754,10 @@
 				<BuildingType>BUILDING_FOLKLORE_EAGLE_RAY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_RAY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_RAY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -8169,10 +8169,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_RHINOCEROSES</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_RHINOCEROSES</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -8522,10 +8522,10 @@
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -8684,10 +8684,10 @@
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>250</iCost>
-			<iCostSizeModifier>0</iCostSizeModifier>
-			<iCostCountModifier>0</iCostCountModifier>
-			<iCostMaterialsModifier>0</iCostMaterialsModifier>
-			<iCostComplexityModifier>2</iCostComplexityModifier>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_FOLKLORE_T_SHARKS</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_T_SHARKS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>

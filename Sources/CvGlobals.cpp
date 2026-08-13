@@ -101,6 +101,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_paszDiplomacyPowerTypes(NULL)
 	, m_paszAutomateTypes(NULL)
 	, m_paszDirectionTypes(NULL)
+	, m_paszBuildingCostSizeTypes(NULL)
+	, m_paszBuildingCostCountTypes(NULL)
+	, m_paszBuildingCostMaterialsTypes(NULL)
+	, m_paszBuildingCostComplexityTypes(NULL)
 	, m_paszFootstepAudioTypes(NULL)
 	, m_paszFootstepAudioTags(NULL)
 	, m_bGraphicsInitialized(false)
@@ -2393,6 +2397,50 @@ CvString& cvInternalGlobals::getDirectionTypes(AutomateTypes e)
 	return m_paszDirectionTypes[e];
 }
 
+CvString*& cvInternalGlobals::getBuildingCostSizeTypes()
+{
+	return m_paszBuildingCostSizeTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostSizeTypes(BuildingCostSizeTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTSIZE_TYPES, e);
+	return m_paszBuildingCostSizeTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostCountTypes()
+{
+	return m_paszBuildingCostCountTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostCountTypes(BuildingCostCountTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTCOUNT_TYPES, e);
+	return m_paszBuildingCostCountTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostMaterialsTypes()
+{
+	return m_paszBuildingCostMaterialsTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostMaterialsTypes(BuildingCostMaterialsTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTMATERIALS_TYPES, e);
+	return m_paszBuildingCostMaterialsTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostComplexityTypes()
+{
+	return m_paszBuildingCostComplexityTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostComplexityTypes(BuildingCostComplexityTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTCOMPLEXITY_TYPES, e);
+	return m_paszBuildingCostComplexityTypes[e];
+}
+
 int cvInternalGlobals::getNumPropertyInfos() const
 {
 	return (int)m_paPropertyInfo.size();
@@ -2648,6 +2696,10 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDiplomacyPowerTypes());
 	SAFE_DELETE_ARRAY(GC.getAutomateTypes());
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostSizeTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostCountTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostMaterialsTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostComplexityTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
 

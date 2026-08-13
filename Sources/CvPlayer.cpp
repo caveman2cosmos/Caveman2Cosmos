@@ -4812,6 +4812,24 @@ int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlo
 
 		if (eNonObsoleteBonus == NO_BONUS)
 		{
+			// No bonus here, but a feature-only improvement (e.g. harvesting kelp/sea grass)
+			// can still be worth sending a worker for - otherwise water tiles that never carry
+			// a bonus resource would never register any need for sea workers at all.
+			if (pLoopPlot->isWater() && pLoopPlot->getFeatureType() != NO_FEATURE && pLoopPlot->getImprovementType() == NO_IMPROVEMENT
+			&& (!pFromPlot || gDLL->getFAStarIFace()->GeneratePath(&GC.getBorderFinder(), pFromPlot->getX(), pFromPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY(), false, getID(), true)))
+			{
+				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
+				{
+					const BuildTypes eBuild = (BuildTypes) iJ;
+					const ImprovementTypes eBuildImprovement = GC.getBuildInfo(eBuild).getImprovement();
+					if (eBuildImprovement != NO_IMPROVEMENT
+					&& GC.getImprovementInfo(eBuildImprovement).isRequiresFeature()
+					&& canBuild(pLoopPlot, eBuild))
+					{
+						iCount++;
+					}
+				}
+			}
 			continue;
 		}
 		const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
@@ -7219,47 +7237,29 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 		return -1;
 	}
 
-    const int iCostBySize = GC.getBuildingInfo(eBuilding).getProductionCostSize();
-    const int iCostByCount = GC.getBuildingInfo(eBuilding).getProductionCostCount();
-    const int iCostByMaterials = GC.getBuildingInfo(eBuilding).getProductionCostMaterials();
-    const int iCostByComplexity = GC.getBuildingInfo(eBuilding).getProductionCostComplexity();
+	// Realistic Building Cost: differentiate otherwise-identical base costs by
+	// how big/common/expensive/complex the building actually is.
+	const int iCostBySize = GC.getBuildingInfo(eBuilding).getProductionCostSize();
+	const int iCostByCount = GC.getBuildingInfo(eBuilding).getProductionCostCount();
+	const int iCostByMaterials = GC.getBuildingInfo(eBuilding).getProductionCostMaterials();
+	const int iCostByComplexity = GC.getBuildingInfo(eBuilding).getProductionCostComplexity();
 
-    // Calculate total modifier
-    float totalModifier = 1.0f;
+	int iModifierPercent = 100;
 
-    if (iCostBySize == 0) {
-        totalModifier -= 0.2f;
-    } else if (iCostBySize == 2) {
-        totalModifier += 0.15f;
-    } else if (iCostBySize == 3) {
-        totalModifier += 0.3f;
-    }
+	if (iCostBySize == BUILDINGCOSTSIZE_SMALL) iModifierPercent += GC.getBUILDINGCOST_SIZE_SMALL_PERCENT();
+	else if (iCostBySize == BUILDINGCOSTSIZE_BIG) iModifierPercent += GC.getBUILDINGCOST_SIZE_BIG_PERCENT();
+	else if (iCostBySize == BUILDINGCOSTSIZE_HUGE) iModifierPercent += GC.getBUILDINGCOST_SIZE_HUGE_PERCENT();
 
-    if (iCostByCount == 0) {
-        totalModifier -= 0.05f;
-    } else if (iCostByCount == 2) {
-        totalModifier += 0.15f;
-    }
+	if (iCostByCount == BUILDINGCOSTCOUNT_ONE) iModifierPercent += GC.getBUILDINGCOST_COUNT_ONE_PERCENT();
+	else if (iCostByCount == BUILDINGCOSTCOUNT_MANY) iModifierPercent += GC.getBUILDINGCOST_COUNT_MANY_PERCENT();
 
-    if (iCostByMaterials == 0) {
-        totalModifier -= 0.1f;
-    } else if (iCostByMaterials == 2) {
-        totalModifier += 0.15f;
-    }
+	if (iCostByMaterials == BUILDINGCOSTMATERIALS_CHEAP) iModifierPercent += GC.getBUILDINGCOST_MATERIALS_CHEAP_PERCENT();
+	else if (iCostByMaterials == BUILDINGCOSTMATERIALS_EXPENSIVE) iModifierPercent += GC.getBUILDINGCOST_MATERIALS_EXPENSIVE_PERCENT();
 
-    if (iCostByComplexity == 0) {
-        totalModifier -= 0.2f;
-    } else if (iCostByComplexity == 2) {
-        totalModifier += 0.2f;
-    }
+	if (iCostByComplexity == BUILDINGCOSTCOMPLEXITY_SIMPLE) iModifierPercent += GC.getBUILDINGCOST_COMPLEXITY_SIMPLE_PERCENT();
+	else if (iCostByComplexity == BUILDINGCOSTCOMPLEXITY_COMPLEX) iModifierPercent += GC.getBUILDINGCOST_COMPLEXITY_COMPLEX_PERCENT();
 
-    //iBaseCost = static_cast<int>(iBaseCost);
-
-    // Apply total modifier to base cost
-    if(GC.getGame().isOption(GAMEOPTION_REALISTIC_BUILDING_COST)){
-		FAssert(iBaseCost * totalModifier < MAX_INT);
-        iBaseCost = static_cast<int>(iBaseCost * totalModifier);
-    }
+	iBaseCost = iBaseCost * iModifierPercent / 100;
 
 	uint64_t iProductionNeeded = (uint64_t) 100*iBaseCost;
 

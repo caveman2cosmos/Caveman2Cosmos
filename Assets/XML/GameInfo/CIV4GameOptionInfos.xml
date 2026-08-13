@@ -659,13 +659,6 @@
             <bVisible>1</bVisible>
         </GameOptionInfo>
         <GameOptionInfo>
-            <Type>GAMEOPTION_REALISTIC_BUILDING_COST</Type>
-            <Description>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Description>
-            <Help>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Help>
-            <bDefault>0</bDefault>
-            <bVisible>1</bVisible>
-        </GameOptionInfo>
-        <GameOptionInfo>
             <Type>GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS</Type>
             <Description>TXT_KEY_GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS</Description>
             <Help>TXT_KEY_GAMEOPTION_ADVANCED_REALISTIC_CORPORATIONS_HELP</Help>

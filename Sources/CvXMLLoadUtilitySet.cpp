@@ -548,6 +548,14 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 		SetGlobalStringArray(&GC.getAutomateTypes(), L"/Civ4Types/AutomateTypes/AutomateType", &iEnumVal, true);
 		iEnumVal = NUM_DIRECTION_TYPES;
 		SetGlobalStringArray(&GC.getDirectionTypes(), L"/Civ4Types/DirectionTypes/DirectionType", &iEnumVal, true);
+		iEnumVal = NUM_BUILDINGCOSTSIZE_TYPES;
+		SetGlobalStringArray(&GC.getBuildingCostSizeTypes(), L"/Civ4Types/BuildingCostSizeTypes/BuildingCostSizeType", &iEnumVal, true);
+		iEnumVal = NUM_BUILDINGCOSTCOUNT_TYPES;
+		SetGlobalStringArray(&GC.getBuildingCostCountTypes(), L"/Civ4Types/BuildingCostCountTypes/BuildingCostCountType", &iEnumVal, true);
+		iEnumVal = NUM_BUILDINGCOSTMATERIALS_TYPES;
+		SetGlobalStringArray(&GC.getBuildingCostMaterialsTypes(), L"/Civ4Types/BuildingCostMaterialsTypes/BuildingCostMaterialsType", &iEnumVal, true);
+		iEnumVal = NUM_BUILDINGCOSTCOMPLEXITY_TYPES;
+		SetGlobalStringArray(&GC.getBuildingCostComplexityTypes(), L"/Civ4Types/BuildingCostComplexityTypes/BuildingCostComplexityType", &iEnumVal, true);
 		SetGlobalStringArray(&GC.getFootstepAudioTypes(), L"/Civ4Types/FootstepAudioTypes/FootstepAudioType", &GC.getNumFootstepAudioTypes());
 
 		MoveToXmlParent();

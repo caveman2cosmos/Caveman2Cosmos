@@ -4960,12 +4960,6 @@
 		<Polish>Po&#191;ar zabi&#179; wielu ludzi w %s2, populacja zmniejsza si&#234; o %d1.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_CITYFIRE_MAJOR_1</Tag>
-		<English>We had large fire!</English>
-		<French>Nous avons eu un grand incendie !</French>
-		<Italian>Si è verificato un grosso incendio!</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_WILDFIRE_1</Tag>
 		<English>Wildfire caught our city.</English>
 		<French>Un incendie de forêt a touché notre ville.</French>
@@ -4988,10 +4982,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_NOHIT_CITY</Tag>
-		<English>Fortunately the fire in %d1 has not claimed any lives.</English>
-		<French>Heureusement, le feu à %d1 n'a pas fait de victimes humaines.</French>
-		<Italian>Fortunatamente, l'incendio a %d1 non ha fatto vittime.</Italian>
-		<Polish>Na szcz&#234;&#156;cie po&#191;ar w %d1 nie poch&#179;on&#185;&#179; &#191;adnych ofiar.</Polish>
+        <English>Fortunately the fire in %s1 has not claimed any lives.</English>
+        <French>Heureusement, le feu à %s1 n'a pas fait de victimes humaines.</French>
+        <Italian>Fortunatamente, l'incendio a %s1 non ha fatto vittime.</Italian>
+        <Polish>Na szcz&#234;&#156;cie po&#191;ar w %s1 nie poch&#179;on&#185;&#179; &#191;adnych ofiar.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_ANARCHY</Tag>

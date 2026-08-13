@@ -774,6 +774,7 @@ class CvTechChooser:
 				while i < iNumYields:
 					if info.getTechYieldChanges(iTech, i):
 						techBenefits[iTech].append(["ImprovementYield", iType])
+						break
 					i += 1
 				iTech += 1
 			iType += 1

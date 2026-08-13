@@ -386,10 +386,10 @@
 	<ElementType name="bCenterInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostSizeModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostCountModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostMaterialsModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iCostComplexityModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="CostSizeModifier" content="textOnly"/>
+	<ElementType name="CostCountModifier" content="textOnly"/>
+	<ElementType name="CostMaterialsModifier" content="textOnly"/>
+	<ElementType name="CostComplexityModifier" content="textOnly"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinAreaSize" content="textOnly" dt:type="int"/>
 	<ElementType name="iConquestProb" content="textOnly" dt:type="int"/>
@@ -815,10 +815,10 @@
 		<element type="bCenterInCity" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
-		<element type="iCostSizeModifier" minOccurs="0"/>
-		<element type="iCostCountModifier" minOccurs="0"/>
-		<element type="iCostMaterialsModifier" minOccurs="0"/>
-		<element type="iCostComplexityModifier" minOccurs="0"/>
+		<element type="CostSizeModifier" minOccurs="0"/>
+		<element type="CostCountModifier" minOccurs="0"/>
+		<element type="CostMaterialsModifier" minOccurs="0"/>
+		<element type="CostComplexityModifier" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iMinAreaSize" minOccurs="0"/>
 		<element type="iConquestProb" minOccurs="0"/>

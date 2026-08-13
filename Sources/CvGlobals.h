@@ -691,6 +691,18 @@ public:
 	CvString*& getDirectionTypes();
 	CvString& getDirectionTypes(AutomateTypes e);
 
+	CvString*& getBuildingCostSizeTypes();
+	CvString& getBuildingCostSizeTypes(BuildingCostSizeTypes e);
+
+	CvString*& getBuildingCostCountTypes();
+	CvString& getBuildingCostCountTypes(BuildingCostCountTypes e);
+
+	CvString*& getBuildingCostMaterialsTypes();
+	CvString& getBuildingCostMaterialsTypes(BuildingCostMaterialsTypes e);
+
+	CvString*& getBuildingCostComplexityTypes();
+	CvString& getBuildingCostComplexityTypes(BuildingCostComplexityTypes e);
+
 	int& getNumFootstepAudioTypes();
 	CvString*& getFootstepAudioTypes();
 	CvString& getFootstepAudioTypes(int i);
@@ -1087,6 +1099,11 @@ protected:
 	CvString *m_paszAutomateTypes;
 
 	CvString *m_paszDirectionTypes;
+
+	CvString *m_paszBuildingCostSizeTypes;
+	CvString *m_paszBuildingCostCountTypes;
+	CvString *m_paszBuildingCostMaterialsTypes;
+	CvString *m_paszBuildingCostComplexityTypes;
 
 	CvString *m_paszFootstepAudioTypes;
 	int m_iNumFootstepAudioTypes;

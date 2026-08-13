@@ -12356,11 +12356,26 @@ bool CvCityAI::buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags)
 		return true;
 	}
 
+	bool buildingHasPlotYieldChange = false;
+	foreach_(const PlotArray& plotYieldPair, kBuilding.getPlotYieldChanges())
+	{
+		for (int iYield = 0; iYield < NUM_YIELD_TYPES; ++iYield)
+		{
+			if (plotYieldPair.second[iYield] != 0)
+			{
+				buildingHasPlotYieldChange = true;
+				break;
+			}
+		}
+		if (buildingHasPlotYieldChange) break;
+	}
+
 	const bool buildingModifiesGenericYields =
 		(
 			kBuilding.getBonusYieldModifier(NO_BONUS, NO_COMMERCE) > 0 ||
 			kBuilding.getBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0 ||
-			kBuilding.getVicinityBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0
+			kBuilding.getVicinityBonusYieldChanges(NO_BONUS, NO_COMMERCE) > 0 ||
+			buildingHasPlotYieldChange
 			);
 
 	const bool buildingModifiesCommerceYields =

@@ -106,6 +106,15 @@ public:
 	void doTurn();
 	void doAutobuild();
 	void checkPropertyBuildings();
+	void doFireCheck();
+
+protected:
+	BuildingTypes getFireBuildingTarget(int iFlammRand) const;
+	void burnBuildingByFire(BuildingTypes eBuilding);
+	void doFireMinor();
+	void doFireMajor();
+	void doFireCatastrophic();
+public:
 
 	bool isCitySelected() const;
 	DllExport bool canBeSelected() const;
@@ -277,7 +286,7 @@ public:
 	bool hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool bCountThisTurn = false) const;
 
 	UnitTypes getConscriptUnit() const;
-	CvUnit* initConscriptedUnit();
+	CvUnit* initConscriptedUnit(UnitTypes eConscriptUnit = NO_UNIT);
 	int getConscriptPopulation() const;
 	int flatConscriptAngerLength() const;
 	bool canConscript(bool bOnCapture = false) const;
@@ -827,6 +836,9 @@ public:
 
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bNewValue);
+
+	int getFireEffectTurns() const;
+	void setFireEffectTurns(int iNewValue);
 
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
@@ -1727,6 +1739,7 @@ protected:
 	bool m_bDrafted;
 	bool m_bAirliftTargeted;
 	bool m_bWeLoveTheKingDay;
+	int m_iFireEffectTurns;
 	bool m_bCitizensAutomated;
 	bool m_bProductionAutomated;
 	bool m_bWallOverride;

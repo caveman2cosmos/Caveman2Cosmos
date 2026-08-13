@@ -2170,10 +2170,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bStateReligionInCity, L"bNeedStateReligionInCity");
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iProductionCostSize, L"iCostSizeModifier", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iProductionCostCount, L"iCostCountModifier", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iProductionCostMaterials, L"iCostMaterialsModifier", -1);
-	pXML->GetOptionalChildXmlValByName(&m_iProductionCostComplexity, L"iCostComplexityModifier", -1);
+
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostSizeModifier");
+	m_iProductionCostSize = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostCountModifier");
+	m_iProductionCostCount = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostMaterialsModifier");
+	m_iProductionCostMaterials = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostComplexityModifier");
+	m_iProductionCostComplexity = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");

@@ -2093,6 +2093,32 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 			}
 // BUG - Conscript Limit - end
 		}
+		else
+		{
+			// No unit currently trainable here has a conscription value, so the block above
+			// never runs - without this, the whole tooltip (including the "requires civic X"
+			// hint) went completely blank, hiding the real reason Draft was unavailable.
+			if (GET_PLAYER(pHeadSelectedCity->getOwner()).getMaxConscript() == 0)
+			{
+				bool bFirst = true;
+				for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+				{
+					if (getWorldSizeMaxConscript((CivicTypes)iI) > 0)
+					{
+						setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						bFirst = false;
+					}
+				}
+				if (!bFirst)
+				{
+					szBuffer.append(ENDCOLR);
+				}
+			}
+			else
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NO_CONSCRIPT_UNIT_AVAILABLE"));
+			}
+		}
 	}
 }
 

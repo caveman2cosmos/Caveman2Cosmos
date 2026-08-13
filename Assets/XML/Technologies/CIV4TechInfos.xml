@@ -16020,6 +16020,7 @@
 			</OrPreReqs>
 			<AndPreReqs>
 				<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
+				<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
 			</AndPreReqs>
 			<Quote>TXT_KEY_TECH_ANTIBIOTICS_QUOTE</Quote>
 			<Sound>AS2D_TECH_ANTIBIOTICS</Sound>

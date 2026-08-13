@@ -1704,18 +1704,6 @@
 		<Russian>Включить несколько карт для тестирования.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST</Tag>
-		<English>Advanced - Realistic building cost</English>
-		<French>Avancé - Coût réaliste des bâtiments</French>
-		<Russian>Правдоподобные затраты на строительство</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_BUILDING_COST_HELP</Tag>
-		<English>Changes building cost values to more closely represent their size complexity and material cost.</English>
-		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
-		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25</Tag>
 		<English>Decreases AI building cost by 25%</English>
 		<French>Avancé - Coût réaliste des bâtiments</French>

@@ -3124,7 +3124,8 @@ class CvMainInterface:
 			iWidget = WidgetTypes.WIDGET_PROPERTY
 			pProperties = CyCity.getProperties()
 			iPropertyNum = pProperties.getNumProperties()
-			for i in xrange(iPropertyNum):
+			aiPropertyOrder = sorted(xrange(iPropertyNum), key=lambda i: int(pProperties.getProperty(i)))
+			for i in aiPropertyOrder:
 				eProperty = pProperties.getProperty(i)
 				info = GC.getPropertyInfo(eProperty)
 				szLeftBuffer = uFont3 + u"%c " % info.getChar() + uFont2 + info.getText()

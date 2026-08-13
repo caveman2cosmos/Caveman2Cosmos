@@ -2923,8 +2923,15 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					if (!bNoFurtherDamagetoDefender)
 					{
+						int iAppliedDefenderDamage = iDefenderDamage;
+						const int iDefenderCombatLimit = combatLimit(pDefender);
+						if (iDefenderCombatLimit < pDefender->getMaxHP())
+						{
+							iAppliedDefenderDamage = std::min(iAppliedDefenderDamage, std::max(0, iDefenderCombatLimit - pDefender->getDamage()));
+						}
 						m_combatResult.bDefenderInjured = true;
 						pDefender->changeDamage(iDefenderDamage, getOwner());
+						pDefender->changeDamage(iAppliedDefenderDamage, getOwner());
 					}
 				}
 				//TB Combat Mods (Afflict) end

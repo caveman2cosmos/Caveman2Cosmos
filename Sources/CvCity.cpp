@@ -596,6 +596,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bDrafted = false;
 	m_bAirliftTargeted = false;
 	m_bWeLoveTheKingDay = false;
+	m_iFireEffectTurns = 0;
 	m_bCitizensAutomated = true;
 	m_bProductionAutomated = false;
 	m_bWallOverride = false;
@@ -1446,6 +1447,11 @@ void CvCity::doTurn()
 		changeEspionageHappinessCounter(-1);
 	}
 
+	if (getFireEffectTurns() > 0)
+	{
+		setFireEffectTurns(getFireEffectTurns() - 1);
+	}
+
 	if (isOccupation() || (angryPopulation() > 0) || (healthRate() < 0))
 	{
 		setWeLoveTheKingDay(false);
@@ -1458,6 +1464,8 @@ void CvCity::doTurn()
 	{
 		setWeLoveTheKingDay(false);
 	}
+
+	doFireCheck();
 
 	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 	{
@@ -4299,9 +4307,12 @@ bool CvCity::canConscript(bool bOnCapture) const
 	return true;
 }
 
-CvUnit* CvCity::initConscriptedUnit()
+CvUnit* CvCity::initConscriptedUnit(UnitTypes eConscriptUnit)
 {
-	const UnitTypes eConscriptUnit = getConscriptUnit();
+	if (NO_UNIT == eConscriptUnit)
+	{
+		eConscriptUnit = getConscriptUnit();
+	}
 	if (NO_UNIT == eConscriptUnit)
 	{
 		return NULL;
@@ -4350,6 +4361,11 @@ void CvCity::conscript(bool bOnCapture)
 	{
 		return;
 	}
+	// Resolve the unit to draft before any state (population, anger, draft count) changes -
+	// initConscriptedUnit() used to re-resolve this itself after those changes, which could
+	// silently pick a different (or no) unit than what canConscript() just validated, spending
+	// the population for nothing.
+	const UnitTypes eConscriptUnit = getConscriptUnit();
 	const int iNumConscripts = getConscriptPopulation();
 	const int iAngerLength = flatConscriptAngerLength();
 	changePopulation(-1);
@@ -4364,7 +4380,7 @@ void CvCity::conscript(bool bOnCapture)
 
 	for (int i = 0; i < iNumConscripts; i++)
 	{
-		CvUnit* pUnit = initConscriptedUnit();
+		CvUnit* pUnit = initConscriptedUnit(eConscriptUnit);
 		FAssertMsg(pUnit != NULL, "pUnit expected to be assigned (not NULL)");
 
 		if (NULL != pUnit && gCityLogLevel >= 2)
@@ -10492,6 +10508,175 @@ void CvCity::setWeLoveTheKingDay(bool bNewValue)
 	}
 }
 
+int CvCity::getFireEffectTurns() const
+{
+	return m_iFireEffectTurns;
+}
+
+
+void CvCity::setFireEffectTurns(int iNewValue)
+{
+	m_iFireEffectTurns = std::max(0, iNewValue);
+}
+
+
+// Standalone per-turn fire hazard check, deliberately kept out of the CvRandomEventInfos trigger pool
+// (same pattern as We Love The King Day above) so it fires at a steady rate instead of competing for the
+// weighted event lottery slot.
+BuildingTypes CvCity::getFireBuildingTarget(int iFlammRand) const
+{
+	PROFILE_EXTRA_FUNC();
+	static const PropertyTypes eFlammability = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+
+	BuildingTypes eBurnBuilding = NO_BUILDING;
+	int iHighFlamm = 0;
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	{
+		const BuildingTypes eBuilding = (BuildingTypes)iI;
+		if (isLimitedWonder(eBuilding) || !hasBuilding(eBuilding) || isFreeBuilding(eBuilding))
+		{
+			continue;
+		}
+
+		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+		if (kBuilding.getProductionCost() < 1 || kBuilding.isNukeImmune() || kBuilding.isAutoBuild())
+		{
+			continue;
+		}
+
+		const int iFlammScore = kBuilding.getProperties()->getValueByProperty(eFlammability) + GC.getGame().getSorenRandNum(iFlammRand, "Buildings destroyed by fire.");
+		if (iFlammScore > iHighFlamm)
+		{
+			iHighFlamm = iFlammScore;
+			eBurnBuilding = eBuilding;
+		}
+	}
+	return eBurnBuilding;
+}
+
+void CvCity::burnBuildingByFire(BuildingTypes eBuilding)
+{
+	if (eBuilding == NO_BUILDING)
+	{
+		return;
+	}
+
+	const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
+	AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+		gDLL->getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", kBuilding.getTextKeyWide()),
+		"AS2D_BOMBARDED", MESSAGE_TYPE_INFO,
+		ARTFILEMGR.getInterfaceArtInfo("INTERFACE_FIRE_ALERT")->getPath(),
+		GC.getCOLOR_RED(), getX(), getY(), true, true);
+	changeHasBuilding(eBuilding, false);
+}
+
+void CvCity::doFireMinor()
+{
+	static const PropertyTypes eFlammability = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+	const int iFlammStart = getProperties()->getValueByProperty(eFlammability);
+	const int iPop = getPopulation();
+	// Floor at iFlammStart so a low-population city's random pool for picking a building
+	// is never smaller than its own flammability - otherwise fire can ignite but fizzle
+	// (no building ever scores high enough to be picked) purely because population is low.
+	const int iFlammRand = std::max(iFlammStart, iFlammStart / 5 + iPop * iPop);
+
+	burnBuildingByFire(getFireBuildingTarget(iFlammRand));
+}
+
+void CvCity::doFireMajor()
+{
+	static const PropertyTypes eFlammability = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+	const int iFlammStart = getProperties()->getValueByProperty(eFlammability);
+	const int iPop = getPopulation();
+	const int iFlammRand = std::max(iFlammStart, iFlammStart / 4 + iPop * iPop);
+	const int iFlammEnd = iFlammStart * 3 / 4;
+	const int iFlammRange = iFlammStart / 10;
+
+	for (int i = 0; i < iFlammRange; i++)
+	{
+		if (getProperties()->getValueByProperty(eFlammability) <= iFlammEnd)
+		{
+			break;
+		}
+		burnBuildingByFire(getFireBuildingTarget(iFlammRand));
+	}
+}
+
+void CvCity::doFireCatastrophic()
+{
+	static const PropertyTypes eFlammability = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+	const int iFlammStart = getProperties()->getValueByProperty(eFlammability);
+	const int iPop = getPopulation();
+	const int iPopScore = iPop * iPop;
+	const int iFlammRand = std::max(iFlammStart, iFlammStart / 3 + iPopScore);
+	const int iFlammEnd = iFlammStart / 2;
+	const int iFlammRange = iFlammStart / 5;
+
+	const int iKilledRand = GC.getGame().getSorenRandNum(std::max(1, iFlammStart / 2), "People killed by fire.");
+	const int iKilledPop = iPop * iKilledRand / std::max(1, iFlammStart + iPopScore);
+
+	if (iKilledPop > 0)
+	{
+		changePopulation(-iKilledPop);
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText("TXT_KEY_EVENT_CITYFIRE_HIT_CITY", iKilledPop, getNameKey()),
+			"AS2D_PILLAGE", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_FIRE_ALERT")->getPath(), GC.getCOLOR_RED(), getX(), getY(), true, true);
+	}
+	else
+	{
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+			gDLL->getText("TXT_KEY_EVENT_CITYFIRE_NOHIT_CITY", getNameKey()),
+			"AS2D_PILLAGE", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_FIRE_ALERT")->getPath(), GC.getCOLOR_RED(), getX(), getY(), true, true);
+	}
+
+	for (int i = 0; i < iFlammRange; i++)
+	{
+		if (getProperties()->getValueByProperty(eFlammability) <= iFlammEnd)
+		{
+			break;
+		}
+		burnBuildingByFire(getFireBuildingTarget(iFlammRand));
+	}
+}
+
+void CvCity::doFireCheck()
+{
+	PROFILE_EXTRA_FUNC();
+	if (isOccupation() || isDisorder())
+	{
+		return;
+	}
+
+	static const PropertyTypes eFlammability = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_FLAMMABILITY");
+	const int iFlamm = getProperties()->getValueByProperty(eFlammability);
+
+	if (iFlamm < GC.getFIRE_MIN_FLAMMABILITY())
+	{
+		return;
+	}
+
+	// Same shape as We Love The King Day's per-turn roll: chance scales with the value itself,
+	// re-rolled independently every turn, entirely outside the weighted CvRandomEventInfos lottery.
+	if (GC.getGame().getSorenRandNum(GC.getFIRE_EVENT_RAND(), "City Fire Check") >= iFlamm)
+	{
+		return;
+	}
+
+	setFireEffectTurns(GC.getFIRE_EFFECT_DURATION_TURNS());
+
+	if (iFlamm >= GC.getFIRE_CATASTROPHIC_FLAMMABILITY() && GC.getGame().getSorenRandNum(100, "Fire Severity Roll") < GC.getFIRE_CATASTROPHIC_CHANCE_PERCENT())
+	{
+		doFireCatastrophic();
+	}
+	else if (iFlamm >= GC.getFIRE_MAJOR_FLAMMABILITY() && GC.getGame().getSorenRandNum(100, "Fire Severity Roll") < GC.getFIRE_MAJOR_CHANCE_PERCENT())
+	{
+		doFireMajor();
+	}
+	else
+	{
+		doFireMinor();
+	}
+}
 
 bool CvCity::isCitizensAutomated() const
 {
@@ -17052,6 +17237,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_bDrafted);
 	WRAPPER_READ(wrapper, "CvCity", &m_bAirliftTargeted);
 	WRAPPER_READ(wrapper, "CvCity", &m_bWeLoveTheKingDay);
+	WRAPPER_READ(wrapper, "CvCity", &m_iFireEffectTurns);
 	WRAPPER_READ(wrapper, "CvCity", &m_bCitizensAutomated);
 	WRAPPER_READ(wrapper, "CvCity", &m_bProductionAutomated);
 	WRAPPER_READ(wrapper, "CvCity", &m_bWallOverride);
@@ -17784,6 +17970,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_bDrafted);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bAirliftTargeted);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bWeLoveTheKingDay);
+	WRAPPER_WRITE(wrapper, "CvCity", m_iFireEffectTurns);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bCitizensAutomated);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bProductionAutomated);
 	WRAPPER_WRITE(wrapper, "CvCity", m_bWallOverride);
@@ -18309,6 +18496,11 @@ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>
 	{
 
 		if (angryPopulation() > 0)
+		{
+			kEffectNames.push_back("EFFECT_CITY_BURNING_SMOKE");
+		}
+
+		if (getFireEffectTurns() > 0)
 		{
 			kEffectNames.push_back("EFFECT_CITY_BURNING_SMOKE");
 		}
@@ -19659,7 +19851,10 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 // ------ BEGIN InfluenceDrivenWar -------------------------------
 void CvCity::emergencyConscript()
 {
-	if (getConscriptUnit() == NO_UNIT)
+	// Resolve once, before population/anger change state that could otherwise cause a second
+	// getConscriptUnit() call to return something different (or NO_UNIT).
+	const UnitTypes eConscriptUnit = getConscriptUnit();
+	if (eConscriptUnit == NO_UNIT)
 	{
 		return;
 	}
@@ -19670,7 +19865,6 @@ void CvCity::emergencyConscript()
 	changeConscriptAngerTimer(flatConscriptAngerLength() * GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() / 100);
 	changePopulation(-1);
 
-	const UnitTypes eConscriptUnit = getConscriptUnit();
 	UnitAITypes eCityAI;
 
 	if (GET_PLAYER(getOwner()).AI_unitValue(eConscriptUnit, UNITAI_CITY_DEFENSE, area()) > 0)
@@ -23933,6 +24127,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 	if (pPlot != NULL)
 	{
 		CvUnit* pBestUnit = NULL;
+		std::vector<CvUnit*> apInvestigators;
 		foreach_(CvUnit* pLoopUnit, pPlot->units())
 		{
 			if (pLoopUnit->getOwner() == getOwner())
@@ -23948,6 +24143,7 @@ int CvCity::getInvestigationTotal(bool bActual) const
 				{
 					iAssistance++;
 					iFivePercentAssistance += iUnitInvestigation;
+					apInvestigators.push_back(pLoopUnit);
 				}
 			}
 		}
@@ -23955,7 +24151,11 @@ int CvCity::getInvestigationTotal(bool bActual) const
 		{
 			iAssistance--;//To remove the bonus one would give itself.
 			iFivePercentAssistance -= iBestUnitInvestigation;
-			pBestUnit->changeExperience100(5);
+			// Share XP among every investigator that contributed, not just the best one.
+			foreach_(CvUnit* pInvestigator, apInvestigators)
+			{
+				pInvestigator->changeExperience100(5);
+			}
 		}
 	}
 	iFivePercentAssistance /= 20;

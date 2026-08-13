@@ -93,6 +93,10 @@
         <xs:element ref="DiplomacyPowerTypes"/>
         <xs:element ref="AutomateTypes"/>
         <xs:element ref="DirectionTypes"/>
+        <xs:element ref="BuildingCostSizeTypes"/>
+        <xs:element ref="BuildingCostCountTypes"/>
+        <xs:element ref="BuildingCostMaterialsTypes"/>
+        <xs:element ref="BuildingCostComplexityTypes"/>
         <xs:element ref="FootstepAudioTypes"/>
         <xs:element ref="FootstepAudioTags"/>
         <xs:element ref="InterfaceVisibilityTypes"/>
@@ -159,6 +163,34 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="unbounded" ref="DirectionType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingCostSizeTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BuildingCostSizeType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingCostCountTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BuildingCostCountType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingCostMaterialsTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BuildingCostMaterialsType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuildingCostComplexityTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="BuildingCostComplexityType"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -757,6 +789,10 @@
   <xs:element name="DiplomacyPowerType" type="xs:NCName"/>
   <xs:element name="AutomateType" type="xs:NCName"/>
   <xs:element name="DirectionType" type="xs:NCName"/>
+  <xs:element name="BuildingCostSizeType" type="xs:NCName"/>
+  <xs:element name="BuildingCostCountType" type="xs:NCName"/>
+  <xs:element name="BuildingCostMaterialsType" type="xs:NCName"/>
+  <xs:element name="BuildingCostComplexityType" type="xs:NCName"/>
   <xs:element name="FootstepAudioTagString" type="xs:NCName"/>
   <xs:element name="FontButtonIndex" type="Civ4Integer"/>
   <xs:element name="LSystem" type="xs:string"/>

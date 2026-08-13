@@ -43858,7 +43858,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseDiscover>10000</iBaseDiscover>
+			<iBaseDiscover>100000</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>

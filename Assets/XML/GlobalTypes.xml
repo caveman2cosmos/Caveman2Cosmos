@@ -133,6 +133,31 @@
 		<DirectionType>DIRECTION_WEST</DirectionType>
 		<DirectionType>DIRECTION_NORTHWEST</DirectionType>
 	</DirectionTypes>
+	<BuildingCostSizeTypes>
+		<!--Changes must be reflected in CvEnums.h-->
+		<BuildingCostSizeType>BUILDINGCOSTSIZE_SMALL</BuildingCostSizeType>
+		<BuildingCostSizeType>BUILDINGCOSTSIZE_MEDIUM</BuildingCostSizeType>
+		<BuildingCostSizeType>BUILDINGCOSTSIZE_BIG</BuildingCostSizeType>
+		<BuildingCostSizeType>BUILDINGCOSTSIZE_HUGE</BuildingCostSizeType>
+	</BuildingCostSizeTypes>
+	<BuildingCostCountTypes>
+		<!--Changes must be reflected in CvEnums.h-->
+		<BuildingCostCountType>BUILDINGCOSTCOUNT_ONE</BuildingCostCountType>
+		<BuildingCostCountType>BUILDINGCOSTCOUNT_FEW</BuildingCostCountType>
+		<BuildingCostCountType>BUILDINGCOSTCOUNT_MANY</BuildingCostCountType>
+	</BuildingCostCountTypes>
+	<BuildingCostMaterialsTypes>
+		<!--Changes must be reflected in CvEnums.h-->
+		<BuildingCostMaterialsType>BUILDINGCOSTMATERIALS_CHEAP</BuildingCostMaterialsType>
+		<BuildingCostMaterialsType>BUILDINGCOSTMATERIALS_NORMAL</BuildingCostMaterialsType>
+		<BuildingCostMaterialsType>BUILDINGCOSTMATERIALS_EXPENSIVE</BuildingCostMaterialsType>
+	</BuildingCostMaterialsTypes>
+	<BuildingCostComplexityTypes>
+		<!--Changes must be reflected in CvEnums.h-->
+		<BuildingCostComplexityType>BUILDINGCOSTCOMPLEXITY_SIMPLE</BuildingCostComplexityType>
+		<BuildingCostComplexityType>BUILDINGCOSTCOMPLEXITY_NORMAL</BuildingCostComplexityType>
+		<BuildingCostComplexityType>BUILDINGCOSTCOMPLEXITY_COMPLEX</BuildingCostComplexityType>
+	</BuildingCostComplexityTypes>
 	<FootstepAudioTypes>
 		<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
 		<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
