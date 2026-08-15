@@ -1202,19 +1202,19 @@
 	</Define>
     <Define>
         <DefineName>FIRE_EVENT_RAND</DefineName>
-        <iDefineIntVal>1000</iDefineIntVal>
+        <iDefineIntVal>2000</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FIRE_MIN_FLAMMABILITY</DefineName>
-        <iDefineIntVal>5</iDefineIntVal>
+        <iDefineIntVal>10</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FIRE_MAJOR_FLAMMABILITY</DefineName>
-        <iDefineIntVal>50</iDefineIntVal>
+        <iDefineIntVal>100</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FIRE_CATASTROPHIC_FLAMMABILITY</DefineName>
-        <iDefineIntVal>100</iDefineIntVal>
+        <iDefineIntVal>200</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FIRE_MAJOR_CHANCE_PERCENT</DefineName>
