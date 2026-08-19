@@ -130,6 +130,7 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_iGroupLeadOverride = other.m_iGroupLeadOverride;
 	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
 	m_contractualState = other.m_contractualState;
+	m_iAwaitingContractStuckPasses = other.m_iAwaitingContractStuckPasses;
 	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
 	m_eIntendedHeritage = other.m_eIntendedHeritage;
 	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
@@ -179,6 +180,7 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 
 	m_contractsLastEstablishedTurn = -1;
 	m_contractualState = CONTRACTUAL_STATE_NONE;
+	m_iAwaitingContractStuckPasses = 0;
 
 	m_eIntendedConstructBuilding = NO_BUILDING;
 	m_eIntendedHeritage = NO_HERITAGE;
@@ -472,7 +474,31 @@ bool CvUnitAI::AI_update()
 	}
 #endif
 
-	return !isDelayedDeath() && AI_isAwaitingContract();
+	if (!AI_isAwaitingContract())
+	{
+		m_iAwaitingContractStuckPasses = 0;
+		return false;
+	}
+
+	if (isDelayedDeath())
+	{
+		return false;
+	}
+
+	// Every AI_update() pass that ends still awaiting a contract re-establishes
+	// CONTRACTUAL_STATE_AWAITING_ANSWER/WORK for this turn (see processContracts()), which can
+	// leave this unit (and its group, which excludes awaiting-contract groups from its
+	// MISSION_SKIP safety net) re-offered indefinitely without ever finding one - "AI turn does
+	// not end". If we've been stuck awaiting a contract for too many consecutive passes, give up
+	// on it outright rather than just telling the caller to keep waiting.
+	if (++m_iAwaitingContractStuckPasses > 20)
+	{
+		contractFulfilled();
+		m_iAwaitingContractStuckPasses = 0;
+		return false;
+	}
+
+	return true;
 }
 
 void CvUnitAI::doUnitAIMove()

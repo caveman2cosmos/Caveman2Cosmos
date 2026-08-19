@@ -469,6 +469,7 @@ protected:
 
 	int m_contractsLastEstablishedTurn;
 	ContractualState m_contractualState;
+	int m_iAwaitingContractStuckPasses;
 
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
