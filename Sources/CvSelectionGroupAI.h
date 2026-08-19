@@ -92,6 +92,14 @@ protected:
 	bool m_bGroupAttack;
 	int m_iGroupAttackX;
 	int m_iGroupAttackY;
+
+	// Transient (not saved) stuck-detection for groups excluded from the MISSION_SKIP
+	// safety net by AI_isAwaitingContract(). Counts consecutive AI_update() passes spent
+	// awaiting a contract at the same plot; reset whenever the group moves or stops
+	// awaiting a contract. See AI_update() for use.
+	int m_iStuckUpdatePasses;
+	int m_iStuckUpdateX;
+	int m_iStuckUpdateY;
 };
 
 #endif

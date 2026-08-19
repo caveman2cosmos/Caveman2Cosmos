@@ -28867,6 +28867,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BELUGA</BuildingType>
@@ -29189,6 +29190,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DOLPHIN</BuildingType>
@@ -29296,6 +29298,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_MERMAID</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUGONG</BuildingType>
 			</Buildings>
@@ -29402,6 +29405,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GIANT_SQUID</BuildingType>
@@ -29509,6 +29513,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREAT_WHITE_SHARK</BuildingType>
@@ -29617,6 +29622,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAMMERHEAD_SHARK</BuildingType>
@@ -29725,6 +29731,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HUMPBACK_WHALE</BuildingType>
@@ -30154,6 +30161,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MINKIE_WHALE</BuildingType>
@@ -30261,6 +30269,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NARWHAL</BuildingType>
@@ -30372,6 +30381,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
@@ -30588,6 +30598,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
@@ -30696,6 +30707,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</Buildings>
 			<Heritage>
@@ -30804,6 +30816,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</Buildings>
 			<Heritage>
@@ -31020,6 +31033,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</Buildings>
@@ -31233,6 +31247,7 @@
 			<Help>TXT_KEY_UNIT_SUBDUED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>

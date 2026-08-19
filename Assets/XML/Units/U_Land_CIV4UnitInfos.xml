@@ -26543,6 +26543,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
             <PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+            <DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
             <UnitAIs>
                 <UnitAI>
                     <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
@@ -44093,7 +44094,7 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>2</iReduceAnarchyLength>
+							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
@@ -44110,7 +44111,7 @@
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>3</iReduceAnarchyLength>
+							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -44121,7 +44122,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
@@ -44215,7 +44216,7 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>3</iReduceAnarchyLength>
+							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
@@ -44232,7 +44233,7 @@
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>4</iReduceAnarchyLength>
+							<iReduceAnarchyLength>5</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -44243,7 +44244,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
@@ -44325,7 +44326,7 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>4</iReduceAnarchyLength>
+							<iReduceAnarchyLength>5</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
@@ -44342,7 +44343,7 @@
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>5</iReduceAnarchyLength>
+							<iReduceAnarchyLength>6</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -44353,7 +44354,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
@@ -44431,7 +44432,7 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>6</iReduceAnarchyLength>
+							<iReduceAnarchyLength>7</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
@@ -44448,7 +44449,7 @@
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>7</iReduceAnarchyLength>
+							<iReduceAnarchyLength>8</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -44459,7 +44460,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>

@@ -3610,10 +3610,6 @@
 			<bAlwaysHeal>1</bAlwaysHeal>
 			<UnitCombats>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
@@ -3692,6 +3688,7 @@
 			</UnitCombats>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<Button>,Art/Interface/Buttons/Promotions/March.dds,Art/Interface/Buttons/Promotions_Atlas.dds,2,4</Button>
 			<iCaptureResistanceModifierChange>5</iCaptureResistanceModifierChange>
@@ -22441,6 +22438,7 @@
 			<Type>PROMOTION_BUILD_UP_RESTFUL_RECOVERY1</Type>
 			<Description>TXT_KEY_PROMOTION_BUILD_UP_RESTFUL_RECOVERY1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SELF_HEAL1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_RESTFUL_RECOVERY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iSelfHealModifier>1</iSelfHealModifier>

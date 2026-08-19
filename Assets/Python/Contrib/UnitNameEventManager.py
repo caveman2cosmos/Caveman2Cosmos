@@ -109,7 +109,7 @@ class UnitNameEventManager:
 			return
 
 		if UnitNamingOpt.isAdvanced():
-			zsUnitNameConv = UnitNamingOpt.getByEraAndClass(GC.getEraInfo(GC.getPlayer(iPlayer).getCurrentEra()).getType()[4:], GC.getUnitInfo(pUnit.getUnitType()).getType()[5:])
+			zsUnitNameConv = UnitNamingOpt.getByEraAndClass(GC.getEraInfo(GC.getPlayer(iPlayer).getCurrentEra()).getType()[8:], GC.getUnitInfo(pUnit.getUnitType()).getType()[5:])
 		else: zsUnitNameConv = UnitNamingOpt.getDefault()
 
 		zsUnitName = UnitReName().getUnitName(zsUnitNameConv, pUnit, argsList[0], True)

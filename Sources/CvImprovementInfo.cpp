@@ -76,6 +76,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	, m_bCanMoveSeaUnits(true)
 	, m_bChangeRemove(false)
 	, m_bNotOnAnyBonus(false)
+	, m_bRequiresBonus(false)
 	, m_bNational(false)
 	, m_bGlobal(false)
 	//,m_iHighestCost(0)
@@ -454,6 +455,11 @@ bool CvImprovementInfo::isNotOnAnyBonus() const
 	return m_bNotOnAnyBonus;
 }
 
+bool CvImprovementInfo::isRequiresBonus() const
+{
+	return m_bRequiresBonus;
+}
+
 bool CvImprovementInfo::isNational() const
 {
 	return m_bNational;
@@ -641,6 +647,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bCanMoveSeaUnits);
 	CheckSum(iSum, m_bChangeRemove);
 	CheckSum(iSum, m_bNotOnAnyBonus);
+	CheckSum(iSum, m_bRequiresBonus);
 	CheckSum(iSum, m_bNational);
 	CheckSum(iSum, m_bGlobal);
 	CheckSumC(iSum, m_aiAlternativeImprovementUpgradeTypes);
@@ -911,6 +918,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bCanMoveSeaUnits, L"bCanMoveSeaUnits");
 	pXML->GetOptionalChildXmlValByName(&m_bChangeRemove, L"bChangeRemove");
 	pXML->GetOptionalChildXmlValByName(&m_bNotOnAnyBonus, L"bNotOnAnyBonus");
+	pXML->GetOptionalChildXmlValByName(&m_bRequiresBonus, L"bRequiresBonus");
 	pXML->GetOptionalChildXmlValByName(&m_bNational, L"bNational");
 	pXML->GetOptionalChildXmlValByName(&m_bGlobal, L"bGlobal");
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iImprovementPillage, L"ImprovementPillage");
@@ -1135,6 +1143,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isCanMoveSeaUnits() == bDefault) m_bCanMoveSeaUnits = pClassInfo->isCanMoveSeaUnits();
 	if (isChangeRemove() == bDefault) m_bChangeRemove = pClassInfo->isChangeRemove();
 	if (isNotOnAnyBonus() == bDefault) m_bNotOnAnyBonus = pClassInfo->isNotOnAnyBonus();
+	if (isRequiresBonus() == bDefault) m_bRequiresBonus = pClassInfo->isRequiresBonus();
 	if (isNational() == bDefault) m_bNational = pClassInfo->isNational();
 	if (isGlobal() == bDefault) m_bGlobal = pClassInfo->isGlobal();
 

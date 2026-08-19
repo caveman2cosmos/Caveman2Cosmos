@@ -9799,6 +9799,9 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<ObsoleteTech>TECH_GUNPOWDER</ObsoleteTech>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_PANTHERINAE</Type>
+			</PrereqOrHeritage>
 			<iCost>1404</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_HUGE</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>

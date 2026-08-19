@@ -99,7 +99,7 @@ class WBCorporationScreen:
 			sText = u"%c" %(GC.getCorporationInfo(i).getChar())
 			screen.setTableColumnHeader("WBAllCorporations", i + 1, "", (iWidth - 150) / GC.getNumCorporationInfos())
 			screen.setTableText("WBAllCorporations", i + 1, 0, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8201, i, 1<<2)
-			screen.setTableText("WBAllCorporations", i + 1, 1, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8202, i, 1<<2)
+			screen.setTableText("WBAllCorporations", i + 1, 1, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8301, i, 1<<2)
 
 		screen.addTableControlGFC("WBCityCorporations", 3 + GC.getNumCorporationInfos(), iX, iY + 60, iWidth, iHeight, False, True, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBCityCorporations", 0, "", 24)
@@ -225,6 +225,13 @@ class WBCorporationScreen:
 		if pCity.isHeadquartersByType(item):
 			CyGame().clearHeadquarters(item)
 		else:
+			bonuses = GC.getCorporationInfo(item).getPrereqBonuses()
+			if bonuses and not any(pCity.hasBonus(eBonus) for eBonus in bonuses):
+				CyInterface().addImmediateMessage(
+					CyTranslator().getText("TXT_KEY_WB_CORPORATION_NO_BONUS", (pCity.getName(), GC.getCorporationInfo(item).getDescription())),
+					"AS2D_ERROR"
+				)
+				return
 			CyGame().setHeadquarters(item, pCity, False)
 		self.placeHeadquarter()
 

@@ -1465,7 +1465,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 					}
 					// Second pass
 					int iPathTurns;
-					if (!pBestPlot->isVisibleEnemyUnit(this) && generatePath(pBestPlot, 0, true, &iPathTurns))
+					if (!pBestPlot->isVisibleEnemyUnit(this) && generatePath(pBestPlot, isHuman() ? 0 : MOVE_WITH_CAUTION, true, &iPathTurns))
 					{
 						// XXX take advantage of range (warning... this could lead to some units doing nothing...)
 						int iMaxWorkers = 1;
@@ -1500,7 +1500,7 @@ bool CvUnitAI::AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot, BuildT
 		if (0 == iPass && eBestBuild != NO_BUILD)
 		{
 			int iPathTurns;
-			if (!pBestPlot->isVisibleEnemyUnit(this) && generatePath(pBestPlot, 0, true, &iPathTurns))
+			if (!pBestPlot->isVisibleEnemyUnit(this) && generatePath(pBestPlot, isHuman() ? 0 : MOVE_WITH_CAUTION, true, &iPathTurns))
 			{
 				int iMaxWorkers = 1;
 				if (getPathMovementRemaining() == 0)
@@ -5128,6 +5128,14 @@ void CvUnitAI::AI_cityDefenseMove()
 	/* DCM									 END												  */
 	/************************************************************************************************/
 	if (AI_guardCityBestDefender())
+	{
+		return;
+	}
+
+	// Not needed as this city's top defender right now - if we're not in immediate
+	//	danger, take the opportunity to head for wherever we can actually upgrade
+	//	(e.g. Tribal Guardian -> Palace Guard needs the capital specifically).
+	if (!bDanger && AI_travelToUpgradeCity())
 	{
 		return;
 	}
@@ -13408,9 +13416,17 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 		{
 			return true;
 		}
-		if (healRate(plot()) > 10)
+		const int iHealRateHere = healRate(plot());
+		if (iHealRateHere > 10)
 		{
 			pGroup->pushMission(MISSION_HEAL);
+			return true;
+		}
+		// Stuck somewhere we literally cannot heal at all (not friendly territory,
+		//	no self-heal/battlefield medicine, no healer nearby) - head for one of
+		//	our own cities instead of just parking here undamaged-but-unhealed.
+		if (!isHuman() && 0 == iHealRateHere && AI_retreatToCity())
+		{
 			return true;
 		}
 		if (AI_safety(iMaxPath))
@@ -21311,7 +21327,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 				&& (currentImprovementOnPlot == NO_IMPROVEMENT || GC.getBuildInfo(bestBuildForCurrentCity).getImprovement() != NO_IMPROVEMENT)
 				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->getNumWorkers() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
 				&& canBuild(pLoopPlot, bestBuildForCurrentCity)
-				&& generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
+				&& generatePath(pLoopPlot, isHuman() ? 0 : MOVE_WITH_CAUTION, true, &iPathTurns))
 				{
 					int iValue = pCity->AI_getBestBuildValue(iIndex);
 					int iMaxWorkers = 1;
@@ -21406,7 +21422,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 {
 	PROFILE_FUNC();
 
-	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
+	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_WITH_CAUTION | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
 	int iBestPlotValue = 0;
 	int iBestCityValue = 0;
@@ -21751,7 +21767,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 						{
 							int iPathTurns;
 							// XXX should this actually be at the top of the loop? (with saved paths and all...)
-							if (generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
+							if (generatePath(pLoopPlot, isHuman() ? 0 : MOVE_WITH_CAUTION, true, &iPathTurns))
 							{
 								const int iValue = 10000 / (iPathTurns + 1);
 
@@ -21804,9 +21820,9 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 	const PlayerTypes ePlayer = getOwner();
 	const CvPlayerAI& kOwner = GET_PLAYER(ePlayer);
 	const bool bLeaveForests = kOwner.isOption(PLAYEROPTION_LEAVE_FORESTS);
-	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
+	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_WITH_CAUTION | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 
-	CvReachablePlotSet plotSet(getGroup(), isHuman() ? 0 : MOVE_IGNORE_DANGER, MAX_INT);
+	CvReachablePlotSet plotSet(getGroup(), isHuman() ? 0 : MOVE_WITH_CAUTION, MAX_INT);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
@@ -21928,7 +21944,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 	{
 		iMaxDistFromBorder = GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS();
 	}
-	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
+	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_WITH_CAUTION | MOVE_RECONSIDER_ON_LEAVING_OWNED);
 	const ImprovementTypes eRuins = GC.getIMPROVEMENT_CITY_RUINS();
 	const PlayerTypes ePlayer = getOwner();
 	const CvPlayerAI& kOwner = GET_PLAYER(ePlayer);
@@ -22097,8 +22113,10 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 						PROFILE("CvUnitAI::AI_improveBonus.Evaluate");
 
-						//	We use MOVE_IGNORE_DANGER in here so that the worker won't be spooked before it gets a chance
-						//	to find a target plot (at which poin it will ask for an escort if necessary)
+						//	Use the same caution here as the mission that will actually be pushed for this plot,
+						//	so a plot judged reachable now doesn't get its move aborted mid-route by a stricter
+						//	danger check next turn (that mismatch caused automated workers to bounce back and
+						//	forth between re-evaluations instead of settling on a build).
 						if (generatePath(pLoopPlot, iBasePathFlags, true, &iPathTurns))
 						{
 							int iValue = kOwner.AI_bonusVal(eNonObsoleteBonus);

@@ -39,7 +39,9 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
 	const CvPlayerAI& ownerReference = GET_PLAYER(unitOwner);
-	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	const int iBasePathFlags =
+		(MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED)
+		| (unit->isHuman() ? 0 : MOVE_WITH_CAUTION);
 	const bool gameOptionLeaveForests = ownerReference.isOption(PLAYEROPTION_LEAVE_FORESTS);
 	const bool gameOptionSafeAutomation = ownerReference.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 	const bool gameOptionZoneOfControl = GC.getGame().isOption(GAMEOPTION_UNSUPPORTED_ZONE_OF_CONTROL);
@@ -128,7 +130,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		eBestMission = MISSION_ROUTE_TO;
 	}
 
-	if (unit->getGroup()->pushMissionInternal(eBestMission, bestPlot->getX(), bestPlot->getY(), (unit->isHuman() ? 0 : MOVE_WITH_CAUTION), false, false, MISSIONAI_BUILD, bestPlot))
+	if (unit->getGroup()->pushMissionInternal(eBestMission, bestPlot->getX(), bestPlot->getY(), iBasePathFlags, false, false, MISSIONAI_BUILD, bestPlot))
 	{
 		unit->getGroup()->pushMission(MISSION_BUILD, overallBestBuild, -1, 0, (unit->getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, bestPlot);
 		return true;

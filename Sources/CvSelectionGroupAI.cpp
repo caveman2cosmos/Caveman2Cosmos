@@ -34,6 +34,10 @@ void CvSelectionGroupAI::AI_reset()
 	m_bGroupAttack = false;
 	m_iGroupAttackX = -1;
 	m_iGroupAttackY = -1;
+
+	m_iStuckUpdatePasses = 0;
+	m_iStuckUpdateX = INVALID_PLOT_COORD;
+	m_iStuckUpdateY = INVALID_PLOT_COORD;
 }
 
 namespace {
@@ -267,6 +271,36 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
+	// Groups awaiting a contract (e.g. AI_attackCityMove() advertising for reinforcements/a
+	// healer/a commander) are deliberately excluded from the MISSION_SKIP fallback below so
+	// they aren't force-skipped while legitimately waiting for help to arrive. But if such a
+	// group's per-turn decision logic never produces a mission that actually moves it (e.g.
+	// stuck at a step-distance where AI_attackCityMove()'s engage/retreat/regroup branches all
+	// no-op), it has no other termination safety and can loop forever -> "AI turn does not
+	// end". Track consecutive stuck passes at the same plot and stop honouring the
+	// awaiting-contract exclusion once that's gone on too long.
+	if (!bDead && AI_isAwaitingContract() && readyToMove())
+	{
+		const CvPlot* pCurrentPlot = plot();
+		const int iCurrentX = pCurrentPlot ? pCurrentPlot->getX() : INVALID_PLOT_COORD;
+		const int iCurrentY = pCurrentPlot ? pCurrentPlot->getY() : INVALID_PLOT_COORD;
+
+		if (iCurrentX == m_iStuckUpdateX && iCurrentY == m_iStuckUpdateY)
+		{
+			++m_iStuckUpdatePasses;
+		}
+		else
+		{
+			m_iStuckUpdatePasses = 1;
+			m_iStuckUpdateX = iCurrentX;
+			m_iStuckUpdateY = iCurrentY;
+		}
+	}
+	else
+	{
+		m_iStuckUpdatePasses = 0;
+	}
+
 	// Human AUTOMATED groups are AI-controlled too (they pass the AI_isControlled() gate at
     // the top of this function), so they need the same end-of-update termination safety as AI
     // groups -- in particular the MISSION_SKIP fallback below. Without it, an automated unit
@@ -275,7 +309,9 @@ bool CvSelectionGroupAI::AI_update()
     // every outer AI_unitUpdate pass: it re-runs its whole cascade each pass (observed ~196x/
     // turn via [UNT/act] heal-spam) and, in rare states, the turn never terminates. The
     // original !isHuman() guard wrongly excluded automated human groups from this safety.
-    if (!bDead && (!isHuman() || isAutomated()) && !AI_isAwaitingContract())
+    // A group stuck awaiting a contract at the same plot for more than 20 consecutive passes
+    // is treated the same way -- it's not making progress, so stop waiting and let it skip.
+    if (!bDead && (!isHuman() || isAutomated()) && (!AI_isAwaitingContract() || m_iStuckUpdatePasses > 20))
 	{
 		bool bFollow = false;
 

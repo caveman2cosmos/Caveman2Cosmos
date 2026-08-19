@@ -43,6 +43,7 @@ public:
 	bool isCanMoveSeaUnits() const;
 	bool isChangeRemove() const;
 	bool isNotOnAnyBonus() const;
+	bool isRequiresBonus() const;
 	bool isNational() const;
 	bool isGlobal() const;
 
@@ -155,6 +156,7 @@ private:
 	bool m_bCanMoveSeaUnits;
 	bool m_bChangeRemove;
 	bool m_bNotOnAnyBonus;
+	bool m_bRequiresBonus;
 	bool m_bNational;
 	bool m_bGlobal;
 

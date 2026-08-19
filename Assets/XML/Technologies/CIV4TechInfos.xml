@@ -12713,6 +12713,7 @@
 			<Era>C2C_ERA_RENAISSANCE</Era>
 			<iAsset>16</iAsset>
 			<iPower>4</iPower>
+			<bTrade>1</bTrade>
 			<iGridX>53</iGridX>
 			<iGridY>19</iGridY>
 			<Flavors>

@@ -1683,8 +1683,7 @@ class CvVictoryScreen:
 				self.iTab = 0
 				self.showVictoryConditionScreen(screen)
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
-			if NAME.startswith("VS_Tab"):
-				ID = int(NAME[-1])
+			if NAME == "VS_Tab":
 				screen.hide("VS_Col_Tab" + str(self.iTab))
 				screen.show("VS_Tab" + str(self.iTab))
 				screen.hide("VS_Tab" + str(ID))

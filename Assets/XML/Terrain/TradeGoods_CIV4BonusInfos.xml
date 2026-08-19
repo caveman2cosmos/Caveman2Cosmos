@@ -179,7 +179,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WINE_VINTAGE_RED</ArtDefineTag>
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
-			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 		</BonusInfo>
 		<BonusInfo>

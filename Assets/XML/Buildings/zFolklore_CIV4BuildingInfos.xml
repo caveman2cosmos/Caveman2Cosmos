@@ -2052,6 +2052,10 @@
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VULTURE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_OSTRICH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_MACAW</Type>
@@ -2059,6 +2063,11 @@
 				<Type>HERITAGE_FOLKLORE_OWL_BARRED</Type>
 				<Type>HERITAGE_FOLKLORE_OWL_GREAT_HORNED</Type>
 				<Type>HERITAGE_FOLKLORE_PARROT_AFRICAN_GREY</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
+				<Type>HERITAGE_FOLKLORE_PLATYPUS</Type>
 			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
@@ -3848,6 +3857,12 @@
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALE_SHARK</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -4012,6 +4027,12 @@
 				<BuildingType>BUILDING_FOLKLORE_OSTRICH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_EMPEROR</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_ROCKHOPPER</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -8521,6 +8542,10 @@
 				<BuildingType>BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_AFRICAN</Type>
+				<Type>HERITAGE_FOLKLORE_PENGUIN_GALAPAGOS</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>

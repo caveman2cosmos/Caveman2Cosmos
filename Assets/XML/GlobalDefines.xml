@@ -1202,7 +1202,7 @@
 	</Define>
     <Define>
         <DefineName>FIRE_EVENT_RAND</DefineName>
-        <iDefineIntVal>2000</iDefineIntVal>
+        <iDefineIntVal>4000</iDefineIntVal>
     </Define>
     <Define>
         <DefineName>FIRE_MIN_FLAMMABILITY</DefineName>

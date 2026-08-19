@@ -2450,9 +2450,11 @@ class CvEventManager:
 				CyPlayer = GC.getPlayer(iPlayer)
 				if GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getType() == "CIVILIZATION_NEANDERTHAL":
 					iUnitTG = GC.getInfoTypeForString("UNIT_NEANDERTHAL_TRIBAL_GUARDIAN")
+					eUnitTGAI = UnitAITypes.UNITAI_PROPERTY_CONTROL
 				else:
 					iUnitTG = GC.getInfoTypeForString("UNIT_TRIBAL_GUARDIAN")
-				CyUnitTG = CyPlayer.initUnit(iUnitTG, CyUnit.getX(), CyUnit.getY(), UnitAITypes.UNITAI_PROPERTY_CONTROL, DirectionTypes.DIRECTION_SOUTH)
+					eUnitTGAI = UnitAITypes.UNITAI_CITY_DEFENSE
+				CyUnitTG = CyPlayer.initUnit(iUnitTG, CyUnit.getX(), CyUnit.getY(), eUnitTGAI, DirectionTypes.DIRECTION_SOUTH)
 				iExp = CyUnit.getExperience()
 				CyUnitTG.setExperience(iExp)
 		if iPop:

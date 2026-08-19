@@ -3156,6 +3156,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	if(pInfo.isNoFreshWater() && isFreshWater()
 	|| pInfo.isRequiresFlatlands() && !isFlatlands()
 	|| pInfo.isRequiresFeature() && eFeature == NO_FEATURE
+	|| pInfo.isRequiresBonus() && eBonus == NO_BONUS
 	// Special canal condition
 	|| pInfo.isCanMoveSeaUnits() && !isCoastalLand())
 	{

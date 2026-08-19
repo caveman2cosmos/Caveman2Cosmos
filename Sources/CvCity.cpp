@@ -9277,7 +9277,11 @@ int CvCity::getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, i
 
 		if (hasFullyActiveBuilding(eBuildingX))
 		{
-			addGoodOrBad(-getBuildingHealth(eBuildingX), iGood, iBad);
+			// Cancel the old building's good/bad health against the matching bucket rather than
+			// through addGoodOrBad(), which would route the negated net value by its own sign and
+			// turn e.g. -1 unhealthy vs -1 unhealthy into a phantom +1 good / +1 bad display pair.
+			iGood -= getBuildingGoodHealth(eBuildingX);
+			iBad += getBuildingBadHealth(eBuildingX);
 		}
 	}
 
@@ -21360,7 +21364,7 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 	}
 
 	// --- Direct city plot check ---
-	if (plot()->getBonusType() == eBonus)
+	if (plot()->getBonusType(getTeam()) == eBonus)
 	{
 		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 		{
@@ -21375,7 +21379,7 @@ bool CvCity::hasRawVicinityBonus(BonusTypes eBonus) const
 	{
 		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 		if (pLoopPlot != NULL
-			&& pLoopPlot->getBonusType() == eBonus
+			&& pLoopPlot->getBonusType(getTeam()) == eBonus
 			&& pLoopPlot->getOwner() == getOwner())
 		{
 			if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))

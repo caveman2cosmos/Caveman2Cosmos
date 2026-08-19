@@ -10590,6 +10590,7 @@
                 </TerrainMakesValid>
             </TerrainMakesValids>
             <iCulture>10</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
             <ImprovementUpgrade>IMPROVEMENT_RESOURCE_OUTPOST</ImprovementUpgrade>
             <bBombardable>1</bBombardable>
             <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -10678,6 +10679,7 @@
                 </TerrainMakesValid>
             </TerrainMakesValids>
             <iCulture>20</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
             <ImprovementUpgrade>IMPROVEMENT_RESOURCE_SETTLEMENT</ImprovementUpgrade>
             <bBombardable>1</bBombardable>
             <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -10765,6 +10767,7 @@
                 </TerrainMakesValid>
             </TerrainMakesValids>
             <iCulture>30</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
             <ImprovementUpgrade>IMPROVEMENT_RESOURCE_TOWN</ImprovementUpgrade>
             <bBombardable>1</bBombardable>
             <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -10853,6 +10856,7 @@
                 </TerrainMakesValid>
             </TerrainMakesValids>
             <iCulture>40</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
             <ImprovementUpgrade>IMPROVEMENT_RESOURCE_COMPLEX</ImprovementUpgrade>
             <bBombardable>1</bBombardable>
             <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -10941,6 +10945,7 @@
                 </TerrainMakesValid>
             </TerrainMakesValids>
             <iCulture>50</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
             <bBombardable>1</bBombardable>
             <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
             <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>

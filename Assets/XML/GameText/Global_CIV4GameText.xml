@@ -13909,6 +13909,10 @@
 		<Spanish>¡%s1_CorpName se ha incorporado a una tierra lejana!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_CORPORATION_NO_BONUS</Tag>
+		<English>%s1_CityName cannot become the headquarters of %s2_CorpName: it has no access to a required resource.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_CORPORATION_HOSTILE_TAKEOVER</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] has been shut down in a hostile take over by the [COLOR_HIGHLIGHT_TEXT]%s2_CorpName[COLOR_REVERT] in %s3_CityName.</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1_CorpName[COLOR_REVERT] a été fermé dans une action hostile de [COLOR_HIGHLIGHT_TEXT]%s2_CorpName[COLOR_REVERT] à %s3_CityName.</French>
@@ -20590,7 +20594,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2</Tag>
-		<English>City Governors Build Workers</English>
+		<English>Auto-Fortify Newly Trained Units</English>
 		<French>Gouverneurs construisent Ouvriers</French>
 		<German>Stadtverwalter: Bautrupp aufstellen</German>
 		<Italian>I governatori cittadini costruiscono i lavoratori</Italian>
@@ -20600,7 +20604,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_MODDER_2_HELP</Tag>
-		<English>City governors can build Workers when needed</English>
+		<English>Newly trained units are automatically put to Sleep/Fortify instead of waiting for orders</English>
 		<French>Les Gouverneurs des Villes peuvent construire des Ouvriers si nécessaire</French>
 		<German>Läßt den Stadtverwalter Bautrupps aufstellen, falls dies erforderlich ist</German>
 		<Italian>[BOLD]I governatori cittadini (quando la città è gestita dalla IA) possono [COLOR_HIGHLIGHT_TEXT] costruire i lavoratori[COLOR_REVERT] se è necessario[\BOLD]</Italian>

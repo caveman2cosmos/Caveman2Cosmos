@@ -34,6 +34,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_NAVIGATION</Type>
@@ -385,6 +388,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_CHARGE</Type>
@@ -454,6 +460,7 @@
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -478,6 +485,7 @@
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -2532,7 +2540,7 @@
 			<Description>TXT_KEY_PROMOTIONLINE_TO_THE_DEATH</Description>
 			<Button>Art/Interface/Buttons/Promotions/flaming1.dds</Button>
 			<UnitCombatPrereqTypes>
-				<UnitCombatPrereqType>UNITCOMBAT_COMMANDER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_COMBATANT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
@@ -2966,6 +2974,8 @@
 				<NotOnUnitCombatType>UNITCOMBAT_ATTACHE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_CAPTIVE</NotOnUnitCombatType>
                 <NotOnUnitCombatType>UNITCOMBAT_MISSIONARY</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_HEALTH_CARE</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>

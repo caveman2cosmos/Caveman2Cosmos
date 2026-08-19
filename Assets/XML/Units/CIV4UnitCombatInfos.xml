@@ -8815,6 +8815,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<iMovesChange>1</iMovesChange>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>30</iCaptureResistanceModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/tamed.dds</Button>

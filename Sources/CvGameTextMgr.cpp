@@ -11208,7 +11208,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 						CvWString(GC.getSpecialistInfo((SpecialistTypes) iI).getType()).GetCString(),
 						GC.getSpecialistInfo((SpecialistTypes) iI).getTextKeyWide()
 					),
-					aList, true
+					aList
 				);
 			}
 		}
@@ -11420,20 +11420,6 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 			szHelpString.append(NEWLINE);
 			szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY_PER_POP", kTrait.getFreeUnitUpkeepMilitaryPopPercent()));
 		}
-	}
-
-	//	Free military units base
-	if (kTrait.getFreeUnitUpkeepMilitary() != 0)
-	{
-		szHelpString.append(NEWLINE);
-		szHelpString.append(gDLL->getText("TXT_KEY_HELPTEXT_UNIT_UPKEEP_FREE_MILITARY", kTrait.getFreeUnitUpkeepMilitary()));
-	}
-
-	//	Free Military units population percent
-	if (kTrait.getFreeUnitUpkeepMilitaryPopPercent() != 0)
-	{
-		szHelpString.append(NEWLINE);
-		szHelpString.append(gDLL->getText("TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP", kTrait.getFreeUnitUpkeepMilitaryPopPercent()));
 	}
 
 	if (kTrait.getCivilianUnitUpkeepMod() != 0)
@@ -20166,7 +20152,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 						if (eCombat == NO_UNITCOMBAT) continue;
 					}
-					iExperience = pCity->getUnitCombatFreeExperience(eCombat);
+					iExperience = pCity->getUnitCombatFreeExperience(eCombat) + kPlayer.getUnitCombatFreeExperience(eCombat);
 					if (iExperience != 0)
 					{
 						if (bFirst)
@@ -26687,14 +26673,14 @@ void CvGameTextMgr::setReligionHelp(CvWStringBuffer &szBuffer, ReligionTypes eRe
 		const int* aList = religion.getHolyCityCommerceArray();
 		if (aList)
 		{
-			listCommerceChange(szBuffer, CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_RELIGION_HOLY_CITY").c_str()), L"", aList, true);
+			listCommerceChange(szBuffer, CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_RELIGION_HOLY_CITY").c_str()), L"", aList);
 		}
 	}
 	{
 		const int* aList = religion.getStateReligionCommerceArray();
 		if (aList)
 		{
-			listCommerceChange(szBuffer, CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_RELIGION_ALL_CITIES").c_str()), L"", aList, true);
+			listCommerceChange(szBuffer, CvWString::format(L"\n%c%s: ", gDLL->getSymbolID(BULLET_CHAR), gDLL->getText("TXT_KEY_RELIGION_ALL_CITIES").c_str()), L"", aList);
 		}
 	}
 

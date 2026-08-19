@@ -384,7 +384,7 @@ CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const char* pszHotKey, b
 	// Delete <COLOR:140,255,40,255>Shift+Delete</COLOR>
 	CvWString szHotKey;
 
-	if (pszHotKey && strcmp(pszHotKey, "") != 0)
+	if (pszHotKey && strcmp(pszHotKey, "") != 0 && strcmp(pszHotKey, "0") != 0)
 	{
 		szHotKey += L" <color=140,255,40,255>";
 		szHotKey += L"&lt;";
