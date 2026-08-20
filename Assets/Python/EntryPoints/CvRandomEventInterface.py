@@ -663,7 +663,7 @@ def canTriggerMonsoonCity(argsList):
 
   city = GC.getPlayer(ePlayer).getCity(iCity)
 
-  if city is None or city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
+  if city is None or not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getFEATURE_JUNGLE()
