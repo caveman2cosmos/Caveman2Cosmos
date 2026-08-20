@@ -14996,10 +14996,6 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 					{
 						iWeightedValue = (iWeightedValue * (5 + pLoopCity->getPopulation())) / 10;
 					}
-					else
-					{
-						iWeightedValue = iValue;
-					}
 
 					if (iValue > iThreshold && iWeightedValue > iBestWeightedValue)
 					{
