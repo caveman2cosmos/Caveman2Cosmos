@@ -4763,11 +4763,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DARWINS_VOYAGE</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE1</Text>
+				<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE2</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>

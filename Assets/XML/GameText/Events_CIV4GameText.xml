@@ -12506,6 +12506,11 @@
     </TEXT>
 
     <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE2</Tag>
+        <English>After completing an ocean voyage around the world, one of %s1_civ_adjective scientists has published a new theory of the origins of life based on his studies of the strange animals in foreign lands.</English>
+    </TEXT>
+
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DOCK_WORKERS_STRIKE</Tag>
 		<English>Dock workers in %s2_city have begun a city-wide strike, calling for better working conditions!</English>
 		<French>Les Dockers de %s2_city ont cessé le travail et font grève pour de meilleures conditions de travail!</French>
