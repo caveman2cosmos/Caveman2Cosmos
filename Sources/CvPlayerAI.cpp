@@ -34175,11 +34175,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	iTemp = kUnitCombat.getBreakdownChanceChange();
 	if (iTemp != 0)
 	{
-		if (eUnitAI == UNITAI_ATTACK_CITY)
-		{
-			iValue += (iTemp * 2);
-		}
-		else if (pUnit != NULL && pUnit->canAttack())
+		if (pUnit != NULL && pUnit->canAttack())
 		{
 			iTemp *= pUnit->breakdownDamageTotal();
 			iTemp /= 100;
@@ -34192,16 +34188,16 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 				iValue += (iTemp / 8);
 			}
 		}
+		else if (eUnitAI == UNITAI_ATTACK_CITY)
+		{
+			iValue += (iTemp * 2);
+		}
 	}
 
 	iTemp = kUnitCombat.getBreakdownDamageChange();
 	if (iTemp != 0)
 	{
-		if (eUnitAI == UNITAI_ATTACK_CITY)
-		{
-			iValue += (iTemp * 2);
-		}
-		else if (pUnit != NULL && pUnit->canAttack())
+		if (pUnit != NULL && pUnit->canAttack())
 		{
 			iTemp *= pUnit->breakdownChanceTotal();
 			iTemp /= 100;
@@ -34213,6 +34209,10 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			{
 				iValue += (iTemp / 8);
 			}
+		}
+		else if (eUnitAI == UNITAI_ATTACK_CITY)
+		{
+			iValue += (iTemp * 2);
 		}
 	}
 
@@ -35868,7 +35868,7 @@ void CvPlayerAI::AI_formArmies()
 								return;
 							}
 						}
-
+						break;
 					}
 				}
 			}
