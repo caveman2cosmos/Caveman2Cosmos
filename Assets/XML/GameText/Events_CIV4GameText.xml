@@ -1592,6 +1592,10 @@
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de la pierre.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OIL</Tag>
+        <English>%s1_civ_adjective workers have found oil.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
         <English>%s1_civ_adjective miners have found coal.</English>
 		<French>Les mineurs %s1:3_civ_adjective ont trouvé du charbon.</French>
@@ -13323,6 +13327,10 @@
         <Tag>TXT_KEY_EVENT_TRIGGER_STONE_1</Tag>
         <English>Workers have discovered a new source of stone.</English>
 		<French>Les ouvriers ont découvert une nouvelle source de pierre.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OIL_1</Tag>
+        <English>Workers have discovered a new source of oil.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COAL_1</Tag>
