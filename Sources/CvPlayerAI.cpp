@@ -14804,8 +14804,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 					int iTempBadBuilding = 0;
 					pLoopCity->getAdditionalHealthByCivic(eOtherCivic, iGoodHealthFromOtherCivics, iBadHealthFromOtherCivics, iTempBadBuilding, false, iExtraPop, /* bCivicOptionVacuum */ true, 0, 0);
 				}
-				iBadHealthFromOtherCivics = -iBadHealthFromOtherCivics; //negative values
 			}
+			iBadHealthFromOtherCivics = -iBadHealthFromOtherCivics; //negative values
 
 			//free iCityHealth from all current civic health effects
 			iCityHealth -= (iGoodHealthFromOtherCivics + iBadHealthFromOtherCivics); //does not include effects from NoUnhealthyPopulation or BuildingOnlyHealthy
