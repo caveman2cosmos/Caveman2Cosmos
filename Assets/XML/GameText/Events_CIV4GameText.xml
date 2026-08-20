@@ -1522,6 +1522,10 @@
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du kava.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCOA</Tag>
+        <English>%s1_civ_adjective workers have found cocoa.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
         <English>%s1_civ_adjective workers have found sugar.</English>
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du sucre.</French>
@@ -13331,6 +13335,10 @@
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_OIL_1</Tag>
         <English>Workers have discovered a new source of oil.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCOA_1</Tag>
+        <English>Workers have discovered a new source of cocoa.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COAL_1</Tag>
