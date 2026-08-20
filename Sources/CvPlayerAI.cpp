@@ -22558,7 +22558,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_SPACE2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_SPACE3;
@@ -22581,7 +22581,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_CONQUEST2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_CONQUEST3;
@@ -22604,7 +22604,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_DOMINATION2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_DOMINATION3;
@@ -22627,7 +22627,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_CULTURE2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_CULTURE3;
