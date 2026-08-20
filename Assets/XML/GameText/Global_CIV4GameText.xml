@@ -6875,6 +6875,10 @@
 		<Italian>%D1%%: per la religione ufficiale</Italian>
 		<Spanish>%D1%%: Por nuestra religión oficial</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_ESPIONAGE_SCREEN</Tag>
+        <English>Espionage</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SCREEN_COST</Tag>
 		<English>Cost</English>
