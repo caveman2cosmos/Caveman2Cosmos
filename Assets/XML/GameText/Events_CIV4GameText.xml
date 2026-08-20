@@ -3664,6 +3664,10 @@
 		<French>Le peyotl, dites-vous.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENT_PRICKLY_PEAR_1</Tag>
+        <English>As long as its tasty.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENT_FIG_1</Tag>
         <English>Hmm let me taste some of them figs.</English>
 		<French>Hmm, laissez-moi goûter quelques figues.</French>
