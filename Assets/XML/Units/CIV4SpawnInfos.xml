@@ -2656,7 +2656,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_BOAR_NATIVE</Type>
+			<Type>SPAWN_BOAR_BONUS</Type>
 			<UnitType>UNIT_BOAR</UnitType>
 			<PlayerType>PREY_PLAYER</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
