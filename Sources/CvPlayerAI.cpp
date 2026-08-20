@@ -19477,6 +19477,12 @@ void CvPlayerAI::AI_doDiplo()
 											}
 											else
 											{
+												ourList.clear();
+												theirList.clear();
+
+												setTradeItem(&item, TRADE_PEACE, eBestTeam);
+												theirList.insertAtEnd(item);
+
 												GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
 											}
 										}
