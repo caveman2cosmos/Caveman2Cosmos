@@ -3629,7 +3629,7 @@ void CvUnitAI::AI_attackCityMove()
 						return;
 					}
 				}
-				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || (iOurOffense / (iEnemyOffense+1)) > 39/20 || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
+				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || 20 * iOurOffense > 39 * (iEnemyOffense+1) || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
 				{
 					if (iComparePostBombard < std::max(150, GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
 					{
