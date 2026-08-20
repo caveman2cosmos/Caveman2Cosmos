@@ -7025,7 +7025,10 @@ def applyCivilWar(argsList):
 			iNewID = iID
 			break
 		else:
-			return False
+			continue
+
+	if iNewID == -1:
+		return False
 
 	# Add the player to the game
 	GAME.addPlayer(iNewID, NewLeaderID, iNewCiv)
