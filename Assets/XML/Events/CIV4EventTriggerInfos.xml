@@ -5175,7 +5175,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PAPYRUS</Type>
+			<Type>EVENTTRIGGER_PAPYRUS_USAGE</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_1</Text>
 				<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_2</Text>
