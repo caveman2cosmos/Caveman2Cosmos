@@ -13710,7 +13710,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		else if (isConsiderReligiousVictory())
 		{
-			iTempValue /= 5;
+			iTempValue += (iNonstateReligionCount * 20) / 5;
 		}
 		iTempValue += countCityReligionRevolts() * 5;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
