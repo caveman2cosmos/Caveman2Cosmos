@@ -6158,8 +6158,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
 					}
 				}
+				break;
 			}
-			break;
 		}
 	}
 	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())
