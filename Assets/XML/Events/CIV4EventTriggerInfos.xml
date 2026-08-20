@@ -14481,6 +14481,7 @@
 				<Event>EVENT_FORT_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15542,6 +15543,7 @@
 				<Event>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15568,6 +15570,7 @@
 				<Event>EVENT_ABATIS_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15594,6 +15597,7 @@
 				<Event>EVENT_PALISADE_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15620,6 +15624,7 @@
 				<Event>EVENT_BUNKER_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15646,6 +15651,7 @@
 				<Event>EVENT_FUTURE_BUNKER_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>

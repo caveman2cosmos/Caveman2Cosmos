@@ -715,6 +715,21 @@ def canTriggerDustbowlCont(argsList):
 def getHelpDustBowl2(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_DUSTBOWL_2_HELP", ())
 
+######## FORT_IN_DISREPAIR ###########
+
+def canTriggerFortInDisrepair(argsList):
+	data = argsList[0]
+
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not plot:
+		return False
+
+	for unit in plot.units():
+		if unit.canFight():
+			return False
+
+	return True
+
 ######## SALTPETER ###########
 
 def getSaltpeterNumExtraPlots():
