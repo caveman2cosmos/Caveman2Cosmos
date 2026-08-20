@@ -21871,7 +21871,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 			if (iValue > iMinAcceptableValue)
 			{
-				int iBestBuildValue = MAX_INT;
+				int iBestBuildValue = 0;
 				BuildTypes eBestTempBuild = NO_BUILD;
 
 				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
@@ -23606,8 +23606,8 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 					{
 						if (plotSet.find(plotY) != plotSet.end()
 						// If we can move into the target plot in one turn take account of enemy units there
-						&& stepDistance(plotY->getX(), plotY->getY(), getX(), getY()) > getMoves()
-						|| !plotY->isVisibleEnemyUnit(this))
+						&& (stepDistance(plotY->getX(), plotY->getY(), getX(), getY()) > getMoves()
+						|| !plotY->isVisibleEnemyUnit(this)))
 						{
 							pPickupPlot = plotY;
 							break;
