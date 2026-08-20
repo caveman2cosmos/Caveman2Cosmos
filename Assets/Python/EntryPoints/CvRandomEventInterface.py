@@ -5871,7 +5871,7 @@ def getHelpSuperVirus2(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_SMALL_VIRUS_SPREAD",()) + "\n"
 	szHelp += TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (1, CyPlayer.getCity(data.iCityId).getNameKey()))
 
-	iGold = 100 + CyPlayer.getNumCities() * 35
+	iGold = 100 + CyPlayer.getNumCities() * 350
 	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>"
 	else: szHelp += "\n"
@@ -5882,7 +5882,7 @@ def canTriggerSuperVirus2(argsList):
 	data = argsList[1]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 35:
+	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 350:
 		return False
 	return True
 
@@ -5912,7 +5912,7 @@ def getHelpSuperVirus3(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (2, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_SCIENTIST")).getTextKey(), szCityNameKey))
 	szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_LOSE_POPULATION", (CyCity.getPopulation()*25/100, szCityNameKey))
 
-	iGold = 100 + CyPlayer.getNumCities() * 65
+	iGold = 100 + CyPlayer.getNumCities() * 650
 
 	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
@@ -5935,7 +5935,7 @@ def canTriggerSuperVirus3(argsList):
   eventCity = player.getCity(data.iCityId)
   team = GC.getTeam(player.getTeam())
 
-  iRequireGold = 100 + player.getNumCities() * 65
+  iRequireGold = 100 + player.getNumCities() * 650
   if (player.getGold() < iRequireGold):
     return False
   iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
