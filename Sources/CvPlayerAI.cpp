@@ -27739,6 +27739,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 		}
 	}
+	iValue += iTemp;
 
 	//#15 Effects for Promotions with isPillages...
 	{
