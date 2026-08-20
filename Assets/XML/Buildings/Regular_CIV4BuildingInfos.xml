@@ -70134,7 +70134,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_CORN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_CORN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_CORN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70178,7 +70178,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_POTATO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_POTATO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_POTATO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70222,7 +70222,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_RICE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_RICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_RICE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70266,7 +70266,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_WHEAT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_WHEAT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_WHEAT</ArtDefineTag>
 			<MapCategoryTypes>
