@@ -2224,7 +2224,7 @@ def expireCrusade1(argsList):
 	data = argsList[1]
 
 	holyCity = GAME.getHolyCity(data.eReligion)
-	if holyCity is None or holyCity.getOwner() != data.eOtherPlayer:
+	if holyCity is None or (holyCity.getOwner() != data.eOtherPlayer and holyCity.getOwner() != data.ePlayer):
 		return True
 
 	if holyCity.getOwner() == data.ePlayer:
