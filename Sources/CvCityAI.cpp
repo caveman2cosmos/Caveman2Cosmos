@@ -15441,7 +15441,7 @@ const {
 
 			if (kBuilding.getGlobalYieldModifier(iI) > 0 || kBuilding.getAreaYieldModifier(iI) > 0)
 			{
-				foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				foreach_(const CvCity * pLoopCity, kOwner.cities())
 				{
 					iGlobalYieldModValue +=
 					(
