@@ -5062,7 +5062,7 @@ def canApplyEarthquake1(argsList):
         for iDY in xrange(-1, 2):
             plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
             if plotX and not plotX.isWater():
-                if plotX.getImprovementType() != -1:
+                if plotX.getImprovementType() > 1:
                     return True
     return False
 
@@ -5077,7 +5077,7 @@ def applyEarthquake1(argsList):
 				plots.append((plotX, plotX.getImprovementType()))
 				iPlots += 1
 
-	if not plots: raise "Event - Error in canApplyVolcano1"
+	if not plots: raise "Event - Error in canApplyEarthquake1"
 
 	if iPlots < 3:
 		iRange = iPlots
