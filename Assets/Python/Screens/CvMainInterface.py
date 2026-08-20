@@ -5891,11 +5891,15 @@ class CvMainInterface:
 
 			elif BASE == "CT":
 				if TYPE == "UnitFilter":
-					self.InCity.CyCity.setUnitListFilterActive(ID, not self.InCity.CyCity.getUnitListFilterActive(ID))
+					bNewState = not self.InCity.CyCity.getUnitListFilterActive(ID)
+					self.InCity.CyCity.setUnitListFilterActive(ID, bNewState)
+					screen.setState(NAME, bNewState)
 					self.updateCityTab(screen)
 
 				elif TYPE == "BuildingFilter":
-					self.InCity.CyCity.setBuildingListFilterActive(ID, not self.InCity.CyCity.getBuildingListFilterActive(ID))
+					bNewState = not self.InCity.CyCity.getBuildingListFilterActive(ID)
+					self.InCity.CyCity.setBuildingListFilterActive(ID, bNewState)
+					screen.setState(NAME, bNewState)
 					self.updateCityTab(screen)
 
 				elif TYPE == "Options":
