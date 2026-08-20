@@ -19154,16 +19154,6 @@
 			<Button>art/Health/Art/healingclay.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HEALING_CLAY</Type>
-			<LSystem/>
-			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
-			<KFM/>
-			<Button>art/Health/Art/healingclay.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HEALTH_FOOD_STORE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
