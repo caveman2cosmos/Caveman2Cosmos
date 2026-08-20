@@ -1898,6 +1898,7 @@ void CvUnitAI::AI_settleMove()
 			}
 			SendLog("SettlerAI", CvWString::format(L"already in city %I64d", iDanger));
 			getGroup()->pushMission(MISSION_SKIP);
+			return;
 		}
 	}
 
