@@ -4054,7 +4054,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TEA</Type>
+			<Type>EVENTTRIGGER_TEA_TRADE</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_TEA</Text>
 			</WorldNewsTexts>
