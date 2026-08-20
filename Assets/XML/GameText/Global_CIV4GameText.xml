@@ -9236,8 +9236,11 @@
 		<French>Monarch but AI on Nightmare</French>
 		<Italian>Monarch but AI on Nightmare</Italian>
 		<Russian>Monarch but AI on Nightmare</Russian>
-
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_HANDICAP_AI_BOOSTED_HELP</Tag>
+        <English>Its a boost to ai to make the game more chalenging</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_AI_BOOSTED_PLUS</Tag>
 		<English>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</English>
