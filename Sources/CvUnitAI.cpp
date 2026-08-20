@@ -1676,7 +1676,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 		for (int Time = 0; Time < expectedRnds; ++Time)
 		{
 			z += AdjustedWithdrawal * y / 100;
-			y = AdjustedWithdrawal * y / 100;
+			y = AdjustedWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 		}
 		const int EvaluatedWithdrawOdds = z;
 
@@ -1691,7 +1691,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 		for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
 		{
 			z += iKnockbackTotal * y / 100;
-			y = iKnockbackTotal * y / 100;
+			y = iKnockbackTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 		}
 		const int EvaluatedKnockbackOdds = z;
 
