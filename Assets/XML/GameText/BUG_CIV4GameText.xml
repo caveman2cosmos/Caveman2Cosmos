@@ -8155,6 +8155,22 @@
 		<Polish>Maksymalna liczba jednostek na pole</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NATIONALUNITLIMITINITIAL_HOVER</Tag>
+		<English>Sets the flat starting cap for national units that scale with era (the ones marked with a limit of 5 in the XML). -1 means Default - use the XML's own value of 5.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NATIONALUNITLIMITINITIAL_TEXT</Tag>
+		<English>National Unit Limit - Initial</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NATIONALUNITLIMITPERERA_HOVER</Tag>
+		<English>Sets how much the national unit cap grows per era for units that scale with era (the ones marked with a limit of 5 in the XML).</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NATIONALUNITLIMITPERERA_TEXT</Tag>
+		<English>National Unit Limit - Per Era</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MERCYRULE_HOVER</Tag>
 		<English>If one player's score is greater than half of the score of all the other players scores combined, a 10 turn countdown until victory occurs.</English>
 		<French>Si le score d'un joueur est plus grand que la moitié de la somme des scores de tous les autres joueurs, un compteur de 10 tours est lancé, avant la victoire.</French>

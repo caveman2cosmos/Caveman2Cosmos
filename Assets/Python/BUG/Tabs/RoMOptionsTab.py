@@ -92,6 +92,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxRebaseRange"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxUnitsPerTile"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__NationalUnitLimitInitial"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__NationalUnitLimitPerEra"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TerrainDamage"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AllowTerraforming"), bCanAdjustSettings)

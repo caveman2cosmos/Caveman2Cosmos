@@ -13847,18 +13847,27 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra, const Un
     // scaled cap and lives just before the return.
 
 
-//    this scale will be used for national units only... the idea is to start them 5 at prehistoric and scale by 5 per age...
+//    this scale will be used for national units only... units whose XML iMaxPlayerInstances == 5
+//    are treated as the "scalable" tier. NATIONAL_UNIT_LIMIT_INITIAL (BUG option, -1 = Default =
+//    use the XML's own 5) can override the flat starting cap for that tier, and
+//    NATIONAL_UNIT_LIMIT_PER_ERA controls how much it grows per era (both BUG-configurable)...
 //     as an alternative to the 10% per unit cost increase but unlimited
-//     might have to use separate indicator but this will do for now for testing purposes
    int iMaxUnits = GC.getUnitInfo(eIndex).getMaxPlayerInstances();
 
    if (iMaxUnits == 5)
    {
+   	const int iInitialLimitOverride = GC.getDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", -1);
+   	if (iInitialLimitOverride >= 0)
+   	{
+   		iMaxUnits = iInitialLimitOverride;
+   	}
+
+   	const int iPerEraScale = GC.getDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", 5);
    	int iEra = getCurrentEra(); // 0 = Prehistoric, 1 = Ancient, etc.
 
    	if (iEra > 0)
    	{
-   		iMaxUnits += iEra * 5;
+   		iMaxUnits += iEra * iPerEraScale;
    	}
    }
 

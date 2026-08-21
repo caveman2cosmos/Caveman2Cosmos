@@ -280,6 +280,12 @@ def changedNoAutoCorporationFounding(option, value):
 def changedWarPrizes(option, value):
 	GC.setDefineINT("WAR_PRIZES", int(value))
 
+def changedNationalUnitLimitInitial(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", int(value))
+
+def changedNationalUnitLimitPerEra(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", int(value))
+
 def changedNextTraitCultureReqPercent(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT), int(value), 0)
