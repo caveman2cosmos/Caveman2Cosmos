@@ -2687,14 +2687,24 @@ def addFeatures():
 	terrainDunes = cgc.getInfoTypeForString("TERRAIN_DUNES")
 	terrainScrub = cgc.getInfoTypeForString("TERRAIN_SCRUB")
 	terrainRocky = cgc.getInfoTypeForString("TERRAIN_ROCKY")
+	terrainBadland = cgc.getInfoTypeForString("TERRAIN_BADLAND")
+	terrainJagged = cgc.getInfoTypeForString("TERRAIN_JAGGED")
 	terrainBarren = cgc.getInfoTypeForString("TERRAIN_BARREN")
-	terrainPermafrost = cgc.getInfoTypeForString("TERRAIN_TUNDRA")
+	terrainPermafrost = cgc.getInfoTypeForString("TERRAIN_PERMAFROST")
 	terrainLush = cgc.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = cgc.getInfoTypeForString("TERRAIN_MUDDY")
+
+	terrainCoast = cgc.getInfoTypeForString("TERRAIN_COAST")
+	terrainCoastPolar = cgc.getInfoTypeForString("TERRAIN_COAST_POLAR")
+	terrainCoastTropical = cgc.getInfoTypeForString("TERRAIN_COAST_TROPICAL")
+	terrainOceanType = cgc.getInfoTypeForString("TERRAIN_OCEAN")
+	terrainOceanPolar = cgc.getInfoTypeForString("TERRAIN_OCEAN_POLAR")
+	terrainOceanTropical = cgc.getInfoTypeForString("TERRAIN_OCEAN_TROPICAL")
 
 	featNone = -1
 	featIce = cgc.getInfoTypeForString("FEATURE_ICE")
 	featJungle = cgc.getInfoTypeForString("FEATURE_JUNGLE")
+	featMangrove = cgc.getInfoTypeForString("FEATURE_MANGROVE")
 	featOasis = cgc.getInfoTypeForString("FEATURE_OASIS")
 	featFlood = cgc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = cgc.getInfoTypeForString("FEATURE_FOREST")
@@ -2744,6 +2754,19 @@ def addFeatures():
 
 			plot = map.sPlot(x,y)
 			if plot.isWater():
+				curWaterTerrain = plot.getTerrainType()
+				if tileTemperature > 25:
+					if curWaterTerrain == terrainCoast:
+						plot.setTerrainType(terrainCoastTropical,False,False)
+						if getRand(dice) < 0.3:
+							plot.setFeatureType(featMangrove,-1)
+					elif curWaterTerrain == terrainOceanType:
+						plot.setTerrainType(terrainOceanTropical,False,False)
+				elif tileTemperature < -10:
+					if curWaterTerrain == terrainCoast:
+						plot.setTerrainType(terrainCoastPolar,False,False)
+					elif curWaterTerrain == terrainOceanType:
+						plot.setTerrainType(terrainOceanPolar,False,False)
 				if allowLandNearIce:
 					if y < poleSeparation:
 						prob = (poleSeparation - y) / float(poleSeparation)
@@ -3136,6 +3159,7 @@ def addFeatures():
 
 	#Diversify terrain
 	for y in range(iH):
+		tileTemperature = getTileTemperature(y,iH)
 		for x in range(iW):
 			plot = map.sPlot(x,y)
 			if not (plot.isPeak() or plot.isWater()):
@@ -3146,12 +3170,16 @@ def addFeatures():
 					randomTerrain[1] = terrainSaltFlats
 					randomTerrain[4] = terrainDunes
 					randomTerrain[3] = terrainScrub
+					randomTerrain[2] = terrainBadland #hot arid rocky
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 				elif terr == terrainPlains:
 					randomTerrain = probabilityArray()
 					randomTerrain[3] = terrainPlains
 					randomTerrain[1] = terrainBarren
-					randomTerrain[2] = terrainRocky
+					if tileTemperature < 5:
+						randomTerrain[2] = terrainJagged #cold rocky
+					else:
+						randomTerrain[2] = terrainRocky
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 				elif terr == terrainGrass:
 					randomTerrain = probabilityArray()
@@ -3159,6 +3187,13 @@ def addFeatures():
 					randomTerrain[3] = terrainLush
 					randomTerrain[1] = terrainMuddy
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
+
+				#Mangrove on coastal marsh/lush/muddy flatland
+				if plot.getFeatureType() == featNone and plot.isCoastal():
+					terr = plot.getTerrainType()
+					if terr in (terrainMarsh, terrainLush, terrainMuddy):
+						if getRand(dice) < 0.5:
+							plot.setFeatureType(featMangrove,-1)
 
 				#Remove land features that are on wrong terrain (seems to remove some things incorrectly)
 				#if plot.canHaveFeature(plot.getFeatureType()) == False:
