@@ -27642,55 +27642,40 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 	PROFILE_EXTRA_FUNC();
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
-	bool bTechFound = false;
-
-	if (kBuild.getTechPrereq() == NO_TECH)
-	{
-		if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
-		{
-			foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
-			{
-				if (kTerrainStruct.ePrereqTech == eTech)
-				{
-					bTechFound = true;
-					break;
-				}
-			}
-			if (!bTechFound)
-			{
-				for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
-				{
-					if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
-					{
-						bTechFound = true;
-						break;
-					}
-				}
-			}
-		}
-	}
-	else if (kBuild.getTechPrereq() == eTech)
-	{
-		bTechFound = true;
-	}
-
-	if (bTechFound)
+	// This tech is the build's own base prereq - the build becomes available everywhere (bar per-terrain/feature gates below).
+	if (kBuild.getTechPrereq() == eTech)
 	{
 		if (bList) szBuffer.append(NEWLINE);
 
-		if (GC.getGame().getActiveTeam() != NO_TEAM)
+		if (GC.getGame().getActiveTeam() != NO_TEAM && kBuild.getObsoleteTech() != NO_TECH
+		&&	GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
 		{
-			if (kBuild.getObsoleteTech() != NO_TECH)
-			{
-				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
-				}
-				else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
-			}
-			else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
 		}
 		else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
+	}
+
+	// This tech instead (or additionally) lifts a terrain/feature-specific restriction on the build - call that out explicitly
+	// so techs like Mountaineering/Surveying/Nitroglycerin don't silently unlock hard-terrain routes with no visible help text.
+	if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
+	{
+		foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
+		{
+			if (kTerrainStruct.ePrereqTech == eTech)
+			{
+				if (bList) szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT_TERRAIN", kBuild.getTextKeyWide(), GC.getTerrainInfo(kTerrainStruct.eTerrain).getTextKeyWide()));
+			}
+		}
+
+		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+		{
+			if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
+			{
+				if (bList) szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT_TERRAIN", kBuild.getTextKeyWide(), GC.getFeatureInfo((FeatureTypes)iJ).getTextKeyWide()));
+			}
+		}
 	}
 
 	foreach_(const MapCategoryTypes eMapCategory, kBuild.getMapCategories())
