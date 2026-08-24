@@ -38913,6 +38913,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38935,7 +38936,6 @@
 			<Description>TXT_KEY_UNIT_SHEPHERD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -38982,7 +38982,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -39023,6 +39022,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -39045,7 +39045,6 @@
 			<Description>TXT_KEY_UNIT_CARTWRIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARTWRIGHT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
             <bMilitaryTrade>1</bMilitaryTrade>
@@ -39091,7 +39090,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>2</iAsset>
 			<iPower>3</iPower>
@@ -39113,6 +39111,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -39135,7 +39134,6 @@
 			<Description>TXT_KEY_UNIT_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>5</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -39172,7 +39170,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>3</iAsset>
 			<iPower>4</iPower>
@@ -39210,6 +39207,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -39232,7 +39230,6 @@
 			<Description>TXT_KEY_UNIT_SIEGE_ENGINEER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIEGE_ENGINEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>5</iNumHealSupport>
@@ -39261,7 +39258,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>3</iAsset>
 			<iPower>4</iPower>
@@ -39283,6 +39279,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -39312,7 +39309,6 @@
 			<Description>TXT_KEY_UNIT_FIELD_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIELD_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -39348,7 +39344,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39388,6 +39383,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -39411,7 +39407,6 @@
 			<Description>TXT_KEY_UNIT_GEAR_MECHANIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_GEAR_MECHANIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
@@ -39449,7 +39444,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>4</iAsset>
 			<iPower>7</iPower>
@@ -39471,6 +39465,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -39502,7 +39497,6 @@
 			<Description>TXT_KEY_UNIT_MEDICAL_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEDICAL_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>7</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -39542,7 +39536,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39582,6 +39575,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39607,7 +39601,6 @@
 			<Description>TXT_KEY_UNIT_MACHINIST</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACHINIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>7</iNumHealSupport>
@@ -39660,7 +39653,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
@@ -39682,6 +39674,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39707,7 +39700,6 @@
 			<Description>TXT_KEY_UNIT_MECHANIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_MECHANIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
@@ -39754,7 +39746,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>6</iAsset>
 			<iPower>15</iPower>
@@ -39776,6 +39767,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39801,7 +39793,6 @@
 			<Description>TXT_KEY_UNIT_AVIATION_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_AVIATION_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
@@ -39851,7 +39842,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>6</iAsset>
 			<iPower>10</iPower>
@@ -39873,6 +39863,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -39901,7 +39892,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>9</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -39957,7 +39947,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>25</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39981,6 +39970,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40006,7 +39996,6 @@
 			<Description>TXT_KEY_UNIT_FLIGHT_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLIGHT_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>9</iNumHealSupport>
@@ -40056,7 +40045,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>8</iAsset>
 			<iPower>15</iPower>
@@ -40078,6 +40066,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -40107,7 +40096,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>10</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40168,7 +40156,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>30</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -40192,6 +40179,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40217,7 +40205,6 @@
 			<Description>TXT_KEY_UNIT_JET_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_JET_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -40267,7 +40254,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>20</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>10</iAsset>
 			<iPower>20</iPower>
@@ -40289,6 +40275,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40311,7 +40298,6 @@
 			<Description>TXT_KEY_UNIT_PROGRAMMER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PROGRAMMER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -40349,7 +40335,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
@@ -40380,6 +40365,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -40410,7 +40396,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>11</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40468,7 +40453,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>5</iMoves>
-			<iCombat>40</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -40492,6 +40476,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40517,7 +40502,6 @@
 			<Description>TXT_KEY_UNIT_ASTRONAUTIC_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASTRONAUTIC_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -40578,7 +40562,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>25</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>12</iAsset>
 			<iPower>25</iPower>
@@ -40600,6 +40583,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40622,7 +40606,6 @@
 			<Description>TXT_KEY_UNIT_SOFTWARE_DEVELOPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOFTWARE_DEVELOPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -40673,7 +40656,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>14</iAsset>
 			<iPower>15</iPower>
@@ -40704,6 +40686,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -40734,7 +40717,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>12</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40800,7 +40782,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>60</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -40824,6 +40805,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HITECH</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40850,7 +40832,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>12</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40881,7 +40862,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>20</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>19</iAsset>
 			<iPower>50</iPower>
@@ -40911,6 +40891,7 @@
 			<Type>UNIT_NANITE_REPAIR_CLOUD</Type>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -40933,7 +40914,6 @@
 			<Description>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>12</iNumHealSupport>
@@ -41034,7 +41014,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>17</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>140</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>85</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -41073,6 +41052,7 @@
 			<Type>UNIT_ANIMA_REPAIR_CLOUD</Type>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41095,7 +41075,6 @@
 			<Description>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>14</iNumHealSupport>
@@ -41189,7 +41168,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>19</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>160</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>85</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -41229,6 +41207,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41263,8 +41242,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WILD_HERBS_GATHERER</BuildingType>
@@ -41279,7 +41256,6 @@
 			<iXPValueDefense>2</iXPValueDefense>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>1</iCombat>
 			<iNumHealSupport>3</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -41328,6 +41304,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41362,8 +41339,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
@@ -41383,7 +41358,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41429,6 +41403,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41463,8 +41438,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALCOHOL</BonusType>
@@ -41484,7 +41457,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>5</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41530,6 +41502,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41564,8 +41537,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
@@ -41583,7 +41554,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>5</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>6</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41629,6 +41599,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41663,8 +41634,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_PLAGUE_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
@@ -41680,7 +41649,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>7</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41726,6 +41694,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41760,8 +41729,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
@@ -41776,7 +41743,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>9</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>8</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41822,6 +41788,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -41858,8 +41825,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqOrBuildings>
@@ -41875,7 +41840,6 @@
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCombat>10</iCombat>
 			<iNumHealSupport>9</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -41920,6 +41884,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -41981,8 +41946,6 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -41991,7 +41954,6 @@
 			<iCost>750</iCost>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>15</iCombat>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -42046,6 +42008,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -42107,8 +42070,6 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MEDIVAC</UnitType>
 			</UnitUpgrades>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
@@ -42117,7 +42078,6 @@
 			<iCost>1025</iCost>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>25</iCombat>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -42172,6 +42132,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -42211,8 +42172,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
@@ -42242,7 +42201,6 @@
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>7</iDropRange>
-			<iCombat>40</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -42298,6 +42256,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -42337,8 +42296,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
@@ -42368,7 +42325,6 @@
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>10</iDropRange>
-			<iCombat>60</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -42424,6 +42380,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -42480,8 +42437,6 @@
             <UnitUpgrades>
                 <UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
             </UnitUpgrades>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -42489,7 +42444,6 @@
 			<iCost>2600</iCost>
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>70</iCombat>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>14</iNumHealSupport>
@@ -42541,6 +42495,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -42581,8 +42536,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SKYROADS</PrereqTech>
@@ -42640,7 +42593,6 @@
 			<iBaseUpkeep>14</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iDropRange>20</iDropRange>
-			<iCombat>90</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
