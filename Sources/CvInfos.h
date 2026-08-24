@@ -7039,6 +7039,8 @@ public:
 	int getNumTerrainsRequired() const;
 	int getImprovementRequired(int i) const;
 	int getNumImprovementsRequired() const;
+	int getNotImprovementRequired(int i) const;
+	int getNumNotImprovementsRequired() const;
 	int getBonusRequired(int i) const;
 	int getNumBonusesRequired() const;
 	int getRouteRequired(int i) const;
@@ -7078,6 +7080,7 @@ public:
 	bool isShowPlot() const;
 	bool isUnitsOnPlot() const;
 	bool isOwnPlot() const;
+	bool isNotOnCity() const;
 	bool isPickReligion() const;
 	bool isStateReligion() const;
 	bool isHolyCity() const;
@@ -7150,6 +7153,7 @@ private:
 	std::vector<int> m_aiFeaturesRequired;
 	std::vector<int> m_aiTerrainsRequired;
 	std::vector<int> m_aiImprovementsRequired;
+	std::vector<int> m_aiNotImprovementsRequired;
 	std::vector<int> m_aiBonusesRequired;
 	std::vector<int> m_aiRoutesRequired;
 	std::vector<int> m_aiReligionsRequired;
@@ -7176,6 +7180,7 @@ private:
 	bool m_bShowPlot;
 	bool m_bUnitsOnPlot;
 	bool m_bOwnPlot;
+	bool m_bNotOnCity;
 	bool m_bPickReligion;
 	bool m_bStateReligion;
 	bool m_bHolyCity;

@@ -15489,6 +15489,7 @@
 			<iNumUnits>1</iNumUnits>
 			<iUnitDistanceWeight>-1</iUnitDistanceWeight>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
@@ -15498,6 +15499,9 @@
 			<RoutesRequired>
 				<RouteType>NONE</RouteType>
 			</RoutesRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_STUCK_IN_SWAMP_1</Event>
 			</Events>
@@ -15843,10 +15847,14 @@
 			<iWeight>120</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 			</TerrainsRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_QUICKSAND_1</Event>
 				<Event>EVENT_QUICKSAND_2</Event>
@@ -15967,10 +15975,14 @@
 			<iWeight>200</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_TAR_PIT</FeatureType>
 			</FeaturesRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_TARPIT_1</Event>
 				<Event>EVENT_TARPIT_2</Event>

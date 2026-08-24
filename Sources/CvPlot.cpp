@@ -12227,6 +12227,11 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 		return false;
 	}
 
+	if (kTrigger.isNotOnCity() && getPlotCity() != NULL)
+	{
+		return false;
+	}
+
 	if (kTrigger.getPlotType() != NO_PLOT)
 	{
 		if (getPlotType() != kTrigger.getPlotType())
@@ -12289,6 +12294,17 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 		if (!bFoundValid)
 		{
 			return false;
+		}
+	}
+
+	if (kTrigger.getNumNotImprovementsRequired() > 0)
+	{
+		for (int i = 0; i < kTrigger.getNumNotImprovementsRequired(); ++i)
+		{
+			if (kTrigger.getNotImprovementRequired(i) == getImprovementType())
+			{
+				return false;
+			}
 		}
 	}
 
