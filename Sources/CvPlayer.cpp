@@ -8293,6 +8293,17 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 						{
 							knownExp += 0.5;
 						}
+
+						// Tech spreads fastest along real trade networks (roads/harbors), not just paper treaties
+						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+						{
+							if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == iI
+							&& canTradeNetworkWith((PlayerTypes)iJ))
+							{
+								knownExp += GC.getDefineFLOAT("TECH_DIFFUSION_TRADE_CONNECTED_BONUS");
+								break;
+							}
+						}
 					}
 				}
 			}
@@ -8335,6 +8346,12 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
 				//ensure tech diffusion can not hurt research, only help
 				int iWelfareTechDiffusion = std::max(0, (iWelfareMod - (int)(iWelfareMod * pow(0.98, iWelfareThreshold - iTechScorePercent) + 0.5)));
+
+				// Welfare should scale with how substantiated our contact actually is, not just fire at full
+				// strength off a single incidental sighting (e.g. spotting one distant scout).
+				const double fKnownExpNorm = std::min(knownExp / GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM"), 1.0);
+				iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fKnownExpNorm);
+
 				int iBestScore = 0;
 				int iOurScore = calculateScore(false);
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -8351,8 +8368,8 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				//If iOurScore > iBestScore we are the best team in the game
 				if (iOurScore > 0 && iOurScore < iBestScore)
 				{
-					float fRatio = iBestScore / ((float)iOurScore);
-					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
+					float fRatio = std::min(iBestScore / ((float)iOurScore), GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_RATIO_CAP"));
+					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, knownExpNorm: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, fKnownExpNorm, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
 					iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fRatio);
 					iModifier += iWelfareTechDiffusion;
 
