@@ -17356,6 +17356,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iBlendIntoCityChange>1</iBlendIntoCityChange>
@@ -17376,6 +17379,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBlendIntoCityChange>1</iBlendIntoCityChange>
@@ -17396,6 +17402,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iInsidiousnessChange>6</iInsidiousnessChange>

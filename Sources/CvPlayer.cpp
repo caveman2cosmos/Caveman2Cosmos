@@ -3767,7 +3767,10 @@ void CvPlayer::doTurn()
 	CvPlot::ClearCanBuildCache();
 #endif
 
-	if (!isNPC())
+	// AI players are handled immediately (no UI concern - nothing to interrupt). Human players are
+	// gated in CvPlayer::changeEndTurn instead, so the trait-choice popup only appears when they
+	// actually try to end their turn, rather than the instant it begins.
+	if (!isNPC() && !isHumanPlayer())
 	{
 		while (canLeaderPromote())
 		{
@@ -12544,6 +12547,19 @@ void CvPlayer::changeEndTurn(const bool bNewValue, const bool bForce)
 				{
 					FErrorMsg("idleCity == NULL; fixing");
 					resetIdleCities();
+				}
+				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				return;
+			}
+
+			// Leader trait promotion (developing traits): block ending the turn until the player has
+			// picked their new trait(s), so the popup only appears when they actually try to end their
+			// turn - after they've had the whole turn free to use - instead of the instant it began.
+			if (!bForce && isHumanPlayer() && canLeaderPromote())
+			{
+				while (canLeaderPromote())
+				{
+					doPromoteLeader();
 				}
 				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
 				return;
