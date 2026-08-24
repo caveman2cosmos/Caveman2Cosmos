@@ -1306,7 +1306,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -2193,7 +2193,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -2366,7 +2366,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -2679,7 +2679,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -3005,7 +3005,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -3753,7 +3753,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -4195,7 +4195,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -5157,7 +5157,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -5304,7 +5304,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -5449,7 +5449,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>2</iYield>
 						<iYield>0</iYield>
@@ -6458,7 +6458,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -6608,7 +6608,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -6749,7 +6749,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -6888,7 +6888,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -7279,7 +7279,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -7431,7 +7431,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -9233,7 +9233,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -9779,7 +9779,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -10183,7 +10183,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -10561,7 +10561,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -11398,7 +11398,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -11552,7 +11552,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -12178,7 +12178,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -12328,7 +12328,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -13502,7 +13502,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -13873,7 +13873,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>1</iYield>
 					</Yields>
@@ -13993,7 +13993,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -14397,7 +14397,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -14579,7 +14579,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -14714,7 +14714,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -15241,7 +15241,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -15520,7 +15520,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -16213,7 +16213,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -16814,7 +16814,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>1</iYield>
@@ -16939,7 +16939,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -17317,7 +17317,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -17449,7 +17449,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -18663,7 +18663,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -20620,7 +20620,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -20758,7 +20758,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -21048,7 +21048,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -21200,7 +21200,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -21481,7 +21481,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -21769,7 +21769,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>90</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -22582,7 +22582,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -24146,7 +24146,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>85</iChance>
+					<iChance>92</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -24274,7 +24274,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -25030,7 +25030,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -25196,7 +25196,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>95</iChance>
+					<iChance>97</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
@@ -25317,7 +25317,7 @@
 				</Outcome>
 				<Outcome>
 					<OutcomeType>OUTCOME_HUNTING_KILL</OutcomeType>
-					<iChance>80</iChance>
+					<iChance>95</iChance>
 					<Yields>
 						<iYield>
 							<Plus>
