@@ -2251,7 +2251,9 @@ void CvUnitAI::AI_workerMove()
 	//ls612: Combat Worker Danger Evaluation
 	const bool bWorkerDanger = bAbroad && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !bAbroad && exposedToDanger(plot(), 80, false);
 
-	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1)) {
+	// Don't abandon an improvement we've already started just because an enemy unit came into view;
+	// only flee danger when we don't have build progress on this plot invested yet.
+	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1) && getBuildType() == NO_BUILD) {
 		// in this order, either retreat to safety, or go into a city
 		if (AI_safety() || AI_retreatToCity()) {
 			return;
