@@ -26565,6 +26565,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
             <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
@@ -26635,6 +26636,7 @@
                 <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
                 <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
             </SubCombatTypes>
             <Domain>DOMAIN_LAND</Domain>
             <UnitUpgrades>
@@ -26710,6 +26712,7 @@
                 <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
                 <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
                 <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
             </SubCombatTypes>
             <Domain>DOMAIN_LAND</Domain>
             <UnitUpgrades>

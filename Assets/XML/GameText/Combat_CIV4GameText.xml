@@ -10574,6 +10574,10 @@
 		<Italian>Unità con promozione guardia armata</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_TRIBAL_GUARD</Tag>
+		<English>Tribal Guard</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PROMOTED_CAUTIOUS</Tag>
 		<English>Promoted (Cautious)</English>
 		<French>
