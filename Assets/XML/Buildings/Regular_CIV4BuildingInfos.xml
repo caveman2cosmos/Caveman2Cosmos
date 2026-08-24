@@ -23504,6 +23504,12 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>-1</iHealth>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PYRITE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_BOMBARD</UnitType>
@@ -51849,6 +51855,10 @@
 					<BonusType>BONUS_HAEMATITE_ORE</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_CINNABAR_ORE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -55870,6 +55880,14 @@
 				</BonusYieldChange>
 				<BonusYieldChange>
 					<BonusType>BONUS_POTASH</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BORAX</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -113874,6 +113892,12 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_ZINC_ORE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -114911,6 +114935,14 @@
 			<VicinityBonusYieldChanges>
 			    <BonusYieldChange>
 					<BonusType>BONUS_POTASH</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BORAX</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -118838,6 +118870,13 @@
 				</BonusYieldChange>
 				<BonusYieldChange>
 					<BonusType>BONUS_MARBLE</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PUMICE_STONE</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
