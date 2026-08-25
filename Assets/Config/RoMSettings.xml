@@ -107,6 +107,18 @@
 
                 <change module="ANewDawnSettings" function="changedNextTraitCultureReqPercent"/>
             </list>
+            <list id="TechUpscaledCostsPercent" key="TechUpscaledCostsPercent" type="int" default="0"
+                  values="0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100"
+                  get="getTechUpscaledCostsPercent" set="setTechUpscaledCostsPercent">
+
+                <change module="ANewDawnSettings" function="changedTechUpscaledCostsPercent"/>
+            </list>
+            <list id="ExpUpscaledBuildingAndUnitCostsPercent" key="ExpUpscaledBuildingAndUnitCostsPercent" type="int" default="0"
+                  values="0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100"
+                  get="getExpUpscaledBuildingAndUnitCostsPercent" set="setExpUpscaledBuildingAndUnitCostsPercent">
+
+                <change module="ANewDawnSettings" function="changedExpUpscaledBuildingAndUnitCostsPercent"/>
+            </list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
 				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"
 				get="getFlexibleDifficultyMinimumDiff" set="setFlexibleDifficultyMinimumDiff">

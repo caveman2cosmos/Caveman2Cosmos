@@ -250,13 +250,6 @@
             <bVisible>1</bVisible>
         </GameOptionInfo>
         <GameOptionInfo>
-            <Type>GAMEOPTION_TECH_UPSCALED_COSTS</Type>
-            <Description>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS</Description>
-            <Help>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS_HELP</Help>
-            <bDefault>0</bDefault>
-            <bVisible>1</bVisible>
-        </GameOptionInfo>
-        <GameOptionInfo>
             <Type>GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Type>
             <Description>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS</Description>
             <Help>TXT_KEY_GAMEOPTION_TECH_CUTTING_EDGE_CUTS_HELP</Help>
@@ -382,13 +375,6 @@
             <Type>GAMEOPTION_EXP_OVEREXPANSION_PENALTIES</Type>
             <Description>TXT_KEY_GAMEOPTION_EXP_OVEREXPANSION_PENALTIES</Description>
             <Help>TXT_KEY_GAMEOPTION_EXP_OVEREXPANSION_PENALTIES_HELP</Help>
-            <bDefault>0</bDefault>
-            <bVisible>1</bVisible>
-        </GameOptionInfo>
-        <GameOptionInfo>
-            <Type>GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Type>
-            <Description>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Description>
-            <Help>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Help>
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
         </GameOptionInfo>

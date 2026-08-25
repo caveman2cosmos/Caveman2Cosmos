@@ -1542,38 +1542,6 @@
 		<Italian>Primo attacco avanzato e differenziazione tra combattimento a distanza e corpo a corpo tra le abilità delle unità</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>
-		<English>Expansion - Upscaled Production Time</English>
-		<French>Expansion - Coûts des Unités et Bâtiments Augmentés</French>
-		<German>Erhöhte Kosten für Gebäude und Einheiten</German>
-		<Italian>Costi di produzione aumentati</Italian>
-		<Polish>Zwi&#234;kszone koszty jednostek i budynk&#243;w</Polish>
-		<Russian>Увеличенное время производства</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Tag>
-		<English>Building and unit costs, as well as Worker actions time, have all been increased by 40%. This generally puts more emphasis and importance on the choices you make, particularly in relation to what a city chooses to build. Pair it with upscaled Research costs to have a longer game.</English>
-		<French>Les coûts des unités et des bâtiments sont augmentés de 40%, ainsi que le coût des actions des ouvriers. Cette option donne plus d'importance au choix dans la construction de vos villes.</French>
-		<German>Die Bau-/Trainingskosten für Gebäude und Einheiten sind um 40 % erhöht, ebenso wie die Arbeitszeit von Bautrupps etc. Mit dieser Option sollte man jegliche Bauentscheidungen wirklich genau abwägen.</German>
-		<Italian>Il costo di unità ed edifici, oltre alla lunghezza delle azioni dei lavoratori, è stato incrementato approssimativamente del 40%[NEWLINE][NEWLINE]Questo pone più enfasi ed importanza sulle scelte, in particolar modo riguardo a cosa tua città decide di costruire (abbinalo all'opzione costi di ricerca aumentati per avere un gameplay complessivamente più lungo)</Italian>
-		<Polish>Budynki i jednostki kosztuj&#185; wi&#234;cej o 40%. Generalnie zwi&#234;ksza znaczenie Twoich wybor&#243;w w mie&#156;cie.</Polish>
-		<Russian>Увеличить на 40% затраты на постройку зданий и производство подразделений, а также время необходимое рабочим для завершения. Как правило, это придаст большее значение вашим решениям, особенно в выборе того, что нужно создать в городе. При сочетании с «Твердый гранит науки», опция позволит в целом продлить игровой процесс.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS</Tag>
-		<English>Tech - Upscaled Research Time</English>
-		<French>Tech - Temps de recherche augmenté</French>
-		<Russian>Твердый гранит науки</Russian>
-		<Italian>Costi di ricerca aumentati</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS_HELP</Tag>
-		<English>Technology costs have been increased by 40%. Use it if you're an experienced player and want the calendar to keep up with you. Enabling this option will result in a more relaxed game. Pair this with upscaled building and unit costs to have a longer game.</English>
-		<French>Les coûts technologiques ont augmenté de 40%. Utilisez-le si vous êtes un joueur expérimenté et que vous souhaitez que le calendrier vous suive. Cette option à elle seule entraînera un jeu globalement détendu. Associez-le à des coûts de construction et unitaires améliorés pour un gameplay globalement plus long.</French>
-		<Russian>Увеличить на 40% затраты на изучение технологий. Используйте это, если вы опытный игрок и хотите, чтобы календарь не отставал от вас. В одиночку эта опция приведет к, в целом, более расслабленной игре. Объедините ее с «Увеличенное время производства», чтобы получить потенциально более длительный игровой процесс.</Russian>
-		<Italian>I costi della ricerca di tecnologie sono stati aumentati del 40%, per i giocatori esperti che vogliono avere più tempo tra le ricerche[NEWLINE][NEWLINE]Questa opzione da sola si tradurrà in un gioco complessivamente rilassato, abbinata a "costi di produzione aumentati" produrrà un gameplay complessivamente più lungo)</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_VANILLA_ENGINE</Tag>
 		<English>Combat - Vanilla BTS Combat Engine</English>
 		<French>Combat - Moteur de Combat d'origine</French>

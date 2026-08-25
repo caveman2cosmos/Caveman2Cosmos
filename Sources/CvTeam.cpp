@@ -2667,10 +2667,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getLeaderID()).getCurrentEra()
 			);
 	}
-	if (GC.getGame().isOption(GAMEOPTION_TECH_UPSCALED_COSTS))
-	{
-		iMod += GC.getUPSCALED_RESEARCH_COST_MODIFIER();
-	}
+	iMod += GC.getGame().getModderGameOption(MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT);
 	if (iMod != 0)
 	{
 		iCost = getModifiedIntValue64(iCost, iMod);

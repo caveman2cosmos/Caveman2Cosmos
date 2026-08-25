@@ -8114,6 +8114,22 @@
         <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NEXTTRAITCULTUREREQPERCENT_TEXT</Tag>
         <English>Next trait culture requirement (%)</English>
     </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHUPSCALEDCOSTSPERCENT_HOVER</Tag>
+        <English>Increases technology research costs by this percentage. 0 disables the effect. Use it if you're an experienced player and want the calendar to keep up with you.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__TECHUPSCALEDCOSTSPERCENT_TEXT</Tag>
+        <English>Upscaled research cost (%)</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EXPUPSCALEDBUILDINGANDUNITCOSTSPERCENT_HOVER</Tag>
+        <English>Increases building and unit production costs, as well as Worker action time, by this percentage. 0 disables the effect. This puts more emphasis on the choices you make in what a city builds.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__EXPUPSCALEDBUILDINGANDUNITCOSTSPERCENT_TEXT</Tag>
+        <English>Upscaled production cost (%)</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MAXREBASERANGE_HOVER</Tag>
 		<English>The maximum range aircraft can be rebased in one turn. After supersonic flight, aircraft get unlimited rebase range. 0 indicates unlimited range.</English>

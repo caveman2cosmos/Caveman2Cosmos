@@ -11923,11 +11923,7 @@ int CvGameSpeedInfo::getSpeedPercent() const
 
 int CvGameSpeedInfo::getHammerCostPercent() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS))
-	{
-		return getModifiedIntValue(m_iSpeedPercent, GC.getUPSCALED_HAMMER_COST_MODIFIER());
-	}
-	return m_iSpeedPercent;
+	return getModifiedIntValue(m_iSpeedPercent, GC.getGame().getModderGameOption(MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT));
 }
 
 int CvGameSpeedInfo::getNumTurnIncrements() const
