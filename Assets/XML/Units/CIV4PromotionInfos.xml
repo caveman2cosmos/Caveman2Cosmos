@@ -20974,6 +20974,9 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<Button>,Art/Interface/Buttons/Promotions/ByTheHorns.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
