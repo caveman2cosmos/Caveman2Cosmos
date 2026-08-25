@@ -60300,6 +60300,12 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ALTERNATIVE_MEDICINE</ObsoletesToBuilding>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
@@ -91794,6 +91800,12 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
@@ -96190,6 +96202,12 @@
 				<Bonus>BONUS_PHARMACEUTICALS</Bonus>
 				<Bonus>BONUS_SMART_MEDICINE</Bonus>
 			</PrereqBonuses>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
