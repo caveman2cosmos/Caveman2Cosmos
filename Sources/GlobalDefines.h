@@ -328,7 +328,7 @@
 	DO(ColorTypes, COLOR_WARNING_TEXT) \
 	DO(DiploCommentTypes, AI_DIPLOCOMMENT_DECLARE_WAR) \
 	DO(DiploCommentTypes, AI_DIPLOCOMMENT_FIRST_CONTACT) \
-	DO(EraTypes, C2C_ERA_ATOMIC) \
+	DO(EraTypes, C2C_ERA_INFORMATION) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY) \
 	DO(ImprovementTypes, IMPROVEMENT_CITY_RUINS) \
 	DO(MapCategoryTypes, MAPCATEGORY_EARTH) \
