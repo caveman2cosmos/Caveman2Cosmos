@@ -66475,62 +66475,80 @@
 					</YieldChanges>
 				</TerrainYieldChange>
 			</TerrainYieldChanges>
-			<BonusCommercePercentChanges>
-				<BonusCommercePercentChange>
+			<VicinityBonusYieldChanges>
+			    <BonusYieldChange>
 					<BonusType>BONUS_FUR</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_SILK</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_ALCOHOL</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_IVORY</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_WHALE_OIL</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_DRUGS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_COMPUTERS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_AUTOMOBILES</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_FIREARMS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-			</BonusCommercePercentChanges>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_NAVAL</UnitCombatType>
@@ -118607,7 +118625,6 @@
 			<ObsoletesToBuilding>BUILDING_ANTIQUE_SHOP</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>20</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>

@@ -132,7 +132,6 @@
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 				<BuildingType>BUILDING_ANT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_ASSASSIN_BUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_ASSASSIN_BUG_SANCTUARY</BuildingType>
