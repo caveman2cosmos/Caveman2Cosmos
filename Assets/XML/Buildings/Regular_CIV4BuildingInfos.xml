@@ -53646,10 +53646,6 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<iCost>30</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
@@ -54079,10 +54075,6 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
