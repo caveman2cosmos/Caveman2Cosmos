@@ -10449,9 +10449,7 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-6</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>24</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -94771,9 +94769,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>12</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -105446,9 +105442,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>8</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -126697,9 +126691,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>2</iTradeRouteModifier>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>4</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
