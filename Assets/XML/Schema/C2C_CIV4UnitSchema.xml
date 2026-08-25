@@ -2243,6 +2243,7 @@
 	<ElementType name="bBlitz" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAmphib" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRiverMoveIgnore" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bEnemyRoute" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHeal" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHillsDoubleMove" content="textOnly" dt:type="boolean"/>
@@ -2364,6 +2365,7 @@
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
+		<element type="bRiverMoveIgnore" minOccurs="0"/>
 		<element type="bEnemyRoute" minOccurs="0"/>
 		<element type="bAlwaysHeal" minOccurs="0"/>
 		<element type="bHillsDoubleMove" minOccurs="0"/>
@@ -3043,6 +3045,7 @@
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
+		<element type="bRiverMoveIgnore" minOccurs="0"/>
 		<element type="bEnemyRoute" minOccurs="0"/>
 		<element type="bAlwaysHeal" minOccurs="0"/>
 		<element type="bHillsDoubleMove" minOccurs="0"/>

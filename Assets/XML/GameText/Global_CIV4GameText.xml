@@ -22376,6 +22376,10 @@
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por cruzar un río</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT</Tag>
+		<English>[ICON_BULLET]No Movement Penalty for Crossing River</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTH</Tag>
 		<English>[ICON_BULLET]%D1_Bonus%% Strength</English>
 		<French>[ICON_BULLET]Puissance %D1_Bonus%%</French>

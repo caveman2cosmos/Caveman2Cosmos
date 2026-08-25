@@ -1929,6 +1929,7 @@ m_bLeader(false),
 m_bBlitz(false),
 m_bAmphib(false),
 m_bRiver(false),
+m_bRiverMoveIgnore(false),
 m_bEnemyRoute(false),
 m_bAlwaysHeal(false),
 m_bHillsDoubleMove(false),
@@ -2464,6 +2465,11 @@ bool CvPromotionInfo::isAmphib() const
 bool CvPromotionInfo::isRiver() const
 {
 	return m_bRiver;
+}
+
+bool CvPromotionInfo::isRiverMoveIgnore() const
+{
+	return m_bRiverMoveIgnore;
 }
 
 bool CvPromotionInfo::isEnemyRoute() const
@@ -4739,6 +4745,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bBlitz, L"bBlitz");
 	pXML->GetOptionalChildXmlValByName(&m_bAmphib, L"bAmphib");
 	pXML->GetOptionalChildXmlValByName(&m_bRiver, L"bRiver");
+	pXML->GetOptionalChildXmlValByName(&m_bRiverMoveIgnore, L"bRiverMoveIgnore");
 	pXML->GetOptionalChildXmlValByName(&m_bEnemyRoute, L"bEnemyRoute");
 	pXML->GetOptionalChildXmlValByName(&m_bAlwaysHeal, L"bAlwaysHeal");
 	pXML->GetOptionalChildXmlValByName(&m_bHillsDoubleMove, L"bHillsDoubleMove");
@@ -5426,6 +5433,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (isBlitz() == bDefault) m_bBlitz = pClassInfo->isBlitz();
 	if (isAmphib() == bDefault) m_bAmphib = pClassInfo->isAmphib();
 	if (isRiver() == bDefault) m_bRiver = pClassInfo->isRiver();
+	if (isRiverMoveIgnore() == bDefault) m_bRiverMoveIgnore = pClassInfo->isRiverMoveIgnore();
 	if (isEnemyRoute() == bDefault) m_bEnemyRoute = pClassInfo->isEnemyRoute();
 	if (isAlwaysHeal() == bDefault) m_bAlwaysHeal = pClassInfo->isAlwaysHeal();
 	if (isHillsDoubleMove() == bDefault) m_bHillsDoubleMove = pClassInfo->isHillsDoubleMove();
@@ -6258,6 +6266,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bBlitz);
 	CheckSum(iSum, m_bAmphib);
 	CheckSum(iSum, m_bRiver);
+	CheckSum(iSum, m_bRiverMoveIgnore);
 	CheckSum(iSum, m_bEnemyRoute);
 	CheckSum(iSum, m_bAlwaysHeal);
 	CheckSum(iSum, m_bHillsDoubleMove);

@@ -621,6 +621,7 @@ public:
 	bool isBlitz() const;
 	bool isAmphib() const;
 	bool isRiver() const;
+	bool isRiverMoveIgnore() const;
 	bool isEnemyRoute() const;
 	bool isAlwaysHeal() const;
 	bool isHillsDoubleMove() const;
@@ -1154,6 +1155,7 @@ protected:
 	bool m_bBlitz;
 	bool m_bAmphib;
 	bool m_bRiver;
+	bool m_bRiverMoveIgnore;
 	bool m_bEnemyRoute;
 	bool m_bAlwaysHeal;
 	bool m_bHillsDoubleMove;

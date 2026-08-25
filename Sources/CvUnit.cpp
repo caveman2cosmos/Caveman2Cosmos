@@ -576,6 +576,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iRBombardForceAbilityCount = 0;
 	m_iAmphibCount = 0;
 	m_iRiverCount = 0;
+	m_iRiverMoveIgnoreCount = 0;
 	m_iEnemyRouteCount = 0;
 	m_iAlwaysHealCount = 0;
 	m_iHillsDoubleMoveCount = 0;
@@ -967,6 +968,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_iRBombardForceAbilityCount = other.m_iRBombardForceAbilityCount;
 	m_iAmphibCount = other.m_iAmphibCount;
 	m_iRiverCount = other.m_iRiverCount;
+	m_iRiverMoveIgnoreCount = other.m_iRiverMoveIgnoreCount;
 	m_iEnemyRouteCount = other.m_iEnemyRouteCount;
 	m_iAlwaysHealCount = other.m_iAlwaysHealCount;
 	m_iHillsDoubleMoveCount = other.m_iHillsDoubleMoveCount;
@@ -16876,6 +16878,22 @@ void CvUnit::changeRiverCount(int iChange)
 	FASSERT_NOT_NEGATIVE(getRiverCount());
 }
 
+int CvUnit::getRiverMoveIgnoreCount() const
+{
+	return m_iRiverMoveIgnoreCount;
+}
+
+bool CvUnit::isRiverMoveIgnore() const
+{
+	return getRiverMoveIgnoreCount() > 0;
+}
+
+void CvUnit::changeRiverMoveIgnoreCount(int iChange)
+{
+	m_iRiverMoveIgnoreCount += iChange;
+	FASSERT_NOT_NEGATIVE(getRiverMoveIgnoreCount());
+}
+
 int CvUnit::getEnemyRouteCount() const
 {
 	return m_iEnemyRouteCount;
@@ -21520,6 +21538,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeBlitzCount((kPromotion.isBlitz()) ? iChange : 0);
 	changeAmphibCount((kPromotion.isAmphib()) ? iChange : 0);
 	changeRiverCount((kPromotion.isRiver()) ? iChange : 0);
+	changeRiverMoveIgnoreCount((kPromotion.isRiverMoveIgnore()) ? iChange : 0);
 	changeEnemyRouteCount((kPromotion.isEnemyRoute()) ? iChange : 0);
 	changeAlwaysHealCount((kPromotion.isAlwaysHeal()) ? iChange : 0);
 	changeHillsDoubleMoveCount((kPromotion.isHillsDoubleMove()) ? iChange : 0);
@@ -22335,6 +22354,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBlitzCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAmphibCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRiverCount);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iRiverMoveIgnoreCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iEnemyRouteCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAlwaysHealCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHillsDoubleMoveCount);
@@ -23854,6 +23874,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBlitzCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAmphibCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRiverCount);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iRiverMoveIgnoreCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iEnemyRouteCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAlwaysHealCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHillsDoubleMoveCount);

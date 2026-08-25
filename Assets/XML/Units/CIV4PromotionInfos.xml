@@ -20797,7 +20797,6 @@
 			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<bBlitz>1</bBlitz>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -20814,7 +20813,7 @@
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iLevelPrereq>5</iLevelPrereq>
-			<bRiver>1</bRiver>
+			<bRiverMoveIgnore>1</bRiverMoveIgnore>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -20838,7 +20837,8 @@
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iLevelPrereq>10</iLevelPrereq>
-			<bEnemyRoute>1</bEnemyRoute>
+			<bBlitz>1</bBlitz>
+			<iMoveDiscountChange>1</iMoveDiscountChange>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -23258,12 +23258,6 @@
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CONCEALMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<InvisibilityIntensityChangeTypes>
-				<InvisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</InvisibilityIntensityChangeType>
-			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Buttons/Promotions/Concealment1BuildUp.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>

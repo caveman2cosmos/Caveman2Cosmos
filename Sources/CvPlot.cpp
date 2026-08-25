@@ -4602,7 +4602,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 					iRegularCost += GC.getHILLS_EXTRA_MOVEMENT();
 				}
 
-				if (bRiverCrossing)
+				if (bRiverCrossing && !pUnit->isRiverMoveIgnore())
 				{
 					iRegularCost += GC.getRIVER_EXTRA_MOVEMENT();
 				}

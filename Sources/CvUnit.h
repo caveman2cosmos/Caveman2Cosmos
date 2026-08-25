@@ -1154,6 +1154,10 @@ public:
 	bool isRiver() const;
 	void changeRiverCount(int iChange);
 
+	int getRiverMoveIgnoreCount() const;
+	bool isRiverMoveIgnore() const;
+	void changeRiverMoveIgnoreCount(int iChange);
+
 	int getEnemyRouteCount() const;
 	bool isEnemyRoute() const;
 	void changeEnemyRouteCount(int iChange);
@@ -1790,6 +1794,7 @@ protected:
 	int m_iRBombardForceAbilityCount;
 	int m_iAmphibCount;
 	int m_iRiverCount;
+	int m_iRiverMoveIgnoreCount;
 	int m_iEnemyRouteCount;
 	int m_iAlwaysHealCount;
 	int m_iHillsDoubleMoveCount;

@@ -29203,6 +29203,12 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
 	}
 
+	if (info.isRiverMoveIgnore())
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT"));
+	}
+
 	if (info.isEnemyRoute())
 	{
 		szBuffer.append(NEWLINE);
