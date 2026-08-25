@@ -12995,6 +12995,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	bool bIsBlitz = false;
 	bool bIsAmphib = false;
 	bool bIsRiver = false;
+	bool bIsRiverMoveIgnore = false;
 	bool bIsEnemyRoute = false;
 	bool bIsStatus = false;
 	bool bIsPrereqNormInvisible = false;
@@ -13047,6 +13048,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (promoX.isRiver())
 		{
 			bIsRiver = true;
+		}
+		if (promoX.isRiverMoveIgnore())
+		{
+			bIsRiverMoveIgnore = true;
 		}
 		if (promoX.isEnemyRoute())
 		{
@@ -13221,6 +13226,11 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
+	}
+	if (bIsRiverMoveIgnore)
+	{
+		szBuffer.append(pcNewline);
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT"));
 	}
 	if (bIsEnemyRoute)
 	{
@@ -29201,12 +29211,6 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes
 	{
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
-	}
-
-	if (info.isRiverMoveIgnore())
-	{
-		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT"));
 	}
 
 	if (info.isEnemyRoute())

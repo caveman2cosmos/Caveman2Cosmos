@@ -46869,13 +46869,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>8</Constant>
+										<Constant>16</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>2</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46890,13 +46890,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46911,13 +46911,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46932,13 +46932,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46960,7 +46960,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>3</Constant>
+										<Constant>6</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46979,7 +46979,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46998,7 +46998,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47017,7 +47017,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47036,7 +47036,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47055,7 +47055,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>24</Constant>
+										<Constant>48</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47074,7 +47074,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47093,7 +47093,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47112,7 +47112,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>24</Constant>
+										<Constant>48</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -47283,13 +47283,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>40</Constant>
+										<Constant>80</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -47304,13 +47304,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -47325,13 +47325,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -47346,13 +47346,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
