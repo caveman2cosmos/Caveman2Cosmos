@@ -58236,6 +58236,7 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>368</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
@@ -58370,6 +58371,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_INVESTIGATOR</SpecialistType>
@@ -73445,6 +73447,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iInvestigation>5</iInvestigation>
 			<iDefense>5</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -98808,6 +98811,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>1845</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -98884,6 +98888,7 @@
 				</And>
 			</ConstructCondition>
 			<iCost>800</iCost>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
@@ -109947,6 +109952,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iInvestigation>10</iInvestigation>
 			<iDefense>5</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -111497,6 +111503,7 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>630</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -126124,6 +126131,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_INVESTIGATOR</SpecialistType>
@@ -126236,6 +126244,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_DIVINE_RIGHT</TechType>
