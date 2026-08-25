@@ -3118,7 +3118,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					int iExperience = attackXPValue() * iInitialDefenderStrength / std::max(1, iInitialAttackerStrength);
 					iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
-					changeExperience(iExperience, maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
+					const int iExperience100 = shareSpotterXP(pDefender, iExperience * 100);
+					changeExperience100(iExperience100, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 				}
 				// Koshling - add rolling history of combat results to allow the AI to adapt to what it sees happening
 				pPlot->area()->recordCombatDeath(pDefender->getOwner(), pDefender->getUnitType(), getUnitType());
@@ -29548,6 +29549,78 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 }
 
 
+// Award part of a kill's XP (in changeExperience100 hundredths-scale) to whichever allied unit(s)
+// actually spotted the defender, when this (the attacker) could not have seen it unassisted.
+// Returns the XP the attacker keeps for themself, same scale as iExperience100.
+int CvUnit::shareSpotterXP(CvUnit* pDefender, int iExperience100)
+{
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK) || !pDefender->hasAnyInvisibilityType())
+	{
+		return iExperience100;
+	}
+
+	std::vector<CvUnit*> apSpotters;
+	CvPlot* pDefenderPlot = pDefender->plot();
+
+	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
+	{
+		const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
+
+		if (!pDefender->hasInvisibilityType(eInvisible))
+		{
+			continue;
+		}
+		const int iDefenderIntensity = pDefender->invisibilityIntensityTotal(eInvisible);
+
+		if (iDefenderIntensity <= 0 || visibilityIntensityTotal(eInvisible) >= iDefenderIntensity)
+		{
+			continue; // attacker could see through this invisibility type unassisted
+		}
+
+		for (int iJ = 0; iJ < pDefenderPlot->getNumPlotTeamVisibilityIntensity(); iJ++)
+		{
+			const PlotTeamVisibilityIntensity& kSpot = pDefenderPlot->getPlotTeamVisibilityIntensity(iJ);
+
+			if (kSpot.eTeam != getTeam() || kSpot.eInvisibility != eInvisible || kSpot.iIntensity < iDefenderIntensity)
+			{
+				continue;
+			}
+			for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+			{
+				if (GET_PLAYER((PlayerTypes)iK).getTeam() == getTeam())
+				{
+					CvUnit* pSpotter = GET_PLAYER((PlayerTypes)iK).getUnit(kSpot.iUnitID);
+
+					if (pSpotter != NULL && pSpotter != this && !algo::any_of_equal(apSpotters, pSpotter))
+					{
+						apSpotters.push_back(pSpotter);
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	if (apSpotters.empty())
+	{
+		return iExperience100;
+	}
+
+	const int iSpotterTotalShare100 = (iExperience100 * GC.getDefineINT("SPOTTER_XP_SHARE_PERCENT")) / 100;
+	const int iSpotterEach100 = iSpotterTotalShare100 / (int)apSpotters.size();
+
+	if (iSpotterEach100 <= 0)
+	{
+		return iExperience100;
+	}
+
+	for (size_t iS = 0; iS < apSpotters.size(); iS++)
+	{
+		apSpotters[iS]->changeExperience100(iSpotterEach100, 100 * apSpotters[iS]->maxXPValue(pDefender), true, pDefenderPlot->getOwner() == apSpotters[iS]->getOwner(), true);
+	}
+	return iExperience100 - iSpotterEach100 * (int)apSpotters.size();
+}
+
 void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iAttackerWinOdds, int iDefenderInitialDamage, bool bPromotion, bool bDefPromotion)
 {
 	if (!isDead() && !pDefender->isDead())
@@ -29583,9 +29656,9 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 	else if (!bPromotion && !isDead() && attackXPValue() > 0)
 	{
 		applyDynamicXP(
-			getVanquishDynamicXP(
+			shareSpotterXP(pDefender, getVanquishDynamicXP(
 				GC.getCOMBAT_DIE_SIDES() - iAttackerWinOdds, iAttackerInitialDamage, 100 * attackXPValue()
-			),
+			)),
 			pPlot->getOwner() == getOwner(),
 			100 * maxXPValue(pDefender)
 		);

@@ -651,6 +651,8 @@ public:
 	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
 	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const;
 
+	int shareSpotterXP(CvUnit* pDefender, int iExperience);
+
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
 	int getTerrainProtectedCount(TerrainTypes eIndex) const;

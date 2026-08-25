@@ -1073,6 +1073,12 @@
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Percentage of a kill's XP redirected to allied spotter unit(s) whose vision was needed
+			 for the attacker to see an otherwise-hidden defender (Hide & Seek combat option only). -->
+		<DefineName>SPOTTER_XP_SHARE_PERCENT</DefineName>
+		<iDefineIntVal>30</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>EXPERIENCE_FROM_WITHDRAWL</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
