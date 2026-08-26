@@ -2978,6 +2978,7 @@
                 <NotOnUnitCombatType>UNITCOMBAT_MISSIONARY</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_HEALTH_CARE</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_SUBDUED</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
