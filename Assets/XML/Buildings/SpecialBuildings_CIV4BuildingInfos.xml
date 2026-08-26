@@ -361,20 +361,20 @@
 					</Or>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FLAMINGO</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_FLAMINGO</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_PEACOCK</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_PEACOCK</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_SECRETARY_BIRD</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_SECRETARY_BIRD</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_VULTURE</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_VULTURE</ID>
 						</Has>
 					</Or>
 				</And>

@@ -24733,84 +24733,12 @@ TXT_KEY_BUILDING_CRIME_HACKING_PEDIA"</French>
 		<Russian>Орбитальные космические колонии нуждаются в энергии, и иногда бортовой термоядерный двигатель и естественная солнечная энергия не сокращают ее. Используя массив зеркал на близкой орбите вокруг Солнца, эта электростанция собирает сфокусированный солнечный свет для получения мощной энергии.[PARAGRAPH:2]Может быть опасно.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOON_BEAR</Tag>
-		<English>Folklore - Moon Bear</English>
-		<French>Mythe de l'Ours lune</French>
-		<Italian>Mito dell'orso della luna</Italian>
-		<Polish>Mit- Nied&#159;wied&#159; Himalajski</Polish>
-		<Russian>Ìèô î áåëîãð. ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BEAR</Tag>
-		<English>Folklore (T) - Bear</English>
-		<French>Mythe de l'Ours</French>
-		<Italian>Mito dell'orso</Italian>
-		<Polish>Mit Nied&#159;wiedzia</Polish>
-		<Russian>Ìèô î ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_BEAR</Tag>
-		<English>Folklore - Black Bear</English>
-		<French>Mythe de l'Ours noir</French>
-		<Italian>Mito dell'orso nero</Italian>
-		<Polish>Mit - Baribal</Polish>
-		<Russian>Ìèô î ÷åðí. ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</Tag>
-		<English>Folklore - Blue-footed Booby</English>
-		<French>Mythe du Fou à pieds bleus</French>
-		<Italian>Mito della sula piediazzurri</Italian>
-		<Polish>Mit - G&#179;uptak Niebieskonogi</Polish>
-		<Russian>Ìèô îá îëóøå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BROWN_BEAR</Tag>
-		<English>Folklore - Brown Bear</English>
-		<French>Mythe de l'Ours brun</French>
-		<Italian>Mito dell'orso bruno</Italian>
-		<Polish>Mit - Nied&#159;wied&#159; Brunatny</Polish>
-		<Russian>Ìèô î áóðîì ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CASSOWARY</Tag>
-		<English>Folklore - Cassowary</English>
-		<French>Mythe du Casoar</French>
-		<Italian>Mito del casuaro</Italian>
-		<Polish>Mit - Kazuar</Polish>
-		<Russian>Ìèô î êàçóàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAVE_BEAR</Tag>
-		<English>Folklore - Cave Bear</English>
-		<French>Mythe de l'Ours des cavernes</French>
-		<Italian>Mito dell'orso delle caverne</Italian>
-		<Polish>Mit - Nied&#159;wied&#159; Jaskiniowy</Polish>
-		<Russian>Ìèô î ïåù. ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_CORAL_REEF</Tag>
 		<English>Folklore (E) - Coral Reef</English>
 		<French>Mythe du Récif de corail</French>
 		<Italian>Mito della barriera corallina</Italian>
 		<Polish>Mit Rafy Koralowej</Polish>
 		<Russian>Ìèô î êîðàë. ðèôå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE</Tag>
-		<English>Folklore - Eagle</English>
-		<French>Mythe de l'Aigle</French>
-		<Italian>Mito dell'aquila</Italian>
-		<Polish>Mit - Orze&#179;</Polish>
-		<Russian>Ìèô îá îðëå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMU</Tag>
-		<English>Folklore - Emu</English>
-		<French>Mythe de l'Emeu</French>
-		<Italian>Mito dell'emù</Italian>
-		<Polish>Mit - Emu</Polish>
-		<Russian>Ìèô îá ýìó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_STONE_FROM_THE_SKY</Tag>
@@ -24821,60 +24749,12 @@ TXT_KEY_BUILDING_CRIME_HACKING_PEDIA"</French>
 		<Russian>Ìèô î íåáåñíîì êàìíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GRIZZLY</Tag>
-		<English>Folklore - Grizzly</English>
-		<French>Mythe du Grizzly</French>
-		<Italian>Mito dell'orso grizzly</Italian>
-		<Polish>Mit - Grizzly</Polish>
-		<Russian>Ìèô î ãðèçëè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAASTS_EAGLE</Tag>
-		<English>Folklore - Haast's Eagle</English>
-		<French>Mythe de l'Aigle de Haast</French>
-		<Italian>Mito dell'aquila del Haast</Italian>
-		<Polish>Mit - Orze&#179; Haasta</Polish>
-		<Russian>Ìèô îá îðëå Õààñòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HARPY_EAGLE</Tag>
-		<English>Folklore - Harpy Eagle</English>
-		<French>Mythe de la Harpie féroce</French>
-		<Italian>Mito dell'aquila arpia</Italian>
-		<Polish>Mit - Harpia Wielka</Polish>
-		<Russian>Ìèô î ãàðïèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAWK</Tag>
-		<English>Folklore - Hawk</English>
-		<French>Mythe du Faucon</French>
-		<Italian>Mito del falco</Italian>
-		<Polish>Mit - Jastrz&#185;b</Polish>
-		<Russian>Ìèô î ÿñòðåáå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOA</Tag>
-		<English>Folklore - Moa</English>
-		<French>Mythe du Moa</French>
-		<Italian>Mito dell'uccello moa</Italian>
-		<Polish>Mit - Moa</Polish>
-		<Russian>Ìèô î ìîà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_OASIS</Tag>
 		<English>Folklore (E) - Oasis</English>
 		<French>Mythe de l'Oasis</French>
 		<Italian>Mito dell'oasi</Italian>
 		<Polish>Mit Oazy</Polish>
 		<Russian>Ìèô îá îàçèñå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_OSTRICH</Tag>
-		<English>Folklore - Ostrich</English>
-		<French>Mythe de l'Autruche</French>
-		<Italian>Mito dello struzzo</Italian>
-		<Polish>Mit - Stru&#156;</Polish>
-		<Russian>Ìèô î ñòðàóñå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_LANDFORM</Tag>
@@ -24885,104 +24765,12 @@ TXT_KEY_BUILDING_CRIME_HACKING_PEDIA"</French>
 		<Russian>Миф о форме Земли</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIANT_PANDA</Tag>
-		<English>Folklore - Giant Panda</English>
-		<French>Mythe du Panda</French>
-		<Italian>Mito del panda gigante</Italian>
-		<Polish>Mit - Panda</Polish>
-		<Russian>Ìèô î ïàíäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PARROT</Tag>
-		<English>Folklore - Parrot</English>
-		<French>Le Mythe du Perroquet</French>
-		<Italian>Mito del pappagallo</Italian>
-		<Polish>Mit - Papuga</Polish>
-		<Russian>Ìèô î ïîïóãàå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_POLAR_BEAR</Tag>
-		<English>Folklore - Polar Bear</English>
-		<French>Mythe de l'Ours polaire</French>
-		<Italian>Mito dell'orso polare</Italian>
-		<Polish>Mit - Nied&#159;wied&#159; Polarny</Polish>
-		<Russian>Ìèô î áåëîì ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAVEN</Tag>
-		<English>Folklore - Raven</English>
-		<French>Mythe du Corbeau</French>
-		<Italian>Mito del corvo imperiale</Italian>
-		<Polish>Mit - Kruk</Polish>
-		<Russian>Ìèô î âîðîíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAZORBILL</Tag>
-		<English>Folklore - Razorbill</English>
-		<French>Mythe du Pingouin torda</French>
-		<Italian>Mito della gazza marina</Italian>
-		<Polish>Mit - Alka</Polish>
-		<Russian>Ìèô î ãàãàðêå</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_REEF</Tag>
 		<English>Folklore (E) - Reef</English>
 		<French>Mythe du Récif</French>
 		<Italian>Mito della barriera</Italian>
 		<Polish>Mit Rafy</Polish>
 		<Russian>Ìèô î ðèôå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RHEA</Tag>
-		<English>Folklore - Rhea</English>
-		<French>Mythe du Nandou</French>
-		<Italian>Mito del nandù</Italian>
-		<Polish>Mit - Nandu</Polish>
-		<Russian>Ìèô î íàíäó</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_STELLERS_SEA_EAGLE</Tag>
-		<English>Folklore - Steller's Sea Eagle</English>
-		<French>
-			<Text>Mythe du Pigargue empereur</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Mito dell'aquila di mare di Steller</Italian>
-		<Polish>Mit - Bielik Olbrzymi</Polish>
-		<Russian>Ìèô îá îðëàíå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SECRETARY_BIRD</Tag>
-		<English>Folklore - Secretary Bird</English>
-		<French>Mythe du Messager sagittaire</French>
-		<Italian>Mito del serpentario</Italian>
-		<Polish>Mit - Sekretarz</Polish>
-		<Russian>Ìèô î ïòèöå-ñåêðåòàðå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SLOTH_BEAR</Tag>
-		<English>Folklore - Sloth Bear</English>
-		<French>Mythe de l'Ours lippu</French>
-		<Italian>Mito dell'orso labiato</Italian>
-		<Polish>Mit - Wargacz</Polish>
-		<Russian>Ìèô î ãóáà÷å</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPECTACLED_BEAR</Tag>
-		<English>Folklore - Spectacled Bear</English>
-		<French>Mythe de l'Ours à lunettes</French>
-		<Italian>Mito dell'orso dagli occhiali</Italian>
-		<Polish>Mit - Nied&#159;wied&#159; Andyjski</Polish>
-		<Russian>Ìèô îá î÷ê. ìåäâåäå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SUN_BEAR</Tag>
-		<English>Folklore - Sun Bear</English>
-		<French>Mythe de l'Ours malais</French>
-		<Italian>Mito dell'orso malese</Italian>
-		<Polish>Mit - Nied&#159;wied&#159; Malajski</Polish>
-		<Russian>Ìèô î ìàë. ìåäâåäå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_VOLCANO</Tag>

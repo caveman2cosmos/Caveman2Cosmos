@@ -203,15 +203,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
-			</PrereqOrBuildings>
 			<PrereqOrHeritage>
 				<Type>HERITAGE_FOLKLORE_AARDVARK</Type>
 				<Type>HERITAGE_FOLKLORE_ANTEATER</Type>
 				<Type>HERITAGE_FOLKLORE_BEAVER</Type>
+				<Type>HERITAGE_FOLKLORE_NINE_BANDED_ARMADILLO</Type>
+				<Type>HERITAGE_FOLKLORE_GLYPTODON</Type>
+				<Type>HERITAGE_FOLKLORE_GROUND_SLOTH</Type>
 			</PrereqOrHeritage>
 			<iCost>72</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
@@ -281,14 +279,14 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
-			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_URSIDAE</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -407,16 +405,16 @@
 					</Or>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_BIRDS</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_TAXON_BIRDS</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_TAXON_FLIGHTLESS_BIRDS</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_RAPTORS</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_TAXON_RAPTORS</ID>
 						</Has>
 					</Or>
 				</And>
@@ -692,12 +690,14 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_CAVE_BEAR</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -904,25 +904,25 @@
 			<ConstructCondition>
 				<And>
 					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_FISH</ID>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_TAXON_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_COD</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_COD</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_MACKEREL</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_MACKEREL</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_TUNA</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_TUNA</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_MARLIN</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_MARLIN</ID>
 						</Has>
 					</Or>
 					<Or>
@@ -1002,9 +1002,14 @@
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_CRAB</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<iCost>3690</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
@@ -1036,8 +1041,10 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_URSIDAE</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -1217,12 +1224,14 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_GIANT_RHINOCEROS</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -1310,27 +1319,11 @@
 				<Type>HERITAGE_TAXON_TAPIRIDAE</Type>
 				<Type>HERITAGE_TAXON_HIPPOPOTAMIDAE</Type>
 				<Type>HERITAGE_TAXON_MONOTREMATA</Type>
+				<Type>HERITAGE_TAXON_RHINOCEROTIDAE</Type>
+				<Type>HERITAGE_TAXON_ANTELOPE</Type>
+				<Type>HERITAGE_TAXON_BOVINAE</Type>
+				<Type>HERITAGE_TAXON_FLIGHTLESS_BIRDS</Type>
 			</PrereqOrHeritage>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_ANTELOPE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_BULL</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1412,8 +1405,8 @@
 			<ConstructCondition>
 				<And>
 					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_T_FISH</ID>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_TAXON_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -1431,16 +1424,16 @@
 					</Or>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_COD</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_COD</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_MACKEREL</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_MACKEREL</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_TUNA</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_TUNA</ID>
 						</Has>
 					</Or>
 				</And>
@@ -1513,15 +1506,17 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_GLYPTODON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_GLYPTODON</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1660,12 +1655,14 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_HAASTS_EAGLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_HAASTS_EAGLE</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -1719,13 +1716,13 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_FALCONRY</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_RAPTORS</BuildingType>
-			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_RAPTORS</Type>
+			</PrereqOrHeritage>
 			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -1820,8 +1817,15 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_TAXON_FISH</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<iCost>1260</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -2221,12 +2225,14 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_MOA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_MOA</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_MOA</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -2346,11 +2352,12 @@
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_LEVIATHAN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_RAY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_SQUID</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_ELASMOBRANCHII</Type>
+				<Type>HERITAGE_FOLKLORE_GIANT_SQUID</Type>
+				<Type>HERITAGE_TAXON_CETACEA</Type>
+			</PrereqOrHeritage>
 			<iCost>264</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
@@ -2477,15 +2484,17 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_GROUND_SLOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_GROUND_SLOTH</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2595,9 +2604,14 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_PEACOCK</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -2652,12 +2666,12 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HERD_POULTRY</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PHEASANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_PEACOCK</Type>
+				<Type>HERITAGE_FOLKLORE_PHEASANT</Type>
+				<Type>HERITAGE_FOLKLORE_DUCK</Type>
+				<Type>HERITAGE_FOLKLORE_WILD_TURKEY</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -2693,34 +2707,15 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_PRIMATE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ConstructCondition>
-				<And>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_CARNIVAL</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_ZOO</ID>
-						</Has>
-					</Or>
-					<Or>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_OLD_MAN_OF_THE_FOREST</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</ID>
-						</Has>
-						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</ID>
-						</Has>
-					</Or>
-				</And>
-			</ConstructCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
+			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_OLD_MAN_OF_THE_FOREST</Type>
+				<Type>HERITAGE_TAXON_OLD_WORLD_MONKEYS</Type>
+				<Type>HERITAGE_TAXON_NEW_WORLD_MONKEYS</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -2954,15 +2949,17 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_SABRETOOTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
-					<iNumBuildingNeeded>3</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_SABRETOOTH</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3060,9 +3057,14 @@
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
-			</PrereqInCityBuildings>
+			<ConstructCondition>
+				<And>
+					<Has>
+						<GOMType>GOM_HERITAGE</GOMType>
+						<ID>HERITAGE_FOLKLORE_SEALION_SEA</ID>
+					</Has>
+				</And>
+			</ConstructCondition>
 			<iCost>306</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -3399,10 +3401,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEA_LION</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_SEALION_SEA</Type>
+				<Type>HERITAGE_FOLKLORE_WALRUS</Type>
+			</PrereqOrHeritage>
 			<iCost>306</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -3437,9 +3439,9 @@
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_WILD_TURKEY</Type>
+			</PrereqOrHeritage>
 			<iCost>250</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -3469,9 +3471,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_WALRUS</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
-			</PrereqInCityBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_WALRUS</Type>
+			</PrereqOrHeritage>
 			<iCost>1070</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
