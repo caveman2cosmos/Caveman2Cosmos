@@ -14513,9 +14513,7 @@ bool CvPlayer::isLoyalMember(VoteSourceTypes eVoteSource) const
 
 void CvPlayer::setLoyalMember(VoteSourceTypes eVoteSource, bool bNewValue)
 {
-	//FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
-	FAssertMsg(eVoteSource >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eVoteSource < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
 
 	if (isLoyalMember(eVoteSource) != bNewValue)
 	{
