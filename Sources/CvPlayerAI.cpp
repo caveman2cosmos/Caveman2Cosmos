@@ -35858,10 +35858,10 @@ void CvPlayerAI::AI_formArmies()
 					if (pArmy != NULL)
 					{
 						pBestLeader = pArmy->getLeader();
-						if (pBestLeader == NULL)
+						if (pBestLeader == NULL || pBestLeader->getHeadUnit() == NULL)
 						{
 							pBestLeader = pArmy->findNewLeader();
-							if (pBestLeader == NULL)
+							if (pBestLeader == NULL || pBestLeader->getHeadUnit() == NULL)
 							{
 								pArmy->disband();
 								m_armies.remove(pArmy);
