@@ -11883,7 +11883,14 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 				const UnitTypes eGGTypetoAssign = getGreatGeneralTypetoAssign();
 				pBestCity->createGreatPeople(eGGTypetoAssign, false, true);
 				// HACK: overflows can cause experience explosion, this will ensure we don't have more than 1 GG of experience accumulated
-				m_iCombatExperience = (m_iCombatExperience - iExperienceThreshold) % iExperienceThreshold;
+				int iRemainder = (m_iCombatExperience - iExperienceThreshold) % iExperienceThreshold;
+				if (iRemainder < 0)
+				{
+					// A prior int overflow can leave m_iCombatExperience negative, in which case
+					// % alone yields a negative remainder instead of wrapping into [0, threshold).
+					iRemainder += iExperienceThreshold;
+				}
+				m_iCombatExperience = iRemainder;
 				// Normal code: if the overflows weren't present this code would be used
 				// m_iCombatExperience = m_iCombatExperience - iExperienceThreshold;
 				setGreatGeneralPointsForType(eGGTypetoAssign, 0);
@@ -14516,12 +14523,22 @@ void CvPlayer::setResearchingTech(TechTypes eIndex, bool bNewValue)
 bool CvPlayer::isLoyalMember(VoteSourceTypes eVoteSource) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
+	// FASSERT_BOUNDS compiles out in release builds; guard the array access for real.
+	if (eVoteSource < 0 || eVoteSource >= GC.getNumVoteSourceInfos())
+	{
+		return false;
+	}
 	return m_pabLoyalMember[eVoteSource];
 }
 
 void CvPlayer::setLoyalMember(VoteSourceTypes eVoteSource, bool bNewValue)
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
+	// FASSERT_BOUNDS compiles out in release builds; guard the array access for real.
+	if (eVoteSource < 0 || eVoteSource >= GC.getNumVoteSourceInfos())
+	{
+		return;
+	}
 
 	if (isLoyalMember(eVoteSource) != bNewValue)
 	{
