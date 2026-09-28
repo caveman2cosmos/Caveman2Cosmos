@@ -14768,7 +14768,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				iCheck *= iTrainReluctance;
 				//TBNote: May still need to take a count of units ordered... there's only so many units the AI should be willing to train at once for some tasks.  I'm thinking of polution control here.
 				int iAcceptanceLimit = 100 * ((1 + (int)player.getCurrentEra())/2); //Acceptable Value 
-				int iAcceptanceRate = iCurrentValue/100 * 5; //Accept a 5% rate increase
+				int iAcceptanceRate = iCurrentValue * 5/100; //Accept a 5% rate increase
 
 				//Calvitix : Evaluate the future evolution of the property, with actuel change, and estimate the number of turn to achieve goal 
 				#define MIN_PROPERTY_TOTAL_TO_DEAL_WITH  -1000
