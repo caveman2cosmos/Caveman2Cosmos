@@ -11852,6 +11852,14 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 		FErrorMsg("iExperience < 0");
 		iExperience = 0;
 	}
+	if (m_iCombatExperience < 0)
+	{
+		// Defensive clamp: a stale negative value (corrupt save, WorldBuilder edit, old trait
+		// bug) would otherwise never satisfy the >= threshold check below, permanently
+		// disabling Great General generation for this player.
+		FErrorMsg("m_iCombatExperience < 0");
+		m_iCombatExperience = 0;
+	}
 	if (iExperience == m_iCombatExperience)
 	{
 		return;
@@ -18960,6 +18968,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iWondersScore);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechScore);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCombatExperience);
+		// Defensive clamp: a negative value here (corrupt save, WorldBuilder edit, old trait bug)
+		// would otherwise permanently fail the >= threshold check in setCombatExperience,
+		// silently disabling Great General generation for this player forever.
+		if (m_iCombatExperience < 0)
+		{
+			m_iCombatExperience = 0;
+		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bAlive);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bEverAlive);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bTurnActive);
