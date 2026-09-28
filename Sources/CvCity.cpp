@@ -1753,9 +1753,11 @@ bool CvCity::canWork(const CvPlot* pPlot) const
 		return false;
 	}
 
-	FAssertMsg(getCityPlotIndex(pPlot) != -1, "getCityPlotIndex(pPlot) is expected to be assigned (not -1)");
+	const int iCityPlotIndex = getCityPlotIndex(pPlot);
 
-	if (getCityPlotIndex(pPlot) >= getNumCityPlots()) return false; // Just in case FAssertMsg doesn't end the function.
+	FAssertMsg(iCityPlotIndex != -1, "getCityPlotIndex(pPlot) is expected to be assigned (not -1)");
+
+	if (iCityPlotIndex < 0 || iCityPlotIndex >= getNumCityPlots()) return false; // Just in case FAssertMsg doesn't end the function.
 
 	//in the rare case that a city ends up with an invisible animal inside the city or something, the city plot should be made immune to the following effect.
 	if (pPlot != plot())
