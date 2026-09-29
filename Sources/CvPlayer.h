@@ -1441,8 +1441,6 @@ public:
 
 	bool hasValidBuildings(TechTypes eTech) const;
 
-	void checkAIStrategy();
-
 	void setCityCommerceModifierDirty(CommerceTypes eCommerce);
 
 	int getBuildingCommerceModifier(BuildingTypes eBonus, CommerceTypes eIndex) const;
