@@ -20813,13 +20813,22 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 }
 
 
-int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
+int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData, std::vector<bool>* pvbVisited) const
 {
 	PROFILE_EXTRA_FUNC();
 	if (kTriggeredData.m_eTrigger == NO_EVENTTRIGGER)
 	{
 		return 0;
 	}
+
+	std::vector<bool> vbLocalVisited;
+	if (pvbVisited == NULL)
+	{
+		vbLocalVisited.resize(GC.getNumEventInfos(), false);
+		pvbVisited = &vbLocalVisited;
+	}
+	(*pvbVisited)[eEvent] = true;
+
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	int iNumCities = getNumCities();
@@ -21318,8 +21327,8 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	}
 
 	int iThisEventValue = iValue;
-	//XXX THIS IS VULNERABLE TO NON-TRIVIAL RECURSIONS!
-	//Event A effects Event B, Event B effects Event A
+	//Guarded against non-trivial recursions (Event A affects Event B, Event B affects Event A, ...)
+	//via pvbVisited, which tracks every event already being evaluated in the current call chain.
 	for (int iEvent = 0; iEvent < GC.getNumEventInfos(); ++iEvent)
 	{
 		if (kEvent.getAdditionalEventChance(iEvent) > 0)
@@ -21332,9 +21341,9 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 				//Double the value since it's recursive.
 				iValue += (kEvent.getAdditionalEventChance(iEvent) * iThisEventValue) / 50;
 			}
-			else
+			else if (!(*pvbVisited)[iEvent])
 			{
-				iValue += (kEvent.getAdditionalEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData)) / 100;
+				iValue += (kEvent.getAdditionalEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData, pvbVisited)) / 100;
 			}
 		}
 
@@ -21344,9 +21353,9 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 			{
 				iValue -= (kEvent.getClearEventChance(iEvent) * iThisEventValue) / 50;
 			}
-			else
+			else if (!(*pvbVisited)[iEvent])
 			{
-				iValue -= (kEvent.getClearEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData)) / 100;
+				iValue -= (kEvent.getClearEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData, pvbVisited)) / 100;
 			}
 		}
 	}

@@ -745,7 +745,7 @@ protected:
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 
 	void AI_convertUnitAITypesForCrush();
-	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
+	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData, std::vector<bool>* pvbVisited = NULL) const;
 
 	void AI_doEnemyUnitData();
 	void AI_invalidateCloseBordersAttitudeCache();
