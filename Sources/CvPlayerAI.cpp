@@ -20813,6 +20813,29 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 }
 
 
+namespace {
+	// Marks eEvent as being evaluated for the lifetime of this scope, so that recursive
+	// AI_eventValue calls can detect cycles (an event depending, directly or transitively,
+	// on itself) without misidentifying a shared non-cyclic dependency (e.g. two events
+	// both depending on a third) as a cycle.
+	class ScopedEventVisit
+	{
+	public:
+		ScopedEventVisit(std::vector<bool>& vbVisited, int iEvent)
+			: m_vbVisited(vbVisited), m_iEvent(iEvent)
+		{
+			m_vbVisited[m_iEvent] = true;
+		}
+		~ScopedEventVisit()
+		{
+			m_vbVisited[m_iEvent] = false;
+		}
+	private:
+		std::vector<bool>& m_vbVisited;
+		int m_iEvent;
+	};
+}
+
 int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData, std::vector<bool>* pvbVisited) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -20827,7 +20850,7 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 		vbLocalVisited.resize(GC.getNumEventInfos(), false);
 		pvbVisited = &vbLocalVisited;
 	}
-	(*pvbVisited)[eEvent] = true;
+	ScopedEventVisit visitGuard(*pvbVisited, eEvent);
 
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
