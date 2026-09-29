@@ -289,7 +289,10 @@ void CvSelectionGroup::doTurn()
 
 		if (AI_isControlled())
 		{
-			if ((getActivityType() != ACTIVITY_MISSION) || (!canDefend() && (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))))
+			if ((getActivityType() != ACTIVITY_MISSION)
+			|| (!canDefend()
+			&& (!headMissionQueueNode() || headMissionQueueNode()->m_data.eMissionType != MISSION_BUILD)
+			&& (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))))
 			{
 				setForceUpdate(true);
 			}
@@ -298,7 +301,7 @@ void CvSelectionGroup::doTurn()
 		{
 			foreach_(const CvUnit* pLoopUnit, units() | filtered(!CvUnit::fn::isSpy()))
 			{
-				if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
+				if (pLoopUnit->getBuildType() == NO_BUILD && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
 				{
 					clearMissionQueue();
 				}
@@ -575,6 +578,7 @@ void CvSelectionGroup::autoMission()
 	if (getNumUnits() > 0 && headMissionQueueNode() && !isBusy())
 	{
 		if (isHuman()
+		&& headMissionQueueNode()->m_data.eMissionType != MISSION_BUILD
 		&& algo::any_of(units(), !CvUnit::fn::alwaysInvisible())
 		&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
 		{
