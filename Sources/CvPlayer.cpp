@@ -9319,7 +9319,10 @@ void CvPlayer::killGoldenAgeUnits(CvUnit* pUnitAlive)
 				{
 					iValue = 10000;
 
-					iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
+					if (pUnitAlive)
+					{
+						iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
+					}
 
 					if (iValue > iBestValue)
 					{
