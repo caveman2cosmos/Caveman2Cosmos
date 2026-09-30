@@ -1034,7 +1034,7 @@
 			This can never give barbs techs that no other player has, it just determines how fast they catch up.
 		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RAZING_CULTURAL_PERCENT_THRESHOLD</DefineName>
