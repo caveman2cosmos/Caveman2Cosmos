@@ -8319,6 +8319,10 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 
+		// Raw per-contact weight (open borders/vassalage/war visibility/trade network), before it gets
+		// crushed below by how rare the tech is game-wide - welfare needs contact substantiation, not tech rarity.
+		const double fRawContactWeight = knownExp;
+
 		if (knownExp > 0.0)
 		{
 			//If 1/3 the teams don't have the tech, diffusion is slow
@@ -8359,7 +8363,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 
 				// Welfare should scale with how substantiated our contact actually is, not just fire at full
 				// strength off a single incidental sighting (e.g. spotting one distant scout).
-				const double fKnownExpNorm = std::min(knownExp / GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM"), 1.0);
+				const double fKnownExpNorm = std::min(fRawContactWeight / GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM"), 1.0);
 				iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fKnownExpNorm);
 
 				int iBestScore = 0;
