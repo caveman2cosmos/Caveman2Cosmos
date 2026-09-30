@@ -73664,7 +73664,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
