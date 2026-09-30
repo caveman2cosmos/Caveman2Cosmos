@@ -432,13 +432,18 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	{
 		const int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultTraits();
 		const int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultComplexTraits();
+		// GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS promises no positive traits at game start;
+		// civilization/barbarian-selection traits aren't part of that promise (mirrors recalculateModifiers()).
+		const bool bSkipPositiveTraits = GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS);
 
 		if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
 			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
 				const TraitTypes eTrait = TraitTypes(GC.getLeaderHeadInfo(ePersonality).getDefaultComplexTrait(iI));
-				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				if (GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
 					m_pabHasTrait[eTrait] = true;
 					processTrait(eTrait, 1);
@@ -450,7 +455,9 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
 			{
 				const TraitTypes eTrait = TraitTypes(GC.getLeaderHeadInfo(ePersonality).getDefaultTrait(iI));
-				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				if (GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
 					m_pabHasTrait[eTrait] = true;
 					processTrait(eTrait, 1);
@@ -461,10 +468,13 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		{
 			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 			{
-				if (GC.getLeaderHeadInfo(ePersonality).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+				const TraitTypes eTrait = (TraitTypes)iI;
+				if (GC.getLeaderHeadInfo(ePersonality).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
-					m_pabHasTrait[(TraitTypes)iI] = true;
-					processTrait((TraitTypes)iI, 1);
+					m_pabHasTrait[eTrait] = true;
+					processTrait(eTrait, 1);
 				}
 			}
 		}
@@ -29125,26 +29135,21 @@ void CvPlayer::recalculateModifiers()
 	changeExtraHappiness(m_iExtraHappinessUnattributed);
 
 	//	Put back trait-sourced modifiers
-	// Game Compatability issue resolution
-	//bool bHasCompiled = false;
-	//Apparently some games have displayed the ability to have a non-leaderhead (iLinePriority 0) trait being assigned to leaders in a Developing Leaderhead Game.
-	//This section should at least convert them if this takes place.  In the meantime... need to figure out HOW that's happening at all.  I've seen rev leaders initiated in the middle of the game come in with extra traits... may have something to do with that?
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
+		const bool bNoPositiveTraits = GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS);
 		for (int iI = 0; iI <GC.getNumTraitInfos(); iI++)
 		{
 			const TraitTypes eTrait = ((TraitTypes)iI);
-			////removes the extra negative trait if it shouldn't be there.  After a version or two, this should be removed entirely and m_iCompatCheckCount can be repurposed later.
-			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
-			//{
-			//	if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait) && m_iCompatCheckCount != 1)
-			//	{
-			//		m_pabHasTrait[eTrait] = false;
-			//		m_iCompatCheckCount = 1;
-			//	}
-			//}
 			if (!GC.getTraitInfo(eTrait).isCivilizationTrait() && !GC.getTraitInfo(eTrait).isBarbarianSelectionOnly())
 			{
+				// baseInit() skips granting the leader's base (linePriority 0) positive trait under this
+				// option, but this function also runs on existing players (save load, option toggled
+				// mid-game) whose base trait was already granted before that gate applied - strip it here too.
+				if (bNoPositiveTraits && hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0 && !GC.getTraitInfo(eTrait).isNegativeTrait())
+				{
+					m_pabHasTrait[eTrait] = false;
+				}
 				if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0 && GC.getTraitInfo(eTrait).getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					for (int iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)
