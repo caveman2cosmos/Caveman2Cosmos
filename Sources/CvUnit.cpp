@@ -4588,7 +4588,7 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 
 			if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 			{
-				if (!isNoCapture())
+				if (!isNoCapture() && !isAnimal())
 				{
 					pDefender->setCapturingPlayer(getOwner());
 					pDefender->setCapturingUnit(this);
@@ -5060,6 +5060,12 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				{
 					pDefender->setCapturingPlayer(getOwner());
 					pDefender->setCapturingUnit(this);
+				}
+				else if (isAnimal() || isNoCapture())
+				{
+					// Wipe any capture claim left over from an earlier, unrelated combat so this
+					// kill can't be misattributed as a capture (animals must never capture units).
+					pDefender->setCapturingPlayer(NO_PLAYER);
 				}
 
 				pDefender->killUnconditional(false, NO_PLAYER, true);
@@ -15759,6 +15765,12 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 							}
 							unitX->setCapturingPlayer(eMyPlayer);
 							unitX->setCapturingUnit(this);
+						}
+						else if (isAnimal() || isNoCapture())
+						{
+							// Wipe any capture claim left over from an earlier, unrelated combat so this
+							// kill can't be misattributed as a capture (animals must never capture units).
+							unitX->setCapturingPlayer(NO_PLAYER);
 						}
 						unitX->kill(true, eMyPlayer, true);
 					}
@@ -39436,6 +39448,12 @@ bool CvUnit::doTrapDisable(CvUnit* pUnit)
 	{
 		setCapturingPlayer(pUnit->getOwner());
 		setCapturingUnit(pUnit);
+	}
+	else if (pUnit->isAnimal() || pUnit->isNoCapture())
+	{
+		// Wipe any capture claim left over from an earlier, unrelated combat so this
+		// kill can't be misattributed as a capture (animals must never capture units).
+		setCapturingPlayer(NO_PLAYER);
 	}
 	kill(false, pUnit->getOwner(), true);
 	return true;
