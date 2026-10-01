@@ -3768,6 +3768,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 		&& (bCombat ? unitX->canEnterOrAttackPlot(pPlot) : unitX->canEnterPlot(pPlot)))
 		{
 			unitX->move(pPlot, true);
+			GC.stuckUnitMoveCounts.erase(unitX->getID());
 		}
 		else
 		{
@@ -3775,29 +3776,25 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 			unitX->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 
 			// Afforess - Units Seem to be getting stuck here
-			if (GC.iStuckUnitID != unitX->getID())
+			// Tracked per unit ID (not a single shared counter) - a shared counter let any
+			// other unit hitting this branch in between reset an unrelated unit's progress,
+			// so a genuinely stuck unit could go indefinitely without ever reaching the
+			// finishMoves() escape below.
+			if (++GC.stuckUnitMoveCounts[unitX->getID()] > 5)
 			{
-				GC.iStuckUnitID = unitX->getID();
-				GC.iStuckUnitCount = 0;
-			}
-			else
-			{
-				GC.iStuckUnitCount++;
-				if (GC.iStuckUnitCount > 5)
+				FErrorMsg("Unit Stuck in Loop!");
+				const CvUnit* pHeadUnit = getHeadUnit();
+				if (NULL != pHeadUnit)
 				{
-					FErrorMsg("Unit Stuck in Loop!");
-					const CvUnit* pHeadUnit = getHeadUnit();
-					if (NULL != pHeadUnit)
-					{
-						char szOut[1024];
-						CvWString szTempString;
-						getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-						sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-							pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
-						gDLL->messageControlLog(szOut);
-					}
-					unitX->finishMoves();
+					char szOut[1024];
+					CvWString szTempString;
+					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+					sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+					gDLL->messageControlLog(szOut);
 				}
+				unitX->finishMoves();
+				GC.stuckUnitMoveCounts.erase(unitX->getID());
 			}
 		}
 	}

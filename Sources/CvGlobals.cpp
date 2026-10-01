@@ -157,8 +157,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumPlayableCivilizationInfos(0)
 	, m_iNumAIPlayableCivilizationInfos(0)
 	, m_iTotalNumModules(0) // Modular loading control
-	, iStuckUnitID(0)
-	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
 	, m_loadedInitCore (NULL)
 	, m_bResourceLayerOn(false)
