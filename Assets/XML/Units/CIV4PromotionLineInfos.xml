@@ -1072,6 +1072,9 @@
 			<UnitCombatPrereqTypes>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_TRIBAL_GUARD</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_SNEAK</Type>
