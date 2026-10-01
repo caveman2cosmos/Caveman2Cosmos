@@ -7190,6 +7190,9 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 
 			iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra();
 
+			// TEMP: flat AI unit production buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+			iMod -= 10;
+
 			iBaseCost = getModifiedIntValue64(iBaseCost, iMod);
 
 			if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_25)){
@@ -7300,6 +7303,9 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 			iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldConstructPercent() - 100;
 		}
 		else iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent() - 100;
+
+		// TEMP: flat AI construction buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+		iMod -= 10;
 
 		if (iMod != 0)
 		{

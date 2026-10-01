@@ -698,6 +698,7 @@ public:
 	bool canHeal(const CvPlot* pPlot) const;
 	bool canSentry(const CvPlot* pPlot) const;
 
+	bool canHealOutsideFriendlyTerritory(const CvPlot* pPlot) const;
 	int healRate(const CvPlot* pPlot, bool bHealCheck = false) const;
 	int getHealRateAsType(const CvPlot* pPlot, bool bHealCheck = false, UnitCombatTypes eHealAsType = NO_UNITCOMBAT) const;
 	int healTurns(const CvPlot* pPlot) const;

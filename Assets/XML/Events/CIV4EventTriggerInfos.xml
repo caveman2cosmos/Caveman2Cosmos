@@ -15693,142 +15693,26 @@
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<TerrainsRequired>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-			</TerrainsRequired>
-			<BonusesRequired>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-				<BonusType>BONUS_SULPHUR</BonusType>
-			</BonusesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<PythonCanDo>canDoNewVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoNewVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_EXTINCT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>2</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_EXTINCTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoExtinction</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_DORMANT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoDormantEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_ACTIVE</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoExistingEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_DORMANT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_SLEEP</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoSleep</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>

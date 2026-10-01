@@ -7471,6 +7471,56 @@ bool CvUnit::canSentry(const CvPlot* pPlot) const
 }
 
 
+bool CvUnit::canHealOutsideFriendlyTerritory(const CvPlot* pPlot) const
+{
+	if (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) || isAnimal() || (isNPC() && !isHuman()))
+	{
+		return true;
+	}
+
+	for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+	{
+		if (!isHasPromotion((PromotionTypes)iPromotion))
+			continue;
+
+		PromotionLineTypes eLine =
+			GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+
+		if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
+			eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
+		{
+			return true;
+		}
+	}
+
+	if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE")))
+	{
+		return true;
+	}
+
+	// Check if a healer unit is present on same tile or adjacent
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining() && pLoopUnit->getSameTileHeal() > 0)
+		{
+			return true;
+		}
+	}
+
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+	{
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+		{
+			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining() && pLoopUnit->getAdjacentTileHeal() > 0)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
 int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 {
 	PROFILE_FUNC();
@@ -7480,70 +7530,10 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		return 0;
 	}
 
-    int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
-
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
-    {
-        bool bCanHealOutside = false;
-
-        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
-        {
-            if (!isHasPromotion((PromotionTypes)iPromotion))
-                continue;
-
-            PromotionLineTypes eLine =
-                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
-
-            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
-                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
-            {
-                bCanHealOutside = true;
-                break;
-            }
-        }
-
-        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
-            {
-                // Check if a healer unit is present on same tile or adjacent
-                bool bHealerPresent = false;
-
-                foreach_(CvUnit* pLoopUnit, pPlot->units())
-                {
-                    if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                    {
-                        if (pLoopUnit->getSameTileHeal() > 0)
-                        {
-                            bHealerPresent = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (!bHealerPresent)
-                {
-                    foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-                    {
-                        foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-                        {
-                            if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                            {
-                                if (pLoopUnit->getAdjacentTileHeal() > 0)
-                                {
-                                    bHealerPresent = true;
-                                    break;
-                                }
-                            }
-                        }
-                        if (bHealerPresent) break;
-                    }
-                }
-
-                if (!bHealerPresent)
-                {
-                    return 0;
-                }
-            }
-    }
+	if (!canHealOutsideFriendlyTerritory(pPlot))
+	{
+		return 0;
+	}
 
 	//Find what will take the longest to heal and use that rate
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
@@ -7795,68 +7785,10 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 		return 0;
 	}
 
-	int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
-    {
-        bool bCanHealOutside = false;
-
-        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
-        {
-            if (!isHasPromotion((PromotionTypes)iPromotion))
-                continue;
-
-            PromotionLineTypes eLine =
-                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
-
-            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
-                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
-            {
-                bCanHealOutside = true;
-                break;
-            }
-        }
-
-        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
-        {
-            bool bHealerPresent = false;
-
-            foreach_(CvUnit* pLoopUnit, pPlot->units())
-            {
-                if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                {
-                    if (pLoopUnit->getSameTileHeal() > 0)
-                    {
-                        bHealerPresent = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!bHealerPresent)
-            {
-                foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-                {
-                    foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-                    {
-                        if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                        {
-                            if (pLoopUnit->getAdjacentTileHeal() > 0)
-                            {
-                                bHealerPresent = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (bHealerPresent) break;
-                }
-            }
-
-            if (!bHealerPresent)
-            {
-                return 0;
-            }
-        }
-    }
+	if (!canHealOutsideFriendlyTerritory(pPlot))
+	{
+		return 0;
+	}
 
 	const int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
 
@@ -7939,6 +7871,7 @@ void CvUnit::doHeal()
 
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
+		const bool bCanHeal = canHealOutsideFriendlyTerritory(plot());
 		for (int iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
 		{
 			eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
@@ -7947,7 +7880,7 @@ void CvUnit::doHeal()
 				setHasUnitCombat(eHealAsType, true);
 				setHealAsDamage(eHealAsType, getDamage());
 			}
-			if (getHealAsDamage(eHealAsType) > 0)
+			if (bCanHeal && getHealAsDamage(eHealAsType) > 0)
 			{
 				changeHealAsDamage(eHealAsType,-(getHealRateAsType(plot(), true, eHealAsType)));
 			}
