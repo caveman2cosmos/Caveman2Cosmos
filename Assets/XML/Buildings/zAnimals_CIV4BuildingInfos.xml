@@ -690,6 +690,12 @@
 			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
 			<ConstructCondition>
 				<And>
 					<Has>
