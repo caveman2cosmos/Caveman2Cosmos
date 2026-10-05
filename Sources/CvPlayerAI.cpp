@@ -213,6 +213,10 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	PROFILE_EXTRA_FUNC();
 	AI_uninit();
 
+	m_iStuckBusyGroupID = -1;
+	m_iStuckBusyGroupTicks = 0;
+	m_stuckUnitRecoveryCounts.clear();
+
 	m_iPeaceWeight = 0;
 	m_iEspionageWeight = 0;
 	m_iAttackOddsChange = 0;
@@ -1529,6 +1533,77 @@ void CvPlayerAI::AI_unitUpdate()
 		LOG_PLAYER_BLOCK(4, {
 			logAiEvaluations(4,"AI_unitUpdate : Has Busy Unit for Player %d", getID());
 		});
+
+		// Last-resort watchdog: AI_unitUpdate() is called once per engine tick, and the turn
+		// cannot advance while hasBusyUnit() is true for any player. Every group is expected
+		// to resolve itself to non-busy within a handful of ticks (several known causes of it
+		// not doing so are already guarded elsewhere - see CvSelectionGroupAI::AI_update()'s
+		// iTempHack cap and CvSelectionGroup::groupMove()'s per-unit stuck counter), but if the
+		// SAME group is still the one keeping us busy after many consecutive ticks, something
+		// is wrong that isn't self-correcting, and the turn would otherwise never end. Force
+		// that group to finish so the game always progresses, even for causes we haven't found.
+		CvSelectionGroup* pBusyGroup = NULL;
+		foreach_(CvSelectionGroup* pLoopGroup, groups() | filtered(CvSelectionGroup::fn::isBusy()))
+		{
+			pBusyGroup = pLoopGroup;
+			break;
+		}
+
+		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckBusyGroupID)
+		{
+			if (++m_iStuckBusyGroupTicks > 500)
+			{
+				CvUnit* pHeadUnit = pBusyGroup->getHeadUnit();
+
+				// Count this recovery against the head unit specifically (unit IDs are stable
+				// for the unit's lifetime, unlike group IDs which change on merge/split), so a
+				// unit that keeps causing this - rather than a one-off hiccup - can be
+				// recognized and permanently removed instead of being reset forever.
+				const int iRecoveryCount = (pHeadUnit != NULL)
+					? ++m_stuckUnitRecoveryCounts[pHeadUnit->getID()]
+					: 0;
+				const bool bScrap = (pHeadUnit != NULL) && (iRecoveryCount >= 3);
+
+				char szOut[1024];
+				if (pHeadUnit != NULL)
+				{
+					CvWString szTempString;
+					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks, iRecoveryCount,
+						bScrap ? "scrapping the unit" : "forcing it to finish",
+						pHeadUnit->getName().GetCString(), pBusyGroup->getNumUnits(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				}
+				else
+				{
+					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks with no head unit - forcing it to finish\n",
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks);
+				}
+				gDLL->messageControlLog(szOut);
+				FErrorMsg(szOut);
+
+				if (bScrap)
+				{
+					m_stuckUnitRecoveryCounts.erase(pHeadUnit->getID());
+					pHeadUnit->scrap(); // may be a delayed death - group/remaining units still need releasing below
+				}
+
+				pBusyGroup->clearMissionQueue();
+				foreach_(CvUnit* pUnit, pBusyGroup->units())
+				{
+					pUnit->finishMoves();
+				}
+
+				m_iStuckBusyGroupID = -1;
+				m_iStuckBusyGroupTicks = 0;
+			}
+		}
+		else
+		{
+			m_iStuckBusyGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
+			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
+		}
 	}
 }
 

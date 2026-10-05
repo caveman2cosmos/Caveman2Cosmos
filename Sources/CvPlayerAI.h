@@ -647,6 +647,21 @@ protected:
 
 	static CvPlayerAI* m_aPlayers;
 
+	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same
+	// selection group is still the (sole) reason hasBusyUnit() is true across many
+	// consecutive engine ticks, something is stuck and not making progress on its own -
+	// see AI_unitUpdate(). Transient, not saved: resets naturally via group ID mismatch.
+	int m_iStuckBusyGroupID;
+	int m_iStuckBusyGroupTicks;
+
+	// How many times the watchdog above has had to force-resolve a given unit (keyed by head
+	// unit ID), across however many separate stuck episodes. A unit that keeps tripping the
+	// watchdog has some persistent, non-self-correcting problem (e.g. a permanently unreachable
+	// destination) rather than a one-off hiccup; after repeated recoveries it gets scrapped
+	// instead of indefinitely being reset only to get stuck again. Transient, not saved - count
+	// restarts from 0 after a reload.
+	std::map<int, int> m_stuckUnitRecoveryCounts;
+
 	int m_iPeaceWeight;
 	int m_iEspionageWeight;
 	int m_iAttackOddsChange;
