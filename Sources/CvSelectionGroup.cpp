@@ -3775,12 +3775,29 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 			unitX->joinGroup(NULL, true);
 			unitX->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 
+			// The pathfinder's terminus check (ContextFreeNewPathValidFunc) always treats a
+			// path's final plot as enterable, even with a visible enemy there, so a legitimate
+			// attack-capable move isn't rejected before combat gets a say. But a plain,
+			// non-combat move's canEnterPlot() correctly refuses to walk into a plot with a
+			// visible enemy. So if an enemy shows up at our destination between planning and
+			// arrival, the path still looks perfectly "valid" (the terminus check never looked
+			// for an enemy to begin with), re-pathing produces the exact same route, and the
+			// unit would otherwise just keep retrying the same stale order forever. Recognize
+			// this specific, identifiable cause immediately - entry would succeed if attacking
+			// were allowed - and abandon the mission so the unit's AI re-decides fresh next
+			// pass (attack, reroute, wait...) instead of blindly repeating a move that can
+			// never complete.
+			if (!bCombat && unitX->canEnterOrAttackPlot(pPlot))
+			{
+				clearMissionQueue();
+				GC.stuckUnitMoveCounts.erase(unitX->getID());
+			}
 			// Afforess - Units Seem to be getting stuck here
 			// Tracked per unit ID (not a single shared counter) - a shared counter let any
 			// other unit hitting this branch in between reset an unrelated unit's progress,
 			// so a genuinely stuck unit could go indefinitely without ever reaching the
 			// finishMoves() escape below.
-			if (++GC.stuckUnitMoveCounts[unitX->getID()] > 5)
+			else if (++GC.stuckUnitMoveCounts[unitX->getID()] > 5)
 			{
 				FErrorMsg("Unit Stuck in Loop!");
 				const CvUnit* pHeadUnit = getHeadUnit();
