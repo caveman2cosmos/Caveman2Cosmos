@@ -256,7 +256,10 @@ void CvArmy::doTurn()
             CheckTargetCity();
         }
         // 1) Phase de regroupement autour du leader
-        for (std::vector<int>::iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); ++it)
+        // Iterate a snapshot: removeGroup() below erases from the real m_groupIDs, and doing
+        // that while iterating it directly with a raw iterator invalidates the iterator mid-loop.
+        const std::vector<int> groupIDsSnapshot1 = m_groupIDs;
+        for (std::vector<int>::const_iterator it = groupIDsSnapshot1.begin(); it != groupIDsSnapshot1.end(); ++it)
         {
             CvSelectionGroup* pGroup = GET_PLAYER(getOwner()).getSelectionGroup(*it);
             try
@@ -433,7 +436,9 @@ void CvArmy::doTurn()
             //);
 
             // Suiveurs avancent
-            for (std::vector<int>::iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); ++it)
+            // Same iterator-invalidation hazard as above: iterate a snapshot, not the live list.
+            const std::vector<int> groupIDsSnapshot2 = m_groupIDs;
+            for (std::vector<int>::const_iterator it = groupIDsSnapshot2.begin(); it != groupIDsSnapshot2.end(); ++it)
             {
                 CvSelectionGroup* pGroup = GET_PLAYER(getOwner()).getSelectionGroup(*it);
                 if (pGroup == NULL)
@@ -495,7 +500,9 @@ void CvArmy::doTurn()
             );
         }
 
-        for (std::vector<int>::iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); ++it)
+        // Same iterator-invalidation hazard as above: iterate a snapshot, not the live list.
+        const std::vector<int> groupIDsSnapshot3 = m_groupIDs;
+        for (std::vector<int>::const_iterator it = groupIDsSnapshot3.begin(); it != groupIDsSnapshot3.end(); ++it)
         {
             CvSelectionGroup* pGroup = GET_PLAYER(getOwner()).getSelectionGroup(*it);
             if (pGroup == NULL)
