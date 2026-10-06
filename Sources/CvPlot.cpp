@@ -5547,6 +5547,36 @@ bool CvPlot::isSeaTunnel() const
 	return isRoute() && GC.getRouteInfo(getRouteType()).isSeaTunnel();
 }
 
+// Walks outward through contiguous sea tunnel plots only (tunnels are short, so this is cheap)
+// to see whether this plot's landmass is linked to iOtherAreaID by an underwater tunnel chain,
+// even though the areas on either side are neither the same nor directly adjacent.
+bool CvPlot::isAreaConnectedViaSeaTunnel(int iOtherAreaID) const
+{
+	std::vector<const CvPlot*> openList(1, this);
+	std::set<const CvPlot*> visited(openList.begin(), openList.end());
+
+	while (!openList.empty())
+	{
+		const CvPlot* pPlot = openList.back();
+		openList.pop_back();
+
+		if (pPlot->getArea() == iOtherAreaID || pPlot->isAdjacentToArea(iOtherAreaID))
+		{
+			return true;
+		}
+
+		foreach_(const CvPlot* pAdjacentPlot, pPlot->adjacent())
+		{
+			if (pAdjacentPlot->isSeaTunnel() && visited.insert(pAdjacentPlot).second)
+			{
+				openList.push_back(pAdjacentPlot);
+			}
+		}
+	}
+
+	return false;
+}
+
 bool CvPlot::isValidRoute(const CvUnit* pUnit) const
 {
 	if (isRoute())

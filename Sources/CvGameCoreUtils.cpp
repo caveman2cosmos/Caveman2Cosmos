@@ -3168,7 +3168,8 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 		{
 			const int iGroupAreaID = pSelectionGroup->getArea();
 
-			if (pToPlot->getArea() != iGroupAreaID && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isAdjacentToArea(iGroupAreaID))
+			if (pToPlot->getArea() != iGroupAreaID && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isAdjacentToArea(iGroupAreaID)
+			&& !pToPlot->isAreaConnectedViaSeaTunnel(iGroupAreaID))
 			{
 				return false;
 			}

@@ -375,6 +375,7 @@ public:
 	bool isActsAsCity() const;
 	bool isCanMoveSeaUnits() const;
 	bool isSeaTunnel() const;
+	bool isAreaConnectedViaSeaTunnel(int iOtherAreaID) const;
 	int getRevoltProtection() const;
 	int getAverageEnemyStrength(TeamTypes eTeam) const;
 	int getAverageEnemyDamage(TeamTypes eTeam) const;
