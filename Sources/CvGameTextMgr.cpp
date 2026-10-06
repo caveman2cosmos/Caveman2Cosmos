@@ -4239,7 +4239,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
 					int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
 
-					int expectedrndcnt = iNeededRoundsDefender;
+					int expectedrndcnt = std::min(iNeededRoundsAttacker, iNeededRoundsDefender);
 					int expectedrnds = ((expectedrndcnt * iAttackerEarly) / 100);
 
 					int y = AdjustedAttWithdrawal;
@@ -4248,7 +4248,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					for (Time = 0; Time < expectedrnds; ++Time)
 					{
 						z += ((AdjustedAttWithdrawal * y) / 100);
-						y = ((AdjustedAttWithdrawal * y) / 100);
+						y = ((AdjustedAttWithdrawal * (100 - z)) / 100);
 					}
 
 					int EvaluatedAttWithdrawOdds = z;
@@ -4281,7 +4281,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int AdjustedDefWithdrawalstep2 = ((AdjustedDefWithdrawalstep1 > 100) ? 100 : AdjustedDefWithdrawalstep1);
 					int AdjustedDefWithdrawal = ((AdjustedDefWithdrawalstep2 < 0) ? 0 : AdjustedDefWithdrawalstep2);
 
-					expectedrndcnt = iNeededRoundsAttacker;
+					expectedrndcnt = std::min(iNeededRoundsAttacker, iNeededRoundsDefender);
 					expectedrnds = ((expectedrndcnt * iDefenderEarly) / 100);
 
 					y = AdjustedDefWithdrawal;
@@ -4290,7 +4290,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					for (Time = 0; Time < expectedrnds; ++Time)
 					{
 						z += ((AdjustedDefWithdrawal * y) / 100);
-						y = ((AdjustedDefWithdrawal * y) / 100);
+						y = ((AdjustedDefWithdrawal * (100 - z)) / 100);
 					}
 
 					int EvaluatedDefWithdrawalOdds = z;
@@ -4330,8 +4330,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						iWithdrawal += (100 - iDefenderPursuit) * iCombatOdds;
 					}
 					// TB Combat Mod next line adjusted for approximate pursuit and early withdrawal
+					// Matches the undiscounted per-round roll actually used in CvUnit::resolveCombat;
+					// the withdrawal roll fires independently of overall win odds, so no iCombatOdds scaling here.
 
-					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * (1000 - iCombatOdds);
+					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * 1000;
 
 					if (iWithdrawal > 0 || pAttacker->combatLimit(pDefender) < pDefender->getMaxHP())
 					{
@@ -4352,7 +4354,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					}
 
 					int iDefWithdrawal = 0;
-					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * (1000 - iCombatOdds);
+					// Matches the undiscounted per-round roll actually used in CvUnit::resolveCombat;
+					// the withdrawal roll fires independently of overall win odds, so no iCombatOdds scaling here.
+					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * 1000;
 
 					if (iDefWithdrawal > 0 && GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
 					{
