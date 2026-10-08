@@ -4819,6 +4819,7 @@ CvString AutomateTypeToDescription(AutomateTypes eAutomateAI)
 	case AUTOMATE_PROMOTIONS:      return "Apply promotions";
 	case AUTOMATE_CANCEL_PROMOTIONS:return "Cancel promotions";
 	case AUTOMATE_SHADOW:          return "Shadow enemy units";
+	case AUTOMATE_HERD:            return "Seek pasture to build a herd";
 	default:                       return "---";
 	}
 }

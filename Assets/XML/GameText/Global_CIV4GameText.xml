@@ -1169,6 +1169,14 @@
 		<Spanish>Ordenará a la unidad que propague automáticamente su religión o corporación</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_HERD</Tag>
+		<English>Seek Pasture Automatically</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_HERD_HELP</Tag>
+		<English>Will order the unit to automatically seek out a suitable plot and build a domesticated herd there</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_UPGRADING</Tag>
 		<English>Automate Upgrade</English>
 		<French>Améliorations automatisées</French>

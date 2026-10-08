@@ -19,6 +19,7 @@ class CvSelectionGroup;
 class CvArtInfoUnit;
 class CvUnitInfo;
 class CvUnitSelectionCriteria;
+class CvOutcomeList;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
@@ -807,6 +808,7 @@ public:
 	bool greatWork();
 
 	bool doOutcomeMission(MissionTypes eMission);
+	const CvOutcomeList* getOutcomeListForMission(MissionTypes eMission) const;
 
 	int getEspionagePoints() const;
 	bool canInfiltrate() const;

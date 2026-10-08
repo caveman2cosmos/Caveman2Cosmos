@@ -6656,6 +6656,17 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 
+	case AUTOMATE_HERD:
+		if (AI_getUnitAIType() != UNITAI_SUBDUED_ANIMAL)
+		{
+			return false;
+		}
+		if (getUnitInfo().getNumBuildings() == 0 && !getOutcomeListForMission(MISSION_BUILD_DOMESTICATED_HERD))
+		{
+			return false;
+		}
+		break;
+
 	case AUTOMATE_PILLAGE:
 		if (!getUnitInfo().isPillage())
 		{
@@ -10785,6 +10796,28 @@ bool CvUnit::doOutcomeMission(MissionTypes eMission)
 	}
 
 	return true;
+}
+
+const CvOutcomeList* CvUnit::getOutcomeListForMission(MissionTypes eMission) const
+{
+	const CvOutcomeList* pOutcomeList = getUnitInfo().getActionOutcomeListByMission(eMission);
+
+	if (!pOutcomeList)
+	{
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		{
+			if (isHasUnitCombat((UnitCombatTypes)iI))
+			{
+				pOutcomeList = GC.getUnitCombatInfo((UnitCombatTypes)iI).getActionOutcomeListByMission(eMission);
+				if (pOutcomeList)
+				{
+					break;
+				}
+			}
+		}
+	}
+
+	return pOutcomeList;
 }
 
 
