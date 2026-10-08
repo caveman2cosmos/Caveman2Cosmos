@@ -188,6 +188,7 @@ class CvEventManager:
 			5000 : ('EditCityName', self.__eventEditCityNameApply, self.__eventEditCityNameBegin),
 			5006 : ('EditUnitName', self.__eventEditUnitNameApply, self.__eventEditUnitNameBegin),
 			5009 : ('WBLandmarkPopup', self.__eventWBLandmarkPopupApply, None),
+			5010 : ('WBUnitSearchPopup', self.__eventWBUnitSearchPopupApply, None),
 
 			1111 : ('WBPlayerScript', self.__eventWBPlayerScriptPopupApply, None),
 			2222 : ('WBCityScript', self.__eventWBCityScriptPopupApply, None),
@@ -2910,3 +2911,8 @@ class CvEventManager:
 			else:
 				CyEngine().addSign(pPlot, iPlayer, TextUtil.convertToStr(sScript))
 		WBPlotScreen.iCounter = 10
+
+	def __eventWBUnitSearchPopupApply(self, playerID, userData, popupReturn):
+		wb = CvScreensInterface.worldBuilderScreen
+		wb.sWBSearchFilter = popupReturn.getEditBoxString(0)
+		wb.refreshSideMenu()

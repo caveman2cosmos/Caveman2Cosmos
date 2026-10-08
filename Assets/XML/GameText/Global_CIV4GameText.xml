@@ -30470,6 +30470,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>Escribe el texto del lugar de referencia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_SEARCH</Tag>
+		<English>Search</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_SEARCH_PROMPT</Tag>
+		<English>Enter text to filter the list (leave blank to clear)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WB_PLOT_TYPE_HILL</Tag>
 		<English>Change plot to a hill</English>
 		<French>Changer case en colline</French>
