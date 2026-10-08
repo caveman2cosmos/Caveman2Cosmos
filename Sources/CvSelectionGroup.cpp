@@ -1214,6 +1214,14 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				}
 				break;
 			}
+			case MISSION_HUNT:
+			{
+				if (unitX->canHunt(pPlot))
+				{
+					return true;
+				}
+				break;
+			}
 			default: // AIAndy: Assumed to be an outcome mission
 			{
 				const CvOutcomeMission* pOutcomeMission = unitX->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
@@ -1387,6 +1395,7 @@ bool CvSelectionGroup::startMission()
 #endif
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
+			case MISSION_HUNT:
 			{
 				bDelete = true;
 				bCycle = false;
@@ -1486,6 +1495,18 @@ bool CvSelectionGroup::startMission()
 							{
 								pBestUnit = pLoopUnit;
 								iBestUnitValue = iUnitValue2;
+							}
+						}
+						break;
+
+					case MISSION_HUNT:
+						if (pLoopUnit->canHunt(plot()))
+						{
+							const int iUnitValue3 = pLoopUnit->AI_attackOdds(plot(), false, 0, false);
+							if (iUnitValue3 >= iBestUnitValue)
+							{
+								pBestUnit = pLoopUnit;
+								iBestUnitValue = iUnitValue3;
 							}
 						}
 						break;
@@ -1933,6 +1954,14 @@ bool CvSelectionGroup::startMission()
 						case MISSION_AMBUSH:
 						{
 							if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(false))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_HUNT:
+						{
+							if (pLoopUnit == pBestUnit && pLoopUnit->doHunt())
 							{
 								bAction = true;
 							}

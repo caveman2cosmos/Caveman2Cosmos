@@ -1900,6 +1900,7 @@ public:
 	bool isBlendIntoCity() const;
 	bool isUpgradeAnywhere() const;
 	bool isAssassin() const;
+	bool isNoAmbush() const;
 	bool isStealthDefense() const;
 	bool isNoInvisibility() const;
 	bool isTriggerBeforeAttack() const;
@@ -2562,6 +2563,7 @@ private:
 	bool m_bBlendIntoCity;
 	bool m_bUpgradeAnywhere;
 	bool m_bAssassin;
+	bool m_bNoAmbush;
 	bool m_bStealthDefense;
 	bool m_bNoInvisibility;
 	bool m_bTriggerBeforeAttack;

@@ -147,6 +147,14 @@
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) на той же клетке. ВНИМАНИЕ: для этого нужно выбирать лишь один отряд за раз, иначе он всегда будет выбирать первый доступный отряд для атаки и покажет точную оценку шансов.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_HUNT</Tag>
+		<English>Hunt animals on the same tile!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_HUNT_HELP</Tag>
+		<English>Attacks the best wild animal defender on the same plot. Unlike Ambush/Assassinate, this is never blocked by game options and can only ever target animals, never another civilization's units. WARNING: You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSIN</Tag>
 		<English>Assassinate Unit</English>
 		<French>Assassiner Unité</French>

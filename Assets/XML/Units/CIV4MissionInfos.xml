@@ -1207,6 +1207,14 @@
 			<Button>art/Buttons/Missions/AssassinateMission.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
+			<Type>MISSION_HUNT</Type>
+			<Description>TXT_KEY_MISSION_HUNT</Description>
+			<Help>TXT_KEY_MISSION_HUNT_HELP</Help>
+			<bVisible>1</bVisible>
+			<iOrderPriority>16</iOrderPriority>
+			<Button>art/Craft/art/animaltraps.dds</Button>
+		</MissionInfo>
+		<MissionInfo>
 			<Type>MISSION_ENTERTAIN_CITY</Type>
 			<Description>TXT_KEY_MISSION_ENTERTAIN_CITY</Description>
 			<Help>TXT_KEY_MISSION_ENTERTAIN_CITY_HELP</Help>

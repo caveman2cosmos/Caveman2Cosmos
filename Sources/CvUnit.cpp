@@ -12446,6 +12446,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SHADOW:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
+		case MISSION_HUNT:
 			break;
 
 		case MISSION_BUILD:
@@ -38554,6 +38555,11 @@ void CvUnit::doArrest()
 
 bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 {
+	if (m_pUnitInfo->isNoAmbush())
+	{
+		return false;
+	}
+
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
@@ -38743,6 +38749,89 @@ void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 		setMadeAttack(true); //Calvitix (if ambush succes, cannot attack anymore)
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
+}
+
+// Dedicated same-tile attack for animal hunters. Unlike Ambush/Assassinate, this is never
+// gated by GAMEOPTION_COMBAT_WITHOUT_WARNING and can only ever target actual animal units,
+// so it cannot be used to bypass peace with another civ.
+bool CvUnit::canHunt(const CvPlot* pPlot) const
+{
+	if (pPlot == NULL)
+	{
+		return false;
+	}
+
+	if (!canAttack())
+	{
+		return false;
+	}
+
+	if (isCargo())
+	{
+		return false;
+	}
+
+	if (!(pPlot->isValidDomainForAction(*this)))
+	{
+		return false;
+	}
+
+	if (pPlot->isCity(false))
+	{
+		return false;
+	}
+
+	if (!isBlitz() && isMadeAttack())
+	{
+		return false;
+	}
+
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->isAnimal()
+		&&  !pLoopUnit->isInvisible(getTeam(), false)
+		&&  canAttack(*pLoopUnit))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool CvUnit::doHunt()
+{
+	CvPlot* pPlot = plot();
+	if (!canHunt(pPlot))
+	{
+		return false;
+	}
+
+	CvUnit* pBestUnit = NULL;
+	int iBestValue = 0;
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->isAnimal()
+		&&  !pLoopUnit->isInvisible(getTeam(), false)
+		&&  canAttack(*pLoopUnit))
+		{
+			const int iValue = pLoopUnit->defenderValue(this);
+			if (pBestUnit == NULL || iValue > iBestValue)
+			{
+				pBestUnit = pLoopUnit;
+				iBestValue = iValue;
+			}
+		}
+	}
+
+	if (pBestUnit == NULL)
+	{
+		return false;
+	}
+
+	attackSamePlotSpecifiedUnit(pBestUnit);
+	setMadeAttack(true);
+	changeMoves(GC.getMOVE_DENOMINATOR());
+	return true;
 }
 
 void CvUnit::changeDebugCount(int iChange)

@@ -3129,7 +3129,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3239,7 +3239,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3345,7 +3345,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
@@ -3467,7 +3467,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <bNoBadGoodies>1</bNoBadGoodies>
             <FreePromotions>
                 <FreePromotion>
@@ -3598,7 +3598,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </UnitAIs>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <bNoBadGoodies>1</bNoBadGoodies>
             <PrereqTech>TECH_TRACKING</PrereqTech>
             <PrereqAndBuildings>
@@ -3703,7 +3703,7 @@
             </MapCategoryTypes>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <bNoBadGoodies>1</bNoBadGoodies>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <UnitAIs>
                 <UnitAI>
                     <UnitAIType>UNITAI_HUNTER</UnitAIType>

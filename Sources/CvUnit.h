@@ -2831,6 +2831,9 @@ public:
 	bool doAmbush(bool bAssassinate = false);
 	void enactAmbush(bool bAssassinate = false, CvUnit* pSelectedDefender = NULL);
 
+	bool canHunt(const CvPlot* pPlot) const;
+	bool doHunt();
+
 	void changeDebugCount(int iChange);
 	void setDebugCount(int iValue);
 

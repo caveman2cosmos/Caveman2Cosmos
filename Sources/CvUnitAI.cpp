@@ -30123,6 +30123,11 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 	const CvPlot* pPlot = getGroup()->plot();
 	if (!pPlot) return false;
 
+	if (!bAssassinationOnly && canHunt(pPlot))
+	{
+		return getGroup()->pushMissionInternal(MISSION_HUNT, pPlot->getX(), pPlot->getY());
+	}
+
 	const bool bAssassin = isAssassin();
 
 	if (pPlot->isCity(true) && !bAssassin)

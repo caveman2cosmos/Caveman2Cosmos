@@ -309,6 +309,7 @@ m_bBarbCoExist(false),
 m_bBlendIntoCity(false),
 m_bUpgradeAnywhere(false),
 m_bAssassin(false),
+m_bNoAmbush(false),
 m_bStealthDefense(false),
 m_bNoInvisibility(false),
 m_bTriggerBeforeAttack(false),
@@ -2428,6 +2429,11 @@ bool CvUnitInfo::isAssassin() const
 	return m_bAssassin;
 }
 
+bool CvUnitInfo::isNoAmbush() const
+{
+	return m_bNoAmbush;
+}
+
 bool CvUnitInfo::isStealthDefense() const
 {
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
@@ -3862,6 +3868,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bBlendIntoCity);
 	CheckSum(iSum, m_bUpgradeAnywhere);
 	CheckSum(iSum, m_bAssassin);
+	CheckSum(iSum, m_bNoAmbush);
 	CheckSum(iSum, m_bStealthDefense);
 	CheckSum(iSum, m_bNoInvisibility);
 	CheckSum(iSum, m_bTriggerBeforeAttack);
@@ -4541,6 +4548,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bBlendIntoCity, L"bBlendIntoCity");
 	pXML->GetOptionalChildXmlValByName(&m_bUpgradeAnywhere, L"bUpgradeAnywhere");
 	pXML->GetOptionalChildXmlValByName(&m_bAssassin, L"bAssassin");
+	pXML->GetOptionalChildXmlValByName(&m_bNoAmbush, L"bNoAmbush");
 	pXML->GetOptionalChildXmlValByName(&m_bStealthDefense, L"bStealthDefense");
 	pXML->GetOptionalChildXmlValByName(&m_bNoInvisibility, L"bNoInvisibility");
 	pXML->GetOptionalChildXmlValByName(&m_bTriggerBeforeAttack, L"bTriggerBeforeAttack");
@@ -5530,6 +5538,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bBlendIntoCity == bDefault ) m_bBlendIntoCity = pClassInfo->isBlendIntoCity();
 	if ( m_bUpgradeAnywhere == bDefault ) m_bUpgradeAnywhere = pClassInfo->isUpgradeAnywhere();
 	if ( m_bAssassin == bDefault ) m_bAssassin = pClassInfo->isAssassin();
+	if ( m_bNoAmbush == bDefault ) m_bNoAmbush = pClassInfo->isNoAmbush();
 	if ( m_bStealthDefense == bDefault ) m_bStealthDefense = pClassInfo->m_bStealthDefense;
 	if ( m_bNoInvisibility == bDefault ) m_bNoInvisibility = pClassInfo->isNoInvisibility();
 	if ( m_bTriggerBeforeAttack == bDefault ) m_bTriggerBeforeAttack = pClassInfo->isTriggerBeforeAttack();

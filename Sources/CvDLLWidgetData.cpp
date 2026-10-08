@@ -3328,7 +3328,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			// BUG - Fortify/Sleep All Action - end
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_AMBUSH ||
-				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE)
+				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE ||
+				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HUNT)
 			{
 				bool bAssassinate = GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE;
 				CvWStringBuffer szCombatBuffer;
