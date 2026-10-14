@@ -1625,10 +1625,11 @@
 		<EventInfo>
 			<Type>EVENT_BABY_BOOM_2</Type>
 			<Description>TXT_KEY_EVENT_BABY_BOOM_2</Description>
-			<iGold>-250</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
 			<iFood>350</iFood>
-            <PythonCallback>doBabyBoom</PythonCallback>
+            <PythonCallback>doBabyBoom2</PythonCallback>
+            <PythonCanDo>canApplyBabyBoom2</PythonCanDo>
+            <PythonHelp>getHelpBabyBoom2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>

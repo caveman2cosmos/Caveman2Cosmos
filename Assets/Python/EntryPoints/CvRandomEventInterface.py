@@ -392,6 +392,31 @@ def doBabyBoom(argList):
 
 	return 1
 
+def doBabyBoom2(argList):
+	iEvent = argList[0]
+	data = argList[1]
+	player = GC.getPlayer(data.ePlayer)
+	iFood = GC.getEventInfo(iEvent).getFood()
+
+	if iFood > 0:
+		for CyCity in player.cities():
+			CyCity.changeFood(iFood)
+
+	player.changeGold(-50 * player.getNumCities())
+	return 1
+
+def canApplyBabyBoom2(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	if player.getGold() - 50 * player.getNumCities() < 0:
+		return False
+	return True
+
+def getHelpBabyBoom2(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (50 * player.getNumCities(), ))
+
 
 ######## BARD TALE ###########
 
