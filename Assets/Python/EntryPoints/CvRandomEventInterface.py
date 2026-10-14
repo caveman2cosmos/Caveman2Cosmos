@@ -5968,33 +5968,23 @@ def getHelpSuperVirus3(argsList):
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
 	else: szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
 
-	iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
-	if iSmartMedicine > 0:
-		if not CyCity.hasBonus(iSmartMedicine):
-			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getBonusInfo(iSmartMedicine).getTextKey(),))
-
-	iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
-	if iSmartDrugs > 0 and not GC.getTeam(CyPlayer.getTeam()).isHasTech(iSmartDrugs):
-		szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iSmartDrugs).getTextKey(),))
+	iMolecularBiology = GC.getInfoTypeForString("TECH_MOLECULAR_BIOLOGY")
+	if iMolecularBiology > 0 and not GC.getTeam(CyPlayer.getTeam()).isHasTech(iMolecularBiology):
+		szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iMolecularBiology).getTextKey(),))
 
 	return szHelp
 
 def canTriggerSuperVirus3(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
-  eventCity = player.getCity(data.iCityId)
   team = GC.getTeam(player.getTeam())
 
   iRequireGold = 100 + player.getNumCities() * 650
   if (player.getGold() < iRequireGold):
     return False
-  iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
-  iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
-  if (iSmartMedicine > 0):
-    if (not eventCity.hasBonus(iSmartMedicine)):
-      return False
-  if (iSmartDrugs > 0):
-    if (not team.isHasTech(iSmartDrugs)):
+  iMolecularBiology = GC.getInfoTypeForString("TECH_MOLECULAR_BIOLOGY")
+  if (iMolecularBiology > 0):
+    if (not team.isHasTech(iMolecularBiology)):
       return False
   return True
 
