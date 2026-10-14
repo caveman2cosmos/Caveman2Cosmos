@@ -8049,6 +8049,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARCHERY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>145</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
