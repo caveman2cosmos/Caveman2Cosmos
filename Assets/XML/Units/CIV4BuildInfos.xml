@@ -482,6 +482,7 @@
 			</TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
+			<bAltDown>1</bAltDown>
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
 		</BuildInfo>
 		<!-- Mud Path << Railroad -->
