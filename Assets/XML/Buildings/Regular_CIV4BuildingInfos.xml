@@ -52279,6 +52279,14 @@
 			</VicinityBonusYieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>500</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_PLASTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
@@ -52389,7 +52397,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>200</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52397,7 +52405,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52405,7 +52413,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52413,7 +52421,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>400</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52421,7 +52429,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>400</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
