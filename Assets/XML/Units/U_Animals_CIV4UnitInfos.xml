@@ -5125,7 +5125,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_FISH</BonusType>
 					<Yields>
@@ -5417,7 +5417,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_CRAB</BonusType>
 					<Yields>
@@ -11490,7 +11490,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_WHALE</BonusType>
 					<Yields>
@@ -13845,7 +13845,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_FISH</BonusType>
 					<Yields>
@@ -14497,7 +14497,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_FISH</BonusType>
 					<Yields>
@@ -24108,7 +24108,7 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
-					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
+					<OutcomeType>OUTCOME_BONUS_SPAWNED_SEA</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_FISH</BonusType>
 					<Yields>

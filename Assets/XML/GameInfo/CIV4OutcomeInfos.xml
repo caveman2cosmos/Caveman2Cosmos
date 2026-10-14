@@ -549,6 +549,12 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_BONUS_SPAWNED_SEA</Type>
+			<Description>TXT_KEY_OUTCOME_BONUS_SPAWNED</Description>
+			<Message>TXT_KEY_OUTCOME_SEA_BONUS_SPAWNED_MESSAGE</Message>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_OUTCOME_LAWYER_LITIGATION</Description>
 			<Message>TXT_KEY_OUTCOME_LAWYER_LITIGATION_MESSAGE</Message>

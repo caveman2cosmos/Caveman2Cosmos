@@ -19998,6 +19998,10 @@
 		<Russian>Íàø %s1 ïðèðó÷èë è îñàäèë %s2</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SEA_BONUS_SPAWNED_MESSAGE</Tag>
+		<English>Our %s1 discovered a bounty of %s2 in these waters</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL</Tag>
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
