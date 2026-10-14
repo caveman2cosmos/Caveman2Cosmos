@@ -4887,6 +4887,16 @@ def applyMercenariesAncient2(argsList):
 		CyUnit.setName("Mercenary Warrior")
 		iCount -= 1
 
+def canApplyMercenariesAncient3(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return not GC.getTeam(player.getTeam()).isHasTech(GC.getInfoTypeForString("TECH_COPPER_WORKING"))
+
+def canApplyMercenariesAncient4(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return GC.getTeam(player.getTeam()).isHasTech(GC.getInfoTypeForString("TECH_COPPER_WORKING"))
+
 ######## MERCENARIES CLASSICAL ###########
 
 def canTriggerMercenariesClassical(argsList):

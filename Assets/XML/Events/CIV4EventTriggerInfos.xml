@@ -13627,6 +13627,7 @@
 				<Event>EVENT_MERCENARIES_ANCIENT_1</Event>
 				<Event>EVENT_MERCENARIES_ANCIENT_2</Event>
 				<Event>EVENT_MERCENARIES_ANCIENT_3</Event>
+				<Event>EVENT_MERCENARIES_ANCIENT_4</Event>
 			</Events>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>

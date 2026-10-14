@@ -9183,6 +9183,10 @@
 		<Russian>Подкупите наемников полновесным золотом, чтобы они присоединились к нашим армиям.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_MERCENARIES_ANCIENT_4</Tag>
+		<English>Bribe the mercenaries with extra gold to join our armies as javelineers.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_MERCENARIES_ANCIENT_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of mercenary [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre important de [COLOR_UNIT_TEXT]Guerriers[COLOR_REVERT] mercenaires sont apparus près de notre frontière.</French>
