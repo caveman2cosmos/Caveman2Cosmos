@@ -35994,6 +35994,23 @@ int CvUnit::eraGroupSplitLimit() const
 	return std::max(1, m_pUnitInfo->getBaseGroupRank() - GET_PLAYER(getOwner()).getCurrentEra() - 1);
 }
 
+// Grants a freshly-trained unit the group-rank promotions it would have ended up with
+// after being built-and-merged through `getCurrentEra() + 1` real merge tiers (capped).
+// Used by the "build pre-merged" production option; organic battlefield merging (mergeUnits())
+// is unaffected by this cap.
+void CvUnit::applyPreMergeRank()
+{
+	static const int MAX_PREMERGE_GENERATIONS = 8; // keep in sync with CvPlayer::getProductionNeededPreMerged
+	const int iGenerations = std::min(MAX_PREMERGE_GENERATIONS, GET_PLAYER(getOwner()).getCurrentEra() + 1);
+	if (iGenerations > 0)
+	{
+		const bool bNormalized = CvUnit::normalizeUnitPromotions(this, iGenerations,
+			bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, this, _2));
+		FAssertMsg(bNormalized, "Could not apply required number of group promotions for pre-merged unit");
+	}
+}
+
 DomainTypes CvUnit::getDomainCargo() const
 {
 	if (m_eNewDomainCargo != NO_DOMAIN)

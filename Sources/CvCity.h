@@ -251,6 +251,7 @@ public:
 	int getProductionProgress() const;
 	int getProductionNeeded() const;
 	int getProductionNeeded(const OrderData& order) const;
+	bool isPreMergeOrder(UnitTypes eUnit) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eType) const;
 	int getProductionNeeded(ProjectTypes eProject) const;
@@ -260,6 +261,7 @@ public:
 	int getTotalProductionQueueTurnsLeft() const;
 	int getProductionTurnsLeft() const;
 	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const;
+	int getProductionTurnsLeftPreMerged(UnitTypes eUnit) const;
 	int getProductionTurnsLeft(BuildingTypes eType, int iNum) const;
 	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
@@ -1186,6 +1188,7 @@ public:
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
+	void pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce = false);
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);
 	void startHeadOrder();
 	void stopHeadOrder();

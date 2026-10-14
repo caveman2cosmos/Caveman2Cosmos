@@ -3655,9 +3655,25 @@ int CvCity::getProductionNeeded(const OrderData& order) const
 	return MAX_INT;
 }
 
+// True if a queued ORDER_TRAIN order for eUnit in this city is flagged as a "build pre-merged" order.
+bool CvCity::isPreMergeOrder(UnitTypes eUnit) const
+{
+	for (std::vector<OrderData>::const_iterator it = m_orderQueue.begin(); it != m_orderQueue.end(); ++it)
+	{
+		if (it->eOrderType == ORDER_TRAIN && it->getUnitType() == eUnit)
+		{
+			return it->isPreMerge();
+		}
+	}
+	return false;
+}
+
 int CvCity::getProductionNeeded(UnitTypes eUnit) const
 {
-	return std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeeded(eUnit), -getProductionModifier(eUnit)));
+	const int iPlayerProductionNeeded = isPreMergeOrder(eUnit)
+		? GET_PLAYER(getOwner()).getProductionNeededPreMerged(eUnit)
+		: GET_PLAYER(getOwner()).getProductionNeeded(eUnit);
+	return std::max(1, getModifiedIntValue(iPlayerProductionNeeded, -getProductionModifier(eUnit)));
 }
 
 int CvCity::getProductionNeeded(BuildingTypes eBuilding) const
@@ -3772,6 +3788,18 @@ int CvCity::getProductionTurnsLeft(UnitTypes eUnit, int orderIndex) const
 	// If we are looking at the first order then overflow would be applied
 	const int nextTurnProduction = (orderIndex == 0) ? getProductionPerTurn(foodProd | ProductionCalc::Overflow | ProductionCalc::Yield) : perTurnProduction;
 	return getProductionTurnsLeft(getProductionNeeded(eUnit), alreadyDone, nextTurnProduction, perTurnProduction);
+}
+
+// Turns-left preview for the "build pre-merged" option, usable before any order is queued
+// (unlike getProductionTurnsLeft(UnitTypes, int), which can only tell a pre-merged order's
+// cost apart from a normal one by checking an *already-queued* order's flag).
+int CvCity::getProductionTurnsLeftPreMerged(UnitTypes eUnit) const
+{
+	const int iProductionNeeded = std::max(1, getModifiedIntValue(GET_PLAYER(getOwner()).getProductionNeededPreMerged(eUnit), -getProductionModifier(eUnit)));
+	const ProductionCalc::flags foodProd = isFoodProduction(eUnit) ? ProductionCalc::FoodProduction : ProductionCalc::None;
+	const int perTurnProduction = getProductionPerTurn(foodProd | ProductionCalc::Yield);
+	const int nextTurnProduction = getProductionPerTurn(foodProd | ProductionCalc::Overflow | ProductionCalc::Yield);
+	return getProductionTurnsLeft(iProductionNeeded, 0, nextTurnProduction, perTurnProduction);
 }
 
 int CvCity::getProductionTurnsLeft(BuildingTypes eBuilding, int orderIndex) const
@@ -15761,10 +15789,21 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 				order = OrderData::createUnitOrder(unitType, AIType, plotIndex, contractFlags, contractedAIType, bSave);
 
 				int alreadyQueued = 0;
+				bool bConflictingPreMergeOrder = false;
 				for (std::vector<OrderData>::const_iterator it = m_orderQueue.begin(); it != m_orderQueue.end(); ++it) {
 					if (it->eOrderType == ORDER_TRAIN && it->getUnitType() == order.getUnitType()) {
 						alreadyQueued+= 1;
+						if (it->isPreMerge() != order.isPreMerge()) {
+							bConflictingPreMergeOrder = true;
+						}
 					}
+				}
+
+				// Progress (getProgressOnUnit) and cost (getProductionNeeded) are tracked per UnitTypes only,
+				// not per order-instance, so a normal and a pre-merged order for the same unit type can't
+				// safely coexist in the same queue - they'd corrupt each other's progress/cost.
+				if (bConflictingPreMergeOrder) {
+					return;
 				}
 
 				//don't add the same unit if already 2 of them (if prod take more than 2 turns), and the first item in queue is not already finished, and the cost of the order is more than 3 turns
@@ -15961,6 +16000,17 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	}
 }
 
+// Queues a unit train order flagged to complete as a single unit pre-merged to the
+// player's current era's max Size-Matters group rank (see CvUnit::applyPreMergeRank).
+void CvCity::pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce)
+{
+	if (!GET_PLAYER(getOwner()).isPreMergedUnitBuildEnabled())
+	{
+		return;
+	}
+	pushOrder(ORDER_TRAIN, eUnit, 0xFFFF, bSave, bPop, bAppend, bForce, NULL, NO_UNITAI, AUX_CONTRACT_FLAG_PRE_MERGE);
+}
+
 void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveList)
 {
 	PROFILE_FUNC();
@@ -16033,6 +16083,10 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 				{
 					FErrorMsg("pUnit is expected to be assigned a valid unit object");
 					return;
+				}
+				if (order.isPreMerge())
+				{
+					pUnit->applyPreMergeRank();
 				}
 				if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_MAX_UNITS_PER_TILES)
 				&& !pUnit->canEnterPlot(plot(), MoveCheck::IgnoreLocation))

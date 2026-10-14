@@ -308,6 +308,8 @@ public:
 	bool isProductionMaxedUnit(UnitTypes eUnit) const;
 	bool isProductionMaxedProject(ProjectTypes eProject) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
+	int getProductionNeededPreMerged(const UnitTypes eUnit) const;
+	bool isPreMergedUnitBuildEnabled() const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;
 	int getProductionModifier(UnitTypes eUnit) const;

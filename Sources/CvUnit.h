@@ -2561,6 +2561,7 @@ public:
 
 	int eraGroupMergeLimit() const;
 	int eraGroupSplitLimit() const;
+	void applyPreMergeRank();
 
 	DomainTypes getDomainCargo() const;
 	void setNewDomainCargo(DomainTypes eDomain);

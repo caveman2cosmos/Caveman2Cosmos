@@ -7243,6 +7243,47 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 	return std::max(1, static_cast<int>(iProductionNeeded));
 }
 
+// Simulated cumulative cost of sequentially building and merging the base units needed to
+// reach a "pre-merged" unit capped at getCurrentEra() + 1 generations above base rank (see
+// CvUnit::applyPreMergeRank, which grants the matching promotions on completion).
+int CvPlayer::getProductionNeededPreMerged(const UnitTypes eUnit) const
+{
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) || !kUnit.canMergeSplit())
+	{
+		return getProductionNeeded(eUnit);
+	}
+
+	static const int MAX_PREMERGE_GENERATIONS = 8; // keep in sync with CvUnit::applyPreMergeRank
+	const int iGenerations = std::min(MAX_PREMERGE_GENERATIONS, getCurrentEra() + 1);
+	const int64_t iUnitsNeeded = intPow64(3, iGenerations);
+
+	const int64_t iBaseCost100 = getBaseUnitCost100(eUnit);
+	const int iInstanceCostModifier = kUnit.getInstanceCostModifier();
+
+	int64_t iTotalCost100 = 0;
+	int iSimulatedCountSM = getUnitCountSM(eUnit);
+
+	for (int64_t i = 0; i < iUnitsNeeded; ++i)
+	{
+		int64_t iThisCost100 = iBaseCost100;
+		if (iInstanceCostModifier != 0)
+		{
+			iThisCost100 = getModifiedIntValue64(iThisCost100, iSimulatedCountSM * iInstanceCostModifier);
+		}
+		iTotalCost100 += iThisCost100;
+		++iSimulatedCountSM;
+	}
+
+	return std::max(1, static_cast<int>(std::min<int64_t>(MAX_INT, iTotalCost100 / 100)));
+}
+
+bool CvPlayer::isPreMergedUnitBuildEnabled() const
+{
+	return getBugOptionBOOL("BuildList__PreMergedUnit", true, "BUG_BUILD_PRE_MERGED_UNIT");
+}
+
 
 int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 {

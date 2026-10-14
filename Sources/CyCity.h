@@ -86,6 +86,7 @@ public:
 	int getProductionNeeded() const;
 	int getProductionTurnsLeft() const;
 	int getUnitProductionTurnsLeft(int /*UnitTypes*/ iUnit, int iNum) const;
+	int getUnitProductionTurnsLeftPreMerged(int /*UnitTypes*/ iUnit) const;
 	int getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int iNum) const;
 	int getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const;
 	void setProductionProgress(int iNewValue);
@@ -400,6 +401,7 @@ public:
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce);
+	void pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce);
 	void popOrder(int iNum, bool bFinish, bool bChoose);
 	int getOrderQueueLength() const;
 	OrderData getOrderFromQueue(int iIndex) const;

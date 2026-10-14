@@ -29004,6 +29004,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_COSTS</Tag>
+		<English>Costs %d1_Num[ICON_PRODUCTION]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_MAX_MERGED_UNIT</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Max %s1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_VISIBILITY_MOVE_RANGE</Tag>
 		<English>[ICON_BULLET]Unit may not reveal undiscovered terrain except inside a player's territory</English>
 		<French>[ICON_BULLET]L'unité ne peut révéler des cases terrain qu'à l'intérieur du territoire du joueur</French>
