@@ -401,6 +401,10 @@
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -519,6 +523,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -645,6 +653,10 @@
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -762,6 +774,10 @@
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -869,6 +885,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1775,10 +1795,6 @@
 			<iPopDestroys>8</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
@@ -2002,14 +2018,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2517,6 +2525,22 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -4430,6 +4454,14 @@
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -5309,6 +5341,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_HILL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
