@@ -20324,6 +20324,36 @@
 			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
 		</PromotionInfo>
 		<PromotionInfo>
+			<Type>PROMOTION_VERY_EXPERIENCED_ARTIST</Type>
+			<Description>TXT_KEY_PROMOTION_VERY_EXPERIENCED_ARTIST</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<PromotionPrereq>PROMOTION_EXPERIENCED_ARTIST</PromotionPrereq>
+			<iUpgradeDiscount>30</iUpgradeDiscount>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_ELITE_ARTIST</Type>
+			<Description>TXT_KEY_PROMOTION_ELITE_ARTIST</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<PromotionPrereq>PROMOTION_VERY_EXPERIENCED_ARTIST</PromotionPrereq>
+			<iUpgradeDiscount>30</iUpgradeDiscount>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
+		</PromotionInfo>
+		<PromotionInfo>
 			<Type>PROMOTION_ARMED_GUARD1</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>

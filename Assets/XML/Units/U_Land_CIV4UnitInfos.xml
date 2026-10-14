@@ -44062,10 +44062,30 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>12</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>9</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>6</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
@@ -44184,10 +44204,30 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>20</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>15</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>10</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
@@ -44294,10 +44334,30 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>24</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>18</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>12</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
@@ -44400,10 +44460,30 @@
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>16</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>32</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>24</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>16</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>

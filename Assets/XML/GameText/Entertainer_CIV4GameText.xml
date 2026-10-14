@@ -41,6 +41,14 @@
 		<Russian>Опытный артист</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_VERY_EXPERIENCED_ARTIST</Tag>
+		<English>Very Experienced Artist</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_ELITE_ARTIST</Tag>
+		<English>Elite Artist</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BARD</Tag>
 		<English>Bard</English>
 		<French>Barde</French>

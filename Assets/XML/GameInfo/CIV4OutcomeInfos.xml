@@ -590,6 +590,14 @@
 					<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 					<iExtraChance>20</iExtraChance>
 				</ExtraChancePromotion>
+				<ExtraChancePromotion>
+					<PromotionType>PROMOTION_VERY_EXPERIENCED_ARTIST</PromotionType>
+					<iExtraChance>20</iExtraChance>
+				</ExtraChancePromotion>
+				<ExtraChancePromotion>
+					<PromotionType>PROMOTION_ELITE_ARTIST</PromotionType>
+					<iExtraChance>20</iExtraChance>
+				</ExtraChancePromotion>
 			</ExtraChancePromotions>
 		</OutcomeInfo>
 		<OutcomeInfo>
