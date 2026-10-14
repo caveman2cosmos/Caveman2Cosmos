@@ -5529,7 +5529,7 @@ class CvMainInterface:
 				if TYPE == "Demolish":
 					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_CITY_SCREEN_DEMOLISH", ()))
 				elif TYPE == "BUILDING":
-					szTxt = CyGTM.getBuildingHelp(ID, True, CyCity, False, False, True)
+					szTxt = CyGTM.getBuildingHelp(ID, True, self.InCity.CyCity, False, False, True)
 					self.updateTooltip(screen, szTxt)
 				else:
 					aList = [TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
