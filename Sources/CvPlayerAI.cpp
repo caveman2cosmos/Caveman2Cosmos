@@ -1442,9 +1442,15 @@ void CvPlayerAI::AI_unitUpdate()
 
 	if (!hasBusyUnit())
 	{
+		// AI_separate() and AI_update() can kill, merge or split groups, which rewrites the group cycle list.
+		// Iterating the list itself while calling them used to continue from a remembered "next" node that
+		// could already be freed, and deleteGroupCycleNode() on it then crashed (seen when a human stack
+		// attacked). So first drop cycle entries whose group no longer exists, collecting the IDs of the rest
+		// (nothing in that pass changes the list except deleting the current node), then act on the groups by
+		// ID, looking each one up again so that groups destroyed in the meantime are skipped.
+		std::vector<int> groupIDs;
 		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL;)
 		{
-			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 			CLLNode<int>* pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
 			//	Since we know the set of selection groups can (somehow - reason is unknown) get out of step
@@ -1452,38 +1458,58 @@ void CvPlayerAI::AI_unitUpdate()
 			//	selection groups that don't have group cycle entries), it follows that the converse may also
 			//	occur.  Thus we must be prepared to handle cycle entries with no corresponding selection group
 			//	still extant
-			if (pLoopSelectionGroup == NULL)
+			if (getSelectionGroup(pCurrUnitNode->m_data) == NULL)
 			{
 				deleteGroupCycleNode(pCurrUnitNode);
 			}
-			else if (pLoopSelectionGroup->AI_isForceSeparate())
+			else
+			{
+				groupIDs.push_back(pCurrUnitNode->m_data);
+			}
+			pCurrUnitNode = pNextUnitNode;
+		}
+
+		foreach_(const int iGroupID, groupIDs)
+		{
+			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(iGroupID);
+
+			if (pLoopSelectionGroup != NULL && pLoopSelectionGroup->AI_isForceSeparate())
 			{
 				// do not split groups that are in the midst of attacking
 				if (pLoopSelectionGroup->isForceUpdate() || !pLoopSelectionGroup->AI_isGroupAttack())
 				{
-					pLoopSelectionGroup->AI_separate();	// pointers could become invalid...
+					pLoopSelectionGroup->AI_separate();
 				}
 			}
-
-			pCurrUnitNode = pNextUnitNode;
 		}
 
 		if (isHumanPlayer())
 		{
+			// Same reasoning as above: AI_separate() may have changed the cycle, so take a fresh snapshot.
+			groupIDs.clear();
 			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL;)
 			{
-				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
 				CLLNode<int>* pNextUnitNode = nextGroupCycleNode(pCurrUnitNode);
 
-				if (pLoopSelectionGroup == NULL)
+				if (getSelectionGroup(pCurrUnitNode->m_data) == NULL)
 				{
 					deleteGroupCycleNode(pCurrUnitNode);
 				}
-				else if (pLoopSelectionGroup->AI_update())
+				else
 				{
-					break; // pointers could become invalid...
+					groupIDs.push_back(pCurrUnitNode->m_data);
 				}
 				pCurrUnitNode = pNextUnitNode;
+			}
+
+			foreach_(const int iGroupID, groupIDs)
+			{
+				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(iGroupID);
+
+				if (pLoopSelectionGroup != NULL && pLoopSelectionGroup->AI_update())
+				{
+					break;
+				}
 			}
 		}
 		else
