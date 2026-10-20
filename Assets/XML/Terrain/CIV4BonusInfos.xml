@@ -3396,7 +3396,7 @@
 			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ELEPHANTS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
-			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
+			<TechCityTrade>TECH_ELEPHANT_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>2</iYieldChange>
