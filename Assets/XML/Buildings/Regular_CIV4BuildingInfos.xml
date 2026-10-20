@@ -8784,10 +8784,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BOTANY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_BUGS</FreeBonus>
