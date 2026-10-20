@@ -3235,47 +3235,20 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<YieldChanges>
-				<iYield>60</iYield>
-				<iYield>70</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>75</iCommerce>
-				<iCommerce>170</iCommerce>
-				<iCommerce>130</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<iHappiness>14</iHappiness>
-			<iHealth>4</iHealth>
+			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BAMBOO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BARK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BUGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GRASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REEDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRAW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VINES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3283,22 +3256,13 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<VicinityBonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</BonusYieldChange>
-			</VicinityBonusYieldChanges>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-25</iAmountPerTurn>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13268,10 +13232,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEAVING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -18650,10 +18610,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
@@ -53793,6 +53749,7 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<bAutoBuild>1</bAutoBuild>
 			<Description>TXT_KEY_BUILDING_GRASS_GATHERER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_GATHERER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -53804,17 +53761,13 @@
 			<FreeBuilding>BUILDING_GRASS_GATHERER</FreeBuilding>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<iCost>30</iCost>
+			<iCost>60</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -54202,17 +54155,14 @@
 			<FreeBuilding>BUILDING_REED_GATHERER</FreeBuilding>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<iCost>30</iCost>
+			<iCost>60</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -54425,10 +54375,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -54451,7 +54398,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<iCost>118</iCost>
+			<iCost>236</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -54524,11 +54471,8 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
-			<iCost>60</iCost>
+			<bAutoBuild>1</bAutoBuild>
+			<iCost>120</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -73568,10 +73512,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -73626,10 +73566,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -91150,10 +91086,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
 			<iCost>146</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -91185,10 +91117,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<Bonus>BONUS_POTTERY</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -93992,10 +93920,6 @@
 			<PrereqTech>TECH_WEAVING</PrereqTech>
 			<VicinityBonus>BONUS_PAPYRUS</VicinityBonus>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<iCost>20</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -102883,10 +102807,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BASKETRY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -102959,10 +102879,6 @@
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
@@ -104291,10 +104207,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_RESIN</VicinityBonus>
 			<iCost>45</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -106698,10 +106610,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RUBBER</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -124910,10 +124818,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<iCost>270</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -127218,10 +127122,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
