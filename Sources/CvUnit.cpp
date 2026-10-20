@@ -38640,6 +38640,15 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 		return false;
 	}
 
+	// Assassinate is a strict superset of Ambush for assassin units (same targeting outside
+	// cities, plus the ability to strike inside them), so the plain Ambush option is redundant
+	// for them and shouldn't clutter the UI. Animals also carry bAssassin to represent ambush
+	// predators (e.g. Beluga, Jaguar) and must keep using the plain Ambush path, so they're excluded.
+	if (!bAssassinate && isAssassin() && !isAnimal())
+	{
+		return false;
+	}
+
 	if (!bAssassinate && pPlot->isCity(false)) //true->false Calvitix (to be able to attack animals in fort)
 	{
 		return false;
