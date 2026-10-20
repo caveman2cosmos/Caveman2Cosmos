@@ -8836,14 +8836,13 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<iHealth>1</iHealth>
-			<iHappiness>14</iHappiness>
 			<YieldChanges>
-				<iYield>20</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>50</iCommerce>
-				<iCommerce>160</iCommerce>
-				<iCommerce>115</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iAsset>6</iAsset>
 			<iPower>3</iPower>
@@ -10483,9 +10482,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -10534,9 +10531,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -13106,9 +13101,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -17600,9 +17593,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -22078,9 +22069,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -22129,9 +22118,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -25693,9 +25680,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -28193,9 +28178,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -28244,9 +28227,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -30142,9 +30123,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -35358,9 +35337,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -35409,9 +35386,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -39403,9 +39378,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -39454,9 +39427,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -42345,9 +42316,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -48531,9 +48500,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -48582,9 +48549,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -56525,9 +56490,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -56576,9 +56539,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -57111,9 +57072,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -60403,9 +60362,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -60454,9 +60411,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -69266,9 +69221,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -69352,9 +69305,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -69403,9 +69354,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -70975,9 +70924,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -71037,9 +70984,7 @@
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
@@ -76668,9 +76613,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -79760,9 +79703,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -83320,9 +83261,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -93649,9 +93588,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -97080,9 +97017,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -100107,9 +100042,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PEYOTE</VicinityBonus>
@@ -100158,9 +100091,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -104884,9 +104815,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -108032,9 +107961,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -108083,9 +108010,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -108689,9 +108614,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -108740,9 +108663,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
@@ -122459,9 +122380,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -133026,9 +132945,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
@@ -133077,9 +132994,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqInCityBuildings>
