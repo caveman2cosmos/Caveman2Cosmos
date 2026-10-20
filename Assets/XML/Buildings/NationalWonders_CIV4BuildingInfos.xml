@@ -3411,7 +3411,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -3443,12 +3442,6 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
-					<CommerceChanges>
-						<iCommerce>5</iCommerce>
-					</CommerceChanges>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>

@@ -2426,36 +2426,17 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>45</iCommerce>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>15</iYield>
+				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BORAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRICKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CEMENT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CHALK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CINNABAR_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2467,43 +2448,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FOSSILS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OBSIDIAN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEAT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTASH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUMICE_STONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PYRITE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SAND</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -18101,9 +18046,7 @@
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SALT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_STONE</VicinityBonus>
@@ -20372,9 +20315,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -20426,7 +20367,6 @@
 			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_FACTORY_BRICKS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>153</iCost>
@@ -25090,7 +25030,6 @@
 				<BuildingType>BUILDING_CLAY_PIT</BuildingType>
 				<BuildingType>BUILDING_CHALK_GATHERER</BuildingType>
 				<BuildingType>BUILDING_HEMATITE_GATHERER</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_IMU</BuildingType>
@@ -25521,9 +25460,7 @@
 			<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_SAND</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -31739,7 +31676,6 @@
 			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_CEMENT_MILL</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_CEMENT_MILL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>243</iCost>
@@ -50846,9 +50782,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -50881,9 +50815,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -50916,9 +50848,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -50951,9 +50881,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -50986,9 +50914,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51021,9 +50947,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51056,9 +50980,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51091,9 +51013,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51126,9 +51046,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<RawVicinityBonus>BONUS_OIL</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51161,9 +51079,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51196,9 +51112,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51231,9 +51145,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COW</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51266,9 +51178,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CRAB</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51301,9 +51211,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_HORSE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -53854,9 +53762,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -60001,9 +59907,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<RawVicinityBonus>BONUS_OBSIDIAN</RawVicinityBonus>
 			<iCost>70</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
@@ -75105,9 +75009,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MARBLE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -78411,9 +78313,7 @@
 			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SILVER_ORE</VicinityBonus>
@@ -89864,9 +89764,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<iCost>153</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -94672,9 +94570,7 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
@@ -99178,9 +99074,7 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SALT</VicinityBonus>
@@ -101060,9 +100954,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
@@ -118546,9 +118438,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<iCost>153</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -122039,9 +121929,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
@@ -131796,9 +131684,7 @@
 			<PrereqTech>TECH_WATERPROOF_CONCRETE</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>

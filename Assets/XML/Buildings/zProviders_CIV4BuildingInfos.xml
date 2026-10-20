@@ -631,9 +631,7 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_ARCHAEOPTERYX_FOSSILS</BuildingType>

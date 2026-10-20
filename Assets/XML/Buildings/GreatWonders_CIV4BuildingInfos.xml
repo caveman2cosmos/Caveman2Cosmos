@@ -6683,7 +6683,6 @@
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_MINE_IRON</BuildingType>
 				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
