@@ -10485,11 +10485,12 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -13101,6 +13102,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -13108,7 +13110,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BAMBOO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -17593,6 +17595,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -17600,7 +17603,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -22069,6 +22072,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -22076,7 +22080,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FLAX</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -25680,6 +25684,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -25687,7 +25692,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -28178,6 +28183,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -28185,7 +28191,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -30123,6 +30129,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -30130,7 +30137,7 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -35337,6 +35344,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -35344,7 +35352,7 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -39378,6 +39386,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -39385,7 +39394,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -42316,6 +42325,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -42323,7 +42333,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -48500,6 +48510,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -48507,7 +48518,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -56490,6 +56501,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -56497,7 +56509,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MELONS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -57072,6 +57084,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -57079,7 +57092,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -60362,6 +60375,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -60369,7 +60383,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -69221,6 +69235,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -69228,7 +69243,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -69305,6 +69320,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -69312,7 +69328,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -70924,6 +70940,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -70931,7 +70948,7 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -76613,6 +76630,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -76620,7 +76638,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -79703,6 +79721,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -79710,7 +79729,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PEYOTE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -83261,6 +83280,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -83268,7 +83288,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RESIN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -93588,6 +93608,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -93595,7 +93616,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DATES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -97017,6 +97038,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -97024,7 +97046,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 		<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -100042,6 +100064,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -100049,7 +100072,7 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -104815,6 +104838,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -104822,7 +104846,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -107961,6 +107985,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -107968,7 +107993,7 @@
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_INCENSE</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -108614,6 +108639,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -108621,7 +108647,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COCOA</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -122380,6 +122406,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -122387,7 +122414,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MANGO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 		    <CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -132945,6 +132972,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
+			<bAutoBuild>1</bAutoBuild>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
@@ -132952,7 +132980,7 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COTTON</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
