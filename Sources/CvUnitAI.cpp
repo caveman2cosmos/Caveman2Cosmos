@@ -374,6 +374,28 @@ bool CvUnitAI::AI_update()
 			}
 			break;
 		}
+		case AUTOMATE_HERD:
+		{
+			if (AI_getUnitAIType() == UNITAI_SUBDUED_ANIMAL)
+			{
+				if (!AI_construct(MAX_INT, MAX_INT, 0, false, true))
+				{
+					AI_herdMove();
+				}
+			}
+			else if (getGroup()->hasUnitOfAI(UNITAI_SUBDUED_ANIMAL))
+			{
+				CvSelectionGroup* pGroup = getGroup();
+				joinGroup(NULL);
+				joinGroup(pGroup);
+				getGroup()->setAutomateType(AUTOMATE_HERD);
+			}
+			else
+			{
+				getGroup()->setAutomateType(NO_AUTOMATE);
+			}
+			break;
+		}
 		case AUTOMATE_PILLAGE:
 		{
 			AI_AutomatedpillageMove();
@@ -1676,7 +1698,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 		for (int Time = 0; Time < expectedRnds; ++Time)
 		{
 			z += AdjustedWithdrawal * y / 100;
-			y = AdjustedWithdrawal * y / 100;
+			y = AdjustedWithdrawal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 		}
 		const int EvaluatedWithdrawOdds = z;
 
@@ -1691,7 +1713,7 @@ int CvUnitAI::AI_sacrificeValue(const CvPlot* pPlot) const
 		for (int Time = 0; Time < iAttackerKnockbackTries; ++Time)
 		{
 			z += iKnockbackTotal * y / 100;
-			y = iKnockbackTotal * y / 100;
+			y = iKnockbackTotal * (100 - z) / 100; // Prob next round is prob per round times prob you haven't already
 		}
 		const int EvaluatedKnockbackOdds = z;
 
@@ -1898,6 +1920,7 @@ void CvUnitAI::AI_settleMove()
 			}
 			SendLog("SettlerAI", CvWString::format(L"already in city %I64d", iDanger));
 			getGroup()->pushMission(MISSION_SKIP);
+			return;
 		}
 	}
 
@@ -2250,7 +2273,9 @@ void CvUnitAI::AI_workerMove()
 	//ls612: Combat Worker Danger Evaluation
 	const bool bWorkerDanger = bAbroad && GET_PLAYER(getOwner()).AI_isPlotThreatened(plot(), 2) || !bAbroad && exposedToDanger(plot(), 80, false);
 
-	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1)) {
+	// Don't abandon an improvement we've already started just because an enemy unit came into view;
+	// only flee danger when we don't have build progress on this plot invested yet.
+	if (bWorkerDanger && (!canDefend() || GetNumberOfUnitsInGroup() == 1) && getBuildType() == NO_BUILD) {
 		// in this order, either retreat to safety, or go into a city
 		if (AI_safety() || AI_retreatToCity()) {
 			return;
@@ -3629,7 +3654,7 @@ void CvUnitAI::AI_attackCityMove()
 						return;
 					}
 				}
-				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || (iOurOffense / (iEnemyOffense+1)) > 39/20 || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
+				if ((iComparePostBombard >= iAttackRatio) || (pTargetCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 1) / 2)) || 20 * iOurOffense > 39 * (iEnemyOffense+1) || pTargetCity->plot()->getNumDefenders(pTargetCity->getOwner()) <= 2)
 				{
 					if (iComparePostBombard < std::max(150, GC.getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()) && (pTargetCity->isDirectAttackable() || canIgnoreNoEntryLevel()))
 					{
@@ -6976,6 +7001,105 @@ void CvUnitAI::AI_subduedAnimalMove()
 
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
+}
+
+// Returns true if a mission was pushed...
+// Seeks a plot where this unit can build a domesticated herd, preferring plots
+// within the work radius of one of our cities (so the resulting bonus is of use),
+// falling back to the nearest qualifying plot otherwise.
+bool CvUnitAI::AI_herdMove()
+{
+	PROFILE_FUNC();
+
+	const CvOutcomeList* pOutcomeList = getOutcomeListForMission(MISSION_BUILD_DOMESTICATED_HERD);
+
+	if (pOutcomeList == NULL || !pOutcomeList->isPossibleSomewhere(*this))
+	{
+		// Nothing buildable and nothing spreadable right now (eg. missing tech, or no
+		// qualifying city/plot this turn) -- stay automated and just try again next turn,
+		// since AI_construct() may succeed later (new city founded, tech researched, etc.).
+		getGroup()->pushMission(MISSION_SKIP);
+		return true;
+	}
+
+	if (plot()->getOwner() != getOwner() && exposedToDanger(plot(), 80))
+	{
+		if (AI_safety())
+		{
+			return true;
+		}
+	}
+
+	const int iBaseFlags = isHuman() ? MOVE_NO_ENEMY_TERRITORY : (MOVE_NO_ENEMY_TERRITORY | MOVE_IGNORE_DANGER);
+
+	const CvPlot* pBestPlot = NULL;
+	const CvPlot* pBestTargetPlot = NULL;
+	int iBestValue = 0;
+
+	CvReachablePlotSet plotSet(getGroup(), MOVE_NO_ENEMY_TERRITORY, MAX_INT);
+
+	// Pass 1: plots within the work radius of one of our cities, so the resulting
+	// bonus actually benefits a city.
+	foreach_(const CvCity* pLoopCity, GET_PLAYER(getOwner()).cities())
+	{
+		for (int iIndex = 0; iIndex < NUM_CITY_PLOTS_2; iIndex++)
+		{
+			CvPlot* pCandidate = plotCity(pLoopCity->getX(), pLoopCity->getY(), iIndex);
+			if (pCandidate == NULL || plotSet.find(pCandidate) == plotSet.end())
+			{
+				continue;
+			}
+			if (!pOutcomeList->isPossibleInPlot(*this, *pCandidate))
+			{
+				continue;
+			}
+
+			const int iValue = pOutcomeList->AI_getValueInPlot(*this, *pCandidate);
+			if (iValue > iBestValue && generatePath(pCandidate, iBaseFlags, true))
+			{
+				iBestValue = iValue;
+				pBestPlot = getPathEndTurnPlot();
+				pBestTargetPlot = pCandidate;
+			}
+		}
+	}
+
+	// Pass 2: fall back to the nearest qualifying plot anywhere reachable.
+	if (pBestTargetPlot == NULL)
+	{
+		for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
+		{
+			CvPlot* pCandidate = itr.plot();
+
+			if (!pOutcomeList->isPossibleInPlot(*this, *pCandidate))
+			{
+				continue;
+			}
+
+			const int iValue = pOutcomeList->AI_getValueInPlot(*this, *pCandidate) * 1000 / (1 + itr.stepDistance());
+			if (iValue > iBestValue && generatePath(pCandidate, iBaseFlags, true))
+			{
+				iBestValue = iValue;
+				pBestPlot = getPathEndTurnPlot();
+				pBestTargetPlot = pCandidate;
+			}
+		}
+	}
+
+	if (pBestPlot != NULL && pBestTargetPlot != NULL)
+	{
+		if (atPlot(pBestTargetPlot))
+		{
+			getGroup()->pushMission(MISSION_BUILD_DOMESTICATED_HERD);
+			return true;
+		}
+
+		FAssert(!atPlot(pBestPlot));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), iBaseFlags, false, false, NO_MISSIONAI, pBestTargetPlot);
+	}
+
+	getGroup()->pushMission(MISSION_SKIP);
+	return true;
 }
 
 void CvUnitAI::AI_engineerMove()
@@ -12639,7 +12763,7 @@ bool CvUnitAI::AI_guardCity(bool bLeave, bool bSearch, int iMaxPath)
 				{
 					continue;
 				}
-				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0, 2)) ||
+				if (!(pLoopCity->AI_isDefended((!AI_isCityAIType()) ? pLoopCity->plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefendGroupHead, -1, -1, getOwner(), NO_TEAM, PUF_isNotCityAIType) : 0)) ||
 					(isMilitaryHappiness() && !(pLoopCity->AI_isAdequateHappinessMilitary())))
 				{
 					if (!pLoopCity->plot()->isVisibleEnemyUnit(this))
@@ -14994,10 +15118,6 @@ int CvUnitAI::getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, 
 					if (assumeSameValueEverywhere)
 					{
 						iWeightedValue = (iWeightedValue * (5 + pLoopCity->getPopulation())) / 10;
-					}
-					else
-					{
-						iWeightedValue = iValue;
 					}
 
 					if (iValue > iThreshold && iWeightedValue > iBestWeightedValue)
@@ -21871,7 +21991,7 @@ bool CvUnitAI::AI_fortTerritory(bool bCanal, bool bAirbase)
 
 			if (iValue > iMinAcceptableValue)
 			{
-				int iBestBuildValue = MAX_INT;
+				int iBestBuildValue = 0;
 				BuildTypes eBestTempBuild = NO_BUILD;
 
 				for (int iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
@@ -23606,8 +23726,8 @@ bool CvUnitAI::AI_pickupStranded(UnitAITypes eUnitAI, int iMaxPath)
 					{
 						if (plotSet.find(plotY) != plotSet.end()
 						// If we can move into the target plot in one turn take account of enemy units there
-						&& stepDistance(plotY->getX(), plotY->getY(), getX(), getY()) > getMoves()
-						|| !plotY->isVisibleEnemyUnit(this))
+						&& (stepDistance(plotY->getX(), plotY->getY(), getX(), getY()) > getMoves()
+						|| !plotY->isVisibleEnemyUnit(this)))
 						{
 							pPickupPlot = plotY;
 							break;
@@ -30123,6 +30243,11 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 
 	const CvPlot* pPlot = getGroup()->plot();
 	if (!pPlot) return false;
+
+	if (!bAssassinationOnly && canHunt(pPlot))
+	{
+		return getGroup()->pushMissionInternal(MISSION_HUNT, pPlot->getX(), pPlot->getY());
+	}
 
 	const bool bAssassin = isAssassin();
 

@@ -157,8 +157,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumPlayableCivilizationInfos(0)
 	, m_iNumAIPlayableCivilizationInfos(0)
 	, m_iTotalNumModules(0) // Modular loading control
-	, iStuckUnitID(0)
-	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
 	, m_loadedInitCore (NULL)
 	, m_bResourceLayerOn(false)
@@ -1785,6 +1783,7 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
 	REGISTER_MISSION(MISSION_HERITAGE);
+	REGISTER_MISSION(MISSION_HUNT);
 
 #ifdef _MOD_SENTRY
 	REGISTER_MISSION(MISSION_MOVE_TO_SENTRY);

@@ -4054,7 +4054,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TEA</Type>
+			<Type>EVENTTRIGGER_TEA_TRADE</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_TEA</Text>
 			</WorldNewsTexts>
@@ -4354,82 +4354,6 @@
 			</Events>
 			<bGlobal>1</bGlobal>
 			<bPickCity>1</bPickCity>
-		</EventTriggerInfo>
-
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_EXPERIENCED_CAPTAIN</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_EXPERIENCED_CAPTAIN</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EXPERIENCED_CAPTAIN_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/ExperiencedCaptain.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
-			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<UnitsRequired>
-				<UnitType>UNIT_GALLEY</UnitType>
-				<UnitType>UNIT_WARGALLEY</UnitType>
-				<UnitType>UNIT_TRIREME</UnitType>
-				<UnitType>UNIT_CARAVEL</UnitType>
-				<UnitType>UNIT_GALLEON</UnitType>
-				<UnitType>UNIT_PRIVATEER</UnitType>
-				<UnitType>UNIT_FRIGATE</UnitType>
-				<UnitType>UNIT_SHIP_OF_THE_LINE</UnitType>
-				<UnitType>UNIT_IRONCLAD</UnitType>
-				<UnitType>UNIT_TRANSPORT</UnitType>
-				<UnitType>UNIT_DESTROYER</UnitType>
-				<UnitType>UNIT_STEALTH_DESTROYER</UnitType>
-				<UnitType>UNIT_BATTLESHIP</UnitType>
-				<UnitType>UNIT_MISSILE_CRUISER</UnitType>
-				<UnitType>UNIT_SUBMARINE</UnitType>
-				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
-				<UnitType>UNIT_CARRIER</UnitType>
-				<UnitType>UNIT_QUINQUEREME</UnitType>
-				<UnitType>UNIT_SLOOP</UnitType>
-				<UnitType>UNIT_FLUYT</UnitType>
-				<UnitType>UNIT_BRIGANTINE</UnitType>
-				<UnitType>UNIT_MANOWAR</UnitType>
-				<UnitType>UNIT_IRON_FRIGATE</UnitType>
-				<UnitType>UNIT_LANDING_SHIP</UnitType>
-				<UnitType>UNIT_STILETTO_BOAT</UnitType>
-				<UnitType>UNIT_BATTLECRUISER</UnitType>
-				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
-				<UnitType>UNIT_CRUISER</UnitType>
-				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
-				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
-				<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
-				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
-				<UnitType>UNIT_FUSION_CRUISER</UnitType>
-				<UnitType>UNIT_FUSION_BATTLESHIP</UnitType>
-				<UnitType>UNIT_FUSION_CARRIER</UnitType>
-				<UnitType>UNIT_FUSION_TRANSPORT</UnitType>
-				<UnitType>UNIT_HEAVY_CRUISER</UnitType>
-				<UnitType>UNIT_WW1_DESTROYER</UnitType>
-				<UnitType>UNIT_PRE_DREADNOUGHT</UnitType>
-				<UnitType>UNIT_DREADNOUGHT_SHIP</UnitType>
-				<UnitType>UNIT_WW2_BATTLESHIP</UnitType>
-				<UnitType>UNIT_EARLY_CARRIER</UnitType>
-				<UnitType>UNIT_LITTORAL_COMBAT_SHIP</UnitType>
-			</UnitsRequired>
-			<iNumUnits>1</iNumUnits>
-			<iUnitExperienceWeight>1</iUnitExperienceWeight>
-			<BuildingsRequired>
-				<Building>BUILDING_DRYDOCK</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<Events>
-				<Event>EVENT_EXPERIENCED_CAPTAIN_1</Event>
-				<Event>EVENT_EXPERIENCED_CAPTAIN_2</Event>
-			</Events>
-			<bGlobal>1</bGlobal>
-			<bPickCity>1</bPickCity>
-			<PythonCanDo>canTriggerExperiencedCaptain</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -4839,11 +4763,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DARWINS_VOYAGE</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE1</Text>
+				<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE2</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -5175,7 +5099,7 @@
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_PAPYRUS</Type>
+			<Type>EVENTTRIGGER_PAPYRUS_USAGE</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_1</Text>
 				<Text>TXT_KEY_EVENTTRIGGER_PAPYRUS_2</Text>
@@ -13703,6 +13627,7 @@
 				<Event>EVENT_MERCENARIES_ANCIENT_1</Event>
 				<Event>EVENT_MERCENARIES_ANCIENT_2</Event>
 				<Event>EVENT_MERCENARIES_ANCIENT_3</Event>
+				<Event>EVENT_MERCENARIES_ANCIENT_4</Event>
 			</Events>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
@@ -14557,6 +14482,7 @@
 				<Event>EVENT_FORT_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15564,6 +15490,7 @@
 			<iNumUnits>1</iNumUnits>
 			<iUnitDistanceWeight>-1</iUnitDistanceWeight>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
@@ -15573,6 +15500,9 @@
 			<RoutesRequired>
 				<RouteType>NONE</RouteType>
 			</RoutesRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_STUCK_IN_SWAMP_1</Event>
 			</Events>
@@ -15618,6 +15548,7 @@
 				<Event>EVENT_FORTIFIED_CAVE_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15644,6 +15575,7 @@
 				<Event>EVENT_ABATIS_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15670,6 +15602,7 @@
 				<Event>EVENT_PALISADE_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15696,6 +15629,7 @@
 				<Event>EVENT_BUNKER_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15722,6 +15656,7 @@
 				<Event>EVENT_FUTURE_BUNKER_IN_DISREPAIR_2</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
+			<PythonCanDo>canTriggerFortInDisrepair</PythonCanDo>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15759,142 +15694,26 @@
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<TerrainsRequired>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-			</TerrainsRequired>
-			<BonusesRequired>
-				<BonusType>BONUS_OBSIDIAN</BonusType>
-				<BonusType>BONUS_SULPHUR</BonusType>
-			</BonusesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<PythonCanDo>canDoNewVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>1</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoNewVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_EXTINCT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>2</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_EXTINCTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoExtinction</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_DORMANT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>5</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoDormantEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_ACTIVE</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoExistingEruption</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_DORMANT</Type>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<FeaturesRequired>
-				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
-			</FeaturesRequired>
-			<Events>
-				<Event>EVENT_VOLCANO_SLEEP</Event>
-			</Events>
-			<bRecurring>1</bRecurring>
-			<bShowPlot>0</bShowPlot>
-			<PythonCanDo>canDoOldVolcano</PythonCanDo>
-			<PythonCallback>doVolcanoSleep</PythonCallback>
 		</EventTriggerInfo>
 
 		<EventTriggerInfo>
@@ -15913,10 +15732,14 @@
 			<iWeight>120</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<TerrainsRequired>
 				<TerrainType>TERRAIN_DUNES</TerrainType>
 			</TerrainsRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_QUICKSAND_1</Event>
 				<Event>EVENT_QUICKSAND_2</Event>
@@ -16037,10 +15860,14 @@
 			<iWeight>200</iWeight>
 			<iNumUnits>1</iNumUnits>
 			<bUnitsOnPlot>1</bUnitsOnPlot>
+			<bNotOnCity>1</bNotOnCity>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_TAR_PIT</FeatureType>
 			</FeaturesRequired>
+			<NotImprovementsRequired>
+				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
+			</NotImprovementsRequired>
 			<Events>
 				<Event>EVENT_TARPIT_1</Event>
 				<Event>EVENT_TARPIT_2</Event>

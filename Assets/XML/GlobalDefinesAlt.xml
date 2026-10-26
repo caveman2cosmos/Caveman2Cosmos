@@ -184,6 +184,10 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<DefineName>BUG_BUILD_PRE_MERGED_UNIT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
 		<DefineName>BUG_CITYBAR_HURRY_ASSIST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -516,14 +520,6 @@
 		-->
 		<DefineName>ESTIMATED_EXTRA_WAR_EXPENSE_PERCENT</DefineName>
 		<iDefineIntVal>12</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UPSCALED_HAMMER_COST_MODIFIER</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>STARSIGN_TECH_START</DefineName>

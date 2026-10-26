@@ -1307,7 +1307,7 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 			case ATTITUDE_CAUTIOUS: iValue *= 2;
 		}
 		iValue *= getPower(true) * AI_maxWarNearbyPowerRatio() / 100;
-		iValue /= GET_TEAM(eTeam).getDefensivePower();
+		iValue /= std::max(1, GET_TEAM(eTeam).getDefensivePower());
 	}
 	return iValue;
 }

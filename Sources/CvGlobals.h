@@ -455,8 +455,11 @@ public:
 	int getNumOutcomeInfos() const;
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
-	int iStuckUnitID;
-	int iStuckUnitCount;
+	// Per-unit (not global) consecutive stuck-in-groupMove() counters, keyed by unit ID.
+	// A single shared counter let unrelated units reset each other's progress, which meant
+	// a genuinely stuck unit could sit ready-to-move forever instead of ever hitting the
+	// finishMoves() escape - see CvSelectionGroup::groupMove().
+	std::map<int, int> stuckUnitMoveCounts;
 
 	void updateReplacements();
 

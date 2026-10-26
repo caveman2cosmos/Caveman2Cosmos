@@ -361,20 +361,20 @@
 					</Or>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FLAMINGO</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_FLAMINGO</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_PEACOCK</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_PEACOCK</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_SECRETARY_BIRD</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_SECRETARY_BIRD</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_VULTURE</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_VULTURE</ID>
 						</Has>
 					</Or>
 				</And>
@@ -14342,6 +14342,44 @@
 			<iAsset>2</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SLAVE_COMPOUND_TUTOR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_TUTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
+			</ReplacementBuildings>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>2</iAsset>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_TUTOR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORDINANCE_SMOKE_DETECTOR</Type>

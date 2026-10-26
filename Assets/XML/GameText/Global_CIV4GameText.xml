@@ -1169,6 +1169,14 @@
 		<Spanish>Ordenará a la unidad que propague automáticamente su religión o corporación</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_HERD</Tag>
+		<English>Seek Pasture Automatically</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_AUTOMATE_HERD_HELP</Tag>
+		<English>Will order the unit to automatically seek out a suitable plot and build a domesticated herd there</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_AUTOMATE_UPGRADING</Tag>
 		<English>Automate Upgrade</English>
 		<French>Améliorations automatisées</French>
@@ -6875,6 +6883,10 @@
 		<Italian>%D1%%: per la religione ufficiale</Italian>
 		<Spanish>%D1%%: Por nuestra religión oficial</Spanish>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_ESPIONAGE_SCREEN</Tag>
+        <English>Espionage</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_SCREEN_COST</Tag>
 		<English>Cost</English>
@@ -9232,8 +9244,11 @@
 		<French>Monarch but AI on Nightmare</French>
 		<Italian>Monarch but AI on Nightmare</Italian>
 		<Russian>Monarch but AI on Nightmare</Russian>
-
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_HANDICAP_AI_BOOSTED_HELP</Tag>
+        <English>Its a boost to ai to make the game more chalenging</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_AI_BOOSTED_PLUS</Tag>
 		<English>This difficulty has monarch lvl player upkeep but deeper nightmare AI boosts</English>
@@ -9249,7 +9264,7 @@
 		<Russian>Всемогущий</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP_PLUS</Tag>
+		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_PLUS_HELP</Tag>
 		<English>Nightmare extra production boost for AI</English>
 		<French>Ce mode Cauchemar extrême donne des bonus des production aux IA</French>
 		<Italian>Nightmare extra production boost for AI</Italian>
@@ -13600,6 +13615,10 @@
 		<German>[ICON_BULLET]neuer Befehl: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Abilita l'uso[COLOR_REVERT] dei miglioramenti: [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT]</Italian> <!--tech Scavenging pedia -->
 		<Spanish>[ICON_BULLET]Se puede [COLOR_HIGHLIGHT_TEXT]%s1:2_ImpName[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT_TERRAIN</Tag>
+		<English>[ICON_BULLET]Can [COLOR_HIGHLIGHT_TEXT]%s1_ImpName[COLOR_REVERT] on [COLOR_HIGHLIGHT_TEXT]%s2_TerrainName[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CAN_CONSTRUCT_BUILDING</Tag>
@@ -19979,6 +19998,10 @@
 		<Russian>Íàø %s1 ïðèðó÷èë è îñàäèë %s2</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SEA_BONUS_SPAWNED_MESSAGE</Tag>
+		<English>Our %s1 discovered a bounty of %s2 in these waters</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL</Tag>
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
@@ -22363,6 +22386,10 @@
 		<German>[ICON_BULLET]Keine Kampfstrafe für Flussüberquerung</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Nessuna penalità[COLOR_REVERT] di combattimento per [COLOR_HIGHLIGHT_TEXT]attraversamento di un fiume[COLOR_REVERT]</Italian> <!-- promotion Amphibious -->
 		<Spanish>[ICON_BULLET]No sufre penalización al combate por cruzar un río</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT</Tag>
+		<English>[ICON_BULLET]No Movement Penalty for Crossing River</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_STRENGTH</Tag>
@@ -28977,6 +29004,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_COSTS</Tag>
+		<English>Costs %d1_Num[ICON_PRODUCTION]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRODUCTION_MAX_MERGED_UNIT</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Max %s1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_VISIBILITY_MOVE_RANGE</Tag>
 		<English>[ICON_BULLET]Unit may not reveal undiscovered terrain except inside a player's territory</English>
 		<French>[ICON_BULLET]L'unité ne peut révéler des cases terrain qu'à l'intérieur du territoire du joueur</French>
@@ -30445,6 +30480,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<German>Wahrzeichenbeschreibung eingeben</German>
 		<Italian>Inserisci il testo del punto di riferimento</Italian>
 		<Spanish>Escribe el texto del lugar de referencia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_SEARCH</Tag>
+		<English>Search</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_SEARCH_PROMPT</Tag>
+		<English>Enter text to filter the list (leave blank to clear)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WB_PLOT_TYPE_HILL</Tag>

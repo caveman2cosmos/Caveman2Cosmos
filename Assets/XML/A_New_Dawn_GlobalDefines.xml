@@ -31,23 +31,23 @@
 	<!-- Dexy - Surround and Destroy -->
 	<Define>
 		<DefineName>SAD_FACTOR_1</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_2</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_3</DefineName>
-		<iDefineIntVal>15</iDefineIntVal>
+		<iDefineIntVal>12</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_4</DefineName>
-		<iDefineIntVal>20</iDefineIntVal>
+		<iDefineIntVal>16</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_MAX_MODIFIER</DefineName>
-		<iDefineIntVal>60</iDefineIntVal>
+		<iDefineIntVal>55</iDefineIntVal>
 	</Define>
 	<!-- \Dexy - Surround and Destroy -->
 	<Define>

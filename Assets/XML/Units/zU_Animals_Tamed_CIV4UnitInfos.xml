@@ -1423,8 +1423,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOON_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_MOON_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iMoves>1</iMoves>
@@ -1511,8 +1513,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_BROWN_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1598,8 +1602,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_BLACK_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1686,8 +1692,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_CAVE_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1774,8 +1782,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_GRIZZLY</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1857,8 +1867,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_GIANT_PANDA</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1945,8 +1957,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_POLAR_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2121,8 +2135,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_SLOTH_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2208,8 +2224,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_SPECTACLED_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2297,8 +2315,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_SUN_BEAR</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2484,9 +2504,11 @@
 			<iCityDefense>-80</iCityDefense>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_GIRAFFE</Type>
+			</PrereqAndHeritage>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2751,8 +2773,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_BLACK_RHINOCEROS</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2839,8 +2863,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_INDIAN_RHINOCEROS</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2927,8 +2953,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_JAVA_RHINOCEROS</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3015,8 +3043,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_WHITE_RHINOCEROS</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3978,8 +4008,10 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_DUCK</Type>
+			</PrereqAndHeritage>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -4063,10 +4095,12 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
+			<PrereqAndHeritage>
+				<Type>HERITAGE_FOLKLORE_WILD_TURKEY</Type>
+			</PrereqAndHeritage>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>

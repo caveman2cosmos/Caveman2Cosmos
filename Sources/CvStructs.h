@@ -342,6 +342,10 @@ struct GameTurnInfo
 #define	INTERNAL_AUXILIARY_ORDER_IDATA(iData)	(short)(((iData) & 0xffff0000) >> 16)
 #define	PACK_INTERNAL_ORDER_IDATA(iBase, iAux)	(((unsigned int)(iBase) & 0xFFFF) | (((unsigned int)(iAux)) << 16))
 
+//	Contract auxiliary flags
+#define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01
+#define	AUX_CONTRACT_FLAG_PRE_MERGE		0x02
+
 struct OrderData
 {
 	OrderTypes eOrderType;
@@ -475,6 +479,10 @@ struct OrderData
 		FAssert(eOrderType == ORDER_TRAIN);
 		return static_cast<UnitAITypes>(unit.contractedAIType);
 	}
+	bool isPreMerge() const {
+		FAssert(eOrderType == ORDER_TRAIN);
+		return (unit.contractFlags & AUX_CONTRACT_FLAG_PRE_MERGE) != 0;
+	}
 	BuildingTypes getBuildingType() const {
 		FAssert(eOrderType == ORDER_CONSTRUCT);
 		return static_cast<BuildingTypes>(building.type);
@@ -514,8 +522,7 @@ STATIC_ASSERT(offsetof(OrderData, iData2) == offsetof(_oldOrderData, iData2), iD
 STATIC_ASSERT(offsetof(OrderData, bSave) == offsetof(_oldOrderData, bSave), bSave_offset_wrong);
 STATIC_ASSERT(sizeof(OrderData) == sizeof(_oldOrderData), OrderData_struct_size_incorrect_check_alignment);
 
-//	Contract auxiliary flags
-#define	AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT	0x01
+//	Contract auxiliary flags (moved above OrderData below so isPreMerge() can use them inline)
 
 struct MissionData
 {

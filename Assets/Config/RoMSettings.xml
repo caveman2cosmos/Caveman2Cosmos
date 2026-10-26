@@ -76,6 +76,18 @@
 
 				<change module="ANewDawnSettings" function="changedMaxUnitsPerTile"/>
 			</list>
+			<list id="NationalUnitLimitInitial" key="NationalUnitLimitInitial" type="int" default="-1"
+				values="-1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30"
+				get="getNationalUnitLimitInitial" set="setNationalUnitLimitInitial">
+
+				<change module="ANewDawnSettings" function="changedNationalUnitLimitInitial"/>
+			</list>
+			<list id="NationalUnitLimitPerEra" key="NationalUnitLimitPerEra" type="int" default="5"
+				values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30"
+				get="getNationalUnitLimitPerEra" set="setNationalUnitLimitPerEra">
+
+				<change module="ANewDawnSettings" function="changedNationalUnitLimitPerEra"/>
+			</list>
 			<list id="FlexibleDifficultyTurnIncrements" key="FlexibleDifficultyTurnIncrements" type="int" default="50"
 				values="250, 225, 200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10, 5, 1"
 				get="getFlexibleDifficultyTurnIncrements" set="setFlexibleDifficultyTurnIncrements">
@@ -94,6 +106,18 @@
                   values="200, 175, 150, 125, 100, 75, 50, 40, 30, 25, 20, 15, 10" get="getNextTraitCultureReqPercent" set="setNextTraitCultureReqPercent">
 
                 <change module="ANewDawnSettings" function="changedNextTraitCultureReqPercent"/>
+            </list>
+            <list id="TechUpscaledCostsPercent" key="TechUpscaledCostsPercent" type="int" default="0"
+                  values="0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100"
+                  get="getTechUpscaledCostsPercent" set="setTechUpscaledCostsPercent">
+
+                <change module="ANewDawnSettings" function="changedTechUpscaledCostsPercent"/>
+            </list>
+            <list id="ExpUpscaledBuildingAndUnitCostsPercent" key="ExpUpscaledBuildingAndUnitCostsPercent" type="int" default="0"
+                  values="0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100"
+                  get="getExpUpscaledBuildingAndUnitCostsPercent" set="setExpUpscaledBuildingAndUnitCostsPercent">
+
+                <change module="ANewDawnSettings" function="changedExpUpscaledBuildingAndUnitCostsPercent"/>
             </list>
 			<list id="FlexibleDifficultyMinimumDiff" key="FlexibleDifficultyMinimumDiff" type="int" default="0" listType="string"
 				values="No Minimum|Settler|Chieftan|Warlord|Noble|Prince|Monarch|Emperor|Immortal|Deity|Nightmare|Deeper Nightmare|Monarch but AI on Nightmare"

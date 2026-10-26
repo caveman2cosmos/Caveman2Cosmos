@@ -75,32 +75,37 @@ class WoodlandCycle:
 					plot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 
 			elif iFeature == self.FEATURE_FOREST_YOUNG:
-				iTerrain = plot.getTerrainType()
-				if iTerrain == self.TERRAIN_TAIGA:
-					plot.setFeatureType(self.FEATURE_FOREST, 2)
-				elif iTerrain in (self.TERRAIN_LUSH, self.TERRAIN_MUDDY):
-					plot.setFeatureType(self.FEATURE_FOREST, 0)
+				iRand = GAME.getSorenRandNum(148, "forestChange")
+				if iRand < 2:
+					bBurn = True
+					plot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 				else:
-					# Could do a 50-50 pine vs leafy, but I'll base the prob on neighbour ratio
-					iLeaf = 1
-					iPine = 2 # Head start for pine as leafy tend to dominate
-					# find neighbour variety
-					iX = plot.getX(); iY = plot.getY()
-					for x in xrange(iX - 1, iX + 2):
-						for y in xrange(iY - 1, iY + 2):
-							if x == iX and y == iY:
-								continue
-							plotX = MAP.plot(x, y)
-							if plotX and plotX.getFeatureType() == self.FEATURE_FOREST:
-								iVariety = plotX.getFeatureVariety()
-								if iVariety: # Count snowy as pine
-									iPine += 1
-								else: iLeaf += 1
-
-					if 100 < GAME.getSorenRandNum(100 + 100 * iLeaf / iPine, "Leafy"):
+					iTerrain = plot.getTerrainType()
+					if iTerrain == self.TERRAIN_TAIGA:
+						plot.setFeatureType(self.FEATURE_FOREST, 2)
+					elif iTerrain in (self.TERRAIN_LUSH, self.TERRAIN_MUDDY):
 						plot.setFeatureType(self.FEATURE_FOREST, 0)
-					else: # Pine
-						plot.setFeatureType(self.FEATURE_FOREST, 1)
+					else:
+						# Could do a 50-50 pine vs leafy, but I'll base the prob on neighbour ratio
+						iLeaf = 1
+						iPine = 2 # Head start for pine as leafy tend to dominate
+						# find neighbour variety
+						iX = plot.getX(); iY = plot.getY()
+						for x in xrange(iX - 1, iX + 2):
+							for y in xrange(iY - 1, iY + 2):
+								if x == iX and y == iY:
+									continue
+								plotX = MAP.plot(x, y)
+								if plotX and plotX.getFeatureType() == self.FEATURE_FOREST:
+									iVariety = plotX.getFeatureVariety()
+									if iVariety: # Count snowy as pine
+										iPine += 1
+									else: iLeaf += 1
+
+						if 100 < GAME.getSorenRandNum(100 + 100 * iLeaf / iPine, "Leafy"):
+							plot.setFeatureType(self.FEATURE_FOREST, 0)
+						else: # Pine
+							plot.setFeatureType(self.FEATURE_FOREST, 1)
 
 			elif iFeature == self.FEATURE_FOREST:
 				iRand = GAME.getSorenRandNum(148, "forestChange")
@@ -120,6 +125,11 @@ class WoodlandCycle:
 					if plot.canHaveFeature(self.FEATURE_JUNGLE):
 						plot.setFeatureType(self.FEATURE_JUNGLE, 0)
 					else: plot.setFeatureType(self.FEATURE_FOREST_ANCIENT, 0)
+
+			elif iFeature == self.FEATURE_JUNGLE:
+				if not GAME.getSorenRandNum(200, "Burn"):
+					bBurn = True
+					plot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 
 			if bBurn:
 				iPlayer = plot.getOwner()

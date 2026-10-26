@@ -297,17 +297,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOON_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_URSIDAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BEARS</Type>
@@ -410,10 +403,10 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_SABRETOOTH</Type>
+				<Type>HERITAGE_FOLKLORE_PALEOLITHIC_CAT</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BIG_CATS</Type>
@@ -510,8 +503,6 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
@@ -519,9 +510,12 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BISON</Type>
+				<Type>HERITAGE_TAXON_BOVINAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BISON</Type>
@@ -618,15 +612,16 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_REINDEER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
 				<BuildingType>BUILDING_HERD_DEER</BuildingType>
 				<BuildingType>BUILDING_CAMP_MEGALOCEROS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DEER</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_DEER</Type>
@@ -723,11 +718,13 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_GIRAFFE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_GIRAFFES</Type>
@@ -810,9 +807,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
@@ -865,7 +860,6 @@
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -1050,15 +1044,12 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_RHINOCEROTIDAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_RHINOS</Type>
@@ -1134,9 +1125,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
@@ -1184,12 +1173,13 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_CAMP_ZEBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ZEBRA</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_ZEBRAS</Type>

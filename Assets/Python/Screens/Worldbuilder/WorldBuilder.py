@@ -74,6 +74,8 @@ class WorldBuilder:
 			self.iBrushWidth = 1
 			self.iBrushHeight = 1
 			self.iChange = 1
+			self.sWBSearchFilter = ""
+			self.iFeatureDropY = 55
 			self.iCurrentPlayer = GAME.getActivePlayer()
 			self.bNotWB = False
 			# Init screen
@@ -660,6 +662,10 @@ class WorldBuilder:
 		screen.deleteWidget("WBCurrentItem")
 		screen.deleteWidget("WBSelectClass")
 		screen.deleteWidget("WBSelectItem")
+		screen.deleteWidget("WBSearchButton")
+		screen.deleteWidget("WBSearchPanel")
+		screen.deleteWidget("WBSearchClearButton")
+		screen.deleteWidget("WBSearchClearPanel")
 		screen.deleteWidget("RevealMode")
 		screen.deleteWidget("WorldBuilderEraseAll")
 		screen.deleteWidget("BrushWidth")
@@ -864,12 +870,46 @@ class WorldBuilder:
 		screen.setState("PythonEffectButton", bPython)
 		screen.setState("SensibilityCheck", self.bSensibility)
 
+	iSearchBtnWidth = 90
+	iClearBtnWidth = 24
+	iSearchBtnHeight = 26
+	iSearchAreaWidth = iSearchBtnWidth + 4 + iClearBtnWidth + 4
+	iSearchTextRaise = 10  # how much higher the text sits than the panel's vertical center
+
+	# Draws a boxed "SEARCH" button plus a small "X" clear button docked to the
+	# right edge of the row at iY. Callers that also draw a dropdown on this row
+	# should size it to iWidth - iSearchAreaWidth so the two don't overlap.
+	# Returns the lowered active search filter string.
+	def addSearchButton(self, screen, iY, iWidth):
+		iY -= 3  # nudge the panel box up to line up with the dropdown's baseline
+		iClearX = iWidth - self.iClearBtnWidth
+		iSearchX = iClearX - 4 - self.iSearchBtnWidth
+		iTextY = iY + self.iSearchBtnHeight/2 - self.iSearchTextRaise
+
+		screen.addPanel("WBSearchPanel", "", "", True, True, iSearchX, iY, self.iSearchBtnWidth, self.iSearchBtnHeight, PanelStyles.PANEL_STYLE_MAIN)
+		screen.setText("WBSearchButton", "", "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_SEARCH", ()).upper() + "</font>", 1<<2, iSearchX + self.iSearchBtnWidth/2, iTextY, 0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_PYTHON, 1029, 35)
+
+		screen.addPanel("WBSearchClearPanel", "", "", True, True, iClearX, iY, self.iClearBtnWidth, self.iSearchBtnHeight, PanelStyles.PANEL_STYLE_MAIN)
+		if self.sWBSearchFilter:
+			sX = "<font=3b>" + CyTranslator().getText("[COLOR_WARNING_TEXT]", ()) + "X</color></font>"
+		else:
+			sX = "<font=3b>X</font>"
+		screen.setText("WBSearchClearButton", "", sX, 1<<2, iClearX + self.iClearBtnWidth/2, iTextY, 0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_PYTHON, 1029, 36)
+
+		return self.sWBSearchFilter.lower()
+
+	def searchFilterHeader(self):
+		if self.sWBSearchFilter:
+			return CyTranslator().getText("TXT_KEY_WB_SEARCH", ()) + ": " + self.sWBSearchFilter
+		return ""
+
 	def setSelectionTable(self):
 		screen = self.getScreen()
 		iWidth = 256
 		if self.iPlayerAddMode == "Units":
 			iY = 25
-			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			sFilter = self.addSearchButton(screen, iY, iWidth)
+			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth - self.iSearchAreaWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), -2, -2, -2 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_PEDIA_NON_COMBAT",()), -1, -1, -1 == self.iSelectClass)
 			for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
@@ -883,6 +923,8 @@ class WorldBuilder:
 						continue
 				elif self.iSelectClass > -1 and CvUnitInfo.getDomainType() != self.iSelectClass:
 					continue
+				if sFilter and sFilter not in CvUnitInfo.getDescription().lower():
+					continue
 				lItems.append([CvUnitInfo.getDescription(), i])
 			lItems.sort()
 
@@ -891,7 +933,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			bValid = False
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -904,7 +946,8 @@ class WorldBuilder:
 
 		elif self.iPlayerAddMode == "Buildings":
 			iY = 25
-			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			sFilter = self.addSearchButton(screen, iY, iWidth)
+			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth - self.iSearchAreaWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), 0, 0, 0 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_BUILDINGS",()), 1, 1, 1 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_NATIONAL_WONDER", ()), 2, 2, 2 == self.iSelectClass)
@@ -926,6 +969,8 @@ class WorldBuilder:
 				elif self.iSelectClass == 4:
 					if not isWorldWonder(i):
 						continue
+				if sFilter and sFilter not in GC.getBuildingInfo(i).getDescription().lower():
+					continue
 				lItems.append([GC.getBuildingInfo(i).getDescription(), i])
 			lItems.sort()
 
@@ -934,7 +979,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			bValid = False
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -946,10 +991,15 @@ class WorldBuilder:
 					self.iSelection = lItems[0][1]
 
 		elif self.iPlayerAddMode == "Features":
-			iY = 55
+			iY = 25
+			sFilter = self.addSearchButton(screen, iY, iWidth)
+			self.iFeatureDropY = iY
+			iY += 30
 			lItems = []
 			for i in xrange(GC.getNumFeatureInfos()):
 				ItemInfo = GC.getFeatureInfo(i)
+				if sFilter and sFilter not in ItemInfo.getDescription().lower():
+					continue
 				lItems.append([ItemInfo.getDescription(), i])
 			lItems.sort()
 
@@ -957,7 +1007,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
 				if self.iSelection == -1:
@@ -965,11 +1015,14 @@ class WorldBuilder:
 				screen.setTableText("WBSelectItem", 0, iRow, "<font=3>" + item[0] + "</font>", GC.getFeatureInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7874, item[1], 1<<0)
 
 		elif self.iPlayerAddMode == "Improvements":
-			iY = 25
+			sFilter = self.addSearchButton(screen, 25, iWidth)
+			iY = 55
 			lItems = []
 			for i in xrange(GC.getNumImprovementInfos()):
 				ItemInfo = GC.getImprovementInfo(i)
 				if ItemInfo.isGraphicalOnly(): continue
+				if sFilter and sFilter not in ItemInfo.getDescription().lower():
+					continue
 				lItems.append([ItemInfo.getDescription(), i])
 			lItems.sort()
 
@@ -977,7 +1030,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
 				if self.iSelection == -1:
@@ -985,17 +1038,21 @@ class WorldBuilder:
 				screen.setTableText("WBSelectItem", 0, iRow, "<font=3>" + item[0] + "</font>", GC.getImprovementInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7877, item[1], 1<<0)
 
 		elif self.iPlayerAddMode == "Bonus":
-			iY = 25
+			sFilter = self.addSearchButton(screen, 25, iWidth)
+			iY = 55
 			lItems = []
 			for i in xrange(GC.getNumMapBonuses()):
-				lItems.append([GC.getBonusInfo(GC.getMapBonus(i)).getDescription(), GC.getMapBonus(i)])
+				sDesc = GC.getBonusInfo(GC.getMapBonus(i)).getDescription()
+				if sFilter and sFilter not in sDesc.lower():
+					continue
+				lItems.append([sDesc, GC.getMapBonus(i)])
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, self.yRes - iY)
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
 				if self.iSelection == -1:
@@ -1003,10 +1060,13 @@ class WorldBuilder:
 				screen.setTableText("WBSelectItem", 0, iRow, "<font=3>" + item[0] + "</font>", GC.getBonusInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7878, item[1], 1<<0)
 
 		elif self.iPlayerAddMode == "Routes":
-			iY = 25
+			sFilter = self.addSearchButton(screen, 25, iWidth)
+			iY = 55
 			lItems = []
 			for i in xrange(GC.getNumRouteInfos()):
 				ItemInfo = GC.getRouteInfo(i)
+				if sFilter and sFilter not in ItemInfo.getDescription().lower():
+					continue
 				lItems.append([ItemInfo.getDescription(), i])
 			lItems.sort()
 
@@ -1014,7 +1074,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
 				if self.iSelection == -1:
@@ -1022,11 +1082,14 @@ class WorldBuilder:
 				screen.setTableText("WBSelectItem", 0, iRow, "<font=3>" + item[0] + "</font>", GC.getRouteInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 6788, item[1], 1<<0)
 
 		elif self.iPlayerAddMode == "Terrain":
-			iY = 25
+			sFilter = self.addSearchButton(screen, 25, iWidth)
+			iY = 55
 			lItems = []
 			for i in xrange(GC.getNumTerrainInfos()):
 				ItemInfo = GC.getTerrainInfo(i)
 				if ItemInfo.isGraphicalOnly(): continue
+				if sFilter and sFilter not in ItemInfo.getDescription().lower():
+					continue
 				lItems.append([ItemInfo.getDescription(), i])
 			lItems.sort()
 
@@ -1034,7 +1097,7 @@ class WorldBuilder:
 			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
 			screen.enableSelect("WBSelectItem", True)
-			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
+			screen.setTableColumnHeader("WBSelectItem", 0, self.searchFilterHeader(), iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
 				if self.iSelection == -1:
@@ -1081,7 +1144,7 @@ class WorldBuilder:
 			sText = "<font=3>" + CyTranslator().getText("[COLOR_HIGHLIGHT_TEXT]", ()) + ItemInfo.getDescription() + "</color></font>"
 			screen.setTableText("WBCurrentItem", 0, 0 , sText, ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7874, self.iSelection, 1<<0)
 			if ItemInfo.getNumVarieties() > 1:
-				screen.addDropDownBoxGFC("WBSelectClass", 0, 25, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+				screen.addDropDownBoxGFC("WBSelectClass", 0, self.iFeatureDropY, iWidth - self.iSearchAreaWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 				for i in xrange(ItemInfo.getNumVarieties()):
 					screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_FEATURE_VARIETY", (i,)), i, i, i == self.iSelectClass)
 			else:
@@ -1446,12 +1509,14 @@ class WorldBuilder:
 			self.iPlayerAddMode = "Units"
 			self.iSelectClass = -2
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddBuildingsButton":
 			self.iPlayerAddMode = "Buildings"
 			self.iSelectClass = 0
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "EditStartingPlot":
@@ -1486,12 +1551,14 @@ class WorldBuilder:
 		elif NAME == "AddImprovementButton":
 			self.iPlayerAddMode = "Improvements"
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddBonusButton":
 			self.iPlayerAddMode = "Bonus"
 			self.iSelectClass = -1
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddPlotTypeButton":
@@ -1502,17 +1569,20 @@ class WorldBuilder:
 		elif NAME == "AddTerrainButton":
 			self.iPlayerAddMode = "Terrain"
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddRouteButton":
 			self.iPlayerAddMode = "Routes"
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddFeatureButton":
 			self.iPlayerAddMode = "Features"
 			self.iSelectClass = 0
 			self.iSelection = -1
+			self.sWBSearchFilter = ""
 			self.refreshSideMenu()
 
 		elif NAME == "AddRiverButton":
@@ -1528,6 +1598,18 @@ class WorldBuilder:
 		elif NAME == "WBSelectItem":
 			self.iSelection = inputClass.iData2
 			self.refreshSelection()
+
+		elif NAME == "WBSearchButton":
+			popup = CyPopup(5010, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setBodyString(CyTranslator().getText("TXT_KEY_WB_SEARCH_PROMPT", ()), 1<<0)
+			popup.createEditBox(self.sWBSearchFilter, 0)
+			popup.setEditBoxMaxCharCount(32, 0, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
+
+		elif NAME == "WBSearchClearButton":
+			if self.sWBSearchFilter:
+				self.sWBSearchFilter = ""
+				self.refreshSideMenu()
 
 		elif NAME == "RevealMode":
 			self.iPlayerAddMode = self.RevealMode[screen.getPullDownData("RevealMode", screen.getSelectedPullDownID("RevealMode"))]

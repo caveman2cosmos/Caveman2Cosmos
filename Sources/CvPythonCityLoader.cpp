@@ -49,6 +49,7 @@ void CvPythonCityLoader::CyCityPythonInterface1(boost::python::class_<CyCity>& i
 		.def("getProductionNeeded", &CyCity::getProductionNeeded, "int () - # of production needed to complete construction")
 		.def("getProductionTurnsLeft", &CyCity::getProductionTurnsLeft, "int () - # of turns remaining until item is completed")
 		.def("getUnitProductionTurnsLeft", &CyCity::getUnitProductionTurnsLeft, "int (UnitID, int iNum) - # of turns remaining to complete UnitID")
+		.def("getUnitProductionTurnsLeftPreMerged", &CyCity::getUnitProductionTurnsLeftPreMerged, "int (UnitID) - # of turns remaining to complete UnitID as a pre-merged build")
 		.def("getBuildingProductionTurnsLeft", &CyCity::getBuildingProductionTurnsLeft, "int (BuildingID, int iNum) - # of turns remaining to complete UnitID")
 		.def("getProjectProductionTurnsLeft", &CyCity::getProjectProductionTurnsLeft, "int (int /*ProjectTypes*/ eProject, int iNum)")
 		.def("setProductionProgress", &CyCity::setProductionProgress, "void (int iNewValue)")
@@ -239,6 +240,7 @@ void CvPythonCityLoader::CyCityPythonInterface2(boost::python::class_<CyCity>& i
 	inst
 		.def("clearOrderQueue", &CyCity::clearOrderQueue, "void ()")
 		.def("pushOrder", &CyCity::pushOrder, "void (OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce)")
+		.def("pushPreMergeTrainOrder", &CyCity::pushPreMergeTrainOrder, "void (UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce)")
 		.def("popOrder", &CyCity::popOrder, "int (int iNum, bool bFinish, bool bChoose)")
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
 		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, boost::python::return_value_policy<boost::python::return_by_value>(), "OrderData* (int iIndex)")  // only use local

@@ -107,4 +107,5 @@
 	<load mod="GreatPersonBornDisplay"/>
 	<event type="kbdEvent" module="ParallelMapsInput" function="handleInput"/>
 	<events module="WoodlandCycle"/>
+	<events module="VolcanoCycle"/>
 </bug>

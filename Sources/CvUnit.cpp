@@ -576,6 +576,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iRBombardForceAbilityCount = 0;
 	m_iAmphibCount = 0;
 	m_iRiverCount = 0;
+	m_iRiverMoveIgnoreCount = 0;
 	m_iEnemyRouteCount = 0;
 	m_iAlwaysHealCount = 0;
 	m_iHillsDoubleMoveCount = 0;
@@ -967,6 +968,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_iRBombardForceAbilityCount = other.m_iRBombardForceAbilityCount;
 	m_iAmphibCount = other.m_iAmphibCount;
 	m_iRiverCount = other.m_iRiverCount;
+	m_iRiverMoveIgnoreCount = other.m_iRiverMoveIgnoreCount;
 	m_iEnemyRouteCount = other.m_iEnemyRouteCount;
 	m_iAlwaysHealCount = other.m_iAlwaysHealCount;
 	m_iHillsDoubleMoveCount = other.m_iHillsDoubleMoveCount;
@@ -3116,7 +3118,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 				{
 					int iExperience = attackXPValue() * iInitialDefenderStrength / std::max(1, iInitialAttackerStrength);
 					iExperience = range(iExperience, GC.getMIN_EXPERIENCE_PER_COMBAT(), GC.getMAX_EXPERIENCE_PER_COMBAT());
-					changeExperience(iExperience, maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
+					const int iExperience100 = shareSpotterXP(pDefender, iExperience * 100);
+					changeExperience100(iExperience100, 100 * maxXPValue(pDefender), true, pPlot->getOwner() == getOwner(), true);
 				}
 				// Koshling - add rolling history of combat results to allow the AI to adapt to what it sees happening
 				pPlot->area()->recordCombatDeath(pDefender->getOwner(), pDefender->getUnitType(), getUnitType());
@@ -4585,7 +4588,7 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 
 			if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 			{
-				if (!isNoCapture())
+				if (!isNoCapture() && !isAnimal())
 				{
 					pDefender->setCapturingPlayer(getOwner());
 					pDefender->setCapturingUnit(this);
@@ -5057,6 +5060,12 @@ void CvUnit::updateCombat(CvUnit* pSelectedDefender, bool bSamePlot, bool bSteal
 				{
 					pDefender->setCapturingPlayer(getOwner());
 					pDefender->setCapturingUnit(this);
+				}
+				else if (isAnimal() || isNoCapture())
+				{
+					// Wipe any capture claim left over from an earlier, unrelated combat so this
+					// kill can't be misattributed as a capture (animals must never capture units).
+					pDefender->setCapturingPlayer(NO_PLAYER);
 				}
 
 				pDefender->killUnconditional(false, NO_PLAYER, true);
@@ -6647,6 +6656,17 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		}
 		break;
 
+	case AUTOMATE_HERD:
+		if (AI_getUnitAIType() != UNITAI_SUBDUED_ANIMAL)
+		{
+			return false;
+		}
+		if (getUnitInfo().getNumBuildings() == 0 && !getOutcomeListForMission(MISSION_BUILD_DOMESTICATED_HERD))
+		{
+			return false;
+		}
+		break;
+
 	case AUTOMATE_PILLAGE:
 		if (!getUnitInfo().isPillage())
 		{
@@ -7462,6 +7482,56 @@ bool CvUnit::canSentry(const CvPlot* pPlot) const
 }
 
 
+bool CvUnit::canHealOutsideFriendlyTerritory(const CvPlot* pPlot) const
+{
+	if (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) || isAnimal() || (isNPC() && !isHuman()))
+	{
+		return true;
+	}
+
+	for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
+	{
+		if (!isHasPromotion((PromotionTypes)iPromotion))
+			continue;
+
+		PromotionLineTypes eLine =
+			GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
+
+		if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
+			eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
+		{
+			return true;
+		}
+	}
+
+	if (GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE")))
+	{
+		return true;
+	}
+
+	// Check if a healer unit is present on same tile or adjacent
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining() && pLoopUnit->getSameTileHeal() > 0)
+		{
+			return true;
+		}
+	}
+
+	foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
+	{
+		foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
+		{
+			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining() && pLoopUnit->getAdjacentTileHeal() > 0)
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+
 int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 {
 	PROFILE_FUNC();
@@ -7471,70 +7541,10 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		return 0;
 	}
 
-    int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
-
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
-    {
-        bool bCanHealOutside = false;
-
-        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
-        {
-            if (!isHasPromotion((PromotionTypes)iPromotion))
-                continue;
-
-            PromotionLineTypes eLine =
-                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
-
-            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
-                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
-            {
-                bCanHealOutside = true;
-                break;
-            }
-        }
-
-        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
-            {
-                // Check if a healer unit is present on same tile or adjacent
-                bool bHealerPresent = false;
-
-                foreach_(CvUnit* pLoopUnit, pPlot->units())
-                {
-                    if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                    {
-                        if (pLoopUnit->getSameTileHeal() > 0)
-                        {
-                            bHealerPresent = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (!bHealerPresent)
-                {
-                    foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-                    {
-                        foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-                        {
-                            if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                            {
-                                if (pLoopUnit->getAdjacentTileHeal() > 0)
-                                {
-                                    bHealerPresent = true;
-                                    break;
-                                }
-                            }
-                        }
-                        if (bHealerPresent) break;
-                    }
-                }
-
-                if (!bHealerPresent)
-                {
-                    return 0;
-                }
-            }
-    }
+	if (!canHealOutsideFriendlyTerritory(pPlot))
+	{
+		return 0;
+	}
 
 	//Find what will take the longest to heal and use that rate
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
@@ -7786,68 +7796,10 @@ int CvUnit::healTurns(const CvPlot* pPlot) const
 		return 0;
 	}
 
-	int iBattlefieldMedicine = GC.getInfoTypeForString("TECH_BATTLEFIELD_MEDICINE");
-    if (!GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) && !isAnimal() && !isNPC())
-    {
-        bool bCanHealOutside = false;
-
-        for (int iPromotion = 0; iPromotion < GC.getNumPromotionInfos(); iPromotion++)
-        {
-            if (!isHasPromotion((PromotionTypes)iPromotion))
-                continue;
-
-            PromotionLineTypes eLine =
-                GC.getPromotionInfo((PromotionTypes)iPromotion).getPromotionLine();
-
-            if (eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_HEAL") ||
-                eLine == GC.getInfoTypeForString("PROMOTIONLINE_SELF_REPAIR"))
-            {
-                bCanHealOutside = true;
-                break;
-            }
-        }
-
-        if (!bCanHealOutside && !GET_TEAM(getTeam()).isHasTech((TechTypes)iBattlefieldMedicine))
-        {
-            bool bHealerPresent = false;
-
-            foreach_(CvUnit* pLoopUnit, pPlot->units())
-            {
-                if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                {
-                    if (pLoopUnit->getSameTileHeal() > 0)
-                    {
-                        bHealerPresent = true;
-                        break;
-                    }
-                }
-            }
-
-            if (!bHealerPresent)
-            {
-                foreach_(const CvPlot* pLoopPlot, pPlot->adjacent() | filtered(CvPlot::fn::area() == pPlot->area()))
-                {
-                    foreach_(CvUnit* pLoopUnit, pLoopPlot->units())
-                    {
-                        if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining())
-                        {
-                            if (pLoopUnit->getAdjacentTileHeal() > 0)
-                            {
-                                bHealerPresent = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (bHealerPresent) break;
-                }
-            }
-
-            if (!bHealerPresent)
-            {
-                return 0;
-            }
-        }
-    }
+	if (!canHealOutsideFriendlyTerritory(pPlot))
+	{
+		return 0;
+	}
 
 	const int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
 
@@ -7930,6 +7882,7 @@ void CvUnit::doHeal()
 
 	if (m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
+		const bool bCanHeal = canHealOutsideFriendlyTerritory(plot());
 		for (int iI = 0; iI < m_pUnitInfo->getNumHealAsTypes(); iI++)
 		{
 			eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
@@ -7938,7 +7891,7 @@ void CvUnit::doHeal()
 				setHasUnitCombat(eHealAsType, true);
 				setHealAsDamage(eHealAsType, getDamage());
 			}
-			if (getHealAsDamage(eHealAsType) > 0)
+			if (bCanHeal && getHealAsDamage(eHealAsType) > 0)
 			{
 				changeHealAsDamage(eHealAsType,-(getHealRateAsType(plot(), true, eHealAsType)));
 			}
@@ -10845,6 +10798,28 @@ bool CvUnit::doOutcomeMission(MissionTypes eMission)
 	return true;
 }
 
+const CvOutcomeList* CvUnit::getOutcomeListForMission(MissionTypes eMission) const
+{
+	const CvOutcomeList* pOutcomeList = getUnitInfo().getActionOutcomeListByMission(eMission);
+
+	if (!pOutcomeList)
+	{
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+		{
+			if (isHasUnitCombat((UnitCombatTypes)iI))
+			{
+				pOutcomeList = GC.getUnitCombatInfo((UnitCombatTypes)iI).getActionOutcomeListByMission(eMission);
+				if (pOutcomeList)
+				{
+					break;
+				}
+			}
+		}
+	}
+
+	return pOutcomeList;
+}
+
 
 int CvUnit::getEspionagePoints() const
 {
@@ -12504,6 +12479,7 @@ BuildTypes CvUnit::getBuildType() const
 		case MISSION_SHADOW:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
+		case MISSION_HUNT:
 			break;
 
 		case MISSION_BUILD:
@@ -13828,6 +13804,11 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 		return false;
 	}
 
+	if (m_pUnitInfo->isOnlyAttackAnimals() && !defender.isAnimal())
+	{
+		return false;
+	}
+
 	//tunnel fixes
 	if (defender.plot()->isWater() && defender.plot()->isSeaTunnel())
 	{
@@ -13881,6 +13862,11 @@ bool CvUnit::canAmbush(const CvUnit& defender, const bool bAssassinate) const
 	}
 
 	if (canAttackOnlyCities() && !defender.plot()->isCity())
+	{
+		return false;
+	}
+
+	if (m_pUnitInfo->isOnlyAttackAnimals() && !defender.isAnimal())
 	{
 		return false;
 	}
@@ -15757,6 +15743,12 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 							unitX->setCapturingPlayer(eMyPlayer);
 							unitX->setCapturingUnit(this);
 						}
+						else if (isAnimal() || isNoCapture())
+						{
+							// Wipe any capture claim left over from an earlier, unrelated combat so this
+							// kill can't be misattributed as a capture (animals must never capture units).
+							unitX->setCapturingPlayer(NO_PLAYER);
+						}
 						unitX->kill(true, eMyPlayer, true);
 					}
 				}
@@ -16874,6 +16866,22 @@ void CvUnit::changeRiverCount(int iChange)
 {
 	m_iRiverCount += iChange;
 	FASSERT_NOT_NEGATIVE(getRiverCount());
+}
+
+int CvUnit::getRiverMoveIgnoreCount() const
+{
+	return m_iRiverMoveIgnoreCount;
+}
+
+bool CvUnit::isRiverMoveIgnore() const
+{
+	return getRiverMoveIgnoreCount() > 0;
+}
+
+void CvUnit::changeRiverMoveIgnoreCount(int iChange)
+{
+	m_iRiverMoveIgnoreCount += iChange;
+	FASSERT_NOT_NEGATIVE(getRiverMoveIgnoreCount());
 }
 
 int CvUnit::getEnemyRouteCount() const
@@ -19246,12 +19254,12 @@ void CvUnit::testPromotionReady()
 	bool bPromotionReady = false;
 	if (getExperience() >= experienceNeeded() && canAcquirePromotionAny())
 	{
-		logBBAI("Exp for promotion present (%d vs %d)\n", getExperience(), experienceNeeded());
+		LOG_BBAI_UNIT(3, ("Exp for promotion present (%d vs %d)\n", getExperience(), experienceNeeded()));
 		bPromotionReady = true;
 	}
 	if (getRetrainsAvailable() > 0 && canAcquirePromotionAny())
 	{
-		logBBAI("Retrain available (%d left)\n", getRetrainsAvailable());
+		LOG_BBAI_UNIT(3, ("Retrain available (%d left)\n", getRetrainsAvailable()));
 		bPromotionReady = true;
 	}
 
@@ -21520,6 +21528,7 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	changeBlitzCount((kPromotion.isBlitz()) ? iChange : 0);
 	changeAmphibCount((kPromotion.isAmphib()) ? iChange : 0);
 	changeRiverCount((kPromotion.isRiver()) ? iChange : 0);
+	changeRiverMoveIgnoreCount((kPromotion.isRiverMoveIgnore()) ? iChange : 0);
 	changeEnemyRouteCount((kPromotion.isEnemyRoute()) ? iChange : 0);
 	changeAlwaysHealCount((kPromotion.isAlwaysHeal()) ? iChange : 0);
 	changeHillsDoubleMoveCount((kPromotion.isHillsDoubleMove()) ? iChange : 0);
@@ -22335,6 +22344,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBlitzCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAmphibCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRiverCount);
+	WRAPPER_READ(wrapper, "CvUnit", &m_iRiverMoveIgnoreCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iEnemyRouteCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAlwaysHealCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHillsDoubleMoveCount);
@@ -23854,6 +23864,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBlitzCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAmphibCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRiverCount);
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iRiverMoveIgnoreCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iEnemyRouteCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAlwaysHealCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHillsDoubleMoveCount);
@@ -29527,6 +29538,78 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 }
 
 
+// Award part of a kill's XP (in changeExperience100 hundredths-scale) to whichever allied unit(s)
+// actually spotted the defender, when this (the attacker) could not have seen it unassisted.
+// Returns the XP the attacker keeps for themself, same scale as iExperience100.
+int CvUnit::shareSpotterXP(CvUnit* pDefender, int iExperience100)
+{
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK) || !pDefender->hasAnyInvisibilityType())
+	{
+		return iExperience100;
+	}
+
+	std::vector<CvUnit*> apSpotters;
+	CvPlot* pDefenderPlot = pDefender->plot();
+
+	for (int iI = GC.getNumInvisibleInfos() - 1; iI > -1; iI--)
+	{
+		const InvisibleTypes eInvisible = static_cast<InvisibleTypes>(iI);
+
+		if (!pDefender->hasInvisibilityType(eInvisible))
+		{
+			continue;
+		}
+		const int iDefenderIntensity = pDefender->invisibilityIntensityTotal(eInvisible);
+
+		if (iDefenderIntensity <= 0 || visibilityIntensityTotal(eInvisible) >= iDefenderIntensity)
+		{
+			continue; // attacker could see through this invisibility type unassisted
+		}
+
+		for (int iJ = 0; iJ < pDefenderPlot->getNumPlotTeamVisibilityIntensity(); iJ++)
+		{
+			const PlotTeamVisibilityIntensity& kSpot = pDefenderPlot->getPlotTeamVisibilityIntensity(iJ);
+
+			if (kSpot.eTeam != getTeam() || kSpot.eInvisibility != eInvisible || kSpot.iIntensity < iDefenderIntensity)
+			{
+				continue;
+			}
+			for (int iK = 0; iK < MAX_PC_PLAYERS; iK++)
+			{
+				if (GET_PLAYER((PlayerTypes)iK).getTeam() == getTeam())
+				{
+					CvUnit* pSpotter = GET_PLAYER((PlayerTypes)iK).getUnit(kSpot.iUnitID);
+
+					if (pSpotter != NULL && pSpotter != this && !algo::any_of_equal(apSpotters, pSpotter))
+					{
+						apSpotters.push_back(pSpotter);
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	if (apSpotters.empty())
+	{
+		return iExperience100;
+	}
+
+	const int iSpotterTotalShare100 = (iExperience100 * GC.getDefineINT("SPOTTER_XP_SHARE_PERCENT")) / 100;
+	const int iSpotterEach100 = iSpotterTotalShare100 / (int)apSpotters.size();
+
+	if (iSpotterEach100 <= 0)
+	{
+		return iExperience100;
+	}
+
+	for (size_t iS = 0; iS < apSpotters.size(); iS++)
+	{
+		apSpotters[iS]->changeExperience100(iSpotterEach100, 100 * apSpotters[iS]->maxXPValue(pDefender), true, pDefenderPlot->getOwner() == apSpotters[iS]->getOwner(), true);
+	}
+	return iExperience100 - iSpotterEach100 * (int)apSpotters.size();
+}
+
 void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iAttackerWinOdds, int iDefenderInitialDamage, bool bPromotion, bool bDefPromotion)
 {
 	if (!isDead() && !pDefender->isDead())
@@ -29562,9 +29645,9 @@ void CvUnit::doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerIn
 	else if (!bPromotion && !isDead() && attackXPValue() > 0)
 	{
 		applyDynamicXP(
-			getVanquishDynamicXP(
+			shareSpotterXP(pDefender, getVanquishDynamicXP(
 				GC.getCOMBAT_DIE_SIDES() - iAttackerWinOdds, iAttackerInitialDamage, 100 * attackXPValue()
-			),
+			)),
 			pPlot->getOwner() == getOwner(),
 			100 * maxXPValue(pDefender)
 		);
@@ -34681,6 +34764,24 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{
+		// Respect OnGameOptions/NotOnGameOptions even for promotions marked free -
+		// previously only checked for non-free promotion acquisition (isPromotionValid).
+		const CvPromotionInfo& kFreePromotionInfo = GC.getPromotionInfo(ePromotion);
+		for (int iI = 0; iI < kFreePromotionInfo.getNumOnGameOptions(); iI++)
+		{
+			if (!GC.getGame().isOption((GameOptionTypes)kFreePromotionInfo.getOnGameOption(iI)))
+			{
+				return;
+			}
+		}
+		for (int iI = 0; iI < kFreePromotionInfo.getNumNotOnGameOptions(); iI++)
+		{
+			if (GC.getGame().isOption((GameOptionTypes)kFreePromotionInfo.getNotOnGameOption(iI)))
+			{
+				return;
+			}
+		}
+
 		if (m_pUnitInfo->getFreePromotions((int)ePromotion)
 		|| (NO_UNIT != getUnitType() && pPlayer.isFreePromotion(getUnitType(), ePromotion)))
 		{
@@ -35919,6 +36020,23 @@ int CvUnit::eraGroupMergeLimit() const
 int CvUnit::eraGroupSplitLimit() const
 {
 	return std::max(1, m_pUnitInfo->getBaseGroupRank() - GET_PLAYER(getOwner()).getCurrentEra() - 1);
+}
+
+// Grants a freshly-trained unit the group-rank promotions it would have ended up with
+// after being built-and-merged through `getCurrentEra() + 1` real merge tiers (capped).
+// Used by the "build pre-merged" production option; organic battlefield merging (mergeUnits())
+// is unaffected by this cap.
+void CvUnit::applyPreMergeRank()
+{
+	static const int MAX_PREMERGE_GENERATIONS = 8; // keep in sync with CvPlayer::getProductionNeededPreMerged
+	const int iGenerations = std::min(MAX_PREMERGE_GENERATIONS, GET_PLAYER(getOwner()).getCurrentEra() + 1);
+	if (iGenerations > 0)
+	{
+		const bool bNormalized = CvUnit::normalizeUnitPromotions(this, iGenerations,
+			bind(&CvUnit::isGroupUpgradePromotion, this, _2),
+			bind(&CvUnit::isGroupDowngradePromotion, this, _2));
+		FAssertMsg(bNormalized, "Could not apply required number of group promotions for pre-merged unit");
+	}
 }
 
 DomainTypes CvUnit::getDomainCargo() const
@@ -38515,6 +38633,11 @@ void CvUnit::doArrest()
 
 bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 {
+	if (m_pUnitInfo->isNoAmbush())
+	{
+		return false;
+	}
+
 	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_WITHOUT_WARNING))
 	{
 		return false;
@@ -38541,6 +38664,15 @@ bool CvUnit::canAmbush(const CvPlot* pPlot, bool bAssassinate) const
 	}
 
 	if (bAssassinate && !isAssassin())
+	{
+		return false;
+	}
+
+	// Assassinate is a strict superset of Ambush for assassin units (same targeting outside
+	// cities, plus the ability to strike inside them), so the plain Ambush option is redundant
+	// for them and shouldn't clutter the UI. Animals also carry bAssassin to represent ambush
+	// predators (e.g. Beluga, Jaguar) and must keep using the plain Ambush path, so they're excluded.
+	if (!bAssassinate && isAssassin() && !isAnimal())
 	{
 		return false;
 	}
@@ -38704,6 +38836,89 @@ void CvUnit::enactAmbush(bool bAssassinate, CvUnit * pSelectedDefender)
 		setMadeAttack(true); //Calvitix (if ambush succes, cannot attack anymore)
 		changeMoves(GC.getMOVE_DENOMINATOR());
 	}
+}
+
+// Dedicated same-tile attack for animal hunters. Unlike Ambush/Assassinate, this is never
+// gated by GAMEOPTION_COMBAT_WITHOUT_WARNING and can only ever target actual animal units,
+// so it cannot be used to bypass peace with another civ.
+bool CvUnit::canHunt(const CvPlot* pPlot) const
+{
+	if (pPlot == NULL)
+	{
+		return false;
+	}
+
+	if (!canAttack())
+	{
+		return false;
+	}
+
+	if (isCargo())
+	{
+		return false;
+	}
+
+	if (!(pPlot->isValidDomainForAction(*this)))
+	{
+		return false;
+	}
+
+	if (pPlot->isCity(false))
+	{
+		return false;
+	}
+
+	if (!isBlitz() && isMadeAttack())
+	{
+		return false;
+	}
+
+	foreach_(const CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->isAnimal()
+		&&  !pLoopUnit->isInvisible(getTeam(), false)
+		&&  canAttack(*pLoopUnit))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+bool CvUnit::doHunt()
+{
+	CvPlot* pPlot = plot();
+	if (!canHunt(pPlot))
+	{
+		return false;
+	}
+
+	CvUnit* pBestUnit = NULL;
+	int iBestValue = 0;
+	foreach_(CvUnit* pLoopUnit, pPlot->units())
+	{
+		if (pLoopUnit->isAnimal()
+		&&  !pLoopUnit->isInvisible(getTeam(), false)
+		&&  canAttack(*pLoopUnit))
+		{
+			const int iValue = pLoopUnit->defenderValue(this);
+			if (pBestUnit == NULL || iValue > iBestValue)
+			{
+				pBestUnit = pLoopUnit;
+				iBestValue = iValue;
+			}
+		}
+	}
+
+	if (pBestUnit == NULL)
+	{
+		return false;
+	}
+
+	attackSamePlotSpecifiedUnit(pBestUnit);
+	setMadeAttack(true);
+	changeMoves(GC.getMOVE_DENOMINATOR());
+	return true;
 }
 
 void CvUnit::changeDebugCount(int iChange)
@@ -39342,6 +39557,12 @@ bool CvUnit::doTrapDisable(CvUnit* pUnit)
 	{
 		setCapturingPlayer(pUnit->getOwner());
 		setCapturingUnit(pUnit);
+	}
+	else if (pUnit->isAnimal() || pUnit->isNoCapture())
+	{
+		// Wipe any capture claim left over from an earlier, unrelated combat so this
+		// kill can't be misattributed as a capture (animals must never capture units).
+		setCapturingPlayer(NO_PLAYER);
 	}
 	kill(false, pUnit->getOwner(), true);
 	return true;

@@ -2068,7 +2068,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_CONCEALMENT_HELP</Tag>
-		<English>On the first, third, and fifth turns spent building up Concealment, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Invisibility[COLOR_REVERT] up to a maximum bonus of +3, provided each Promotion level is qualified for by the Unit.</English>
+		<English>On the third and fifth turns spent building up Concealment, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Invisibility[COLOR_REVERT] up to a maximum bonus of +2, provided each Promotion level is qualified for by the Unit.</English>
 		<French>Lors du premier, troisième et cinquième round passé en développement de la spécialisation Dissimulation, L'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Camouflage [COLOR_REVERT] jusqu'à un bonus maximum de +3, reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 		<German>Durch Training in Verschleierung erhält die Einheit in der ersten, dritten und fünften Runde je 1 Punkt auf [COLOR_HIGHLIGHT_TEXT]Unsichtbarkeit (Tarnung)[COLOR_REVERT] bis zu einem Maximum von 3 Punkten.</German>
 		<Russian>В первом, третьем и пятом раундах, потраченных на фокус к маскировке, отряд получает 1 к навыку [COLOR_HIGHLIGHT_TEXT]маскировки[COLOR_REVERT] до максимального бонуса +3, при условии, что каждый уровень квалификации соответствует требованиям отряда.</Russian>

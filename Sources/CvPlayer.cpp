@@ -432,13 +432,18 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 	{
 		const int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultTraits();
 		const int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(ePersonality).getNumDefaultComplexTraits();
+		// GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS promises no positive traits at game start;
+		// civilization/barbarian-selection traits aren't part of that promise (mirrors recalculateModifiers()).
+		const bool bSkipPositiveTraits = GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS);
 
 		if (GC.getGame().isOption(GAMEOPTION_LEADER_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
 			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
 				const TraitTypes eTrait = TraitTypes(GC.getLeaderHeadInfo(ePersonality).getDefaultComplexTrait(iI));
-				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				if (GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
 					m_pabHasTrait[eTrait] = true;
 					processTrait(eTrait, 1);
@@ -450,7 +455,9 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
 			{
 				const TraitTypes eTrait = TraitTypes(GC.getLeaderHeadInfo(ePersonality).getDefaultTrait(iI));
-				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				if (GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
 					m_pabHasTrait[eTrait] = true;
 					processTrait(eTrait, 1);
@@ -461,10 +468,13 @@ void CvPlayer::initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSet
 		{
 			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 			{
-				if (GC.getLeaderHeadInfo(ePersonality).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+				const TraitTypes eTrait = (TraitTypes)iI;
+				if (GC.getLeaderHeadInfo(ePersonality).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isValidTrait(true)
+				&& (!bSkipPositiveTraits || GC.getTraitInfo(eTrait).isNegativeTrait()
+					|| GC.getTraitInfo(eTrait).isCivilizationTrait() || GC.getTraitInfo(eTrait).isBarbarianSelectionOnly()))
 				{
-					m_pabHasTrait[(TraitTypes)iI] = true;
-					processTrait((TraitTypes)iI, 1);
+					m_pabHasTrait[eTrait] = true;
+					processTrait(eTrait, 1);
 				}
 			}
 		}
@@ -3767,7 +3777,10 @@ void CvPlayer::doTurn()
 	CvPlot::ClearCanBuildCache();
 #endif
 
-	if (!isNPC())
+	// AI players are handled immediately (no UI concern - nothing to interrupt). Human players are
+	// gated in CvPlayer::changeEndTurn instead, so the trait-choice popup only appears when they
+	// actually try to end their turn, rather than the instant it begins.
+	if (!isNPC() && !isHumanPlayer())
 	{
 		while (canLeaderPromote())
 		{
@@ -6466,6 +6479,24 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 		}
 	}
 
+	// Beta: Nomadic Start - convert the founding unit's "virtual building" promotions (e.g. Nomad Band camps)
+	// into their matching real city buildings so progress made while nomadic isn't lost on settling.
+	if (pUnit != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		{
+			const BuildingTypes eGrantedBuilding = GC.getPromotionInfo((PromotionTypes)iI).getGrantsBuildingOnFound();
+			if (eGrantedBuilding != NO_BUILDING
+			&& pUnit->isHasPromotion((PromotionTypes)iI)
+			// Ignore the granted building's own tech requirement - earning the promotion while nomadic
+			// is the real gate; the player may not have researched the building's usual tech yet.
+			&& pCity->canConstruct(eGrantedBuilding, false, false, false, false, true, (TechTypes)GC.getBuildingInfo(eGrantedBuilding).getPrereqAndTech()))
+			{
+				pCity->changeHasBuilding(eGrantedBuilding, true);
+			}
+		}
+	}
+
 	if (isNPC())
 	{
 		int iDummyValue;
@@ -7177,6 +7208,9 @@ int64_t CvPlayer::getBaseUnitCost100(const UnitTypes eUnit) const
 
 			iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra();
 
+			// TEMP: flat AI unit production buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+			iMod -= 10;
+
 			iBaseCost = getModifiedIntValue64(iBaseCost, iMod);
 
 			if(GC.getGame().isOption(GAMEOPTION_BUILDING_COST_AI_25)){
@@ -7225,6 +7259,47 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 		return MAX_INT;
 	}
 	return std::max(1, static_cast<int>(iProductionNeeded));
+}
+
+// Simulated cumulative cost of sequentially building and merging the base units needed to
+// reach a "pre-merged" unit capped at getCurrentEra() + 1 generations above base rank (see
+// CvUnit::applyPreMergeRank, which grants the matching promotions on completion).
+int CvPlayer::getProductionNeededPreMerged(const UnitTypes eUnit) const
+{
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
+	if (!GC.getGame().isOption(GAMEOPTION_COMBAT_SIZE_MATTERS) || !kUnit.canMergeSplit())
+	{
+		return getProductionNeeded(eUnit);
+	}
+
+	static const int MAX_PREMERGE_GENERATIONS = 8; // keep in sync with CvUnit::applyPreMergeRank
+	const int iGenerations = std::min(MAX_PREMERGE_GENERATIONS, getCurrentEra() + 1);
+	const int64_t iUnitsNeeded = intPow64(3, iGenerations);
+
+	const int64_t iBaseCost100 = getBaseUnitCost100(eUnit);
+	const int iInstanceCostModifier = kUnit.getInstanceCostModifier();
+
+	int64_t iTotalCost100 = 0;
+	int iSimulatedCountSM = getUnitCountSM(eUnit);
+
+	for (int64_t i = 0; i < iUnitsNeeded; ++i)
+	{
+		int64_t iThisCost100 = iBaseCost100;
+		if (iInstanceCostModifier != 0)
+		{
+			iThisCost100 = getModifiedIntValue64(iThisCost100, iSimulatedCountSM * iInstanceCostModifier);
+		}
+		iTotalCost100 += iThisCost100;
+		++iSimulatedCountSM;
+	}
+
+	return std::max(1, static_cast<int>(std::min<int64_t>(MAX_INT, iTotalCost100 / 100)));
+}
+
+bool CvPlayer::isPreMergedUnitBuildEnabled() const
+{
+	return getBugOptionBOOL("BuildList__PreMergedUnit", true, "BUG_BUILD_PRE_MERGED_UNIT");
 }
 
 
@@ -7287,6 +7362,9 @@ int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 			iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldConstructPercent() - 100;
 		}
 		else iMod += GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent() - 100;
+
+		// TEMP: flat AI construction buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+		iMod -= 10;
 
 		if (iMod != 0)
 		{
@@ -8290,10 +8368,25 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 						{
 							knownExp += 0.5;
 						}
+
+						// Tech spreads fastest along real trade networks (roads/harbors), not just paper treaties
+						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+						{
+							if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iJ).getTeam() == iI
+							&& canTradeNetworkWith((PlayerTypes)iJ))
+							{
+								knownExp += GC.getDefineFLOAT("TECH_DIFFUSION_TRADE_CONNECTED_BONUS");
+								break;
+							}
+						}
 					}
 				}
 			}
 		}
+
+		// Raw per-contact weight (open borders/vassalage/war visibility/trade network), before it gets
+		// crushed below by how rare the tech is game-wide - welfare needs contact substantiation, not tech rarity.
+		const double fRawContactWeight = knownExp;
 
 		if (knownExp > 0.0)
 		{
@@ -8332,6 +8425,12 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				int iWelfareMod = GC.getTECH_DIFFUSION_WELFARE_MODIFIER();
 				//ensure tech diffusion can not hurt research, only help
 				int iWelfareTechDiffusion = std::max(0, (iWelfareMod - (int)(iWelfareMod * pow(0.98, iWelfareThreshold - iTechScorePercent) + 0.5)));
+
+				// Welfare should scale with how substantiated our contact actually is, not just fire at full
+				// strength off a single incidental sighting (e.g. spotting one distant scout).
+				const double fKnownExpNorm = std::min(fRawContactWeight / GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM"), 1.0);
+				iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fKnownExpNorm);
+
 				int iBestScore = 0;
 				int iOurScore = calculateScore(false);
 				for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -8348,8 +8447,8 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 				//If iOurScore > iBestScore we are the best team in the game
 				if (iOurScore > 0 && iOurScore < iBestScore)
 				{
-					float fRatio = iBestScore / ((float)iOurScore);
-					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
+					float fRatio = std::min(iBestScore / ((float)iOurScore), GC.getDefineFLOAT("TECH_DIFFUSION_WELFARE_RATIO_CAP"));
+					logging::logMsg("C2C.log", "Tech Welfare amount: %d, iOurScore: %d, iBestScore: %d, fRatio: %f, knownExpNorm: %f, modified welfare amt: %d for civ: %S\n", iWelfareTechDiffusion, iOurScore, iBestScore, fRatio, fKnownExpNorm, ((int)(fRatio * iWelfareTechDiffusion)), getCivilizationDescription());
 					iWelfareTechDiffusion = (int)(iWelfareTechDiffusion * fRatio);
 					iModifier += iWelfareTechDiffusion;
 
@@ -9299,7 +9398,10 @@ void CvPlayer::killGoldenAgeUnits(CvUnit* pUnitAlive)
 				{
 					iValue = 10000;
 
-					iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
+					if (pUnitAlive)
+					{
+						iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
+					}
 
 					if (iValue > iBestValue)
 					{
@@ -11832,6 +11934,14 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 		FErrorMsg("iExperience < 0");
 		iExperience = 0;
 	}
+	if (m_iCombatExperience < 0)
+	{
+		// Defensive clamp: a stale negative value (corrupt save, WorldBuilder edit, old trait
+		// bug) would otherwise never satisfy the >= threshold check below, permanently
+		// disabling Great General generation for this player.
+		FErrorMsg("m_iCombatExperience < 0");
+		m_iCombatExperience = 0;
+	}
 	if (iExperience == m_iCombatExperience)
 	{
 		return;
@@ -11855,7 +11965,14 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 				const UnitTypes eGGTypetoAssign = getGreatGeneralTypetoAssign();
 				pBestCity->createGreatPeople(eGGTypetoAssign, false, true);
 				// HACK: overflows can cause experience explosion, this will ensure we don't have more than 1 GG of experience accumulated
-				m_iCombatExperience = (m_iCombatExperience - iExperienceThreshold) % iExperienceThreshold;
+				int iRemainder = (m_iCombatExperience - iExperienceThreshold) % iExperienceThreshold;
+				if (iRemainder < 0)
+				{
+					// A prior int overflow can leave m_iCombatExperience negative, in which case
+					// % alone yields a negative remainder instead of wrapping into [0, threshold).
+					iRemainder += iExperienceThreshold;
+				}
+				m_iCombatExperience = iRemainder;
 				// Normal code: if the overflows weren't present this code would be used
 				// m_iCombatExperience = m_iCombatExperience - iExperienceThreshold;
 				setGreatGeneralPointsForType(eGGTypetoAssign, 0);
@@ -12544,6 +12661,19 @@ void CvPlayer::changeEndTurn(const bool bNewValue, const bool bForce)
 				{
 					FErrorMsg("idleCity == NULL; fixing");
 					resetIdleCities();
+				}
+				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
+				return;
+			}
+
+			// Leader trait promotion (developing traits): block ending the turn until the player has
+			// picked their new trait(s), so the popup only appears when they actually try to end their
+			// turn - after they've had the whole turn free to use - instead of the instant it began.
+			if (!bForce && isHumanPlayer() && canLeaderPromote())
+			{
+				while (canLeaderPromote())
+				{
+					doPromoteLeader();
 				}
 				gDLL->getInterfaceIFace()->setEndTurnMessage(false);
 				return;
@@ -13847,18 +13977,27 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra, const Un
     // scaled cap and lives just before the return.
 
 
-//    this scale will be used for national units only... the idea is to start them 5 at prehistoric and scale by 5 per age...
+//    this scale will be used for national units only... units whose XML iMaxPlayerInstances == 5
+//    are treated as the "scalable" tier. NATIONAL_UNIT_LIMIT_INITIAL (BUG option, -1 = Default =
+//    use the XML's own 5) can override the flat starting cap for that tier, and
+//    NATIONAL_UNIT_LIMIT_PER_ERA controls how much it grows per era (both BUG-configurable)...
 //     as an alternative to the 10% per unit cost increase but unlimited
-//     might have to use separate indicator but this will do for now for testing purposes
    int iMaxUnits = GC.getUnitInfo(eIndex).getMaxPlayerInstances();
 
    if (iMaxUnits == 5)
    {
+   	const int iInitialLimitOverride = GC.getDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", -1);
+   	if (iInitialLimitOverride >= 0)
+   	{
+   		iMaxUnits = iInitialLimitOverride;
+   	}
+
+   	const int iPerEraScale = GC.getDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", 5);
    	int iEra = getCurrentEra(); // 0 = Prehistoric, 1 = Ancient, etc.
 
    	if (iEra > 0)
    	{
-   		iMaxUnits += iEra * 5;
+   		iMaxUnits += iEra * iPerEraScale;
    	}
    }
 
@@ -14466,14 +14605,22 @@ void CvPlayer::setResearchingTech(TechTypes eIndex, bool bNewValue)
 bool CvPlayer::isLoyalMember(VoteSourceTypes eVoteSource) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
+	// FASSERT_BOUNDS compiles out in release builds; guard the array access for real.
+	if (eVoteSource < 0 || eVoteSource >= GC.getNumVoteSourceInfos())
+	{
+		return false;
+	}
 	return m_pabLoyalMember[eVoteSource];
 }
 
 void CvPlayer::setLoyalMember(VoteSourceTypes eVoteSource, bool bNewValue)
 {
-	//FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
-	FAssertMsg(eVoteSource >= 0, "eIndex is expected to be non-negative (invalid Index)");
-	FAssertMsg(eVoteSource < MAX_PLAYERS, "eIndex is expected to be within maximum bounds (invalid Index)");
+	FASSERT_BOUNDS(0, GC.getNumVoteSourceInfos(), eVoteSource);
+	// FASSERT_BOUNDS compiles out in release builds; guard the array access for real.
+	if (eVoteSource < 0 || eVoteSource >= GC.getNumVoteSourceInfos())
+	{
+		return;
+	}
 
 	if (isLoyalMember(eVoteSource) != bNewValue)
 	{
@@ -18920,6 +19067,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iWondersScore);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechScore);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCombatExperience);
+		// Defensive clamp: a negative value here (corrupt save, WorldBuilder edit, old trait bug)
+		// would otherwise permanently fail the >= threshold check in setCombatExperience,
+		// silently disabling Great General generation for this player forever.
+		if (m_iCombatExperience < 0)
+		{
+			m_iCombatExperience = 0;
+		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bAlive);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bEverAlive);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_bTurnActive);
@@ -27803,28 +27957,6 @@ bool CvPlayer::hasValidBuildings(TechTypes eTech) const
 	return true;
 }
 
-void CvPlayer::checkAIStrategy()
-{
-	const bool bValidStrategy = (
-	(GC.getLeaderHeadInfo(getPersonalityType()).getCultureVictoryWeight() != 0) 	||
-	(GC.getLeaderHeadInfo(getPersonalityType()).getSpaceVictoryWeight() != 0) 		||
-	(GC.getLeaderHeadInfo(getPersonalityType()).getConquestVictoryWeight() != 0)	||
-	(GC.getLeaderHeadInfo(getPersonalityType()).getDominationVictoryWeight() != 0)	||
-	(GC.getLeaderHeadInfo(getPersonalityType()).getDiplomacyVictoryWeight() != 0)
-	);
-
-	//The XML for this leader's strategies are empty, we need to create some
-	if (!bValidStrategy)
-	{
-		//TODO: Make this based off of leaders traits
-		GC.getLeaderHeadInfo(getPersonalityType()).setCultureVictoryWeight(GC.getGame().getSorenRandNum(100, "AI Strategy"));
-		GC.getLeaderHeadInfo(getPersonalityType()).setSpaceVictoryWeight(GC.getGame().getSorenRandNum(100, "AI Strategy"));
-		GC.getLeaderHeadInfo(getPersonalityType()).setConquestVictoryWeight(GC.getGame().getSorenRandNum(100, "AI Strategy"));
-		GC.getLeaderHeadInfo(getPersonalityType()).setDominationVictoryWeight(GC.getGame().getSorenRandNum(100, "AI Strategy"));
-		GC.getLeaderHeadInfo(getPersonalityType()).setDiplomacyVictoryWeight(GC.getGame().getSorenRandNum(100, "AI Strategy"));
-	}
-}
-
 int CvPlayer::getBuildingCommerceChange(BuildingTypes eType, CommerceTypes CommerceType) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), eType);
@@ -29072,26 +29204,21 @@ void CvPlayer::recalculateModifiers()
 	changeExtraHappiness(m_iExtraHappinessUnattributed);
 
 	//	Put back trait-sourced modifiers
-	// Game Compatability issue resolution
-	//bool bHasCompiled = false;
-	//Apparently some games have displayed the ability to have a non-leaderhead (iLinePriority 0) trait being assigned to leaders in a Developing Leaderhead Game.
-	//This section should at least convert them if this takes place.  In the meantime... need to figure out HOW that's happening at all.  I've seen rev leaders initiated in the middle of the game come in with extra traits... may have something to do with that?
 	if (GC.getGame().isOption(GAMEOPTION_LEADER_DEVELOPING))
 	{
+		const bool bNoPositiveTraits = GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS);
 		for (int iI = 0; iI <GC.getNumTraitInfos(); iI++)
 		{
 			const TraitTypes eTrait = ((TraitTypes)iI);
-			////removes the extra negative trait if it shouldn't be there.  After a version or two, this should be removed entirely and m_iCompatCheckCount can be repurposed later.
-			//if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).isNegativeTrait() && GC.getGame().isOption(GAMEOPTION_LEADER_START_NO_POSITIVE_TRAITS))
-			//{
-			//	if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait) && m_iCompatCheckCount != 1)
-			//	{
-			//		m_pabHasTrait[eTrait] = false;
-			//		m_iCompatCheckCount = 1;
-			//	}
-			//}
 			if (!GC.getTraitInfo(eTrait).isCivilizationTrait() && !GC.getTraitInfo(eTrait).isBarbarianSelectionOnly())
 			{
+				// baseInit() skips granting the leader's base (linePriority 0) positive trait under this
+				// option, but this function also runs on existing players (save load, option toggled
+				// mid-game) whose base trait was already granted before that gate applied - strip it here too.
+				if (bNoPositiveTraits && hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0 && !GC.getTraitInfo(eTrait).isNegativeTrait())
+				{
+					m_pabHasTrait[eTrait] = false;
+				}
 				if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0 && GC.getTraitInfo(eTrait).getPromotionLine() != NO_PROMOTIONLINE)
 				{
 					for (int iJ = 0; iJ < GC.getNumTraitInfos(); iJ++)

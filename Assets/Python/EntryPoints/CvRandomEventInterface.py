@@ -392,6 +392,31 @@ def doBabyBoom(argList):
 
 	return 1
 
+def doBabyBoom2(argList):
+	iEvent = argList[0]
+	data = argList[1]
+	player = GC.getPlayer(data.ePlayer)
+	iFood = GC.getEventInfo(iEvent).getFood()
+
+	if iFood > 0:
+		for CyCity in player.cities():
+			CyCity.changeFood(iFood)
+
+	player.changeGold(-50 * player.getNumCities())
+	return 1
+
+def canApplyBabyBoom2(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	if player.getGold() - 50 * player.getNumCities() < 0:
+		return False
+	return True
+
+def getHelpBabyBoom2(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return TRNSLTR.getText("TXT_KEY_EVENT_GOLD_LOST", (50 * player.getNumCities(), ))
+
 
 ######## BARD TALE ###########
 
@@ -663,7 +688,7 @@ def canTriggerMonsoonCity(argsList):
 
   city = GC.getPlayer(ePlayer).getCity(iCity)
 
-  if city is None or city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
+  if city is None or not city.isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()):
     return False
 
   iJungleType = GC.getFEATURE_JUNGLE()
@@ -714,6 +739,21 @@ def canTriggerDustbowlCont(argsList):
 
 def getHelpDustBowl2(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_DUSTBOWL_2_HELP", ())
+
+######## FORT_IN_DISREPAIR ###########
+
+def canTriggerFortInDisrepair(argsList):
+	data = argsList[0]
+
+	plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
+	if not plot:
+		return False
+
+	for unit in plot.units():
+		if unit.canFight():
+			return False
+
+	return True
 
 ######## SALTPETER ###########
 
@@ -2224,7 +2264,7 @@ def expireCrusade1(argsList):
 	data = argsList[1]
 
 	holyCity = GAME.getHolyCity(data.eReligion)
-	if holyCity is None or holyCity.getOwner() != data.eOtherPlayer:
+	if holyCity is None or (holyCity.getOwner() != data.eOtherPlayer and holyCity.getOwner() != data.ePlayer):
 		return True
 
 	if holyCity.getOwner() == data.ePlayer:
@@ -4872,6 +4912,16 @@ def applyMercenariesAncient2(argsList):
 		CyUnit.setName("Mercenary Warrior")
 		iCount -= 1
 
+def canApplyMercenariesAncient3(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return not GC.getTeam(player.getTeam()).isHasTech(GC.getInfoTypeForString("TECH_COPPER_WORKING"))
+
+def canApplyMercenariesAncient4(argsList):
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
+	return GC.getTeam(player.getTeam()).isHasTech(GC.getInfoTypeForString("TECH_COPPER_WORKING"))
+
 ######## MERCENARIES CLASSICAL ###########
 
 def canTriggerMercenariesClassical(argsList):
@@ -5062,7 +5112,7 @@ def canApplyEarthquake1(argsList):
         for iDY in xrange(-1, 2):
             plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
             if plotX and not plotX.isWater():
-                if plotX.getImprovementType() != -1:
+                if plotX.getImprovementType() > 1:
                     return True
     return False
 
@@ -5077,7 +5127,7 @@ def applyEarthquake1(argsList):
 				plots.append((plotX, plotX.getImprovementType()))
 				iPlots += 1
 
-	if not plots: raise "Event - Error in canApplyVolcano1"
+	if not plots: raise "Event - Error in canApplyEarthquake1"
 
 	if iPlots < 3:
 		iRange = iPlots
@@ -5871,7 +5921,7 @@ def getHelpSuperVirus2(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_SMALL_VIRUS_SPREAD",()) + "\n"
 	szHelp += TRNSLTR.getText("TXT_KEY_EVENT_CITY_UNREST", (1, CyPlayer.getCity(data.iCityId).getNameKey()))
 
-	iGold = 100 + CyPlayer.getNumCities() * 35
+	iGold = 100 + CyPlayer.getNumCities() * 350
 	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>"
 	else: szHelp += "\n"
@@ -5882,7 +5932,7 @@ def canTriggerSuperVirus2(argsList):
 	data = argsList[1]
 	CyPlayer = GC.getPlayer(data.ePlayer)
 
-	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 35:
+	if CyPlayer.getGold() < 100 + CyPlayer.getNumCities() * 350:
 		return False
 	return True
 
@@ -5912,39 +5962,29 @@ def getHelpSuperVirus3(argsList):
 	szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALISTS", (2, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_GREAT_SCIENTIST")).getTextKey(), szCityNameKey))
 	szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_LOSE_POPULATION", (CyCity.getPopulation()*25/100, szCityNameKey))
 
-	iGold = 100 + CyPlayer.getNumCities() * 65
+	iGold = 100 + CyPlayer.getNumCities() * 650
 
 	if CyPlayer.getGold() < iGold:
 		szHelp += "\n<color=255,76,76>" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,)) + "</color>"
 	else: szHelp += "\n" + TRNSLTR.getText("TXT_KEY_EVENT_COSTS_GOLD", (iGold,))
 
-	iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
-	if iSmartMedicine > 0:
-		if not CyCity.hasBonus(iSmartMedicine):
-			szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getBonusInfo(iSmartMedicine).getTextKey(),))
-
-	iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
-	if iSmartDrugs > 0 and not GC.getTeam(CyPlayer.getTeam()).isHasTech(iSmartDrugs):
-		szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iSmartDrugs).getTextKey(),))
+	iMolecularBiology = GC.getInfoTypeForString("TECH_MOLECULAR_BIOLOGY")
+	if iMolecularBiology > 0 and not GC.getTeam(CyPlayer.getTeam()).isHasTech(iMolecularBiology):
+		szHelp += "\n" + TRNSLTR.getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", (GC.getTechInfo(iMolecularBiology).getTextKey(),))
 
 	return szHelp
 
 def canTriggerSuperVirus3(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
-  eventCity = player.getCity(data.iCityId)
   team = GC.getTeam(player.getTeam())
 
-  iRequireGold = 100 + player.getNumCities() * 65
+  iRequireGold = 100 + player.getNumCities() * 650
   if (player.getGold() < iRequireGold):
     return False
-  iSmartMedicine = GC.getInfoTypeForString("BONUS_SMART_MEDICINE")
-  iSmartDrugs = GC.getInfoTypeForString("TECH_SMART_DRUGS")
-  if (iSmartMedicine > 0):
-    if (not eventCity.hasBonus(iSmartMedicine)):
-      return False
-  if (iSmartDrugs > 0):
-    if (not team.isHasTech(iSmartDrugs)):
+  iMolecularBiology = GC.getInfoTypeForString("TECH_MOLECULAR_BIOLOGY")
+  if (iMolecularBiology > 0):
+    if (not team.isHasTech(iMolecularBiology)):
       return False
   return True
 
@@ -6121,68 +6161,6 @@ def getHelpNewWorld(argsList):
 	return szHelp
 
 ##### VOLCANO C2C #####
-def canDoNewVolcano(argsList):
-	# Checks the plot to see if a new volcano can be formed
-	data = argsList[0]
-	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not pPlot: return False
-
-	# List of features that block new volcanoes
-	listFeatures = [
-		GC.getInfoTypeForString('FEATURE_PLATY_AUYANTEPUI'),
-		GC.getInfoTypeForString('FEATURE_PLATY_GREAT_BARRIER'),
-		GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_BEACON'),
-		GC.getInfoTypeForString('FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE'),
-		GC.getInfoTypeForString('FEATURE_PLATY_EVEREST'),
-		GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
-		GC.getInfoTypeForString('FEATURE_PLATY_AURORA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_BAIKAL'),
-		GC.getInfoTypeForString('FEATURE_PLATY_BARRINGER_CRATER'),
-		GC.getInfoTypeForString('FEATURE_PLATY_BASALT_ORGAN'),
-		GC.getInfoTypeForString('FEATURE_PLATY_DEVILS_TABLE'),
-		GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_NGORONGORO_CRATER'),
-		GC.getInfoTypeForString('FEATURE_PLATY_NUKUORO'),
-		GC.getInfoTypeForString('FEATURE_PLATY_PAMUKKALE'),
-		GC.getInfoTypeForString('FEATURE_PLATY_PRAVCICKA_BRANA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_SHARK_BAY'),
-		GC.getInfoTypeForString('FEATURE_PLATY_SINAI'),
-		GC.getInfoTypeForString('FEATURE_PLATY_SUGARLOAF'),
-		GC.getInfoTypeForString('FEATURE_PLATY_ULURU'),
-		GC.getInfoTypeForString('FEATURE_PLATY_VICTORIA_FALLS'),
-		GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-		GC.getInfoTypeForString('FEATURE_PLATY_DEAD_SEA'),
-		GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
-		GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
-	]
-
-	# List of resources that count as volcanic, and thus do not block volcanoes.
-	listVolcanicResources = [
-		-1,
-		GC.getInfoTypeForString('BONUS_OBSIDIAN'),
-		GC.getInfoTypeForString('BONUS_SULPHUR')
-	]
-	return not pPlot.isCity() and pPlot.getFeatureType() not in listFeatures and pPlot.getBonusType(-1) in listVolcanicResources
-
-
-def canDoOldVolcano(argsList):
-	data = argsList[0]
-	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not pPlot: return False
-
-	# List of features that are volcanoes
-	listVolcanoes = [
-		GC.getInfoTypeForString('FEATURE_PLATY_FUJI'),
-		GC.getInfoTypeForString('FEATURE_PLATY_SOPKA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_KRAKATOA'),
-		GC.getInfoTypeForString('FEATURE_PLATY_KILIMANJARO'),
-		GC.getInfoTypeForString('FEATURE_VOLCANO_ACTIVE'),
-		GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT')
-	]
-	return not pPlot.isCity() and pPlot.getFeatureType() in listVolcanoes
-
-
 def doVolcanoAdjustFertility(argsList):
 	pPlot = argsList[0]
 	extraFood = argsList[1]
@@ -6392,77 +6370,6 @@ def doVolcanoReport(argsList):
         CyEngine().triggerEffect(GC.getInfoTypeForString('EFFECT_ARTILLERY_SHELL_EXPLODE'), point)
         CyAudioGame().Play3DSound("AS3D_UN_GRENADE_EXPLODE", point.x, point.y, point.z)
 
-
-def doVolcanoNewEruption(argsList):
-	data = argsList[0]
-	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not pPlot:
-		return
-	player = GC.getPlayer(data.ePlayer)
-
-	doVolcanoPlot(pPlot)
-	doVolcanoNeighbouringPlots(pPlot)
-	doVolcanoAdjustFertility((pPlot, 1, player.getTeam()))
-	doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW")))
-
-def doVolcanoExistingEruption(argsList):
-	data = argsList[0]
-	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not pPlot:
-		return
-
-	doVolcanoNeighbouringPlots(pPlot)
-	doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE")))
-
-def doVolcanoDormantEruption(argsList):
-	data = argsList[0]
-	pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-	if not pPlot:
-		return
-	player = GC.getPlayer(data.ePlayer)
-	team = player.getTeam()
-
-	doVolcanoPlot(pPlot)
-	doVolcanoNeighbouringPlots(pPlot)
-	doVolcanoAdjustFertility((pPlot, 1, team))
-	doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
-
-def doVolcanoExtinction(argsList):
-  data = argsList[0]
-  pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  if not pPlot:
-    return
-
-  pPlot.setPlotType(PlotTypes.PLOT_HILLS, True, True)
-  pPlot.setTerrainType(GC.getInfoTypeForString('TERRAIN_ROCKY'), True, True)
-  player = GC.getPlayer(data.ePlayer)
-  city = player.getCity(data.iCityId)
-
-  team = player.getTeam()
-  techteam = GC.getTeam(player.getTeam())
-  iX = pPlot.getX()
-  iY = pPlot.getY()
-
-  if GAME.getSorenRandNum(100, 'Volcanic minerals chance') < 50:
-    iBonus = GC.getInfoTypeForString('BONUS_OBSIDIAN')
-    pPlot.setBonusType(iBonus)
-    itechresource = GC.getInfoTypeForString("TECH_TOOL_MAKING")
-  else:
-    iBonus = GC.getInfoTypeForString('BONUS_SULPHUR')
-    pPlot.setBonusType(iBonus)
-    itechresource = GC.getInfoTypeForString("TECH_ANCIENT_BALLISTICS")
-
-  if techteam.isHasTech(itechresource) and (pPlot.isRevealed(team, False)):
-      doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO")))
-
-def doVolcanoSleep(argsList):
-  data = argsList[0]
-  pPlot = GC.getMap().plot(data.iPlotX, data.iPlotY)
-  pPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_VOLCANO_DORMANT'), 0)
-  player = GC.getPlayer(data.ePlayer)
-  team = player.getTeam()
-  doVolcanoAdjustFertility((pPlot, -1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP", ())
@@ -7025,7 +6932,10 @@ def applyCivilWar(argsList):
 			iNewID = iID
 			break
 		else:
-			return False
+			continue
+
+	if iNewID == -1:
+		return False
 
 	# Add the player to the game
 	GAME.addPlayer(iNewID, NewLeaderID, iNewCiv)

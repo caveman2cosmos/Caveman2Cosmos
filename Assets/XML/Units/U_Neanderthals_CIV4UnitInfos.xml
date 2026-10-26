@@ -927,6 +927,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -956,8 +957,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -980,7 +979,6 @@
 			<iXPValueDefense>2</iXPValueDefense>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iNumHealSupport>3</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1041,6 +1039,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -1070,8 +1069,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -1092,7 +1089,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1154,6 +1150,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -1181,7 +1178,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<PrereqBonuses>
@@ -1214,7 +1210,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1392,6 +1387,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
 			</SubCombatTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -3133,7 +3129,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3213,7 +3209,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3244,7 +3239,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3350,7 +3345,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
@@ -3472,7 +3467,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </NotUnitAIs>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <bNoBadGoodies>1</bNoBadGoodies>
             <FreePromotions>
                 <FreePromotion>
@@ -3603,7 +3598,7 @@
                     <bUnitAI>1</bUnitAI>
                 </UnitAI>
             </UnitAIs>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <bNoBadGoodies>1</bNoBadGoodies>
             <PrereqTech>TECH_TRACKING</PrereqTech>
             <PrereqAndBuildings>
@@ -3708,7 +3703,7 @@
             </MapCategoryTypes>
             <Advisor>ADVISOR_GROWTH</Advisor>
             <bNoBadGoodies>1</bNoBadGoodies>
-            <bAssassin>1</bAssassin>
+            <bNoAmbush>1</bNoAmbush>
             <UnitAIs>
                 <UnitAI>
                     <UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -3810,7 +3805,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>

@@ -472,7 +472,9 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL):
+			bIsCaptive = CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")
+			bIsAnimalCombat = CvUnitInfo.getUnitCombatType() == GC.getInfoTypeForString("UNITCOMBAT_ANIMAL")
+			if not bIsCaptive and (iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL) or bIsAnimalCombat):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
 			elif (iDefaultUnitAIType in aListAI):
@@ -788,7 +790,9 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL):
+			bIsCaptive = CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")
+			bIsAnimalCombat = CvUnitInfo.getUnitCombatType() == GC.getInfoTypeForString("UNITCOMBAT_ANIMAL")
+			if not bIsCaptive and (iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL) or bIsAnimalCombat):
 				if bAnimals:
 					bValid = True
 				else:

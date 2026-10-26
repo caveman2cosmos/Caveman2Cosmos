@@ -274,6 +274,11 @@ int CyCity::getUnitProductionTurnsLeft(int /*UnitTypes*/ iUnit, int iNum) const
 	return m_pCity->getProductionTurnsLeft((UnitTypes) iUnit, iNum);
 }
 
+int CyCity::getUnitProductionTurnsLeftPreMerged(int /*UnitTypes*/ iUnit) const
+{
+	return m_pCity->getProductionTurnsLeftPreMerged((UnitTypes) iUnit);
+}
+
 int CyCity::getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int iNum) const
 {
 	return m_pCity->getProductionTurnsLeft((BuildingTypes) iBuilding, iNum);
@@ -1569,6 +1574,11 @@ void CyCity::clearOrderQueue()
 void CyCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce)
 {
 	m_pCity->pushOrder(eOrder, iData1, iData2, bSave, bPop, bAppend, bForce);
+}
+
+void CyCity::pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce)
+{
+	m_pCity->pushPreMergeTrainOrder(eUnit, bSave, bPop, bAppend, bForce);
 }
 
 void CyCity::popOrder(int iNum, bool bFinish, bool bChoose)

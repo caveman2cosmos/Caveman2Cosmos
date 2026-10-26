@@ -1522,6 +1522,10 @@
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du kava.</French>
     </TEXT>
     <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_COCOA</Tag>
+        <English>%s1_civ_adjective workers have found cocoa.</English>
+    </TEXT>
+    <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_SUGAR</Tag>
         <English>%s1_civ_adjective workers have found sugar.</English>
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé du sucre.</French>
@@ -1590,6 +1594,10 @@
         <Tag>TXT_KEY_EVENTTRIGGER_STONE</Tag>
         <English>%s1_civ_adjective workers have found stone.</English>
 		<French>Les ouvriers %s1:3_civ_adjective ont trouvé de la pierre.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENTTRIGGER_OIL</Tag>
+        <English>%s1_civ_adjective workers have found oil.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENTTRIGGER_COAL</Tag>
@@ -3599,7 +3607,7 @@
 		<French>Cette plante a bon goût.</French>
     </TEXT>
     <TEXT>
-        <Tag>TXT_KEY_EVENT_TEA_1</Tag>
+        <Tag>TXT_KEY_EVENT_TEA_2</Tag>
         <English>This plant smells nice.</English>
 		<French>Cette plante sent bon.</French>
     </TEXT>
@@ -3662,6 +3670,10 @@
         <Tag>TXT_KEY_EVENT_PEYOTE_1</Tag>
         <English>Peyote, you say.</English>
 		<French>Le peyotl, dites-vous.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_PRICKLY_PEAR_1</Tag>
+        <English>As long as its tasty.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_FIG_1</Tag>
@@ -9171,6 +9183,10 @@
 		<Russian>Подкупите наемников полновесным золотом, чтобы они присоединились к нашим армиям.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_MERCENARIES_ANCIENT_4</Tag>
+		<English>Bribe the mercenaries with extra gold to join our armies as javelineers.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_MERCENARIES_ANCIENT_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of mercenary [COLOR_UNIT_TEXT]Warrior[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre important de [COLOR_UNIT_TEXT]Guerriers[COLOR_REVERT] mercenaires sont apparus près de notre frontière.</French>
@@ -12506,6 +12522,11 @@
     </TEXT>
 
     <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_DARWINS_VOYAGE2</Tag>
+        <English>After completing an ocean voyage around the world, one of %s1_civ_adjective scientists has published a new theory of the origins of life based on his studies of the strange animals in foreign lands.</English>
+    </TEXT>
+
+    <TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_DOCK_WORKERS_STRIKE</Tag>
 		<English>Dock workers in %s2_city have begun a city-wide strike, calling for better working conditions!</English>
 		<French>Les Dockers de %s2_city ont cessé le travail et font grève pour de meilleures conditions de travail!</French>
@@ -13314,6 +13335,14 @@
         <Tag>TXT_KEY_EVENT_TRIGGER_STONE_1</Tag>
         <English>Workers have discovered a new source of stone.</English>
 		<French>Les ouvriers ont découvert une nouvelle source de pierre.</French>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_OIL_1</Tag>
+        <English>Workers have discovered a new source of oil.</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_EVENT_TRIGGER_COCOA_1</Tag>
+        <English>Workers have discovered a new source of cocoa.</English>
     </TEXT>
     <TEXT>
         <Tag>TXT_KEY_EVENT_TRIGGER_COAL_1</Tag>
@@ -14705,12 +14734,6 @@
 		<Italian>La terra ha emesso lava e cenere da un vulcano finora inattivo!</Italian> <!-- Message Logs -->
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
-		<English>A sudden eruption has rocked the countryside and caused widespread destruction upon a new volcano's formation, though examination reveals that this site does bear some evidence of long-forgotten ancient volcanic activity. In the aftermath of this newer catastrophe the soil seems to have become tremendously fertile.</English>
-		<French>Une éruption soudaine a secoué la terre et causé de vastes destructions lors de la formation d'un nouveau volcan. Cependant, un examen révèle que ce site porte des traces d'une ancienne activité volcanique oubliée depuis longtemps. À la suite de cette nouvelle catastrophe, le sol semble être devenu extrêmement fertile.</French>
-		<Italian>Un'improvvisa eruzione ha scosso la campagna e ha causato vaste distruzioni in seguito alla formazione di un nuovo vulcano, anche se a quanto pare pare che ci siano prove di un'antica attività vulcanica a lungo dimenticata. All'indomani di questa nuova catastrofe, il terreno sembra essere diventato estremamente fertile.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
@@ -14719,28 +14742,11 @@
 		<Russian>На месте, которое мы давно считали безопасным, случилось извержение вулкана, хотя следы вулканической активности давно могли быть найдены. Хотя это вызвало повсеместное разрушение, окружающая почва стала значительно плодороднее.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Tag>
-		<English>Some traces of volcanic activity remain at this site, but there no longer seems to be any activity now.</English>
-		<French>Quelques traces d'activité volcanique sont visibles sur ce site, mais il ne semble plus actif à présent.</French>
-		<German>In diesem Gebiet sind noch Spuren früherer Ausbrüche zu finden, aber der Vulkan scheint jetzt erloschen zu sein.</German>
-		<Polish>&#140;lady wcze&#156;niejszych erupcji wulkanu mo&#191;na odnale&#159;&#230; na tym terenie, ale obecnie wulkan wydaje si&#234; by&#230; wygas&#179;ym.</Polish>
-		<Russian>Некоторые следы вулканической активности остаются на этом месте, но, похоже, сам вулкан уже потух.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_NEW</Tag>
 		<English>A sudden eruption of an hitherto unknown volcano has rocked the countryside and caused widespread destruction. In the aftermath of this catastrophe though we found new signs of life everywhere and the soil seems to have become tremendously fertile.</English>
 		<French>Une éruption soudaine d'un volcan inconnu a altéré tout le paysage, causant des destructions massives. En contre-coup de cette catastrophe, la vie a repris le dessus, et le sol semble à présent plus fertile.</French>
 		<Polish>Niespodziewana erupcja wulkanu wstrz&#185;sn&#234;&#179;a krain&#185;. Zniszczenie jakie spowodowa&#179; wulkan s&#185; niespotykane. Opadaj&#185;cy py&#179; wulkaniczny okaza&#179; si&#234; bardzo urodzajny i tereny wok&#243;&#179; wulkanu staj&#185; si&#234; przez to bardziej wydajne w produkcji &#191;ywno&#156;ci.</Polish>
 		<Russian>Внезапное извержение неизвестного до сих пор вулкана всколыхнуло сельскую местность и вызвало широкомасштабные разрушения. После этой катастрофы мы нашли повсюду новые признаки жизни, и почва, кажется, стала чрезвычайно плодородной.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_SLEEP</Tag>
-		<English>This volcano has not erupted in living memory, only old tales speak of it spewing lava.</English>
-		<French>Ce volcan n'a plus été vu en éruption de mémoire vivante, seuls les anciens parlent de quelques jets de lave.</French>
-		<German>Dieser Vulkan ist schon seit Ewigkeiten nicht mehr ausgebrochen. Nur aus alten Überlieferungen ist noch bekannt, dass er einst Asche und Lava spuckte.</German>
-		<Polish>Ten wulkan od dawien dawna nie wybucha&#179;. Jedynie stare legendy wspominaj&#185; o tym, &#191;e kiedy&#156; bucha&#179; p&#179;omieniami i law&#185;.</Polish>
-		<Russian>Этот вулкан ни разу не извергался на памяти современников, и лишь в старых преданиях говорят об его прошлых извержениях.</Russian>
-		<Italian>[BOLD]Questo vulcano non erutta da molto tempo, solo i vecchi racconti parlano dei suoi getti di lava.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_V_GER</Tag>
@@ -15168,15 +15174,6 @@
 		<Polish>Aktywny wulkan przechodzi w stan u&#156;pienia.</Polish>
 		<Russian>Активный вулкан становится бездействующим.</Russian>
 		<Italian>[BOLD]Il vulcano adesso sembra essere dormiente.[\BOLD]</Italian> <!-- popup when event happens -->
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Tag>
-		<English>A volcano that has been erupting regularly in recent history is erupting again. Structures on its slopes are being destroyed.</English>
-		<French>Un volcan qui a une activité régulière depuis des années est à nouveau en éruption. les aménagements sur ses pentes sont détruits.</French>
-		<German>Ein aktiver, berüchtigter Vulkan ist erneut ausgebrochen, wodurch es zu immensen Schäden im umliegenden Gebiet kam.</German>
-		<Polish>Wulkan znany z tego, &#191;e regularnie wybucha&#179;, eksplodowa&#179; ponownie niszcz&#185;c wszystkie budynki na swoich stokach.</Polish>
-		<Russian>Вулкан, извергавшийся регулярно в прошлом, снова пробудился. Сооружения на его склонах были уничтожены.</Russian>
-		<Italian>[BOLD]Un vulcano molto attivo nella storia recente sta eruttando di nuovo. Le strutture sulle sue pendici sono state distrutte.[\BOLD]</Italian> <!-- popup when event happens -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_V_GER_1</Tag>

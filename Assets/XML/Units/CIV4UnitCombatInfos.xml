@@ -8801,6 +8801,14 @@
 			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_TRIBAL_GUARD</Type>
+			<Description>TXT_KEY_UNITCOMBAT_TRIBAL_GUARD</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_ABILITIES</Category>
+			</Categories>
+			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
 			<Categories>

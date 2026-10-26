@@ -99,6 +99,7 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, RIGHT, "MiscHover__ConscriptLimit")
 		self.addCheckbox(screen, RIGHT, "CityScreen__ProductionPopupTrainCivilianUnitsForever")
 		self.addCheckbox(screen, RIGHT, "CityScreen__ProductionPopupTrainMilitaryUnitsForever")
+		self.addCheckbox(screen, RIGHT, "BuildList__PreMergedUnit")
 
 		# Great Person Bar
 		self.addLabel(screen, RIGHT, "GreatPersonBar", "Great Person Bar:")

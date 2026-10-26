@@ -212,6 +212,7 @@ class CvMainInterface:
 			self.artPathPromotion				= afm.getInterfaceArtInfo("OVERLAY_PROMOTION_FRAME").getPath()
 			self.artPathHilite					= afm.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
 			self.artPathUpgrade					= afm.getInterfaceArtInfo("OVERLAY_UPGRADE").getPath()
+			self.artPathPreMerged				= afm.getInterfaceArtInfo("OVERLAY_CHEVRON10").getPath()
 			self.artPathButtonNoProduction		= afm.getInterfaceArtInfo("INTERFACE_BUTTONS_NOPRODUCTION").getPath()
 			self.artPathButtonGroupCreate		= afm.getInterfaceArtInfo("INTERFACE_BUTTONS_CREATEGROUP").getPath()
 			self.artPathButtonGroupSplit		= afm.getInterfaceArtInfo("INTERFACE_BUTTONS_SPLITGROUP").getPath()
@@ -3677,6 +3678,8 @@ class CvMainInterface:
 			city.setUnitListInvalid()
 			iGroups = city.getUnitListGroupNum()
 			PF = "WID|UNIT|CityWork%d"
+			PFMerged = "WID|UNITMERGED|CityWork%d"
+			bPreMergeEnabled = self.GO_SIZE_MATTERS and GC.getPlayer(city.getOwner()).isPreMergedUnitBuildEnabled()
 			for iGroup in xrange(iGroups):
 				aList = []
 				iCount = 0
@@ -3697,6 +3700,19 @@ class CvMainInterface:
 						screen.setImageButtonAt(Img, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
 						x += dx
 						iCount += 1
+
+						if bPreMergeEnabled and GC.getUnitInfo(iType).canMergeSplit():
+							ImgMerged = PFMerged % iType
+							if iCount == iBtnPerRow:
+								x = xStart
+								y += dx
+								iCount = 0
+							screen.setImageButtonAt(ImgMerged, Pnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
+							DDS = ImgMerged + "Badge"
+							screen.addDDSGFCAt(DDS, Pnl, self.artPathPreMerged, x, y, iSize/2, iSize/2, eWidGen, 1, 1, False)
+							screen.setHitTest(DDS, HitTestTypes.HITTEST_NOHIT)
+							x += dx
+							iCount += 1
 				for Img, iType, BTN in aList:
 					if iCount == iBtnPerRow:
 						x = xStart
@@ -5446,6 +5462,15 @@ class CvMainInterface:
 						self.dataTT = [bCtrl, bShift, bAlt, "", iType, CyCity]
 						szTxt = CyGTM.getUnitHelp(iType, False, True, True, CyCity)
 						self.updateTooltip(screen, szTxt)
+					elif TYPE == "UNITMERGED":
+						# getUnitHelp()'s own "X Turns - Y" line reflects a single normal unit, not
+						# this pre-merged build, so lead with our own accurate turns/cost line first.
+						iCost = GC.getPlayer(CyCity.getOwner()).getUnitProductionNeededPreMerged(iType)
+						iTurns = CyCity.getUnitProductionTurnsLeftPreMerged(iType)
+						szTxt = TRNSLTR.getText("TXT_KEY_PRODUCTION_MAX_MERGED_UNIT", (GC.getUnitInfo(iType).getDescription(),))
+						szTxt += "\n" + TRNSLTR.getText("TXT_KEY_UNITHELP_TURNS", (iTurns,)) + " - " + TRNSLTR.getText("TXT_KEY_PRODUCTION_COSTS", (iCost,))
+						szTxt += "\n" + CyGTM.getUnitHelp(iType, False, True, True, CyCity)
+						self.updateTooltip(screen, szTxt)
 					elif TYPE == "BUILDING":
 						szTxt = CyGTM.getBuildingHelp(iType, True, CyCity, False, False, True)
 						self.updateTooltip(screen, szTxt)
@@ -5529,7 +5554,7 @@ class CvMainInterface:
 				if TYPE == "Demolish":
 					self.updateTooltip(screen, TRNSLTR.getText("TXT_KEY_CITY_SCREEN_DEMOLISH", ()))
 				elif TYPE == "BUILDING":
-					szTxt = CyGTM.getBuildingHelp(ID, True, CyCity, False, False, True)
+					szTxt = CyGTM.getBuildingHelp(ID, True, self.InCity.CyCity, False, False, True)
 					self.updateTooltip(screen, szTxt)
 				else:
 					aList = [TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ()), TRNSLTR.getText("TXT_KEY_CONCEPT_WONDERS", ()), TRNSLTR.getText("TXT_KEY_CITY_SCREEN_CONCEPTUAL", ())]
@@ -5721,6 +5746,15 @@ class CvMainInterface:
 
 							if not bShift and CyCity.getProductionProgress():
 								bCtrl = True
+							elif bShift and CyCity.isProductionProcess():
+								# A process at the head always yields to anything newly
+								# queued (CvCity::pushOrder inserts at the front even when
+								# bAppend is requested), regardless of the shift-to-append
+								# intent here. Mirror that so our local WorkQueue mirror
+								# doesn't diverge from the server's real order - otherwise
+								# later queue-row clicks pop the wrong index.
+								bCtrl = True
+								bShift = False
 
 						# Determine order type
 						iGaMsgType = GameMessageTypes.GAMEMESSAGE_PUSH_ORDER
@@ -5746,6 +5780,16 @@ class CvMainInterface:
 								else:
 									screen.enable(NAME + str(iType), False)
 
+						elif TYPE == "UNITMERGED":
+							# Pushed directly via pushPreMergeTrainOrder below, not through
+							# the generic selectedCitiesGameNetMessage path (that carries no
+							# way to flag the order as pre-merged). Always appends to the
+							# end of the queue rather than honoring bCtrl/bShift ordering,
+							# since this is a big one-off build, not a routine queue item.
+							iOrder = OrderTypes.ORDER_TRAIN
+							szTxt += GC.getUnitInfo(iType).getDescription()
+							InCity.CyCity.pushPreMergeTrainOrder(iType, False, False, True, False)
+
 						elif TYPE == "BUILDING":
 							iOrder = OrderTypes.ORDER_CONSTRUCT
 							CvBuildingInfo = GC.getBuildingInfo(iType)
@@ -5763,8 +5807,9 @@ class CvMainInterface:
 
 						if self.bUpdateCityTab:
 							screen.setHitTest("CityTabScrPnl", HitTestTypes.HITTEST_NOHIT)
-						# Push order
-						GAME.selectedCitiesGameNetMessage(iGaMsgType, iOrder, iType, 0, False, bAlt, bShift, bCtrl)
+						# Push order (UNITMERGED already pushed its own order above, via pushPreMergeTrainOrder)
+						if TYPE != "UNITMERGED":
+							GAME.selectedCitiesGameNetMessage(iGaMsgType, iOrder, iType, 0, False, bAlt, bShift, bCtrl)
 						# Update Work Queue
 						uFont = self.aFontList[5]
 						w = self.xMidL - 80
@@ -5891,11 +5936,15 @@ class CvMainInterface:
 
 			elif BASE == "CT":
 				if TYPE == "UnitFilter":
-					self.InCity.CyCity.setUnitListFilterActive(ID, not self.InCity.CyCity.getUnitListFilterActive(ID))
+					bNewState = not self.InCity.CyCity.getUnitListFilterActive(ID)
+					self.InCity.CyCity.setUnitListFilterActive(ID, bNewState)
+					screen.setState("CT|UnitFilter" + str(ID), bNewState)
 					self.updateCityTab(screen)
 
 				elif TYPE == "BuildingFilter":
-					self.InCity.CyCity.setBuildingListFilterActive(ID, not self.InCity.CyCity.getBuildingListFilterActive(ID))
+					bNewState = not self.InCity.CyCity.getBuildingListFilterActive(ID)
+					self.InCity.CyCity.setBuildingListFilterActive(ID, bNewState)
+					screen.setState("CT|BuildingFilter" + str(ID), bNewState)
 					self.updateCityTab(screen)
 
 				elif TYPE == "Options":

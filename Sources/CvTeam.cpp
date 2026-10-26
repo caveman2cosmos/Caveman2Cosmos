@@ -2666,11 +2666,11 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 				+
 				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getLeaderID()).getCurrentEra()
 			);
+
+		// TEMP: flat AI research buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+		iMod -= 10;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_TECH_UPSCALED_COSTS))
-	{
-		iMod += GC.getUPSCALED_RESEARCH_COST_MODIFIER();
-	}
+	iMod += GC.getGame().getModderGameOption(MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT);
 	if (iMod != 0)
 	{
 		iCost = getModifiedIntValue64(iCost, iMod);
@@ -6158,8 +6158,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
 					}
 				}
+				break;
 			}
-			break;
 		}
 	}
 	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())

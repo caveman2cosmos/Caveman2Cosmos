@@ -1000,6 +1000,7 @@
             </OrPreReqs>
             <AndPreReqs>
                 <PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+                <PrereqTech>TECH_DECEPTION</PrereqTech>
             </AndPreReqs>
             <Quote>TXT_KEY_TECH_TRAPPING_QUOTE</Quote>
             <Sound>AS2D_TECH_TRAPPING</Sound>

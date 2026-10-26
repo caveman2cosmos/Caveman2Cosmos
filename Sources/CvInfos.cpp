@@ -1867,6 +1867,7 @@ void CvTechInfo::doPostLoadCaching(uint32_t iThis)
 CvPromotionInfo::CvPromotionInfo() :
 m_iLayerAnimationPath(ANIMATIONPATH_NONE),
 m_iTechPrereq(NO_TECH),
+m_eGrantsBuildingOnFound(NO_BUILDING),
 m_iMinEraType(NO_ERA),
 m_iMaxEraType(NO_ERA),
 m_iStateReligionPrereq(NO_RELIGION),
@@ -1929,6 +1930,7 @@ m_bLeader(false),
 m_bBlitz(false),
 m_bAmphib(false),
 m_bRiver(false),
+m_bRiverMoveIgnore(false),
 m_bEnemyRoute(false),
 m_bAlwaysHeal(false),
 m_bHillsDoubleMove(false),
@@ -2119,6 +2121,8 @@ CvPromotionInfo::~CvPromotionInfo()
 {
 	CvInfoUtil(this).uninitDataMembers();
 
+	GC.removeDelayedResolution((int*)&m_eGrantsBuildingOnFound);
+
 	SAFE_DELETE_ARRAY(m_piTerrainAttackPercent);
 	SAFE_DELETE_ARRAY(m_piTerrainDefensePercent);
 	SAFE_DELETE_ARRAY(m_piFeatureAttackPercent);
@@ -2140,6 +2144,11 @@ CvPromotionInfo::~CvPromotionInfo()
 int CvPromotionInfo::getLayerAnimationPath() const
 {
 	return m_iLayerAnimationPath;
+}
+
+BuildingTypes CvPromotionInfo::getGrantsBuildingOnFound() const
+{
+	return m_eGrantsBuildingOnFound;
 }
 
 TechTypes CvPromotionInfo::getTechPrereq() const
@@ -2464,6 +2473,11 @@ bool CvPromotionInfo::isAmphib() const
 bool CvPromotionInfo::isRiver() const
 {
 	return m_bRiver;
+}
+
+bool CvPromotionInfo::isRiverMoveIgnore() const
+{
+	return m_bRiverMoveIgnore;
 }
 
 bool CvPromotionInfo::isEnemyRoute() const
@@ -4721,6 +4735,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	m_iLayerAnimationPath = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_eGrantsBuildingOnFound, L"GrantsBuildingOnFound");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"StateReligionPrereq");
 	m_iStateReligionPrereq = pXML->GetInfoClass(szTextVal);
@@ -4739,6 +4754,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bBlitz, L"bBlitz");
 	pXML->GetOptionalChildXmlValByName(&m_bAmphib, L"bAmphib");
 	pXML->GetOptionalChildXmlValByName(&m_bRiver, L"bRiver");
+	pXML->GetOptionalChildXmlValByName(&m_bRiverMoveIgnore, L"bRiverMoveIgnore");
 	pXML->GetOptionalChildXmlValByName(&m_bEnemyRoute, L"bEnemyRoute");
 	pXML->GetOptionalChildXmlValByName(&m_bAlwaysHeal, L"bAlwaysHeal");
 	pXML->GetOptionalChildXmlValByName(&m_bHillsDoubleMove, L"bHillsDoubleMove");
@@ -5414,6 +5430,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 
 	if (getLayerAnimationPath() == ANIMATIONPATH_NONE) m_iLayerAnimationPath = pClassInfo->getLayerAnimationPath();
 	if (getTechPrereq() == NO_TECH) m_iTechPrereq = pClassInfo->getTechPrereq();
+	if (getGrantsBuildingOnFound() == NO_BUILDING) m_eGrantsBuildingOnFound = pClassInfo->getGrantsBuildingOnFound();
 	if (getStateReligionPrereq() == NO_RELIGION) m_iStateReligionPrereq = pClassInfo->getStateReligionPrereq();
 	if (getMinEraType() == NO_ERA) m_iMinEraType = pClassInfo->getMinEraType();
 	if (getMaxEraType() == NO_ERA) m_iMaxEraType = pClassInfo->getMaxEraType();
@@ -5426,6 +5443,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (isBlitz() == bDefault) m_bBlitz = pClassInfo->isBlitz();
 	if (isAmphib() == bDefault) m_bAmphib = pClassInfo->isAmphib();
 	if (isRiver() == bDefault) m_bRiver = pClassInfo->isRiver();
+	if (isRiverMoveIgnore() == bDefault) m_bRiverMoveIgnore = pClassInfo->isRiverMoveIgnore();
 	if (isEnemyRoute() == bDefault) m_bEnemyRoute = pClassInfo->isEnemyRoute();
 	if (isAlwaysHeal() == bDefault) m_bAlwaysHeal = pClassInfo->isAlwaysHeal();
 	if (isHillsDoubleMove() == bDefault) m_bHillsDoubleMove = pClassInfo->isHillsDoubleMove();
@@ -6215,6 +6233,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CvInfoUtil(this).checkSum(iSum);
 
 	CheckSum(iSum, m_iTechPrereq);
+	CheckSum(iSum, m_eGrantsBuildingOnFound);
 	CheckSum(iSum, m_iStateReligionPrereq);
 	CheckSum(iSum, m_iMinEraType);
 	CheckSum(iSum, m_iMaxEraType);
@@ -6258,6 +6277,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bBlitz);
 	CheckSum(iSum, m_bAmphib);
 	CheckSum(iSum, m_bRiver);
+	CheckSum(iSum, m_bRiverMoveIgnore);
 	CheckSum(iSum, m_bEnemyRoute);
 	CheckSum(iSum, m_bAlwaysHeal);
 	CheckSum(iSum, m_bHillsDoubleMove);
@@ -11914,11 +11934,7 @@ int CvGameSpeedInfo::getSpeedPercent() const
 
 int CvGameSpeedInfo::getHammerCostPercent() const
 {
-	if (GC.getGame().isOption(GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS))
-	{
-		return getModifiedIntValue(m_iSpeedPercent, GC.getUPSCALED_HAMMER_COST_MODIFIER());
-	}
-	return m_iSpeedPercent;
+	return getModifiedIntValue(m_iSpeedPercent, GC.getGame().getModderGameOption(MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT));
 }
 
 int CvGameSpeedInfo::getNumTurnIncrements() const
@@ -22014,6 +22030,7 @@ CvEventTriggerInfo::CvEventTriggerInfo() :
 	m_iCityFoodWeight(0),
 	m_bUnitsOnPlot(false),
 	m_bOwnPlot(false),
+	m_bNotOnCity(false),
 	m_bPickReligion(false),
 	m_bStateReligion(false),
 	m_bHolyCity(false),
@@ -22254,6 +22271,16 @@ int CvEventTriggerInfo::getNumImprovementsRequired() const
 	return (int)m_aiImprovementsRequired.size();
 }
 
+int CvEventTriggerInfo::getNotImprovementRequired(int i) const
+{
+	return m_aiNotImprovementsRequired[i];
+}
+
+int CvEventTriggerInfo::getNumNotImprovementsRequired() const
+{
+	return (int)m_aiNotImprovementsRequired.size();
+}
+
 int CvEventTriggerInfo::getBonusRequired(int i) const
 {
 	return m_aiBonusesRequired[i];
@@ -22410,6 +22437,11 @@ bool CvEventTriggerInfo::isOwnPlot() const
 	return m_bOwnPlot;
 }
 
+bool CvEventTriggerInfo::isNotOnCity() const
+{
+	return m_bNotOnCity;
+}
+
 bool CvEventTriggerInfo::isPickReligion() const
 {
 	return m_bPickReligion;
@@ -22561,6 +22593,7 @@ void CvEventTriggerInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aiFeaturesRequired);
 	CheckSumC(iSum, m_aiTerrainsRequired);
 	CheckSumC(iSum, m_aiImprovementsRequired);
+	CheckSumC(iSum, m_aiNotImprovementsRequired);
 	CheckSumC(iSum, m_aiBonusesRequired);
 	CheckSumC(iSum, m_aiRoutesRequired);
 	CheckSumC(iSum, m_aiReligionsRequired);
@@ -22581,6 +22614,7 @@ void CvEventTriggerInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCityFoodWeight);
 	CheckSum(iSum, m_bUnitsOnPlot);
 	CheckSum(iSum, m_bOwnPlot);
+	CheckSum(iSum, m_bNotOnCity);
 	CheckSum(iSum, m_bPickReligion);
 	CheckSum(iSum, m_bStateReligion);
 	CheckSum(iSum, m_bHolyCity);
@@ -22657,6 +22691,7 @@ bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetOptionalVector(&m_aiFeaturesRequired, L"FeaturesRequired");
 	pXML->SetOptionalVector(&m_aiTerrainsRequired, L"TerrainsRequired");
 	pXML->SetOptionalVector(&m_aiImprovementsRequired, L"ImprovementsRequired");
+	pXML->SetOptionalVector(&m_aiNotImprovementsRequired, L"NotImprovementsRequired");
 	pXML->SetOptionalVector(&m_aiBonusesRequired, L"BonusesRequired");
 	pXML->SetOptionalVector(&m_aiRoutesRequired, L"RoutesRequired");
 	pXML->SetOptionalVector(&m_aiReligionsRequired, L"ReligionsRequired");
@@ -22741,6 +22776,7 @@ bool CvEventTriggerInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCityFoodWeight, L"iCityFoodWeight");
 	pXML->GetOptionalChildXmlValByName(&m_bUnitsOnPlot, L"bUnitsOnPlot");
 	pXML->GetOptionalChildXmlValByName(&m_bOwnPlot, L"bOwnPlot");
+	pXML->GetOptionalChildXmlValByName(&m_bNotOnCity, L"bNotOnCity");
 	pXML->GetOptionalChildXmlValByName(&m_bPickReligion, L"bPickReligion");
 	pXML->GetOptionalChildXmlValByName(&m_bStateReligion, L"bStateReligion");
 	pXML->GetOptionalChildXmlValByName(&m_bHolyCity, L"bHolyCity");
@@ -22815,6 +22851,7 @@ void CvEventTriggerInfo::copyNonDefaults(const CvEventTriggerInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeaturesRequired, pClassInfo->m_aiFeaturesRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiTerrainsRequired, pClassInfo->m_aiTerrainsRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiImprovementsRequired, pClassInfo->m_aiImprovementsRequired);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiNotImprovementsRequired, pClassInfo->m_aiNotImprovementsRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiBonusesRequired, pClassInfo->m_aiBonusesRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiRoutesRequired, pClassInfo->m_aiRoutesRequired);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiReligionsRequired, pClassInfo->m_aiReligionsRequired);
@@ -22838,6 +22875,7 @@ void CvEventTriggerInfo::copyNonDefaults(const CvEventTriggerInfo* pClassInfo)
 	if (getCityFoodWeight() == iDefault) m_iCityFoodWeight = pClassInfo->getCityFoodWeight();
 	if (isUnitsOnPlot() == bDefault) m_bUnitsOnPlot = pClassInfo->isUnitsOnPlot();
 	if (isOwnPlot() == bDefault) m_bOwnPlot = pClassInfo->isOwnPlot();
+	if (isNotOnCity() == bDefault) m_bNotOnCity = pClassInfo->isNotOnCity();
 	if (isPickReligion() == bDefault) m_bPickReligion = pClassInfo->isPickReligion();
 	if (isStateReligion() == bDefault) m_bStateReligion = pClassInfo->isStateReligion();
 	if (isHolyCity() == bDefault) m_bHolyCity = pClassInfo->isHolyCity();

@@ -1625,10 +1625,11 @@
 		<EventInfo>
 			<Type>EVENT_BABY_BOOM_2</Type>
 			<Description>TXT_KEY_EVENT_BABY_BOOM_2</Description>
-			<iGold>-250</iGold>
             <bGameSpeedScale>1</bGameSpeedScale>
 			<iFood>350</iFood>
-            <PythonCallback>doBabyBoom</PythonCallback>
+            <PythonCallback>doBabyBoom2</PythonCallback>
+            <PythonCanDo>canApplyBabyBoom2</PythonCanDo>
+            <PythonHelp>getHelpBabyBoom2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>2</iAIValue>
 		</EventInfo>
@@ -7632,6 +7633,19 @@
 			<iNumFreeUnits>5</iNumFreeUnits>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1</iAIValue>
+			<PythonCanDo>canApplyMercenariesAncient3</PythonCanDo>
+		</EventInfo>
+
+		<EventInfo>
+			<Type>EVENT_MERCENARIES_ANCIENT_4</Type>
+			<Description>TXT_KEY_EVENT_MERCENARIES_ANCIENT_4</Description>
+			<iGold>-200</iGold>
+			<bGameSpeedScale>1</bGameSpeedScale>
+			<FreeUnit>UNIT_JAVELINEER</FreeUnit>
+			<iNumFreeUnits>5</iNumFreeUnits>
+			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
+			<iAIValue>1</iAIValue>
+			<PythonCanDo>canApplyMercenariesAncient4</PythonCanDo>
 		</EventInfo>
 
 		<EventInfo>

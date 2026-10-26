@@ -6763,7 +6763,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_KAYAK</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -6873,7 +6887,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_OUTRIGGER</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7006,7 +7034,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_CARAVEL</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7104,7 +7146,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_SLOOP</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_RECON</SubCombatType>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7227,7 +7283,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_FRIGATE</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -7346,7 +7416,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_IRON_FRIGATE</Type>
 			<Combat>UNITCOMBAT_STEAM_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -7466,7 +7550,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_STEAM_DESTROYER</Type>
 			<Combat>UNITCOMBAT_STEAM_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7574,7 +7672,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_WW1_DESTROYER</Type>
 			<Combat>UNITCOMBAT_STEAM_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7689,7 +7801,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_DESTROYER</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7815,7 +7941,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_STEALTH_DESTROYER</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -7937,7 +8077,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_FF_DESTROYER_I</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_DESTROYER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -8076,7 +8230,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_UBOAT</Type>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -8225,7 +8393,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_ATTACK_SUBMARINE</Type>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -8383,7 +8565,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_NUCLEAR_SUBMARINE</Type>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -8541,7 +8737,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_FUSION_SUBMARINE</Type>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -8703,7 +8913,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_WAR_CANOE</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -8810,7 +9034,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_WAR_GALLEY</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -8952,7 +9190,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_TRIREME</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9058,7 +9310,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_QUINQUEREME</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9160,7 +9426,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_DECAREME</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9268,7 +9548,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_GALLEASS</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9428,7 +9722,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_SLOOP_OF_WAR</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9526,7 +9834,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_MANOWAR</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -9648,7 +9970,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_PRE_DREADNOUGHT</Type>
 			<Combat>UNITCOMBAT_STEAM_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BATTLESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -9749,7 +10085,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_DREADNOUGHT_SHIP</Type>
 			<Combat>UNITCOMBAT_STEAM_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BATTLESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -9857,7 +10207,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_WW2_BATTLESHIP</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BATTLESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -9968,7 +10332,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_BATTLESHIP</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BATTLESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -10081,7 +10459,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_FUSION_BATTLESHIP</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BATTLESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -10191,7 +10583,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_EARLY_CARRIER</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -10318,7 +10724,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_CARRIER</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -10446,7 +10866,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_NUCLEAR_CARRIER</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -10578,7 +11012,21 @@
 		<UnitInfo>
 			<Type>UNIT_MASTER_SAILOR_FUSION_CARRIER</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
-			<SubCombatTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+            <SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRANSPORT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>

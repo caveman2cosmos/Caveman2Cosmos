@@ -789,6 +789,9 @@ protected:
      */
 	void AI_subduedAnimalMove();
 
+	// Returns true if a mission was pushed. Seeks a suitable plot and builds a domesticated herd there.
+	bool AI_herdMove();
+
 
     /**
      * Handles movement logic for spy units.

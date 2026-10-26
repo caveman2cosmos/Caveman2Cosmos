@@ -9979,7 +9979,10 @@ void CvGame::doCalculateCurrentTick()
 void CvGame::doFlexibleDifficulty()
 {
 	PROFILE_EXTRA_FUNC();
-	logging::logMsg("C2C.log", "doFlexibleDifficulty");
+	if (GC.getLogging())
+	{
+		logging::logMsg("C2C.log", "doFlexibleDifficulty");
+	}
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
@@ -10007,7 +10010,10 @@ void CvGame::doFlexibleDifficulty()
 				}				
 			}
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
+			}
 
 			//Increase timer
 			iTimer++;
@@ -10015,13 +10021,19 @@ void CvGame::doFlexibleDifficulty()
 
 			if (iTimer < iTurns) continue;
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", playerX.getName());
+			}
 
 			if (!playerX.isModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY) && (!bFlexDiffForAI || bHuman))
 			{
 				continue;
 			}
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", playerX.getName());
+			}
 
 			int iMinHandicap = 0;
 			// Toffer - The whole point of the increasing difficulty challenge is that the human handicap only increases.
@@ -10085,7 +10097,10 @@ void CvGame::doFlexibleDifficulty()
 					const int iScore = getPlayerScore((PlayerTypes)iJ);
 					// iVariance is sum of squared difference from mean
 					iVariance += (iMeanScore - iScore) * (iMeanScore - iScore);
-					logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
+					}
 				}
 			}
 			const int stddev = intSqrt(10000 * iVariance / iAliveCount);
@@ -10094,12 +10109,15 @@ void CvGame::doFlexibleDifficulty()
 
 			
 
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
-				playerX.getName(), iCurrentScore,
-				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
-				iMeanScore, stddev
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
+					playerX.getName(), iCurrentScore,
+					GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
+					iMeanScore, stddev
+				);
+			}
 			int iNewHandicap =
 			(
 				playerX.getHandicapType() > iMaxHandicap
@@ -10141,38 +10159,53 @@ void CvGame::doFlexibleDifficulty()
 			bool isChangeIncrease = std::abs(std::max(increase1, increase2)-std::min(increase1, increase2)) > stddev;
     		bool isChangeDecrease = std::abs(std::max(decrease1, decrease2)-std::min(decrease1, decrease2)) > stddev;
 
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty DEBUG DATA] Player: %S, Score: %d, Total Score: %d, Alive Count: %d, iVariance: %d, Avg Score: %d, Handicap Bias: %d, atanh2: %f,Std Dev: %d\n",
-				playerX.getName(), iCurrentScore, iTotalScore, iAliveCount, iVariance,
-				iMeanScore, handicapBias, atanh2, stddev
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty DEBUG DATA] Player: %S, Score: %d, Total Score: %d, Alive Count: %d, iVariance: %d, Avg Score: %d, Handicap Bias: %d, atanh2: %f,Std Dev: %d\n",
+					playerX.getName(), iCurrentScore, iTotalScore, iAliveCount, iVariance,
+					iMeanScore, handicapBias, atanh2, stddev
+				);
+			}
 
 			//Increased Difficulty (player's score is > 1 std dev away)
 			if (increase1>increase2 && isChangeIncrease)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
+				if (GC.getLogging())
+				{
+					logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
+				}
 				if (iNewHandicap < (GC.getNumHandicapInfos() - 1) && iNewHandicap < iMaxHandicap)
 				{
-					logging::logMsg("C2C.log",
-						"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
-						playerX.getName(),
-						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() + 1)).getDescription()
-					);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log",
+							"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
+							playerX.getName(),
+							GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+							GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() + 1)).getDescription()
+						);
+					}
 					iNewHandicap++;
 				}
 			}
 			else if (decrease1<decrease2 && isChangeDecrease)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
+				if (GC.getLogging())
+				{
+					logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
+				}
 				if (iNewHandicap > 0 && iNewHandicap > iMinHandicap)
 				{
-					logging::logMsg("C2C.log",
-						"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
-						playerX.getName(),
-						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() - 1)).getDescription()
-					);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log",
+							"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
+							playerX.getName(),
+							GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+							GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() - 1)).getDescription()
+						);
+					}
 					iNewHandicap--;
 				}
 			}
@@ -10192,12 +10225,15 @@ void CvGame::doFlexibleDifficulty()
 					iNewHandicap
 				)
 			);
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty] Player: %S, New Handicap: %d, Current Difficult: %S, Min Handicap: %d, Max Handicap: %d\n",
-				playerX.getName(), iNewHandicap,
-				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
-				iMinHandicap, iMaxHandicap
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty] Player: %S, New Handicap: %d, Current Difficult: %S, Min Handicap: %d, Max Handicap: %d\n",
+					playerX.getName(), iNewHandicap,
+					GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
+					iMinHandicap, iMaxHandicap
+				);
+			}
 			if (iNewHandicap != playerX.getHandicapType())
 			{
 				if (bHuman)
@@ -11175,7 +11211,7 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 {
 	if (isOption(GAMEOPTION_NO_FUTURE))
 	{
-		if ((EraTypes)GC.getTechInfo(eTech).getEra() > GC.getC2C_ERA_ATOMIC())
+		if ((EraTypes)GC.getTechInfo(eTech).getEra() > GC.getC2C_ERA_INFORMATION())
 		{
 			if (!GC.getTechInfo(eTech).isRepeat())
 			{

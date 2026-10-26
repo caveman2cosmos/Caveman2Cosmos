@@ -112,6 +112,10 @@
 		<Russian>Ðàá. òðóä (óáîðêà)</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_TUTOR</Tag>
+		<English>Slave Compound - Tutor</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
 		<English>[ICON_BULLET]The Slave Market improves the outcomes from using Captives as Slaves - e.g. increases the amount of Gold you get from selling a Captive into Slavery.</English>
 		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>

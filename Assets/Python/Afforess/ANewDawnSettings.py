@@ -90,6 +90,10 @@ class ANewDawnSettings:
 				ANewDawnOpt.setHistoricalAccurateCalendar(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT):
 				ANewDawnOpt.setNextTraitCultureReqPercent(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT):
+				ANewDawnOpt.setTechUpscaledCostsPercent(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT):
+				ANewDawnOpt.setExpUpscaledBuildingAndUnitCostsPercent(data3)
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -280,9 +284,23 @@ def changedNoAutoCorporationFounding(option, value):
 def changedWarPrizes(option, value):
 	GC.setDefineINT("WAR_PRIZES", int(value))
 
+def changedNationalUnitLimitInitial(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", int(value))
+
+def changedNationalUnitLimitPerEra(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", int(value))
+
 def changedNextTraitCultureReqPercent(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT), int(value), 0)
+
+def changedTechUpscaledCostsPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT), int(value), 0)
+
+def changedExpUpscaledBuildingAndUnitCostsPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT), int(value), 0)
 
 def changedFlexibleDifficultyAI(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY, value)
@@ -356,6 +374,8 @@ def setXMLOptionsfromIniFile():
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
 	changedNextTraitCultureReqPercent(ANewDawnOpt, ANewDawnOpt.getNextTraitCultureReqPercent())
+	changedTechUpscaledCostsPercent(ANewDawnOpt, ANewDawnOpt.getTechUpscaledCostsPercent())
+	changedExpUpscaledBuildingAndUnitCostsPercent(ANewDawnOpt, ANewDawnOpt.getExpUpscaledBuildingAndUnitCostsPercent())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
 	changedHistoricalAccurateCalendar(ANewDawnOpt, ANewDawnOpt.isHistoricalAccurateCalendar())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())

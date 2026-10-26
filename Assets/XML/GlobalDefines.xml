@@ -400,7 +400,7 @@
 	</Define>
 	<Define>
 		<DefineName>BASE_RESEARCH_RATE</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
@@ -1034,7 +1034,7 @@
 			This can never give barbs techs that no other player has, it just determines how fast they catch up.
 		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
+		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RAZING_CULTURAL_PERCENT_THRESHOLD</DefineName>
@@ -1071,6 +1071,12 @@
 	<Define>
 		<DefineName>MAX_EXPERIENCE_PER_COMBAT</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Percentage of a kill's XP redirected to allied spotter unit(s) whose vision was needed
+			 for the attacker to see an otherwise-hidden defender (Hide & Seek combat option only). -->
+		<DefineName>SPOTTER_XP_SHARE_PERCENT</DefineName>
+		<iDefineIntVal>30</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>EXPERIENCE_FROM_WITHDRAWL</DefineName>

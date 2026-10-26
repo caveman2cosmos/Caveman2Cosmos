@@ -1244,6 +1244,7 @@
 			<Type>PROMOTION_TRANSPORT_TROOPS2</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_TROOPS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_TROOPS1</PromotionPrereq>
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1259,6 +1260,7 @@
 			<Type>PROMOTION_TRANSPORT_TROOPS3</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_TROOPS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_TROOPS2</PromotionPrereq>
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_TROOPS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1331,6 +1333,7 @@
 			<Type>PROMOTION_TRANSPORT_PEOPLE2</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_PEOPLE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_PEOPLE1</PromotionPrereq>
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1346,6 +1349,7 @@
 			<Type>PROMOTION_TRANSPORT_PEOPLE3</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_PEOPLE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_PEOPLE2</PromotionPrereq>
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_PEOPLE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1414,6 +1418,7 @@
 			<Type>PROMOTION_TRANSPORT_MISSILES2</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_MISSILES2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_MISSILES1</PromotionPrereq>
 			<TechPrereq>TECH_ROCKETRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1429,6 +1434,7 @@
 			<Type>PROMOTION_TRANSPORT_MISSILES3</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_MISSILES3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_MISSILES2</PromotionPrereq>
 			<TechPrereq>TECH_ROCKETRY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_MISSILES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1502,6 +1508,7 @@
 			<Type>PROMOTION_TRANSPORT_SEAPLANES2</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_SEAPLANES2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_SEAPLANES1</PromotionPrereq>
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1517,6 +1524,7 @@
 			<Type>PROMOTION_TRANSPORT_SEAPLANES3</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_SEAPLANES3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_SEAPLANES2</PromotionPrereq>
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_SEAPLANES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1590,6 +1598,7 @@
 			<Type>PROMOTION_TRANSPORT_FIGHTERS2</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_FIGHTERS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_FIGHTERS1</PromotionPrereq>
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1605,6 +1614,7 @@
 			<Type>PROMOTION_TRANSPORT_FIGHTERS3</Type>
 			<Description>TXT_KEY_PROMOTION_TRANSPORT_FIGHTERS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_TRANSPORT_FIGHTERS2</PromotionPrereq>
 			<TechPrereq>TECH_FLIGHT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_TRANSPORT_FIGHTERS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1769,6 +1779,7 @@
 			<Type>PROMOTION_SOPHISTICATION2</Type>
 			<Description>TXT_KEY_PROMOTION_SOPHISTICATION2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SOPHISTICATION1</PromotionPrereq>
 			<TechPrereq>TECH_CULTURAL_IDENTITY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SOPHISTICATION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -1790,6 +1801,7 @@
 			<Type>PROMOTION_SOPHISTICATION3</Type>
 			<Description>TXT_KEY_PROMOTION_SOPHISTICATION3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SOPHISTICATION2</PromotionPrereq>
 			<TechPrereq>TECH_WARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SOPHISTICATION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -1811,6 +1823,7 @@
 			<Type>PROMOTION_SOPHISTICATION4</Type>
 			<Description>TXT_KEY_PROMOTION_SOPHISTICATION4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SOPHISTICATION3</PromotionPrereq>
 			<TechPrereq>TECH_COMMUNITY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SOPHISTICATION</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -13630,6 +13643,7 @@
 			<Type>PROMOTION_RAM_SMASH2</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_SMASH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_SMASH1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBreakdownDamageChange>2</iBreakdownDamageChange>
@@ -13639,6 +13653,7 @@
 			<Type>PROMOTION_RAM_SMASH3</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_SMASH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_SMASH2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBreakdownDamageChange>3</iBreakdownDamageChange>
@@ -13648,6 +13663,7 @@
 			<Type>PROMOTION_RAM_SMASH4</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_SMASH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_SMASH3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iBreakdownDamageChange>3</iBreakdownDamageChange>
@@ -13657,6 +13673,7 @@
 			<Type>PROMOTION_RAM_SMASH5</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_SMASH5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_SMASH4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_SMASH</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iBreakdownChanceChange>10</iBreakdownChanceChange>
@@ -13676,6 +13693,7 @@
 			<Type>PROMOTION_RAM_THRUST2</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_THRUST2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_THRUST1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBreakdownChanceChange>15</iBreakdownChanceChange>
@@ -13685,6 +13703,7 @@
 			<Type>PROMOTION_RAM_THRUST3</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_THRUST3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_THRUST2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBreakdownChanceChange>20</iBreakdownChanceChange>
@@ -13694,6 +13713,7 @@
 			<Type>PROMOTION_RAM_THRUST4</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_THRUST4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_THRUST3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iBreakdownChanceChange>20</iBreakdownChanceChange>
@@ -13703,6 +13723,7 @@
 			<Type>PROMOTION_RAM_THRUST5</Type>
 			<Description>TXT_KEY_PROMOTION_RAM_THRUST5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAM_THRUST4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAM_THRUST</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iBreakdownChanceChange>20</iBreakdownChanceChange>
@@ -13827,6 +13848,7 @@
 			<Type>PROMOTION_RAIN_OF_BOLTS2</Type>
 			<Description>TXT_KEY_PROMOTION_RAIN_OF_BOLTS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAIN_OF_BOLTS1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAIN_OF_BOLTS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
@@ -13839,6 +13861,7 @@
 			<Type>PROMOTION_RAIN_OF_BOLTS3</Type>
 			<Description>TXT_KEY_PROMOTION_RAIN_OF_BOLTS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RAIN_OF_BOLTS2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_RAIN_OF_BOLTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iDCMBombAccuracyChange>20</iDCMBombAccuracyChange>
@@ -13863,6 +13886,7 @@
 			<Type>PROMOTION_ARROW_BARRAGE2</Type>
 			<Description>TXT_KEY_PROMOTION_ARROW_BARRAGE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARROW_BARRAGE1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARROW_BARRAGE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
@@ -13875,6 +13899,7 @@
 			<Type>PROMOTION_ARROW_BARRAGE3</Type>
 			<Description>TXT_KEY_PROMOTION_ARROW_BARRAGE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARROW_BARRAGE2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARROW_BARRAGE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
@@ -13900,6 +13925,7 @@
 			<Type>PROMOTION_LEAD_STORM2</Type>
 			<Description>TXT_KEY_PROMOTION_LEAD_STORM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LEAD_STORM1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LEAD_STORM</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDCMBombAccuracyChange>15</iDCMBombAccuracyChange>
@@ -13912,6 +13938,7 @@
 			<Type>PROMOTION_LEAD_STORM3</Type>
 			<Description>TXT_KEY_PROMOTION_LEAD_STORM3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LEAD_STORM2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LEAD_STORM</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iDCMBombAccuracyChange>20</iDCMBombAccuracyChange>
@@ -13925,6 +13952,7 @@
 			<Type>PROMOTION_LEAD_STORM4</Type>
 			<Description>TXT_KEY_PROMOTION_LEAD_STORM4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LEAD_STORM3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LEAD_STORM</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<NotOnUnitCombatTypes>
@@ -13978,6 +14006,7 @@
 			<Type>PROMOTION_WIDE_BEAM2</Type>
 			<Description>TXT_KEY_PROMOTION_WIDE_BEAM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_WIDE_BEAM1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_WIDE_BEAM</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDCMBombAccuracyChange>10</iDCMBombAccuracyChange>
@@ -14043,6 +14072,7 @@
 			<Type>PROMOTION_BOLT_PUNCH2</Type>
 			<Description>TXT_KEY_PROMOTION_BOLT_PUNCH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BOLT_PUNCH1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOLT_PUNCH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>3</iBombardRateChange>
@@ -14056,6 +14086,7 @@
 			<Type>PROMOTION_BOLT_PUNCH3</Type>
 			<Description>TXT_KEY_PROMOTION_BOLT_PUNCH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BOLT_PUNCH2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOLT_PUNCH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>3</iBombardRateChange>
@@ -14083,6 +14114,7 @@
 			<Type>PROMOTION_HAIL_OF_STONES2</Type>
 			<Description>TXT_KEY_PROMOTION_HAIL_OF_STONES2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HAIL_OF_STONES1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HAIL_OF_STONES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>4</iBombardRateChange>
@@ -14096,6 +14128,7 @@
 			<Type>PROMOTION_HAIL_OF_STONES3</Type>
 			<Description>TXT_KEY_PROMOTION_HAIL_OF_STONES3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HAIL_OF_STONES2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HAIL_OF_STONES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>4</iBombardRateChange>
@@ -14123,6 +14156,7 @@
 			<Type>PROMOTION_PYROTECHNICS2</Type>
 			<Description>TXT_KEY_PROMOTION_PYROTECHNICS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_PYROTECHNICS1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_PYROTECHNICS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>2</iBombardRateChange>
@@ -14137,6 +14171,7 @@
 			<Type>PROMOTION_PYROTECHNICS3</Type>
 			<Description>TXT_KEY_PROMOTION_PYROTECHNICS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_PYROTECHNICS2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_PYROTECHNICS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>2</iBombardRateChange>
@@ -14164,6 +14199,7 @@
 			<Type>PROMOTION_ROLLING_THUNDER2</Type>
 			<Description>TXT_KEY_PROMOTION_ROLLING_THUNDER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ROLLING_THUNDER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ROLLING_THUNDER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>5</iBombardRateChange>
@@ -14177,6 +14213,7 @@
 			<Type>PROMOTION_ROLLING_THUNDER3</Type>
 			<Description>TXT_KEY_PROMOTION_ROLLING_THUNDER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ROLLING_THUNDER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ROLLING_THUNDER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>5</iBombardRateChange>
@@ -14246,6 +14283,7 @@
 			<Type>PROMOTION_SCORCHED_EARTH2</Type>
 			<Description>TXT_KEY_PROMOTION_SCORCHED_EARTH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SCORCHED_EARTH1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SCORCHED_EARTH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBombardRateChange>7</iBombardRateChange>
@@ -14260,6 +14298,7 @@
 			<Type>PROMOTION_SCORCHED_EARTH3</Type>
 			<Description>TXT_KEY_PROMOTION_SCORCHED_EARTH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SCORCHED_EARTH2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SCORCHED_EARTH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iBombardRateChange>7</iBombardRateChange>
@@ -14440,6 +14479,7 @@
 			<Type>PROMOTION_SWARM2</Type>
 			<Description>TXT_KEY_PROMOTION_SWARM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SWARM1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -14452,6 +14492,7 @@
 			<Type>PROMOTION_SWARM3</Type>
 			<Description>TXT_KEY_PROMOTION_SWARM3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SWARM2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -14464,6 +14505,7 @@
 			<Type>PROMOTION_SWARM4</Type>
 			<Description>TXT_KEY_PROMOTION_SWARM4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SWARM3</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -14943,6 +14985,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL2</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL1</PromotionPrereq>
 			<TechPrereq>TECH_ANCIENT_MACHINERY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -14961,6 +15004,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL3</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL2</PromotionPrereq>
 			<TechPrereq>TECH_METALLURGY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -14980,6 +15024,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL4</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL3</PromotionPrereq>
 			<TechPrereq>TECH_MACHINE_TOOLS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -14999,6 +15044,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL5</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL4</PromotionPrereq>
 			<TechPrereq>TECH_MOTORIZED_TRANSPORTATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -15018,6 +15064,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL6</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL5</PromotionPrereq>
 			<TechPrereq>TECH_ADVANCED_METALLURGY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -15037,6 +15084,7 @@
 			<Type>PROMOTION_REPAIR_MECHANICAL7</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_MECHANICAL7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_MECHANICAL6</PromotionPrereq>
 			<TechPrereq>TECH_3D_PRINTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_MECHANICAL</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -15287,6 +15335,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL2</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL1</PromotionPrereq>
 			<TechPrereq>TECH_NAVAL_WARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -15305,6 +15354,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL3</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL2</PromotionPrereq>
 			<TechPrereq>TECH_SHIP_BUILDING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -15324,6 +15374,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL4</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL3</PromotionPrereq>
 			<TechPrereq>TECH_SCREW_PROPELLER</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -15343,6 +15394,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL5</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL4</PromotionPrereq>
 			<TechPrereq>TECH_DEEP_SEA_EXPLORATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -15362,6 +15414,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL6</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL5</PromotionPrereq>
 			<TechPrereq>TECH_MICROMECHANICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -15381,6 +15434,7 @@
 			<Type>PROMOTION_REPAIR_NAVAL7</Type>
 			<Description>TXT_KEY_PROMOTION_REPAIR_NAVAL7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_REPAIR_NAVAL6</PromotionPrereq>
 			<TechPrereq>TECH_ABYSS_COLONIZATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_REPAIR_NAVAL</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -15660,6 +15714,7 @@
 			<Type>PROMOTION_EDUCATE2</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE1</PromotionPrereq>
 			<TechPrereq>TECH_COMMUNITY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -15678,6 +15733,7 @@
 			<Type>PROMOTION_EDUCATE3</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE2</PromotionPrereq>
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -15696,6 +15752,7 @@
 			<Type>PROMOTION_EDUCATE4</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE3</PromotionPrereq>
 			<TechPrereq>TECH_EDUCATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -15714,6 +15771,7 @@
 			<Type>PROMOTION_EDUCATE5</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE4</PromotionPrereq>
 			<TechPrereq>TECH_COMPULSORY_EDUCATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -15732,6 +15790,7 @@
 			<Type>PROMOTION_EDUCATE6</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE5</PromotionPrereq>
 			<TechPrereq>TECH_KNOWLEDGE_MANAGEMENT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -15750,6 +15809,7 @@
 			<Type>PROMOTION_EDUCATE7</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE6</PromotionPrereq>
 			<TechPrereq>TECH_BRAIN_MACHINE_INTERFACE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -15768,6 +15828,7 @@
 			<Type>PROMOTION_EDUCATE8</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE7</PromotionPrereq>
 			<TechPrereq>TECH_MEDIA_HIVEMIND</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -15786,6 +15847,7 @@
 			<Type>PROMOTION_EDUCATE9</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE8</PromotionPrereq>
 			<TechPrereq>TECH_EXOCORTEX_NETWORKS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -15804,6 +15866,7 @@
 			<Type>PROMOTION_EDUCATE10</Type>
 			<Description>TXT_KEY_PROMOTION_EDUCATE10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_EDUCATE9</PromotionPrereq>
 			<TechPrereq>TECH_MIND_UPLOADING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_EDUCATE</PromotionLine>
 			<iLinePriority>10</iLinePriority>
@@ -15874,6 +15937,7 @@
 			<Type>PROMOTION_MIGHT2</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT1</PromotionPrereq>
 			<TechPrereq>TECH_SEDENTARY_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -15923,6 +15987,7 @@
 			<Type>PROMOTION_MIGHT3</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT2</PromotionPrereq>
 			<TechPrereq>TECH_CLASSICAL_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -15968,6 +16033,7 @@
 			<Type>PROMOTION_MIGHT4</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT3</PromotionPrereq>
 			<TechPrereq>TECH_MEDIEVAL_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -16009,6 +16075,7 @@
 			<Type>PROMOTION_MIGHT5</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT4</PromotionPrereq>
 			<TechPrereq>TECH_RENAISSANCE_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -16046,6 +16113,7 @@
 			<Type>PROMOTION_MIGHT6</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT5</PromotionPrereq>
 			<TechPrereq>TECH_INDUSTRIAL_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -16083,6 +16151,7 @@
 			<Type>PROMOTION_MIGHT7</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT6</PromotionPrereq>
 			<TechPrereq>TECH_ATOMIC_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -16116,6 +16185,7 @@
 			<Type>PROMOTION_MIGHT8</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT7</PromotionPrereq>
 			<TechPrereq>TECH_INFORMATION_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -16149,6 +16219,7 @@
 			<Type>PROMOTION_MIGHT9</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT8</PromotionPrereq>
 			<TechPrereq>TECH_NANOTECH_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -16178,6 +16249,7 @@
 			<Type>PROMOTION_MIGHT10</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT9</PromotionPrereq>
 			<TechPrereq>TECH_TRANSHUMAN_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>10</iLinePriority>
@@ -16207,6 +16279,7 @@
 			<Type>PROMOTION_MIGHT11</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT11</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT10</PromotionPrereq>
 			<TechPrereq>TECH_GALACTIC_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>11</iLinePriority>
@@ -16232,6 +16305,7 @@
 			<Type>PROMOTION_MIGHT12</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT12</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT11</PromotionPrereq>
 			<TechPrereq>TECH_COSMIC_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>12</iLinePriority>
@@ -16257,6 +16331,7 @@
 			<Type>PROMOTION_MIGHT13</Type>
 			<Description>TXT_KEY_PROMOTION_MIGHT13</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_MIGHT12</PromotionPrereq>
 			<TechPrereq>TECH_TRANSCENDENT_LIFESTYLE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MIGHT</PromotionLine>
 			<iLinePriority>13</iLinePriority>
@@ -17201,6 +17276,7 @@
 			<Type>PROMOTION_BOUNTY_HUNTER2</Type>
 			<Description>TXT_KEY_PROMOTION_BOUNTY_HUNTER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BOUNTY_HUNTER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOUNTY_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<TechPrereq>TECH_BINDING</TechPrereq>
@@ -17212,6 +17288,7 @@
 			<Type>PROMOTION_BOUNTY_HUNTER3</Type>
 			<Description>TXT_KEY_PROMOTION_BOUNTY_HUNTER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BOUNTY_HUNTER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_BOUNTY_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<TechPrereq>TECH_BINDING</TechPrereq>
@@ -17240,6 +17317,7 @@
 			<Type>PROMOTION_HIDE_IN_SHADOWS2</Type>
 			<Description>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HIDE_IN_SHADOWS1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17257,6 +17335,7 @@
 			<Type>PROMOTION_HIDE_IN_SHADOWS3</Type>
 			<Description>TXT_KEY_PROMOTION_HIDE_IN_SHADOWS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HIDE_IN_SHADOWS2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17277,6 +17356,9 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iBlendIntoCityChange>1</iBlendIntoCityChange>
@@ -17293,9 +17375,13 @@
 			<Type>PROMOTION_FAKE_IDENTITY2</Type>
 			<Description>TXT_KEY_PROMOTION_FAKE_IDENTITY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FAKE_IDENTITY1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iBlendIntoCityChange>1</iBlendIntoCityChange>
@@ -17312,9 +17398,13 @@
 			<Type>PROMOTION_FAKE_IDENTITY3</Type>
 			<Description>TXT_KEY_PROMOTION_FAKE_IDENTITY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FAKE_IDENTITY2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ENTERTAINER</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<PromotionLine>PROMOTIONLINE_FAKE_IDENTITY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iInsidiousnessChange>6</iInsidiousnessChange>
@@ -17348,6 +17438,7 @@
 			<Type>PROMOTION_INNOCENT_MERCHANTS2</Type>
 			<Description>TXT_KEY_PROMOTION_INNOCENT_MERCHANTS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INNOCENT_MERCHANTS1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17365,6 +17456,7 @@
 			<Type>PROMOTION_INNOCENT_MERCHANTS3</Type>
 			<Description>TXT_KEY_PROMOTION_INNOCENT_MERCHANTS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INNOCENT_MERCHANTS2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17399,6 +17491,7 @@
 			<Type>PROMOTION_KEEN_EARS2</Type>
 			<Description>TXT_KEY_PROMOTION_KEEN_EARS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_KEEN_EARS1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17416,6 +17509,7 @@
 			<Type>PROMOTION_KEEN_EARS3</Type>
 			<Description>TXT_KEY_PROMOTION_KEEN_EARS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_KEEN_EARS2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17450,6 +17544,7 @@
 			<Type>PROMOTION_HAWK_EYES2</Type>
 			<Description>TXT_KEY_PROMOTION_HAWK_EYES2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HAWK_EYES1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17467,6 +17562,7 @@
 			<Type>PROMOTION_HAWK_EYES3</Type>
 			<Description>TXT_KEY_PROMOTION_HAWK_EYES3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HAWK_EYES2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17511,6 +17607,7 @@
 			<Type>PROMOTION_CROWS_NEST2</Type>
 			<Description>TXT_KEY_PROMOTION_CROWS_NEST2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CROWS_NEST1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17532,6 +17629,7 @@
 			<Type>PROMOTION_CROWS_NEST3</Type>
 			<Description>TXT_KEY_PROMOTION_CROWS_NEST3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CROWS_NEST2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17571,6 +17669,7 @@
 			<Type>PROMOTION_IDENTIFY2</Type>
 			<Description>TXT_KEY_PROMOTION_IDENTIFY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_IDENTIFY1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17589,6 +17688,7 @@
 			<Type>PROMOTION_IDENTIFY3</Type>
 			<Description>TXT_KEY_PROMOTION_IDENTIFY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_IDENTIFY2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 			</OnGameOptions>
@@ -17626,6 +17726,7 @@
 			<Type>PROMOTION_COVERT_OPERATIONS2</Type>
 			<Description>TXT_KEY_PROMOTION_COVERT_OPERATIONS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_COVERT_OPERATIONS1</PromotionPrereq>
 			<TechPrereq>TECH_INVISIBILITY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_COVERT_OPERATIONS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -17645,6 +17746,7 @@
 			<Type>PROMOTION_COVERT_OPERATIONS3</Type>
 			<Description>TXT_KEY_PROMOTION_COVERT_OPERATIONS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_COVERT_OPERATIONS2</PromotionPrereq>
 			<TechPrereq>TECH_CLOAKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_COVERT_OPERATIONS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -17784,6 +17886,7 @@
 			<Type>PROMOTION_LOW_PROFILE2</Type>
 			<Description>TXT_KEY_PROMOTION_LOW_PROFILE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LOW_PROFILE1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -17816,6 +17919,7 @@
 			<Type>PROMOTION_LOW_PROFILE3</Type>
 			<Description>TXT_KEY_PROMOTION_LOW_PROFILE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LOW_PROFILE2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -17884,6 +17988,7 @@
 			<Type>PROMOTION_SPOT2</Type>
 			<Description>TXT_KEY_PROMOTION_SPOT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SPOT1</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -17920,6 +18025,7 @@
 			<Type>PROMOTION_SPOT3</Type>
 			<Description>TXT_KEY_PROMOTION_SPOT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SPOT2</PromotionPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
 				<GameOptionType>GAMEOPTION_COMBAT_SIZE_MATTERS</GameOptionType>
@@ -17967,6 +18073,7 @@
 			<Type>PROMOTION_RED_TAPE2</Type>
 			<Description>TXT_KEY_PROMOTION_RED_TAPE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RED_TAPE1</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
@@ -17986,6 +18093,7 @@
 			<Type>PROMOTION_RED_TAPE3</Type>
 			<Description>TXT_KEY_PROMOTION_RED_TAPE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_RED_TAPE2</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
@@ -18024,6 +18132,7 @@
 			<Type>PROMOTION_CLOUT2</Type>
 			<Description>TXT_KEY_PROMOTION_CLOUT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CLOUT1</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
@@ -18043,6 +18152,7 @@
 			<Type>PROMOTION_CLOUT3</Type>
 			<Description>TXT_KEY_PROMOTION_CLOUT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CLOUT2</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_COMBAT_HIDE_SEEK</GameOptionType>
@@ -18072,6 +18182,7 @@
 			<Type>PROMOTION_CONNIVING2</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING1</PromotionPrereq>
 			<TechPrereq>TECH_LOCKS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18082,6 +18193,7 @@
 			<Type>PROMOTION_CONNIVING3</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING2</PromotionPrereq>
 			<TechPrereq>TECH_CODE_OF_LAWS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18092,6 +18204,7 @@
 			<Type>PROMOTION_CONNIVING4</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING3</PromotionPrereq>
 			<TechPrereq>TECH_USURY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18102,6 +18215,7 @@
 			<Type>PROMOTION_CONNIVING5</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING4</PromotionPrereq>
 			<TechPrereq>TECH_POLITICAL_PHILOSOPHY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18112,6 +18226,7 @@
 			<Type>PROMOTION_CONNIVING6</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING5</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -18122,6 +18237,7 @@
 			<Type>PROMOTION_CONNIVING7</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING6</PromotionPrereq>
 			<TechPrereq>TECH_URBAN_CULTURE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -18132,6 +18248,7 @@
 			<Type>PROMOTION_CONNIVING8</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING7</PromotionPrereq>
 			<TechPrereq>TECH_CYBERWARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -18142,6 +18259,7 @@
 			<Type>PROMOTION_CONNIVING9</Type>
 			<Description>TXT_KEY_PROMOTION_CONNIVING9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CONNIVING8</PromotionPrereq>
 			<TechPrereq>TECH_COMPREHENSIVE_CYBERNETICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CONNIVING</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -18162,6 +18280,7 @@
 			<Type>PROMOTION_SLEUTH2</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH1</PromotionPrereq>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18172,6 +18291,7 @@
 			<Type>PROMOTION_SLEUTH3</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH2</PromotionPrereq>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18182,6 +18302,7 @@
 			<Type>PROMOTION_SLEUTH4</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH3</PromotionPrereq>
 			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18192,6 +18313,7 @@
 			<Type>PROMOTION_SLEUTH5</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH4</PromotionPrereq>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18202,6 +18324,7 @@
 			<Type>PROMOTION_SLEUTH6</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH5</PromotionPrereq>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -18212,6 +18335,7 @@
 			<Type>PROMOTION_SLEUTH7</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH6</PromotionPrereq>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -18222,6 +18346,7 @@
 			<Type>PROMOTION_SLEUTH8</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH7</PromotionPrereq>
 			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -18232,6 +18357,7 @@
 			<Type>PROMOTION_SLEUTH9</Type>
 			<Description>TXT_KEY_PROMOTION_SLEUTH9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_SLEUTH8</PromotionPrereq>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_SLEUTH</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -18256,6 +18382,7 @@
 			<Type>PROMOTION_BACKSTAB2</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BACKSTAB1</PromotionPrereq>
 			<TechPrereq>TECH_HUNTING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18270,6 +18397,7 @@
 			<Type>PROMOTION_BACKSTAB3</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BACKSTAB2</PromotionPrereq>
 			<TechPrereq>TECH_SACRIFICE_CULT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18284,6 +18412,7 @@
 			<Type>PROMOTION_BACKSTAB4</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BACKSTAB3</PromotionPrereq>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18298,6 +18427,7 @@
 			<Type>PROMOTION_BACKSTAB5</Type>
 			<Description>TXT_KEY_PROMOTION_BACKSTAB5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BACKSTAB4</PromotionPrereq>
 			<TechPrereq>TECH_MILITARY_TRAINING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BACKSTAB</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18332,6 +18462,7 @@
 			<Type>PROMOTION_WAYLAY2</Type>
 			<Description>TXT_KEY_PROMOTION_WAYLAY2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_WAYLAY1</PromotionPrereq>
 			<TechPrereq>TECH_WARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18353,6 +18484,7 @@
 			<Type>PROMOTION_WAYLAY3</Type>
 			<Description>TXT_KEY_PROMOTION_WAYLAY3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_WAYLAY2</PromotionPrereq>
 			<TechPrereq>TECH_PIRACY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18373,6 +18505,7 @@
 			<Type>PROMOTION_WAYLAY4</Type>
 			<Description>TXT_KEY_PROMOTION_WAYLAY4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_WAYLAY3</PromotionPrereq>
 			<TechPrereq>TECH_MILITARY_TRAINING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18387,6 +18520,7 @@
 			<Type>PROMOTION_WAYLAY5</Type>
 			<Description>TXT_KEY_PROMOTION_WAYLAY5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_WAYLAY4</PromotionPrereq>
 			<TechPrereq>TECH_SURVEYING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_WAYLAY</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18414,6 +18548,7 @@
 			<Type>PROMOTION_BUSHWHACK2</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHWHACK2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BUSHWHACK1</PromotionPrereq>
 			<TechPrereq>TECH_PORTABLE_SHELTERS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18427,6 +18562,7 @@
 			<Type>PROMOTION_BUSHWHACK3</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHWHACK3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BUSHWHACK2</PromotionPrereq>
 			<TechPrereq>TECH_ARCHERY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18441,6 +18577,7 @@
 			<Type>PROMOTION_BUSHWHACK4</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHWHACK4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BUSHWHACK3</PromotionPrereq>
 			<TechPrereq>TECH_EXPLORATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18454,6 +18591,7 @@
 			<Type>PROMOTION_BUSHWHACK5</Type>
 			<Description>TXT_KEY_PROMOTION_BUSHWHACK5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_BUSHWHACK4</PromotionPrereq>
 			<TechPrereq>TECH_MAGIC</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_BUSHWHACK</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18482,6 +18620,7 @@
 			<Type>PROMOTION_POUNCE2</Type>
 			<Description>TXT_KEY_PROMOTION_POUNCE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POUNCE1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
@@ -18495,6 +18634,7 @@
 			<Type>PROMOTION_POUNCE3</Type>
 			<Description>TXT_KEY_PROMOTION_POUNCE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POUNCE2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
@@ -18509,6 +18649,7 @@
 			<Type>PROMOTION_POUNCE4</Type>
 			<Description>TXT_KEY_PROMOTION_POUNCE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POUNCE3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
@@ -18522,6 +18663,7 @@
 			<Type>PROMOTION_POUNCE5</Type>
 			<Description>TXT_KEY_PROMOTION_POUNCE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POUNCE4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_POUNCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
@@ -18549,6 +18691,7 @@
 			<Type>PROMOTION_CRACKDOWN2</Type>
 			<Description>TXT_KEY_PROMOTION_CRACKDOWN2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CRACKDOWN1</PromotionPrereq>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18563,6 +18706,7 @@
 			<Type>PROMOTION_CRACKDOWN3</Type>
 			<Description>TXT_KEY_PROMOTION_CRACKDOWN3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CRACKDOWN2</PromotionPrereq>
 			<TechPrereq>TECH_SOCIAL_CONTRACT</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18576,6 +18720,7 @@
 			<Type>PROMOTION_CRACKDOWN4</Type>
 			<Description>TXT_KEY_PROMOTION_CRACKDOWN4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CRACKDOWN3</PromotionPrereq>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18589,6 +18734,7 @@
 			<Type>PROMOTION_CRACKDOWN5</Type>
 			<Description>TXT_KEY_PROMOTION_CRACKDOWN5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CRACKDOWN4</PromotionPrereq>
 			<TechPrereq>TECH_MECHANIZED_WARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CRACKDOWN</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18671,6 +18817,7 @@
 			<Type>PROMOTION_CORRUPTION2</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION1</PromotionPrereq>
 			<TechPrereq>TECH_LOCKS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -18705,6 +18852,7 @@
 			<Type>PROMOTION_CORRUPTION3</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION2</PromotionPrereq>
 			<TechPrereq>TECH_CODE_OF_LAWS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -18739,6 +18887,7 @@
 			<Type>PROMOTION_CORRUPTION4</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION3</PromotionPrereq>
 			<TechPrereq>TECH_USURY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -18773,6 +18922,7 @@
 			<Type>PROMOTION_CORRUPTION5</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION4</PromotionPrereq>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -18807,6 +18957,7 @@
 			<Type>PROMOTION_CORRUPTION6</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION5</PromotionPrereq>
 			<TechPrereq>TECH_LABOR_UNIONS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -18841,6 +18992,7 @@
 			<Type>PROMOTION_CORRUPTION7</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION6</PromotionPrereq>
 			<TechPrereq>TECH_MASS_MEDIA</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -18875,6 +19027,7 @@
 			<Type>PROMOTION_CORRUPTION8</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION7</PromotionPrereq>
 			<TechPrereq>TECH_URBAN_CULTURE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -18909,6 +19062,7 @@
 			<Type>PROMOTION_CORRUPTION9</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION8</PromotionPrereq>
 			<TechPrereq>TECH_CYBERWARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -18943,6 +19097,7 @@
 			<Type>PROMOTION_CORRUPTION10</Type>
 			<Description>TXT_KEY_PROMOTION_CORRUPTION10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_CORRUPTION9</PromotionPrereq>
 			<TechPrereq>TECH_COMPREHENSIVE_CYBERNETICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_CORRUPTION</PromotionLine>
 			<iLinePriority>10</iLinePriority>
@@ -19012,6 +19167,7 @@
 			<Type>PROMOTION_POLICING2</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING1</PromotionPrereq>
 			<TechPrereq>TECH_DUALISM</TechPrereq>
 			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19048,6 +19204,7 @@
 			<Type>PROMOTION_POLICING3</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING2</PromotionPrereq>
 			<TechPrereq>TECH_LAW_ENFORCEMENT</TechPrereq>
 			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19084,6 +19241,7 @@
 			<Type>PROMOTION_POLICING4</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING3</PromotionPrereq>
 			<TechPrereq>TECH_WARRANTS_AND_DECREES</TechPrereq>
 			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19120,6 +19278,7 @@
 			<Type>PROMOTION_POLICING5</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING4</PromotionPrereq>
 			<TechPrereq>TECH_DEPUTIZATION</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19156,6 +19315,7 @@
 			<Type>PROMOTION_POLICING6</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING5</PromotionPrereq>
 			<TechPrereq>TECH_CRIMINOLOGY</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19192,6 +19352,7 @@
 			<Type>PROMOTION_POLICING7</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING6</PromotionPrereq>
 			<TechPrereq>TECH_VERTICAL_FLIGHT</TechPrereq>
 			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19228,6 +19389,7 @@
 			<Type>PROMOTION_POLICING8</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING7</PromotionPrereq>
 			<TechPrereq>TECH_FORENSICS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19264,6 +19426,7 @@
 			<Type>PROMOTION_POLICING9</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING8</PromotionPrereq>
 			<TechPrereq>TECH_DISASTER_ROBOTS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19300,6 +19463,7 @@
 			<Type>PROMOTION_POLICING10</Type>
 			<Description>TXT_KEY_PROMOTION_POLICING10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_POLICING9</PromotionPrereq>
 			<TechPrereq>TECH_TERRA_COMPUTER</TechPrereq>
 			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_POLICING</PromotionLine>
@@ -19367,6 +19531,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL2</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL1</PromotionPrereq>
 			<TechPrereq>TECH_FOLK_MEDICINE</TechPrereq>
 			<MinEraType>C2C_ERA_ANCIENT</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19399,6 +19564,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL3</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL2</PromotionPrereq>
 			<TechPrereq>TECH_ANCIENT_MEDICINE</TechPrereq>
 			<MinEraType>C2C_ERA_CLASSICAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19431,6 +19597,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL4</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL3</PromotionPrereq>
 			<TechPrereq>TECH_PLAGUE_MEDICINE</TechPrereq>
 			<MinEraType>C2C_ERA_MEDIEVAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19463,6 +19630,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL5</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL4</PromotionPrereq>
 			<TechPrereq>TECH_ELIXIRS_AND_TONICS</TechPrereq>
 			<MinEraType>C2C_ERA_RENAISSANCE</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19495,6 +19663,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL6</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL5</PromotionPrereq>
 			<TechPrereq>TECH_MEDICINE</TechPrereq>
 			<MinEraType>C2C_ERA_INDUSTRIAL</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19527,6 +19696,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL7</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL6</PromotionPrereq>
 			<TechPrereq>TECH_MODERN_HEALTH_CARE</TechPrereq>
 			<MinEraType>C2C_ERA_ATOMIC</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19559,6 +19729,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL8</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL7</PromotionPrereq>
 			<TechPrereq>TECH_BIOINFORMATICS</TechPrereq>
 			<MinEraType>C2C_ERA_INFORMATION</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19591,6 +19762,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL9</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL8</PromotionPrereq>
 			<TechPrereq>TECH_REGENERATIVE_MEDICINE</TechPrereq>
 			<MinEraType>C2C_ERA_NANOTECH</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19623,6 +19795,7 @@
 			<Type>PROMOTION_DISEASE_CONTROL10</Type>
 			<Description>TXT_KEY_PROMOTION_DISEASE_CONTROL10</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DISEASE_CONTROL9</PromotionPrereq>
 			<TechPrereq>TECH_HUMAN_TRANSMUTATION</TechPrereq>
 			<MinEraType>C2C_ERA_TRANSHUMAN</MinEraType>
 			<PromotionLine>PROMOTIONLINE_DISEASE_CONTROL</PromotionLine>
@@ -19673,6 +19846,7 @@
 			<Type>PROMOTION_FOMENT2</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT1</PromotionPrereq>
 			<TechPrereq>TECH_ORATORY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -19692,6 +19866,7 @@
 			<Type>PROMOTION_FOMENT3</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT2</PromotionPrereq>
 			<TechPrereq>TECH_DEMOCRACY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -19711,6 +19886,7 @@
 			<Type>PROMOTION_FOMENT4</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT3</PromotionPrereq>
 			<TechPrereq>TECH_PRINTING_PRESS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -19730,6 +19906,7 @@
 			<Type>PROMOTION_FOMENT5</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT4</PromotionPrereq>
 			<TechPrereq>TECH_POLITICAL_PHILOSOPHY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -19749,6 +19926,7 @@
 			<Type>PROMOTION_FOMENT6</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT5</PromotionPrereq>
 			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -19768,6 +19946,7 @@
 			<Type>PROMOTION_FOMENT7</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT6</PromotionPrereq>
 			<TechPrereq>TECH_URBAN_CULTURE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -19787,6 +19966,7 @@
 			<Type>PROMOTION_FOMENT8</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT7</PromotionPrereq>
 			<TechPrereq>TECH_CYBERWARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -19806,6 +19986,7 @@
 			<Type>PROMOTION_FOMENT9</Type>
 			<Description>TXT_KEY_PROMOTION_FOMENT9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FOMENT8</PromotionPrereq>
 			<TechPrereq>TECH_COMPREHENSIVE_CYBERNETICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_FOMENT</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -19834,6 +20015,7 @@
 			<Type>PROMOTION_INSPIRE2</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE1</PromotionPrereq>
 			<TechPrereq>TECH_ORATORY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
@@ -19844,6 +20026,7 @@
 			<Type>PROMOTION_INSPIRE3</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE2</PromotionPrereq>
 			<TechPrereq>TECH_DEMOCRACY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
@@ -19855,6 +20038,7 @@
 			<Type>PROMOTION_INSPIRE4</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE3</PromotionPrereq>
 			<TechPrereq>TECH_PRINTING_PRESS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
@@ -19865,6 +20049,7 @@
 			<Type>PROMOTION_INSPIRE5</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE4</PromotionPrereq>
 			<TechPrereq>TECH_POLITICAL_PHILOSOPHY</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
@@ -19875,6 +20060,7 @@
 			<Type>PROMOTION_INSPIRE6</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE5</PromotionPrereq>
 			<TechPrereq>TECH_LIBERALISM</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>6</iLinePriority>
@@ -19886,6 +20072,7 @@
 			<Type>PROMOTION_INSPIRE7</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE7</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE6</PromotionPrereq>
 			<TechPrereq>TECH_URBAN_CULTURE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>7</iLinePriority>
@@ -19896,6 +20083,7 @@
 			<Type>PROMOTION_INSPIRE8</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE8</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE7</PromotionPrereq>
 			<TechPrereq>TECH_CYBERWARFARE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>8</iLinePriority>
@@ -19906,6 +20094,7 @@
 			<Type>PROMOTION_INSPIRE9</Type>
 			<Description>TXT_KEY_PROMOTION_INSPIRE9</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_INSPIRE8</PromotionPrereq>
 			<TechPrereq>TECH_COMPREHENSIVE_CYBERNETICS</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_INSPIRE</PromotionLine>
 			<iLinePriority>9</iLinePriority>
@@ -20135,6 +20324,36 @@
 			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
 		</PromotionInfo>
 		<PromotionInfo>
+			<Type>PROMOTION_VERY_EXPERIENCED_ARTIST</Type>
+			<Description>TXT_KEY_PROMOTION_VERY_EXPERIENCED_ARTIST</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<PromotionPrereq>PROMOTION_EXPERIENCED_ARTIST</PromotionPrereq>
+			<iUpgradeDiscount>30</iUpgradeDiscount>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_ELITE_ARTIST</Type>
+			<Description>TXT_KEY_PROMOTION_ELITE_ARTIST</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
+			<TechPrereq>TECH_DUMMY</TechPrereq>
+			<PromotionPrereq>PROMOTION_VERY_EXPERIENCED_ARTIST</PromotionPrereq>
+			<iUpgradeDiscount>30</iUpgradeDiscount>
+			<UnitCombats>
+				<UnitCombat>
+					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
+					<bUnitCombat>1</bUnitCombat>
+				</UnitCombat>
+			</UnitCombats>
+			<Button>,Art/Interface/Buttons/Promotions/Mercenary.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,9</Button>
+		</PromotionInfo>
+		<PromotionInfo>
 			<Type>PROMOTION_ARMED_GUARD1</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -20167,6 +20386,7 @@
 			<Type>PROMOTION_ARMED_GUARD2</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARMED_GUARD1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -20193,6 +20413,7 @@
 			<Type>PROMOTION_ARMED_GUARD3</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARMED_GUARD2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -20219,6 +20440,7 @@
 			<Type>PROMOTION_ARMED_GUARD4</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARMED_GUARD3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -20245,6 +20467,7 @@
 			<Type>PROMOTION_ARMED_GUARD5</Type>
 			<Description>TXT_KEY_PROMOTION_ARMED_GUARD5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ARMED_GUARD4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ARMED_GUARD</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iDefenseCombatModifierChange>10</iDefenseCombatModifierChange>
@@ -20293,6 +20516,7 @@
 			<Type>PROMOTION_DECOYS2</Type>
 			<Description>TXT_KEY_PROMOTION_DECOYS2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DECOYS1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_DECOYS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -20315,6 +20539,7 @@
 			<Type>PROMOTION_DECOYS3</Type>
 			<Description>TXT_KEY_PROMOTION_DECOYS3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_DECOYS2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_DECOYS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -20365,6 +20590,7 @@
 			<Type>PROMOTION_ENCLOSE2</Type>
 			<Description>TXT_KEY_PROMOTION_ENCLOSE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ENCLOSE1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ENCLOSE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -20393,6 +20619,7 @@
 			<Type>PROMOTION_ENCLOSE3</Type>
 			<Description>TXT_KEY_PROMOTION_ENCLOSE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_ENCLOSE2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_ENCLOSE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -20435,6 +20662,7 @@
 			<Type>PROMOTION_FIGHT_THE_POWER2</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHT_THE_POWER2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FIGHT_THE_POWER1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_FIGHT_THE_POWER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -20449,6 +20677,7 @@
 			<Type>PROMOTION_FIGHT_THE_POWER3</Type>
 			<Description>TXT_KEY_PROMOTION_FIGHT_THE_POWER3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_FIGHT_THE_POWER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_FIGHT_THE_POWER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -20481,6 +20710,7 @@
 			<Type>PROMOTION_LONG_ARM2</Type>
 			<Description>TXT_KEY_PROMOTION_LONG_ARM2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LONG_ARM1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LONG_ARM</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<UnitCombatMods>
@@ -20499,6 +20729,7 @@
 			<Type>PROMOTION_LONG_ARM3</Type>
 			<Description>TXT_KEY_PROMOTION_LONG_ARM3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_LONG_ARM2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_LONG_ARM</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<UnitCombatMods>
@@ -20530,6 +20761,7 @@
 			<Type>PROMOTION_HUNTING_STRIKE2</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE2</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HUNTING_STRIKE1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<OnGameOptions>
@@ -20542,6 +20774,7 @@
 			<Type>PROMOTION_HUNTING_STRIKE3</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE3</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HUNTING_STRIKE2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<OnGameOptions>
@@ -20555,6 +20788,7 @@
 			<Type>PROMOTION_HUNTING_STRIKE4</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE4</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HUNTING_STRIKE3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<OnGameOptions>
@@ -20567,6 +20801,7 @@
 			<Type>PROMOTION_HUNTING_STRIKE5</Type>
 			<Description>TXT_KEY_PROMOTION_HUNTING_STRIKE5</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
+			<PromotionPrereq>PROMOTION_HUNTING_STRIKE4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HUNTING_STRIKE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<OnGameOptions>
@@ -20592,7 +20827,6 @@
 			<TechPrereq>TECH_TRACKING</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<bBlitz>1</bBlitz>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -20609,7 +20843,7 @@
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iLevelPrereq>5</iLevelPrereq>
-			<bRiver>1</bRiver>
+			<bRiverMoveIgnore>1</bRiverMoveIgnore>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -20633,7 +20867,8 @@
 			<PromotionLine>PROMOTIONLINE_MASTER_HUNTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iLevelPrereq>10</iLevelPrereq>
-			<bEnemyRoute>1</bEnemyRoute>
+			<bBlitz>1</bBlitz>
+			<iMoveDiscountChange>1</iMoveDiscountChange>
             <VisibilityIntensityChangeTypes>
                 <VisibilityIntensityChangeType>
                     <InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -20769,6 +21004,9 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<Button>,Art/Interface/Buttons/Promotions/ByTheHorns.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -23053,12 +23291,6 @@
 			</OnGameOptions>
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_CONCEALMENT</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<InvisibilityIntensityChangeTypes>
-				<InvisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</InvisibilityIntensityChangeType>
-			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Buttons/Promotions/Concealment1BuildUp.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>

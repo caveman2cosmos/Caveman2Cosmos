@@ -49,6 +49,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MinCityDistance", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__NextTraitCultureReqPercent", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__TechUpscaledCostsPercent", False, "LAYOUT_LEFT"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__ExpUpscaledBuildingAndUnitCostsPercent", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
@@ -92,6 +94,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxRebaseRange"), bCanAdjustSettings)
 		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__MaxUnitsPerTile"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__NationalUnitLimitInitial"), bCanAdjustSettings)
+		screen.setEnabled(self.addIntDropdown(screen, right, right, "RoMSettings__NationalUnitLimitPerEra"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TerrainDamage"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__AllowTerraforming"), bCanAdjustSettings)

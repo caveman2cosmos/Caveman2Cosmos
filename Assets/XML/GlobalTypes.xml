@@ -121,6 +121,7 @@
 		<AutomateType>AUTOMATE_CANCEL_PROMOTIONS</AutomateType>
 		<AutomateType>AUTOMATE_SHADOW</AutomateType>
 		<!--Afforess-->
+		<AutomateType>AUTOMATE_HERD</AutomateType>
 	</AutomateTypes>
 	<DirectionTypes>
 		<!--Changes must be reflected in CvEnums.h-->

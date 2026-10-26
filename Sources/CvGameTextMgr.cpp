@@ -4239,7 +4239,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int AdjustedAttWithdrawalstep2 = ((AdjustedAttWithdrawalstep1 > 100) ? 100 : AdjustedAttWithdrawalstep1);
 					int AdjustedAttWithdrawal = ((AdjustedAttWithdrawalstep2 < 0) ? 0 : AdjustedAttWithdrawalstep2);
 
-					int expectedrndcnt = iNeededRoundsDefender;
+					int expectedrndcnt = std::min(iNeededRoundsAttacker, iNeededRoundsDefender);
 					int expectedrnds = ((expectedrndcnt * iAttackerEarly) / 100);
 
 					int y = AdjustedAttWithdrawal;
@@ -4248,7 +4248,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					for (Time = 0; Time < expectedrnds; ++Time)
 					{
 						z += ((AdjustedAttWithdrawal * y) / 100);
-						y = ((AdjustedAttWithdrawal * y) / 100);
+						y = ((AdjustedAttWithdrawal * (100 - z)) / 100);
 					}
 
 					int EvaluatedAttWithdrawOdds = z;
@@ -4281,7 +4281,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int AdjustedDefWithdrawalstep2 = ((AdjustedDefWithdrawalstep1 > 100) ? 100 : AdjustedDefWithdrawalstep1);
 					int AdjustedDefWithdrawal = ((AdjustedDefWithdrawalstep2 < 0) ? 0 : AdjustedDefWithdrawalstep2);
 
-					expectedrndcnt = iNeededRoundsAttacker;
+					expectedrndcnt = std::min(iNeededRoundsAttacker, iNeededRoundsDefender);
 					expectedrnds = ((expectedrndcnt * iDefenderEarly) / 100);
 
 					y = AdjustedDefWithdrawal;
@@ -4290,7 +4290,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					for (Time = 0; Time < expectedrnds; ++Time)
 					{
 						z += ((AdjustedDefWithdrawal * y) / 100);
-						y = ((AdjustedDefWithdrawal * y) / 100);
+						y = ((AdjustedDefWithdrawal * (100 - z)) / 100);
 					}
 
 					int EvaluatedDefWithdrawalOdds = z;
@@ -4330,8 +4330,10 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						iWithdrawal += (100 - iDefenderPursuit) * iCombatOdds;
 					}
 					// TB Combat Mod next line adjusted for approximate pursuit and early withdrawal
+					// Matches the undiscounted per-round roll actually used in CvUnit::resolveCombat;
+					// the withdrawal roll fires independently of overall win odds, so no iCombatOdds scaling here.
 
-					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * (1000 - iCombatOdds);
+					iWithdrawal += std::min(100, EvaluatedAttWithdrawOdds) * 1000;
 
 					if (iWithdrawal > 0 || pAttacker->combatLimit(pDefender) < pDefender->getMaxHP())
 					{
@@ -4352,7 +4354,9 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					}
 
 					int iDefWithdrawal = 0;
-					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * (1000 - iCombatOdds);
+					// Matches the undiscounted per-round roll actually used in CvUnit::resolveCombat;
+					// the withdrawal roll fires independently of overall win odds, so no iCombatOdds scaling here.
+					iDefWithdrawal += std::min(100, EvaluatedDefWithdrawalOdds) * 1000;
 
 					if (iDefWithdrawal > 0 && GC.getGame().isModderGameOption(MODDERGAMEOPTION_DEFENDER_WITHDRAW))
 					{
@@ -10491,7 +10495,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 		if (iRate != 0)
 		{
-			szTempBuffer.Format(L"%d.%02d %c", iRate/100, iRate%100, GC.getCommerceInfo((CommerceTypes)iI).getChar());
+			CvWString szRate;
+			makeValueString(szRate, iRate);
+			szTempBuffer.Format(L"%s %c", szRate.GetCString(), GC.getCommerceInfo((CommerceTypes)iI).getChar());
 			setListHelp(szString, NEWLINE, szTempBuffer, L", ", bFirst);
 			bFirst = false;
 		}
@@ -12995,6 +13001,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	bool bIsBlitz = false;
 	bool bIsAmphib = false;
 	bool bIsRiver = false;
+	bool bIsRiverMoveIgnore = false;
 	bool bIsEnemyRoute = false;
 	bool bIsStatus = false;
 	bool bIsPrereqNormInvisible = false;
@@ -13047,6 +13054,10 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		if (promoX.isRiver())
 		{
 			bIsRiver = true;
+		}
+		if (promoX.isRiverMoveIgnore())
+		{
+			bIsRiverMoveIgnore = true;
 		}
 		if (promoX.isEnemyRoute())
 		{
@@ -13221,6 +13232,11 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_ATTACK"));
+	}
+	if (bIsRiverMoveIgnore)
+	{
+		szBuffer.append(pcNewline);
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_RIVER_MOVEMENT"));
 	}
 	if (bIsEnemyRoute)
 	{
@@ -27642,55 +27658,40 @@ void CvGameTextMgr::buildImprovementString(CvWStringBuffer &szBuffer, TechTypes 
 	PROFILE_EXTRA_FUNC();
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
-	bool bTechFound = false;
-
-	if (kBuild.getTechPrereq() == NO_TECH)
-	{
-		if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
-		{
-			foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
-			{
-				if (kTerrainStruct.ePrereqTech == eTech)
-				{
-					bTechFound = true;
-					break;
-				}
-			}
-			if (!bTechFound)
-			{
-				for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
-				{
-					if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
-					{
-						bTechFound = true;
-						break;
-					}
-				}
-			}
-		}
-	}
-	else if (kBuild.getTechPrereq() == eTech)
-	{
-		bTechFound = true;
-	}
-
-	if (bTechFound)
+	// This tech is the build's own base prereq - the build becomes available everywhere (bar per-terrain/feature gates below).
+	if (kBuild.getTechPrereq() == eTech)
 	{
 		if (bList) szBuffer.append(NEWLINE);
 
-		if (GC.getGame().getActiveTeam() != NO_TEAM)
+		if (GC.getGame().getActiveTeam() != NO_TEAM && kBuild.getObsoleteTech() != NO_TECH
+		&&	GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
 		{
-			if (kBuild.getObsoleteTech() != NO_TECH)
-			{
-				if (GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(kBuild.getObsoleteTech()))
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
-				}
-				else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
-			}
-			else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
+			szBuffer.append(gDLL->getText("TXT_KEY_TECHHELP_OBSOLETES", CvWString(kBuild.getType()).c_str(), kBuild.getTextKeyWide()));
 		}
 		else szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT", kBuild.getTextKeyWide()));
+	}
+
+	// This tech instead (or additionally) lifts a terrain/feature-specific restriction on the build - call that out explicitly
+	// so techs like Mountaineering/Surveying/Nitroglycerin don't silently unlock hard-terrain routes with no visible help text.
+	if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
+	{
+		foreach_(const TerrainStructs& kTerrainStruct, kBuild.getTerrainStructs())
+		{
+			if (kTerrainStruct.ePrereqTech == eTech)
+			{
+				if (bList) szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT_TERRAIN", kBuild.getTextKeyWide(), GC.getTerrainInfo(kTerrainStruct.eTerrain).getTextKeyWide()));
+			}
+		}
+
+		for (int iJ = 0; iJ < GC.getNumFeatureInfos(); iJ++)
+		{
+			if (kBuild.getFeatureTech((FeatureTypes)iJ) == eTech)
+			{
+				if (bList) szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_CAN_BUILD_IMPROVEMENT_TERRAIN", kBuild.getTextKeyWide(), GC.getFeatureInfo((FeatureTypes)iJ).getTextKeyWide()));
+			}
+		}
 	}
 
 	foreach_(const MapCategoryTypes eMapCategory, kBuild.getMapCategories())
@@ -27954,8 +27955,25 @@ bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eT
 {
 	CvWString szTempBuffer;
 
-	if (GC.getPromotionInfo((PromotionTypes) iPromotionType).getTechPrereq() == eTech)
+	const CvPromotionInfo& kPromotionForTechHelp = GC.getPromotionInfo((PromotionTypes) iPromotionType);
+
+	if (kPromotionForTechHelp.getTechPrereq() == eTech)
 	{
+		for (int iI = 0; iI < kPromotionForTechHelp.getNumOnGameOptions(); iI++)
+		{
+			if (!GC.getGame().isOption((GameOptionTypes)kPromotionForTechHelp.getOnGameOption(iI)))
+			{
+				return bFirst;
+			}
+		}
+		for (int iI = 0; iI < kPromotionForTechHelp.getNumNotOnGameOptions(); iI++)
+		{
+			if (GC.getGame().isOption((GameOptionTypes)kPromotionForTechHelp.getNotOnGameOption(iI)))
+			{
+				return bFirst;
+			}
+		}
+
 		if (bList && bFirst)
 		{
 			szBuffer.append(NEWLINE);

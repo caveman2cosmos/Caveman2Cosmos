@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../XML/Schema/Civ4Gametext.xsd">
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../XML/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NOMAD_AWLS</Tag>
 		<English>Awls</English>
@@ -76,5 +76,49 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NOMAD_CAMP_PEDIA</Tag>
 		<English>Nomad Camp is not yet available for use.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SELF_HEAL</Tag>
+		<English>Band Resilience</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_FORAGE_CAMP</Tag>
+		<English>Forage Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_HUNTING_CAMP</Tag>
+		<English>Hunting Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_LORE_CIRCLE</Tag>
+		<English>Lore Circle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_CAMPFIRE</Tag>
+		<English>Campfire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_SHELTER</Tag>
+		<English>Shelter</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_TRADING</Tag>
+		<English>Trading Post</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_TRAPPING</Tag>
+		<English>Snare Traps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_DRUM_CIRCLE</Tag>
+		<English>Drum Circle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_RITUAL</Tag>
+		<English>Ritual Site</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NOMAD_COOKING_PIT</Tag>
+		<English>Cooking Pit</English>
 	</TEXT>
 </Civ4GameText>

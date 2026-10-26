@@ -529,7 +529,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
@@ -538,9 +537,11 @@
 				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_BOVINAE</Type>
+			</PrereqOrHeritage>
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
 			<iCost>60</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
@@ -3410,7 +3411,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BRICK_MASON</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -3442,12 +3442,6 @@
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
-					<CommerceChanges>
-						<iCommerce>5</iCommerce>
-					</CommerceChanges>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -6607,7 +6601,7 @@
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_PEDIA</Civilopedia>
 			<iCost>200</iCost>
-            <iRevIdxLocal>-10</iRevIdxLocal>
+            <iRevIdxLocal>-20</iRevIdxLocal>
 			<CostSizeModifier>BUILDINGCOSTSIZE_HUGE</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
@@ -6617,6 +6611,7 @@
 			<bCapital>1</bCapital>
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<iMaintenanceModifier>-10</iMaintenanceModifier>
+			<iHappiness>1</iHappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
@@ -6630,6 +6625,7 @@
 			</CommerceModifiers>
             <CommerceChanges>
                 <iCommerce>5</iCommerce>
+                <iCommerce>10</iCommerce>
             </CommerceChanges>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>

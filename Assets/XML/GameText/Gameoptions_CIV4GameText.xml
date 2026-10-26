@@ -1542,38 +1542,6 @@
 		<Italian>Primo attacco avanzato e differenziazione tra combattimento a distanza e corpo a corpo tra le abilità delle unità</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS</Tag>
-		<English>Expansion - Upscaled Production Time</English>
-		<French>Expansion - Coûts des Unités et Bâtiments Augmentés</French>
-		<German>Erhöhte Kosten für Gebäude und Einheiten</German>
-		<Italian>Costi di produzione aumentati</Italian>
-		<Polish>Zwi&#234;kszone koszty jednostek i budynk&#243;w</Polish>
-		<Russian>Увеличенное время производства</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_HELP</Tag>
-		<English>Building and unit costs, as well as Worker actions time, have all been increased by 40%. This generally puts more emphasis and importance on the choices you make, particularly in relation to what a city chooses to build. Pair it with upscaled Research costs to have a longer game.</English>
-		<French>Les coûts des unités et des bâtiments sont augmentés de 40%, ainsi que le coût des actions des ouvriers. Cette option donne plus d'importance au choix dans la construction de vos villes.</French>
-		<German>Die Bau-/Trainingskosten für Gebäude und Einheiten sind um 40 % erhöht, ebenso wie die Arbeitszeit von Bautrupps etc. Mit dieser Option sollte man jegliche Bauentscheidungen wirklich genau abwägen.</German>
-		<Italian>Il costo di unità ed edifici, oltre alla lunghezza delle azioni dei lavoratori, è stato incrementato approssimativamente del 40%[NEWLINE][NEWLINE]Questo pone più enfasi ed importanza sulle scelte, in particolar modo riguardo a cosa tua città decide di costruire (abbinalo all'opzione costi di ricerca aumentati per avere un gameplay complessivamente più lungo)</Italian>
-		<Polish>Budynki i jednostki kosztuj&#185; wi&#234;cej o 40%. Generalnie zwi&#234;ksza znaczenie Twoich wybor&#243;w w mie&#156;cie.</Polish>
-		<Russian>Увеличить на 40% затраты на постройку зданий и производство подразделений, а также время необходимое рабочим для завершения. Как правило, это придаст большее значение вашим решениям, особенно в выборе того, что нужно создать в городе. При сочетании с «Твердый гранит науки», опция позволит в целом продлить игровой процесс.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS</Tag>
-		<English>Tech - Upscaled Research Time</English>
-		<French>Tech - Temps de recherche augmenté</French>
-		<Russian>Твердый гранит науки</Russian>
-		<Italian>Costi di ricerca aumentati</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_TECH_UPSCALED_COSTS_HELP</Tag>
-		<English>Technology costs have been increased by 40%. Use it if you're an experienced player and want the calendar to keep up with you. Enabling this option will result in a more relaxed game. Pair this with upscaled building and unit costs to have a longer game.</English>
-		<French>Les coûts technologiques ont augmenté de 40%. Utilisez-le si vous êtes un joueur expérimenté et que vous souhaitez que le calendrier vous suive. Cette option à elle seule entraînera un jeu globalement détendu. Associez-le à des coûts de construction et unitaires améliorés pour un gameplay globalement plus long.</French>
-		<Russian>Увеличить на 40% затраты на изучение технологий. Используйте это, если вы опытный игрок и хотите, чтобы календарь не отставал от вас. В одиночку эта опция приведет к, в целом, более расслабленной игре. Объедините ее с «Увеличенное время производства», чтобы получить потенциально более длительный игровой процесс.</Russian>
-		<Italian>I costi della ricerca di tecnologie sono stati aumentati del 40%, per i giocatori esperti che vogliono avere più tempo tra le ricerche[NEWLINE][NEWLINE]Questa opzione da sola si tradurrà in un gioco complessivamente rilassato, abbinata a "costi di produzione aumentati" produrrà un gameplay complessivamente più lungo)</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_COMBAT_VANILLA_ENGINE</Tag>
 		<English>Combat - Vanilla BTS Combat Engine</English>
 		<French>Combat - Moteur de Combat d'origine</French>
@@ -1706,50 +1674,50 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25</Tag>
 		<English>Decreases AI building cost by 25%</English>
-		<French>Avancé - Coût réaliste des bâtiments</French>
-		<Russian>Правдоподобные затраты на строительство</Russian>
+		<French>Réduit le coût de construction de l'IA de 25%</French>
+		<Russian>Снижает стоимость строительства зданий для ИИ на 25%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_25_HELP</Tag>
 		<English>Decreases AI building cost by 25% stacks with the 50% option</English>
-		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
-		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+		<French>Réduit le coût de construction de l'IA de 25%, cumulable avec l'option 50%.</French>
+		<Russian>Снижает стоимость строительства зданий для ИИ на 25%, суммируется с опцией 50%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50</Tag>
 		<English>Decreases AI building cost by 50%</English>
-		<French>Avancé - Coût réaliste des bâtiments</French>
-		<Russian>Правдоподобные затраты на строительство</Russian>
+		<French>Réduit le coût de construction de l'IA de 50%</French>
+		<Russian>Снижает стоимость строительства зданий для ИИ на 50%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BUILDING_COST_AI_50_HELP</Tag>
 		<English>Decreases AI building cost by 25% stacks with the 50% option</English>
-		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
-		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+		<French>Réduit le coût de construction de l'IA de 50%, cumulable avec l'option 25%.</French>
+		<Russian>Снижает стоимость строительства зданий для ИИ на 50%, суммируется с опцией 25%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25</Tag>
 		<English>Decreases AI unit cost by 25%</English>
-		<French>Avancé - Coût réaliste des bâtiments</French>
-		<Russian>Правдоподобные затраты на строительство</Russian>
+		<French>Réduit le coût des unités de l'IA de 25%</French>
+		<Russian>Снижает стоимость юнитов для ИИ на 25%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_25_HELP</Tag>
 		<English>Decreases AI unit cost by 25% stacks with the 50% option</English>
-		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
-		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+		<French>Réduit le coût des unités de l'IA de 25%, cumulable avec l'option 50%.</French>
+		<Russian>Снижает стоимость юнитов для ИИ на 25%, суммируется с опцией 50%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50</Tag>
 		<English>Decreases AI unit cost by 50%</English>
-		<French>Avancé - Coût réaliste des bâtiments</French>
-		<Russian>Правдоподобные затраты на строительство</Russian>
+		<French>Réduit le coût des unités de l'IA de 50%</French>
+		<Russian>Снижает стоимость юнитов для ИИ на 50%</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNIT_COST_AI_50_HELP</Tag>
 		<English>Decreases AI unit cost by 25% stacks with the 50% option</English>
-		<French>Modifie les coûts des bâtiments pour mieux refléter leur taille, complexité et coût en matériaux.</French>
-		<Russian>Изменить расходы на постройку зданий, чтобы более точно отразить комплексность их конструкции и стоимость материалов.</Russian>
+		<French>Réduit le coût des unités de l'IA de 50%, cumulable avec l'option 25%.</French>
+		<Russian>Снижает стоимость юнитов для ИИ на 50%, суммируется с опцией 25%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALTIME_EVENT_LOGGING</Tag>
@@ -1762,6 +1730,14 @@
 		<English>Generates a real-time event log file (realtimeevents.log) in the mod directory. This can be viewed live in an external web browser using the RealtimeEventsViewer.html page.</English>
 		<French>Génère un fichier de journal d'événements en temps réel (realtimeevents.log). Il peut être visualisé en direct via la page RealtimeEventsViewer.html.</French>
 		<Russian>Создает файл журнала событий в реальном времени (realtimeevents.log). Его можно просматривать в браузере с помощью страницы RealtimeEventsViewer.html.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NOMADIC_START</Tag>
+		<English>[BETA] Nomadic Start</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NOMADIC_START_HELP</Tag>
+		<English>Civs start without a Settler and cannot found a city until Sedentary Lifestyle is researched. Instead you begin with a Nomad Camp unit that can found a city once eligible.[NEWLINE][NEWLINE]This is an experimental/beta feature: the AI has not been adapted for it and may behave unpredictably. Recommended for human-only testing.</English>
 	</TEXT>
 </Civ4GameText>
 

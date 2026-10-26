@@ -289,7 +289,10 @@ void CvSelectionGroup::doTurn()
 
 		if (AI_isControlled())
 		{
-			if ((getActivityType() != ACTIVITY_MISSION) || (!canDefend() && (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))))
+			if ((getActivityType() != ACTIVITY_MISSION)
+			|| (!canDefend()
+			&& (!headMissionQueueNode() || headMissionQueueNode()->m_data.eMissionType != MISSION_BUILD)
+			&& (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))))
 			{
 				setForceUpdate(true);
 			}
@@ -298,7 +301,9 @@ void CvSelectionGroup::doTurn()
 		{
 			foreach_(const CvUnit* pLoopUnit, units() | filtered(!CvUnit::fn::isSpy()))
 			{
-				if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
+				if (pLoopUnit->getBuildType() == NO_BUILD
+				&& (headMissionQueueNode() == NULL || headMissionQueueNode()->m_data.eMissionType != MISSION_ROUTE_TO)
+				&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
 				{
 					clearMissionQueue();
 				}
@@ -575,6 +580,8 @@ void CvSelectionGroup::autoMission()
 	if (getNumUnits() > 0 && headMissionQueueNode() && !isBusy())
 	{
 		if (isHuman()
+		&& headMissionQueueNode()->m_data.eMissionType != MISSION_BUILD
+		&& headMissionQueueNode()->m_data.eMissionType != MISSION_ROUTE_TO
 		&& algo::any_of(units(), !CvUnit::fn::alwaysInvisible())
 		&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
 		{
@@ -652,9 +659,8 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	{
 		pPlot = plot();
 	}
-#ifdef NOMADIC_START
+	const bool bNomadicStart = GC.getGame().isOption(GAMEOPTION_NOMADIC_START);
 	const TechTypes sedentaryLifestyle = GC.getTECH_SEDENTARY_LIFESTYLE();
-#endif
 	foreach_(CvUnit* unitX, units())
 	{
 		switch (iMission)
@@ -896,12 +902,10 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_FOUND:
 			{
-#ifdef NOMADIC_START
-				if (!GET_TEAM(unitX->getTeam()).isHasTech(sedentaryLifestyle))
+				if (bNomadicStart && !GET_TEAM(unitX->getTeam()).isHasTech(sedentaryLifestyle))
 				{
 					return false;
 				}
-#endif
 				if (unitX->canFound(pPlot, bTestVisible))
 				{
 					return true;
@@ -1210,6 +1214,14 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				}
 				break;
 			}
+			case MISSION_HUNT:
+			{
+				if (unitX->canHunt(pPlot))
+				{
+					return true;
+				}
+				break;
+			}
 			default: // AIAndy: Assumed to be an outcome mission
 			{
 				const CvOutcomeMission* pOutcomeMission = unitX->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
@@ -1383,6 +1395,7 @@ bool CvSelectionGroup::startMission()
 #endif
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
+			case MISSION_HUNT:
 			{
 				bDelete = true;
 				bCycle = false;
@@ -1482,6 +1495,18 @@ bool CvSelectionGroup::startMission()
 							{
 								pBestUnit = pLoopUnit;
 								iBestUnitValue = iUnitValue2;
+							}
+						}
+						break;
+
+					case MISSION_HUNT:
+						if (pLoopUnit->canHunt(plot()))
+						{
+							const int iUnitValue3 = pLoopUnit->AI_attackOdds(plot(), false, 0, false);
+							if (iUnitValue3 >= iBestUnitValue)
+							{
+								pBestUnit = pLoopUnit;
+								iBestUnitValue = iUnitValue3;
 							}
 						}
 						break;
@@ -1929,6 +1954,14 @@ bool CvSelectionGroup::startMission()
 						case MISSION_AMBUSH:
 						{
 							if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(false))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_HUNT:
+						{
+							if (pLoopUnit == pBestUnit && pLoopUnit->doHunt())
 							{
 								bAction = true;
 							}
@@ -3764,36 +3797,50 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 		&& (bCombat ? unitX->canEnterOrAttackPlot(pPlot) : unitX->canEnterPlot(pPlot)))
 		{
 			unitX->move(pPlot, true);
+			GC.stuckUnitMoveCounts.erase(unitX->getID());
 		}
 		else
 		{
 			unitX->joinGroup(NULL, true);
 			unitX->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 
-			// Afforess - Units Seem to be getting stuck here
-			if (GC.iStuckUnitID != unitX->getID())
+			// The pathfinder's terminus check (ContextFreeNewPathValidFunc) always treats a
+			// path's final plot as enterable, even with a visible enemy there, so a legitimate
+			// attack-capable move isn't rejected before combat gets a say. But a plain,
+			// non-combat move's canEnterPlot() correctly refuses to walk into a plot with a
+			// visible enemy. So if an enemy shows up at our destination between planning and
+			// arrival, the path still looks perfectly "valid" (the terminus check never looked
+			// for an enemy to begin with), re-pathing produces the exact same route, and the
+			// unit would otherwise just keep retrying the same stale order forever. Recognize
+			// this specific, identifiable cause immediately - entry would succeed if attacking
+			// were allowed - and abandon the mission so the unit's AI re-decides fresh next
+			// pass (attack, reroute, wait...) instead of blindly repeating a move that can
+			// never complete.
+			if (!bCombat && unitX->canEnterOrAttackPlot(pPlot))
 			{
-				GC.iStuckUnitID = unitX->getID();
-				GC.iStuckUnitCount = 0;
+				clearMissionQueue();
+				GC.stuckUnitMoveCounts.erase(unitX->getID());
 			}
-			else
+			// Afforess - Units Seem to be getting stuck here
+			// Tracked per unit ID (not a single shared counter) - a shared counter let any
+			// other unit hitting this branch in between reset an unrelated unit's progress,
+			// so a genuinely stuck unit could go indefinitely without ever reaching the
+			// finishMoves() escape below.
+			else if (++GC.stuckUnitMoveCounts[unitX->getID()] > 5)
 			{
-				GC.iStuckUnitCount++;
-				if (GC.iStuckUnitCount > 5)
+				FErrorMsg("Unit Stuck in Loop!");
+				const CvUnit* pHeadUnit = getHeadUnit();
+				if (NULL != pHeadUnit)
 				{
-					FErrorMsg("Unit Stuck in Loop!");
-					const CvUnit* pHeadUnit = getHeadUnit();
-					if (NULL != pHeadUnit)
-					{
-						char szOut[1024];
-						CvWString szTempString;
-						getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-						sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-							pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
-						gDLL->messageControlLog(szOut);
-					}
-					unitX->finishMoves();
+					char szOut[1024];
+					CvWString szTempString;
+					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+					sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+					gDLL->messageControlLog(szOut);
 				}
+				unitX->finishMoves();
+				GC.stuckUnitMoveCounts.erase(unitX->getID());
 			}
 		}
 	}

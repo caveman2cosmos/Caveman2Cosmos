@@ -19,6 +19,7 @@ class CvSelectionGroup;
 class CvArtInfoUnit;
 class CvUnitInfo;
 class CvUnitSelectionCriteria;
+class CvOutcomeList;
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
@@ -651,6 +652,8 @@ public:
 	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
 	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const;
 
+	int shareSpotterXP(CvUnit* pDefender, int iExperience);
+
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
 	int getTerrainProtectedCount(TerrainTypes eIndex) const;
@@ -696,6 +699,7 @@ public:
 	bool canHeal(const CvPlot* pPlot) const;
 	bool canSentry(const CvPlot* pPlot) const;
 
+	bool canHealOutsideFriendlyTerritory(const CvPlot* pPlot) const;
 	int healRate(const CvPlot* pPlot, bool bHealCheck = false) const;
 	int getHealRateAsType(const CvPlot* pPlot, bool bHealCheck = false, UnitCombatTypes eHealAsType = NO_UNITCOMBAT) const;
 	int healTurns(const CvPlot* pPlot) const;
@@ -804,6 +808,7 @@ public:
 	bool greatWork();
 
 	bool doOutcomeMission(MissionTypes eMission);
+	const CvOutcomeList* getOutcomeListForMission(MissionTypes eMission) const;
 
 	int getEspionagePoints() const;
 	bool canInfiltrate() const;
@@ -1153,6 +1158,10 @@ public:
 	int getRiverCount() const;
 	bool isRiver() const;
 	void changeRiverCount(int iChange);
+
+	int getRiverMoveIgnoreCount() const;
+	bool isRiverMoveIgnore() const;
+	void changeRiverMoveIgnoreCount(int iChange);
 
 	int getEnemyRouteCount() const;
 	bool isEnemyRoute() const;
@@ -1790,6 +1799,7 @@ protected:
 	int m_iRBombardForceAbilityCount;
 	int m_iAmphibCount;
 	int m_iRiverCount;
+	int m_iRiverMoveIgnoreCount;
 	int m_iEnemyRouteCount;
 	int m_iAlwaysHealCount;
 	int m_iHillsDoubleMoveCount;
@@ -2551,6 +2561,7 @@ public:
 
 	int eraGroupMergeLimit() const;
 	int eraGroupSplitLimit() const;
+	void applyPreMergeRank();
 
 	DomainTypes getDomainCargo() const;
 	void setNewDomainCargo(DomainTypes eDomain);
@@ -2822,6 +2833,9 @@ public:
 	bool canAmbush(const CvPlot* pPlot, bool bAssassinate = false) const;
 	bool doAmbush(bool bAssassinate = false);
 	void enactAmbush(bool bAssassinate = false, CvUnit* pSelectedDefender = NULL);
+
+	bool canHunt(const CvPlot* pPlot) const;
+	bool doHunt();
 
 	void changeDebugCount(int iChange);
 	void setDebugCount(int iValue);

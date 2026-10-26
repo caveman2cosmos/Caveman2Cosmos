@@ -270,7 +270,7 @@ def onSetPlayerAlive(argsList):
 		try:
 			GAME.setAIAutoPlay(iPlayerID, 1)
 			#ChangePlayer.changeHumanPopup(True)
-		except: pass
+		except Exception: pass
 
 
 def onChangeWar(argsList):

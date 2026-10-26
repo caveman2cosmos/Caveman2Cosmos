@@ -23,4 +23,19 @@
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
+	<Define>
+		<!-- Tech Diffusion: Extra knownExp weight granted per contact when our capital is actually trade-network connected to theirs (roads/harbors), on top of the open borders weight. -->
+		<DefineName>TECH_DIFFUSION_TRADE_CONNECTED_BONUS</DefineName>
+		<fDefineFloatVal>1.5</fDefineFloatVal>
+	</Define>
+	<Define>
+		<!-- Tech Diffusion: knownExp value that represents "fully substantiated contact" for welfare purposes; welfare's magnitude scales linearly with knownExp up to this value instead of being a flat on/off gate. -->
+		<DefineName>TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM</DefineName>
+		<fDefineFloatVal>3.5</fDefineFloatVal>
+	</Define>
+	<Define>
+		<!-- Tech Diffusion: Maximum multiplier welfare's score-gap ratio (bestScore / ourScore) can apply. -->
+		<DefineName>TECH_DIFFUSION_WELFARE_RATIO_CAP</DefineName>
+		<fDefineFloatVal>3.0</fDefineFloatVal>
+	</Define>
 </Civ4Defines>

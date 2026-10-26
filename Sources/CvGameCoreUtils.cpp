@@ -3168,7 +3168,8 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 		{
 			const int iGroupAreaID = pSelectionGroup->getArea();
 
-			if (pToPlot->getArea() != iGroupAreaID && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isAdjacentToArea(iGroupAreaID))
+			if (pToPlot->getArea() != iGroupAreaID && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isAdjacentToArea(iGroupAreaID)
+			&& !pToPlot->isAreaConnectedViaSeaTunnel(iGroupAreaID))
 			{
 				return false;
 			}
@@ -4212,6 +4213,7 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_HEAL_BUILDUP: szString = L"MISSION_HEAL_BUILDUP"; break;
 	case MISSION_AMBUSH: szString = L"MISSION_AMBUSH"; break;
 	case MISSION_ASSASSINATE: szString = L"MISSION_ASSASSINATE"; break;
+	case MISSION_HUNT: szString = L"MISSION_HUNT"; break;
 	case MISSION_ENTERTAIN_CITY: szString = L"MISSION_ENTERTAIN_CITY"; break;
 	case MISSION_HURRY_PRODUCTION_CARAVAN: szString = L"MISSION_HURRY_PRODUCTION_CARAVAN"; break;
 	case MISSION_CAPTIVE_UPGRADE_TO_SETTLER: szString = L"MISSION_CAPTIVE_UPGRADE_TO_SETTLER"; break;
@@ -4817,6 +4819,7 @@ CvString AutomateTypeToDescription(AutomateTypes eAutomateAI)
 	case AUTOMATE_PROMOTIONS:      return "Apply promotions";
 	case AUTOMATE_CANCEL_PROMOTIONS:return "Cancel promotions";
 	case AUTOMATE_SHADOW:          return "Shadow enemy units";
+	case AUTOMATE_HERD:            return "Seek pasture to build a herd";
 	default:                       return "---";
 	}
 }

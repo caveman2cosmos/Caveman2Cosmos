@@ -220,6 +220,16 @@
 			</FeatureStructs>
 			<TerrainStructs>
 				<TerrainStruct>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<PrereqTech>TECH_WEATHER_FORECASTING</PrereqTech>
+					<iTime>0</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
 					<TerrainType>TERRAIN_HILL</TerrainType>
 					<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
 					<iTime>0</iTime>
@@ -472,6 +482,7 @@
 			</TerrainStructs>
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
+			<bAltDown>1</bAltDown>
 			<Button>Art/Interface/Buttons/Builds/BuildRoad.dds</Button>
 		</BuildInfo>
 		<!-- Mud Path << Railroad -->

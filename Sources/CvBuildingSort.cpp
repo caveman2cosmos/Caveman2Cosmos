@@ -15,7 +15,7 @@
 #include "CvGlobals.h"
 #include "CvPlayer.h"
 
-bool BuildingSortBase::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
+bool BuildingSortBase::isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2) const
 {
 	int iVal1;
 	int iVal2;

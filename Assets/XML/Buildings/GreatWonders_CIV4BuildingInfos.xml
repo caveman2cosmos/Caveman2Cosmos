@@ -6683,7 +6683,6 @@
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_MINE_IRON</BuildingType>
 				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
@@ -12991,16 +12990,17 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_BOVINAE</Type>
+			</PrereqOrHeritage>
 			<iCost>1038</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_HUGE</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>

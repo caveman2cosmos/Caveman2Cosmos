@@ -72412,7 +72412,7 @@
 			<fScale>0.39</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Units/unique/taureg/TauregCamel/TuaregCamelRider.nif</NIF>
-			<KFM>Art/Units/Camel_Rider/camelrider.kfm</KFM>
+			<KFM>Art/Units/unique/taureg/TauregCamel/camelrider.kfm</KFM>
 			<SHADERNIF>Art/Units/unique/taureg/TauregCamel/TuaregCamelRider.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>

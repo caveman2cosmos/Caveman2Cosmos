@@ -306,6 +306,18 @@
 		<French>Culture dominante</French>
 		<Italian>Cultura dominante</Italian>
 	</TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ARMOR_TYPES</Tag>
+        <English>Types of armor</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ARMOR_MATERIAL</Tag>
+        <English>Material of armor</English>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SHIELD_MATERIAL</Tag>
+        <English>Material of shield</English>
+    </TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_TYPES</Tag>
 		<English>Armor Type</English>

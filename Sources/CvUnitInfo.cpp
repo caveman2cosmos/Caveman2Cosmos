@@ -297,6 +297,7 @@ m_bOnslaught(false),
 m_bDealsColdDamage(false),
 m_bColdImmune(false),
 m_bAttackOnlyCities(false),
+m_bOnlyAttackAnimals(false),
 m_bIgnoreNoEntryLevel(false),
 m_bIgnoreZoneofControl(false),
 m_bFliesToMove(false),
@@ -309,6 +310,7 @@ m_bBarbCoExist(false),
 m_bBlendIntoCity(false),
 m_bUpgradeAnywhere(false),
 m_bAssassin(false),
+m_bNoAmbush(false),
 m_bStealthDefense(false),
 m_bNoInvisibility(false),
 m_bTriggerBeforeAttack(false),
@@ -2368,6 +2370,11 @@ bool CvUnitInfo::isAttackOnlyCities() const
 	return m_bAttackOnlyCities;
 }
 
+bool CvUnitInfo::isOnlyAttackAnimals() const
+{
+	return m_bOnlyAttackAnimals;
+}
+
 bool CvUnitInfo::isIgnoreNoEntryLevel() const
 {
 	return m_bIgnoreNoEntryLevel;
@@ -2426,6 +2433,11 @@ bool CvUnitInfo::isUpgradeAnywhere() const
 bool CvUnitInfo::isAssassin() const
 {
 	return m_bAssassin;
+}
+
+bool CvUnitInfo::isNoAmbush() const
+{
+	return m_bNoAmbush;
 }
 
 bool CvUnitInfo::isStealthDefense() const
@@ -3850,6 +3862,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bDealsColdDamage);
 	CheckSum(iSum, m_bColdImmune);
 	CheckSum(iSum, m_bAttackOnlyCities);
+	CheckSum(iSum, m_bOnlyAttackAnimals);
 	CheckSum(iSum, m_bIgnoreNoEntryLevel);
 	CheckSum(iSum, m_bIgnoreZoneofControl);
 	CheckSum(iSum, m_bFliesToMove);
@@ -3862,6 +3875,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bBlendIntoCity);
 	CheckSum(iSum, m_bUpgradeAnywhere);
 	CheckSum(iSum, m_bAssassin);
+	CheckSum(iSum, m_bNoAmbush);
 	CheckSum(iSum, m_bStealthDefense);
 	CheckSum(iSum, m_bNoInvisibility);
 	CheckSum(iSum, m_bTriggerBeforeAttack);
@@ -4529,6 +4543,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bDealsColdDamage, L"bDealsColdDamage");
 	pXML->GetOptionalChildXmlValByName(&m_bColdImmune, L"bColdImmune");
 	pXML->GetOptionalChildXmlValByName(&m_bAttackOnlyCities, L"bAttackOnlyCities");
+	pXML->GetOptionalChildXmlValByName(&m_bOnlyAttackAnimals, L"bOnlyAttackAnimals");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreNoEntryLevel, L"bIgnoreNoEntryLevel");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreZoneofControl, L"bIgnoreZoneofControl");
 	pXML->GetOptionalChildXmlValByName(&m_bFliesToMove, L"bFliesToMove");
@@ -4541,6 +4556,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bBlendIntoCity, L"bBlendIntoCity");
 	pXML->GetOptionalChildXmlValByName(&m_bUpgradeAnywhere, L"bUpgradeAnywhere");
 	pXML->GetOptionalChildXmlValByName(&m_bAssassin, L"bAssassin");
+	pXML->GetOptionalChildXmlValByName(&m_bNoAmbush, L"bNoAmbush");
 	pXML->GetOptionalChildXmlValByName(&m_bStealthDefense, L"bStealthDefense");
 	pXML->GetOptionalChildXmlValByName(&m_bNoInvisibility, L"bNoInvisibility");
 	pXML->GetOptionalChildXmlValByName(&m_bTriggerBeforeAttack, L"bTriggerBeforeAttack");
@@ -5518,6 +5534,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bDealsColdDamage == bDefault ) m_bDealsColdDamage = pClassInfo->isDealsColdDamage();
 	if ( m_bColdImmune == bDefault ) m_bColdImmune = pClassInfo->isColdImmune();
 	if ( m_bAttackOnlyCities == bDefault ) m_bAttackOnlyCities = pClassInfo->isAttackOnlyCities();
+	if ( m_bOnlyAttackAnimals == bDefault ) m_bOnlyAttackAnimals = pClassInfo->isOnlyAttackAnimals();
 	if ( m_bIgnoreNoEntryLevel == bDefault ) m_bIgnoreNoEntryLevel = pClassInfo->isIgnoreNoEntryLevel();
 	if ( m_bIgnoreZoneofControl == bDefault ) m_bIgnoreZoneofControl = pClassInfo->isIgnoreZoneofControl();
 	if ( m_bFliesToMove == bDefault ) m_bFliesToMove = pClassInfo->isFliesToMove();
@@ -5530,6 +5547,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bBlendIntoCity == bDefault ) m_bBlendIntoCity = pClassInfo->isBlendIntoCity();
 	if ( m_bUpgradeAnywhere == bDefault ) m_bUpgradeAnywhere = pClassInfo->isUpgradeAnywhere();
 	if ( m_bAssassin == bDefault ) m_bAssassin = pClassInfo->isAssassin();
+	if ( m_bNoAmbush == bDefault ) m_bNoAmbush = pClassInfo->isNoAmbush();
 	if ( m_bStealthDefense == bDefault ) m_bStealthDefense = pClassInfo->m_bStealthDefense;
 	if ( m_bNoInvisibility == bDefault ) m_bNoInvisibility = pClassInfo->isNoInvisibility();
 	if ( m_bTriggerBeforeAttack == bDefault ) m_bTriggerBeforeAttack = pClassInfo->isTriggerBeforeAttack();

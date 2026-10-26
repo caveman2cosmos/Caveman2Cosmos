@@ -1065,7 +1065,7 @@ void CvCityAI::AI_chooseProduction()
 	const int iPlotCityDefenderCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, eOwner, NO_TEAM, NULL, -1, -1, 2);
 	const int iPlotOtherCityAICount = plot()->plotCount(PUF_canDefend, -1, -1, NULL, eOwner, NO_TEAM, PUF_isCityAIType, -1, -1, 2);
 
-	const int iPlotSettlerEscortCityDefenseCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, eOwner) - (AI_minDefenders() + 1);
+	const int iPlotSettlerEscortCityDefenseCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_DEFENSE, -1, NULL, eOwner) - (AI_minDefenders() + 1);
 	const int iPlotSettlerEscortCounterCount = plot()->plotCount(PUF_isUnitAIType, UNITAI_CITY_COUNTER, -1, NULL, eOwner);
 	const int iPlotSettlerEscortCount = iPlotSettlerEscortCityDefenseCount + iPlotSettlerEscortCounterCount;
 
@@ -9092,7 +9092,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 			}
 		}
 	}
-	return (*eBestSpreadUnit != NULL);
+	return (*eBestSpreadUnit != NO_UNIT);
 }
 
 bool CvCityAI::AI_chooseBuilding(int iFocusFlags, int iMaxTurns, int iMinThreshold, int iOdds, bool bMaximizeFlaggedValue, PropertyTypes eProperty)
@@ -14768,7 +14768,7 @@ bool CvCityAI::AI_choosePropertyControlBuildingAndUnit(int iTriggerPercentOfProp
 				iCheck *= iTrainReluctance;
 				//TBNote: May still need to take a count of units ordered... there's only so many units the AI should be willing to train at once for some tasks.  I'm thinking of polution control here.
 				int iAcceptanceLimit = 100 * ((1 + (int)player.getCurrentEra())/2); //Acceptable Value 
-				int iAcceptanceRate = iCurrentValue/100 * 5; //Accept a 5% rate increase
+				int iAcceptanceRate = iCurrentValue * 5/100; //Accept a 5% rate increase
 
 				//Calvitix : Evaluate the future evolution of the property, with actuel change, and estimate the number of turn to achieve goal 
 				#define MIN_PROPERTY_TOTAL_TO_DEAL_WITH  -1000
@@ -15441,7 +15441,7 @@ const {
 
 			if (kBuilding.getGlobalYieldModifier(iI) > 0 || kBuilding.getAreaYieldModifier(iI) > 0)
 			{
-				foreach_(const CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+				foreach_(const CvCity * pLoopCity, kOwner.cities())
 				{
 					iGlobalYieldModValue +=
 					(

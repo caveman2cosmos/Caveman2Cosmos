@@ -43,13 +43,13 @@ public:
 	// Returns the value of eBuilding in the sorting category
 	virtual int getBuildingValue(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding) const = 0;
 	// Returns if eBuilding1 is before eBuilding2, default for the value based sorts is greater first
-	virtual bool isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2);
+	virtual bool isLesserBuilding(const CvPlayer* pPlayer, CvCity* pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2) const;
 	bool isInverse() const;
 	bool setInverse(bool bInvert);
 	void deleteCache();
 protected:
 	bool m_bInvert;
-	stdext::hash_map<BuildingTypes, int> m_mapValueCache;
+	mutable stdext::hash_map<BuildingTypes, int> m_mapValueCache;
 };
 
 class BuildingSortCommerce : public BuildingSortBase

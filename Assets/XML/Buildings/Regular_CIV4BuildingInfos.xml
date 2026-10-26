@@ -10,6 +10,12 @@
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
             </MapCategoryTypes>
+            <Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-250</iPropertyValue>
+				</Property>
+			</Properties>
             <bNukeImmune>1</bNukeImmune>
             <bAutoBuild>1</bAutoBuild>
             <bNeverCapture>1</bNeverCapture>
@@ -2426,36 +2432,17 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>45</iCommerce>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>40</iYield>
+				<iYield>15</iYield>
+				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BORAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BRICKS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CEMENT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CHALK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CINNABAR_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -2467,43 +2454,7 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FOSSILS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HAEMATITE_ORE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OBSIDIAN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEAT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTASH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUMICE_STONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PYRITE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_SAND</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3235,47 +3186,20 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<YieldChanges>
-				<iYield>60</iYield>
-				<iYield>70</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>75</iCommerce>
-				<iCommerce>170</iCommerce>
-				<iCommerce>130</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<iHappiness>14</iHappiness>
-			<iHealth>4</iHealth>
+			<iHappiness>1</iHappiness>
+			<iHealth>1</iHealth>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BAMBOO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BARK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BUGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GRASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_REEDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_STRAW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VINES</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -3283,22 +3207,13 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<VicinityBonusYieldChanges>
-				<BonusYieldChange>
-					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</BonusYieldChange>
-			</VicinityBonusYieldChanges>
 			<iAsset>3</iAsset>
 			<iPower>1</iPower>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-					<iAmountPerTurn>-25</iAmountPerTurn>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4109,9 +4024,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<TechTypes>
@@ -5927,9 +5840,7 @@
 				<VicinityBonus>BONUS_SHEEP</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -5971,9 +5882,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -7915,35 +7824,51 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>2</iHealth>
-			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
-			</CommerceChanges>
-			<BonusCommercePercentChanges>
-				<BonusCommercePercentChange>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<VicinityBonusYieldChanges>
+			    <BonusYieldChange>
 					<BonusType>BONUS_OPIUM</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_PEYOTE</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_HEMP</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_COCOA</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-			</BonusCommercePercentChanges>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_COCA</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -8820,14 +8745,13 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<iHealth>1</iHealth>
-			<iHappiness>14</iHappiness>
 			<YieldChanges>
-				<iYield>20</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>50</iCommerce>
-				<iCommerce>160</iCommerce>
-				<iCommerce>115</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<iAsset>6</iAsset>
 			<iPower>3</iPower>
@@ -10433,9 +10357,7 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>1</iHealth>
-			<CommerceChanges>
-				<iCommerce>-6</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>24</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -10469,16 +10391,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PARROTS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -10520,11 +10438,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -13092,16 +13005,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BAMBOO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -13259,10 +13168,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WEAVING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -14193,7 +14098,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -14201,6 +14106,32 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<VicinityBonusYieldChanges>
+				<BonusYieldChange>
+					<BonusType>BONUS_HEMP_FIBERS</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_FLAX_FIBERS</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BAMBOO</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
@@ -16620,9 +16551,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -17560,16 +17489,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_KANGAROO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -18127,9 +18052,7 @@
 			<PrereqTech>TECH_SALT_PROCESSING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_SALT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_STONE</VicinityBonus>
@@ -18616,10 +18539,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
@@ -20402,9 +20321,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
 				<Bonus>BONUS_FINE_CLAY</Bonus>
@@ -20456,7 +20373,6 @@
 			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_FACTORY_BRICKS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
 			</ReplacementBuildings>
 			<iCost>153</iCost>
@@ -21046,7 +20962,6 @@
 				<BuildingType>BUILDING_CAMP_GIANT_BISON</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CITY_PLANNING</ObsoleteTech>
@@ -22038,16 +21953,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FLAX</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -22089,11 +22000,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -22715,9 +22621,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -22775,7 +22679,6 @@
 				<BuildingType>BUILDING_FARM_ANIMAL_CAMEL</BuildingType>
 				<BuildingType>BUILDING_HERD_CAMEL</BuildingType>
 				<BuildingType>BUILDING_CENTRAL_BREEDER_CAMEL</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>160</iCost>
@@ -23026,9 +22929,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -23504,6 +23405,12 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>-1</iHealth>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PYRITE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_BOMBARD</UnitType>
@@ -23928,7 +23835,6 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>153</iCost>
@@ -25130,7 +25036,6 @@
 				<BuildingType>BUILDING_CLAY_PIT</BuildingType>
 				<BuildingType>BUILDING_CHALK_GATHERER</BuildingType>
 				<BuildingType>BUILDING_HEMATITE_GATHERER</BuildingType>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 				<BuildingType>BUILDING_IMU</BuildingType>
@@ -25561,9 +25466,7 @@
 			<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<Bonus>BONUS_SAND</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -25647,16 +25550,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_LOBSTER</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -28147,16 +28046,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ALMONDS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -28198,11 +28093,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -30096,16 +29986,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COFFEE</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -31796,7 +31682,6 @@
 			<ObsoleteTech>TECH_MODERN_SEISMOLOGY</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_CEMENT_MILL</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 				<BuildingType>BUILDING_CEMENT_MILL</BuildingType>
 			</ReplacementBuildings>
 			<iCost>243</iCost>
@@ -32454,9 +32339,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -32998,9 +32881,7 @@
 				<PrereqTech>TECH_FISHING</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<bWater>1</bWater>
@@ -35312,16 +35193,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SPICES</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -35363,11 +35240,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -36503,9 +36375,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqBonuses>
@@ -36910,6 +36780,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
+			<VicinityBonus>BONUS_MUSHROOMS</VicinityBonus>
 			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
@@ -39098,14 +38969,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<ObsoleteTech>TECH_GENE_MANIPULATION</ObsoleteTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_DONKEY</BuildingType>
-			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_DONKEY</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DONKEY</Type>
+			</PrereqOrHeritage>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</ReplacementBuildings>
@@ -39153,9 +39023,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -39204,7 +39072,6 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_DONKEY</BuildingType>
 				<BuildingType>BUILDING_HERD_DONKEY</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_AUGMENTED_CONSUMABLES</ObsoleteTech>
@@ -39356,16 +39223,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FISH</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -39407,11 +39270,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -42298,16 +42156,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_ELEPHANTS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -44352,9 +44206,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -44447,7 +44299,6 @@
 				<BuildingType>BUILDING_FARM_ANIMAL_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_HERD_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CENTRAL_BREEDER_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>190</iCost>
@@ -46469,8 +46320,10 @@
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HAWKING_HUT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_HAWK</Type>
+			</PrereqOrHeritage>
 			<iCost>310</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_HUGE</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -48482,16 +48335,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PISTACHIO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -48533,11 +48382,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -49367,9 +49211,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_OIL_LAMPS</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_RAW_FISH</Bonus>
@@ -50946,9 +50788,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CLAM</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -50981,9 +50821,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_POULTRY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51016,9 +50854,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PIG</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51051,9 +50887,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COAL</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51086,9 +50920,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MAMMOTH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51121,9 +50953,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51156,9 +50986,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51191,9 +51019,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51226,9 +51052,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<RawVicinityBonus>BONUS_OIL</RawVicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51261,9 +51085,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_FISH</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51296,9 +51118,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51331,9 +51151,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_COW</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51366,9 +51184,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_CRAB</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51401,9 +51217,7 @@
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_HORSE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_FOSSIL_BEDS</VicinityBonus>
@@ -51849,6 +51663,10 @@
 					<BonusType>BONUS_HAEMATITE_ORE</BonusType>
 					<iProductonModifier>50</iProductonModifier>
 				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_CINNABAR_ORE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -52226,6 +52044,14 @@
 			</VicinityBonusYieldChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
+					<PrereqTech>TECH_ELECTRICITY</PrereqTech>
+					<TechYield>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>500</iYield>
+					</TechYield>
+				</TechYieldChange>
+				<TechYieldChange>
 					<PrereqTech>TECH_PLASTICS</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
@@ -52336,7 +52162,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>200</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52344,7 +52170,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52352,7 +52178,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>200</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52360,7 +52186,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>400</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
@@ -52368,7 +52194,7 @@
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>400</iYield>
+						<iYield>300</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -52387,9 +52213,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_PELTS</Bonus>
@@ -53434,7 +53258,6 @@
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LUMBER_MILL</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_LUMBER_MILL</ObsoletesToBuilding>
 			<iCost>80</iCost>
@@ -53550,10 +53373,8 @@
 				<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
 			</PrereqRawVicinityBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<iCost>30</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -53621,10 +53442,6 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<bWater>1</bWater>
 			<iCost>30</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
@@ -53760,6 +53577,7 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<bAutoBuild>1</bAutoBuild>
 			<Description>TXT_KEY_BUILDING_GRASS_GATHERER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRASS_GATHERER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -53771,17 +53589,13 @@
 			<FreeBuilding>BUILDING_GRASS_GATHERER</FreeBuilding>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<iCost>30</iCost>
+			<iCost>60</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -53954,9 +53768,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -54054,10 +53866,6 @@
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_LUMBER_CAMP</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -54108,9 +53916,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<iCost>50</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
@@ -54173,17 +53978,14 @@
 			<FreeBuilding>BUILDING_REED_GATHERER</FreeBuilding>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<iCost>30</iCost>
+			<iCost>60</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -54396,10 +54198,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
+			<bAutoBuild>1</bAutoBuild>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -54422,7 +54221,7 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<iCost>118</iCost>
+			<iCost>236</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -54495,11 +54294,8 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
-			<iCost>60</iCost>
+			<bAutoBuild>1</bAutoBuild>
+			<iCost>120</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -55876,6 +55672,14 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BORAX</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
 			</VicinityBonusYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
@@ -56214,9 +56018,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqRawVicinityBonuses>
@@ -56464,16 +56266,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MELONS</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -56515,11 +56313,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -57050,16 +56843,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_BARLEY</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -58202,6 +57991,7 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>368</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
@@ -58336,6 +58126,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceModifiers>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_INVESTIGATOR</SpecialistType>
@@ -58586,9 +58377,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_GUINEA_PIGS</VicinityBonus>
@@ -60124,9 +59913,7 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<RawVicinityBonus>BONUS_OBSIDIAN</RawVicinityBonus>
 			<iCost>70</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
@@ -60282,6 +60069,12 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_ALTERNATIVE_MEDICINE</ObsoletesToBuilding>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
@@ -60334,16 +60127,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PAPAYA</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -60385,11 +60174,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -60465,7 +60249,6 @@
 				<BuildingType>BUILDING_FARM_ANIMAL_LLAMA</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_ALPACA</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
@@ -62660,9 +62443,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -62713,7 +62494,6 @@
 				<BuildingType>BUILDING_HERD_HORSE</BuildingType>
 				<BuildingType>BUILDING_CENTRAL_BREEDER_HORSE</BuildingType>
 				<BuildingType>BUILDING_TENGRII_HORSE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>125</iCost>
@@ -63135,9 +62915,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -63221,7 +62999,6 @@
 				<BuildingType>BUILDING_HUNTERS_CAMP</BuildingType>
 				<BuildingType>BUILDING_FURRIER</BuildingType>
 				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
@@ -65543,201 +65320,41 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqVicinityBonuses>
+				<VicinityBonus>BONUS_COW</VicinityBonus>
+				<VicinityBonus>BONUS_PIG</VicinityBonus>
+				<VicinityBonus>BONUS_POULTRY</VicinityBonus>
+			</PrereqVicinityBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</ObsoletesToBuilding>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BISON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BONE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CAMEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DEER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DONKEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EGGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FEATHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FUR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HIDE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HORSE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KANGAROO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LLAMA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MAMMOTH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MILK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OSTRICH_FEATHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PELTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PIG</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POULTRY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHEEP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALE_OIL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WOOL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
-			<iHappiness>10</iHappiness>
-			<iHealth>10</iHealth>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<YieldChanges>
-				<iYield>55</iYield>
-				<iYield>50</iYield>
-				<iYield>10</iYield>
+				<iYield>16</iYield>
+				<iYield>2</iYield>
+				<iYield>6</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>85</iCommerce>
-				<iCommerce>2</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
-			<BonusHealthChanges>
-				<BonusHealthChange>
-					<BonusType>BONUS_GLASSWARE</BonusType>
-					<iHealthChange>1</iHealthChange>
-				</BonusHealthChange>
-			</BonusHealthChanges>
 			<BonusYieldModifiers>
-				<BonusYieldModifier>
-					<BonusType>BONUS_FISH</BonusType>
-					<YieldModifiers>
-						<iYield>10</iYield>
-					</YieldModifiers>
-				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRAINS</BonusType>
 					<YieldModifiers>
-						<iYield>15</iYield>
+						<iYield>6</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_GRASS</BonusType>
 					<YieldModifiers>
-						<iYield>10</iYield>
+						<iYield>2</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 				<BonusYieldModifier>
 					<BonusType>BONUS_STRAW</BonusType>
 					<YieldModifiers>
-						<iYield>10</iYield>
+						<iYield>2</iYield>
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
-			<BonusCommercePercentChanges>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_COW</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_HORSE</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_PIG</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_SHEEP</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
-					<BonusType>BONUS_WHALE</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-			</BonusCommercePercentChanges>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_TOURISM</TechType>
-					<CommercePercents>
-						<iCommercePercent>5600</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<iCost>800</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_HUGE</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
@@ -66451,62 +66068,80 @@
 					</YieldChanges>
 				</TerrainYieldChange>
 			</TerrainYieldChanges>
-			<BonusCommercePercentChanges>
-				<BonusCommercePercentChange>
+			<VicinityBonusYieldChanges>
+			    <BonusYieldChange>
 					<BonusType>BONUS_FUR</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_SILK</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_ALCOHOL</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_IVORY</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_WHALE_OIL</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_DRUGS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_COMPUTERS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_AUTOMOBILES</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-				<BonusCommercePercentChange>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
 					<BonusType>BONUS_FIREARMS</BonusType>
-					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
-					</CommercePercents>
-				</BonusCommercePercentChange>
-			</BonusCommercePercentChanges>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+			</VicinityBonusYieldChanges>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_NAVAL</UnitCombatType>
@@ -69179,16 +68814,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -69265,16 +68896,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_INDIGO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -69316,11 +68943,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -69390,9 +69012,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -70134,7 +69754,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_CORN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_CORN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_CORN</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70178,7 +69798,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_POTATO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_POTATO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_POTATO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70222,7 +69842,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_RICE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_RICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_RICE</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70266,7 +69886,7 @@
 			<Type>BUILDING_TEMPLE_OF_KI_WHEAT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_WHEAT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_KI_WHEAT</ArtDefineTag>
 			<MapCategoryTypes>
@@ -70888,16 +70508,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_SUGAR</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -70950,11 +70566,6 @@
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -72865,9 +72476,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -72923,7 +72532,6 @@
 				<BuildingType>BUILDING_FARM_ANIMAL_LLAMA</BuildingType>
 				<BuildingType>BUILDING_HERD_LLAMA</BuildingType>
 				<BuildingType>BUILDING_CENTRAL_BREEDER_LLAMA</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>160</iCost>
@@ -73387,6 +72995,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iInvestigation>5</iInvestigation>
 			<iDefense>5</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -73518,10 +73127,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<Bonus>BONUS_WOOD</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WARES</Bonus>
@@ -73576,10 +73181,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -73610,7 +73211,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
@@ -74022,9 +73623,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -74104,9 +73703,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -75418,9 +75015,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_MARBLE</VicinityBonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MINING_CAMP</BuildingType>
@@ -76580,16 +76175,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -78728,9 +78319,7 @@
 			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_LEAD_ORE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SILVER_ORE</VicinityBonus>
@@ -79672,16 +79261,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_PEYOTE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -83232,16 +82817,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RESIN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -88454,7 +88035,6 @@
 				<BuildingType>BUILDING_FARM_ANIMAL_GOOSE</BuildingType>
 				<BuildingType>BUILDING_SEA_TURTLE_EGG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_TURKEY</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<RawVicinityBonus>BONUS_POULTRY</RawVicinityBonus>
@@ -90190,9 +89770,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_OBSIDIAN</VicinityBonus>
 			<iCost>153</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -91103,10 +90681,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_OLIVES</VicinityBonus>
 			<iCost>146</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -91138,10 +90712,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FERMENTATION</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<Bonus>BONUS_POTTERY</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_WOOD</Bonus>
@@ -91776,6 +91346,12 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
@@ -92790,9 +92366,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -92961,9 +92535,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -93555,16 +93127,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_DATES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -93940,10 +93508,6 @@
 			<PrereqTech>TECH_WEAVING</PrereqTech>
 			<VicinityBonus>BONUS_PAPYRUS</VicinityBonus>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<iCost>20</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -94027,9 +93591,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -94239,9 +93801,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -94291,9 +93851,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -94703,9 +94261,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>12</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -94873,9 +94429,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -95022,9 +94576,7 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
@@ -96172,6 +95724,12 @@
 				<Bonus>BONUS_PHARMACEUTICALS</Bonus>
 				<Bonus>BONUS_SMART_MEDICINE</Bonus>
 			</PrereqBonuses>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_DOCTOR</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -96982,16 +96540,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SHRIMP</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 		<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -98738,6 +98292,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>1845</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
@@ -98814,6 +98369,7 @@
 				</And>
 			</ConstructCondition>
 			<iCost>800</iCost>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
@@ -99524,9 +99080,7 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SALT</VicinityBonus>
@@ -100007,16 +99561,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_PEYOTE</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_TEA</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -100058,11 +99608,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -101415,9 +100960,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_IRON_ORE</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
@@ -101948,9 +101491,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -102087,9 +101628,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -102829,10 +102368,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BASKETRY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
@@ -102905,10 +102440,6 @@
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_RAT_CATCHING</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqBonuses>
 				<Bonus>BONUS_GRAINS</Bonus>
 				<Bonus>BONUS_CHEESE</Bonus>
@@ -103756,9 +103287,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>
@@ -103956,9 +103485,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_CARCASS</Bonus>
@@ -104237,10 +103764,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_RESIN</VicinityBonus>
 			<iCost>45</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -104784,16 +104307,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -105370,9 +104889,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>-3</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>8</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -106647,10 +106164,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RUBBER</VicinityBonus>
 			</PrereqVicinityBonuses>
@@ -107934,16 +107447,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_INCENSE</VicinityBonus>
 			</PrereqRawVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -107985,11 +107494,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -108591,16 +108095,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COCOA</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -108642,11 +108142,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -109329,9 +108824,7 @@
 			<FreeBuilding>BUILDING_SEA_TURTLE_EGG_GATHERER</FreeBuilding>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_SEA_LION_AND_SEAL</VicinityBonus>
@@ -109877,6 +109370,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iInvestigation>10</iInvestigation>
 			<iDefense>5</iDefense>
 			<iEspionageDefense>2</iEspionageDefense>
@@ -111306,9 +110800,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -111355,9 +110847,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqRawVicinityBonuses>
@@ -111427,6 +110917,7 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</ReplacementBuildings>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iCost>630</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
@@ -113019,9 +112510,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_CARCASS</Bonus>
@@ -113407,9 +112896,7 @@
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqBonuses>
@@ -113874,6 +113361,12 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_ZINC_ORE</BonusType>
+					<iProductonModifier>50</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -114911,6 +114404,14 @@
 			<VicinityBonusYieldChanges>
 			    <BonusYieldChange>
 					<BonusType>BONUS_POTASH</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_BORAX</BonusType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
@@ -118557,7 +118058,6 @@
 			<ObsoletesToBuilding>BUILDING_ANTIQUE_SHOP</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>20</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
@@ -118843,6 +118343,13 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</BonusYieldChange>
+				<BonusYieldChange>
+					<BonusType>BONUS_PUMICE_STONE</BonusType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</YieldChanges>
+				</BonusYieldChange>
 			</VicinityBonusYieldChanges>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
@@ -118937,9 +118444,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_STONE</VicinityBonus>
 			<iCost>153</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -122218,7 +121723,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -122339,16 +121844,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_MANGO</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 		    <CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -122434,9 +121935,7 @@
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
@@ -124844,10 +124343,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
 			<iCost>270</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_BIG</CostSizeModifier>
@@ -125667,9 +125162,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_PARROTS</VicinityBonus>
@@ -126034,6 +125527,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_INVESTIGATOR</SpecialistType>
@@ -126146,6 +125640,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
+			<iRevIdxLocal>-5</iRevIdxLocal>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_DIVINE_RIGHT</TechType>
@@ -126597,9 +126092,7 @@
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>2</iTradeRouteModifier>
-			<CommerceChanges>
-				<iCommerce>-4</iCommerce>
-			</CommerceChanges>
+			<iMaintenanceModifier>4</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -127152,10 +126645,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<ObsoleteTech>TECH_SENTIENT_EARTH</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_AGROFOREST</ObsoletesToBuilding>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -132201,9 +131690,7 @@
 			<PrereqTech>TECH_WATERPROOF_CONCRETE</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_WATERPROOF_CEMENT</FreeBonus>
@@ -132906,16 +132393,12 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SERICULTURE</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
+			<bAutoBuild>1</bAutoBuild>
 			<VicinityBonus>BONUS_SILK</VicinityBonus>
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_COTTON</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<iCost>160</iCost>
+			<iCost>320</iCost>
 			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
 			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
@@ -132957,11 +132440,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GARDENING</PrereqTech>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ARBORETUM</ObsoletesToBuilding>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_ARBORETUM</BuildingType>
-				<BuildingType>BUILDING_AGROFOREST</BuildingType>
-			</ReplacementBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMUNITY_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
@@ -133092,9 +132570,7 @@
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iCost>344</iCost>
@@ -133132,9 +132608,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<VicinityBonus>BONUS_WHALE</VicinityBonus>
@@ -134263,9 +133737,7 @@
 				<VicinityBonus>BONUS_PIG</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
@@ -134410,9 +133882,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqVicinityBonuses>

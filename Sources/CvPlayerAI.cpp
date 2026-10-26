@@ -213,6 +213,10 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	PROFILE_EXTRA_FUNC();
 	AI_uninit();
 
+	m_iStuckBusyGroupID = -1;
+	m_iStuckBusyGroupTicks = 0;
+	m_stuckUnitRecoveryCounts.clear();
+
 	m_iPeaceWeight = 0;
 	m_iEspionageWeight = 0;
 	m_iAttackOddsChange = 0;
@@ -1529,6 +1533,77 @@ void CvPlayerAI::AI_unitUpdate()
 		LOG_PLAYER_BLOCK(4, {
 			logAiEvaluations(4,"AI_unitUpdate : Has Busy Unit for Player %d", getID());
 		});
+
+		// Last-resort watchdog: AI_unitUpdate() is called once per engine tick, and the turn
+		// cannot advance while hasBusyUnit() is true for any player. Every group is expected
+		// to resolve itself to non-busy within a handful of ticks (several known causes of it
+		// not doing so are already guarded elsewhere - see CvSelectionGroupAI::AI_update()'s
+		// iTempHack cap and CvSelectionGroup::groupMove()'s per-unit stuck counter), but if the
+		// SAME group is still the one keeping us busy after many consecutive ticks, something
+		// is wrong that isn't self-correcting, and the turn would otherwise never end. Force
+		// that group to finish so the game always progresses, even for causes we haven't found.
+		CvSelectionGroup* pBusyGroup = NULL;
+		foreach_(CvSelectionGroup* pLoopGroup, groups() | filtered(CvSelectionGroup::fn::isBusy()))
+		{
+			pBusyGroup = pLoopGroup;
+			break;
+		}
+
+		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckBusyGroupID)
+		{
+			if (++m_iStuckBusyGroupTicks > 500)
+			{
+				CvUnit* pHeadUnit = pBusyGroup->getHeadUnit();
+
+				// Count this recovery against the head unit specifically (unit IDs are stable
+				// for the unit's lifetime, unlike group IDs which change on merge/split), so a
+				// unit that keeps causing this - rather than a one-off hiccup - can be
+				// recognized and permanently removed instead of being reset forever.
+				const int iRecoveryCount = (pHeadUnit != NULL)
+					? ++m_stuckUnitRecoveryCounts[pHeadUnit->getID()]
+					: 0;
+				const bool bScrap = (pHeadUnit != NULL) && (iRecoveryCount >= 3);
+
+				char szOut[1024];
+				if (pHeadUnit != NULL)
+				{
+					CvWString szTempString;
+					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks, iRecoveryCount,
+						bScrap ? "scrapping the unit" : "forcing it to finish",
+						pHeadUnit->getName().GetCString(), pBusyGroup->getNumUnits(),
+						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				}
+				else
+				{
+					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks with no head unit - forcing it to finish\n",
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks);
+				}
+				gDLL->messageControlLog(szOut);
+				FErrorMsg(szOut);
+
+				if (bScrap)
+				{
+					m_stuckUnitRecoveryCounts.erase(pHeadUnit->getID());
+					pHeadUnit->scrap(); // may be a delayed death - group/remaining units still need releasing below
+				}
+
+				pBusyGroup->clearMissionQueue();
+				foreach_(CvUnit* pUnit, pBusyGroup->units())
+				{
+					pUnit->finishMoves();
+				}
+
+				m_iStuckBusyGroupID = -1;
+				m_iStuckBusyGroupTicks = 0;
+			}
+		}
+		else
+		{
+			m_iStuckBusyGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
+			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
+		}
 	}
 }
 
@@ -7218,7 +7293,7 @@ int CvPlayerAI::AI_getRivalDefensivePactAttitude(PlayerTypes ePlayer) const
 
 	if (!(GET_TEAM(getTeam()).isDefensivePact(GET_PLAYER(ePlayer).getTeam())))
 	{
-		iAttitude -= ((4 * GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getDefensivePactCount(GET_PLAYER(ePlayer).getTeam())) / std::max(1, (GC.getGame().countCivTeamsAlive() - 2)));
+		iAttitude -= ((4 * GET_TEAM(GET_PLAYER(ePlayer).getTeam()).getDefensivePactCount(getTeam())) / std::max(1, (GC.getGame().countCivTeamsAlive() - 2)));
 	}
 
 	return iAttitude;
@@ -13710,7 +13785,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 		}
 		else if (isConsiderReligiousVictory())
 		{
-			iTempValue /= 5;
+			iTempValue += (iNonstateReligionCount * 20) / 5;
 		}
 		iTempValue += countCityReligionRevolts() * 5;
 		if (gPlayerLogLevel > 2 && iTempValue != 0)
@@ -14804,8 +14879,8 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 					int iTempBadBuilding = 0;
 					pLoopCity->getAdditionalHealthByCivic(eOtherCivic, iGoodHealthFromOtherCivics, iBadHealthFromOtherCivics, iTempBadBuilding, false, iExtraPop, /* bCivicOptionVacuum */ true, 0, 0);
 				}
-				iBadHealthFromOtherCivics = -iBadHealthFromOtherCivics; //negative values
 			}
+			iBadHealthFromOtherCivics = -iBadHealthFromOtherCivics; //negative values
 
 			//free iCityHealth from all current civic health effects
 			iCityHealth -= (iGoodHealthFromOtherCivics + iBadHealthFromOtherCivics); //does not include effects from NoUnhealthyPopulation or BuildingOnlyHealthy
@@ -19477,6 +19552,12 @@ void CvPlayerAI::AI_doDiplo()
 											}
 											else
 											{
+												ourList.clear();
+												theirList.clear();
+
+												setTradeItem(&item, TRADE_PEACE, eBestTeam);
+												theirList.insertAtEnd(item);
+
 												GC.getGame().implementDeal(getID(), ((PlayerTypes)iI), &ourList, &theirList);
 											}
 										}
@@ -20807,13 +20888,45 @@ void CvPlayerAI::write(FDataStreamBase* pStream)
 }
 
 
-int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const
+namespace {
+	// Marks eEvent as being evaluated for the lifetime of this scope, so that recursive
+	// AI_eventValue calls can detect cycles (an event depending, directly or transitively,
+	// on itself) without misidentifying a shared non-cyclic dependency (e.g. two events
+	// both depending on a third) as a cycle.
+	class ScopedEventVisit
+	{
+	public:
+		ScopedEventVisit(std::vector<bool>& vbVisited, int iEvent)
+			: m_vbVisited(vbVisited), m_iEvent(iEvent)
+		{
+			m_vbVisited[m_iEvent] = true;
+		}
+		~ScopedEventVisit()
+		{
+			m_vbVisited[m_iEvent] = false;
+		}
+	private:
+		std::vector<bool>& m_vbVisited;
+		int m_iEvent;
+	};
+}
+
+int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData, std::vector<bool>* pvbVisited) const
 {
 	PROFILE_EXTRA_FUNC();
 	if (kTriggeredData.m_eTrigger == NO_EVENTTRIGGER)
 	{
 		return 0;
 	}
+
+	std::vector<bool> vbLocalVisited;
+	if (pvbVisited == NULL)
+	{
+		vbLocalVisited.resize(GC.getNumEventInfos(), false);
+		pvbVisited = &vbLocalVisited;
+	}
+	ScopedEventVisit visitGuard(*pvbVisited, eEvent);
+
 	const CvEventInfo& kEvent = GC.getEventInfo(eEvent);
 
 	int iNumCities = getNumCities();
@@ -21312,8 +21425,8 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 	}
 
 	int iThisEventValue = iValue;
-	//XXX THIS IS VULNERABLE TO NON-TRIVIAL RECURSIONS!
-	//Event A effects Event B, Event B effects Event A
+	//Guarded against non-trivial recursions (Event A affects Event B, Event B affects Event A, ...)
+	//via pvbVisited, which tracks every event already being evaluated in the current call chain.
 	for (int iEvent = 0; iEvent < GC.getNumEventInfos(); ++iEvent)
 	{
 		if (kEvent.getAdditionalEventChance(iEvent) > 0)
@@ -21326,9 +21439,9 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 				//Double the value since it's recursive.
 				iValue += (kEvent.getAdditionalEventChance(iEvent) * iThisEventValue) / 50;
 			}
-			else
+			else if (!(*pvbVisited)[iEvent])
 			{
-				iValue += (kEvent.getAdditionalEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData)) / 100;
+				iValue += (kEvent.getAdditionalEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData, pvbVisited)) / 100;
 			}
 		}
 
@@ -21338,9 +21451,9 @@ int CvPlayerAI::AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTrig
 			{
 				iValue -= (kEvent.getClearEventChance(iEvent) * iThisEventValue) / 50;
 			}
-			else
+			else if (!(*pvbVisited)[iEvent])
 			{
-				iValue -= (kEvent.getClearEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData)) / 100;
+				iValue -= (kEvent.getClearEventChance(iEvent) * AI_eventValue((EventTypes)iEvent, kTriggeredData, pvbVisited)) / 100;
 			}
 		}
 	}
@@ -22552,7 +22665,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_SPACE2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_SPACE3;
@@ -22575,7 +22688,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_CONQUEST2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_CONQUEST3;
@@ -22598,7 +22711,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_DOMINATION2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_DOMINATION3;
@@ -22621,7 +22734,7 @@ int CvPlayerAI::AI_getVictoryStrategyHash() const
 		if (iVictoryStage > 1)
 		{
 			m_iVictoryStrategyHash |= AI_VICTORY_CULTURE2;
-			if (iVictoryStage > 2)
+			if (iVictoryStage > 2 && !bStartedOtherLevel3)
 			{
 				bStartedOtherLevel3 = true;
 				m_iVictoryStrategyHash |= AI_VICTORY_CULTURE3;
@@ -27733,6 +27846,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 		}
 	}
+	iValue += iTemp;
 
 	//#15 Effects for Promotions with isPillages...
 	{
@@ -34168,11 +34282,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	iTemp = kUnitCombat.getBreakdownChanceChange();
 	if (iTemp != 0)
 	{
-		if (eUnitAI == UNITAI_ATTACK_CITY)
-		{
-			iValue += (iTemp * 2);
-		}
-		else if (pUnit != NULL && pUnit->canAttack())
+		if (pUnit != NULL && pUnit->canAttack())
 		{
 			iTemp *= pUnit->breakdownDamageTotal();
 			iTemp /= 100;
@@ -34185,16 +34295,16 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 				iValue += (iTemp / 8);
 			}
 		}
+		else if (eUnitAI == UNITAI_ATTACK_CITY)
+		{
+			iValue += (iTemp * 2);
+		}
 	}
 
 	iTemp = kUnitCombat.getBreakdownDamageChange();
 	if (iTemp != 0)
 	{
-		if (eUnitAI == UNITAI_ATTACK_CITY)
-		{
-			iValue += (iTemp * 2);
-		}
-		else if (pUnit != NULL && pUnit->canAttack())
+		if (pUnit != NULL && pUnit->canAttack())
 		{
 			iTemp *= pUnit->breakdownChanceTotal();
 			iTemp /= 100;
@@ -34206,6 +34316,10 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			{
 				iValue += (iTemp / 8);
 			}
+		}
+		else if (eUnitAI == UNITAI_ATTACK_CITY)
+		{
+			iValue += (iTemp * 2);
 		}
 	}
 
@@ -35851,17 +35965,17 @@ void CvPlayerAI::AI_formArmies()
 					if (pArmy != NULL)
 					{
 						pBestLeader = pArmy->getLeader();
-						if (pBestLeader == NULL)
+						if (pBestLeader == NULL || pBestLeader->getHeadUnit() == NULL)
 						{
 							pBestLeader = pArmy->findNewLeader();
-							if (pBestLeader == NULL)
+							if (pBestLeader == NULL || pBestLeader->getHeadUnit() == NULL)
 							{
 								pArmy->disband();
 								m_armies.remove(pArmy);
 								return;
 							}
 						}
-
+						break;
 					}
 				}
 			}

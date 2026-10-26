@@ -964,4 +964,819 @@
 		<Tag>TXT_KEY_HERITAGE_TAXON_TESTUDINES_PEDIA</Tag>
 		<English>Testudines is a taxonomic order of reptiles commonly called turtles, characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups: the Pleurodira (side-necked turtles) and Cryptodira (hidden-necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands, and, in the case of sea turtles, much of the ocean. They breathe air and do not lay eggs underwater, although many species live in or around water.</English>
 	</TEXT>
-</Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BELUGA</Tag>
+		<English>Tale, Beluga</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DOLPHIN</Tag>
+		<English>Tale, Dolphin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HUMPBACK_WHALE</Tag>
+		<English>Tale, Humpback Whale</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MINKIE_WHALE</Tag>
+		<English>Tale, Minke Whale</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ORCA</Tag>
+		<English>Tale, Orca</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GREAT_WHITE</Tag>
+		<English>Tale, Great White Shark</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HAMMERHEAD</Tag>
+		<English>Tale, Hammerhead Shark</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_REEF_SHARK</Tag>
+		<English>Tale, Reef Shark</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WHALESHARK</Tag>
+		<English>Tale, Whale Shark</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RAY_MANTA</Tag>
+		<English>Tale, Manta Ray</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RAY_EAGLE</Tag>
+		<English>Tale, Eagle Ray</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_COD</Tag>
+		<English>Tale, Cod</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CRAB</Tag>
+		<English>Tale, Crab</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DUGONG</Tag>
+		<English>Tale, Dugong</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GIANT_SQUID</Tag>
+		<English>Tale, Giant Squid</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MACKEREL</Tag>
+		<English>Tale, Mackerel</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MARLIN</Tag>
+		<English>Tale, Marlin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SEALION_SEA</Tag>
+		<English>Tale, Sea Lion</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TUNA</Tag>
+		<English>Tale, Tuna</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_CETACEA</Tag>
+		<English>Taxon Cetacea</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ELASMOBRANCHII</Tag>
+		<English>Taxon Elasmobranchii</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_MARINE_MISC</Tag>
+		<English>Taxon Marine (Misc)</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BLACK_RHINOCEROS</Tag>
+		<English>Tale, Black Rhinoceros</English>
+		<French>Mythe du RhinocÃ©ros noir</French>
+		<German>Mythos des Spitzmaulnashorns</German>
+		<Italian>Mito del rinoceronte nero</Italian>
+		<Polish>Mit - Nosoro&#191;ec Czarny</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã·Ã¥Ã°Ã­. Ã­Ã®Ã±Ã®Ã°Ã®Ã£Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GIANT_RHINOCEROS</Tag>
+		<English>Tale, Giant Rhinoceros</English>
+		<French>Mythe de l'Elasmotherium</French>
+		<German>Mythos des Elasmotheriums</German>
+		<Italian>Mito dell'elasmotherium</Italian>
+		<Polish>Mit - Elasmoterium</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã½Ã«Ã Ã±Ã¬Ã®Ã²Ã¥Ã°Ã¨Ã¨</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_INDIAN_RHINOCEROS</Tag>
+		<English>Tale, Indian Rhinoceros</English>
+		<French>Mythe du RhinocÃ©ros indien</French>
+		<German>Mythos des Panzernashorns</German>
+		<Italian>Mito del rinoceronte indiano</Italian>
+		<Polish>Mit - Nosoro&#191;ec Indyjski</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¨Ã­Ã¤. Ã­Ã®Ã±Ã®Ã°Ã®Ã£Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_JAVA_RHINOCEROS</Tag>
+		<English>Tale, Java Rhinoceros</English>
+		<French>Mythe du RhinocÃ©ros de Java</French>
+		<German>Mythos des Java-Nashorns</German>
+		<Italian>Mito del rinoceronte di Giava</Italian>
+		<Polish>Mit - Nosoro&#191;ec Jawajski</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¿Ã¢Ã Ã­. Ã­Ã®Ã±Ã®Ã°Ã®Ã£Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WHITE_RHINOCEROS</Tag>
+		<English>Tale, White Rhinoceros</English>
+		<French>Mythe du RhinocÃ©ros blanc</French>
+		<German>Mythos des Breitmaulnashorns</German>
+		<Italian>Mito del rinoceronte bianco</Italian>
+		<Polish>Mit - Nosoro&#191;ec Bia&#179;y</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã¥Ã«. Ã­Ã®Ã±Ã®Ã°Ã®Ã£Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RHINOCEROTIDAE</Tag>
+		<English>Taxon Rhinocerotidae</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MOON_BEAR</Tag>
+		<English>Tale, Moon Bear</English>
+		<French>Mythe de l'Ours lune</French>
+		<Italian>Mito dell'orso della luna</Italian>
+		<Polish>Mit- Nied&#159;wied&#159; Himalajski</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã¥Ã«Ã®Ã£Ã°. Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BLACK_BEAR</Tag>
+		<English>Tale, Black Bear</English>
+		<French>Mythe de l'Ours noir</French>
+		<Italian>Mito dell'orso nero</Italian>
+		<Polish>Mit - Baribal</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã·Ã¥Ã°Ã­. Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BROWN_BEAR</Tag>
+		<English>Tale, Brown Bear</English>
+		<French>Mythe de l'Ours brun</French>
+		<Italian>Mito dell'orso bruno</Italian>
+		<Polish>Mit - Nied&#159;wied&#159; Brunatny</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã³Ã°Ã®Ã¬ Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAVE_BEAR</Tag>
+		<English>Tale, Cave Bear</English>
+		<French>Mythe de l'Ours des cavernes</French>
+		<Italian>Mito dell'orso delle caverne</Italian>
+		<Polish>Mit - Nied&#159;wied&#159; Jaskiniowy</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã¥Ã¹. Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GRIZZLY</Tag>
+		<English>Tale, Grizzly</English>
+		<French>Mythe du Grizzly</French>
+		<Italian>Mito dell'orso grizzly</Italian>
+		<Polish>Mit - Grizzly</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã°Ã¨Ã§Ã«Ã¨</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GIANT_PANDA</Tag>
+		<English>Tale, Giant Panda</English>
+		<French>Mythe du Panda</French>
+		<Italian>Mito del panda gigante</Italian>
+		<Polish>Mit - Panda</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã Ã­Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_POLAR_BEAR</Tag>
+		<English>Tale, Polar Bear</English>
+		<French>Mythe de l'Ours polaire</French>
+		<Italian>Mito dell'orso polare</Italian>
+		<Polish>Mit - Nied&#159;wied&#159; Polarny</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã¥Ã«Ã®Ã¬ Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SLOTH_BEAR</Tag>
+		<English>Tale, Sloth Bear</English>
+		<French>Mythe de l'Ours lippu</French>
+		<Italian>Mito dell'orso labiato</Italian>
+		<Polish>Mit - Wargacz</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã³Ã¡Ã Ã·Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SPECTACLED_BEAR</Tag>
+		<English>Tale, Spectacled Bear</English>
+		<French>Mythe de l'Ours Ã  lunettes</French>
+		<Italian>Mito dell'orso dagli occhiali</Italian>
+		<Polish>Mit - Nied&#159;wied&#159; Andyjski</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã·Ãª. Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SUN_BEAR</Tag>
+		<English>Tale, Sun Bear</English>
+		<French>Mythe de l'Ours malais</French>
+		<Italian>Mito dell'orso malese</Italian>
+		<Polish>Mit - Nied&#159;wied&#159; Malajski</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¬Ã Ã«. Ã¬Ã¥Ã¤Ã¢Ã¥Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_URSIDAE</Tag>
+		<English>Taxon Ursidae</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BARBARY_MACAQUE</Tag>
+		<English>Tale, Barbary Macaque</English>
+		<French>Mythe du Macaque berbÃ¨re</French>
+		<German>Mythos des Berberaffen</German>
+		<Italian>Mito della bertuccia</Italian>
+		<Polish>Mit - Magot</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¬Ã Ã£Ã®Ã²Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPUCHIN_MONKEY</Tag>
+		<English>Tale, Capuchin Monkey</English>
+		<French>Mythe du Capucin</French>
+		<German>Mythos des Kapuzineraffen</German>
+		<Italian>Mito della scimmia cappuccina</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ Ã¯Ã³Ã¶Ã¨Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CHIMPANZEE</Tag>
+		<English>Tale, Chimpanzee</English>
+		<French>Mythe du ChimpanzÃ©</French>
+		<German>Mythos des Schimpansen</German>
+		<Italian>Mito dello scimpanzÃ©</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¸Ã¨Ã¬Ã¯Ã Ã­Ã§Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GELADA_MONKEY</Tag>
+		<English>Tale, Gelada Monkey</English>
+		<French>Mythe du Babouin Gelada</French>
+		<German>Mythos des Dscheladas</German>
+		<Italian>Mito del babbuino Gelada</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã¥Ã«Ã Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GORILLA</Tag>
+		<English>Tale, Gorilla</English>
+		<French>Mythe du Gorille</French>
+		<German>Mythos des Gorillas</German>
+		<Italian>Mito del gorilla</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã®Ã°Ã¨Ã«Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MANDRILL</Tag>
+		<English>Tale, Mandrill</English>
+		<French>Mythe du Mandrill</French>
+		<German>Mythos des Mandrills</German>
+		<Italian>Mito del mandrillo</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¬Ã Ã­Ã¤Ã°Ã¨Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ORANGUTAN</Tag>
+		<English>Tale, Orangutan</English>
+		<French>Mythe de l'Orang-outan</French>
+		<German>Mythos des Orang-Utans</German>
+		<Italian>Mito dell'orango</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã°Ã Ã­Ã£Ã³Ã²Ã Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RING_TAILED_LEMUR</Tag>
+		<English>Tale, Ring-tailed Lemur</English>
+		<French>Mythe du LÃ©mur Ã  queue annelÃ©e</French>
+		<German>Mythos des Kattas</German>
+		<Italian>Mito del lemure catta</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_OLD_MAN_OF_THE_FOREST</Tag>
+		<English>Taxon Old Man of the Forest</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_OLD_WORLD_MONKEYS</Tag>
+		<English>Taxon Old World Monkeys</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_NEW_WORLD_MONKEYS</Tag>
+		<English>Taxon New World Monkeys</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_AUROCHS</Tag>
+		<English>Tale, Aurochs</English>
+		<German>Mythos des Auerochsen</German>
+		<Italian>Mito dell'uro</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BISON</Tag>
+		<English>Tale, Bison</English>
+		<French>Mythe du Bison</French>
+		<German>Mythos des Bisons</German>
+		<Italian>Mito del bisonte</Italian>
+		<Polish>Mit - Bizon</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã¨Ã§Ã®Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BONGO</Tag>
+		<English>Tale, Bongo</English>
+		<French>Mythe du Bongo</French>
+		<German>Mythos des Bongos</German>
+		<Italian>Mito del bongo</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã®Ã­Ã£Ã®</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAPE_BUFFALO</Tag>
+		<English>Tale, Cape Buffalo</English>
+		<French>Mythe du Buffle</French>
+		<German>Mythos des BÃ¼ffels</German>
+		<Italian>Mito del bufalo africano</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã³Ã©Ã¢Ã®Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_THOMSONS_GAZELLE</Tag>
+		<English>Tale, Thomson's Gazelle</English>
+		<French>Mythe de la Gazelle de Thomson</French>
+		<German>Mythos der Gazelle</German>
+		<Italian>Mito della gazzella di Thomson</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã Ã§Ã¥Ã«Ã¨</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GEMSBOK</Tag>
+		<English>Tale, Gemsbok</English>
+		<French>Mythe de l'Oryx gazelle</French>
+		<German>Mythos des SpieÃŸbocks</German>
+		<Italian>Mito dell'orice gazzella</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã±Ã¥Ã°Ã­Ã®Ã¡Ã»ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GERENUK</Tag>
+		<English>Tale, Gerenuk</English>
+		<French>Mythe de la Gazelle de Waller</French>
+		<German>Mythos der Giraffengazelle</German>
+		<Italian>Mito dell'antilope giraffa</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã¥Ã°Ã¥Ã­Ã³ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_IMPALA</Tag>
+		<English>Tale, Impala</English>
+		<French>Mythe de l'Impala</French>
+		<German>Mythos der Impala</German>
+		<Italian>Mito dell'impala</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MUSKOX</Tag>
+		<English>Tale, Muskox</English>
+		<French>Mythe du Boeuf musquÃ©</French>
+		<German>Mythos des Moschusochsen</German>
+		<Italian>Mito del bue muschiato</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SAIGA_ANTELOPE</Tag>
+		<English>Tale, Saiga Antelope</English>
+		<French>Mythe de l'Antilope Saiga</French>
+		<German>Mythos der Saiga</German>
+		<Italian>Mito dell'antilope delle steppe</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WILDEBEEST</Tag>
+		<English>Tale, Wildebeest</English>
+		<French>Mythe du Gnou</French>
+		<German>Mythos des Gnus</German>
+		<Italian>Mito dello gnu</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_ANTELOPE</Tag>
+		<English>Taxon Antelope</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_BOVINAE</Tag>
+		<English>Taxon Bovinae</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CASSOWARY</Tag>
+		<English>Tale, Cassowary</English>
+		<French>Mythe du Casoar</French>
+		<Italian>Mito del casuaro</Italian>
+		<Polish>Mit - Kazuar</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ Ã§Ã³Ã Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_EMU</Tag>
+		<English>Tale, Emu</English>
+		<French>Mythe de l'Emeu</French>
+		<Italian>Mito dell'emÃ¹</Italian>
+		<Polish>Mit - Emu</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã½Ã¬Ã³</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MOA</Tag>
+		<English>Tale, Moa</English>
+		<French>Mythe du Moa</French>
+		<Italian>Mito dell'uccello moa</Italian>
+		<Polish>Mit - Moa</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¬Ã®Ã </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OSTRICH</Tag>
+		<English>Tale, Ostrich</English>
+		<French>Mythe de l'Autruche</French>
+		<Italian>Mito dello struzzo</Italian>
+		<Polish>Mit - Stru&#156;</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã±Ã²Ã°Ã Ã³Ã±Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RHEA</Tag>
+		<English>Tale, Rhea</English>
+		<French>Mythe du Nandou</French>
+		<Italian>Mito del nandÃ¹</Italian>
+		<Polish>Mit - Nandu</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã­Ã Ã­Ã¤Ã³</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_FLIGHTLESS_BIRDS</Tag>
+		<English>Taxon Flightless Birds</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BLUE_FOOTED_BOOBY</Tag>
+		<English>Tale, Blue-footed Booby</English>
+		<French>Mythe du Fou a pieds bleus</French>
+		<Italian>Mito della sula piediazzurri</Italian>
+		<Polish>Mit - G&#179;uptak Niebieskonogi</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã«Ã³Ã¸Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CROW</Tag>
+		<English>Tale, Crow</English>
+		<French>Mythe du Corbeau</French>
+		<German>Mythos der Krahe</German>
+		<Italian>Mito del corvo</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¢Ã®Ã°Ã®Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DUCK</Tag>
+		<English>Tale, Duck</English>
+		<French>Mythe du Canard</French>
+		<German>Mythos der Ente</German>
+		<Italian>Mito dell'anatra</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã³Ã²ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_BALD_EAGLE</Tag>
+		<English>Tale, Bald Eagle</English>
+		<French>Mythe du Pygargue a tete blanche</French>
+		<German>Mythos des Weisskopfseeadlers</German>
+		<Italian>Mito dell'aquila testabianca</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã¥Ã«Ã®Ã£. Ã®Ã°Ã«Ã Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_EAGLE</Tag>
+		<English>Tale, Eagle</English>
+		<French>Mythe de l'Aigle</French>
+		<Italian>Mito dell'aquila</Italian>
+		<Polish>Mit - Orze&#179;</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã°Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_FLAMINGO</Tag>
+		<English>Tale, Flamingo</English>
+		<French>Mythe du Flamant rose</French>
+		<German>Mythos des Flamingos</German>
+		<Italian>Mito del fenicottero</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã´Ã«Ã Ã¬Ã¨Ã­Ã£Ã®</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SEAGULL</Tag>
+		<English>Tale, Seagull</English>
+		<French>Mythe du Goeland</French>
+		<German>Mythos der Mowe</German>
+		<Italian>Mito del gabbiano</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã·Ã Ã©ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HAASTS_EAGLE</Tag>
+		<English>Tale, Haast's Eagle</English>
+		<French>Mythe de l'Aigle de Haast</French>
+		<Italian>Mito dell'aquila del Haast</Italian>
+		<Polish>Mit - Orze&#179; Haasta</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã°Ã«Ã¥ Ã•Ã Ã Ã±Ã²Ã </Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HARPY_EAGLE</Tag>
+		<English>Tale, Harpy Eagle</English>
+		<French>Mythe de la Harpie feroce</French>
+		<Italian>Mito dell'aquila arpia</Italian>
+		<Polish>Mit - Harpia Wielka</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã Ã°Ã¯Ã¨Ã¨</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_HAWK</Tag>
+		<English>Tale, Hawk</English>
+		<French>Mythe du Faucon</French>
+		<Italian>Mito del falco</Italian>
+		<Polish>Mit - Jastrz&#185;b</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¿Ã±Ã²Ã°Ã¥Ã¡Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_KOOKABURRA</Tag>
+		<English>Tale, Kookaburra</English>
+		<French>Mythe du Kookaboura</French>
+		<German>Mythos des Lachenden Hans</German>
+		<Italian>Mito del kookaburra</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ³ÃªÃ Ã¡Ã Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_LOON</Tag>
+		<English>Tale, Loon</English>
+		<French>Mythe du Plongeon</French>
+		<German>Mythos des Seetauchers</German>
+		<Italian>Mito della strolaga</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã Ã£Ã Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OXPECKER</Tag>
+		<English>Tale, Oxpecker</English>
+		<French>Mythe du Pique-boeufs</French>
+		<German>Mythos des Madenhackers</German>
+		<Italian>Mito della bufaga</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¢Ã®Ã«Ã®ÃªÃ«Ã¾Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PALEOLITHIC_BIRDS</Tag>
+		<English>Tale, Paleolithic Birds</English>
+		<French>Mythe des oiseaux du paleolithique</French>
+		<German>Mythos der Urvogel</German>
+		<Italian>Mito dell'uccello del paleolitico</Italian>
+		<Polish>Mit - Ptaki Kopalne</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¤Ã°Ã¥Ã¢Ã­Ã¥Ã© Ã¯Ã²Ã¨Ã¶Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PARROT</Tag>
+		<English>Tale, Parrot</English>
+		<French>Mythe du Perroquet</French>
+		<Italian>Mito del pappagallo</Italian>
+		<Polish>Mit - Papuga</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã®Ã¯Ã³Ã£Ã Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PEACOCK</Tag>
+		<English>Tale, Peacock</English>
+		<French>Mythe du Paon</French>
+		<German>Mythos des Pfaus</German>
+		<Italian>Mito del pavone</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã Ã¢Ã«Ã¨Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PHEASANT</Tag>
+		<English>Tale, Pheasant</English>
+		<French>Mythe du Faisan</French>
+		<German>Mythos des Fasans</German>
+		<Italian>Mito del fagiano</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã´Ã Ã§Ã Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PIGEON</Tag>
+		<English>Tale, Pigeon</English>
+		<French>Mythe du Pigeon</French>
+		<German>Mythos der Taube</German>
+		<Italian>Mito del piccione</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã®Ã«Ã³Ã¡Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RAVEN</Tag>
+		<English>Tale, Raven</English>
+		<French>Mythe du Corbeau</French>
+		<Italian>Mito del corvo imperiale</Italian>
+		<Polish>Mit - Kruk</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¢Ã®Ã°Ã®Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_RAZORBILL</Tag>
+		<English>Tale, Razorbill</English>
+		<French>Mythe du Pingouin torda</French>
+		<Italian>Mito della gazza marina</Italian>
+		<Polish>Mit - Alka</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã Ã£Ã Ã°ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_STELLERS_SEA_EAGLE</Tag>
+		<English>Tale, Steller's Sea Eagle</English>
+		<French>Mythe du Pigargue empereur</French>
+		<Italian>Mito dell'aquila di mare di Steller</Italian>
+		<Polish>Mit - Bielik Olbrzymi</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã°Ã«Ã Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SECRETARY_BIRD</Tag>
+		<English>Tale, Secretary Bird</English>
+		<French>Mythe du Messager sagittaire</French>
+		<Italian>Mito del serpentario</Italian>
+		<Polish>Mit - Sekretarz</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã²Ã¨Ã¶Ã¥-Ã±Ã¥ÃªÃ°Ã¥Ã²Ã Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ARCTIC_TERN</Tag>
+		<English>Tale, Arctic Tern</English>
+		<French>Mythe du Sterne Arctique</French>
+		<German>Mythos der Kustenseeschwalbe</German>
+		<Italian>Mito della sterna artica</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¯Ã®Ã«. ÃªÃ°Ã Ã·ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_TOUCAN</Tag>
+		<English>Tale, Toucan</English>
+		<French>Mythe du Toucan</French>
+		<German>Mythos des Tukans</German>
+		<Italian>Mito del tucano</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã²Ã³ÃªÃ Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_BIRDS</Tag>
+		<English>Taxon Birds</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_RAPTORS</Tag>
+		<English>Taxon Raptors</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_SEABIRDS</Tag>
+		<English>Taxon Seabirds</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CAMEL</Tag>
+		<English>Tale, Camel</English>
+		<French>Mythe du Chameau</French>
+		<German>Mythos des Kamels</German>
+		<Italian>Mito del cammello</Italian>
+		<Polish>Mit Wielb&#179;&#185;da</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¢Ã¥Ã°Ã¡Ã«Ã¾Ã¤Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_CARIBOU</Tag>
+		<English>Tale, Caribou</English>
+		<French>Mythe du Caribou</French>
+		<German>Mythos des Karibus</German>
+		<Italian>Mito del caribu</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ Ã°Ã¨Ã¡Ã³</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DEER</Tag>
+		<English>Tale, Deer</English>
+		<French>Mythe du Cerf</French>
+		<German>Mythos des Hirschs</German>
+		<Italian>Mito del cervo</Italian>
+		<Polish>Mit Jelenia</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã«Ã¥Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_DONKEY</Tag>
+		<English>Tale, Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<German>Mythos des Esels</German>
+		<Italian>Mito dell'asino</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®Ã±Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GIRAFFE</Tag>
+		<English>Tale, Giraffe</English>
+		<French>Mythe de la Girafe</French>
+		<German>Mythos der Giraffe</German>
+		<Italian>Mito della giraffa</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¦Ã¨Ã°Ã Ã´Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GUANACO</Tag>
+		<English>Tale, Guanaco</English>
+		<French>Mythe du Lama</French>
+		<German>Mythos des Lamas</German>
+		<Italian>Mito del lama</Italian>
+		<Polish>Mit Lam</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã«Ã Ã¬Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MOOSE</Tag>
+		<English>Tale, Moose</English>
+		<French>Mythe de l'Elan</French>
+		<German>Mythos des Elchs</German>
+		<Italian>Mito dell'alce</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã«Ã®Ã±Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_MOUFLON</Tag>
+		<English>Tale, Mouflon</English>
+		<French>Mythe de la Chevre</French>
+		<German>Mythos der Ziege</German>
+		<Italian>Mito del muflone</Italian>
+		<Polish>Mit K&#243;z</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ®Ã§Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_OKAPI</Tag>
+		<English>Tale, Okapi</English>
+		<French>Mythe de l'Okapi</French>
+		<German>Mythos des Okapis</German>
+		<Italian>Mito dell'okapi</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã®ÃªÃ Ã¯Ã¨</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALIA_IBEX</Tag>
+		<English>Tale, Walia Ibex</English>
+		<French>Mythe du Bouquetin</French>
+		<German>Mythos des Steinbocks</German>
+		<Italian>Mito dello stambecco del Semien</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® ÃªÃ®Ã§Ã¥Ã°Ã®Ã£Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_ZEBRA</Tag>
+		<English>Tale, Zebra</English>
+		<French>Mythe du Zebre</French>
+		<German>Mythos des Zebras</German>
+		<Italian>Mito della zebra</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã§Ã¥Ã¡Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_UNGULATA</Tag>
+		<English>Taxon Ungulata</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_NINE_BANDED_ARMADILLO</Tag>
+		<English>Tale, Nine-banded Armadillo</English>
+		<French>Mythe du Tatou</French>
+		<German>Mythos des Guerteltieres</German>
+		<Italian>Mito dell'armadillo a nove fasce</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¡Ã°Ã®Ã­Ã¥Ã­Ã®Ã±Ã¶Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GLYPTODON</Tag>
+		<English>Tale, Glyptodon</English>
+		<French>Mythe du Glyptodon</French>
+		<German>Mythos des Glyptodons</German>
+		<Italian>Mito del gliptodonte</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã«Ã¨Ã¯Ã²Ã®Ã¤Ã®Ã­Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_GROUND_SLOTH</Tag>
+		<English>Tale, Ground Sloth</English>
+		<French>Mythe du Xenarthre</French>
+		<German>Mythos des Megatheriums</German>
+		<Italian>Mito del bradipo gigante</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã¨Ã£. Ã«Ã¥Ã­Ã¨Ã¢Ã¶Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_SABRETOOTH</Tag>
+		<English>Tale, Sabretooth</English>
+		<French>Mythe du Tigre a dents de sabre</French>
+		<German>Mythos des Saebelzahntigers</German>
+		<Italian>Mito della tigre dai denti a sciabola</Italian>
+		<Polish>Mit - Tygrys Szabloz&#234;bny</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã±Ã Ã¡Ã«. Ã²Ã¨Ã£Ã°Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_THREE_TOED_SLOTH</Tag>
+		<English>Tale, Three-toed Sloth</English>
+		<French>Mythe du paresseux</French>
+		<German>Mythos des Dreifinger-Faultiers</German>
+		<Italian>Mito del bradipo tridattile</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã«Ã¥Ã­Ã¨Ã¢Ã¶Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_PALEOLITHIC_CAT</Tag>
+		<English>Tale, Paleolithic Cat</English>
+		<French>Mythe du Felin Paleolithique</French>
+		<German>Mythos der Urzeitkatzen</German>
+		<Italian>Mito del felino del paleolitico</Italian>
+		<Polish>Mit Lew Jaskiniowy</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¤Ã°Ã¥Ã¢Ã­Ã¥Ã© ÃªÃ®Ã¸ÃªÃ¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_PLEISTOCENE_MEGAFAUNA</Tag>
+		<English>Taxon Pleistocene Megafauna</English>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_NARWHAL</Tag>
+		<English>Tale, Narwhal</English>
+		<French>Mythe du Narval</French>
+		<German>Mythos des Narwals</German>
+		<Italian>Mito del narvalo</Italian>
+		<Polish>Mit Narwala</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã­Ã Ã°Ã¢Ã Ã«Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WALRUS</Tag>
+		<English>Tale, Walrus</English>
+		<French>Mythe du Morse</French>
+		<German>Mythos des Walrosses</German>
+		<Italian>Mito del tricheco</Italian>
+		<Polish>Mit Morsa</Polish>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã¬Ã®Ã°Ã¦Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_VULTURE</Tag>
+		<English>Tale, Vulture</English>
+		<French>Mythe du Vautour</French>
+		<German>Mythos des Geiers</German>
+		<Italian>Mito dell'avvoltoio</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã® Ã£Ã°Ã¨Ã´Ã¥</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_FOLKLORE_WILD_TURKEY</Tag>
+		<English>Tale, Wild Turkey</English>
+		<French>Mythe de la Dinde</French>
+		<German>Mythos des Truthuhns</German>
+		<Italian>Mito del tacchino</Italian>
+		<Russian>ÃŒÃ¨Ã´ Ã®Ã¡ Ã¨Ã­Ã¤Ã¥Ã©ÃªÃ¥</Russian>
+	</TEXT>	<TEXT>
+		<Tag>TXT_KEY_HERITAGE_TAXON_FISH</Tag>
+		<English>Taxon Fish</English>
+	</TEXT></Civ4GameText>
