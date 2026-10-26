@@ -27955,8 +27955,25 @@ bool CvGameTextMgr::buildPromotionString(CvWStringBuffer &szBuffer, TechTypes eT
 {
 	CvWString szTempBuffer;
 
-	if (GC.getPromotionInfo((PromotionTypes) iPromotionType).getTechPrereq() == eTech)
+	const CvPromotionInfo& kPromotionForTechHelp = GC.getPromotionInfo((PromotionTypes) iPromotionType);
+
+	if (kPromotionForTechHelp.getTechPrereq() == eTech)
 	{
+		for (int iI = 0; iI < kPromotionForTechHelp.getNumOnGameOptions(); iI++)
+		{
+			if (!GC.getGame().isOption((GameOptionTypes)kPromotionForTechHelp.getOnGameOption(iI)))
+			{
+				return bFirst;
+			}
+		}
+		for (int iI = 0; iI < kPromotionForTechHelp.getNumNotOnGameOptions(); iI++)
+		{
+			if (GC.getGame().isOption((GameOptionTypes)kPromotionForTechHelp.getNotOnGameOption(iI)))
+			{
+				return bFirst;
+			}
+		}
+
 		if (bList && bFirst)
 		{
 			szBuffer.append(NEWLINE);

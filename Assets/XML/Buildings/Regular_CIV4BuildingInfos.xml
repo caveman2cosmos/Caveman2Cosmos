@@ -10,6 +10,12 @@
             <MapCategoryTypes>
                 <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
             </MapCategoryTypes>
+            <Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-250</iPropertyValue>
+				</Property>
+			</Properties>
             <bNukeImmune>1</bNukeImmune>
             <bAutoBuild>1</bAutoBuild>
             <bNeverCapture>1</bNeverCapture>

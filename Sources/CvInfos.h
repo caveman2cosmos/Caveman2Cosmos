@@ -554,6 +554,7 @@ public:
 	PromotionTypes getPrereqOrPromotion2() const { return m_iPrereqOrPromotion2; }
 
 	TechTypes getTechPrereq() const;
+	BuildingTypes getGrantsBuildingOnFound() const;
 	int getMinEraType() const;
 	int getMaxEraType() const;
 	int getStateReligionPrereq() const;
@@ -1091,6 +1092,7 @@ protected:
 	PromotionTypes m_iPrereqOrPromotion2;
 
 	TechTypes m_iTechPrereq;
+	BuildingTypes m_eGrantsBuildingOnFound; // Beta: Nomadic Start - city building granted when the unit holding this promotion founds a city
 	int m_iStateReligionPrereq;
 	int m_iMinEraType;
 	int m_iMaxEraType;
@@ -1888,6 +1890,7 @@ public:
 	bool isDealsColdDamage() const;
 	bool isColdImmune() const;
 	bool isAttackOnlyCities() const;
+	bool isOnlyAttackAnimals() const;
 	bool isIgnoreNoEntryLevel() const;
 	bool isIgnoreZoneofControl() const;
 	bool isFliesToMove() const;
@@ -2551,6 +2554,7 @@ private:
 	bool m_bDealsColdDamage;
 	bool m_bColdImmune;
 	bool m_bAttackOnlyCities;
+	bool m_bOnlyAttackAnimals;
 	bool m_bIgnoreNoEntryLevel;
 	bool m_bIgnoreZoneofControl;
 	bool m_bFliesToMove;

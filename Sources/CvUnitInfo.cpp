@@ -297,6 +297,7 @@ m_bOnslaught(false),
 m_bDealsColdDamage(false),
 m_bColdImmune(false),
 m_bAttackOnlyCities(false),
+m_bOnlyAttackAnimals(false),
 m_bIgnoreNoEntryLevel(false),
 m_bIgnoreZoneofControl(false),
 m_bFliesToMove(false),
@@ -2369,6 +2370,11 @@ bool CvUnitInfo::isAttackOnlyCities() const
 	return m_bAttackOnlyCities;
 }
 
+bool CvUnitInfo::isOnlyAttackAnimals() const
+{
+	return m_bOnlyAttackAnimals;
+}
+
 bool CvUnitInfo::isIgnoreNoEntryLevel() const
 {
 	return m_bIgnoreNoEntryLevel;
@@ -3856,6 +3862,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bDealsColdDamage);
 	CheckSum(iSum, m_bColdImmune);
 	CheckSum(iSum, m_bAttackOnlyCities);
+	CheckSum(iSum, m_bOnlyAttackAnimals);
 	CheckSum(iSum, m_bIgnoreNoEntryLevel);
 	CheckSum(iSum, m_bIgnoreZoneofControl);
 	CheckSum(iSum, m_bFliesToMove);
@@ -4536,6 +4543,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bDealsColdDamage, L"bDealsColdDamage");
 	pXML->GetOptionalChildXmlValByName(&m_bColdImmune, L"bColdImmune");
 	pXML->GetOptionalChildXmlValByName(&m_bAttackOnlyCities, L"bAttackOnlyCities");
+	pXML->GetOptionalChildXmlValByName(&m_bOnlyAttackAnimals, L"bOnlyAttackAnimals");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreNoEntryLevel, L"bIgnoreNoEntryLevel");
 	pXML->GetOptionalChildXmlValByName(&m_bIgnoreZoneofControl, L"bIgnoreZoneofControl");
 	pXML->GetOptionalChildXmlValByName(&m_bFliesToMove, L"bFliesToMove");
@@ -5526,6 +5534,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bDealsColdDamage == bDefault ) m_bDealsColdDamage = pClassInfo->isDealsColdDamage();
 	if ( m_bColdImmune == bDefault ) m_bColdImmune = pClassInfo->isColdImmune();
 	if ( m_bAttackOnlyCities == bDefault ) m_bAttackOnlyCities = pClassInfo->isAttackOnlyCities();
+	if ( m_bOnlyAttackAnimals == bDefault ) m_bOnlyAttackAnimals = pClassInfo->isOnlyAttackAnimals();
 	if ( m_bIgnoreNoEntryLevel == bDefault ) m_bIgnoreNoEntryLevel = pClassInfo->isIgnoreNoEntryLevel();
 	if ( m_bIgnoreZoneofControl == bDefault ) m_bIgnoreZoneofControl = pClassInfo->isIgnoreZoneofControl();
 	if ( m_bFliesToMove == bDefault ) m_bFliesToMove = pClassInfo->isFliesToMove();

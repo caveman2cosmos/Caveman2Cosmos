@@ -6479,6 +6479,24 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 		}
 	}
 
+	// Beta: Nomadic Start - convert the founding unit's "virtual building" promotions (e.g. Nomad Band camps)
+	// into their matching real city buildings so progress made while nomadic isn't lost on settling.
+	if (pUnit != NULL)
+	{
+		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		{
+			const BuildingTypes eGrantedBuilding = GC.getPromotionInfo((PromotionTypes)iI).getGrantsBuildingOnFound();
+			if (eGrantedBuilding != NO_BUILDING
+			&& pUnit->isHasPromotion((PromotionTypes)iI)
+			// Ignore the granted building's own tech requirement - earning the promotion while nomadic
+			// is the real gate; the player may not have researched the building's usual tech yet.
+			&& pCity->canConstruct(eGrantedBuilding, false, false, false, false, true, (TechTypes)GC.getBuildingInfo(eGrantedBuilding).getPrereqAndTech()))
+			{
+				pCity->changeHasBuilding(eGrantedBuilding, true);
+			}
+		}
+	}
+
 	if (isNPC())
 	{
 		int iDummyValue;

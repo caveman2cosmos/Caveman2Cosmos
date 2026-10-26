@@ -13804,6 +13804,11 @@ bool CvUnit::canAttack(const CvUnit& defender) const
 		return false;
 	}
 
+	if (m_pUnitInfo->isOnlyAttackAnimals() && !defender.isAnimal())
+	{
+		return false;
+	}
+
 	//tunnel fixes
 	if (defender.plot()->isWater() && defender.plot()->isSeaTunnel())
 	{
@@ -13857,6 +13862,11 @@ bool CvUnit::canAmbush(const CvUnit& defender, const bool bAssassinate) const
 	}
 
 	if (canAttackOnlyCities() && !defender.plot()->isCity())
+	{
+		return false;
+	}
+
+	if (m_pUnitInfo->isOnlyAttackAnimals() && !defender.isAnimal())
 	{
 		return false;
 	}
@@ -19244,12 +19254,12 @@ void CvUnit::testPromotionReady()
 	bool bPromotionReady = false;
 	if (getExperience() >= experienceNeeded() && canAcquirePromotionAny())
 	{
-		logBBAI("Exp for promotion present (%d vs %d)\n", getExperience(), experienceNeeded());
+		LOG_BBAI_UNIT(3, ("Exp for promotion present (%d vs %d)\n", getExperience(), experienceNeeded()));
 		bPromotionReady = true;
 	}
 	if (getRetrainsAvailable() > 0 && canAcquirePromotionAny())
 	{
-		logBBAI("Retrain available (%d left)\n", getRetrainsAvailable());
+		LOG_BBAI_UNIT(3, ("Retrain available (%d left)\n", getRetrainsAvailable()));
 		bPromotionReady = true;
 	}
 
@@ -34754,6 +34764,24 @@ void CvUnit::setFreePromotion(PromotionTypes ePromotion, bool bAdding, TraitType
 
 	if (bAdding && !isHasPromotion(ePromotion))
 	{
+		// Respect OnGameOptions/NotOnGameOptions even for promotions marked free -
+		// previously only checked for non-free promotion acquisition (isPromotionValid).
+		const CvPromotionInfo& kFreePromotionInfo = GC.getPromotionInfo(ePromotion);
+		for (int iI = 0; iI < kFreePromotionInfo.getNumOnGameOptions(); iI++)
+		{
+			if (!GC.getGame().isOption((GameOptionTypes)kFreePromotionInfo.getOnGameOption(iI)))
+			{
+				return;
+			}
+		}
+		for (int iI = 0; iI < kFreePromotionInfo.getNumNotOnGameOptions(); iI++)
+		{
+			if (GC.getGame().isOption((GameOptionTypes)kFreePromotionInfo.getNotOnGameOption(iI)))
+			{
+				return;
+			}
+		}
+
 		if (m_pUnitInfo->getFreePromotions((int)ePromotion)
 		|| (NO_UNIT != getUnitType() && pPlayer.isFreePromotion(getUnitType(), ePromotion)))
 		{

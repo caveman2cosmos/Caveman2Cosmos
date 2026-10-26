@@ -301,7 +301,9 @@ void CvSelectionGroup::doTurn()
 		{
 			foreach_(const CvUnit* pLoopUnit, units() | filtered(!CvUnit::fn::isSpy()))
 			{
-				if (pLoopUnit->getBuildType() == NO_BUILD && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
+				if (pLoopUnit->getBuildType() == NO_BUILD
+				&& (headMissionQueueNode() == NULL || headMissionQueueNode()->m_data.eMissionType != MISSION_ROUTE_TO)
+				&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 2))
 				{
 					clearMissionQueue();
 				}
@@ -579,6 +581,7 @@ void CvSelectionGroup::autoMission()
 	{
 		if (isHuman()
 		&& headMissionQueueNode()->m_data.eMissionType != MISSION_BUILD
+		&& headMissionQueueNode()->m_data.eMissionType != MISSION_ROUTE_TO
 		&& algo::any_of(units(), !CvUnit::fn::alwaysInvisible())
 		&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
 		{
@@ -656,9 +659,8 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	{
 		pPlot = plot();
 	}
-#ifdef NOMADIC_START
+	const bool bNomadicStart = GC.getGame().isOption(GAMEOPTION_NOMADIC_START);
 	const TechTypes sedentaryLifestyle = GC.getTECH_SEDENTARY_LIFESTYLE();
-#endif
 	foreach_(CvUnit* unitX, units())
 	{
 		switch (iMission)
@@ -900,12 +902,10 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			}
 			case MISSION_FOUND:
 			{
-#ifdef NOMADIC_START
-				if (!GET_TEAM(unitX->getTeam()).isHasTech(sedentaryLifestyle))
+				if (bNomadicStart && !GET_TEAM(unitX->getTeam()).isHasTech(sedentaryLifestyle))
 				{
 					return false;
 				}
-#endif
 				if (unitX->canFound(pPlot, bTestVisible))
 				{
 					return true;

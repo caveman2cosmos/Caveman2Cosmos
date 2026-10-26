@@ -1731,5 +1731,13 @@
 		<French>Génère un fichier de journal d'événements en temps réel (realtimeevents.log). Il peut être visualisé en direct via la page RealtimeEventsViewer.html.</French>
 		<Russian>Создает файл журнала событий в реальном времени (realtimeevents.log). Его можно просматривать в браузере с помощью страницы RealtimeEventsViewer.html.</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NOMADIC_START</Tag>
+		<English>[BETA] Nomadic Start</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_NOMADIC_START_HELP</Tag>
+		<English>Civs start without a Settler and cannot found a city until Sedentary Lifestyle is researched. Instead you begin with a Nomad Camp unit that can found a city once eligible.[NEWLINE][NEWLINE]This is an experimental/beta feature: the AI has not been adapted for it and may behave unpredictably. Recommended for human-only testing.</English>
+	</TEXT>
 </Civ4GameText>
 

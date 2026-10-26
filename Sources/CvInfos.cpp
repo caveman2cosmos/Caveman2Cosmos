@@ -1867,6 +1867,7 @@ void CvTechInfo::doPostLoadCaching(uint32_t iThis)
 CvPromotionInfo::CvPromotionInfo() :
 m_iLayerAnimationPath(ANIMATIONPATH_NONE),
 m_iTechPrereq(NO_TECH),
+m_eGrantsBuildingOnFound(NO_BUILDING),
 m_iMinEraType(NO_ERA),
 m_iMaxEraType(NO_ERA),
 m_iStateReligionPrereq(NO_RELIGION),
@@ -2120,6 +2121,8 @@ CvPromotionInfo::~CvPromotionInfo()
 {
 	CvInfoUtil(this).uninitDataMembers();
 
+	GC.removeDelayedResolution((int*)&m_eGrantsBuildingOnFound);
+
 	SAFE_DELETE_ARRAY(m_piTerrainAttackPercent);
 	SAFE_DELETE_ARRAY(m_piTerrainDefensePercent);
 	SAFE_DELETE_ARRAY(m_piFeatureAttackPercent);
@@ -2141,6 +2144,11 @@ CvPromotionInfo::~CvPromotionInfo()
 int CvPromotionInfo::getLayerAnimationPath() const
 {
 	return m_iLayerAnimationPath;
+}
+
+BuildingTypes CvPromotionInfo::getGrantsBuildingOnFound() const
+{
+	return m_eGrantsBuildingOnFound;
 }
 
 TechTypes CvPromotionInfo::getTechPrereq() const
@@ -4727,6 +4735,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	m_iLayerAnimationPath = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalTypeEnum(m_iTechPrereq, L"TechPrereq");
+	pXML->GetOptionalTypeEnumWithDelayedResolution(m_eGrantsBuildingOnFound, L"GrantsBuildingOnFound");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"StateReligionPrereq");
 	m_iStateReligionPrereq = pXML->GetInfoClass(szTextVal);
@@ -5421,6 +5430,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 
 	if (getLayerAnimationPath() == ANIMATIONPATH_NONE) m_iLayerAnimationPath = pClassInfo->getLayerAnimationPath();
 	if (getTechPrereq() == NO_TECH) m_iTechPrereq = pClassInfo->getTechPrereq();
+	if (getGrantsBuildingOnFound() == NO_BUILDING) m_eGrantsBuildingOnFound = pClassInfo->getGrantsBuildingOnFound();
 	if (getStateReligionPrereq() == NO_RELIGION) m_iStateReligionPrereq = pClassInfo->getStateReligionPrereq();
 	if (getMinEraType() == NO_ERA) m_iMinEraType = pClassInfo->getMinEraType();
 	if (getMaxEraType() == NO_ERA) m_iMaxEraType = pClassInfo->getMaxEraType();
@@ -6223,6 +6233,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CvInfoUtil(this).checkSum(iSum);
 
 	CheckSum(iSum, m_iTechPrereq);
+	CheckSum(iSum, m_eGrantsBuildingOnFound);
 	CheckSum(iSum, m_iStateReligionPrereq);
 	CheckSum(iSum, m_iMinEraType);
 	CheckSum(iSum, m_iMaxEraType);

@@ -5746,6 +5746,15 @@ class CvMainInterface:
 
 							if not bShift and CyCity.getProductionProgress():
 								bCtrl = True
+							elif bShift and CyCity.isProductionProcess():
+								# A process at the head always yields to anything newly
+								# queued (CvCity::pushOrder inserts at the front even when
+								# bAppend is requested), regardless of the shift-to-append
+								# intent here. Mirror that so our local WorkQueue mirror
+								# doesn't diverge from the server's real order - otherwise
+								# later queue-row clicks pop the wrong index.
+								bCtrl = True
+								bShift = False
 
 						# Determine order type
 						iGaMsgType = GameMessageTypes.GAMEMESSAGE_PUSH_ORDER

@@ -76,6 +76,41 @@ void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
 	PROFILE_EXTRA_FUNC();
+
+	// Beta: Nomad Band's gather/defend/research/build missions only usable with Nomadic Start enabled.
+	if (!GC.getGame().isOption(GAMEOPTION_NOMADIC_START))
+	{
+		static const char* aszNomadMissions[] =
+		{
+			"MISSION_NOMAD_DEFENDER",
+			"MISSION_NOMAD_RESEARCH",
+			"MISSION_NOMAD_RECON",
+			"MISSION_NOMAD_BUILD_FORAGE_CAMP",
+			"MISSION_NOMAD_BUILD_HUNTING_CAMP",
+			"MISSION_NOMAD_BUILD_LORE_CIRCLE",
+			"MISSION_NOMAD_BUILD_CAMPFIRE",
+			"MISSION_NOMAD_BUILD_SHELTER",
+			"MISSION_NOMAD_BUILD_TRADING_POST",
+			"MISSION_NOMAD_BUILD_TRAPS",
+			"MISSION_NOMAD_BUILD_DRUM_CIRCLE",
+			"MISSION_NOMAD_BUILD_RITUAL_SITE",
+			"MISSION_NOMAD_BUILD_COOKING_PIT",
+		};
+		static std::vector<MissionTypes> aeNomadMissions;
+		if (aeNomadMissions.empty())
+		{
+			for (size_t i = 0; i < sizeof(aszNomadMissions) / sizeof(aszNomadMissions[0]); ++i)
+			{
+				aeNomadMissions.push_back((MissionTypes)GC.getInfoTypeForString(aszNomadMissions[i], true));
+			}
+		}
+
+		if (algo::any_of_equal(aeNomadMissions, m_eMission))
+		{
+			return false;
+		}
+	}
+
 	if (!bTestVisible)
 	{
 		if (m_iCost)

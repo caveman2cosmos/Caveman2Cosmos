@@ -403,6 +403,7 @@
 	<ElementType name="bAttackOnlyCities" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesAdd" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesSubtract" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOnlyAttackAnimals" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevel" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevelAdd" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevelSubtract" content="textOnly" dt:type="boolean"/>
@@ -2037,6 +2038,7 @@
 		<element type="iTaunt" minOccurs="0"/>
 		<element type="iMaxHP" minOccurs="0"/>
 		<element type="bAttackOnlyCities" minOccurs="0"/>
+		<element type="bOnlyAttackAnimals" minOccurs="0"/>
 		<element type="bIgnoreNoEntryLevel" minOccurs="0"/>
 		<element type="bIgnoreZoneofControl" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeMore" minOccurs="0"/>
