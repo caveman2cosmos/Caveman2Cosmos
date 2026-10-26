@@ -1266,6 +1266,7 @@
 	<ElementType name="bNoBadGoodies" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOnlyDefensive" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCapture" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoAmbush" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRivalTerritory" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryHappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitarySupport" content="textOnly" dt:type="boolean"/>
@@ -1896,6 +1897,7 @@
 		<element type="FlankingStrikes" minOccurs="0"/>
 		<element type="UnitAIs" minOccurs="0"/>
 		<element type="NotUnitAIs" minOccurs="0"/>
+		<element type="bNoAmbush" minOccurs="0"/>
 		<element type="Builds" minOccurs="0"/>
 		<element type="ReligionSpreads" minOccurs="0"/>
 		<element type="CorporationSpreads" minOccurs="0"/>
