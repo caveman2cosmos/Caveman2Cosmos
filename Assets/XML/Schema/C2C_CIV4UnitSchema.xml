@@ -1780,6 +1780,7 @@
 		<element type="bKill" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
 		<element type="PayerType" minOccurs="0"/>
+		<element type="UnitCondition" minOccurs="0"/>
 		<element type="PropertyCost" minOccurs="0"/>
 		<element type="ActionOutcomes"/>
 	</ElementType>
