@@ -43,6 +43,7 @@
 #include <map>
 #include <vector>
 #include "PathCallerTag.h"
+#include "SubTimerTag.h"
 
 // Per-player turn timing instrumentation
 static LARGE_INTEGER s_playerTurnStart[MAX_PLAYERS];
@@ -64,6 +65,27 @@ static double s_playerDangerQueryMs[MAX_PLAYERS] = { 0.0 };
 static int s_playerDangerQueryCount[MAX_PLAYERS] = { 0 };
 static double s_playerDangerInPathMs[MAX_PLAYERS] = { 0.0 };
 static int s_playerDangerInPathCount[MAX_PLAYERS] = { 0 };
+
+// Sub-timer accumulators for unit AI move components
+int g_iPatrolDepth = 0;
+int g_iAnyAttackDepth = 0;
+int g_iExposedDangerDepth = 0;
+int g_iAttackOddsDepth = 0;
+int g_iMergeCheckDepth = 0;
+int g_iReachableDepth = 0;
+
+static double s_playerPatrolMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerPatrolCount[MAX_PLAYERS] = { 0 };
+static double s_playerAnyAttackMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerAnyAttackCount[MAX_PLAYERS] = { 0 };
+static double s_playerExposedDangerMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerExposedDangerCount[MAX_PLAYERS] = { 0 };
+static double s_playerAttackOddsMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerAttackOddsCount[MAX_PLAYERS] = { 0 };
+static double s_playerMergeCheckMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerMergeCheckCount[MAX_PLAYERS] = { 0 };
+static double s_playerReachableMs[MAX_PLAYERS] = { 0.0 };
+static int s_playerReachableCount[MAX_PLAYERS] = { 0 };
 
 // Nesting depth of CvPathGenerator::generatePath (main thread only).
 // Used so that only the outermost path call is timed and so that danger
@@ -226,6 +248,60 @@ static void addPlayerSetInactiveMs(int iPlayer, double dMs)
 	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS) s_playerSetInactiveMs[iPlayer] += dMs;
 }
 
+void addPlayerPatrolMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerPatrolMs[iPlayer] += dMs;
+		s_playerPatrolCount[iPlayer]++;
+	}
+}
+
+void addPlayerAnyAttackMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerAnyAttackMs[iPlayer] += dMs;
+		s_playerAnyAttackCount[iPlayer]++;
+	}
+}
+
+void addPlayerExposedDangerMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerExposedDangerMs[iPlayer] += dMs;
+		s_playerExposedDangerCount[iPlayer]++;
+	}
+}
+
+void addPlayerAttackOddsMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerAttackOddsMs[iPlayer] += dMs;
+		s_playerAttackOddsCount[iPlayer]++;
+	}
+}
+
+void addPlayerMergeCheckMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerMergeCheckMs[iPlayer] += dMs;
+		s_playerMergeCheckCount[iPlayer]++;
+	}
+}
+
+void addPlayerReachableMs(int iPlayer, double dMs)
+{
+	if (iPlayer >= 0 && iPlayer < MAX_PLAYERS)
+	{
+		s_playerReachableMs[iPlayer] += dMs;
+		s_playerReachableCount[iPlayer]++;
+	}
+}
+
 static void startPlayerTurnTiming(int iPlayer)
 {
 	if (iPlayer < 0 || iPlayer >= MAX_PLAYERS) return;
@@ -248,6 +324,18 @@ static void startPlayerTurnTiming(int iPlayer)
 	s_playerDangerQueryCount[iPlayer] = 0;
 	s_playerDangerInPathMs[iPlayer] = 0.0;
 	s_playerDangerInPathCount[iPlayer] = 0;
+	s_playerPatrolMs[iPlayer] = 0.0;
+	s_playerPatrolCount[iPlayer] = 0;
+	s_playerAnyAttackMs[iPlayer] = 0.0;
+	s_playerAnyAttackCount[iPlayer] = 0;
+	s_playerExposedDangerMs[iPlayer] = 0.0;
+	s_playerExposedDangerCount[iPlayer] = 0;
+	s_playerAttackOddsMs[iPlayer] = 0.0;
+	s_playerAttackOddsCount[iPlayer] = 0;
+	s_playerMergeCheckMs[iPlayer] = 0.0;
+	s_playerMergeCheckCount[iPlayer] = 0;
+	s_playerReachableMs[iPlayer] = 0.0;
+	s_playerReachableCount[iPlayer] = 0;
 	s_pathCallerStats[iPlayer].clear();
 	s_pathCallerOuterEntries[iPlayer].clear();
 	s_iPathCallerTimedPlayer = iPlayer;
@@ -264,7 +352,7 @@ static void stopPlayerTurnTiming(int iPlayer, int iTurn, bool bHuman, bool bNPC,
 	FILE* f = fopen("PlayerTurnTiming.log", "a");
 	if (f)
 	{
-		fprintf(f, "TURN %d PLAYER %d DURATION_MS=%d SETACTIVE_MS=%d DANGER_MS=%d MOVES_MS=%d AUTO_MS=%d UNITUPDATE_MS=%d GROUPUPDATE_MS=%d GROUPUPDATE_COUNT=%d UNITMOVES_MS=%d UNITMOVES_COUNT=%d SORT_MS=%d PATH_MS=%d PATH_COUNT=%d DANGERQUERY_MS=%d DANGERQUERY_COUNT=%d DANGERINPATH_MS=%d DANGERINPATH_COUNT=%d SETINACTIVE_MS=%d HUMAN=%d NPC=%d ALIVE=%d\n",
+		fprintf(f, "TURN %d PLAYER %d DURATION_MS=%d SETACTIVE_MS=%d DANGER_MS=%d MOVES_MS=%d AUTO_MS=%d UNITUPDATE_MS=%d GROUPUPDATE_MS=%d GROUPUPDATE_COUNT=%d UNITMOVES_MS=%d UNITMOVES_COUNT=%d SORT_MS=%d PATH_MS=%d PATH_COUNT=%d DANGERQUERY_MS=%d DANGERQUERY_COUNT=%d DANGERINPATH_MS=%d DANGERINPATH_COUNT=%d PATROL_MS=%d PATROL_COUNT=%d ANYATTACK_MS=%d ANYATTACK_COUNT=%d EXPOSEDDANGER_MS=%d EXPOSEDDANGER_COUNT=%d ATTACKODDS_MS=%d ATTACKODDS_COUNT=%d MERGECHECK_MS=%d MERGECHECK_COUNT=%d REACHABLE_MS=%d REACHABLE_COUNT=%d SETINACTIVE_MS=%d HUMAN=%d NPC=%d ALIVE=%d\n",
 			iTurn, iPlayer, (int)(dMs + 0.5), (int)(s_playerSetActiveMs[iPlayer] + 0.5), (int)(s_playerDangerMs[iPlayer] + 0.5),
 			(int)(s_playerMovesMs[iPlayer] + 0.5), (int)(s_playerAutoMissionMs[iPlayer] + 0.5), (int)(s_playerUnitUpdateMs[iPlayer] + 0.5),
 			(int)(s_playerGroupUpdateMs[iPlayer] + 0.5), s_playerGroupUpdateCount[iPlayer], (int)(s_playerUnitMoveMs[iPlayer] + 0.5), s_playerUnitMoveCount[iPlayer],
@@ -272,6 +360,12 @@ static void stopPlayerTurnTiming(int iPlayer, int iTurn, bool bHuman, bool bNPC,
 			(int)(s_playerPathMs[iPlayer] + 0.5), s_playerPathCount[iPlayer],
 			(int)(s_playerDangerQueryMs[iPlayer] + 0.5), s_playerDangerQueryCount[iPlayer],
 			(int)(s_playerDangerInPathMs[iPlayer] + 0.5), s_playerDangerInPathCount[iPlayer],
+			(int)(s_playerPatrolMs[iPlayer] + 0.5), s_playerPatrolCount[iPlayer],
+			(int)(s_playerAnyAttackMs[iPlayer] + 0.5), s_playerAnyAttackCount[iPlayer],
+			(int)(s_playerExposedDangerMs[iPlayer] + 0.5), s_playerExposedDangerCount[iPlayer],
+			(int)(s_playerAttackOddsMs[iPlayer] + 0.5), s_playerAttackOddsCount[iPlayer],
+			(int)(s_playerMergeCheckMs[iPlayer] + 0.5), s_playerMergeCheckCount[iPlayer],
+			(int)(s_playerReachableMs[iPlayer] + 0.5), s_playerReachableCount[iPlayer],
 			(int)(s_playerSetInactiveMs[iPlayer] + 0.5), bHuman ? 1 : 0, bNPC ? 1 : 0, bAlive ? 1 : 0);
 		fclose(f);
 	}

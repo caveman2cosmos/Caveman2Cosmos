@@ -13,6 +13,7 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvImprovementInfo.h"
+#include "SubTimerTag.h"
 
 // Per-player timing helper defined in CvPlayer.cpp
 void addPlayerGroupUpdateMs(int iPlayer, double dMs);
@@ -331,6 +332,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 	bool bIsWin = false;
 
 	PROFILE_FUNC();
+	SUB_TIMER_ATTACKODDS(getOwner());
 
 	if ( g_attackOddsCacheGroup != this )
 	{

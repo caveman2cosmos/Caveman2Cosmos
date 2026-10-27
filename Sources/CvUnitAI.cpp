@@ -41,6 +41,7 @@ void addPlayerUnitMoveMs(int iPlayer, double dMs);
 // empty, so for this file only we redefine them to push a caller tag (see PathCallerTag.h).
 // They are restored to empty at the end of this file so other unity-build files are unaffected.
 #include "PathCallerTag.h"
+#include "SubTimerTag.h"
 #ifndef FP_PROFILE_ENABLE
 #define C2C_PATH_CALLER_TAGS_ACTIVE
 #undef PROFILE_FUNC
@@ -1185,6 +1186,7 @@ int CvUnitAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** 
 int CvUnitAI::AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults)
 {
 	PROFILE_FUNC();
+	SUB_TIMER_ATTACKODDS(getOwner());
 
 	if (pDefender == NULL)
 	{
@@ -16328,6 +16330,7 @@ bool CvUnitAI::AI_seaAreaAttack()
 bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 {
 	PROFILE_FUNC();
+	SUB_TIMER_PATROL(getOwner());
 
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
@@ -17558,6 +17561,7 @@ bool CvUnitAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit
 bool CvUnitAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat) const
 {
 	PROFILE_EXTRA_FUNC();
+	SUB_TIMER_EXPOSEDDANGER(getOwner());
 	if (GET_PLAYER(getOwner()).AI_getPlotDanger(pPlot, 1, false))
 	{
 		//	What would the odds be?
@@ -18578,6 +18582,7 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
+	SUB_TIMER_ANYATTACK(getOwner());
 	FAssert(canMove());
 
 	if (AI_ambush(iOddsThreshold))

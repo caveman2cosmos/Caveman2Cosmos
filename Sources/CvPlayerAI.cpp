@@ -3730,10 +3730,12 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 	int iCount = 0;
 	int iBorderDanger = 0;
 
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("AI_getPlotDanger for (%d,%d) at range %d (bTestMoves=%d)\n",
 		pPlot->getX(), pPlot->getY(),
 		iRange,
 		bTestMoves).c_str());
+#endif
 
 	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
 	{

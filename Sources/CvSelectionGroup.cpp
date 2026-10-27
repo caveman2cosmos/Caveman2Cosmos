@@ -29,6 +29,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "PathCallerTag.h"
+#include "SubTimerTag.h"
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
@@ -6091,6 +6092,7 @@ namespace {
 bool CvSelectionGroup::doMergeCheck()
 {
 	PROFILE_EXTRA_FUNC();
+	SUB_TIMER_MERGECHECK(getOwner());
 	bool anyMerged = false;
 
 	while (true)

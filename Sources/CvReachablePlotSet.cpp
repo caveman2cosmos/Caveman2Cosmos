@@ -10,6 +10,7 @@
 #include "CvPlot.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
+#include "SubTimerTag.h"
 
 CvReachablePlotSet::const_iterator::const_iterator(const CvReachablePlotSet* parent, stdext::hash_map<CvPlot*,CvReachablePlotInfo>::const_iterator& itr) : m_parent(parent)
 {
@@ -241,6 +242,7 @@ CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(const CvSelectionGroup
 void CvReachablePlotSet::Populate(int iRange)
 {
 	PROFILE_FUNC();
+	SUB_TIMER_REACHABLE(m_group ? m_group->getOwner() : -1);
 
 	if (m_bCachable)
 	{
