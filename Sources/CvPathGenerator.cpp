@@ -28,6 +28,39 @@ static bool g_tracePathing = false;
 #else
 #define TRACE_PATHING	false
 #endif
+
+// Per-player path timing instrumentation (accumulators live in CvPlayer.cpp)
+extern int g_iPathTimingDepth;
+void addPlayerPathMs(int iPlayer, double dMs);
+
+namespace
+{
+	struct PathTimingScope
+	{
+		explicit PathTimingScope(int iPlayer) : m_iPlayer(iPlayer), m_bOuter(g_iPathTimingDepth == 0)
+		{
+			++g_iPathTimingDepth;
+			if (m_bOuter)
+			{
+				QueryPerformanceCounter(&m_tStart);
+			}
+		}
+		~PathTimingScope()
+		{
+			--g_iPathTimingDepth;
+			if (m_bOuter)
+			{
+				LARGE_INTEGER tEnd, freq;
+				QueryPerformanceCounter(&tEnd);
+				QueryPerformanceFrequency(&freq);
+				addPlayerPathMs(m_iPlayer, (double)(tEnd.QuadPart - m_tStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
+			}
+		}
+		int m_iPlayer;
+		bool m_bOuter;
+		LARGE_INTEGER m_tStart;
+	};
+}
 //#define	DETAILED_TRACE
 
 
@@ -763,6 +796,8 @@ static void ValidatePathNode(CvPathNode* node)
 bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
 {
 	PROFILE_FUNC();
+	// Per-player PATH_MS instrumentation (outermost call only; see CvPlayer.cpp)
+	PathTimingScope pathTimingScope(pGroup != NULL ? (int)pGroup->getOwner() : -1);
 	PROFILE_BEGIN_CONDITIONAL("CvPathGenerator::generatePath.Success", "CvPathGenerator::generatePath.Failure",PATH1);
 
 	CvPathNode* root;

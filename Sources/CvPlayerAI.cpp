@@ -21,6 +21,7 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvParallelBridge.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
@@ -33,6 +34,43 @@
 #include "BetterBTSAI.h"
 #include "FAStarNode.h"
 #include "CvArmy.h"
+
+// Player-turn timing helpers defined in CvPlayer.cpp
+void addPlayerUnitUpdateMs(int iPlayer, double dMs);
+void addPlayerSortMs(int iPlayer, double dMs);
+void addPlayerDangerQueryMs(int iPlayer, double dMs, bool bInsidePath);
+extern int g_iPathTimingDepth;
+extern int g_iDangerQueryTimingDepth;
+
+namespace
+{
+	// Times outermost CvPlayerAI::AI_getPlotDanger calls (DANGERQUERY_MS)
+	struct DangerQueryTimingScope
+	{
+		explicit DangerQueryTimingScope(int iPlayer) : m_iPlayer(iPlayer), m_bOuter(g_iDangerQueryTimingDepth == 0)
+		{
+			++g_iDangerQueryTimingDepth;
+			if (m_bOuter)
+			{
+				QueryPerformanceCounter(&m_tStart);
+			}
+		}
+		~DangerQueryTimingScope()
+		{
+			--g_iDangerQueryTimingDepth;
+			if (m_bOuter)
+			{
+				LARGE_INTEGER tEnd, freq;
+				QueryPerformanceCounter(&tEnd);
+				QueryPerformanceFrequency(&freq);
+				addPlayerDangerQueryMs(m_iPlayer, (double)(tEnd.QuadPart - m_tStart.QuadPart) * 1000.0 / (double)freq.QuadPart, g_iPathTimingDepth > 0);
+			}
+		}
+		int m_iPlayer;
+		bool m_bOuter;
+		LARGE_INTEGER m_tStart;
+	};
+}
 
 // Plot danger cache
 //#define DANGER_RANGE						(4)
@@ -1396,6 +1434,10 @@ void CvPlayerAI::AI_unitUpdate()
 {
 	PROFILE_FUNC();
 
+	LARGE_INTEGER freq, tUnitUpdateStart, tSortStart, tSortEnd, tEnd;
+	QueryPerformanceFrequency(&freq);
+	QueryPerformanceCounter(&tUnitUpdateStart);
+
 	//	Do delayed death here so that empty groups are removed now
 	foreach_(CvSelectionGroup * pLoopSelectionGroup, groups())
 	{
@@ -1494,6 +1536,7 @@ void CvPlayerAI::AI_unitUpdate()
 		{
 			std::vector< std::pair<int, int> > groupList;
 			//Define a Priority Sorting (see AI_movementPriority)
+			QueryPerformanceCounter(&tSortStart);
 			LOG_PLAYER_BLOCK(4, {
 				logAiEvaluations(4,"AI_unitUpdate : Setting the GroupList for Player %d", getID());
 			});
@@ -1511,10 +1554,39 @@ void CvPlayerAI::AI_unitUpdate()
 			}
 
 			algo::sort(groupList);
+			QueryPerformanceCounter(&tSortEnd);
+			addPlayerSortMs(getID(), (double)(tSortEnd.QuadPart - tSortStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 
 			LOG_PLAYER_BLOCK(4, {
 				logAiEvaluations(4,"AI_unitUpdate : List sorted, Applying AI_update for each item for Player %d", getID());
 			});
+
+			if (CvParallelBridge::getInstance().isAvailable() && !groupList.empty())
+			{
+				std::vector<C2CGroupMissionEntryBridge> missionEntries;
+				missionEntries.reserve(groupList.size());
+				for (size_t g = 0; g < groupList.size(); ++g)
+				{
+					CvSelectionGroup* pGrp = getSelectionGroup(groupList[g].second);
+					if (pGrp && pGrp->AI_getMissionAIPlot())
+					{
+						C2CGroupMissionEntryBridge entry;
+						entry.groupId = pGrp->getID();
+						entry.headUnitAi = pGrp->getHeadUnit() ? (int32_t)pGrp->getHeadUnit()->AI_getUnitAIType() : 0;
+						entry.missionAi = (int32_t)pGrp->AI_getMissionAIType();
+						entry.targetX = (int16_t)pGrp->AI_getMissionAIPlot()->getX();
+						entry.targetY = (int16_t)pGrp->AI_getMissionAIPlot()->getY();
+						entry.currX = (int16_t)pGrp->getX();
+						entry.currY = (int16_t)pGrp->getY();
+						missionEntries.push_back(entry);
+					}
+				}
+				if (!missionEntries.empty())
+				{
+					CvParallelBridge::getInstance().rebuildMissionTargetCache(
+						getID(), &missionEntries[0], (int)missionEntries.size(), -1);
+				}
+			}
 
 			for (size_t i = 0; i < groupList.size(); i++)
 			{
@@ -1605,6 +1677,9 @@ void CvPlayerAI::AI_unitUpdate()
 			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
 		}
 	}
+
+	QueryPerformanceCounter(&tEnd);
+	addPlayerUnitUpdateMs(getID(), (double)(tEnd.QuadPart - tUnitUpdateStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 }
 
 
@@ -3726,6 +3801,8 @@ int CvPlayerAI::plotDangerCacheReads = 0;
 int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
 	PROFILE_FUNC();
+	// Per-player DANGERQUERY_MS instrumentation (outermost call only; see CvPlayer.cpp)
+	DangerQueryTimingScope dangerTimingScope((int)getID());
 
 	if (iRange == -1)
 	{
@@ -3735,6 +3812,15 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 	if (isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 	{
 		return 0;
+	}
+
+	if (CvParallelBridge::getInstance().isAvailable())
+	{
+		int iBridgeDanger = CvParallelBridge::getInstance().getPlotDanger(getID(), pPlot->getX(), pPlot->getY(), iRange);
+		if (iBridgeDanger > 0)
+		{
+			return iBridgeDanger;
+		}
 	}
 
 #ifdef PLOT_DANGER_CACHING
@@ -12957,6 +13043,11 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, Missio
 int CvPlayerAI::AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
 {
 	PROFILE_FUNC();
+
+	if (pSkipSelectionGroup == NULL && piClosest == NULL && CvParallelBridge::getInstance().isAvailable())
+	{
+		return CvParallelBridge::getInstance().countPlotTargetMissionAIs(getID(), pPlot->getX(), pPlot->getY(), (int)eMissionAI, iRange);
+	}
 
 	int iCount = 0;
 	if (piClosest != NULL)

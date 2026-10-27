@@ -102,6 +102,7 @@ Settings
                     + ' /PDBALTPATH:%_PDB%'
                     + ' /INCREMENTAL:NO'
                     + ' /DEBUG'
+                    + ' /MAP'
                     + ' $LIBS$'
 ]
 

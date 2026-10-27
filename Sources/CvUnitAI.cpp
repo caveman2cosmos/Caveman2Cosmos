@@ -23,6 +23,9 @@
 #include "CvPython.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
+
+// Per-player timing helper defined in CvPlayer.cpp
+void addPlayerUnitMoveMs(int iPlayer, double dMs);
 #include "CvSelectionGroupAI.h"
 #include "CvTeamAI.h"
 #include "CvUnitAI.h"
@@ -33,6 +36,18 @@
 #include "FAStarNode.h"
 #endif
 #include <CvWorkerService.h>
+
+// Path caller attribution: in non-profiling builds PROFILE_FUNC / PROFILE_EXTRA_FUNC are
+// empty, so for this file only we redefine them to push a caller tag (see PathCallerTag.h).
+// They are restored to empty at the end of this file so other unity-build files are unaffected.
+#include "PathCallerTag.h"
+#ifndef FP_PROFILE_ENABLE
+#define C2C_PATH_CALLER_TAGS_ACTIVE
+#undef PROFILE_FUNC
+#undef PROFILE_EXTRA_FUNC
+#define PROFILE_FUNC() PATH_CALLER_TAG()
+#define PROFILE_EXTRA_FUNC() PATH_CALLER_TAG()
+#endif
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -525,6 +540,10 @@ bool CvUnitAI::AI_update()
 
 void CvUnitAI::doUnitAIMove()
 {
+	LARGE_INTEGER freq, tMoveStart, tMoveEnd;
+	QueryPerformanceFrequency(&freq);
+	QueryPerformanceCounter(&tMoveStart);
+
 	LOG_UNIT_BLOCK(4, {
 		UnitAITypes eUnitAi = AI_getUnitAIType();
 		MissionAITypes eMissionAI = getGroup()->AI_getMissionAIType();
@@ -544,6 +563,8 @@ void CvUnitAI::doUnitAIMove()
 	//	before doing other AI activities
 	if (getGroup()->AI_getMissionAIType() == MISSIONAI_CONTRACT_UNIT && processContracts(0))
 	{
+		QueryPerformanceCounter(&tMoveEnd);
+		addPlayerUnitMoveMs(getOwner(), (double)(tMoveEnd.QuadPart - tMoveStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 		return;
 	}
 
@@ -551,6 +572,8 @@ void CvUnitAI::doUnitAIMove()
 	&& (!isAnimal() || isGatherHerd())
 	&& getGroup()->doMergeCheck())
 	{
+		QueryPerformanceCounter(&tMoveEnd);
+		addPlayerUnitMoveMs(getOwner(), (double)(tMoveEnd.QuadPart - tMoveStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 		return;
 	}
 
@@ -799,6 +822,9 @@ void CvUnitAI::doUnitAIMove()
 		FErrorMsg("error");
 		break;
 	}
+
+	QueryPerformanceCounter(&tMoveEnd);
+	addPlayerUnitMoveMs(getOwner(), (double)(tMoveEnd.QuadPart - tMoveStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 }
 
 //	Note death (or capture) of a unit
@@ -16452,6 +16478,65 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	{
 		return;
 	}
+
+	// Optimization: Prune generatePath if plotX cannot beat iBestValue.
+	// Compute the theoretical maximum value plotX could achieve.
+	// Base value components:
+	//   1. Defender units: unitX->canDefend() gives +100 each.
+	//   2. Animal danger border bonus: +75 or +50.
+	//   3. plotX->defenseModifier(): maximum defense bonus on plot.
+	//   4. atPlot(plotX) ? +50 : +49 (SorenRandNum(50)).
+	//   5. (iValue * 5) / (iPathTurns + 4): multiplier depends on minimum turns to reach plot.
+	//      A plot at stepDistance d requires at least max(0, (d - 1) / maxMoves) turns,
+	//      meaning (iPathTurns + 4) is at least (iMinTurns + 4).
+	//
+	// If (maxBaseValue * 5) / (iMinTurns + 4) <= iBestValue, plotX cannot possibly beat iBestValue
+	// even with a straight-line unobstructed path, maximum random roll, and zero penalties.
+	if (iBestValue > 0)
+	{
+		int iMaxCount = 0;
+		foreach_(const CvUnit * unitX, plotX->units())
+		{
+			if (unitX->getOwner() == getOwner() && unitX->canDefend())
+			{
+				const CvUnit* pHeadUnit = unitX->getGroup()->getHeadUnit();
+				if (pHeadUnit != this && (pHeadUnit->isWaiting() || !pHeadUnit->canMove()))
+				{
+					iMaxCount++;
+				}
+			}
+		}
+		int iMaxPossibleValue = iMaxCount * 100;
+
+		if (bAnimalDanger)
+		{
+			if (plotX->getOwner() == getOwner())
+			{
+				iMaxPossibleValue += 75;
+			}
+			else if (plotX->getOwner() != NO_PLAYER && !atWar(plotX->getTeam(), getTeam()))
+			{
+				iMaxPossibleValue += 50;
+			}
+		}
+
+		iMaxPossibleValue += plotX->defenseModifier(getTeam(), false);
+		iMaxPossibleValue += atPlot(plotX) ? 50 : 49;
+
+		int iMinTurns = 0;
+		if (!atPlot(plotX))
+		{
+			const int iDist = stepDistance(getX(), getY(), plotX->getX(), plotX->getY());
+			const int iMoves = std::max(1, baseMoves());
+			iMinTurns = std::max(0, (iDist - 1) / iMoves);
+		}
+
+		if ((iMaxPossibleValue * 5) / (iMinTurns + 4) <= iBestValue)
+		{
+			return;
+		}
+	}
+
 	int iPathTurns = 0;
 	if (!generatePath(plotX, (iPass > 0 ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns, iRange))
 	{
@@ -16541,6 +16626,12 @@ bool CvUnitAI::AI_safety(int iRange)
 
 	const CvPlot* pBestPlot = NULL;
 	int iBestValue = 0;
+
+	// Optimization: Evaluate our current plot first to establish a solid baseline iBestValue.
+	// In the vast majority of cases, remaining at plot() has positive defense or standing value,
+	// allowing AI_safetyEval to prune generatePath for reachable plots that are strictly worse.
+	AI_safetyEval(plot(), 0, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+
 	int iPass = 0;
 	for (; iPass < 2 && !pBestPlot; ++iPass)
 	{
@@ -16551,7 +16642,10 @@ bool CvUnitAI::AI_safety(int iRange)
 			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 			{
 				const CvPlot* plotX = itr.plot();
-				AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				if (plotX != plot())
+				{
+					AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				}
 			}
 		}
 		else
@@ -16562,7 +16656,10 @@ bool CvUnitAI::AI_safety(int iRange)
 				{
 					continue;
 				}
-				AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				if (plotX != plot())
+				{
+					AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				}
 			}
 		}
 	}
@@ -31147,3 +31244,12 @@ int CvUnitAI::getMyAggression(int iAttackProb) const
 
 	return false;
 }*/
+
+
+#ifdef C2C_PATH_CALLER_TAGS_ACTIVE
+#undef PROFILE_FUNC
+#undef PROFILE_EXTRA_FUNC
+#define PROFILE_FUNC()
+#define PROFILE_EXTRA_FUNC()
+#undef C2C_PATH_CALLER_TAGS_ACTIVE
+#endif

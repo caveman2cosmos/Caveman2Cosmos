@@ -14,6 +14,9 @@
 #include "CvUnit.h"
 #include "CvImprovementInfo.h"
 
+// Per-player timing helper defined in CvPlayer.cpp
+void addPlayerGroupUpdateMs(int iPlayer, double dMs);
+
 // Public Functions...
 
 CvSelectionGroupAI::CvSelectionGroupAI() { AI_reset(); }
@@ -109,6 +112,10 @@ bool CvSelectionGroupAI::AI_update()
 	{
 		return false;
 	}
+
+	LARGE_INTEGER freq, tGroupStart, tGroupEnd;
+	QueryPerformanceFrequency(&freq);
+	QueryPerformanceCounter(&tGroupStart);
 
 	if (!isHuman() && !getHeadUnit()->isCargo() && getActivityType() == ACTIVITY_SLEEP)
 	{
@@ -263,6 +270,8 @@ bool CvSelectionGroupAI::AI_update()
 		if (!m_bGroupAttack && AI_isForceSeparate())
 		{
 			AI_separate();	// pointers could become invalid...
+			QueryPerformanceCounter(&tGroupEnd);
+			addPlayerGroupUpdateMs(getOwner(), (double)(tGroupEnd.QuadPart - tGroupStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 			return false;
 		}
 	}
@@ -305,6 +314,8 @@ bool CvSelectionGroupAI::AI_update()
 			pushMission(MISSION_SKIP);
 		}
 	}
+	QueryPerformanceCounter(&tGroupEnd);
+	addPlayerGroupUpdateMs(getOwner(), (double)(tGroupEnd.QuadPart - tGroupStart.QuadPart) * 1000.0 / (double)freq.QuadPart);
 	return !bDead && (isBusy() || isCargoBusy());
 }
 

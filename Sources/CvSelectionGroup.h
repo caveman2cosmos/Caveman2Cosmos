@@ -228,6 +228,7 @@ public:
 	CvPlot* getPathEndTurnPlot() const;
 	const CvPath& getPath() const;
 	static CvPathGenerator* getPathGenerator();
+	static CvPathGenerator* getParallelPathGenerator(int threadIdx);
 	bool generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags = 0, bool bReuse = false, int* piPathTurns = NULL, int iMaxPathLen = MAX_INT, int iOptimizationLimit = -1) const;
 	void resetPath();
 

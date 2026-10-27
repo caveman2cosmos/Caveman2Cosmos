@@ -549,13 +549,13 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 		iEnumVal = NUM_DIRECTION_TYPES;
 		SetGlobalStringArray(&GC.getDirectionTypes(), L"/Civ4Types/DirectionTypes/DirectionType", &iEnumVal, true);
 		iEnumVal = NUM_BUILDINGCOSTSIZE_TYPES;
-		SetGlobalStringArray(&GC.getBuildingCostSizeTypes(), L"/Civ4Types/BuildingCostSizeTypes/BuildingCostSizeType", &iEnumVal, true);
+		SetGlobalStringArray(&GC.getBuildingCostSizeTypes(), L"/Civ4Types/BuildingCostSizeTypes/BuildingCostSizeType", &iEnumVal, true, true);
 		iEnumVal = NUM_BUILDINGCOSTCOUNT_TYPES;
-		SetGlobalStringArray(&GC.getBuildingCostCountTypes(), L"/Civ4Types/BuildingCostCountTypes/BuildingCostCountType", &iEnumVal, true);
+		SetGlobalStringArray(&GC.getBuildingCostCountTypes(), L"/Civ4Types/BuildingCostCountTypes/BuildingCostCountType", &iEnumVal, true, true);
 		iEnumVal = NUM_BUILDINGCOSTMATERIALS_TYPES;
-		SetGlobalStringArray(&GC.getBuildingCostMaterialsTypes(), L"/Civ4Types/BuildingCostMaterialsTypes/BuildingCostMaterialsType", &iEnumVal, true);
+		SetGlobalStringArray(&GC.getBuildingCostMaterialsTypes(), L"/Civ4Types/BuildingCostMaterialsTypes/BuildingCostMaterialsType", &iEnumVal, true, true);
 		iEnumVal = NUM_BUILDINGCOSTCOMPLEXITY_TYPES;
-		SetGlobalStringArray(&GC.getBuildingCostComplexityTypes(), L"/Civ4Types/BuildingCostComplexityTypes/BuildingCostComplexityType", &iEnumVal, true);
+		SetGlobalStringArray(&GC.getBuildingCostComplexityTypes(), L"/Civ4Types/BuildingCostComplexityTypes/BuildingCostComplexityType", &iEnumVal, true, true);
 		SetGlobalStringArray(&GC.getFootstepAudioTypes(), L"/Civ4Types/FootstepAudioTypes/FootstepAudioType", &GC.getNumFootstepAudioTypes());
 
 		MoveToXmlParent();
@@ -1065,7 +1065,7 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 // Takes the szTagName parameter and if it finds it in the currently selected XML element
 //	then it loads the ppszString parameter with the string values under it and the
 //	iNumVals with the total number of tags with the szTagName in the xml file.
-void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum)
+void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum, bool bOptional)
 {
 	PROFILE_EXTRA_FUNC();
 	logging::logMsgW("xml.log", L"SetGlobalStringArray %s\n", szTagName);
@@ -1095,9 +1095,14 @@ void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTa
 			}
 		}
 	}
+	else if (bOptional && bUseEnum && *iNumVals > 0)
+	{
+		*ppszString = new CvString[*iNumVals];
+		pszString = *ppszString;
+	}
 	// If the local string pointer is null then we weren't able to find the szTagName in the xml
 	// so we will FAssert to let whoever know it
-	if (!pszString)
+	if (!pszString && !bOptional)
 	{
 		char szMessage[1024];
 		sprintf( szMessage, "Error locating tag node in SetGlobalStringArray function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
