@@ -683,6 +683,15 @@ class CvTechChooser:
 			screen.hide("SelectedTechLabel")
 			screen.show("TC_Header")
 
+	def isPromotionGameOptionValid(self, info):
+		for i in xrange(info.getNumOnGameOptions()):
+			if not GC.getGame().isOption(info.getOnGameOption(i)):
+				return False
+		for i in xrange(info.getNumNotOnGameOptions()):
+			if GC.getGame().isOption(info.getNotOnGameOption(i)):
+				return False
+		return True
+
 	def cacheBenefits(self):
 		techBenefits = []
 		iNumDomains = int(DomainTypes.NUM_DOMAIN_TYPES)
@@ -821,8 +830,9 @@ class CvTechChooser:
 
 		iType = 0
 		while iType < GC.getNumPromotionInfos():
-			iTech = GC.getPromotionInfo(iType).getTechPrereq()
-			if iTech > -1:
+			info = GC.getPromotionInfo(iType)
+			iTech = info.getTechPrereq()
+			if iTech > -1 and self.isPromotionGameOptionValid(info):
 				techBenefits[iTech].append(["UnlockPromotion", iType])
 			iType += 1
 

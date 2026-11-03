@@ -289,6 +289,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 				{
 					pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
 					pAdjacentPlot->updateCulture(bBumpUnits, false);
+					pAdjacentPlot->setInCultureRangeOfCityByPlayer(getOwner());
 				}
 			}
 		}
@@ -299,6 +300,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 			{
 				pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
 				pAdjacentPlot->updateCulture(bBumpUnits, false);
+				pAdjacentPlot->setInCultureRangeOfCityByPlayer(getOwner());
 			}
 		}
 	}
