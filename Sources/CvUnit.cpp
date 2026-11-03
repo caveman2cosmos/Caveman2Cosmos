@@ -37184,13 +37184,22 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 		if (eAssignPromotionLine == NO_PROMOTIONLINE && isBuildUpable())
 		{
 			FErrorMsg("This shouldn't happen");
-			// Try again
-			establishBuildups();
-
-			if (isBuildUpable())
+			// Try again, but only once - if establishBuildups() can't actually produce a valid
+			// buildup for this unit (eg. a stale/inconsistent isBuildUpable() state that never
+			// resolves), retrying unconditionally recurses forever, redoing the costly scoring
+			// loop above every time with no progress.
+			if (eSleepType != MISSION_AUTO_BUILDUP)
 			{
-				setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+				establishBuildups();
+
+				if (isBuildUpable())
+				{
+					setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+					return;
+				}
 			}
+			// Couldn't resolve it - give up safely instead of looping.
+			m_eCurrentBuildUpType = NO_PROMOTIONLINE;
 			return;
 		}
 
@@ -37258,13 +37267,20 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 	if (eAssignPromotionLine == NO_PROMOTIONLINE && isBuildUpable())
 	{
 		FErrorMsg("This shouldn't happen");
-		// Try again
-		establishBuildups();
-
-		if (isBuildUpable())
+		// Try again, but only once - see the matching comment in the human branch above for why
+		// an unconditional retry here can recurse forever redoing the scoring loop with no progress.
+		if (eSleepType != MISSION_AUTO_BUILDUP)
 		{
-			setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+			establishBuildups();
+
+			if (isBuildUpable())
+			{
+				setBuildUpType(NO_PROMOTIONLINE, MISSION_AUTO_BUILDUP);
+				return;
+			}
 		}
+		// Couldn't resolve it - give up safely instead of looping.
+		m_eCurrentBuildUpType = NO_PROMOTIONLINE;
 		return;
 	}
 

@@ -7436,6 +7436,9 @@
 				<Event>EVENT_FOREST_FIRE_2</Event>
 				<Event>EVENT_FOREST_FIRE_3</Event>
 			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			</OrPreReqs>
 			<bOwnPlot>1</bOwnPlot>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
@@ -7463,6 +7466,9 @@
 				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_2</Event>
 				<Event>EVENT_FOREST_MASSIVE_WILDFIRE_3</Event>
 			</Events>
+			<OrPreReqs>
+				<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			</OrPreReqs>
 			<bOwnPlot>1</bOwnPlot>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
