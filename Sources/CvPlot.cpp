@@ -6783,6 +6783,13 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 	m_ePlotType = eNewValue;
 
+	// Elevation changes (flat/hills/peak) can invalidate an existing feature (e.g. Mangrove requires flatlands);
+	// water/land transitions are already handled by erase() above.
+	if (!bWasWater && !bIsWater && getFeatureType() != NO_FEATURE && !canHaveFeature(getFeatureType(), true))
+	{
+		setFeatureType(NO_FEATURE);
+	}
+
 	updateSeeFromSight(true, true);
 
 	short yieldChange[NUM_YIELD_TYPES] = {};
