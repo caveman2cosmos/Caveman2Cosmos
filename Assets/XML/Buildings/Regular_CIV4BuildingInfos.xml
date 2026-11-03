@@ -10357,7 +10357,7 @@
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHealth>1</iHealth>
-			<iMaintenanceModifier>24</iMaintenanceModifier>
+			<iMaintenanceModifier>12</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -94261,7 +94261,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_EXPENSIVE</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<iMaintenanceModifier>12</iMaintenanceModifier>
+			<iMaintenanceModifier>6</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -104889,7 +104889,7 @@
 			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
 			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
 			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
-			<iMaintenanceModifier>8</iMaintenanceModifier>
+			<iMaintenanceModifier>4</iMaintenanceModifier>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
