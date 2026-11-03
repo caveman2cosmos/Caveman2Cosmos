@@ -1,6 +1,7 @@
 // cityAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 
 #include "FProfiler.h"
 #include "CvArea.h"
@@ -4256,6 +4257,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			continue;
 		}
 		int iValue = player.AI_unitValue(eUnitX, eUnitAI, area(), &tempCriteria);
+		iValue = iValue * (100 + StackPromotions::productionPreference(*this, eUnitX)) / 100;
 		int iBaseValue = iValue;
 
 		if (iValue > 0)

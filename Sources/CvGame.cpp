@@ -5,6 +5,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
@@ -575,6 +576,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 		// Is a modifier recalc needed?
 		GC.getInitCore().checkVersions();
+		GC.getInitCore().checkStackPromotionsOption();
 	}
 	// Set the unit/building filters to default state now that game is fully initialized.
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
@@ -842,6 +844,7 @@ CvString create_game_id()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
+	StackPromotions::reset();
 	PROFILE_EXTRA_FUNC();
 	CvPlotPaging::ResetPaging();
 
@@ -5748,6 +5751,7 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
+	StackPromotions::writeStats();
 	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
 
 	writeRealtimeLogMetadata(false);
@@ -11452,6 +11456,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 
 void CvGame::recalculateModifiers()
 {
+	StackPromotions::reset();
 	OutputDebugString("Start profiling(false) for modifier recalc\n");
 	startProfilingDLL(false);
 	PROFILE_FUNC();

@@ -753,6 +753,14 @@
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
         </GameOptionInfo>
+        <!-- Stack promotions. Appended to preserve existing option IDs. -->
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_STACK_PROMOTIONS</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>1</bVisible>
+        </GameOptionInfo>
     </GameOptionInfos>
 
 </Civ4GameOptionInfos>

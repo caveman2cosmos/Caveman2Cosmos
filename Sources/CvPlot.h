@@ -887,6 +887,8 @@ public:
 
 	int getNumUnits() const;
 	CvUnit* getUnitByIndex(int iIndex) const;
+	unsigned getStackSupportRevision() const { return m_stackSupportRevision; }
+	void invalidateStackSupport() { if (++m_stackSupportRevision == 0) ++m_stackSupportRevision; }
 	void addUnit(CvUnit* pUnit, bool bUpdate = true);
 	void removeUnit(CvUnit* pUnit, bool bUpdate = true);
 	DllExport CLLNode<IDInfo>* nextUnitNode(CLLNode<IDInfo>* pNode) const;
@@ -952,6 +954,7 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+	unsigned m_stackSupportRevision; // Transient; never serialized.
 	short m_iX;
 	short m_iY;
 	int m_iArea;

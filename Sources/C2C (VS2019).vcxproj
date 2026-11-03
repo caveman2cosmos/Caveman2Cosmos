@@ -378,6 +378,7 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClCompile Include="StackPromotions.cpp" />
     <ClInclude Include="CvArmy.h" />
     <ClInclude Include="CvDiplomacyClasses.h" />
     <ClInclude Include="CvPlayerOptionInfo.h" />
@@ -390,6 +391,8 @@
     <ClInclude Include="CvPythonUnitLoader.h" />
     <ClInclude Include="CvTraitInfo.h" />
     <ClInclude Include="CvUnitCombatInfo.h" />
+    <ClInclude Include="StackPromotions.h" />
+    <ClInclude Include="StackPromotionMath.h" />
     <ClInclude Include="FProfiler.cpp" />
     <ClCompile Include="FAssert.cpp" />
     <ClCompile Include="FDataIOStream.cpp" />

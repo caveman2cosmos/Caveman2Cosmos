@@ -326,6 +326,7 @@ public:
 	virtual ~CvTechInfo();
 
 	int getAdvisorType() const;
+	int getStackSupportLimitChange() const { return m_iStackSupportLimitChange; }
 	int getAIWeight() const;
 	int getAITradeModifier() const;
 	int getResearchCost() const;
@@ -530,6 +531,9 @@ public:
 		for (int i = 0; i < iCount; i++) itr++;
 		return *itr;
 	}
+
+private:
+	int m_iStackSupportLimitChange;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -545,6 +549,26 @@ class CvPromotionInfo
 {
 	//---------------------------PUBLIC INTERFACE---------------------------------
 public:
+
+	// Derived stack promotions are configuration, never permanent unit upgrades.
+	int getStackSupportKind() const { return m_iStackSupportKind; }
+	int getStackSupportProfile() const { return m_iStackSupportProfile; }
+	int getStackSupportFamily() const { return m_iStackSupportFamily; }
+	int getStackSupportTier() const { return m_iStackSupportTier; }
+	int getStackSupportWeight() const { return m_iStackSupportWeight; }
+	bool isStackSupportProviderDefensive() const { return m_bStackSupportProviderDefensive; }
+	bool isStackSupportProviderIntercept() const { return m_bStackSupportProviderIntercept; }
+	bool isStackSupportRecipientIntercept() const { return m_bStackSupportRecipientIntercept; }
+	bool isStackSupportAttackersOnly() const { return m_bStackSupportAttackersOnly; }
+	bool isStackSupportCarrier() const { return m_bStackSupportCarrier; }
+	DomainTypes getStackSupportDomain() const { return m_eStackSupportDomain; }
+	const std::vector<UnitCombatTypes>& getStackSupportProviders() const { return m_stackSupportProviders; }
+	const std::vector<UnitCombatTypes>& getStackSupportProviderAll() const { return m_stackSupportProviderAll; }
+	const std::vector<UnitCombatTypes>& getStackSupportProviderNot() const { return m_stackSupportProviderNot; }
+	const std::vector<UnitCombatTypes>& getStackSupportRecipients() const { return m_stackSupportRecipients; }
+	const std::vector<UnitCombatTypes>& getStackSupportRecipientNot() const { return m_stackSupportRecipientNot; }
+	const CvString& getStackSupportProviderUnits() const { return m_szStackSupportProviderUnits; }
+
 	CvPromotionInfo();
 	virtual ~CvPromotionInfo();
 
@@ -1404,6 +1428,25 @@ protected:
 	std::vector<int> m_aiQualifiedUnitCombatTypes;
 	std::vector<int> m_disqualifiedUnitCombatTypes;
 
+
+private:
+	int m_iStackSupportKind;
+	int m_iStackSupportProfile;
+	int m_iStackSupportFamily;
+	int m_iStackSupportTier;
+	int m_iStackSupportWeight;
+	bool m_bStackSupportProviderDefensive;
+	bool m_bStackSupportProviderIntercept;
+	bool m_bStackSupportRecipientIntercept;
+	bool m_bStackSupportAttackersOnly;
+	bool m_bStackSupportCarrier;
+	DomainTypes m_eStackSupportDomain;
+	std::vector<UnitCombatTypes> m_stackSupportProviders;
+	std::vector<UnitCombatTypes> m_stackSupportProviderAll;
+	std::vector<UnitCombatTypes> m_stackSupportProviderNot;
+	std::vector<UnitCombatTypes> m_stackSupportRecipients;
+	std::vector<UnitCombatTypes> m_stackSupportRecipientNot;
+	CvString m_szStackSupportProviderUnits;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

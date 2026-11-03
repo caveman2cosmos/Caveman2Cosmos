@@ -976,6 +976,7 @@ m_piCommerceModifier(NULL)
 ,m_piFreeSpecialistCount(NULL)
 ,m_bGlobal(false)
 {
+	m_iStackSupportLimitChange = 0;
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -1407,6 +1408,7 @@ bool CvTechInfo::isGlobal() const
 bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 {
 	PROFILE_EXTRA_FUNC();
+	pXML->GetOptionalChildXmlValByName(&m_iStackSupportLimitChange, L"iStackSupportLimitChange");
 	CvString szTextVal;
 	if (!CvInfoBase::read(pXML))
 	{
@@ -1576,6 +1578,7 @@ bool CvTechInfo::read(CvXMLLoadUtility* pXML)
 
 void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 {
+	if (m_iStackSupportLimitChange == 0) m_iStackSupportLimitChange = pClassInfo->getStackSupportLimitChange();
 	PROFILE_EXTRA_FUNC();
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -1753,6 +1756,7 @@ void CvTechInfo::copyNonDefaults(const CvTechInfo* pClassInfo)
 
 void CvTechInfo::getCheckSum(uint32_t& iSum) const
 {
+	CheckSum(iSum, m_iStackSupportLimitChange);
 	PROFILE_EXTRA_FUNC();
 	CheckSum(iSum, m_iAdvisorType);
 	CheckSum(iSum, m_iAIWeight);
@@ -4711,6 +4715,23 @@ bool CvPromotionInfo::hasNegativeEffects() const
 void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
+		.add(m_iStackSupportKind, L"iStackSupportKind")
+		.add(m_iStackSupportProfile, L"iStackSupportProfile")
+		.add(m_iStackSupportFamily, L"iStackSupportFamily")
+		.add(m_iStackSupportTier, L"iStackSupportTier")
+		.add(m_iStackSupportWeight, L"iStackSupportWeight")
+		.add(m_bStackSupportProviderDefensive, L"bStackSupportProviderDefensive")
+		.add(m_bStackSupportProviderIntercept, L"bStackSupportProviderIntercept")
+		.add(m_bStackSupportRecipientIntercept, L"bStackSupportRecipientIntercept")
+		.add(m_bStackSupportAttackersOnly, L"bStackSupportAttackersOnly")
+		.add(m_bStackSupportCarrier, L"bStackSupportCarrier")
+		.addEnum(m_eStackSupportDomain, L"StackSupportDomain")
+		.add(m_stackSupportProviders, L"StackSupportProviders")
+		.add(m_stackSupportProviderAll, L"StackSupportProviderAll")
+		.add(m_stackSupportProviderNot, L"StackSupportProviderNot")
+		.add(m_stackSupportRecipients, L"StackSupportRecipients")
+		.add(m_stackSupportRecipientNot, L"StackSupportRecipientNot")
+		.add(m_szStackSupportProviderUnits, L"StackSupportProviderUnits")
 		.addEnum(m_iPrereqPromotion, L"PromotionPrereq")
 		.addEnum(m_iPrereqOrPromotion1, L"PromotionPrereqOr1")
 		.addEnum(m_iPrereqOrPromotion2, L"PromotionPrereqOr2")

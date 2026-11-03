@@ -172,6 +172,8 @@ public:
 	bool isPromotionValid(int /*PromotionTypes*/ ePromotion) const;
 	bool isPromotionOverriden(int /*PromotionTypes*/ ePromotion) const;
 	bool isHasPromotion(int /*PromotionTypes*/ ePromotion) const;
+	int getStackSupportStat(int stat) const;
+	int getStackSupportLimit() const;
 	bool isHasUnitCombat(int /*UnitCombatTypes*/ eUnitCombat) const;
 	void setHasPromotion(int /*PromotionTypes*/ eIndex, bool bNewValue);
 

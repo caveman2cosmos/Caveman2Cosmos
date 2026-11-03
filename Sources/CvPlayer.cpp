@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
@@ -13031,6 +13032,7 @@ void CvPlayer::setTeam(TeamTypes eTeam)
 	GET_TEAM(eOldTeam).changeTotalLand(-(getTotalLand()));
 
 	GC.getInitCore().setTeam(getID(), eTeam);
+	StackPromotions::reset(); // Team membership changes both plot pools.
 
 	if (isAlive())
 	{
@@ -15136,7 +15138,7 @@ int CvPlayer::findPathLength(TechTypes eTech, bool bCost) const
 			}
 		}
 
-		// Nettoyage m�moire obligatoire (sinon fuite)
+		// Nettoyage mďż˝moire obligatoire (sinon fuite)
 		for (size_t i = 0; i < possiblePaths.size(); ++i)
 		{
 			delete possiblePaths[i];
@@ -31608,7 +31610,7 @@ void CvPlayer::deleteArmy(int iArmyID)
 	if (pArmy != NULL)
 	{
 		pArmy->disband();       // nettoyer les groupes
-		m_armies.removeAt(iArmyID); // supprime l’objet de la liste
+		m_armies.removeAt(iArmyID); // supprime lâ€™objet de la liste
 	}
 }
 

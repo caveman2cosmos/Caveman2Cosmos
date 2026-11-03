@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN1</Tag>
+        <English>Infantry Screen I</English>
+        <French>Infantry Screen I</French>
+        <German>Infantry Screen I</German>
+        <Italian>Infantry Screen I</Italian>
+        <Polish>Infantry Screen I</Polish>
+        <Russian>Infantry Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN2</Tag>
+        <English>Infantry Screen II</English>
+        <French>Infantry Screen II</French>
+        <German>Infantry Screen II</German>
+        <Italian>Infantry Screen II</Italian>
+        <Polish>Infantry Screen II</Polish>
+        <Russian>Infantry Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN3</Tag>
+        <English>Infantry Screen III</English>
+        <French>Infantry Screen III</French>
+        <German>Infantry Screen III</German>
+        <Italian>Infantry Screen III</Italian>
+        <Polish>Infantry Screen III</Polish>
+        <Russian>Infantry Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ANTI_CAVALRY1</Tag>
+        <English>Anti-Cavalry Screen I</English>
+        <French>Anti-Cavalry Screen I</French>
+        <German>Anti-Cavalry Screen I</German>
+        <Italian>Anti-Cavalry Screen I</Italian>
+        <Polish>Anti-Cavalry Screen I</Polish>
+        <Russian>Anti-Cavalry Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ANTI_CAVALRY2</Tag>
+        <English>Anti-Cavalry Screen II</English>
+        <French>Anti-Cavalry Screen II</French>
+        <German>Anti-Cavalry Screen II</German>
+        <Italian>Anti-Cavalry Screen II</Italian>
+        <Polish>Anti-Cavalry Screen II</Polish>
+        <Russian>Anti-Cavalry Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ANTI_CAVALRY3</Tag>
+        <English>Anti-Cavalry Screen III</English>
+        <French>Anti-Cavalry Screen III</French>
+        <German>Anti-Cavalry Screen III</German>
+        <Italian>Anti-Cavalry Screen III</Italian>
+        <Polish>Anti-Cavalry Screen III</Polish>
+        <Russian>Anti-Cavalry Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SKIRMISHER1</Tag>
+        <English>Skirmisher Support I</English>
+        <French>Skirmisher Support I</French>
+        <German>Skirmisher Support I</German>
+        <Italian>Skirmisher Support I</Italian>
+        <Polish>Skirmisher Support I</Polish>
+        <Russian>Skirmisher Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SKIRMISHER2</Tag>
+        <English>Skirmisher Support II</English>
+        <French>Skirmisher Support II</French>
+        <German>Skirmisher Support II</German>
+        <Italian>Skirmisher Support II</Italian>
+        <Polish>Skirmisher Support II</Polish>
+        <Russian>Skirmisher Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SKIRMISHER3</Tag>
+        <English>Skirmisher Support III</English>
+        <French>Skirmisher Support III</French>
+        <German>Skirmisher Support III</German>
+        <Italian>Skirmisher Support III</Italian>
+        <Polish>Skirmisher Support III</Polish>
+        <Russian>Skirmisher Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARROW1</Tag>
+        <English>Arrow Support I</English>
+        <French>Arrow Support I</French>
+        <German>Arrow Support I</German>
+        <Italian>Arrow Support I</Italian>
+        <Polish>Arrow Support I</Polish>
+        <Russian>Arrow Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARROW2</Tag>
+        <English>Arrow Support II</English>
+        <French>Arrow Support II</French>
+        <German>Arrow Support II</German>
+        <Italian>Arrow Support II</Italian>
+        <Polish>Arrow Support II</Polish>
+        <Russian>Arrow Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARROW3</Tag>
+        <English>Arrow Support III</English>
+        <French>Arrow Support III</French>
+        <German>Arrow Support III</German>
+        <Italian>Arrow Support III</Italian>
+        <Polish>Arrow Support III</Polish>
+        <Russian>Arrow Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLANKING1</Tag>
+        <English>Flanking Support I</English>
+        <French>Flanking Support I</French>
+        <German>Flanking Support I</German>
+        <Italian>Flanking Support I</Italian>
+        <Polish>Flanking Support I</Polish>
+        <Russian>Flanking Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLANKING2</Tag>
+        <English>Flanking Support II</English>
+        <French>Flanking Support II</French>
+        <German>Flanking Support II</German>
+        <Italian>Flanking Support II</Italian>
+        <Polish>Flanking Support II</Polish>
+        <Russian>Flanking Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLANKING3</Tag>
+        <English>Flanking Support III</English>
+        <French>Flanking Support III</French>
+        <German>Flanking Support III</German>
+        <Italian>Flanking Support III</Italian>
+        <Polish>Flanking Support III</Polish>
+        <Russian>Flanking Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_RECON1</Tag>
+        <English>Reconnaissance Support I</English>
+        <French>Reconnaissance Support I</French>
+        <German>Reconnaissance Support I</German>
+        <Italian>Reconnaissance Support I</Italian>
+        <Polish>Reconnaissance Support I</Polish>
+        <Russian>Reconnaissance Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_RECON2</Tag>
+        <English>Reconnaissance Support II</English>
+        <French>Reconnaissance Support II</French>
+        <German>Reconnaissance Support II</German>
+        <Italian>Reconnaissance Support II</Italian>
+        <Polish>Reconnaissance Support II</Polish>
+        <Russian>Reconnaissance Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_RECON3</Tag>
+        <English>Reconnaissance Support III</English>
+        <French>Reconnaissance Support III</French>
+        <German>Reconnaissance Support III</German>
+        <Italian>Reconnaissance Support III</Italian>
+        <Polish>Reconnaissance Support III</Polish>
+        <Russian>Reconnaissance Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_COVERING_FIRE1</Tag>
+        <English>Covering Fire I</English>
+        <French>Covering Fire I</French>
+        <German>Covering Fire I</German>
+        <Italian>Covering Fire I</Italian>
+        <Polish>Covering Fire I</Polish>
+        <Russian>Covering Fire I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_COVERING_FIRE2</Tag>
+        <English>Covering Fire II</English>
+        <French>Covering Fire II</French>
+        <German>Covering Fire II</German>
+        <Italian>Covering Fire II</Italian>
+        <Polish>Covering Fire II</Polish>
+        <Russian>Covering Fire II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_COVERING_FIRE3</Tag>
+        <English>Covering Fire III</English>
+        <French>Covering Fire III</French>
+        <German>Covering Fire III</German>
+        <Italian>Covering Fire III</Italian>
+        <Polish>Covering Fire III</Polish>
+        <Russian>Covering Fire III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE1</Tag>
+        <English>Suppressive Fire I</English>
+        <French>Suppressive Fire I</French>
+        <German>Suppressive Fire I</German>
+        <Italian>Suppressive Fire I</Italian>
+        <Polish>Suppressive Fire I</Polish>
+        <Russian>Suppressive Fire I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE2</Tag>
+        <English>Suppressive Fire II</English>
+        <French>Suppressive Fire II</French>
+        <German>Suppressive Fire II</German>
+        <Italian>Suppressive Fire II</Italian>
+        <Polish>Suppressive Fire II</Polish>
+        <Russian>Suppressive Fire II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE3</Tag>
+        <English>Suppressive Fire III</English>
+        <French>Suppressive Fire III</French>
+        <German>Suppressive Fire III</German>
+        <Italian>Suppressive Fire III</Italian>
+        <Polish>Suppressive Fire III</Polish>
+        <Russian>Suppressive Fire III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SIEGE1</Tag>
+        <English>Siege Support I</English>
+        <French>Siege Support I</French>
+        <German>Siege Support I</German>
+        <Italian>Siege Support I</Italian>
+        <Polish>Siege Support I</Polish>
+        <Russian>Siege Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SIEGE2</Tag>
+        <English>Siege Support II</English>
+        <French>Siege Support II</French>
+        <German>Siege Support II</German>
+        <Italian>Siege Support II</Italian>
+        <Polish>Siege Support II</Polish>
+        <Russian>Siege Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_SIEGE3</Tag>
+        <English>Siege Support III</English>
+        <French>Siege Support III</French>
+        <German>Siege Support III</German>
+        <Italian>Siege Support III</Italian>
+        <Polish>Siege Support III</Polish>
+        <Russian>Siege Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARTILLERY1</Tag>
+        <English>Artillery Support I</English>
+        <French>Artillery Support I</French>
+        <German>Artillery Support I</German>
+        <Italian>Artillery Support I</Italian>
+        <Polish>Artillery Support I</Polish>
+        <Russian>Artillery Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARTILLERY2</Tag>
+        <English>Artillery Support II</English>
+        <French>Artillery Support II</French>
+        <German>Artillery Support II</German>
+        <Italian>Artillery Support II</Italian>
+        <Polish>Artillery Support II</Polish>
+        <Russian>Artillery Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARTILLERY3</Tag>
+        <English>Artillery Support III</English>
+        <French>Artillery Support III</French>
+        <German>Artillery Support III</German>
+        <Italian>Artillery Support III</Italian>
+        <Polish>Artillery Support III</Polish>
+        <Russian>Artillery Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARMOURED1</Tag>
+        <English>Armoured Spearhead I</English>
+        <French>Armoured Spearhead I</French>
+        <German>Armoured Spearhead I</German>
+        <Italian>Armoured Spearhead I</Italian>
+        <Polish>Armoured Spearhead I</Polish>
+        <Russian>Armoured Spearhead I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARMOURED2</Tag>
+        <English>Armoured Spearhead II</English>
+        <French>Armoured Spearhead II</French>
+        <German>Armoured Spearhead II</German>
+        <Italian>Armoured Spearhead II</Italian>
+        <Polish>Armoured Spearhead II</Polish>
+        <Russian>Armoured Spearhead II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ARMOURED3</Tag>
+        <English>Armoured Spearhead III</English>
+        <French>Armoured Spearhead III</French>
+        <German>Armoured Spearhead III</German>
+        <Italian>Armoured Spearhead III</Italian>
+        <Polish>Armoured Spearhead III</Polish>
+        <Russian>Armoured Spearhead III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN1</Tag>
+        <English>Mobile Screen I</English>
+        <French>Mobile Screen I</French>
+        <German>Mobile Screen I</German>
+        <Italian>Mobile Screen I</Italian>
+        <Polish>Mobile Screen I</Polish>
+        <Russian>Mobile Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN2</Tag>
+        <English>Mobile Screen II</English>
+        <French>Mobile Screen II</French>
+        <German>Mobile Screen II</German>
+        <Italian>Mobile Screen II</Italian>
+        <Polish>Mobile Screen II</Polish>
+        <Russian>Mobile Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN3</Tag>
+        <English>Mobile Screen III</English>
+        <French>Mobile Screen III</French>
+        <German>Mobile Screen III</German>
+        <Italian>Mobile Screen III</Italian>
+        <Polish>Mobile Screen III</Polish>
+        <Russian>Mobile Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CLOSE_AIR1</Tag>
+        <English>Close Air Support I</English>
+        <French>Close Air Support I</French>
+        <German>Close Air Support I</German>
+        <Italian>Close Air Support I</Italian>
+        <Polish>Close Air Support I</Polish>
+        <Russian>Close Air Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CLOSE_AIR2</Tag>
+        <English>Close Air Support II</English>
+        <French>Close Air Support II</French>
+        <German>Close Air Support II</German>
+        <Italian>Close Air Support II</Italian>
+        <Polish>Close Air Support II</Polish>
+        <Russian>Close Air Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CLOSE_AIR3</Tag>
+        <English>Close Air Support III</English>
+        <French>Close Air Support III</French>
+        <German>Close Air Support III</German>
+        <Italian>Close Air Support III</Italian>
+        <Polish>Close Air Support III</Polish>
+        <Russian>Close Air Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN1</Tag>
+        <English>Mechanical Screen I</English>
+        <French>Mechanical Screen I</French>
+        <German>Mechanical Screen I</German>
+        <Italian>Mechanical Screen I</Italian>
+        <Polish>Mechanical Screen I</Polish>
+        <Russian>Mechanical Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN2</Tag>
+        <English>Mechanical Screen II</English>
+        <French>Mechanical Screen II</French>
+        <German>Mechanical Screen II</German>
+        <Italian>Mechanical Screen II</Italian>
+        <Polish>Mechanical Screen II</Polish>
+        <Russian>Mechanical Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN3</Tag>
+        <English>Mechanical Screen III</English>
+        <French>Mechanical Screen III</French>
+        <German>Mechanical Screen III</German>
+        <Italian>Mechanical Screen III</Italian>
+        <Polish>Mechanical Screen III</Polish>
+        <Russian>Mechanical Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ESCORT1</Tag>
+        <English>Escort Screen I</English>
+        <French>Escort Screen I</French>
+        <German>Escort Screen I</German>
+        <Italian>Escort Screen I</Italian>
+        <Polish>Escort Screen I</Polish>
+        <Russian>Escort Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ESCORT2</Tag>
+        <English>Escort Screen II</English>
+        <French>Escort Screen II</French>
+        <German>Escort Screen II</German>
+        <Italian>Escort Screen II</Italian>
+        <Polish>Escort Screen II</Polish>
+        <Russian>Escort Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ESCORT3</Tag>
+        <English>Escort Screen III</English>
+        <French>Escort Screen III</French>
+        <German>Escort Screen III</German>
+        <Italian>Escort Screen III</Italian>
+        <Polish>Escort Screen III</Polish>
+        <Russian>Escort Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_NAVAL_MANEUVER1</Tag>
+        <English>Maneuvering Support I</English>
+        <French>Maneuvering Support I</French>
+        <German>Maneuvering Support I</German>
+        <Italian>Maneuvering Support I</Italian>
+        <Polish>Maneuvering Support I</Polish>
+        <Russian>Maneuvering Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_NAVAL_MANEUVER2</Tag>
+        <English>Maneuvering Support II</English>
+        <French>Maneuvering Support II</French>
+        <German>Maneuvering Support II</German>
+        <Italian>Maneuvering Support II</Italian>
+        <Polish>Maneuvering Support II</Polish>
+        <Russian>Maneuvering Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_NAVAL_MANEUVER3</Tag>
+        <English>Maneuvering Support III</English>
+        <French>Maneuvering Support III</French>
+        <German>Maneuvering Support III</German>
+        <Italian>Maneuvering Support III</Italian>
+        <Polish>Maneuvering Support III</Polish>
+        <Russian>Maneuvering Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ASW1</Tag>
+        <English>Anti-Submarine Screen I</English>
+        <French>Anti-Submarine Screen I</French>
+        <German>Anti-Submarine Screen I</German>
+        <Italian>Anti-Submarine Screen I</Italian>
+        <Polish>Anti-Submarine Screen I</Polish>
+        <Russian>Anti-Submarine Screen I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ASW2</Tag>
+        <English>Anti-Submarine Screen II</English>
+        <French>Anti-Submarine Screen II</French>
+        <German>Anti-Submarine Screen II</German>
+        <Italian>Anti-Submarine Screen II</Italian>
+        <Polish>Anti-Submarine Screen II</Polish>
+        <Russian>Anti-Submarine Screen II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_ASW3</Tag>
+        <English>Anti-Submarine Screen III</English>
+        <French>Anti-Submarine Screen III</French>
+        <German>Anti-Submarine Screen III</German>
+        <Italian>Anti-Submarine Screen III</Italian>
+        <Polish>Anti-Submarine Screen III</Polish>
+        <Russian>Anti-Submarine Screen III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CRUISER1</Tag>
+        <English>Cruiser Fire Support I</English>
+        <French>Cruiser Fire Support I</French>
+        <German>Cruiser Fire Support I</German>
+        <Italian>Cruiser Fire Support I</Italian>
+        <Polish>Cruiser Fire Support I</Polish>
+        <Russian>Cruiser Fire Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CRUISER2</Tag>
+        <English>Cruiser Fire Support II</English>
+        <French>Cruiser Fire Support II</French>
+        <German>Cruiser Fire Support II</German>
+        <Italian>Cruiser Fire Support II</Italian>
+        <Polish>Cruiser Fire Support II</Polish>
+        <Russian>Cruiser Fire Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CRUISER3</Tag>
+        <English>Cruiser Fire Support III</English>
+        <French>Cruiser Fire Support III</French>
+        <German>Cruiser Fire Support III</German>
+        <Italian>Cruiser Fire Support III</Italian>
+        <Polish>Cruiser Fire Support III</Polish>
+        <Russian>Cruiser Fire Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_AA_COORDINATION1</Tag>
+        <English>Anti-Aircraft Coordination I</English>
+        <French>Anti-Aircraft Coordination I</French>
+        <German>Anti-Aircraft Coordination I</German>
+        <Italian>Anti-Aircraft Coordination I</Italian>
+        <Polish>Anti-Aircraft Coordination I</Polish>
+        <Russian>Anti-Aircraft Coordination I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_AA_COORDINATION2</Tag>
+        <English>Anti-Aircraft Coordination II</English>
+        <French>Anti-Aircraft Coordination II</French>
+        <German>Anti-Aircraft Coordination II</German>
+        <Italian>Anti-Aircraft Coordination II</Italian>
+        <Polish>Anti-Aircraft Coordination II</Polish>
+        <Russian>Anti-Aircraft Coordination II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_AA_COORDINATION3</Tag>
+        <English>Anti-Aircraft Coordination III</English>
+        <French>Anti-Aircraft Coordination III</French>
+        <German>Anti-Aircraft Coordination III</German>
+        <Italian>Anti-Aircraft Coordination III</Italian>
+        <Polish>Anti-Aircraft Coordination III</Polish>
+        <Russian>Anti-Aircraft Coordination III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CAPITAL1</Tag>
+        <English>Capital Ship Support I</English>
+        <French>Capital Ship Support I</French>
+        <German>Capital Ship Support I</German>
+        <Italian>Capital Ship Support I</Italian>
+        <Polish>Capital Ship Support I</Polish>
+        <Russian>Capital Ship Support I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CAPITAL2</Tag>
+        <English>Capital Ship Support II</English>
+        <French>Capital Ship Support II</French>
+        <German>Capital Ship Support II</German>
+        <Italian>Capital Ship Support II</Italian>
+        <Polish>Capital Ship Support II</Polish>
+        <Russian>Capital Ship Support II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CAPITAL3</Tag>
+        <English>Capital Ship Support III</English>
+        <French>Capital Ship Support III</French>
+        <German>Capital Ship Support III</German>
+        <Italian>Capital Ship Support III</Italian>
+        <Polish>Capital Ship Support III</Polish>
+        <Russian>Capital Ship Support III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CARRIER1</Tag>
+        <English>Carrier Air Cover I</English>
+        <French>Carrier Air Cover I</French>
+        <German>Carrier Air Cover I</German>
+        <Italian>Carrier Air Cover I</Italian>
+        <Polish>Carrier Air Cover I</Polish>
+        <Russian>Carrier Air Cover I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CARRIER2</Tag>
+        <English>Carrier Air Cover II</English>
+        <French>Carrier Air Cover II</French>
+        <German>Carrier Air Cover II</German>
+        <Italian>Carrier Air Cover II</Italian>
+        <Polish>Carrier Air Cover II</Polish>
+        <Russian>Carrier Air Cover II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_CARRIER3</Tag>
+        <English>Carrier Air Cover III</English>
+        <French>Carrier Air Cover III</French>
+        <German>Carrier Air Cover III</German>
+        <Italian>Carrier Air Cover III</Italian>
+        <Polish>Carrier Air Cover III</Polish>
+        <Russian>Carrier Air Cover III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLEET_COORDINATION1</Tag>
+        <English>Fleet Coordination I</English>
+        <French>Fleet Coordination I</French>
+        <German>Fleet Coordination I</German>
+        <Italian>Fleet Coordination I</Italian>
+        <Polish>Fleet Coordination I</Polish>
+        <Russian>Fleet Coordination I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLEET_COORDINATION2</Tag>
+        <English>Fleet Coordination II</English>
+        <French>Fleet Coordination II</French>
+        <German>Fleet Coordination II</German>
+        <Italian>Fleet Coordination II</Italian>
+        <Polish>Fleet Coordination II</Polish>
+        <Russian>Fleet Coordination II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_FLEET_COORDINATION3</Tag>
+        <English>Fleet Coordination III</English>
+        <French>Fleet Coordination III</French>
+        <German>Fleet Coordination III</German>
+        <Italian>Fleet Coordination III</Italian>
+        <Polish>Fleet Coordination III</Polish>
+        <Russian>Fleet Coordination III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_OVERCROWDED1</Tag>
+        <English>Overcrowded I</English>
+        <French>Overcrowded I</French>
+        <German>Overcrowded I</German>
+        <Italian>Overcrowded I</Italian>
+        <Polish>Zagęszczenie I</Polish>
+        <Russian>Overcrowded I</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_OVERCROWDED2</Tag>
+        <English>Overcrowded II</English>
+        <French>Overcrowded II</French>
+        <German>Overcrowded II</German>
+        <Italian>Overcrowded II</Italian>
+        <Polish>Zagęszczenie II</Polish>
+        <Russian>Overcrowded II</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_OVERCROWDED3</Tag>
+        <English>Overcrowded III</English>
+        <French>Overcrowded III</French>
+        <German>Overcrowded III</German>
+        <Italian>Overcrowded III</Italian>
+        <Polish>Zagęszczenie III</Polish>
+        <Russian>Overcrowded III</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_PROMOTION_STACK_OVERCROWDED4</Tag>
+        <English>Overcrowded IV</English>
+        <French>Overcrowded IV</French>
+        <German>Overcrowded IV</German>
+        <Italian>Overcrowded IV</Italian>
+        <Polish>Zagęszczenie IV</Polish>
+        <Russian>Overcrowded IV</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS</Tag>
+        <English>Combat - Stack Promotions</English>
+        <French>Combat - Stack Promotions</French>
+        <German>Combat - Stack Promotions</German>
+        <Italian>Combat - Stack Promotions</Italian>
+        <Polish>Walka - Promocje stosu</Polish>
+        <Russian>Combat - Stack Promotions</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS_HELP</Tag>
+        <English>Military units sharing a tile provide temporary support to their teammates. Diverse armies gain complementary benefits; overcrowded forces suffer combat and healing penalties. Technologies increase the number of units that can operate together without overcrowding.</English>
+        <French>Military units sharing a tile provide temporary support to their teammates. Diverse armies gain complementary benefits; overcrowded forces suffer combat and healing penalties. Technologies increase the number of units that can operate together without overcrowding.</French>
+        <German>Military units sharing a tile provide temporary support to their teammates. Diverse armies gain complementary benefits; overcrowded forces suffer combat and healing penalties. Technologies increase the number of units that can operate together without overcrowding.</German>
+        <Italian>Military units sharing a tile provide temporary support to their teammates. Diverse armies gain complementary benefits; overcrowded forces suffer combat and healing penalties. Technologies increase the number of units that can operate together without overcrowding.</Italian>
+        <Polish>Jednostki wojskowe na wspólnym polu zapewniają tymczasowe wsparcie swojej drużynie. Zróżnicowane armie otrzymują uzupełniające się premie; nadmierne zagęszczenie osłabia walkę i leczenie. Technologie zwiększają limit jednostek bez kary.</Polish>
+        <Russian>Military units sharing a tile provide temporary support to their teammates. Diverse armies gain complementary benefits; overcrowded forces suffer combat and healing penalties. Technologies increase the number of units that can operate together without overcrowding.</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_STACK_SUPPORT_HELP</Tag>
+        <English>Temporary support from other eligible units of the same team on this tile, unlocked by the listed technology. Scouts and explorers supply Recon aid without counting toward Overcrowded. Does not require movement points. Strength ratios determine the level; only the strongest effect in each support family applies.</English>
+        <French>Temporary support from other eligible units of the same team on this tile, unlocked by the listed technology. Scouts and explorers supply Recon aid without counting toward Overcrowded. Does not require movement points. Strength ratios determine the level; only the strongest effect in each support family applies.</French>
+        <German>Temporary support from other eligible units of the same team on this tile, unlocked by the listed technology. Scouts and explorers supply Recon aid without counting toward Overcrowded. Does not require movement points. Strength ratios determine the level; only the strongest effect in each support family applies.</German>
+        <Italian>Temporary support from other eligible units of the same team on this tile, unlocked by the listed technology. Scouts and explorers supply Recon aid without counting toward Overcrowded. Does not require movement points. Strength ratios determine the level; only the strongest effect in each support family applies.</Italian>
+        <Polish>Tymczasowe wsparcie odpowiednich jednostek tej samej drużyny na tym polu, odblokowane przez wskazaną technologię. Zwiadowcy i odkrywcy zapewniają Recon Aid bez zwiększania Overcrowded. Nie wymaga punktów ruchu. Poziom zależy od proporcji siły; w każdej rodzinie działa tylko najsilniejszy efekt.</Polish>
+        <Russian>Temporary support from other eligible units of the same team on this tile, unlocked by the listed technology. Scouts and explorers supply Recon aid without counting toward Overcrowded. Does not require movement points. Strength ratios determine the level; only the strongest effect in each support family applies.</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_STACK_OVERCROWDED_HELP</Tag>
+        <English>Too many military units of this team and domain share this tile. The penalty ends when the force disperses. Cooperation and later technologies increase the limit. Cities add 2 places, forts add 1.</English>
+        <French>Too many military units of this team and domain share this tile. The penalty ends when the force disperses. Cooperation and later technologies increase the limit. Cities add 2 places, forts add 1.</French>
+        <German>Too many military units of this team and domain share this tile. The penalty ends when the force disperses. Cooperation and later technologies increase the limit. Cities add 2 places, forts add 1.</German>
+        <Italian>Too many military units of this team and domain share this tile. The penalty ends when the force disperses. Cooperation and later technologies increase the limit. Cities add 2 places, forts add 1.</Italian>
+        <Polish>Za dużo wojsk tej samej drużyny i domeny na wspólnym polu. Kara znika po rozproszeniu armii. Cooperation i późniejsze technologie zwiększają limit. Miasta dodają 2 miejsca, forty 1.</Polish>
+        <Russian>Too many military units of this team and domain share this tile. The penalty ends when the force disperses. Cooperation and later technologies increase the limit. Cities add 2 places, forts add 1.</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_STACK_SUPPORT_TECH_LIMIT</Tag>
+        <English>[NEWLINE]+%d1 units before Overcrowded penalties (Stack Promotions)</English>
+        <French>[NEWLINE]+%d1 units before Overcrowded penalties (Stack Promotions)</French>
+        <German>[NEWLINE]+%d1 units before Overcrowded penalties (Stack Promotions)</German>
+        <Italian>[NEWLINE]+%d1 units before Overcrowded penalties (Stack Promotions)</Italian>
+        <Polish>[NEWLINE]+%d1 jednostek przed karą Overcrowded (Promocje stosu)</Polish>
+        <Russian>[NEWLINE]+%d1 units before Overcrowded penalties (Stack Promotions)</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION</Tag>
+        <English>Enable Stack Promotions?</English>
+        <French>Enable Stack Promotions?</French>
+        <German>Enable Stack Promotions?</German>
+        <Italian>Enable Stack Promotions?</Italian>
+        <Polish>Włączyć Stack Promotions?</Polish>
+        <Russian>Enable Stack Promotions?</Russian>
+    </TEXT>
+    <TEXT>
+        <Tag>TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION_BODY</Tag>
+        <English>This saved game predates Stack Promotions. Enable support bonuses from units of the same team on the same tile and Overcrowded penalties for large stacks?[NEWLINE][NEWLINE]The effects apply immediately to existing units. No map conversion is needed. Choose No to keep this game unchanged.</English>
+        <French>This saved game predates Stack Promotions. Enable support bonuses from units of the same team on the same tile and Overcrowded penalties for large stacks?[NEWLINE][NEWLINE]The effects apply immediately to existing units. No map conversion is needed. Choose No to keep this game unchanged.</French>
+        <German>This saved game predates Stack Promotions. Enable support bonuses from units of the same team on the same tile and Overcrowded penalties for large stacks?[NEWLINE][NEWLINE]The effects apply immediately to existing units. No map conversion is needed. Choose No to keep this game unchanged.</German>
+        <Italian>This saved game predates Stack Promotions. Enable support bonuses from units of the same team on the same tile and Overcrowded penalties for large stacks?[NEWLINE][NEWLINE]The effects apply immediately to existing units. No map conversion is needed. Choose No to keep this game unchanged.</Italian>
+        <Polish>Ten zapis powstał przed dodaniem Stack Promotions. Czy włączyć premie wsparcia od jednostek tej samej drużyny na tym samym polu oraz kary Overcrowded za zbyt liczne stosy?[NEWLINE][NEWLINE]Efekty od razu obejmą istniejące jednostki. Konwersja mapy nie jest potrzebna. Wybierz Nie, aby pozostawić tę rozgrywkę bez zmian.</Polish>
+        <Russian>This saved game predates Stack Promotions. Enable support bonuses from units of the same team on the same tile and Overcrowded penalties for large stacks?[NEWLINE][NEWLINE]The effects apply immediately to existing units. No map conversion is needed. Choose No to keep this game unchanged.</Russian>
+    </TEXT>
+</Civ4GameText>

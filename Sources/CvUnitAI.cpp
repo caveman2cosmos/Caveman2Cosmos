@@ -1,6 +1,8 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
+#include "StackPromotionMath.h"
 
 #include "FProfiler.h"
 
@@ -11884,6 +11886,7 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 
 	const int iOurImpassableCount = algo::max_element(getGroup()->units() | transformed(unitImpassableCount)).get_value_or(0);
 
+	const bool localStackFirst = StackPromotions::eligible(*this);
 	int iBestValue = MAX_INT;
 	CvUnit* pBestUnit = NULL;
 
@@ -11922,8 +11925,10 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 				)
 			)
 		{
-			int iPathTurns;
-			if (generatePath(unit->plot(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, true, &iPathTurns))
+			const bool local = atPlot(unit->plot());
+			if (localStackFirst && pBestUnit && atPlot(pBestUnit->plot()) && !local) continue;
+			int iPathTurns = 0;
+			if ((localStackFirst && local) || generatePath(unit->plot(), bCanDefend ? 0 : MOVE_OUR_TERRITORY, true, &iPathTurns))
 			{
 				if (iPathTurns <= params.iMaxPath)
 				{
@@ -11932,7 +11937,8 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 					// just a count
 					iValue /= group->getNumUnits();
 
-					if (iValue < iBestValue)
+					iValue = iValue * 100 / (100 + StackPromotions::mergePreference(*this, *group, params.bMergeWholeGroup));
+					if (StackPromotionMath::preferLocalGroup(localStackFirst, local, pBestUnit && atPlot(pBestUnit->plot()), iValue, iBestValue))
 					{
 						iBestValue = iValue;
 						pBestUnit = unit;
@@ -11998,6 +12004,7 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 
 	// best match
 	const CvUnit* pBestUnit = NULL;
+	const bool localStackFirst = StackPromotions::eligible(*this);
 	int iBestValue = MAX_INT;
 	int iBestPathTurns = MAX_INT;
 	// iterate over plots at each range
@@ -12015,15 +12022,18 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 					{
 						if (!bBiggerOnly || (pLoopGroup->getNumUnits() > pGroup->getNumUnits()))
 						{
-							int iPathTurns;
-							if (generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxRange + 2))
+							const bool local = pLoopPlot == pPlot;
+							if (localStackFirst && pBestUnit && atPlot(pBestUnit->plot()) && !local) continue;
+							int iPathTurns = 0;
+							if ((localStackFirst && local) || generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxRange + 2))
 							{
 								if (iPathTurns <= (iMaxRange + 2))
 								{
 									int iValue = 1000 * (iPathTurns + 1);
 									iValue /= pLoopGroup->getNumUnits();
 
-									if (iValue < iBestValue)
+									iValue = iValue * 100 / (100 + StackPromotions::mergePreference(*this, *pLoopGroup, true));
+									if (StackPromotionMath::preferLocalGroup(localStackFirst, local, pBestUnit && atPlot(pBestUnit->plot()), iValue, iBestValue))
 									{
 										iBestValue = iValue;
 										pBestUnit = pLoopUnit;
@@ -26680,14 +26690,15 @@ int CvUnitAI::AI_calculatePlotWorkersNeeded(const CvPlot* pPlot, BuildTypes eBui
 
 }
 
-bool CvUnitAI::AI_canGroupWithAIType(UnitAITypes eUnitAI) const
+bool CvUnitAI::AI_canGroupWithAIType(UnitAITypes eUnitAI, const CvPlot* at) const
 {
+	if (!at) at = plot();
 	if (eUnitAI != AI_getUnitAIType())
 	{
 		switch (eUnitAI)
 		{
 		case (UNITAI_ATTACK_CITY):
-			if (plot()->isCity() && (GC.getGame().getGameTurn() - plot()->getPlotCity()->getGameTurnAcquired()) <= 1)
+			if (at->isCity() && (GC.getGame().getGameTurn() - at->getPlotCity()->getGameTurnAcquired()) <= 1)
 			{
 				return false;
 			}
@@ -26707,6 +26718,9 @@ bool CvUnitAI::AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const
 	CvSelectionGroup* pGroup = pUnit->getGroup();
 	CvPlot* pPlot = pUnit->plot();
 	bool bStateNoWork = false;
+	// Do not travel to a rendezvous that the same policy will refuse on
+	// arrival (e.g. a cross-role merge in a just-captured city).
+	if (StackPromotions::enabled() && !AI_canGroupWithAIType(eUnitAI, pPlot)) return false;
 	if (pUnit == this)
 	{
 		return false;

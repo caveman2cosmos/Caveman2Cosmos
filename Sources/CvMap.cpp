@@ -10,6 +10,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
@@ -150,6 +151,7 @@ void CvMap::uninit()
 // Initializes data members that are serialized.
 void CvMap::reset(CvMapInitData* pInitInfo)
 {
+	StackPromotions::reset();
 	PROFILE_EXTRA_FUNC();
 	//--------------------------------
 	// Uninit class

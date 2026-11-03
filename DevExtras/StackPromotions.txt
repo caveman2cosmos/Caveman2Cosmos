@@ -1,0 +1,170 @@
+Stack Promotions
+================
+
+Base: master cdfe6d817a1aaa1ddd40a87130bd740dd7ee9312.
+Branch: codex/stack-promotions.
+Option: GAMEOPTION_COMBAT_STACK_PROMOTIONS, Combat - Stack Promotions.
+Visible, disabled by default; appended to preserve existing option IDs.
+
+Mechanics
+---------
+70 virtual promotions: 22 support profiles with three strength levels, and four
+Overcrowded levels. Military Combatant land and Naval Combatant sea units share
+support with the same team on the same tile, across selection groups. A unit
+never supports itself. Cargo and civilians do not supply outside support or add
+to crowding. Movement exhaustion does NOT remove support.
+
+Provider base strength (including Size Matters base strength) is added by profile.
+Compared with the receiver's base strength, strictly more than 50%, 100%, 200%
+grants levels I, II, III. Damage and temporary combat modifiers do not create
+recursive strength feedback. Only the strongest profile in an equivalent family
+applies. XML declares providers, recipients, exclusions, families and modifiers.
+Carrier cover needs actual living non-suicide combat aircraft aboard an air
+transport; existing C2C carriers can be tagged Transport instead of Carrier.
+
+Scouts and explorers (Recon/Explorer classes, land only) supply Recon aid.
+They do not count toward Overcrowded or suffer its penalty. The exception grants
+no other provider family simply because an explorer has an overlapping class.
+All 22 agreed profiles have actual existing C2C providers; early war galleys,
+frigates and their Master Sailor versions are included. AA coordination checks
+the ship's own interception ability including promotions, without recursively
+counting derived AA aid or granting a new ability through a commander aura.
+
+Every support profile has an explicit TechPrereq shared by all three strength
+levels. Runtime enforces it and technology invalidates existing derived answers.
+The existing buildPromotionString/getTechHelp pipeline lists these unlocks in
+PediaTech and both TechWindow/TechWindowWide discovery screens. Promotion help
+and Pedia prerequisites link the required technology. No extra per-turn UI scan.
+Realism Invictus uses the same general TechPrereq listing; its current XML leaves
+many Aid prerequisites NONE, but e.g. Fort/Anti-Tank Aid use explicit technologies.
+We intentionally give every C2C support family an explicit unlock.
+
+Overcrowded is a soft penalty, never a size/movement cap. Count by team and domain.
+Baseline allowance 1; Cooperation increases it to 3. Further technology additions
+are in CIV4TechInfos.xml, ending at 40. Cities add 2 places, friendly forts add 1.
+Excess 1-2: -5% combat; 3-5: -10%, -5 healing; 6-9: -20%, -10 healing;
+10+: -30%, -15 healing. A pre-existing inability to heal remains; otherwise
+the penalty alone cannot reduce positive healing below 1. Both ordinary and
+heal-as-type paths apply the penalty once.
+
+Integration and cost
+--------------------
+Effects are computed lazily through existing combat/odds/healing getters and
+read-only UI queries. They are never installed as permanent promotions, selected
+for XP, serialized in promotion bits, or saved through the vs-unit-combat getter.
+The ordinary AI combat assessment sees the actual modifiers. Existing grouping
+scores mildly prefer complementary aid and account for crowding, without a hard
+merge veto or new path search. Production gets a small local preference for an
+absent provider with actual receivers present. No new empire-wide planner scan.
+
+Per reader thread: immutable XML-derived profiles, plot/team summaries and a
+512-entry direct-mapped unit-result cache. Plot revisions invalidate lazily on
+entry/exit, cargo, death, relevant promotions/classes/strength, owner, city and
+improvement changes. Tech/friendly-territory changes invalidate team results;
+team membership, map reset and DLL recalculation reset derived caches. Plot
+mutation callbacks cannot leave a result from before the mutation cached.
+No cache is written to the save. No eager full-map support update on movement.
+
+Diagnostic builds log StackPromotions.log. unitMs includes nested poolMs: never
+sum them. These measure rebuilding, not the entire cost of cache-hit getters.
+cachePayloadBytes excludes allocator/map-node overhead and other thread caches.
+Release logging is opt-in through C2C_STACK_SUPPORT_TRACE.
+
+Tests and reproduction
+----------------------
+Test/StackPromotionsRegression.py audits XML/XDR ordering, names, existing provider
+coverage, all texts and DDS files, binding registration and save/XP contracts. It
+executes actual threshold/overflow/healing code with the Civ4 VC++ 2003 compiler.
+Test/StackPromotionsPython24.cpp validates scripts in the real Python 2.4 parser.
+The in-memory scenario tests real unit getters, cargo, death, fort limits,
+equivalent families, option switching and 100 repeated read-only unit hovers.
+
+Detailed build logs, protected-save inventories, source manifests, scenario and
+paired Snofru timing runs: Build/StackPromotionsImplementation_2026-10-26.
+One shared export/build was reused. Full DLL recalculation precedes measurements;
+warm-up rounds are excluded. Player saves are never moved, removed or overwritten.
+The original shared sources/assets/DLL are restored after the campaign.
+Benchmark DLLs disable saving and must not be distributed as playable releases.
+
+Art and implementation provenance (developer information only)
+------------------------------------------------------------
+Inspired by the Aid and congestion systems of Realism Invictus. The C2C runtime
+and XML model here are a separate lazy implementation; this is not a direct port
+of its eager promotion-update code.
+RI source/art, SVN revision 5647:
+https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/
+Original Aid/congestion DDS icons imported from Assets/Art/Interface/Buttons/
+Promotions. Full per-file URLs and hashes are in StackPromotionsArt.json.
+All project icons: Assets/art/Interface/Buttons/Promotions/StackSupport/.
+
+Throwing uses C2C's original gold SidestepPromotion1 symbol (the +vs Throwing
+promotion), with a gray Aid-style background. Final asset files ThrowingAid1.dds,
+ThrowingAid2.dds, ThrowingAid3.dds share that edited symbol; tiers are named in UI.
+Built-in imagegen was used for the background edit; Pillow only converted and
+downsampled the selected result to 64x64 DDS. Final edit prompt:
+"Precise tiny raster game icon background-only edit. First input is the EXISTING
+Civilization IV promotion icon. Preserve its original gold/yellow throwing figure
+silhouette and projectile exactly, including all shapes, sizes, location and
+rough pixel-art details. Change ONLY the blue textured square background to
+charcoal gray texture from second image, keeping original gold foreground.
+Preserve thin square gray border. Do not redesign or redraw the figure, do not
+add a person silhouette in black, no Roman numerals, no extra arrows. The result
+should look like the same existing promotion icon with blue replaced by gray.
+Designed to be consumed at 64x64 pixels."
+
+Final results: StackPromotionsResults_2026-10-26.txt.
+154 actual-engine contracts PASS on both bases; performance OFF/ON comparison
+20.886775 -> 23.118476 s, +10.68%; private peak +5.871 MiB.
+No post-measurement optimizations were applied, per user instruction.
+
+Subsequent routeRev optimization ports, 2026-10-26
+------------------------------------------------
+The preceding measurements describe the initial implementation, not these ports.
+The six routeRev fixes are now also present in codex/stack-promotions, on top
+of the master merge b2964d75b (master d2a45437b). Each was ported separately:
+95149e2c2 <- 923731e4e: skip irrelevant combat/feature effect queries.
+a52479c3c <- 7931d9967: group-only changes keep the plot support cache.
+328d370f3 <- 3533d82ca: small ordered family buffer avoids tree allocations.
+4e2b07343 <- 95bbd84a2: finish legal local merges before seeking remote aid.
+3e3b3889d <- 8f9346bdd: equal promotion/class assignments keep valid cache.
+b65c38ffd <- c77ddb6db: reject rendezvous blocked by destination regroup rules.
+
+Adaptation: AI_group retains master's existing generatePath call for remote
+candidates; no routeRev path-limit changes or economy dependencies are imported.
+The option remains OFF by default on this standalone branch. Nomadic Start and
+the merged technology promotion help remain intact.
+
+All five internal suites passed on this branch: definitions/XML/thresholds and
+Python 2.4 syntax; 68,400 actual relevance comparisons and 2 million irrelevant
+calls bypassing cache; 7,000 full family-calculation comparisons; 163,548 group
+choice comparisons; 36,414 destination regroup-policy comparisons plus real
+setter invalidation contracts. Tests now locate the shared compiler dependencies
+from either the repository root or this existing sparse worktree.
+Results: Build/StackPromotionsPort_2026-10-26/internal in the shared repository.
+No full DLL build, game run or new turn-time measurements were performed for
+this port. Previous routeRev timings do not establish standalone performance.
+
+Legacy-save opt-in popup, 2026-10-26
+-----------------------------------
+After loading a tagged save that lacks the Stack Promotions option, a living
+active human is offered Yes/No once per load. The saved enum mapping detects
+absence; neither the option's numeric position nor its OFF value is a proxy.
+New games and saves that explicitly contain OFF or ON do not receive the offer.
+Network multiplayer does not offer or accept a local unsynchronized change.
+Untagged saves cannot reliably identify an absent enum and are left unchanged.
+
+Yes enables the option, resets the derived support cache and refreshes unit UI.
+No/closing leaves it disabled. No map conversion or full modifier recalculation
+is needed for these lazy effects. The usual asset-change recalculation prompt
+is independent and remains intact. On the player's next normal save, the
+existing option array records the choice, so later loads do not ask again.
+Reloading the original old file can offer it again. No new serialized field.
+
+Test/StackPromotionsMigrationRegression.py executes the actual C++ load detector,
+offer check, launcher and answer handler with VC++ 2003: 1,814 cases PASS.
+Coverage includes old/mapped/missing enums, saved OFF/ON, invalid active player,
+AI/dead players, network mode, duplicate checks, Yes/No/close, cache/UI refresh,
+and both saved decisions. It also checks load/reset/copy wiring, retained popup
+IDs, dispatch/declarations and all popup language entries. The existing XML,
+threshold/healing and Python 2.4 regression also passes. Internal tests only;
+no full DLL build or game run. Results: Build/StackPromotionsMigration_2026-10-26.

@@ -2309,8 +2309,52 @@
 	<ElementType name="FeatureDoubleMoves" content="eltOnly">
 		<element type="FeatureDoubleMove" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="iStackSupportKind" content="textOnly" dt:type="int"/>
+	<ElementType name="iStackSupportProfile" content="textOnly" dt:type="int"/>
+	<ElementType name="iStackSupportFamily" content="textOnly" dt:type="int"/>
+	<ElementType name="iStackSupportTier" content="textOnly" dt:type="int"/>
+	<ElementType name="iStackSupportWeight" content="textOnly" dt:type="int"/>
+	<ElementType name="bStackSupportProviderDefensive" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStackSupportProviderIntercept" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStackSupportRecipientIntercept" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStackSupportAttackersOnly" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bStackSupportCarrier" content="textOnly" dt:type="boolean"/>
+	<ElementType name="StackSupportDomain" content="textOnly" dt:type="string"/>
+	<ElementType name="StackSupportProviders" content="eltOnly">
+		<element type="UnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StackSupportProviderAll" content="eltOnly">
+		<element type="UnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StackSupportProviderNot" content="eltOnly">
+		<element type="UnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StackSupportRecipients" content="eltOnly">
+		<element type="UnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StackSupportRecipientNot" content="eltOnly">
+		<element type="UnitCombatType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="StackSupportProviderUnits" content="textOnly" dt:type="string"/>
 	<ElementType name="PromotionInfo" content="eltOnly">
 		<element type="Type"/>
+		<element type="iStackSupportKind" minOccurs="0"/>
+		<element type="iStackSupportProfile" minOccurs="0"/>
+		<element type="iStackSupportFamily" minOccurs="0"/>
+		<element type="iStackSupportTier" minOccurs="0"/>
+		<element type="iStackSupportWeight" minOccurs="0"/>
+		<element type="bStackSupportProviderDefensive" minOccurs="0"/>
+		<element type="bStackSupportProviderIntercept" minOccurs="0"/>
+		<element type="bStackSupportRecipientIntercept" minOccurs="0"/>
+		<element type="bStackSupportAttackersOnly" minOccurs="0"/>
+		<element type="bStackSupportCarrier" minOccurs="0"/>
+		<element type="StackSupportDomain" minOccurs="0"/>
+		<element type="StackSupportProviders" minOccurs="0"/>
+		<element type="StackSupportProviderAll" minOccurs="0"/>
+		<element type="StackSupportProviderNot" minOccurs="0"/>
+		<element type="StackSupportRecipients" minOccurs="0"/>
+		<element type="StackSupportRecipientNot" minOccurs="0"/>
+		<element type="StackSupportProviderUnits" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>

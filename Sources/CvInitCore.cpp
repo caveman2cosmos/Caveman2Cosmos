@@ -561,6 +561,7 @@ void CvInitCore::reopenInactiveSlots()
 
 void CvInitCore::resetGame()
 {
+	m_bStackPromotionsMissingFromSave = false;
 	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Reseting Game: Start\n");
 
@@ -671,6 +672,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setVictories(pSource->getNumVictories(), pSource->getVictories());
 
 		// Standard game options
+		m_bStackPromotionsMissingFromSave = pSource->m_bStackPromotionsMissingFromSave;
 		int i;
 		for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 		{
@@ -1766,6 +1768,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	setDefaults();
 
 	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
+	readStackPromotionsOption(wrapper);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -2223,6 +2226,40 @@ void CvInitCore::checkVersions()
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
 			}
+		}
+	}
+}
+
+void CvInitCore::readStackPromotionsOption(CvTaggedSaveFormatWrapper& wrapper)
+{
+	// A saved OFF is an intentional choice, not an invitation to ask again.
+	// Match by remapped enum value, not by the size/order of the saved array.
+	m_bStackPromotionsMissingFromSave = wrapper.isUsingTaggedFormat();
+	if (!m_bStackPromotionsMissingFromSave) return;
+	for (int i = 0; i < wrapper.getNumClassEnumValues(REMAPPED_CLASS_TYPE_GAMEOPTIONS); ++i)
+	{
+		if (wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS, i, true) == GAMEOPTION_COMBAT_STACK_PROMOTIONS)
+		{
+			m_bStackPromotionsMissingFromSave = false;
+			return;
+		}
+	}
+	// Even if a future XML default changes, legacy games opt in explicitly.
+	setOption(GAMEOPTION_COMBAT_STACK_PROMOTIONS, false);
+}
+
+void CvInitCore::checkStackPromotionsOption()
+{
+	const PlayerTypes player = GC.getGame().getActivePlayer();
+	if (m_bStackPromotionsMissingFromSave && !getOption(GAMEOPTION_COMBAT_STACK_PROMOTIONS)
+	&& !GC.getGame().isNetworkMultiPlayer() && player != NO_PLAYER
+	&& GET_PLAYER(player).isAlive() && GET_PLAYER(player).isHumanPlayer())
+	{
+		CvPopupInfo* info = new CvPopupInfo(BUTTONPOPUP_STACK_PROMOTIONS_MIGRATION);
+		if (info)
+		{
+			gDLL->getInterfaceIFace()->addPopup(info, player, false, true);
+			m_bStackPromotionsMissingFromSave = false;
 		}
 	}
 }

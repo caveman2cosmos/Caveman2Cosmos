@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
@@ -1654,6 +1655,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		if (bDelay)
 		{
 			m_bDeathDelay = true;
+			if (plot()) plot()->invalidateStackSupport();
 			return;
 		}
 		{
@@ -1700,6 +1702,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		finishMoves();
 		m_iDamage = getMaxHP(); // Toffer - Makes isDead() True
+		if (plot()) plot()->invalidateStackSupport();
 
 		// XXX this is NOT a hack, without it, the game crashes.
 		if (!isUsingDummyEntities() && isInViewport())
@@ -7666,9 +7669,9 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 
 	if (!hasNoSelfHeal())
 	{
-		return std::max(1, iTotalHeal);
+		return StackPromotions::healingRate(*this, pPlot, std::max(1, iTotalHeal));
 	}
-	return std::max(0, iTotalHeal);
+	return StackPromotions::healingRate(*this, pPlot, iTotalHeal);
 }
 
 int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTypes eHealAsType) const
@@ -7782,9 +7785,9 @@ int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTy
 
 	if (hasNoSelfHeal())
 	{
-		return std::max(0, iTotalHeal);
+		return StackPromotions::healingRate(*this, pPlot, iTotalHeal);
 	}
-	return std::max(1, iTotalHeal);
+	return StackPromotions::healingRate(*this, pPlot, std::max(1, iTotalHeal));
 }
 
 
@@ -12829,7 +12832,10 @@ bool CvUnit::isDead() const
 
 void CvUnit::setBaseCombatStr(int iCombat)
 {
+	if (plot()) plot()->invalidateStackSupport();
 	m_iBaseCombat = iCombat;
+
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 int CvUnit::baseCombatStr() const
@@ -12902,8 +12908,11 @@ int CvUnit::getExtraStrength() const
 
 void CvUnit::changeExtraStrength(int iChange)
 {
+	if (plot()) plot()->invalidateStackSupport();
 	m_iExtraStrength += iChange;
 	FASSERT_NOT_NEGATIVE(m_iExtraStrength);
+
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 int CvUnit::getSMStrength() const
@@ -12913,9 +12922,12 @@ int CvUnit::getSMStrength() const
 
 void CvUnit::setSMStrength()
 {
+	if (plot()) plot()->invalidateStackSupport();
 	const int iStrength = getDomainType() == DOMAIN_AIR? baseAirCombatStrPreCheck() : baseCombatStrPreCheck();
 	m_iSMStrength = applySMRank(iStrength, getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 	FASSERT_NOT_NEGATIVE(m_iSMStrength);
+
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 float CvUnit::fbaseCombatStr() const
@@ -15397,6 +15409,8 @@ bool CvUnit::canJoinGroup(const CvPlot* pPlot, const CvSelectionGroup* pSelectio
 
 void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, bool bRejoin)
 {
+	// Aid depends on plot contents, not selection-group membership. Movement,
+	// promotion, strength and cargo mutations retain their own invalidations.
 	PROFILE_FUNC();
 
 	CvSelectionGroup* pOldSelectionGroup = GET_PLAYER(getOwner()).getSelectionGroup(getGroupID());
@@ -15546,6 +15560,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 			gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 		}
 	}
+
 }
 
 
@@ -16342,6 +16357,7 @@ void CvUnit::setDamage(int iNewValue, PlayerTypes ePlayer, bool bNotifyEntity, U
 	else
 	{
 		m_iDamage = range(iNewValue, 0, getMaxHP());
+		if ((iOldValue >= getMaxHP()) != (getDamage() >= getMaxHP()) && plot()) plot()->invalidateStackSupport();
 
 		if (iOldValue != getDamage())
 		{
@@ -17385,14 +17401,15 @@ void CvUnit::changeExtraAirRange(int iChange)
 	m_iExtraAirRange += iChange;
 }
 
-int CvUnit::getExtraIntercept(bool bIgnoreCommanders, bool bIgnoreCommodores) const
+int CvUnit::getExtraIntercept(bool bIgnoreCommanders, bool bIgnoreCommodores, bool bIgnoreStackSupport) const
 {
+	const int stackEffect = bIgnoreStackSupport ? 0 : StackPromotions::value(*this, StackPromotions::INTERCEPTION);
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraIntercept + pCommander->m_iExtraIntercept;
+			return (m_iExtraIntercept + pCommander->m_iExtraIntercept) + stackEffect;
 		}
 	}
 	if (!bIgnoreCommodores && !isCommodore())
@@ -17400,15 +17417,16 @@ int CvUnit::getExtraIntercept(bool bIgnoreCommanders, bool bIgnoreCommodores) co
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraIntercept + pCommodore->m_iExtraIntercept;
+    			return (m_iExtraIntercept + pCommodore->m_iExtraIntercept) + stackEffect;
     		}
     	}
-	return m_iExtraIntercept;
+	return (m_iExtraIntercept) + stackEffect;
 }
 
 void CvUnit::changeExtraIntercept(int iChange)
 {
 	m_iExtraIntercept += iChange;
+	if (iChange && plot()) plot()->invalidateStackSupport();
 }
 
 int CvUnit::getExtraEvasion(bool bIgnoreCommanders, bool bIgnoreCommodores) const
@@ -17465,12 +17483,13 @@ void CvUnit::changeExtraFirstStrikes(int iChange)
 
 int CvUnit::getExtraChanceFirstStrikes() const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::FIRST_STRIKE_CHANCES);
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return std::max(0, m_iExtraChanceFirstStrikes + pCommander->getExtraChanceFirstStrikes());
+			return (std::max(0, m_iExtraChanceFirstStrikes + pCommander->m_iExtraChanceFirstStrikes)) + stackEffect;
 		}
 	}
 	if (!isCommodore())
@@ -17478,10 +17497,10 @@ int CvUnit::getExtraChanceFirstStrikes() const
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return std::max(0, m_iExtraChanceFirstStrikes + pCommodore->getExtraChanceFirstStrikes());
+    			return (std::max(0, m_iExtraChanceFirstStrikes + pCommodore->m_iExtraChanceFirstStrikes)) + stackEffect;
     		}
     	}
-	return std::max(0, m_iExtraChanceFirstStrikes);
+	return (std::max(0, m_iExtraChanceFirstStrikes)) + stackEffect;
 }
 
 void CvUnit::changeExtraChanceFirstStrikes(int iChange)
@@ -17491,12 +17510,13 @@ void CvUnit::changeExtraChanceFirstStrikes(int iChange)
 
 int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::WITHDRAWAL);
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraWithdrawal + pCommander->m_iExtraWithdrawal;
+			return (m_iExtraWithdrawal + pCommander->m_iExtraWithdrawal) + stackEffect;
 		}
 	}
 	if (!bIgnoreCommodores && !isCommodore())
@@ -17504,10 +17524,10 @@ int CvUnit::getExtraWithdrawal(bool bIgnoreCommanders, bool bIgnoreCommodores) c
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraWithdrawal + pCommodore->m_iExtraWithdrawal;
+    			return (m_iExtraWithdrawal + pCommodore->m_iExtraWithdrawal) + stackEffect;
     		}
     	}
-	return m_iExtraWithdrawal;
+	return (m_iExtraWithdrawal) + stackEffect;
 }
 
 void CvUnit::changeExtraWithdrawal(int iChange)
@@ -17518,12 +17538,13 @@ void CvUnit::changeExtraWithdrawal(int iChange)
 //TB Combat Mods Begin
 int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::ATTACK);
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraAttackCombatModifier + pCommander->m_iExtraAttackCombatModifier;
+			return (m_iExtraAttackCombatModifier + pCommander->m_iExtraAttackCombatModifier) + stackEffect;
 		}
 	}
 	if (!bIgnoreCommodores && !isCommodore())
@@ -17531,10 +17552,10 @@ int CvUnit::getExtraAttackCombatModifier(bool bIgnoreCommanders, bool bIgnoreCom
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraAttackCombatModifier + pCommodore->m_iExtraAttackCombatModifier;
+    			return (m_iExtraAttackCombatModifier + pCommodore->m_iExtraAttackCombatModifier) + stackEffect;
     		}
     	}
-	return m_iExtraAttackCombatModifier;
+	return (m_iExtraAttackCombatModifier) + stackEffect;
 }
 
 void CvUnit::changeExtraAttackCombatModifier(int iChange)
@@ -17544,16 +17565,17 @@ void CvUnit::changeExtraAttackCombatModifier(int iChange)
 
 int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders, bool bIgnoreCommodores) const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::DEFENSE);
 	if (noDefensiveBonus())
 	{
-		return 0;
+		return (0) + stackEffect;
 	}
 	if (!bIgnoreCommanders && !isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraDefenseCombatModifier + pCommander->m_iExtraDefenseCombatModifier;
+			return (m_iExtraDefenseCombatModifier + pCommander->m_iExtraDefenseCombatModifier) + stackEffect;
 		}
 	}
 	if (!bIgnoreCommodores && !isCommodore())
@@ -17561,10 +17583,10 @@ int CvUnit::getExtraDefenseCombatModifier(bool bIgnoreCommanders, bool bIgnoreCo
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraDefenseCombatModifier + pCommodore->m_iExtraDefenseCombatModifier;
+    			return (m_iExtraDefenseCombatModifier + pCommodore->m_iExtraDefenseCombatModifier) + stackEffect;
     		}
     	}
-	return m_iExtraDefenseCombatModifier;
+	return (m_iExtraDefenseCombatModifier) + stackEffect;
 }
 
 void CvUnit::changeExtraDefenseCombatModifier(int iChange)
@@ -18771,12 +18793,13 @@ void CvUnit::changeAdjacentTileHeal(int iChange)
 
 int CvUnit::getExtraCombatPercent() const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::COMBAT);
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraCombatPercent + pCommander->m_iExtraCombatPercent;
+			return (m_iExtraCombatPercent + pCommander->m_iExtraCombatPercent) + stackEffect;
 		}
 	}
 	if (!isCommodore())
@@ -18784,10 +18807,10 @@ int CvUnit::getExtraCombatPercent() const
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraCombatPercent + pCommodore->m_iExtraCombatPercent;
+    			return (m_iExtraCombatPercent + pCommodore->m_iExtraCombatPercent) + stackEffect;
     		}
     	}
-	return m_iExtraCombatPercent;
+	return (m_iExtraCombatPercent) + stackEffect;
 }
 
 void CvUnit::changeExtraCombatPercent(int iChange)
@@ -18802,12 +18825,13 @@ void CvUnit::changeExtraCombatPercent(int iChange)
 
 int CvUnit::getExtraCityAttackPercent() const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::CITY_ATTACK);
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraCityAttackPercent + pCommander->m_iExtraCityAttackPercent;
+			return (m_iExtraCityAttackPercent + pCommander->m_iExtraCityAttackPercent) + stackEffect;
 		}
 	}
 	if (!isCommodore())
@@ -18815,10 +18839,10 @@ int CvUnit::getExtraCityAttackPercent() const
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraCityAttackPercent + pCommodore->m_iExtraCityAttackPercent;
+    			return (m_iExtraCityAttackPercent + pCommodore->m_iExtraCityAttackPercent) + stackEffect;
     		}
     	}
-	return m_iExtraCityAttackPercent;
+	return (m_iExtraCityAttackPercent) + stackEffect;
 }
 
 void CvUnit::changeExtraCityAttackPercent(int iChange)
@@ -18833,12 +18857,13 @@ void CvUnit::changeExtraCityAttackPercent(int iChange)
 
 int CvUnit::getExtraCityDefensePercent() const
 {
+	const int stackEffect = StackPromotions::value(*this, StackPromotions::CITY_DEFENSE);
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return m_iExtraCityDefensePercent + pCommander->m_iExtraCityDefensePercent;
+			return (m_iExtraCityDefensePercent + pCommander->m_iExtraCityDefensePercent) + stackEffect;
 		}
 	}
 	if (!isCommodore())
@@ -18846,10 +18871,10 @@ int CvUnit::getExtraCityDefensePercent() const
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return m_iExtraCityDefensePercent + pCommodore->m_iExtraCityDefensePercent;
+    			return (m_iExtraCityDefensePercent + pCommodore->m_iExtraCityDefensePercent) + stackEffect;
     		}
     	}
-	return m_iExtraCityDefensePercent;
+	return (m_iExtraCityDefensePercent) + stackEffect;
 }
 
 void CvUnit::changeExtraCityDefensePercent(int iChange)
@@ -19561,6 +19586,7 @@ bool CvUnit::isCargo() const
 
 void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 {
+	if (plot()) plot()->invalidateStackSupport();
 	CvUnit* pOldTransportUnit = getTransportUnit();
 
 	if (pOldTransportUnit != pTransportUnit)
@@ -19660,6 +19686,8 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 #endif
 
 	}
+
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 
@@ -19976,6 +20004,7 @@ void CvUnit::changeExtraTerrainDefensePercent(TerrainTypes eIndex, int iChange)
 
 int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 {
+	const int stackEffect = StackPromotions::featureAttack(*this, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), eIndex);
 
 	const FeatureKeyedInfo* info = findFeatureKeyedInfo(eIndex);
@@ -19985,7 +20014,7 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return (info ? info->m_iExtraFeatureAttackPercent : 0) + pCommander->getExtraFeatureAttackPercent(eIndex);
+			return ((info ? info->m_iExtraFeatureAttackPercent : 0) + (pCommander->findFeatureKeyedInfo(eIndex) ? pCommander->findFeatureKeyedInfo(eIndex)->m_iExtraFeatureAttackPercent : 0)) + stackEffect;
 		}
 	}
 	if (!isCommodore())
@@ -19993,10 +20022,10 @@ int CvUnit::getExtraFeatureAttackPercent(FeatureTypes eIndex) const
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return (info ? info->m_iExtraFeatureAttackPercent : 0) + pCommodore->getExtraFeatureAttackPercent(eIndex);
+    			return ((info ? info->m_iExtraFeatureAttackPercent : 0) + (pCommodore->findFeatureKeyedInfo(eIndex) ? pCommodore->findFeatureKeyedInfo(eIndex)->m_iExtraFeatureAttackPercent : 0)) + stackEffect;
     		}
     	}
-	return info ? info->m_iExtraFeatureAttackPercent : 0;
+	return (info ? info->m_iExtraFeatureAttackPercent : 0) + stackEffect;
 }
 
 
@@ -20050,6 +20079,7 @@ void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 
 int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bCommander, const bool bCommodore) const
 {
+	const int stackEffect = StackPromotions::versus(*this, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
@@ -20059,7 +20089,7 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bComma
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return (info ? info->m_iExtraUnitCombatModifier : 0) + pCommander->getExtraUnitCombatModifier(eIndex);
+			return ((info ? info->m_iExtraUnitCombatModifier : 0) + (pCommander->findUnitCombatKeyedInfo(eIndex) ? pCommander->findUnitCombatKeyedInfo(eIndex)->m_iExtraUnitCombatModifier : 0)) + stackEffect;
 		}
 	}
 	if (!bCommodore)
@@ -20067,10 +20097,10 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bComma
     		const CvUnit* pCommodore = getCommodore();
     		if (pCommodore)
     		{
-    			return (info ? info->m_iExtraUnitCombatModifier : 0) + pCommodore->getExtraUnitCombatModifier(eIndex);
+    			return ((info ? info->m_iExtraUnitCombatModifier : 0) + (pCommodore->findUnitCombatKeyedInfo(eIndex) ? pCommodore->findUnitCombatKeyedInfo(eIndex)->m_iExtraUnitCombatModifier : 0)) + stackEffect;
     		}
     	}
-	return info ? info->m_iExtraUnitCombatModifier : 0;
+	return (info ? info->m_iExtraUnitCombatModifier : 0) + stackEffect;
 }
 
 
@@ -20112,6 +20142,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	}
 
 	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+	if (promo.getStackSupportKind() != 0) return false;
 
 	if (!bForStatus && promo.isStatus())
 	{
@@ -20897,6 +20928,7 @@ bool CvUnit::isHasUnitCombat(UnitCombatTypes eIndex) const
 
 void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo)
 {
+	if (plot()) plot()->invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
 	const CvUnitCombatInfo& kUnitCombat = GC.getUnitCombatInfo(eIndex);
 	const int iChange = (bAdding ? 1 : -1);
@@ -21389,10 +21421,13 @@ void CvUnit::processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPro
 	{
 		setGGExperienceEarnedTowardsType();
 	}
+
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo)
 {
+	// processUnitCombat brackets actual mutations; no-op assignments need no refresh.
 	PROFILE_FUNC();
 
 	if (isHasUnitCombat(eIndex) != bNewValue)
@@ -22027,6 +22062,11 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 	}
 
 	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
+	if (kPromotion.getStackSupportKind() != 0) return;
+	// Keep free/trait/affliction bookkeeping, even for an equal assignment.
+	// Only a real modifier change can invalidate the derived plot support.
+	const bool stackSupportChanged = isHasPromotion(eIndex) != bNewValue;
+	if (stackSupportChanged && plot()) plot()->invalidateStackSupport();
 	// Disable spy promotions mechanism
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mods begin (first, regardless of remove, add, or ignore because they already have it, reset AfflictionTurnCount to 0,
@@ -22175,6 +22215,8 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 			}
 		}
 	}
+
+	if (stackSupportChanged && plot()) plot()->invalidateStackSupport();
 }
 
 
@@ -23975,10 +24017,13 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if (getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0)
+		// The gameplay getter includes virtual stack aid. Persist only the
+		// pre-existing modifier; support must disappear when the unit moves.
+		const int persistentModifier = getExtraUnitCombatModifier((UnitCombatTypes)iI) - StackPromotions::versus(*this, (UnitCombatTypes)iI);
+		if (persistentModifier != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "ExtraUnitCombatMod");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", persistentModifier, "ExtraUnitCombatMod");
 		}
 	}
 
@@ -35117,11 +35162,13 @@ int CvUnit::getExtraStrengthModifier() const
 void CvUnit::changeExtraStrengthModifier(int iChange)
 {
 	m_iExtraStrengthModifier += iChange;
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 void CvUnit::setExtraStrengthModifier(int iChange)
 {
 	m_iExtraStrengthModifier = iChange;
+	if (plot()) plot()->invalidateStackSupport();
 }
 
 void CvUnit::checkCityAttackDefensesDamage(CvCity* pCity, const std::vector<UnitCombatTypes>& kDamagableUnitCombatTypes)

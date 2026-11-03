@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvBonusInfo.h"
@@ -3867,6 +3868,8 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 		const bool bOldFreeTrade = isFreeTrade(eIndex);
 
 		m_abOpenBorders[eIndex] = bNewValue;
+		StackPromotions::invalidateTeam(getID());
+		StackPromotions::invalidateTeam(eIndex);
 
 		AI_setOpenBordersCounter(eIndex, 0);
 
@@ -4023,6 +4026,8 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 		}
 
 		m_abVassal[eIndex] = bNewValue;
+		StackPromotions::invalidateTeam(getID());
+		StackPromotions::invalidateTeam(eIndex);
 
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 		{
@@ -5945,6 +5950,7 @@ void CvTeam::setCircumnavigated(bool bNewValue)
 
 void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 {
+	StackPromotions::invalidateTeam(getID());
 	PROFILE_FUNC();
 	const CvTechInfo& tech = GC.getTechInfo(eTech);
 

@@ -15,6 +15,7 @@
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInitCore.h"
+#include "StackPromotions.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPlayerAI.h"
@@ -736,6 +737,17 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			}
 			break;
 		}
+		case BUTTONPOPUP_STACK_PROMOTIONS_MIGRATION:
+		{
+			if (1 == pPopupReturn->getButtonClicked() && !GC.getGame().isNetworkMultiPlayer())
+			{
+				GC.getGame().setOption(GAMEOPTION_COMBAT_STACK_PROMOTIONS, true);
+				StackPromotions::reset();
+				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+				gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			}
+			break;
+		}
 		case BUTTONPOPUP_NAME_LIST:
 		{
 			if (pPopupReturn->getEditBoxString(0) && *(pPopupReturn->getEditBoxString(0)))
@@ -1116,6 +1128,10 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			return launchModifierRecalculationPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_STACK_PROMOTIONS_MIGRATION:
+		{
+			return launchStackPromotionsMigrationPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_NAME_LIST:
 		{
@@ -2567,6 +2583,17 @@ bool CvDLLButtonPopup::launchModifierRecalculationPopup(CvPopup* pPopup, CvPopup
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
 
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+	return true;
+}
+
+bool CvDLLButtonPopup::launchStackPromotionsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	if (GC.getGame().isNetworkMultiPlayer() || GC.getGame().isOption(GAMEOPTION_COMBAT_STACK_PROMOTIONS)) return false;
+	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION_BODY"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
 	return true;
 }

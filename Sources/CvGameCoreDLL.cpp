@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvGlobals.h"
 #include <psapi.h>
 
@@ -93,9 +94,11 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 		OutputDebugString(CvString::format("[C2C] DLL_THREAD_ATTACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_THREAD_DETACH:
+		StackPromotions::releaseThreadCache();
 		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
+		StackPromotions::releaseThreadCache();
 // BUG - EXE/DLL Paths - start
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end

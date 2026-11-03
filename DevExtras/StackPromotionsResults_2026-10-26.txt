@@ -1,0 +1,123 @@
+Stack Promotions - wyniki wdrozenia i pomiaru, 2026-10-26
+=======================================================
+
+Zakres
+------
+Kod pozostaje na master-based codex/stack-promotions, jako opcja Combat - Stack
+Promotions (domyslnie wylaczona). Zgodnie z ostatnim poleceniem po pomiarach
+nie wprowadzono zadnych optymalizacji. Performance nie zostal zmieniony.
+Do testu uzyto odtwarzalnego, tymczasowego scalenia w obiektach Git:
+performance e9ee87bcf08c62600bdf0e965ae563a90be73b6e
++ feature 088c86d686a4d431d2f8dad980497ba0c3c806bb
+= a611abe0c9c93ac082e471547f6fc88a2b243b73
+refs/benchmarks/stack-promotions-performance-20261026
+Konflikty: zachowano oba zestawy include oraz oba resety. Bez zmiany heurystyk
+przy przenoszeniu. Nie uzyto eksperymentalnego brancha Performance-Test.
+
+Zrealizowane uzupelnienia
+------------------------
+- Recon Aid od Scouts/Explorers oraz calej linii Recon/Explorer na ladzie.
+  Nie dodano im Combatant. Nie sa liczeni ani karani przez Overcrowded.
+  Dostarczaja tylko rodzine Recon, nie inne rodziny przez nakladajace sie klasy.
+- Wszystkie 22 uzgodnione profile maja istniejacych dostawcow. Uzupelniono
+  warianty War Galley, Frigate i Master Sailor oraz wyzszy okret dowodzenia.
+- Kazdy profil Aid ma jawny TechPrereq, wspolny dla poziomow I-III. Poziom
+  nadal wyznacza stosunek sil. Nie ma osobnego odblokowania kazdego poziomu.
+- Wykorzystano istniejacy buildPromotionString/getTechHelp: opisy sa w PediaTech,
+  TechWindow i TechWindowWide; takze w pomocy promocji i jej wymaganiach Pedia.
+  Brak dodatkowych skanow UI w czasie tury. Wycofanie/nadanie technologii
+  natychmiast odswieza wynik cache. Opcja OFF usuwa te opisy z tech help.
+- AA uwzglednia wlasne zdolnosci jednostki, w tym promocje/Build Up, i nie
+  stwarza zdolnosci przechwytywania przez rekurencyjne dodawanie samego Aid.
+- Throwing: oryginalny zloty symbol C2C +vs Throwing na szarym tle Aid.
+  Poziomy opisane sa w nazwach. Pochodzenie ikon tylko w dokumentacji.
+- Uzgodnionych 22 profili nie nalezy mylic ze wszystkimi rodzajami RI.
+  Np. RI Fort Aid, Anti-Tank Aid i Morale nie byly czescia uzgodnionej tabeli.
+  Nie dodano ich przy okazji. Jedyny uzgodniony negatywny efekt: Overcrowded.
+
+Poprawnosc
+----------
+Test/StackPromotionsRegression.py: rzeczywisty kod progow C++03/VC2003,
+przepelnienia, leczenie, kolejnosc XDR, 70 definicji, 22 profile i dostawcy,
+poprawne technologie, teksty, 64x64 DDS, bindingi Python i kontrakt zapisu.
+Rzeczywisty parser Python 2.4: scenariusz oraz wszystkie trzy hooki PASS.
+Czysta kompilacja diagnostyczna obu baz PASS; build11 Performance 8m02.551.
+Scenariusz rzeczywistego silnika: 154 kontrakty PASS zarowno na master-based
+implementacji (snofru-contracts-09), jak i na Performance
+(snofru-performance-contracts-01).
+Pokrycie: brak samowsparcia, rozdzielenie domen, cargo, zywe samoloty lotniskowca,
+sila i rodziny, ruch/smierc/promocje/technologie, 100 hoverow bez zmiany RNG,
+Overcrowded i realne gettery walki/leczenia, Scouts/Explorers, legalny morski
+Build Up AA. Zaden wirtualny efekt nie zostaje zapisany jako stala promocja.
+W przebiegach czasu: PythonErr.log pusty, brak traceback w PythonErr2.log;
+sa wspolne ostrzezenia startowe o rejestracji konwerterow oraz informacje inicjacji.
+
+Pomiar na Snofru
+----------------
+Kopia inputu Snofru Atomic, 124x200, 73 miasta i 3863 jednostki przed gra.
+Te same ziarna RNG, pelna rekalkulacja DLL i ten sam plik DLL w obu wariantach.
+6 rund kazdy; 742 i 743 rozruchowe odrzucone; porownanie 744-747.
+C2C_AI_DECISION_TRACE wylaczone, census taki sam w obu; brak kompilacji w grze.
+Jest to opcja OFF/ON we wspolnej DLL Performance+Stack Promotions. Pozwala to
+zmierzyc aktywna mechanike. Stale definicje XML, rozmiar kodu oraz nowe pole plot
+sa wspolne dla obu przypadkow: ich kosztu nie izoluje ta roznica.
+
+Tura       OFF [s]       ON [s]
+744       16.229389     17.585232
+745       22.483818     26.372940
+746       23.332657     24.278137
+747       21.501236     24.237595
+
+Srednia: 20.886775 -> 23.118476 s
+Roznica: +2.231701 s (+10.68%).
+Peak private w mierzonych turach: 1381.777 -> 1387.648 MiB
+Roznica pamieci prywatnej: +5.871 MiB.
+Peak working set: 1430.230 -> 1435.758 MiB.
+
+Bezposrednie liczniki Aid, logowane tury 744-747:
+- 47,441,622 zapytan, trafienia 98.466%.
+- Przebudowa wynikow jednostek: srednio 647.397 ms/ture.
+- Zawarta w tym przebudowa puli pola: 236.714 ms/ture.
+  Nie sumowac tych dwoch timerow. Nie mierza calego kosztu getterow po trafieniu.
+- Najwiekszy payload cache: 0.483406 MiB, bez narzutu map/allocatora.
+  Wiec +5.87 MiB private NIE jest rozmiarem samego cache.
+- UPDATE_MOVES, dostepne wspolne probki aggregate 744-746:
+  13.389209 -> 15.606208 s.
+
+Ocena
+-----
+W tej parze wzrost czasu calej tury wyniosl 10.68%. Nie oznacza to, ze samo
+wyliczenie bonusow zajmuje 2.23 s: bezposrednio zmierzona przebudowa to 0.65 s,
+a pozostaje obsluga trafien/getterow i inne decyzje/walki AI. Rozgrywki rozeszly
+sie juz w rozgrzewce, mimo identycznych poczatkowych ziaren. Na koncu tury747
+pozostalo 3686 jednostek OFF i 3516 ON, miasta73 w obu. To zmiana zasad walki,
+nie dowod kosztu konkretnej funkcji ani sama w sobie blad. Dane state-comparison
+zapisane. Jedna para czterech zmierzonych tur daje oszacowanie, nie stala dla
+kazdego save'a. Nie wykonano dalszego tuningu ani kolejnych przebiegow.
+
+Propozycje - NIE wdrozone po testach
+----------------------------------
+1. Zmierzyc koszt trafien w effects()/versus()/featureAttack(). Mamy ~11.9 mln
+   zapytan/ture i 98.47% trafien; sam szybki hit i petla przez aktywne promocje
+   moga byc istotne. Dopiero potem agregowac rzadkie modyfikatory przeciw klasom
+   i terenowi w juz istniejacym wyniku, bez nowego globalnego planera.
+2. Przejrzec uniewaznienia przy samym joinGroup. Aid dziala ponad grupami,
+   a taka zmiana nie musi zmieniac skladu pola. Zachowac uniewaznienia przy
+   rzeczywistej zmianie skladu, klasy, sily, cargo, smierci lub technologii.
+3. Sprawdzic zastapienie lokalnego std::map wyboru rodziny malym buforem
+   indeksowanym po rodzinie, aby uniknac alokacji przy przebudowie jednostki.
+Brak uczciwej podstawy do podania gwarantowanego zysku kazdego pomyslu w sekundach.
+To kandydaci do osobnego pomiaru, nie wprowadzone optymalizacje.
+
+Ochrona danych / odtwarzanie
+--------------------------
+Kazdy finalny przebieg przywrocil identyczna instalacje i INI, zachowal cala
+liste oraz SHA256 sejwow gracza i inputu. Bez nowych pelnych kopii gry.
+Wczesny snofru-off-01 INVALID: wykryl utworzenie jednego nowego autosave.
+Zadne istniejace sejwy nie zmienily sie. Dodatkowego pliku tez nie ruszano.
+Nastepnie dodano brakujace native no-save gates oraz INI0, a wszystkie dalsze
+inwentarze sa identyczne. snofru-off-02 przerwano zgodnie z poleceniem zmiany bazy.
+Koncowe dane: snofru-performance-off-01 i snofru-performance-on-01.
+Dokladne manifesty, logi, comparison.json, state-comparison.json, skrypty,
+rodzice testowego scalenia i diagnostyczny overlay w katalogu kampanii.
+DLL diagnostyczna blokuje zapisy; nie jest grywalnym wydaniem do dystrybucji.

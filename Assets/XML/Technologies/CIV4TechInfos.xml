@@ -249,6 +249,7 @@
         </TechInfo>
         <TechInfo>
             <Type>TECH_COOPERATION</Type>
+            <iStackSupportLimitChange>2</iStackSupportLimitChange>
             <Description>TXT_KEY_TECH_COOPERATION</Description>
             <Civilopedia>TXT_KEY_TECH_COOPERATION_PEDIA</Civilopedia>
             <Advisor>ADVISOR_GROWTH</Advisor>
@@ -2869,6 +2870,7 @@
         </TechInfo>
         <TechInfo>
             <Type>TECH_CHIEFDOM</Type>
+            <iStackSupportLimitChange>1</iStackSupportLimitChange>
             <Description>TXT_KEY_TECH_CHIEFDOM</Description>
             <Civilopedia>TXT_KEY_TECH_CHIEFDOM_PEDIA</Civilopedia>
             <Advisor>ADVISOR_GROWTH</Advisor>
@@ -3020,6 +3022,7 @@
         </TechInfo>
 		<TechInfo>
 			<Type>TECH_WARFARE</Type>
+            <iStackSupportLimitChange>1</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_WARFARE</Description>
 			<Civilopedia>TXT_KEY_TECH_WARFARE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -6141,6 +6144,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_WRITING</Type>
+            <iStackSupportLimitChange>1</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_WRITING</Description>
 			<Civilopedia>TXT_KEY_TECH_WRITING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -7362,6 +7366,7 @@
         </TechInfo>
 		<TechInfo>
 			<Type>TECH_MILITARY_TRAINING</Type>
+            <iStackSupportLimitChange>2</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_MILITARY_TRAINING</Description>
 			<Civilopedia>TXT_KEY_TECH_MILITARY_TRAINING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -9778,6 +9783,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CIVIL_SERVICE</Type>
+            <iStackSupportLimitChange>2</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_CIVIL_SERVICE</Description>
 			<Civilopedia>TXT_KEY_TECH_CIVIL_SERVICE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -12076,6 +12082,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_LEADERSHIP</Type>
+            <iStackSupportLimitChange>2</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_LEADERSHIP</Description>
 			<Civilopedia>TXT_KEY_TECH_LEADERSHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -14480,6 +14487,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_MILITARY_SCIENCE</Type>
+            <iStackSupportLimitChange>3</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_MILITARY_SCIENCE</Description>
 			<Civilopedia>TXT_KEY_TECH_MILITARY_SCIENCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -16758,6 +16766,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_RADIO</Type>
+            <iStackSupportLimitChange>3</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_RADIO</Description>
 			<Civilopedia>TXT_KEY_TECH_RADIO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
@@ -18303,6 +18312,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_LOGISTICS</Type>
+            <iStackSupportLimitChange>4</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_LOGISTICS</Description>
 			<Civilopedia>TXT_KEY_TECH_LOGISTICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -19871,6 +19881,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SATELLITES</Type>
+            <iStackSupportLimitChange>2</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_SATELLITES</Description>
 			<Civilopedia>TXT_KEY_TECH_SATELLITES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -21509,6 +21520,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_COMMUNICATION_NETWORKS</Type>
+            <iStackSupportLimitChange>4</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_COMMUNICATION_NETWORKS</Description>
 			<Civilopedia>TXT_KEY_TECH_COMMUNICATION_NETWORKS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -23795,6 +23807,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_MILITARY_ROBOTICS</Type>
+            <iStackSupportLimitChange>4</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_MILITARY_ROBOTICS</Description>
 			<Civilopedia>TXT_KEY_TECH_MILITARY_ROBOTICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -28551,6 +28564,7 @@
 		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SMART_DUST</Type>
+            <iStackSupportLimitChange>8</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_SMART_DUST</Description>
 			<Civilopedia>TXT_KEY_TECH_SMART_DUST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>

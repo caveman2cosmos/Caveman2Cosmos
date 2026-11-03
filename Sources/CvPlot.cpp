@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBonusInfo.h"
@@ -38,6 +39,18 @@
 extern int s_iCommanderEpoch;
 extern int s_iCommodoreEpoch;
 
+namespace
+{
+	// Callbacks inside ownership/improvement changes may read the old state.
+	// Invalidate again on every exit, including early returns.
+	struct StackSupportPlotChange
+	{
+		CvPlot& plot;
+		explicit StackSupportPlotChange(CvPlot& p) : plot(p) {}
+		~StackSupportPlotChange() { plot.invalidateStackSupport(); }
+	};
+}
+
 #define STANDARD_MINIMAP_ALPHA		(0.6f)
 
 //	Pseudo-value to indicate uninitialised in found values
@@ -69,6 +82,7 @@ CvPlot::CvPlot()
 	, m_requiredVisibleGraphics(ECvPlotGraphics::NONE)
 	, m_pagingHandle(CvPlotPaging::INVALID_HANDLE)
 {
+	m_stackSupportRevision = 1;
 	PROFILE_EXTRA_FUNC();
 	if ( m_resultHashMap == NULL )
 	{
@@ -223,6 +237,7 @@ void CvPlot::uninit()
 // Initializes data members that are serialized.
 void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 {
+	invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
 	//--------------------------------
 	// Uninit class
@@ -6449,6 +6464,8 @@ void CvPlot::setFlagDirty(bool bNewValue)
 
 void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup)
 {
+	StackSupportPlotChange stackChange(*this);
+	invalidateStackSupport();
 	PROFILE_FUNC();
 
 	if (getOwner() != eNewValue)
@@ -7531,6 +7548,8 @@ bool CvPlot::isImprovementDestructible() const
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
+	StackSupportPlotChange stackChange(*this);
+	invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
 	const ImprovementTypes eOldImprovement = getImprovementType();
 
@@ -7831,6 +7850,8 @@ CvCity* CvPlot::getPlotCity() const
 
 void CvPlot::setPlotCity(CvCity* pNewValue)
 {
+	StackSupportPlotChange stackChange(*this);
+	invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
 	if (getPlotCity() == pNewValue)
 	{
@@ -10713,6 +10734,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 		m_units.insertAtEnd(pUnit->getIDInfo());
 	}
 
+	invalidateStackSupport();
 	if (bUpdate)
 	{
 		updateCenterUnit();
@@ -10759,6 +10781,7 @@ void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 		}
 	}
 
+	invalidateStackSupport();
 	if (bUpdate)
 	{
 		updateCenterUnit();

@@ -7,6 +7,8 @@
 
 //#include "CvEnums.h"
 
+class CvTaggedSaveFormatWrapper;
+
 class CvInitCore
 	: private bst::noncopyable
 {
@@ -279,6 +281,7 @@ public:
 
 	void calculateAssetCheckSum();
 	void checkVersions();
+	void checkStackPromotionsOption();
 	void endGameSetup();
 
 // BUG - EXE/DLL Paths - start
@@ -296,6 +299,7 @@ protected:
 
 	void clearVictories();
 	void refreshVictories();
+	void readStackPromotionsOption(CvTaggedSaveFormatWrapper& wrapper);
 
 	// ***
 	// CORE GAME INIT DATA
@@ -407,6 +411,8 @@ protected:
 	static CvString* exeName;
 	static bool bPathsSet;
 // BUG - EXE/DLL Paths - end
+	// Transient load-time offer; the saved option itself records either answer.
+	bool m_bStackPromotionsMissingFromSave;
 };
 
 #endif

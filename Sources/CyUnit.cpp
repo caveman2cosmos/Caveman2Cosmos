@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvUnit.h"
 #include "CyArea.h"
 #include "CyPlot.h"
@@ -630,7 +631,17 @@ bool CyUnit::isPromotionOverriden(int /*PromotionTypes*/eIndex) const
 
 bool CyUnit::isHasPromotion(int /*PromotionTypes*/eIndex) const
 {
-	return m_pUnit->isHasPromotion((PromotionTypes)eIndex);
+	return m_pUnit->isHasPromotion((PromotionTypes)eIndex) || StackPromotions::has(*m_pUnit, (PromotionTypes)eIndex);
+}
+
+int CyUnit::getStackSupportStat(int stat) const
+{
+	return stat >= 0 && stat < StackPromotions::NUM_STATS ? StackPromotions::value(*m_pUnit, (StackPromotions::Stat)stat) : 0;
+}
+
+int CyUnit::getStackSupportLimit() const
+{
+	return StackPromotions::eligible(*m_pUnit) ? StackPromotions::limit(m_pUnit->getTeam(), *m_pUnit->plot(), m_pUnit->getDomainType()) : 0;
 }
 
 bool CyUnit::isHasUnitCombat(int /*UnitCombatTypes*/eIndex) const

@@ -407,7 +407,7 @@ public:
      *   2. Apply special rules for certain AI types.
      *   3. Return true if grouping is allowed.
      */
-    bool AI_canGroupWithAIType(UnitAITypes eUnitAI) const;
+    bool AI_canGroupWithAIType(UnitAITypes eUnitAI, const CvPlot* at = NULL) const;
 
     /**
      * Determines if the unit is allowed to join a group.

@@ -152,8 +152,10 @@
 	<ElementType name="Button" content="textOnly"/>
 	<ElementType name="bDCMAirBombTech1" content="textOnly" dt:type="int"/>
 	<ElementType name="bDCMAirBombTech2" content="textOnly" dt:type="int"/>
+	<ElementType name="iStackSupportLimitChange" content="textOnly" dt:type="int"/>
 	<ElementType name="TechInfo" content="eltOnly">
 		<element type="Type"/>
+		<element type="iStackSupportLimitChange" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>

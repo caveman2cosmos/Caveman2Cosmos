@@ -1259,7 +1259,7 @@ public:
 	int getExtraAirRange() const;
 	void changeExtraAirRange(int iChange);
 
-	int getExtraIntercept(bool bIgnoreCommanders = false,bool bIgnoreCommodores = false) const;
+	int getExtraIntercept(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false, bool bIgnoreStackSupport = false) const;
 	void changeExtraIntercept(int iChange);
 
 	int getExtraEvasion(bool bIgnoreCommanders = false, bool bIgnoreCommodores = false) const;

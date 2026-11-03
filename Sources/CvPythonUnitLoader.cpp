@@ -158,6 +158,8 @@ void CvPythonUnitLoader::CyUnitPythonInterface1(boost::python::class_<CyUnit>& i
 		.def("isPromotionValid", &CyUnit::isPromotionValid, "bool (int /*PromotionTypes*/ ePromotion)")
 		.def("isPromotionOverriden", &CyUnit::isPromotionOverriden, "bool (int /*PromotionTypes*/ ePromotion)")
 		.def("isHasPromotion", &CyUnit::isHasPromotion, "bool (int /*PromotionTypes*/ ePromotion)")
+		.def("getStackSupportStat", &CyUnit::getStackSupportStat, "int (int stat) - read-only derived stack modifier")
+		.def("getStackSupportLimit", &CyUnit::getStackSupportLimit, "int () - current soft stack limit")
 		.def("isHasUnitCombat", &CyUnit::isHasUnitCombat, "bool (int /*UnitCombatTypes*/ eUnitCombat)")
 		.def("setHasPromotion", &CyUnit::setHasPromotion, "void (int (PromotionTypes) eIndex, bool bNewValue)")
 		.def("IsSelected", &CyUnit::IsSelected)

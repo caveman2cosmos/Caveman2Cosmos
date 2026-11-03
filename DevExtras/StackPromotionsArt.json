@@ -1,0 +1,230 @@
+[
+  {
+    "file": "ASW1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/ASW1.dds",
+    "bytes": 4224,
+    "sha256": "9d03ba57a7bd3088af4448560a0e25b93627cf22862c8035d774715a79dc03de"
+  },
+  {
+    "file": "ASW2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/ASW2.dds",
+    "bytes": 4224,
+    "sha256": "375e9543ec82b432fffdaaf98c5194d6de4655a991cc6763f501fcaaf20b66c2"
+  },
+  {
+    "file": "ASW3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/ASW3.dds",
+    "bytes": 4224,
+    "sha256": "bed2a95e4e8e9928d518ce4bdb36e75250d73a9471854737ec246772c4f05b19"
+  },
+  {
+    "file": "ArcherAid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/archeraid1.dds",
+    "bytes": 4224,
+    "sha256": "feca34c762b0fe9ff6c6b61be20ca256cb3e418d65392e07412253d5bafea56a"
+  },
+  {
+    "file": "ArcherAid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/archeraid2.dds",
+    "bytes": 4224,
+    "sha256": "85b192097f685b8b01c3cf5a12200d2294aec5c617b42e9bfba72901d901dbc9"
+  },
+  {
+    "file": "ArcherAid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/archeraid3.dds",
+    "bytes": 4224,
+    "sha256": "6c5329eb589c6bdf1e9851fd520758fc6cb504a651db6dd7feaa23afe848313f"
+  },
+  {
+    "file": "CongestedLand1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/crowded_1.dds",
+    "bytes": 4224,
+    "sha256": "a5e82552a77a0553c13ab0df84bdde05a83ab77196a5785185da4bf0cd96a781"
+  },
+  {
+    "file": "CongestedLand2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/crowded_2.dds",
+    "bytes": 4224,
+    "sha256": "c36850564c42ef7bde2cc359ea0cc08a198da19f2d649c3e991ec123792db7f1"
+  },
+  {
+    "file": "CongestedLand3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/crowded_3.dds",
+    "bytes": 4224,
+    "sha256": "cce93f24ed11b7c9e0ed5bf730d9aae570012d2e2d502002815835aa484b3e3e"
+  },
+  {
+    "file": "CongestedLand4.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/crowded_4.dds",
+    "bytes": 4224,
+    "sha256": "2fab2a5b326d8ba4f17d858cc6ecff28392de09e348548ae3312e17fc7036d2d"
+  },
+  {
+    "file": "MeleeAid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/meleeaid1.dds",
+    "bytes": 4224,
+    "sha256": "10576ba052eb914edb727862f8a86dd78637da26ec5c26019016f1b387e1313b"
+  },
+  {
+    "file": "MeleeAid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/meleeaid2.dds",
+    "bytes": 4224,
+    "sha256": "85a43313740e96806a748404e4823c284161a0208f4013be64994c6d299f11fc"
+  },
+  {
+    "file": "MeleeAid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/meleeaid3.dds",
+    "bytes": 4224,
+    "sha256": "5214ea227e17e60708e55022bdfa60bdf33a45753a9cc9c1a7d0eb26aed08d40"
+  },
+  {
+    "file": "MountedAid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/mountedaid1.dds",
+    "bytes": 4224,
+    "sha256": "806834f8aca9377d41304bf8ea159482a46e4246e702fda7c4b85b129cad0e04"
+  },
+  {
+    "file": "MountedAid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/mountedaid2.dds",
+    "bytes": 4224,
+    "sha256": "af00ebb12312a318fafe0f6e8d6876244e3479f944f1a09a6b947b9455cf1a84"
+  },
+  {
+    "file": "MountedAid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/mountedaid3.dds",
+    "bytes": 4224,
+    "sha256": "6cd5ed0616ddf23940adfe09ba814be29ad79d7724c32be85a226995cf86b304"
+  },
+  {
+    "file": "ReconAid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/reconaid1.dds",
+    "bytes": 4224,
+    "sha256": "84b60d5c26dfac797fcaeef76ea0359a918c6f044d317e0cb3bc55b8c73c1e6c"
+  },
+  {
+    "file": "ReconAid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/reconaid2.dds",
+    "bytes": 4224,
+    "sha256": "2bf238634b35c178d70e882b1d63ab66ce9605276fb451b3cc091bc83b6aff8d"
+  },
+  {
+    "file": "ReconAid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/reconaid3.dds",
+    "bytes": 4224,
+    "sha256": "8611dc69fd44dd2b7d5371faf2165522dce261b1fb91a8c4dc810ef8de475aac"
+  },
+  {
+    "file": "SiegeAid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/siegeaid1.dds",
+    "bytes": 4224,
+    "sha256": "109ab9f459ee1a8d06468ac634128611174bf17e0ffc14a01f6adc0f4dc2cc20"
+  },
+  {
+    "file": "SiegeAid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/siegeaid2.dds",
+    "bytes": 4224,
+    "sha256": "be9080f2bb3f94a74a8bba86490037bc26e385b0f0788c086491bafa8e9e1bf5"
+  },
+  {
+    "file": "SiegeAid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/siegeaid3.dds",
+    "bytes": 4224,
+    "sha256": "17d7393f9bbd9cab5d543ddd423ac0ca981b4d0b5936f8e1b1882a6e1fd79d53"
+  },
+  {
+    "file": "breakthrough1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/breakthrough1.dds",
+    "bytes": 4224,
+    "sha256": "a22f217e8926d268949202285c1c1d8271ee17cfdd1d507040d2a5128e9c1e80"
+  },
+  {
+    "file": "breakthrough2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/breakthrough2.dds",
+    "bytes": 4224,
+    "sha256": "e1a3c6ad17e95de4ad0193de47524a1af537cba8e3319def0d82fe9d354f6b9a"
+  },
+  {
+    "file": "breakthrough3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/breakthrough3.dds",
+    "bytes": 4224,
+    "sha256": "3df1fa668f16399f9c6bfe43d10a4a33b124a77bdd8179cc419d1c7c64c94ad7"
+  },
+  {
+    "file": "carrier_aid.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/carrier_aid.dds",
+    "bytes": 4224,
+    "sha256": "db350ab101641a19d96d5c7815fc0592d2582f6012249b71228df68d4978976f"
+  },
+  {
+    "file": "combined_arms1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/combined_arms1.dds",
+    "bytes": 4224,
+    "sha256": "87689cbe62b8117b9f86043b6a29b7ba79b1b95cd686b06f5e0ea1910fd748a0"
+  },
+  {
+    "file": "combined_arms2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/combined_arms2.dds",
+    "bytes": 4224,
+    "sha256": "948a07b619794ca3f4bab39acb7304c5bb754b72c16f0e0236e1a7f04fbe5ba3"
+  },
+  {
+    "file": "combined_arms3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/combined_arms3.dds",
+    "bytes": 4224,
+    "sha256": "7d79d81365cac35bdb2b9e29b0af0155707d3420751f79319dff839787e254d2"
+  },
+  {
+    "file": "heavy_ship_aid.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/Heavy_Ship_aid.dds",
+    "bytes": 4224,
+    "sha256": "3ff3590f2410c64620f8d25f16c02d621d64ac1828028008095186b0414cd507"
+  },
+  {
+    "file": "infantry_aid1.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/infantry_aid1.dds",
+    "bytes": 4224,
+    "sha256": "68f9a93593a77a9821185260dfe80839a142b61456f0bf60e4f12307075fb22e"
+  },
+  {
+    "file": "infantry_aid2.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/infantry_aid2.dds",
+    "bytes": 4224,
+    "sha256": "f62b51e4165a3a3216c281893dfd24050d68719040e541b4346047fb7f46d1b3"
+  },
+  {
+    "file": "infantry_aid3.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/infantry_aid3.dds",
+    "bytes": 4224,
+    "sha256": "0a402d021d586f517f73ec299fe622f8556d27fe1bb84345f16a61082c0b5b70"
+  },
+  {
+    "file": "light_ship_aid.dds",
+    "url": "https://svn.code.sf.net/p/civ4mods/code/realism/bts/trunk/mod/Assets/Art/Interface/Buttons/Promotions/light_ship_aid.dds",
+    "bytes": 4224,
+    "sha256": "b2b11eebc194ed68b45c907cb5f83191e9e725a60b11559c7bf703439684b841"
+  },
+  {
+    "file": "ThrowingAid1.dds",
+    "source": "C2C UnpackedArt/art/buttons/promotions/sidesteppromotion1.dds",
+    "styleReference": "Realism Invictus archeraid1.dds",
+    "method": "Built-in imagegen background edit; Pillow DDS conversion only",
+    "prompt": "DevExtras/StackPromotions.txt",
+    "sha256": "40b5c5b3543f454e53e7b476f46df4daa7a094700a1b304383aad02c60a4cf0b"
+  },
+  {
+    "file": "ThrowingAid2.dds",
+    "source": "C2C UnpackedArt/art/buttons/promotions/sidesteppromotion1.dds",
+    "styleReference": "Realism Invictus archeraid1.dds",
+    "method": "Built-in imagegen background edit; Pillow DDS conversion only",
+    "prompt": "DevExtras/StackPromotions.txt",
+    "sha256": "40b5c5b3543f454e53e7b476f46df4daa7a094700a1b304383aad02c60a4cf0b"
+  },
+  {
+    "file": "ThrowingAid3.dds",
+    "source": "C2C UnpackedArt/art/buttons/promotions/sidesteppromotion1.dds",
+    "styleReference": "Realism Invictus archeraid1.dds",
+    "method": "Built-in imagegen background edit; Pillow DDS conversion only",
+    "prompt": "DevExtras/StackPromotions.txt",
+    "sha256": "40b5c5b3543f454e53e7b476f46df4daa7a094700a1b304383aad02c60a4cf0b"
+  }
+]
