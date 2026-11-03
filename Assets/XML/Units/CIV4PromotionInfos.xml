@@ -12658,6 +12658,7 @@
 			<Description>TXT_KEY_PROMOTION_STINGING_INSULTS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_FLANKING1</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_GOAD3</PromotionPrereqOr1>
 			<TechPrereq>TECH_LANGUAGE</TechPrereq>
 			<PromotionLine>PROMOTIONLINE_STINGING_INSULTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
