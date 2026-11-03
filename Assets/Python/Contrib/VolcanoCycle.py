@@ -18,11 +18,11 @@ GAME = GC.getGame()
 # scales forest fires, so Marathon doesn't see 3x the eruptions Normal does.
 ODDS_BASE = 1000
 NEW_VOLCANO_CHANCE = 1          # per sampled candidate plot, per turn
-ACTIVE_ERUPT_CHANCE = 120       # per active volcano, per turn
+ACTIVE_ERUPT_CHANCE = 60        # per active volcano, per turn
 ACTIVE_DORMANT_CHANCE = 60      # per active volcano, per turn
-DORMANT_ERUPT_CHANCE = 40       # per dormant volcano, per turn
+DORMANT_ERUPT_CHANCE = 20       # per dormant volcano, per turn
 DORMANT_EXTINCT_CHANCE = 15     # per dormant volcano, per turn
-SAMPLE_DIVISOR = 400            # ~1/400 of all plots sampled for new-volcano checks per turn
+SAMPLE_DIVISOR = 800            # ~1/800 of all plots sampled for new-volcano checks per turn
 
 
 class VolcanoCycle:
