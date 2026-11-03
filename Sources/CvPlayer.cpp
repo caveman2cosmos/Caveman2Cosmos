@@ -11952,7 +11952,7 @@ void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 	}
 	m_iCombatExperience = iExperience;
 
-	if (!isNPC() || isHominid())
+	if (!isNPC())
 	{
 		const int iExperienceThreshold = greatPeopleThresholdMilitary();
 
