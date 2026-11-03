@@ -9877,6 +9877,11 @@ void CvCity::changeFood(int iChange, const bool bHandleGrowth)
 	{
 		m_iFood += iChange;
 
+		if (getTeam() == GC.getGame().getActiveTeam())
+		{
+			setInfoDirty(true);
+		}
+
 		if (bHandleGrowth)
 		{
 			if (iChange > 0)
