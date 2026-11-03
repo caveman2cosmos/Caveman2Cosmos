@@ -3731,6 +3731,22 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 				}
 			}
 		}
+		// Minors/Barbarians never get a diplo popup (they're already at war and don't negotiate),
+		// so first contact with them would otherwise pass completely silently.
+		else if (bNewDiplo && GC.getGame().isFinalInitialized() && !gDLL->GetWorldBuilderMode() && (isMinorCiv() || isNPC()) && isAtWar(eIndex))
+		{
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			{
+				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eIndex) && GET_PLAYER((PlayerTypes)iI).isHumanPlayer())
+				{
+					AddDLLMessage(
+						(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_DECLARED_WAR_ON_YOU", getName().GetCString()),
+						"AS2D_DECLAREWAR", MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_WARNING_TEXT()
+					);
+				}
+			}
+		}
 	}
 }
 
