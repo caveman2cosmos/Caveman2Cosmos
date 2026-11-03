@@ -21011,6 +21011,34 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<KillOutcomes>
 				<Outcome>
+					<OutcomeType>OUTCOME_TALES_SEA</OutcomeType>
+					<iChance>5</iChance>
+					<UnitType>UNIT_TALESOF_SEALION_SEA</UnitType>
+					<bUnitToCity>
+						<Constant>1</Constant>
+					</bUnitToCity>
+					<Yields>
+						<iYield>
+							<Plus>
+								<Constant>20</Constant>
+								<Random>80</Random>
+							</Plus>
+						</iYield>
+						<iYield>
+							<Plus>
+								<Constant>5</Constant>
+								<Random>20</Random>
+							</Plus>
+						</iYield>
+						<iYield>
+							<Plus>
+								<Constant>8</Constant>
+								<Random>10</Random>
+							</Plus>
+						</iYield>
+					</Yields>
+				</Outcome>
+				<Outcome>
 					<OutcomeType>OUTCOME_BONUS_SPAWNED</OutcomeType>
 					<iChance>2</iChance>
 					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
