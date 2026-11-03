@@ -2364,6 +2364,18 @@
 		<Russian>[COLOR_YELLOW]áåñïëàòíûé ñòàðòîâûé îïûò:[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_WILL_RECEIVE_FREE_PROMOTION</Tag>
+		<English>[COLOR_YELLOW]Free Starting Promotions:[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FREE_PROMOTION</Tag>
+		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT][LINK=%s1]%s2[\LINK] from %s3_building[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NO_BUILDING_FREE_PROMOTION</Tag>
+		<English>[ICON_BULLET][COLOR_NEGATIVE_TEXT][LINK=%s1]%s2[\LINK] with %s3_building[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_WITHDRAW_VS_TYPE</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Withdraw vs. [LINK=%s2_Type]%s3_TypeName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%% de Repli contre: [LINK=%s2_Type]%s3_TypeName[\LINK]</French>

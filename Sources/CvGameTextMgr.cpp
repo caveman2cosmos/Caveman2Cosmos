@@ -20319,6 +20319,94 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 		}
 
+		//Free Promos from Buildings (mirrors the Free Experience preview above)
+		if (pCity)
+		{
+			bFirst = true;
+			const UnitCombatTypes eCombatType = (UnitCombatTypes)kUnit.getUnitCombatType();
+
+			foreach_(const BuildingTypes eBuildingX, pCity->getHasBuildings())
+			{
+				if (pCity->isDisabledBuilding(eBuildingX))
+				{
+					continue;
+				}
+				const CvBuildingInfo& kBuildingX = GC.getBuildingInfo(eBuildingX);
+				foreach_(const FreePromoTypes& freePromo, kBuildingX.getFreePromoTypes())
+				{
+					const CvPromotionInfo& promoCheck = GC.getPromotionInfo(freePromo.ePromotion);
+					bool bExcluded = eCombatType != NO_UNITCOMBAT && promoCheck.isNotOnUnitCombatType(eCombatType);
+					if (!bExcluded)
+					{
+						foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
+						{
+							if (promoCheck.isNotOnUnitCombatType(eSubCombat))
+							{
+								bExcluded = true;
+								break;
+							}
+						}
+					}
+					if (bExcluded)
+					{
+						continue;
+					}
+					if (bFirst)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_WILL_RECEIVE_FREE_PROMOTION"));
+					}
+					bFirst = false;
+					szBuffer.append(NEWLINE);
+					const CvPromotionInfo& promo = GC.getPromotionInfo(freePromo.ePromotion);
+					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FREE_PROMOTION", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide(), kBuildingX.getTextKeyWide()));
+				}
+			}
+
+			// Buildings you could construct that would also grant a free promotion
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); ++iI)
+			{
+				if (pCity->isActiveBuilding((BuildingTypes)iI))
+				{
+					continue;
+				}
+				const CvBuildingInfo& kBuildingX = GC.getBuildingInfo((BuildingTypes)iI);
+				if (kBuildingX.getFreePromoTypes().empty() || !pCity->canConstruct((BuildingTypes)iI, false, true))
+				{
+					continue;
+				}
+				foreach_(const FreePromoTypes& freePromo, kBuildingX.getFreePromoTypes())
+				{
+					const CvPromotionInfo& promoCheck = GC.getPromotionInfo(freePromo.ePromotion);
+					bool bExcluded = eCombatType != NO_UNITCOMBAT && promoCheck.isNotOnUnitCombatType(eCombatType);
+					if (!bExcluded)
+					{
+						foreach_(const UnitCombatTypes eSubCombat, kUnit.getSubCombatTypes())
+						{
+							if (promoCheck.isNotOnUnitCombatType(eSubCombat))
+							{
+								bExcluded = true;
+								break;
+							}
+						}
+					}
+					if (bExcluded)
+					{
+						continue;
+					}
+					if (bFirst)
+					{
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_WILL_RECEIVE_FREE_PROMOTION"));
+					}
+					bFirst = false;
+					szBuffer.append(NEWLINE);
+					const CvPromotionInfo& promo = GC.getPromotionInfo(freePromo.ePromotion);
+					szBuffer.append(gDLL->getText("TXT_KEY_NO_BUILDING_FREE_PROMOTION", CvWString(promo.getType()).GetCString(), promo.getTextKeyWide(), kBuildingX.getTextKeyWide()));
+				}
+			}
+		}
+
 		//Healing
 		if (kUnit.isNoSelfHeal())
 		{
