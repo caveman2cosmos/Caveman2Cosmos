@@ -993,7 +993,7 @@
 	</Define>
 	<Define>
 		<DefineName>TECH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>550</iDefineIntVal>
+		<iDefineIntVal>600</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAXED_UNIT_GOLD_PERCENT</DefineName>
