@@ -1501,9 +1501,28 @@ void CvCity::doAutobuild()
 			{
 				if (canConstruct((BuildingTypes)iI, false, false, true))
 				{
-					changeHasBuilding((BuildingTypes)iI, true);
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
-					AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
+					// Don't auto-build a copy that can't support itself the moment it exists;
+					//	getBuildingPrereqBuilding scales its requirement with how many copies already
+					//	exist, so check against the count as it will be right after this one is granted.
+					bool bSustainable = true;
+					if (kBuilding.getMaxGlobalInstances() == -1)
+					{
+						foreach_(const BuildingModifier2& modifier, kBuilding.getPrereqNumOfBuildings())
+						{
+							if (GET_PLAYER(getOwner()).getBuildingCount(modifier.first) < GET_PLAYER(getOwner()).getBuildingPrereqBuilding((BuildingTypes)iI, modifier.first, 1))
+							{
+								bSustainable = false;
+								break;
+							}
+						}
+					}
+
+					if (bSustainable)
+					{
+						changeHasBuilding((BuildingTypes)iI, true);
+						const CvWString szBuffer = gDLL->getText("TXT_KEY_COMPLETED_AUTO_BUILD", kBuilding.getTextKeyWide(), getName().GetCString());
+						AddDLLMessage(getOwner(), true, 10, szBuffer, NULL, MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN());
+					}
 				}
 			}
 			// Toffer - World wonder autobuilds should never be auto-removed.
