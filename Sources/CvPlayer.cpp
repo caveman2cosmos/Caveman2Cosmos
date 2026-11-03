@@ -2568,7 +2568,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		foreach_(const BuildingTypes eType, pOldCity->getHasBuildings())
 		{
-			if (!GC.getBuildingInfo(eType).isNeverCapture() && !isProductionMaxedBuilding(eType, true)
+			if ((!bConquest || !GC.getBuildingInfo(eType).isNeverCapture()) && !isProductionMaxedBuilding(eType, true)
 			&& (!bConquest || bRecapture || GC.getGame().getSorenRandNum(100, "Capture Probability") < GC.getBuildingInfo(eType).getConquestProbability()))
 			{
 				buildingLedger.insert(std::make_pair(eType, pOldCity->getBuildingData(eType)));
@@ -21896,6 +21896,15 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 			eOtherPlayer = aePlayers[iChosen];
 			pOtherPlayerCity = apCities[iChosen];
 		}
+	}
+
+	if (!pPlot && pOtherPlayerCity)
+	{
+		// Trigger has no plot of its own (e.g. no bPickCity) but refers to a foreign
+		// city via bPickOtherPlayerCity - show/record that city's location instead of
+		// leaving pPlot NULL, which collapses to INVALID_PLOT_COORD and shows a bogus
+		// map location for the event popup.
+		pPlot = pOtherPlayerCity->plot();
 	}
 
 	EventTriggeredData* pTriggerData = addEventTriggered();

@@ -68,6 +68,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_PRIME_STUD_1</Event>
                 <Event>EVENT_PRIME_STUD_2</Event>
@@ -7252,6 +7253,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_PALISADE_1</Event>
                 <Event>EVENT_PALISADE_2</Event>
@@ -7280,6 +7282,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_EARTH_WALL_1</Event>
                 <Event>EVENT_EARTH_WALL_2</Event>
@@ -7308,6 +7311,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_WALLS_1</Event>
                 <Event>EVENT_WALLS_2</Event>
@@ -7336,6 +7340,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_HIGH_WALLS_1</Event>
                 <Event>EVENT_HIGH_WALLS_2</Event>
@@ -7697,6 +7702,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<Events>
 				<Event>EVENT_GREAT_STORY_1</Event>
 				<Event>EVENT_GREAT_STORY_2</Event>
@@ -7759,6 +7765,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<Events>
 				<Event>EVENT_COMMUNITY_BOND</Event>
 			</Events>
@@ -7788,6 +7795,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<Events>
 				<Event>EVENT_BONUS_TAX_PREHISTORIC</Event>
 			</Events>
@@ -7820,6 +7828,7 @@
             <iNumBuildings>1</iNumBuildings>
             <iNumPlotsRequired>1</iNumPlotsRequired>
             <bOwnPlot>1</bOwnPlot>
+            <bPickCity>1</bPickCity>
             <Events>
                 <Event>EVENT_BONUS_TAX_CLASSIC</Event>
             </Events>
@@ -7852,6 +7861,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<Events>
 				<Event>EVENT_BONUS_TAX_MODERN</Event>
 			</Events>
@@ -14443,6 +14453,7 @@
 			<iNumBuildings>1</iNumBuildings>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
+			<bPickCity>1</bPickCity>
 			<ImprovementsRequired>
 				<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
 			</ImprovementsRequired>

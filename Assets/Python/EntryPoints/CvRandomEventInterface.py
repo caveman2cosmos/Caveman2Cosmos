@@ -5570,11 +5570,12 @@ def canTriggerCompulsoryDem(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eGovCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eRuleCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_RULE"))
   iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
-  if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
+  if eRuleCivic == iFederal or eGovCivic == iDemocracy or eGovCivic == iRepublic:
     return True
   else:
     return False
@@ -5586,11 +5587,12 @@ def canEventTriggerCompulsoryDem(argsList):
   if player.isAnarchy() or player.getRevolutionTimer() > 0:
     return False
 
-  eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eGovCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eRuleCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_RULE"))
   iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
-  if eCivic == iFederal or eCivic == iDemocracy or eCivic == iRepublic:
+  if eRuleCivic == iFederal or eGovCivic == iDemocracy or eGovCivic == iRepublic:
     bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
     bDemocracy = player.canDoCivics(GC.getInfoTypeForString("CIVIC_DEMOCRACY"))
     bRepublic = player.canDoCivics(GC.getInfoTypeForString("CIVIC_REPUBLIC"))
@@ -5607,7 +5609,8 @@ def TriggerCompulsoryDem2(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eGovCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+  eRuleCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_RULE"))
   iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 
   bFederal = player.canDoCivics(GC.getInfoTypeForString("CIVIC_FEDERALISM"))
@@ -5619,11 +5622,12 @@ def TriggerCompulsoryDem2(argsList):
   for i in xrange(GC.getNumCivicOptionInfos()):
     curCivics.append(player.getCivics(i))
 
-  if bFederal and eCivic != iFederal:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = iFederal
-  elif eCivic != GC.getInfoTypeForString("CIVIC_DEMOCRACY") and bDemocracy:
+  if bFederal and eRuleCivic != iFederal:
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_RULE")] = iFederal
+
+  if eGovCivic != GC.getInfoTypeForString("CIVIC_DEMOCRACY") and bDemocracy:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
-  elif eCivic != GC.getInfoTypeForString("CIVIC_REPUBLIC") and bRepublic:
+  elif eGovCivic != GC.getInfoTypeForString("CIVIC_REPUBLIC") and bRepublic:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = GC.getInfoTypeForString("CIVIC_REPUBLIC")
 
   player.doRevolution(curCivics, False)
@@ -5667,20 +5671,21 @@ def getHelpCompulsoryDem2(argsList):
 
 	if iEvent == GC.getInfoTypeForString("EVENT_COMPULSORY_DEM_2"):
 		print "Event #2"
-		eCivic = CyPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+		eGovCivic = CyPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
+		eRuleCivic = CyPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_RULE"))
 		iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
 		iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
 		iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
 
-		if eCivic != iFederal and CyPlayer.canDoCivics(iFederal):
+		if eRuleCivic != iFederal and CyPlayer.canDoCivics(iFederal):
 			szType = GC.getCivicInfo(iFederal).getTextKey()
 			print "Can Switch to Federal"
 
-		elif eCivic != iDemocracy and CyPlayer.canDoCivics(iDemocracy):
+		elif eGovCivic != iDemocracy and CyPlayer.canDoCivics(iDemocracy):
 			szType = GC.getCivicInfo(iDemocracy).getTextKey()
 			print "Can Switch to Democracy"
 
-		elif eCivic != iRepublic and CyPlayer.canDoCivics(iRepublic):
+		elif eGovCivic != iRepublic and CyPlayer.canDoCivics(iRepublic):
 			szType = GC.getCivicInfo(iRepublic).getTextKey()
 			print "Can Switch to Republic"
 	else:
@@ -5752,7 +5757,6 @@ def TriggerLessDictator2(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
 
-  eCivic = player.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
   iFederal = GC.getInfoTypeForString("CIVIC_FEDERALISM")
   iRepublic = GC.getInfoTypeForString("CIVIC_REPUBLIC")
   iDemocracy = GC.getInfoTypeForString("CIVIC_DEMOCRACY")
@@ -5766,8 +5770,9 @@ def TriggerLessDictator2(argsList):
   bRepublic = player.canDoCivics(iRepublic)
 
   if bFederal:
-    curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = iFederal
-  elif bDemocracy:
+    curCivics[GC.getInfoTypeForString("CIVICOPTION_RULE")] = iFederal
+
+  if bDemocracy:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = iDemocracy
   elif bRepublic:
     curCivics[GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT")] = iRepublic
