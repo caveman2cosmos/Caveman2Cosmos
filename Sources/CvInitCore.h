@@ -281,7 +281,12 @@ public:
 
 	void calculateAssetCheckSum();
 	void checkVersions();
+	void checkRailRoadRevolutionOption();
+	void checkPrimitiveMapsOption();
+	void checkMultipleImprovementsOption();
 	void checkStackPromotionsOption();
+	void checkNativePromotionsOption();
+	void checkDoctrinePromotionsOption();
 	void endGameSetup();
 
 // BUG - EXE/DLL Paths - start
@@ -300,6 +305,7 @@ protected:
 	void clearVictories();
 	void refreshVictories();
 	void readStackPromotionsOption(CvTaggedSaveFormatWrapper& wrapper);
+	void readDoctrinePromotionsOption(CvTaggedSaveFormatWrapper& wrapper);
 
 	// ***
 	// CORE GAME INIT DATA
@@ -401,6 +407,9 @@ protected:
 	CvString* m_aszXMLCheck;
 
 	mutable CvString m_szTempCheck;
+	// Append extension data: the EXE inlines access to existing setup fields.
+	bool m_bPrimitiveMapsMissingFromSave;
+	bool m_bMultipleImprovementsMissingFromSave;
 
 // BUG - EXE/DLL Paths - start
 	static void setPathNames();
@@ -413,6 +422,10 @@ protected:
 // BUG - EXE/DLL Paths - end
 	// Transient load-time offer; the saved option itself records either answer.
 	bool m_bStackPromotionsMissingFromSave;
+	bool m_bNativePromotionsMissingFromSave;
+	// Append new flags to preserve existing CvInitCore field offsets.
+	bool m_bRailRoadRevolutionMissingFromSave;
+	bool m_bDoctrinePromotionsMissingFromSave;
 };
 
 #endif

@@ -647,12 +647,17 @@ protected:
 
 	static CvPlayerAI* m_aPlayers;
 
-	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same
-	// selection group is still the (sole) reason hasBusyUnit() is true across many
-	// consecutive engine ticks, something is stuck and not making progress on its own -
-	// see AI_unitUpdate(). Transient, not saved: resets naturally via group ID mismatch.
-	int m_iStuckBusyGroupID;
-	int m_iStuckBusyGroupTicks;
+	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same selection
+	// group keeps being the thing AI_unitUpdate() is dealing with across many consecutive engine
+	// ticks - whether that's because hasBusyUnit() is stuck true for it, or because it's picked by
+	// the !hasBusyUnit() AI group-priority loop and keeps "succeeding" there without ever actually
+	// going busy - something is stuck and not making progress on its own. Both call sites in
+	// AI_unitUpdate() share this single counter (rather than one each) deliberately: a group whose
+	// mission briefly flips it busy and then clears again almost immediately would otherwise
+	// ping-pong between two separate per-branch counters forever, never accumulating 500 in either
+	// one. Transient, not saved: resets naturally via group ID mismatch.
+	int m_iStuckGroupID;
+	int m_iStuckGroupTicks;
 
 	// How many times the watchdog above has had to force-resolve a given unit (keyed by head
 	// unit ID), across however many separate stuck episodes. A unit that keeps tripping the

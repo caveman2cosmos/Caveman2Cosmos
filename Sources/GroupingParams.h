@@ -30,7 +30,7 @@ struct GroupingParams
 	GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
 	GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
 	GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
-	GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
+	GroupingParams& mergeWholeGroup(bool state = true) { bMergeWholeGroup = state; return *this; }
 	GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
 	GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
 	GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }

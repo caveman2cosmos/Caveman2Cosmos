@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_GUERILLA</Tag>
+		<English>Native Guerilla</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_GUERILLA_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on hills or peaks. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_GUERILLA</Tag>
+		<English>Effect - Native Guerilla</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_GUERILLA_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are hills or peaks. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Guerilla. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_GUERILLA_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Guerilla to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_WOODSMAN</Tag>
+		<English>Native Woodsman</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_WOODSMAN_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on forest, young/ancient/burnt forest. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WOODSMAN</Tag>
+		<English>Effect - Native Woodsman</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WOODSMAN_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are forest, young/ancient/burnt forest. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Woodsman. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WOODSMAN_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Woodsman to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_HEAT</Tag>
+		<English>Native Heat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_HEAT_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on desert, dunes or salt flats. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_HEAT</Tag>
+		<English>Effect - Native Heat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_HEAT_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are desert, dunes or salt flats. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Heat. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_HEAT_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Heat to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_ARCTIC</Tag>
+		<English>Native Arctic</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_ARCTIC_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on taiga, tundra, permafrost or ice. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_ARCTIC</Tag>
+		<English>Effect - Native Arctic</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_ARCTIC_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are taiga, tundra, permafrost or ice. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Arctic. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_ARCTIC_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Arctic to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_WETLAND</Tag>
+		<English>Native Wetland Combat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_WETLAND_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on lush, muddy or marsh terrain. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WETLAND</Tag>
+		<English>Effect - Native Wetland Combat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WETLAND_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are lush, muddy or marsh terrain. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Wetland Combat. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_WETLAND_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Wetland Combat to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_RUGGED</Tag>
+		<English>Native Rugged Combat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_RUGGED_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on barren, rocky, badland, jagged or scrub terrain. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_RUGGED</Tag>
+		<English>Effect - Native Rugged Combat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_RUGGED_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are barren, rocky, badland, jagged or scrub terrain. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Rugged Combat. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_RUGGED_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Rugged Combat to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_FIELDSMAN</Tag>
+		<English>Native Fieldsman</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_FIELDSMAN_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on grassland or plains. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_FIELDSMAN</Tag>
+		<English>Effect - Native Fieldsman</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_FIELDSMAN_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are grassland or plains. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Fieldsman. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_FIELDSMAN_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Fieldsman to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NATIVE_PROMOTION_PREREQUISITE</Tag>
+		<English>Requires %s1 when Combat - Native Promotions is enabled. Battlefield Promotions may award both together.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_PROMOTIONS_NATIVE</Tag>
+		<English>Combat - Native Promotions</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_PROMOTIONS_NATIVE_HELP</Tag>
+		<English>Cities automatically gain each Native effect supported by at least four matching tiles in their centered 3x3 area, including the center. Eligible units produced there receive the corresponding Native origin and +5 withdrawal on its matching terrain or features. Several origins may be granted. Visitors receive none. Origins cannot be selected with experience and unlock the corresponding level I promotion; their bonuses remain at higher ranks. If the Battlefield Promotions BUG option is enabled, a battlefield level I reward also grants its Native origin. Existing units are not assigned origins from their current positions; existing promotions are preserved.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NATIVE_PROMOTIONS_MIGRATION</Tag>
+		<English>Native Promotions Detected</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_NATIVE_PROMOTIONS_MIGRATION_BODY</Tag>
+		<English>Combat - Native Promotions is available, but this save predates the option. Would you like to turn it on?[NEWLINE][NEWLINE]Qualifying cities will gain Native effects for newly produced units. Existing units keep their promotions and are not assigned origins from their current locations. Your choice will be remembered when you save.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_JUNGLE</Tag>
+		<English>Native Jungle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_NATIVE_JUNGLE_HELP</Tag>
+		<English>Birthplace origin: +5 withdrawal on jungle or bamboo. Granted to eligible units produced in a qualifying city; cannot be selected with experience. Unlocks the corresponding level I promotion. The origin and its bonus remain with later ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_JUNGLE</Tag>
+		<English>Effect - Native Jungle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_JUNGLE_PEDIA</Tag>
+		<English>Automatically present while Combat - Native Promotions is enabled and at least four of the nine tiles in the city-centered 3x3 area are jungle or bamboo. The center tile is included; ownership and worked status do not matter. Each Native effect qualifies independently. Newly produced eligible units receive Native Jungle. Visiting units receive nothing; existing units are not retroactively given an origin.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NATIVE_JUNGLE_HELP</Tag>
+		<English>Requires at least four matching tiles within one tile of the city, including the center. Grants Native Jungle to newly produced eligible units only.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_JUNGLE</Tag>
+		<English>Jungle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_JUNGLE1</Tag>
+		<English>Jungle I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_JUNGLE2</Tag>
+		<English>Jungle II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_JUNGLE3</Tag>
+		<English>Jungle III</English>
+	</TEXT>
+</Civ4GameText>

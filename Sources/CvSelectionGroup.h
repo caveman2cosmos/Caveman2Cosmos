@@ -144,7 +144,7 @@ public:
 	// ! Not const
 	bool isStranded();
 	void invalidateIsStrandedCache();
-	bool calculateIsStranded();
+	bool calculateIsStranded(bool bTransportWait = false);
 	bool canMoveAllTerrain() const;
 
 	void unloadAll();

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Civ4GameText>
+<TEXT><Tag>TXT_KEY_GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION</Tag><English>Map — Rail Road Revolution</English><Polish>Mapa — Rail Road Revolution</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION_HELP</Tag><English>Independent roads and railways. Road access and railway yield bonuses follow the standard rules; only units of the owning team use rail speed.</English><Polish>Niezależne drogi i kolej. Dostęp do dróg i premie kolejowe do uzysków działają według standardowych zasad; z prędkości kolei korzystają wyłącznie jednostki drużyny właściciela.</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_RRR_MIGRATION_TITLE</Tag><English>Enable Rail Road Revolution?</English><Polish>Włączyć Rail Road Revolution?</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_RRR_MIGRATION_BODY</Tag><English>This save predates Rail Road Revolution. Enable independent road and railway layers? A full DLL recalculation will preserve existing railways and add Highway underneath where its technology is known, otherwise an available weaker road. Newly built railways will not grant a free road.</English><Polish>Ten zapis pochodzi sprzed Rail Road Revolution. Włączyć niezależne warstwy drogi i kolei? Pełna rekalkulacja DLL zachowa istniejące tory i doda pod nimi autostradę, jeśli odkryto jej technologię, albo dostępną słabszą drogę. Nowa budowa kolei nie będzie dodawała darmowej drogi.</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_RRR_UNDERLYING_ROAD</Tag><English>Road beneath railway: %s1</English><Polish>Droga pod koleją: %s1</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_RRR_NO_ROAD</Tag><English>No road beneath railway</English><Polish>Brak drogi pod koleją</Polish></TEXT>
+<TEXT><Tag>TXT_KEY_RRR_ROAD_UNKNOWN</Tag><English>Road beneath railway: not observed</English><Polish>Droga pod koleją: brak aktualnych obserwacji</Polish></TEXT>
+</Civ4GameText>

@@ -1,4 +1,7 @@
+#include "UnitTravelConnectivity.h"
 #include "CvGameCoreDLL.h"
+#include "AIPerf.h"
+#include "WorkerImprovementPathLimit.h"
 #include "FProfiler.h"
 
 #include "CvWorkerService.h"
@@ -19,12 +22,12 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 		const int plotIndex = targetCity->getCityPlotIndex(pLoopPlot);
 		if (pLoopPlot
 		&& pLoopPlot->getWorkingCity() == targetCity
-		&& pLoopPlot->getImprovementType() == NO_IMPROVEMENT
 		&& targetCity->AI_getBestBuildValue(plotIndex) > 0)
 		{
 			const BuildTypes eBuild = (BuildTypes)targetCity->AI_getBestBuild(plotIndex);
 
-			if (eBuild != NO_BUILD && GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
+			if (eBuild != NO_BUILD && GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT
+				&& GC.getBuildInfo(eBuild).getImprovement() != pLoopPlot->getImprovementType())
 			{
 				return true;
 			}
@@ -35,6 +38,7 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 
 bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 {
+	AI_PERF_SCOPE(WORKER_BONUS);
 	PROFILE_EXTRA_FUNC();
 	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
@@ -56,6 +60,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr) {
 
+		AI_PERF_COUNT(WORKER_PLOTS_SCANNED,1);
 		CvPlot* loopedPlot = itr.plot();
 		const PlayerTypes plotOwner = loopedPlot->getOwner();
 		const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
@@ -65,7 +70,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 
 		if (unitOwner != plotOwner && plotOwner != NO_PLAYER) continue;
 
-		if (!IsPlotValid(unit, loopedPlot) || loopedPlot->area() != unitPlot->area() || loopedPlot->getWorkingCity() != NULL) continue;
+		if (!IsPlotValid(unit, loopedPlot) || !UnitTravelConnectivity::landUnitCanReach(unit,loopedPlot) || loopedPlot->getWorkingCity() != NULL) continue;
 
 		BonusTypes nonObsoleteBonusType = loopedPlot->getNonObsoleteBonusType(unit->getTeam());
 
@@ -78,6 +83,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		// TODO: Improve this evaluation, but its a start.
 		foreach_(const ImprovementTypes potentialImprovementType, plotBonusInfo->getProvidedByImprovementTypes()) {
 
+			AI_PERF_COUNT(WORKER_BUILD_CANDIDATES,1);
 			const BuildTypes tempPlotBuild = GetFastestBuildForImprovementType(ownerReference, potentialImprovementType, loopedPlot, unit, false);
 
 			if (tempPlotBuild != NO_BUILD) {
@@ -101,17 +107,20 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		//const bool haveBonus = ownerReference.hasBonus(nonObsoleteBonusType);
 		//const bool plotIsConnected = loopedPlot->isConnectedToCapital(unitOwner);
 
+		const int rawBonusValue = ownerReference.AI_bonusVal(nonObsoleteBonusType);
+		const int maxWinningTurns = workerServiceBonusPathLimit(rawBonusValue,bestBonusValue,allowedMovementTurns);
+		if (maxWinningTurns<0) {AI_PERF_COUNT(TARGET_PATHS_PRUNED,1);continue;}
 		int numberOfMoveTurns = 0;
-		if (!unit->atPlot(loopedPlot) && !unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns)) continue;
+		if (!unit->atPlot(loopedPlot) && !unit->generatePath(loopedPlot, iBasePathFlags, false, &numberOfMoveTurns,maxWinningTurns)) {AI_PERF_COUNT(WORKER_PATH_REJECTS,1);continue;}
 
-		int tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType));
+		int tempBonusValue = std::max(1, rawBonusValue);
 
 		if (numberOfMoveTurns < 1)
 		{
 			tempBonusValue *= 3;
 			tempBonusValue /= 2;
 		}
-		else tempBonusValue = std::max(1, ownerReference.AI_bonusVal(nonObsoleteBonusType) / numberOfMoveTurns);
+		else tempBonusValue = std::max(1, rawBonusValue / numberOfMoveTurns);
 
 		if (numberOfMoveTurns <= allowedMovementTurns) {
 			if (bestBonusValue < tempBonusValue) {
@@ -124,6 +133,15 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 	}
 	if (overallBestBuild == NO_BUILD) return false;
 
+	// The work site is already reached. A completed/unavailable route must
+	// not prevent the selected improvement from being queued on this tile.
+	if (unit->atPlot(bestPlot))
+	{
+		unit->getGroup()->pushMission(MISSION_BUILD, overallBestBuild, -1, 0, false, false, MISSIONAI_BUILD, bestPlot);
+		// Colony/workboat-style builds may consume the builder immediately.
+		return true;
+	}
+
 	MissionTypes eBestMission = MISSION_MOVE_TO;
 
 	if (finalNumberOfMoveTurns >= stepDistance(unit->getX(), unit->getY(), bestPlot->getX(), bestPlot->getY())) {
@@ -135,6 +153,7 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 		unit->getGroup()->pushMission(MISSION_BUILD, overallBestBuild, -1, 0, (unit->getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, bestPlot);
 		return true;
 	}
+	AI_PERF_COUNT(WORKER_MISSION_FAILURES,1);
 	return false;
 }
 
@@ -170,10 +189,11 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 
 BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
 {
+	AI_PERF_SCOPE(WORKER_BUILD_EVAL);
 	PROFILE_EXTRA_FUNC();
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
-	const ImprovementTypes currentImprovementOnPlot = plot->getImprovementType();
+	const ImprovementTypes currentImprovementOnPlot = plot->getImprovementInLayer(improvementType);
 	CvImprovementInfo* potentialImprovement = &GC.getImprovementInfo(improvementType);
 	const bool checkUnitBuild = unit != NULL;
 

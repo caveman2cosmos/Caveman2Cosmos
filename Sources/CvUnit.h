@@ -47,7 +47,8 @@ struct PromotionRequirements
 		ForOffset = 1 << 5,
 		ForFree = 1 << 6,
 		ForBuildUp = 1 << 7,
-		ForStatus = 1 << 8
+		ForStatus = 1 << 8,
+		Battlefield = 1 << 9
 	};
 };
 DECLARE_FLAGS(PromotionRequirements::flags);
@@ -436,6 +437,8 @@ public:
 };
 // SAVEBREAK@
 
+namespace CombatProfileCache { class Unit; }
+
 class CvUnit : public CvDLLEntity
 {
 public:
@@ -567,6 +570,7 @@ public:
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;
 
 	bool canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
+	bool canUseRailwayTo(const CvPlot* pPlot) const;
 
 	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
@@ -1060,6 +1064,8 @@ public:
 	int unitAttackModifier(UnitTypes eUnit) const;
 	int unitDefenseModifier(UnitTypes eUnit) const;
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;
+	int combatModifierAgainstClasses(const CvUnit& opponent) const;
+	int combatModifierAgainstClassesUncached(const CvUnit& opponent) const;
 	int domainModifier(DomainTypes eDomain) const;
 
 	int cargoSpace() const;
@@ -1077,7 +1083,7 @@ public:
 	int getGroupID() const;
 	bool isInGroup() const;
 	bool isGroupHead() const;
-	bool canJoinGroup(const CvPlot* pPlot, const CvSelectionGroup* pSelectionGroup) const;
+	bool canJoinGroup(const CvPlot* pPlot, const CvSelectionGroup* pSelectionGroup, bool bMergeWholeGroup = false) const;
 	void joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected = false, bool bRejoin = true);
 
 	void setHotKeyNumber(int iNewValue);
@@ -1578,15 +1584,18 @@ public:
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
-	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false) const;
+	bool canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas = false, bool bEquip = false, bool bAfflict = false, bool bForLeader = false, bool bForOffset = false, bool bForFree = false, bool bForBuildUp = false, bool bForStatus = false, bool bBattlefield = false) const;
 	//TB Combat Mods end
 	bool canAcquirePromotionAny() const;
+	bool awardBattlefieldPromotion(PromotionTypes ePromotion);
 	bool isPromotionValid(PromotionTypes ePromotion, bool bFree = false, bool bKeepCheck = false) const;
 	bool isHealsUnitCombat(UnitCombatTypes eIndex) const;
 	bool isHasUnitCombat(UnitCombatTypes eIndex) const;
 	void processUnitCombat(UnitCombatTypes eIndex, bool bAdding, bool bByPromo = false);
 	void setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPromo = false);
 	bool isHasPromotion(PromotionTypes eIndex) const;
+	PromotionTypes getNextOwnedPromotion(PromotionTypes eAfter) const;
+	PromotionTypes getPreviousOwnedPromotion(PromotionTypes eBefore) const;
 
 	void setHasPromotion(PromotionTypes eIndex, bool bNewValue, PromotionApply::flags flags);
 	// Deprecated, use the one above that takes enum flags instead for increased readability.
@@ -2079,6 +2088,11 @@ protected:
 	mutable std::map<TerrainTypes, TerrainKeyedInfo>		m_terrainKeyedInfo;
 	mutable std::map<FeatureTypes, FeatureKeyedInfo>		m_featureKeyedInfo;
 	mutable std::map<UnitCombatTypes, UnitCombatKeyedInfo>	m_unitCombatKeyedInfo;
+	mutable CombatProfileCache::Unit* m_combatProfileCache;
+	bool m_combatProfileSuspended;
+	CombatProfileCache::Unit& combatProfileCache(bool classesNeeded = false) const;
+	void invalidateCombatProfile(bool membership = false) const;
+	std::pair<int,int> intrinsicCombatProfile(unsigned signature, const std::vector<int>& classes) const;
 
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
@@ -2603,6 +2617,7 @@ public:
 	void setCargoVolume(int iNewValue);
 	int SMCargoVolume() const;
 	void setSMCargoVolume();
+	void invalidateMissionTargetVolume() const;
 
 
 	void changeCargoVolume(int iChange);

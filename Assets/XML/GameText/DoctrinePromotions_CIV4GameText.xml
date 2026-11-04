@@ -1,0 +1,775 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Civ4GameText>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_FLAMING</Tag>
+		<English>Doctrine - Rite of Passage</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_FLAMING</Tag>
+		<English>Doctrine - Rite of Passage</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_FLAMING_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Wilderness Training and the Rite of Passage I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_0</Tag>
+		<English>Wilderness Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_0_HELP</Tag>
+		<English>+5% attack and defence in forests and jungles. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Rite of Passage. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Rite of Passage I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_1</Tag>
+		<English>Ways of the Land I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_2</Tag>
+		<English>Ways of the Land II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks. Raises the barbarian combat experience cap by 25; unlimited experience stays unlimited.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_3</Tag>
+		<English>Ways of the Land III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_FLAMING_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_IMPERIAL</Tag>
+		<English>Doctrine - Imperial Glory</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_IMPERIAL</Tag>
+		<English>Doctrine - Imperial Glory</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_IMPERIAL_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Imperial Drill and the Imperial Glory I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_0</Tag>
+		<English>Imperial Drill</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_0_HELP</Tag>
+		<English>+5% strength against land units. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Imperial Glory. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Imperial Glory I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_1</Tag>
+		<English>Glorious I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_2</Tag>
+		<English>Glorious II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_3</Tag>
+		<English>Glorious III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_IMPERIAL_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_ATTRITION</Tag>
+		<English>Doctrine - War of Attrition</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ATTRITION</Tag>
+		<English>Doctrine - War of Attrition</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ATTRITION_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Harassment Tactics and the War of Attrition I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_0</Tag>
+		<English>Harassment Tactics</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_0_HELP</Tag>
+		<English>+5 percentage points withdrawal chance. Free permanent doctrine training in an owned city after a Great General founds Doctrine - War of Attrition. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks War of Attrition I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_1</Tag>
+		<English>Raider I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_2</Tag>
+		<English>Raider II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_3</Tag>
+		<English>Raider III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ATTRITION_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_COASTAL</Tag>
+		<English>Doctrine - Coastal Raiding</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_COASTAL</Tag>
+		<English>Doctrine - Coastal Raiding</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_COASTAL_HELP</Tag>
+		<English>Founded by consuming a Great Admiral. Unlocks Coastal Training and the Coastal Raiding I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_0</Tag>
+		<English>Coastal Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_0_HELP</Tag>
+		<English>+5% attack in coastal waters. Free permanent doctrine training in an owned city after a Great Admiral founds Doctrine - Coastal Raiding. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Coastal Raiding I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_1</Tag>
+		<English>Pirate I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_2</Tag>
+		<English>Pirate II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_3</Tag>
+		<English>Pirate III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_COASTAL_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks. Immune to positive reef feature damage.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_HOLYWAR</Tag>
+		<English>Doctrine - Holy War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_HOLYWAR</Tag>
+		<English>Doctrine - Holy War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_HOLYWAR_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Religious Zeal and the Holy War I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_0</Tag>
+		<English>Religious Zeal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_0_HELP</Tag>
+		<English>+5% city attack. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Holy War. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Holy War I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_1</Tag>
+		<English>Fervor I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_2</Tag>
+		<English>Fervor II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_3</Tag>
+		<English>Fervor III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_HOLYWAR_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_CHIVALRY</Tag>
+		<English>Doctrine - Chivalry</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_CHIVALRY</Tag>
+		<English>Doctrine - Chivalry</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_CHIVALRY_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Code of Chivalry and the Chivalry I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_0</Tag>
+		<English>Code of Chivalry</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_0_HELP</Tag>
+		<English>+3 HP per turn while healing in enemy territory. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Chivalry. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Chivalry I-III; the three ranks use normal promotions. Requires medium or heavy armour; mounted archers cannot train here.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_1</Tag>
+		<English>Chivalry I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_2</Tag>
+		<English>Chivalry II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_3</Tag>
+		<English>Chivalry III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_CHIVALRY_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_GREEKFIRE</Tag>
+		<English>Doctrine - Fireships</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_GREEKFIRE</Tag>
+		<English>Doctrine - Fireships</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_GREEKFIRE_HELP</Tag>
+		<English>Founded by consuming a Great Admiral. Unlocks Fire Warfare Training and the Fireships I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_0</Tag>
+		<English>Fire Warfare Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_0_HELP</Tag>
+		<English>+5% strength against wooden ships. Free permanent doctrine training in an owned city after a Great Admiral founds Doctrine - Fireships. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Fireships I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_1</Tag>
+		<English>Fire I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_2</Tag>
+		<English>Fire II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_3</Tag>
+		<English>Fire III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GREEKFIRE_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_MARKSMAN</Tag>
+		<English>Doctrine - Trained Archers</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_MARKSMAN</Tag>
+		<English>Doctrine - Trained Archers</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_MARKSMAN_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Archery School and the Trained Archers I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_0</Tag>
+		<English>Archery School</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_0_HELP</Tag>
+		<English>+5% strength against mounted units. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Trained Archers. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Trained Archers I-III; the three ranks use normal promotions. Mounted recipients must use a shortbow or longbow.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_1</Tag>
+		<English>Marksmanship I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_2</Tag>
+		<English>Marksmanship II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_3</Tag>
+		<English>Marksmanship III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MARKSMAN_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_MANOUEVER</Tag>
+		<English>Doctrine - Manoeuvre Warfare</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_MANOUEVER</Tag>
+		<English>Doctrine - Manoeuvre Warfare</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_MANOUEVER_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Manoeuvre Training and the Manoeuvre Warfare I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_0</Tag>
+		<English>Manoeuvre Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_0_HELP</Tag>
+		<English>+5% strength against siege units. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Manoeuvre Warfare. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Manoeuvre Warfare I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_1</Tag>
+		<English>Manoeuvre I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_2</Tag>
+		<English>Manoeuvre II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_3</Tag>
+		<English>Manoeuvre III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_MANOUEVER_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_PATRIOTIC</Tag>
+		<English>Doctrine - Patriotic War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_PATRIOTIC</Tag>
+		<English>Doctrine - Patriotic War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_PATRIOTIC_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Defenders of the Homeland and the Patriotic War I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_0</Tag>
+		<English>Defenders of the Homeland</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_0_HELP</Tag>
+		<English>+5% city defence. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Patriotic War. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Patriotic War I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_1</Tag>
+		<English>Motherland I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_2</Tag>
+		<English>Motherland II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_3</Tag>
+		<English>Motherland III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PATRIOTIC_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_SEAMANSHIP</Tag>
+		<English>Doctrine - Superior Seamanship</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_SEAMANSHIP</Tag>
+		<English>Doctrine - Superior Seamanship</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_SEAMANSHIP_HELP</Tag>
+		<English>Founded by consuming a Great Admiral. Unlocks Seamanship School and the Superior Seamanship I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_0</Tag>
+		<English>Seamanship School</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_0_HELP</Tag>
+		<English>+5% attack and defence in ocean and sea waters. Free permanent doctrine training in an owned city after a Great Admiral founds Doctrine - Superior Seamanship. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Superior Seamanship I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_1</Tag>
+		<English>Seamanship I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_2</Tag>
+		<English>Seamanship II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks. Immune to positive reef feature damage.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_3</Tag>
+		<English>Seamanship III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_SEAMANSHIP_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_ENGINEERCORPS</Tag>
+		<English>Doctrine - Engineer Corps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ENGINEERCORPS</Tag>
+		<English>Doctrine - Engineer Corps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ENGINEERCORPS_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Sapper Training and the Engineer Corps I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_0</Tag>
+		<English>Sapper Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_0_HELP</Tag>
+		<English>+10% experience gained. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Engineer Corps. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Engineer Corps I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_1</Tag>
+		<English>Siege Engineering I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_2</Tag>
+		<English>Siege Engineering II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_3</Tag>
+		<English>Siege Engineering III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ENGINEERCORPS_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_TRENCH</Tag>
+		<English>Doctrine - Trench War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_TRENCH</Tag>
+		<English>Doctrine - Trench War</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_TRENCH_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Field Entrenchment Training and the Trench War I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_0</Tag>
+		<English>Field Entrenchment Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_0_HELP</Tag>
+		<English>+5% protection against collateral damage. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Trench War. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Trench War I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_1</Tag>
+		<English>Entrenchment I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_2</Tag>
+		<English>Entrenchment II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_3</Tag>
+		<English>Entrenchment III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_TRENCH_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_BLITZKRIEG</Tag>
+		<English>Doctrine - Blitzkrieg</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_BLITZKRIEG</Tag>
+		<English>Doctrine - Blitzkrieg</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_BLITZKRIEG_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Armoured Warfare School and the Blitzkrieg I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_0</Tag>
+		<English>Armoured Warfare School</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_0_HELP</Tag>
+		<English>+5% strength against gunpowder units. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Blitzkrieg. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Blitzkrieg I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_1</Tag>
+		<English>Blitzkrieg I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_2</Tag>
+		<English>Blitzkrieg II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_3</Tag>
+		<English>Blitzkrieg III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_BLITZKRIEG_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_PROJECTION</Tag>
+		<English>Doctrine - Power Projection</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_PROJECTION</Tag>
+		<English>Doctrine - Power Projection</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_PROJECTION_HELP</Tag>
+		<English>Founded by consuming a Great Admiral. Unlocks Expeditionary Training and the Power Projection I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_0</Tag>
+		<English>Expeditionary Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_0_HELP</Tag>
+		<English>+2 HP per turn while healing in neutral and enemy territory. Free permanent doctrine training in an owned city after a Great Admiral founds Doctrine - Power Projection. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Power Projection I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_1</Tag>
+		<English>Global Operations I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_2</Tag>
+		<English>Global Operations II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_3</Tag>
+		<English>Global Operations III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_PROJECTION_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_GUERILLAWAR</Tag>
+		<English>Doctrine - Guerilla Tactics</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_GUERILLAWAR</Tag>
+		<English>Doctrine - Guerilla Tactics</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_GUERILLAWAR_HELP</Tag>
+		<English>Founded by consuming a Great General. Unlocks Irregular Warfare Training and the Guerilla Tactics I-III promotion line throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free once the unit reaches its next XP promotion threshold. If several schools are available, use a doctrine training action to choose. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_0</Tag>
+		<English>Irregular Warfare Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_0_HELP</Tag>
+		<English>+5% strength against tracked, wheeled and helicopter units. Free permanent doctrine training in an owned city after a Great General founds Doctrine - Guerilla Tactics. Requires enough XP for the next normal promotion; a retrain alone does not qualify. No XP or promotion level is spent. Each soldier may follow only one doctrine. Unlocks Guerilla Tactics I-III; the three ranks use normal promotions.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_1</Tag>
+		<English>Partisan I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_2</Tag>
+		<English>Partisan II</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_3</Tag>
+		<English>Partisan III</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_GUERILLAWAR_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_COMBAT_MILITARY_DOCTRINES</Tag>
+		<English>Combat - Military Doctrines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_COMBAT_MILITARY_DOCTRINES_HELP</Tag>
+		<English>Great Generals found twelve national land doctrine schools; Great Admirals found four naval schools. Units train one free foundation and earn ranks I-III with normal experience. Disable to suspend school training, paid ranks and all doctrine bonuses while retaining learned ranks. Disabled by default. Older saves without the option offer a choice to enable it for the current game. The BUG checkbox changes this same saved rule in single-player games.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MILITARYDOCTRINES__ENABLED_TEXT</Tag>
+		<English>Combat - Military Doctrines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MILITARYDOCTRINES__ENABLED_HOVER</Tag>
+		<English>Changes the saved Combat - Military Doctrines game option. Switching OFF suspends bonuses and training but retains schools and learned ranks; switching ON restores their effects. Available during single-player games. Choose the game option during setup for multiplayer.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MILITARY_DOCTRINES_MIGRATION</Tag>
+		<English>Enable Military Doctrines?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MILITARY_DOCTRINES_MIGRATION_BODY</Tag>
+		<English>This save predates the Military Doctrines game option. Would you like to enable it for this game? Great Generals can found twelve national land doctrine schools and Great Admirals four naval schools. Units train one free foundation and earn ranks I-III with normal experience. Yes enables the option; No keeps it disabled. Your choice is kept when you save. You can change it later in BUG under Caveman2Cosmos - Game Settings.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DOCTRINE_ARTILLERY</Tag>
+		<English>Doctrine - Artillery Schools</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ARTILLERY</Tag>
+		<English>Doctrine - Artillery Schools</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOCTRINE_ARTILLERY_HELP</Tag>
+		<English>Founded by consuming a Great General after discovering Artillery. Unlocks Artillery Training and Artillery Schools I-III for gunpowder siege units throughout your civilization. One school per civilization; one doctrine per soldier. Training in an owned city is free but requires enough experience for the next normal promotion. Ranks I-III cost normal promotions and their bonuses stack.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_0</Tag>
+		<English>Artillery Training</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_0_HELP</Tag>
+		<English>+5% protection against collateral damage. Free permanent doctrine training for gunpowder siege units in an owned city after a Great General founds Doctrine - Artillery Schools. Requires enough experience for the next normal promotion, but spends no experience or promotion level. Each soldier may follow only one doctrine. Unlocks Artillery Schools I-III.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_1</Tag>
+		<English>Artillery Schools I - Mobile Artillery</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_1_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank and the gunpowder siege category. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_2</Tag>
+		<English>Artillery Schools II - Entrenched Batteries</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_2_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank and the gunpowder siege category. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_3</Tag>
+		<English>Artillery Schools III - Suppression Fire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_DOCTRINE_ARTILLERY_3_HELP</Tag>
+		<English>Requires this unit's preceding doctrine rank and the gunpowder siege category. Chosen with normal experience; bonuses add to all preceding ranks.</English>
+	</TEXT>
+</Civ4GameText>

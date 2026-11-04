@@ -1,6 +1,9 @@
 // cityAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "BuildingEnablementCandidates.h"
+#include "DefenseNeedEvents.h"
+#include "AIPerf.h"
 #include "StackPromotions.h"
 
 #include "FProfiler.h"
@@ -20,11 +23,16 @@
 #include "CvMap.h"
 #include "CvPlayerAI.h"
 #include "CvPlot.h"
+#include "CvPlotGroup.h"
+#include "RailRoadRevolution.h"
+#include "WorkerRoutePerf.h"
+#include "WorkerRouteQueryMemo.h"
 #include "CvPython.h"
 #include "CvReachablePlotSet.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "KnownGarrisonHead.h"
 #include "CvUnitSelectionCriteria.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
@@ -173,6 +181,7 @@ void CvCityAI::AI_reset()
 	m_iNeededFloatingDefenders = -1;
 	m_iNeededFloatingDefendersCacheTurn = -1;
 	m_neededDefenders = -1;
+    DefenseNeedEvents::changed();
 
 	m_iWorkersNeeded = 0;
 
@@ -221,6 +230,7 @@ void CvCityAI::AI_preUnitTurn()
 	PROFILE_FUNC();
 
 	m_neededDefenders = -1;
+    DefenseNeedEvents::changed();
 
 	m_iCityThreat = -1;
 
@@ -345,6 +355,8 @@ void CvCityAI::AI_doContractFloatingDefenders()
 
 void CvCityAI::AI_assignWorkingPlots()
 {
+	AI_PERF_CONTEXT(getOwner(),-1);
+	AI_PERF_SCOPE(CITY_CITIZENS);
 	PROFILE_FUNC();
 
 	if (0 != GC.getAI_SHOULDNT_MANAGE_PLOT_ASSIGNMENT())
@@ -776,6 +788,8 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 
 void CvCityAI::AI_chooseProduction()
 {
+	AI_PERF_CONTEXT(getOwner(),-1);
+	AI_PERF_SCOPE(CITY_PRODUCTION);
 	PROFILE_FUNC();
 	//#0 START OF AI_CHOOSEPRODUCTION
 	m_iRequestedBuilding = 0;
@@ -4257,7 +4271,11 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			continue;
 		}
 		int iValue = player.AI_unitValue(eUnitX, eUnitAI, area(), &tempCriteria);
-		iValue = iValue * (100 + StackPromotions::productionPreference(*this, eUnitX)) / 100;
+		if (StackPromotions::enabled())
+		{
+			const int stackPreference = StackPromotions::productionPreference(*this, eUnitX);
+			if (stackPreference != 0) iValue = iValue * (100 + stackPreference) / 100;
+		}
 		int iBaseValue = iValue;
 
 		if (iValue > 0)
@@ -4418,16 +4436,7 @@ const std::vector<CvCity::ScoredBuilding> CvCityAI::AI_bestBuildingsThreshold(in
 
 	std::vector<BuildingTypes> possibles;
 
-	for (int idx = 0; idx < GC.getNumBuildingInfos(); ++idx)
-	{
-		if (!GET_PLAYER(getOwner()).isBuildingMaxedOut((BuildingTypes)idx, GC.getBuildingInfo((BuildingTypes)idx).getExtraPlayerInstances()))
-		{
-			if (canConstruct((BuildingTypes)idx))
-			{
-				possibles.push_back((BuildingTypes)idx);
-			}
-		}
-	}
+	AI_collectBuildingCandidates(possibles, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue, eProperty);
 
 	AI_scoreBuildingsFromListThreshold(scoredBuildings, possibles, iFocusFlags, iMaxTurns, iMinThreshold, bAsync, eIgnoreAdvisor, bMaximizeFlaggedValue, eProperty);
 	return scoredBuildings;
@@ -4571,9 +4580,13 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					queries.push_back(query);
 				}
 
-				// TODO OPT: convert the masks to vectors so this look is faster
-				for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-				{
+                const std::vector<BuildingTypes> enabled=buildingEnablementCandidates(
+                    buildingInfo.getEnabledBuildingsList(),GC.getAIConditionalBuildings());
+                AI_PERF_COUNT(BUILD_ENABLEMENT_FULL_VISITS,GC.getNumBuildingInfos());
+                AI_PERF_COUNT(BUILD_ENABLEMENT_INDEX_VISITS,enabled.size());
+                for(size_t index=0;index<enabled.size();++index)
+                {
+                    const int iI=enabled[index];
 					if (hasBuilding((BuildingTypes)iI)) continue;
 
 					// check if this building enables the construct condition of another building
@@ -4827,9 +4840,13 @@ public:
 			//	No cached value
 			return -1;
 		}
+		return GetEntryValue(itr->second, iFocusFlags, threshold, bMaximizeFlaggedValue);
+	}
+
+	static int GetEntryValue(const OneBuildingValueCache* valueCache, int iFocusFlags, int threshold, bool bMaximizeFlaggedValue)
+	{
 		int iValueThreshold = 0;
 		int iValueNoThreshold = 0;
-		OneBuildingValueCache* valueCache = itr->second;
 
 		for (int i = 0; i < NUM_REAL_BUILDINGFOCUS_FLAGS; i++)
 		{
@@ -4884,6 +4901,17 @@ public:
 		return std::max(0, iPass1Value + iPass2Value);
 	}
 
+	void appendPositiveBuildings(std::vector<BuildingTypes>& candidates, int flags, int threshold, bool maximize)
+	{
+		for (std::map<int, OneBuildingValueCache*>::const_iterator it = m_buildingValues.begin(); it != m_buildingValues.end(); ++it)
+		{
+			if (GetEntryValue(it->second, flags, threshold, maximize) > 0)
+			{
+				candidates.push_back((BuildingTypes)it->first);
+			}
+		}
+	}
+
 	OneBuildingValueCache* GetOneBuildingCache(int eBuilding)
 	{
 		OneBuildingValueCache* result;
@@ -4908,8 +4936,80 @@ public:
 
 
 
+// Normal canConstruct still decides resource, civic, religion and city limits.
+// Do not persist a second per-city constructibility or category-value cache.
+static bool AI_hasConstructionTech(const CvBuildingInfo& info, const CvTeam& team)
+{
+	const TechTypes prerequisite = (TechTypes)info.getPrereqAndTech();
+	if (prerequisite != NO_TECH && !team.isHasTech(prerequisite)) return false;
+	foreach_(const TechTypes tech, info.getPrereqAndTechs())
+	{
+		if (tech != NO_TECH && !team.isHasTech(tech)) return false;
+	}
+	return true;
+}
+
+void CvCityAI::AI_collectBuildingCandidates(std::vector<BuildingTypes>& candidates, int flags, int threshold, bool maximize, PropertyTypes property)
+{
+	const std::vector<BuildingTypes>* primary = &GC.getAIConstructionBuildings();
+	const std::vector<BuildingTypes> empty;
+	const std::vector<BuildingTypes>* indirect = &empty;
+	std::vector<BuildingTypes> focused;
+	BuildingValueCache* snapshot = NULL;
+	if (flags & BUILDINGFOCUS_CAPITAL)
+	{
+		primary = &GC.getAICapitalBuildings();
+	}
+	else if (flags & BUILDINGFOCUS_PROPERTY)
+	{
+		primary = &GC.getAIPropertyBuildings(property);
+		indirect = &GC.getAIIndirectBuildings();
+	}
+	else if (flags != 0 && !(flags & BUILDINGFOCUS_CONSIDER_ANY)
+		&& cachedBuildingValues != NULL && !cachedBuildingValues->m_bIncomplete
+		&& (cachedBuildingValues->m_iCachedFlags & flags) == flags)
+	{
+		// Reuse the exact focus/threshold values used by the scorer. General searches
+		// must retain zero-base-value gates and resource producers valued by the mod.
+		snapshot = cachedBuildingValues;
+		snapshot->appendPositiveBuildings(focused, flags, threshold, maximize);
+		primary = &focused;
+		// A zero direct score can still unlock valuable descendants or free buildings.
+		indirect = &GC.getAIIndirectBuildings();
+	}
+	const CvPlayerAI& player = GET_PLAYER(getOwner());
+	const CvTeamAI& team = GET_TEAM(getTeam());
+	for (;;)
+	{
+		size_t i = 0, j = 0;
+		while (i < primary->size() || j < indirect->size())
+		{
+			BuildingTypes building;
+			if (j == indirect->size() || (i < primary->size() && (*primary)[i] < (*indirect)[j])) building = (*primary)[i++];
+			else if (i == primary->size() || (*indirect)[j] < (*primary)[i]) building = (*indirect)[j++];
+			else { building = (*primary)[i++]; ++j; }
+			const CvBuildingInfo& info = GC.getBuildingInfo(building);
+			if (AI_hasConstructionTech(info, team)
+				&& !player.isBuildingMaxedOut(building, info.getExtraPlayerInstances()) && canConstruct(building))
+			{
+				candidates.push_back(building);
+			}
+		}
+		// A lazy dependency update in canConstruct may flush the existing value cache.
+		// If that happened, discard the shortlist and let the scorer rebuild normally.
+		if (snapshot == NULL || (snapshot == cachedBuildingValues && !snapshot->m_bIncomplete
+			&& (snapshot->m_iCachedFlags & flags) == flags)) break;
+		candidates.clear();
+		snapshot = NULL;
+		primary = &GC.getAIConstructionBuildings();
+		indirect = &empty;
+	}
+}
+
+
 int CvCityAI::AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags, bool bForTech, bool bDebug)
 {
+	AI_PERF_SCOPE(CITY_BUILD_VALUE);
 	if (bDebug)
 	{
 		return AI_buildingValueThresholdOriginalUncached(eBuilding, 0, -123, false, true);
@@ -6928,7 +7028,30 @@ bool CvCityAI::AI_isAdequateHappinessMilitary(int iExtra) const
 {
 	PROFILE_FUNC();
 
-	return ((plot()->plotCount(PUF_isMilitaryHappiness, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) + iExtra) >= AI_neededHappinessDefenders()); // XXX check for other team's units?
+	const int happyPerMilitary = GET_PLAYER(getOwner()).getHappyPerMilitaryUnit();
+	// The default query cannot fail when military units provide no happiness.
+	// Negative offsets still enforce the existing departure/guard rule.
+	if (happyPerMilitary <= 0 && iExtra == 0) return true;
+
+	// Both old counts inspect the same city stack. Count military units and
+	// their city-AI subset together; keep the original happiness arithmetic.
+	int military = 0, cityMilitary = 0;
+	foreach_(const CvUnit* unit, plot()->units())
+	{
+		if (!unit->isDead() && unit->getOwner() == getOwner()
+			&& PUF_isMilitaryHappiness(unit, -1, -1, NULL))
+		{
+			++military;
+			if (PUF_isCityAIType(unit, -1, -1, NULL)) ++cityMilitary;
+		}
+	}
+	int needed = 0;
+	if (happyPerMilitary > 0)
+	{
+		const int baseHappiness = happyLevel() - unhappyLevel(0) - happyPerMilitary * military;
+		if (baseHappiness < 0) needed = -baseHappiness / happyPerMilitary;
+	}
+	return cityMilitary + iExtra >= needed;
 }
 
 /********************************************************************************/
@@ -7173,7 +7296,28 @@ int CvCityAI::getGarrisonStrength(bool bAllowAnyDefenders) const
 
 	//	Note - the range check is slightly flawed since its possible for units 2 away to not actually
 	//	be able to get to the city (e.g. - over water) so this probably needs tweaking slightly
-	return plot()->plotStrength(UNITVALUE_FLAGS_DEFENSIVE, PUF_canDefend, -1, -1, getOwner(), NO_TEAM, PUF_isCityGarrison, getID(), (int)bAllowAnyDefenders, 2);
+	// Keep the exact plot/unit summation order and rounding, but avoid 25
+	// recursive strength calls and resolving this same city for every unit.
+	const CvCity* garrisonCity = GET_PLAYER(getOwner()).getCity(getID());
+	if (garrisonCity == NULL) return 0;
+	int strengthTimes100 = 0;
+	foreach_(const CvPlot* tile, plot()->rect(2, 2))
+	{
+		foreach_(const CvUnit* unit, tile->units())
+		{
+			if (unit->getOwner() == getOwner() && PUF_canDefend(unit, -1, -1, NULL)
+				&& knownUnitGroupIsCityGarrison(unit, garrisonCity))
+			{
+				if (!bAllowAnyDefenders)
+				{
+					const UnitAITypes unitAI = unit->AI_getUnitAIType();
+					if (unit->noDefensiveBonus() || unitAI == UNITAI_ATTACK_CITY || unitAI == UNITAI_ATTACK) continue;
+				}
+				strengthTimes100 += unit->AI_genericUnitValueTimes100(UNITVALUE_FLAGS_DEFENSIVE);
+			}
+		}
+	}
+	return strengthTimes100 / 100;
 }
 
 int CvCityAI::AI_neededDefenseStrength()
@@ -7369,6 +7513,7 @@ bool CvCityAI::AI_isAssignWorkDirty() const
 
 void CvCityAI::AI_setAssignWorkDirty(bool bNewValue)
 {
+    if(bNewValue)DefenseNeedEvents::changed();
 	m_bAssignWorkDirty = bNewValue;
 }
 
@@ -7399,6 +7544,10 @@ CvCity* CvCityAI::AI_getRouteToCity() const
 
 void CvCityAI::AI_updateRouteToCity() const
 {
+    // Direct city callers own a short memo; a worker selecting across cities
+    // shares its enclosing read-only query scope. No result crosses orders.
+    WorkerRouteQueryMemo::Scope workerRouteQueries(getOwner(), GC.getMap().getType(), GC.getMap().numPlots());
+    WORKER_ROUTE_TIMER(workerRouteSelector, SELECTOR);
 	PROFILE_FUNC();
 
 	static PlayerTypes eCachedPlayer = NO_PLAYER;
@@ -7422,7 +7571,11 @@ void CvCityAI::AI_updateRouteToCity() const
 	{
 		gDLL->getFAStarIFace()->ForceReset(&GC.getRouteFinder());
 
-		int iBestValue = MAX_INT;
+		// Connectivity is only needed until the nearest missing connection is
+		// found. Sort cheap distances first, retaining the original iteration
+		// index for ties; no persistent reachability assumption is introduced.
+		std::vector<const CvCity*> candidates;
+		std::vector<std::pair<int, int> > nearest;
 
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -7434,19 +7587,22 @@ void CvCityAI::AI_updateRouteToCity() const
 					{
 						if (pLoopCity->area() == area())
 						{
-							if (!gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), pLoopCity->getX(), pLoopCity->getY(), false, getOwner(), true))
-							{
-								const int iValue = plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY());
-
-								if (iValue < iBestValue)
-								{
-									iBestValue = iValue;
-									pBestCity = pLoopCity;
-								}
-							}
+							nearest.push_back(std::make_pair(plotDistance(getX(), getY(), pLoopCity->getX(), pLoopCity->getY()), (int)candidates.size()));
+							candidates.push_back(pLoopCity);
 						}
 					}
 				}
+			}
+		}
+
+		std::sort(nearest.begin(), nearest.end());
+		for (size_t i = 0; i < nearest.size(); ++i)
+		{
+			const CvCity* candidate = candidates[nearest[i].second];
+			if (!gDLL->getFAStarIFace()->GeneratePath(&GC.getRouteFinder(), getX(), getY(), candidate->getX(), candidate->getY(), false, getOwner(), true))
+			{
+				pBestCity = candidate;
+				break;
 			}
 		}
 
@@ -8223,11 +8379,11 @@ int CvCityAI::AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImpr
 	}
 	else if (!GET_TEAM(getTeam()).isBonusObsolete(eBonus))
 	{
-		if (improvement.isImprovementBonusTrade(eBonus))
+		if (pPlot->isImprovementBonusTradeWith(eImprovement, eBonus))
 		{
 			iValue *= 50;
 		}
-		else if (pPlot->getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(pPlot->getImprovementType()).isImprovementBonusTrade(eBonus))
+		else if (pPlot->isImprovementBonusTrade(eBonus))
 		{
 			return 0; //Always prefer improvements which connect bonuses.
 		}
@@ -10565,10 +10721,9 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 	FAssertMsg(pPlot->getOwner() == getOwner(), "pPlot must be owned by this city's owner");
 
-	BonusTypes eNonObsoleteBonus = NO_BONUS;
-	bool bonusIsImproved = false;
-	bool plotIsWorked = false;
-	pPlot->getVisibleBonusState(eNonObsoleteBonus, bonusIsImproved, plotIsWorked);
+	const BonusTypes eNonObsoleteBonus = pPlot->getNonObsoleteBonusType(getTeam());
+	const bool bonusIsImproved = eNonObsoleteBonus != NO_BONUS && pPlot->isImprovementBonusTrade(eNonObsoleteBonus);
+	const bool plotIsWorked = pPlot->isBeingWorked();
 
 	if (bonusIsImproved)
 	{
@@ -10577,7 +10732,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 	}
 
 	const bool plotHasBonus = eNonObsoleteBonus != NO_BONUS;
-	const int currentPlotValue = plotInfo->currentImprovement != NO_IMPROVEMENT ? CvValueService::CalculateCityPlotValue(ratios, plotInfo->yields, plotHasBonus, bonusIsImproved) : 0;
+	const int currentPlotValue = pPlot->hasAnyImprovement() ? CvValueService::CalculateCityPlotValue(ratios, plotInfo->yields, plotHasBonus, bonusIsImproved) : 0;
 
 	//If a worker is already building a build, force that Build.
 	BuildTypes eForcedBuild = algo::find_if(
@@ -10646,13 +10801,26 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 
 		for (int yieldCounter = 0; yieldCounter < NUM_YIELD_TYPES; yieldCounter++)
 		{
-			plotInfo->newYields[yieldCounter] = 0;
-			plotInfo->newYields[yieldCounter] = pPlot->calculateNatureYield((YieldTypes)yieldCounter, getTeam(), bIgnoreFeature);
-			plotInfo->newYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, (YieldTypes)yieldCounter, getOwner(), false, true);
+			const YieldTypes yield = (YieldTypes)yieldCounter;
+			if (CvAdditionalImprovements::enabled())
+			{
+				// Preserve city/terrain yield modifiers when comparing a layer replacement.
+				// This is the complete result; do not first evaluate a discarded candidate.
+				plotInfo->newYields[yieldCounter] = std::max(0, pPlot->getYield(yield)
+					+ pPlot->getYieldWithBuild(eBestBuild, yield, false)
+					- pPlot->calculateYieldWithImprovement(pPlot->getImprovementType(), yield, getOwner(), false));
+			}
+			else
+			{
+				// With layers disabled, only nature and the primary candidate contribute.
+				plotInfo->newYields[yieldCounter] = pPlot->calculateNatureYield(yield, getTeam(), bIgnoreFeature);
+				if (ePotentialImprovement != NO_IMPROVEMENT)
+					plotInfo->newYields[yieldCounter] += pPlot->calculateImprovementYieldChange(ePotentialImprovement, yield, getOwner(), false, true);
+			}
 		}
 
 		// subtract existing plot value
-		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && potentialImprovementInfo.isImprovementBonusTrade(eNonObsoleteBonus)) - currentPlotValue);
+		int plotValue = std::max(0, CvValueService::CalculateCityPlotValue(ratios, plotInfo->newYields, plotHasBonus, plotHasBonus && pPlot->isImprovementBonusTradeWith(ePotentialImprovement, eNonObsoleteBonus)) - currentPlotValue);
 
 		if (plotValue >= plotInfo->newValue)
 		{
@@ -10662,7 +10830,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		}
 
 	}
-	if (plotInfo->newImprovement == plotInfo->currentImprovement) {
+	if (plotInfo->newImprovement != NO_IMPROVEMENT && pPlot->hasImprovement(plotInfo->newImprovement)) {
 		plotInfo->newValue = 0;
 		plotInfo->newBuild = NO_BUILD;
 		plotInfo->newImprovement = NO_IMPROVEMENT;
@@ -11627,7 +11795,11 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 		}
 	}
 
-	iValue += 2 * GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3, false);
+	// Strategic staging pressure must not become negative merely because an
+	// army is stationed here. Otherwise its own defenders erase this city's
+	// value, so it marches away and is drawn back after the next cache reset.
+	// Keep the signed danger contract elsewhere; only this threat term saturates.
+	iValue += 2 * std::max(0, GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3, false));
 
 	if (getRevolutionIndex() > 750)
 	{
@@ -11638,11 +11810,16 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 		iValue += getRevolutionIndex() / 100;
 	}
 
-	m_iCityThreat = iValue;
-	m_iCityThreatModifier = iModifier;
+	// This cache is read only for NO_TEAM. A target-team query must not
+	// overwrite the all-opponents result used by the next general query.
+	if (eTargetTeam == NO_TEAM)
+	{
+		m_iCityThreat = iValue;
+		m_iCityThreatModifier = iModifier;
+	}
 	if (piThreatModifier != NULL)
 	{
-		*piThreatModifier = m_iCityThreatModifier;
+		*piThreatModifier = iModifier;
 	}
 
 	return iValue;
@@ -12771,15 +12948,15 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const int iNumBuildings = GC.getNumBuildingInfos();
 	{
 		PROFILE("CvCityAI::CalculateAllBuildingValues.PreLoop");
-		for (int iBuilding = 0; iBuilding < iNumBuildings; iBuilding++)
+		foreach_(const BuildingTypes eBuilding, GC.getAIConstructionBuildings())
 		{
-			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iBuilding);
-			if (!canConstruct(eBuilding))
+			const int iBuilding = (int)eBuilding;
+			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
+			if (!AI_hasConstructionTech(building, team) || !canConstruct(eBuilding))
 			{
 				continue;
 			}
 			buildingsToCalculate.insert(eBuilding);
-			const CvBuildingInfo& building = GC.getBuildingInfo(eBuilding);
 
 			if (building.EnablesOtherBuildings())
 			{

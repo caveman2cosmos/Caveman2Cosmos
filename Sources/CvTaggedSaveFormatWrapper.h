@@ -145,8 +145,10 @@ public:
 
 	//	How many members of a given class type were present at save time?
 	int			getNumClassEnumValues(RemappedClassType classType) const;
+	bool hasSavedClassEnumValue(RemappedClassType classType, int currentValue);
 	//	Translate explicitly from an old enum value to the current
 	int			getNewClassEnumValue(RemappedClassType classType, int oldValue, bool allowMissing = false);
+
 
 	//	Attach the wrapper to a stream
 	void		AttachToStream(FDataStreamBase* pStream);

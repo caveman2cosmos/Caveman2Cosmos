@@ -1114,6 +1114,26 @@
 		<Russian>Две цивилизации смогут заключить нерушимый союз, длящийся до конца игры.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_MAP_PRIMITIVE_MAPS</Tag>
+		<English>Map - Primitive Maps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_MAP_PRIMITIVE_MAPS_HELP</Tag>
+		<English>Primitive Maps affects human players only. Explored plots are forgotten once they leave sight until mapping technologies allow your civilization to remember them. Cartography preserves all newly explored plots, but does not restore previously forgotten plots. Map visibility is shared by teammates, so AI players on a human player's team share the same map.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_PRIMITIVE_MAPS_MIGRATION</Tag>
+		<English>Primitive Maps Available</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_PRIMITIVE_MAPS_MIGRATION_BODY</Tag>
+		<English>This save predates the Map - Primitive Maps game option. Would you like to enable it?[PARAGRAPH:1]Primitive Maps affects human players only. AI-only teams keep their explored maps. Map visibility is shared by teammates.[PARAGRAPH:1]If you choose OK, explored map tiles will be checked using your civilization's current mapping technologies. Eligible tiles under the fog of war will be forgotten at the next player turn after you end your turn. Tiles currently in sight will remain visible until sight is lost.[PARAGRAPH:1]Choose No to keep the option disabled and leave your map unchanged.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PRIMITIVE_MAPS_MIGRATION_OK</Tag>
+		<English>OK</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAP_PERSONALIZED</Tag>
 		<English>Map - Personalized</English>
 		<French>Carte - Personnalisée</French>
@@ -1738,6 +1758,46 @@
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_NOMADIC_START_HELP</Tag>
 		<English>Civs start without a Settler and cannot found a city until Sedentary Lifestyle is researched. Instead you begin with a Nomad Camp unit that can found a city once eligible.[NEWLINE][NEWLINE]This is an experimental/beta feature: the AI has not been adapted for it and may behave unpredictably. Recommended for human-only testing.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT_OVER</Tag>
+		<English>Complementary improvement: will be built on top of the existing %s1 without replacing it.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT</Tag>
+		<English>Complementary improvement: occupies the additional slot. A primary improvement can be built on this tile later.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT_REPLACES</Tag>
+		<English>Replaces the existing %s1 in the additional slot.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_COMPLEMENTARY_IMPROVEMENT</Tag>
+		<English>With Map - Multiple Improvements enabled, this is a complementary improvement. It can share a tile with a primary improvement without replacing it. Each tile has one complementary improvement slot. Upgrades replace the older complementary improvement in the same chain.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MULTIPLE_IMPROVEMENTS_TOTAL_OUTPUT</Tag>
+		<English>Total Output</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MULTIPLE_IMPROVEMENTS_DETAILS</Tag>
+		<English>Hold Shift to see details.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MULTIPLE_IMPROVEMENTS_MIGRATION</Tag>
+		<English>Multiple Improvements Detected</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_POPUP_MULTIPLE_IMPROVEMENTS_MIGRATION_BODY</Tag>
+		<English>This save predates the Map - Multiple Improvements game option. Would you like to enable it?[PARAGRAPH:1]Choose Yes to enable the option and recalculate the map. Eligible existing improvements will move to the additional layer, leaving the primary slot empty. Each tile can have one primary improvement and one additional improvement. Upgrades replace earlier improvements in the same chain.[PARAGRAPH:1]Choose No to keep the option disabled and leave your improvements unchanged.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS</Tag>
+		<English>Map - Multiple Improvements</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS_HELP</Tag>
+		<English>Allows one primary improvement and one additional improvement on a single tile, such as a farm with a windmill, or a fort with a watchtower. Forts and their entire fortification chain remain primary improvements. Watchtowers and their upgrades use the additional layer. Upgrades replace earlier improvements in the same chain. Existing eligible improvements move to the additional layer once when game modifiers are recalculated.</English>
 	</TEXT>
 </Civ4GameText>
 

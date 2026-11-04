@@ -18,6 +18,9 @@
 #include "CvUnitList.h"
 #include "CvUnitAI.h"
 #include "index_iterator_base.h"
+#include "AIUnitRoleIndex.h"
+#include "AirInterceptionIndex.h"
+#include "AIPlotCandidateIndex.h"
 #include "LinkedList.h"
 #ifdef CVARMY_BREAKSAVE
 	#include "CvArmy.h"
@@ -137,6 +140,7 @@ public:
 	void initFreeUnits();
 
 	UnitTypes getBestUnitType(UnitAITypes eUnitAI) const;
+	bool hasTrainableUnitForAI(UnitAITypes eUnitAI) const;
 
 	int getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const;
 	bool addStartUnitAI(const UnitAITypes eUnitAI, const int iCount);
@@ -326,6 +330,7 @@ public:
 	int getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const;
 	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false, bool bIncludePythonOverrides = true) const;
 
+	void invalidateRouteChoiceCache() const { m_eBestRoute = NO_ROUTE; }
 	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const;
 
 	int getImprovementUpgradeProgressRate(const ImprovementTypes eImprovement) const;
@@ -1132,6 +1137,14 @@ public:
 	unit_iterator endUnits() const { return unit_iterator(); }
 	typedef bst::iterator_range<unit_iterator> unit_range;
 	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
+	const std::vector<CvUnit*>& getUnitsByAIRole(UnitAITypes role) const;
+	const std::vector<CvUnit*>& getAirInterceptionCandidates() const;
+	void invalidateAirInterceptionCandidates() const { m_airInterceptionCandidates.invalidate(); }
+	void invalidateUnitRoleCandidates() const { m_unitRoleCandidates.invalidate(); }
+	const std::vector<int>& getDefensivePostPlotIndices() const;
+	void invalidateDefensivePostCandidates() const { m_defensivePostCandidates.invalidate(); }
+	const std::vector<int>& getOwnedPlotIndices() const;
+	void invalidateOwnedPlotCandidates() const { m_ownedPlotCandidates.invalidate(); }
 
 	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
 	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
@@ -2016,6 +2029,10 @@ protected:
 	std::vector<FFreeListTrashArray<CvPlotGroup>*>		  m_plotGroups;
 	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
 	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
+	mutable AIUnitRoleIndex m_unitRoleCandidates;
+	mutable AirInterceptionIndex m_airInterceptionCandidates;
+	mutable AIPlotCandidateIndex m_defensivePostCandidates;
+	mutable AIPlotCandidateIndex m_ownedPlotCandidates;
 	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
 
 #ifdef CVARMY_BREAKSAVE
@@ -2080,7 +2097,7 @@ protected:
 	void recalculatePopulationgrowthratepercentage();
 
 	int calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
-	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
+	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL, BuildTypes eRejectedBuild = NO_BUILD) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
@@ -2390,7 +2407,8 @@ private:
 	mutable bool* m_bCanConstructCachedDefaultParam;
 	mutable RouteTypes m_eBestRoute;
 	mutable BuildTypes m_eBestRouteBuild;
-	mutable std::map<int, bool>	m_canHaveBuilder;
+	// Negative values cache canTrain; nonnegative values are revalidated unit IDs.
+	mutable std::map<int, int>	m_canHaveBuilder;
 
 	CvContractBroker m_contractBroker;
 

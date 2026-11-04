@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+import MultipleImprovements
 import CvScreenEnums
 import WBEventScreen
 import WBPlayerUnits
@@ -218,6 +219,8 @@ class WBPlotScreen:
 			iImprovement = pPlot.getImprovementType()
 			if iImprovement > -1:
 				iYield -= pPlot.calculateImprovementYieldChange(iImprovement, YieldTypes(i), pPlot.getOwner(), False)
+			for slot in xrange(pPlot.getNumAdditionalImprovements()):
+				iYield -= pPlot.calculateImprovementYieldChange(pPlot.getAdditionalImprovementType(slot), YieldTypes(i), pPlot.getOwner(), False)
 			screen.setButtonGFC("BaseYieldPlus" + str(i), "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, i, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 			screen.setButtonGFC("BaseYieldMinus" + str(i), "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, i, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 			sText = CyTranslator().getText("TXT_KEY_WB_BASE_YIELD", (GC.getYieldInfo(i).getDescription(), iYield,))
@@ -365,7 +368,7 @@ class WBPlotScreen:
 		for item in lImprovements:
 			iRow = screen.appendTableRow("WBPlotImprovement")
 			sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-			if iImprovement == item[1]:
+			if pPlot.hasImprovement(item[1]):
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 			screen.setTableText("WBPlotImprovement", 0, iRow, "<font=3>" + sColor + item[0] + "</font></color>", GC.getImprovementInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7877, item[1], 1<<0 )
 
@@ -551,6 +554,8 @@ class WBPlotScreen:
 				iImprovement = pPlot.getImprovementType()
 				if iImprovement > -1:
 					iYield -= pPlot.calculateImprovementYieldChange(iImprovement, i, pPlot.getOwner(), False)
+				for slot in xrange(pPlot.getNumAdditionalImprovements()):
+					iYield -= pPlot.calculateImprovementYieldChange(pPlot.getAdditionalImprovementType(slot), i, pPlot.getOwner(), False)
 				pPlot.setExtraYield(i, - min(iChange, iYield))
 			self.placeStats()
 
@@ -666,17 +671,17 @@ class WBPlotScreen:
 			iImprovement = inputClass.getData2()
 			if iEditType == 0:
 				if bAdd:
-					pPlot.setImprovementType(iImprovement)
+					MultipleImprovements.placeImprovement(pPlot, iImprovement)
 				else:
-					pPlot.setImprovementType(-1)
+					MultipleImprovements.removeImprovement(pPlot, iImprovement)
 			else:
 				for pLoopPlot in GC.getMap().plots():
 					if iEditType == 1 and pLoopPlot.getArea() != pPlot.getArea(): continue
 					if bAdd:
 						if iImprovement > -1 and bSensibility and not pLoopPlot.canHaveImprovement(iImprovement, -1, True): continue
-						pLoopPlot.setImprovementType(iImprovement)
+						MultipleImprovements.placeImprovement(pLoopPlot, iImprovement)
 					else:
-						pLoopPlot.setImprovementType(-1)
+						MultipleImprovements.removeImprovement(pLoopPlot, iImprovement)
 			self.placeImprovements()
 
 		elif inputClass.getFunctionName().find("UpgradeTime") > -1:

@@ -2438,6 +2438,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_ARCHEOLOGICAL_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_ARCHEOLOGICAL_SITE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -2948,6 +2949,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_FOSSIL_DIG_SITE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -8534,6 +8536,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_HYDRO_DAM</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_HYDRO_DAM_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_DAM</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>10</iYieldChange>
@@ -8572,6 +8575,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_WATERMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WATERMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WATERMILL</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -8616,6 +8620,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_MODERNWINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_MODERN_WINDMILL</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>7</iYieldChange>
@@ -8709,6 +8714,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_WINDMILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDMILL</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
@@ -8752,6 +8758,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_RADIO_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_RADIO_TOWER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADIO_TOWER</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
@@ -8781,6 +8788,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SOLAR_PANELS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SOLAR_PANEL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SOLAR_PANELS</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
@@ -8976,6 +8984,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GROUNDWATER_WELL</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_MODERN_SEISMOLOGY</PrereqTech>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -9619,6 +9628,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_RADAR_TOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_RADAR_TOWER</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_RADAR</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementPillage>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
@@ -9709,6 +9719,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_STEEL_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STEEL_WATCHTOWER</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -9801,6 +9812,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_STONE_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_STONE_WATCHTOWER</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iAdvancedStartCost>40</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -9894,6 +9906,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
@@ -11669,6 +11682,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11684,6 +11698,7 @@
 			</FeatureMakesValids>
 			<bOutsideBorders>1</bOutsideBorders>
 			<bPlacesFeature>1</bPlacesFeature>
+			<ImprovementPillage>IMPROVEMENT_BEACON_CORAL</ImprovementPillage>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11691,6 +11706,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11706,6 +11722,7 @@
 			</FeatureMakesValids>
 			<bOutsideBorders>1</bOutsideBorders>
 			<bPlacesFeature>1</bPlacesFeature>
+			<ImprovementPillage>IMPROVEMENT_BEACON_REEF</ImprovementPillage>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<ImprovementInfo>
@@ -11713,6 +11730,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_LIGHTHOUSE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_ENGINEERING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11728,6 +11746,7 @@
 			</FeatureMakesValids>
 			<bOutsideBorders>1</bOutsideBorders>
 			<bPlacesFeature>1</bPlacesFeature>
+			<ImprovementPillage>IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</ImprovementPillage>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 		<!-- Beacons -->
@@ -11736,6 +11755,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_CORAL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11754,6 +11774,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11772,6 +11793,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_BEACON_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -11833,6 +11855,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_HARNESS</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
 				<iYieldChange>4</iYieldChange>
@@ -11882,6 +11905,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SEA_MILL</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEA_MILL</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -12291,6 +12315,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_PEDIA</Civilopedia>
 			<Help>TXT_KEY_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE_HELP</Help>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_ANTI_AIR_DEFENSE</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_ORBITAL_FLIGHT</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
@@ -12389,6 +12414,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_AQUATIC_FORCEFIELD_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_AQUATIC_FORCEFIELD</ArtDefineTag>
+			<bSecondaryLayer>1</bSecondaryLayer>
 			<PrereqTech>TECH_SHIELDING</PrereqTech>
 			<bActsAsCity>1</bActsAsCity>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -12628,6 +12654,15 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
 			<bActsAsCity>1</bActsAsCity>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<!-- Render-only identity selected by CvPlot; never a buildable improvement. -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FISHING_BOATS</Description>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</ArtDefineTag>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
 	</ImprovementInfos>

@@ -377,6 +377,31 @@ void CvSelectionGroup::updateTimers()
 	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
+	// Corruption guard, checked before the raw units() walk just below (and before isBusy()/
+	// isCombat() inside doDelayedDeath() further down, which have the same problem) ever gets a
+	// chance to touch the list. getNumUnits() is a counter maintained on add/remove, not derived
+	// by walking the list, so it stays correct even if the list's links get corrupted into a cycle;
+	// if walking finds far more entries than that counter says should exist, the list is cyclic.
+	// This is the actual per-tick entry point for a group (called from CvPlayer::updateTimers()
+	// for every group, every tick), so this is where a cyclic list would otherwise hang forever,
+	// before any later corruption guard (eg. in doDelayedDeath()) ever got a chance to run.
+	{
+		int iWalked = 0;
+		const int iSaneLimit = std::max(1000, 4 * getNumUnits());
+		unit_iterator it = beginUnits();
+		const unit_iterator end = endUnits();
+		for (; it != end && iWalked <= iSaneLimit; ++it)
+		{
+			++iWalked;
+		}
+		if (it != end) // Loop only stopped because it hit the cap, not because it reached the real end
+		{
+			FErrorMsg("CvSelectionGroup::updateTimers: unit list is corrupted (cyclic) - killing group");
+			kill();
+			return;
+		}
+	}
+
 	if (getNumUnits() > 0)
 	{
 		bool bCombat = false;
@@ -441,8 +466,53 @@ bool CvSelectionGroup::doDelayedDeath()
 	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
+	// Corruption guard, checked before ANYTHING else touches the unit list - including isBusy()
+	// below, which (via isCombat()) walks the raw list with no bound of its own. If this check ran
+	// after isBusy() as it originally did, a cyclic list would make isBusy() itself hang forever,
+	// and this guard would never even get a chance to run. getNumUnits() is a counter maintained on
+	// add/remove, not derived by walking the list, so it stays correct even if the list's links get
+	// corrupted into a cycle; if walking finds far more entries than that counter says should
+	// exist, the list is cyclic.
+	int iWalked = 0;
+	bool bAnyDelayedDeath = false;
+	const int iSaneLimit = std::max(1000, 4 * getNumUnits());
+	const CvPlayer& kOwner = GET_PLAYER(getOwner());
+	{
+		unit_iterator it = beginUnits();
+		const unit_iterator end = endUnits();
+		for (; it != end && iWalked <= iSaneLimit; ++it)
+		{
+			++iWalked;
+			if (!bAnyDelayedDeath && canDelete(kOwner, *it))
+			{
+				bAnyDelayedDeath = true;
+			}
+		}
+		if (it != end) // Loop only stopped because it hit the cap, not because it reached the real end
+		{
+			FErrorMsg("CvSelectionGroup::doDelayedDeath: unit list is corrupted (cyclic) - killing group");
+			kill();
+			return true;
+		}
+	}
+
 	if (isBusy())
 	{
+		return false;
+	}
+
+	// This runs every tick for every group in the game, and the overwhelmingly common case is
+	// that nothing in the group actually needs deleting. bAnyDelayedDeath already reflects that
+	// from the corruption-check walk above, so just act on it here instead of re-scanning.
+	if (!bAnyDelayedDeath)
+	{
+		// Preserve the original behaviour for a group that's already empty (eg. its units
+		// were removed by something other than this function) even on this fast path.
+		if (getNumUnits() == 0)
+		{
+			kill();
+			return true;
+		}
 		return false;
 	}
 

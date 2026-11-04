@@ -23,6 +23,9 @@ public:
 	explicit CyGame(CvGameAI& pGame);		// Call from C++;
 
 	MapTypes getCurrentMap() const;
+#ifdef C2C_PERFORMANCE_PORT_TEST
+    bool recalculateModifiersForBenchmark();
+#endif
 
 	bool isMultiplayer() const;
 
@@ -185,6 +188,7 @@ public:
 	int getTeamScore(TeamTypes iIndex) const;
 	bool isOption(GameOptionTypes eIndex) const;
 	void setOption(GameOptionTypes eIndex, bool bEnabled);
+	void refreshNativePromotionBuildings();
 	bool isMPOption(MultiplayerOptionTypes eIndex) const;
 	bool isForcedControl(ForceControlTypes eIndex) const;
 	int getUnitCreatedCount(UnitTypes eIndex) const;

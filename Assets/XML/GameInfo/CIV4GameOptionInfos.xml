@@ -421,6 +421,20 @@
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
         </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_MAP_PRIMITIVE_MAPS</Type>
+            <Description>TXT_KEY_GAMEOPTION_MAP_PRIMITIVE_MAPS</Description>
+            <Help>TXT_KEY_GAMEOPTION_MAP_PRIMITIVE_MAPS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>1</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS</Type>
+            <Description>TXT_KEY_GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS</Description>
+            <Help>TXT_KEY_GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>1</bVisible>
+        </GameOptionInfo>
         <!-- Animal -->
         <GameOptionInfo>
             <Type>GAMEOPTION_ANIMAL_STAY_OUT</Type>
@@ -555,6 +569,13 @@
             <Type>GAMEOPTION_COMBAT_AMNESTY</Type>
             <Description>TXT_KEY_GAMEOPTION_COMBAT_AMNESTY</Description>
             <Help>TXT_KEY_GAMEOPTION_COMBAT_AMNESTY_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>1</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_PROMOTIONS_NATIVE</Type>
+            <Description>TXT_KEY_GAMEOPTION_PROMOTIONS_NATIVE</Description>
+            <Help>TXT_KEY_GAMEOPTION_PROMOTIONS_NATIVE_HELP</Help>
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
         </GameOptionInfo>
@@ -758,6 +779,20 @@
             <Type>GAMEOPTION_COMBAT_STACK_PROMOTIONS</Type>
             <Description>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS</Description>
             <Help>TXT_KEY_GAMEOPTION_COMBAT_STACK_PROMOTIONS_HELP</Help>
+            <bDefault>0</bDefault>
+            <bVisible>1</bVisible>
+        </GameOptionInfo>
+        <GameOptionInfo>
+            <Type>GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION</Type>
+            <Description>TXT_KEY_GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION</Description>
+            <Help>TXT_KEY_GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION_HELP</Help>
+            <bDefault>1</bDefault><bVisible>1</bVisible>
+        </GameOptionInfo>
+        <!-- Appended: preserve all previous game-option IDs. -->
+        <GameOptionInfo>
+            <Type>GAMEOPTION_COMBAT_MILITARY_DOCTRINES</Type>
+            <Description>TXT_KEY_GAMEOPTION_COMBAT_MILITARY_DOCTRINES</Description>
+            <Help>TXT_KEY_GAMEOPTION_COMBAT_MILITARY_DOCTRINES_HELP</Help>
             <bDefault>0</bDefault>
             <bVisible>1</bVisible>
         </GameOptionInfo>

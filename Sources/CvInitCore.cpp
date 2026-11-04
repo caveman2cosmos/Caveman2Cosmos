@@ -42,6 +42,7 @@ CvInitCore::CvInitCore()
 	// Moved to Init as the number is no more predetermined
 	//m_abOptions = new bool[GC.getNumGameOptionInfos()];
 	m_abOptions = NULL;
+	m_bRailRoadRevolutionMissingFromSave = false;
 	m_abMPOptions = new bool[NUM_MPOPTION_TYPES];
 	m_abForceControls = new bool[NUM_FORCECONTROL_TYPES];
 
@@ -561,7 +562,12 @@ void CvInitCore::reopenInactiveSlots()
 
 void CvInitCore::resetGame()
 {
+	m_bNativePromotionsMissingFromSave = false;
+	m_bRailRoadRevolutionMissingFromSave=false;
+	m_bPrimitiveMapsMissingFromSave = false;
+	m_bMultipleImprovementsMissingFromSave = false;
 	m_bStackPromotionsMissingFromSave = false;
+	m_bDoctrinePromotionsMissingFromSave = false;
 	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Reseting Game: Start\n");
 
@@ -643,6 +649,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 	}
 	if (pSource)
 	{
+		m_bRailRoadRevolutionMissingFromSave=pSource->m_bRailRoadRevolutionMissingFromSave;
 		// Only copy over saved data
 
 		// Descriptive strings about game and map
@@ -672,7 +679,11 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 		setVictories(pSource->getNumVictories(), pSource->getVictories());
 
 		// Standard game options
+		m_bNativePromotionsMissingFromSave = pSource->m_bNativePromotionsMissingFromSave;
+		m_bPrimitiveMapsMissingFromSave = pSource->m_bPrimitiveMapsMissingFromSave;
+		m_bMultipleImprovementsMissingFromSave = pSource->m_bMultipleImprovementsMissingFromSave;
 		m_bStackPromotionsMissingFromSave = pSource->m_bStackPromotionsMissingFromSave;
+		m_bDoctrinePromotionsMissingFromSave = pSource->m_bDoctrinePromotionsMissingFromSave;
 		int i;
 		for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 		{
@@ -1768,7 +1779,20 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	setDefaults();
 
 	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
+	m_bRailRoadRevolutionMissingFromSave=wrapper.isUsingTaggedFormat() && !wrapper.hasSavedClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS,GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION);
+	if(m_bRailRoadRevolutionMissingFromSave)setOption(GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION,false);
+	// Presence in the saved mapping is independent of the saved true/false value.
+	// Capture it before onFinalInitialized closes and clears the wrapper.
+	m_bPrimitiveMapsMissingFromSave = wrapper.isUsingTaggedFormat()
+		&& !wrapper.hasSavedClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS, GAMEOPTION_MAP_PRIMITIVE_MAPS);
+	m_bMultipleImprovementsMissingFromSave = wrapper.isUsingTaggedFormat()
+		&& !wrapper.hasSavedClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS, GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS);
 	readStackPromotionsOption(wrapper);
+	readDoctrinePromotionsOption(wrapper);
+	// A saved false value is an explicit choice, not a missing option.
+	// Capture presence before onFinalInitialized closes the save wrapper.
+	m_bNativePromotionsMissingFromSave = wrapper.isUsingTaggedFormat()
+		&& !wrapper.hasSavedClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS, GAMEOPTION_PROMOTIONS_NATIVE);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -2203,6 +2227,64 @@ void CvInitCore::calculateAssetCheckSum()
 	*/
 }
 
+void CvInitCore::checkRailRoadRevolutionOption()
+{
+    const PlayerTypes player=GC.getGame().getActivePlayer();
+    if(m_bRailRoadRevolutionMissingFromSave && !getOption(GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION)
+        && !GC.getGame().isNetworkMultiPlayer() && player!=NO_PLAYER && GET_PLAYER(player).isAlive() && GET_PLAYER(player).isHumanPlayer())
+    {
+        CvPopupInfo* popup=new CvPopupInfo(BUTTONPOPUP_RAIL_ROAD_REVOLUTION_MIGRATION);
+        if(popup){gDLL->getInterfaceIFace()->addPopup(popup,player,false,true);m_bRailRoadRevolutionMissingFromSave=false;}
+    }
+}
+
+void CvInitCore::checkPrimitiveMapsOption()
+{
+	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+	if (m_bPrimitiveMapsMissingFromSave && !getOption(GAMEOPTION_MAP_PRIMITIVE_MAPS)
+		&& !GC.getGame().isNetworkMultiPlayer()
+		&& ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHumanPlayer())
+	{
+		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_PRIMITIVE_MAPS_MIGRATION);
+		if (pInfo != NULL)
+		{
+			gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
+			m_bPrimitiveMapsMissingFromSave = false;
+		}
+	}
+}
+
+void CvInitCore::checkMultipleImprovementsOption()
+{
+	const PlayerTypes player = GC.getGame().getActivePlayer();
+	if (m_bMultipleImprovementsMissingFromSave && !getOption(GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS)
+	&& !GC.getGame().isNetworkMultiPlayer() && player != NO_PLAYER && GET_PLAYER(player).isAlive() && GET_PLAYER(player).isHumanPlayer())
+	{
+		CvPopupInfo* info = new CvPopupInfo(BUTTONPOPUP_MULTIPLE_IMPROVEMENTS_MIGRATION);
+		if (info)
+		{
+			gDLL->getInterfaceIFace()->addPopup(info, player, false, true);
+			m_bMultipleImprovementsMissingFromSave = false;
+		}
+	}
+}
+
+void CvInitCore::checkNativePromotionsOption()
+{
+	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+	if (m_bNativePromotionsMissingFromSave && !getOption(GAMEOPTION_PROMOTIONS_NATIVE)
+		&& !GC.getGame().isNetworkMultiPlayer()
+		&& ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHumanPlayer())
+	{
+		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_NATIVE_PROMOTIONS_MIGRATION);
+		if (pInfo != NULL)
+		{
+			gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
+			m_bNativePromotionsMissingFromSave = false;
+		}
+	}
+}
+
 void CvInitCore::checkVersions()
 {
 	/*
@@ -2226,6 +2308,31 @@ void CvInitCore::checkVersions()
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
 			}
+		}
+	}
+}
+
+void CvInitCore::readDoctrinePromotionsOption(CvTaggedSaveFormatWrapper& wrapper)
+{
+	// Offer only genuinely older saves; saved OFF is an intentional choice.
+	m_bDoctrinePromotionsMissingFromSave = wrapper.isUsingTaggedFormat()
+		&& !wrapper.hasSavedClassEnumValue(REMAPPED_CLASS_TYPE_GAMEOPTIONS, GAMEOPTION_COMBAT_MILITARY_DOCTRINES);
+	if (m_bDoctrinePromotionsMissingFromSave)
+		setOption(GAMEOPTION_COMBAT_MILITARY_DOCTRINES, false);
+}
+
+void CvInitCore::checkDoctrinePromotionsOption()
+{
+	const PlayerTypes player = GC.getGame().getActivePlayer();
+	if (m_bDoctrinePromotionsMissingFromSave && !getOption(GAMEOPTION_COMBAT_MILITARY_DOCTRINES)
+	&& !GC.getGame().isNetworkMultiPlayer() && player != NO_PLAYER
+	&& GET_PLAYER(player).isAlive() && GET_PLAYER(player).isHumanPlayer())
+	{
+		CvPopupInfo* info = new CvPopupInfo(BUTTONPOPUP_MILITARY_DOCTRINES_MIGRATION);
+		if (info)
+		{
+			gDLL->getInterfaceIFace()->addPopup(info, player, false, true);
+			m_bDoctrinePromotionsMissingFromSave = false;
 		}
 	}
 }

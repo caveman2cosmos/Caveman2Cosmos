@@ -4,6 +4,8 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "UnitTravelConnectivity.h"
+#include "RailRoadRevolution.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -3783,6 +3785,8 @@ bool CvTeam::isAtWar(const bool bCountMinors) const
 
 void CvTeam::setAtWar(TeamTypes eIndex, bool bNewValue)
 {
+    UnitTravelConnectivity::Change travelChange(isAtWar(eIndex)!=bNewValue);
+
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
@@ -3860,6 +3864,8 @@ bool CvTeam::isOpenBorders(TeamTypes eIndex) const
 
 void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 {
+    UnitTravelConnectivity::Change travelChange(isOpenBorders(eIndex)!=bNewValue);
+
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
@@ -3994,6 +4000,8 @@ bool CvTeam::isVassal(TeamTypes eIndex) const
 
 void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 {
+    UnitTravelConnectivity::Change travelChange(isVassal(eIndex)!=bNewValue);
+
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	FAssertMsg(!bNewValue || !GET_TEAM(eIndex).isAVassal(), "can't become a vassal of a vassal");
@@ -5168,6 +5176,7 @@ void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 
 void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bool bFirst, bool bAnnounce)
 {
+	if(RailRoadRevolution::enabled())RailRoadRevolution::resetCaches();
 	PROFILE_FUNC();
 
 	if (eTech == NO_TECH)

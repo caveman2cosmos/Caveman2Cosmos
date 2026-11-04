@@ -1,4 +1,5 @@
 from CvPythonExtensions import *
+import MultipleImprovements
 import HandleInputUtil
 import WBPlotScreen
 import WBEventScreen
@@ -293,7 +294,7 @@ class WorldBuilder:
 				self.eventManager.onCityBuilt([pCity, None])
 	## Python Effects ##
 		elif self.iPlayerAddMode == "Improvements":
-			self.m_pCurrentPlot.setImprovementType(self.iSelection)
+			MultipleImprovements.placeImprovement(self.m_pCurrentPlot, self.iSelection)
 		elif self.iPlayerAddMode == "Bonus":
 			self.m_pCurrentPlot.setBonusType(self.iSelection)
 		elif self.iPlayerAddMode == "Routes":
@@ -376,7 +377,7 @@ class WorldBuilder:
 				pCity = self.m_pCurrentPlot.getPlotCity()
 				pCity.kill()
 		elif self.iPlayerAddMode == "Improvements":
-			self.m_pCurrentPlot.setImprovementType(-1)
+			MultipleImprovements.removeImprovement(self.m_pCurrentPlot, self.iSelection)
 			return 1
 		elif self.iPlayerAddMode == "Bonus":
 			self.m_pCurrentPlot.setBonusType(-1)

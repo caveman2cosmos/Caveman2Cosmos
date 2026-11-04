@@ -1363,6 +1363,18 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) co
 }
 
 // Translate explicitly from an old enum value to the current
+bool CvTaggedSaveFormatWrapper::hasSavedClassEnumValue(RemappedClassType classType, int currentValue)
+{
+	for (int i = 0; i < getNumClassEnumValues(classType); ++i)
+	{
+		if (getNewClassEnumValue(classType, i, true) == currentValue)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 int CvTaggedSaveFormatWrapper::getNewClassEnumValue(RemappedClassType classType, int oldValue, bool allowMissing)
 {
 	PROFILE_FUNC();

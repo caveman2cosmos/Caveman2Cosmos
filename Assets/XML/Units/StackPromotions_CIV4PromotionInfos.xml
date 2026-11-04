@@ -16,6 +16,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -44,6 +45,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -72,6 +74,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_INFANTRY_SCREEN3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -215,6 +218,7 @@
             <StackSupportRecipients>
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SKIRMISHER1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -241,6 +245,7 @@
             <StackSupportRecipients>
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SKIRMISHER2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -267,6 +272,7 @@
             <StackSupportRecipients>
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SKIRMISHER3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -294,6 +300,7 @@
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARROW1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -321,6 +328,7 @@
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARROW2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -348,6 +356,7 @@
                 <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARROW3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -377,6 +386,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_FLANKING1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -406,6 +416,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_FLANKING2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -435,6 +446,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_FLANKING3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -472,11 +484,9 @@
                 <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_RECON1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NOMADISM</TechPrereq>
@@ -522,11 +532,9 @@
                 <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_RECON2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NOMADISM</TechPrereq>
@@ -572,11 +580,9 @@
                 <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_EXPLORER</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_RECON3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NOMADISM</TechPrereq>
@@ -614,6 +620,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_COVERING_FIRE1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -643,6 +650,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_COVERING_FIRE2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -672,6 +680,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_COVERING_FIRE3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -697,6 +706,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_DEFENSIVE</UnitCombatType>
             </StackSupportRecipients>
             <StackSupportProviderUnits>UNIT_GATLING_GUN UNIT_MACHINE_GUN UNIT_MODERN_MACHINE_GUN</StackSupportProviderUnits>
             <Description>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE1</Description>
@@ -723,6 +733,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_DEFENSIVE</UnitCombatType>
             </StackSupportRecipients>
             <StackSupportProviderUnits>UNIT_GATLING_GUN UNIT_MACHINE_GUN UNIT_MODERN_MACHINE_GUN</StackSupportProviderUnits>
             <Description>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE2</Description>
@@ -749,6 +760,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_DEFENSIVE</UnitCombatType>
             </StackSupportRecipients>
             <StackSupportProviderUnits>UNIT_GATLING_GUN UNIT_MACHINE_GUN UNIT_MODERN_MACHINE_GUN</StackSupportProviderUnits>
             <Description>TXT_KEY_PROMOTION_STACK_SUPPRESSIVE_FIRE3</Description>
@@ -780,6 +792,8 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_GATECRASHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_URBAN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SIEGE1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -810,6 +824,8 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_GATECRASHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_URBAN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SIEGE2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -840,6 +856,8 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_GATECRASHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE_URBAN</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_SIEGE3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -873,10 +891,8 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SIEGE_FIELD</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARTILLERY1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_ANCIENT_MACHINERY</TechPrereq>
@@ -909,10 +925,8 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SIEGE_FIELD</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARTILLERY2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_ANCIENT_MACHINERY</TechPrereq>
@@ -945,10 +959,8 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SIEGE_FIELD</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARTILLERY3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_ANCIENT_MACHINERY</TechPrereq>
@@ -976,6 +988,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARMOURED1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1005,6 +1018,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARMOURED2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1034,6 +1048,7 @@
                 <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_ARMOURED3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1068,6 +1083,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1101,6 +1117,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1134,6 +1151,7 @@
                 <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MOBILE_SCREEN3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1167,6 +1185,7 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_CLOSE_AIR1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1200,6 +1219,7 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_CLOSE_AIR2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1233,6 +1253,7 @@
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUNSHIP</UnitCombatType>
             </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_CLOSE_AIR3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
@@ -1266,11 +1287,9 @@
                 <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_MACHINE_LEARNING</TechPrereq>
@@ -1303,11 +1322,9 @@
                 <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_MACHINE_LEARNING</TechPrereq>
@@ -1340,11 +1357,9 @@
                 <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
-            </StackSupportRecipients>
-            <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
-            </StackSupportRecipientNot>
+            </StackSupportRecipients>
             <Description>TXT_KEY_PROMOTION_STACK_MECHANICAL_SCREEN3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_MACHINE_LEARNING</TechPrereq>
@@ -1754,8 +1769,6 @@
             </StackSupportProviders>
             <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_BATTLESHIP</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_TRANSPORT</UnitCombatType>
             </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CAPITAL1</Description>
@@ -1783,8 +1796,6 @@
             </StackSupportProviders>
             <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_BATTLESHIP</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_TRANSPORT</UnitCombatType>
             </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CAPITAL2</Description>
@@ -1812,8 +1823,6 @@
             </StackSupportProviders>
             <StackSupportRecipientNot>
                 <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_BATTLESHIP</UnitCombatType>
-                <UnitCombatType>UNITCOMBAT_DREADNOUGHT</UnitCombatType>
                 <UnitCombatType>UNITCOMBAT_TRANSPORT</UnitCombatType>
             </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CAPITAL3</Description>
@@ -1839,9 +1848,6 @@
             <StackSupportProviders>
                 <UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
             </StackSupportProviders>
-            <StackSupportRecipientNot>
-                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-            </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CARRIER1</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NAVAL_FLIGHT</TechPrereq>
@@ -1865,9 +1871,6 @@
             <StackSupportProviders>
                 <UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
             </StackSupportProviders>
-            <StackSupportRecipientNot>
-                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-            </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CARRIER2</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NAVAL_FLIGHT</TechPrereq>
@@ -1891,9 +1894,6 @@
             <StackSupportProviders>
                 <UnitCombatType>UNITCOMBAT_CARRIER</UnitCombatType>
             </StackSupportProviders>
-            <StackSupportRecipientNot>
-                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
-            </StackSupportRecipientNot>
             <Description>TXT_KEY_PROMOTION_STACK_CARRIER3</Description>
             <Help>TXT_KEY_STACK_SUPPORT_HELP</Help>
             <TechPrereq>TECH_NAVAL_FLIGHT</TechPrereq>
@@ -2026,6 +2026,561 @@
             <iFriendlyHealChange>-15</iFriendlyHealChange>
             <iCombatPercent>-30</iCombatPercent>
             <Button>Art/Interface/Buttons/Promotions/StackSupport/CongestedLand4.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SHOCK_INFANTRY1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>23</iStackSupportProfile>
+            <iStackSupportFamily>18</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_AXE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_MACE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportProviderAll>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+            </StackSupportProviderAll>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_SHOCK_INFANTRY1</Description>
+            <Help>TXT_KEY_STACK_SHOCK_INFANTRY_HELP</Help>
+            <TechPrereq>TECH_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>5</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/ShockInfantryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SHOCK_INFANTRY2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>23</iStackSupportProfile>
+            <iStackSupportFamily>18</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_AXE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_MACE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportProviderAll>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+            </StackSupportProviderAll>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_SHOCK_INFANTRY2</Description>
+            <Help>TXT_KEY_STACK_SHOCK_INFANTRY_HELP</Help>
+            <TechPrereq>TECH_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>10</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/ShockInfantryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SHOCK_INFANTRY3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>23</iStackSupportProfile>
+            <iStackSupportFamily>18</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_AXE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WEAPON_H2H_MACE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportProviderAll>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+            </StackSupportProviderAll>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_SHOCK_INFANTRY3</Description>
+            <Help>TXT_KEY_STACK_SHOCK_INFANTRY_HELP</Help>
+            <TechPrereq>TECH_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>15</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/ShockInfantryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_CANINE1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>24</iStackSupportProfile>
+            <iStackSupportFamily>19</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <iStackSupportWeight>5</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_CANINE1</Description>
+            <Help>TXT_KEY_STACK_CANINE_HELP</Help>
+            <TechPrereq>TECH_CANINE_DOMESTICATION</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
+                    <iUnitCombatMod>5</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/CanineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_CANINE2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>24</iStackSupportProfile>
+            <iStackSupportFamily>19</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <iStackSupportWeight>10</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_CANINE2</Description>
+            <Help>TXT_KEY_STACK_CANINE_HELP</Help>
+            <TechPrereq>TECH_CANINE_DOMESTICATION</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
+                    <iUnitCombatMod>10</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/CanineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_CANINE3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>24</iStackSupportProfile>
+            <iStackSupportFamily>19</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <iStackSupportWeight>15</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_CANINE3</Description>
+            <Help>TXT_KEY_STACK_CANINE_HELP</Help>
+            <TechPrereq>TECH_CANINE_DOMESTICATION</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
+                    <iUnitCombatMod>15</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/CanineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ANTI_TANK1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>25</iStackSupportProfile>
+            <iStackSupportFamily>20</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <iStackSupportWeight>10</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_BAZOOKA UNIT_AT_INFANTRY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ANTI_TANK1</Description>
+            <Help>TXT_KEY_STACK_ANTI_TANK_HELP</Help>
+            <TechPrereq>TECH_MECHANIZED_WARFARE</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                    <iUnitCombatMod>10</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/AntiTankAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ANTI_TANK2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>25</iStackSupportProfile>
+            <iStackSupportFamily>20</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <iStackSupportWeight>20</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_BAZOOKA UNIT_AT_INFANTRY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ANTI_TANK2</Description>
+            <Help>TXT_KEY_STACK_ANTI_TANK_HELP</Help>
+            <TechPrereq>TECH_MECHANIZED_WARFARE</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                    <iUnitCombatMod>20</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/AntiTankAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ANTI_TANK3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>25</iStackSupportProfile>
+            <iStackSupportFamily>20</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <iStackSupportWeight>30</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_BAZOOKA UNIT_AT_INFANTRY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ANTI_TANK3</Description>
+            <Help>TXT_KEY_STACK_ANTI_TANK_HELP</Help>
+            <TechPrereq>TECH_MECHANIZED_WARFARE</TechPrereq>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                    <iUnitCombatMod>30</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/AntiTankAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ROCKET_ARTILLERY1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>26</iStackSupportProfile>
+            <iStackSupportFamily>3</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <iStackSupportWeight>1</iStackSupportWeight>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_ANCIENT_ROCKETEER UNIT_ROCKET_ARTILLERY UNIT_HOVER_ARTILLERY UNIT_LEVITATION_ARTILLERY UNIT_WALKER_ARTILLERY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ROCKET_ARTILLERY1</Description>
+            <Help>TXT_KEY_STACK_ROCKET_ARTILLERY_HELP</Help>
+            <TechPrereq>TECH_SIEGE_WARFARE</TechPrereq>
+            <iCityAttack>5</iCityAttack>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/RocketArtilleryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ROCKET_ARTILLERY2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>26</iStackSupportProfile>
+            <iStackSupportFamily>3</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <iStackSupportWeight>1</iStackSupportWeight>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_ANCIENT_ROCKETEER UNIT_ROCKET_ARTILLERY UNIT_HOVER_ARTILLERY UNIT_LEVITATION_ARTILLERY UNIT_WALKER_ARTILLERY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ROCKET_ARTILLERY2</Description>
+            <Help>TXT_KEY_STACK_ROCKET_ARTILLERY_HELP</Help>
+            <TechPrereq>TECH_SIEGE_WARFARE</TechPrereq>
+            <iCityAttack>10</iCityAttack>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/RocketArtilleryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_ROCKET_ARTILLERY3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>26</iStackSupportProfile>
+            <iStackSupportFamily>3</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <iStackSupportWeight>1</iStackSupportWeight>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_SIEGE</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ROBOT</UnitCombatType>
+                <UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportProviderUnits>UNIT_ANCIENT_ROCKETEER UNIT_ROCKET_ARTILLERY UNIT_HOVER_ARTILLERY UNIT_LEVITATION_ARTILLERY UNIT_WALKER_ARTILLERY</StackSupportProviderUnits>
+            <Description>TXT_KEY_PROMOTION_STACK_ROCKET_ARTILLERY3</Description>
+            <Help>TXT_KEY_STACK_ROCKET_ARTILLERY_HELP</Help>
+            <TechPrereq>TECH_SIEGE_WARFARE</TechPrereq>
+            <iCityAttack>15</iCityAttack>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/RocketArtilleryAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SUBMARINE1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>27</iStackSupportProfile>
+            <iStackSupportFamily>21</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_SEA</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportRecipientNot>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportRecipientNot>
+            <Description>TXT_KEY_PROMOTION_STACK_SUBMARINE1</Description>
+            <Help>TXT_KEY_STACK_SUBMARINE_HELP</Help>
+            <TechPrereq>TECH_SUBMARINE_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>5</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/SubmarineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SUBMARINE2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>27</iStackSupportProfile>
+            <iStackSupportFamily>21</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_SEA</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportRecipientNot>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportRecipientNot>
+            <Description>TXT_KEY_PROMOTION_STACK_SUBMARINE2</Description>
+            <Help>TXT_KEY_STACK_SUBMARINE_HELP</Help>
+            <TechPrereq>TECH_SUBMARINE_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>10</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/SubmarineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_SUBMARINE3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>27</iStackSupportProfile>
+            <iStackSupportFamily>21</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <bStackSupportAttackersOnly>1</bStackSupportAttackersOnly>
+            <StackSupportDomain>DOMAIN_SEA</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <StackSupportRecipientNot>
+                <UnitCombatType>UNITCOMBAT_SUBMARINE</UnitCombatType>
+            </StackSupportRecipientNot>
+            <Description>TXT_KEY_PROMOTION_STACK_SUBMARINE3</Description>
+            <Help>TXT_KEY_STACK_SUBMARINE_HELP</Help>
+            <TechPrereq>TECH_SUBMARINE_WARFARE</TechPrereq>
+            <iAttackCombatModifierChange>15</iAttackCombatModifierChange>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_NAVAL_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/SubmarineAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_MILITARY_POLICE1</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>28</iStackSupportProfile>
+            <iStackSupportFamily>22</iStackSupportFamily>
+            <iStackSupportTier>1</iStackSupportTier>
+            <iStackSupportWeight>5</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_MILITARY_POLICE1</Description>
+            <Help>TXT_KEY_STACK_MILITARY_POLICE_HELP</Help>
+            <TechPrereq>TECH_COOPERATION</TechPrereq>
+            <iCityDefense>5</iCityDefense>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/MilitaryPoliceAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_MILITARY_POLICE2</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>28</iStackSupportProfile>
+            <iStackSupportFamily>22</iStackSupportFamily>
+            <iStackSupportTier>2</iStackSupportTier>
+            <iStackSupportWeight>10</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_MILITARY_POLICE2</Description>
+            <Help>TXT_KEY_STACK_MILITARY_POLICE_HELP</Help>
+            <TechPrereq>TECH_COOPERATION</TechPrereq>
+            <iCityDefense>10</iCityDefense>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/MilitaryPoliceAid.dds</Button>
+        </PromotionInfo>
+        <PromotionInfo>
+            <Type>PROMOTION_STACK_MILITARY_POLICE3</Type>
+            <iStackSupportKind>1</iStackSupportKind>
+            <iStackSupportProfile>28</iStackSupportProfile>
+            <iStackSupportFamily>22</iStackSupportFamily>
+            <iStackSupportTier>3</iStackSupportTier>
+            <iStackSupportWeight>15</iStackSupportWeight>
+            <StackSupportDomain>DOMAIN_LAND</StackSupportDomain>
+            <StackSupportProviders>
+                <UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
+            </StackSupportProviders>
+            <StackSupportRecipients>
+                <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+            </StackSupportRecipients>
+            <Description>TXT_KEY_PROMOTION_STACK_MILITARY_POLICE3</Description>
+            <Help>TXT_KEY_STACK_MILITARY_POLICE_HELP</Help>
+            <TechPrereq>TECH_COOPERATION</TechPrereq>
+            <iCityDefense>15</iCityDefense>
+            <UnitCombats>
+                <UnitCombat>
+                    <UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
+                    <bUnitCombat>1</bUnitCombat>
+                </UnitCombat>
+            </UnitCombats>
+            <Button>Art/Interface/Buttons/Promotions/StackSupport/MilitaryPoliceAid.dds</Button>
         </PromotionInfo>
     </PromotionInfos>
 </Civ4PromotionInfos>

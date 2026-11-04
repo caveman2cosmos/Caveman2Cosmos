@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "PerformancePortTest.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -687,6 +688,11 @@ bool CyGame::isOption(GameOptionTypes eIndex) const
 	return m_pGame.isOption(eIndex);
 }
 
+void CyGame::refreshNativePromotionBuildings()
+{
+	m_pGame.refreshNativePromotionBuildings();
+}
+
 void CyGame::setOption(GameOptionTypes eIndex, bool bEnabled)
 {
 	m_pGame.setOption(eIndex, bEnabled);
@@ -1089,6 +1095,10 @@ void CyGame::saveGame(std::string fileName) const
 {
 	if (fileName.empty())
 	{
+
+#ifdef C2C_PERFORMANCE_PORT_TEST
+		if(!PerformancePortTest::active())
+#endif
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
 	else gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
@@ -1153,3 +1163,10 @@ void CyGame::exitWorldBuilder()
 {
 	m_pGame.setWorldBuilder(false);
 }
+#ifdef C2C_PERFORMANCE_PORT_TEST
+bool CyGame::recalculateModifiersForBenchmark()
+{
+    if(!PerformancePortTest::active() || m_pGame.isNetworkMultiPlayer() || !m_pGame.isFinalInitialized())return false;
+    m_pGame.recalculateModifiers();return true;
+}
+#endif

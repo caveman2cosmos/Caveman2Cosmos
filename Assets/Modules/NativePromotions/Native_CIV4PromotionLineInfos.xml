@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Civ4PromotionLineInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
+	<PromotionLineInfos>
+		<PromotionLineInfo>
+			<Type>PROMOTIONLINE_JUNGLE</Type>
+			<Description>TXT_KEY_PROMOTIONLINE_JUNGLE</Description>
+			<Button>Art/Interface/Buttons/Promotions/Native/jungle1.dds</Button>
+			<UnitCombatPrereqTypes>
+				<UnitCombatPrereqType>UNITCOMBAT_EXPLORER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_MELEE</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_THROWING</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
+				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
+			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_TAMED</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
+			<NotOnDomainTypes>
+				<DomainType>DOMAIN_SEA</DomainType>
+				<DomainType>DOMAIN_AIR</DomainType>
+			</NotOnDomainTypes>
+		</PromotionLineInfo>
+	</PromotionLineInfos>
+</Civ4PromotionLineInfos>

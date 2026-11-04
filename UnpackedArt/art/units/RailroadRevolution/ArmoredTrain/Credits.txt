@@ -1,0 +1,6 @@
+RCW Armored Trains, ramzay1945, special thanks to snafusmith.
+https://forums.civfanatics.com/resources/rcw-armored-trains.28117/
+Version 2020-02-27 (28748). Generic train mesh/textures and MarkIV animation set.
+The generic mesh is named MarkIV.nif to match the KFM model reference, as confirmed by the author in post #77.
+Icon converted from the supplied AT icon.jpg.
+The donor texture name MarkIV.dds aliases the supplied generic train skin, avoiding a dangling texture reference.

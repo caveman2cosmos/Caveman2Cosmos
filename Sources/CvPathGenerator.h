@@ -4,6 +4,7 @@
 #define CvPathGenerator_h__
 
 #include "FProfiler.h"
+#include "PathRoadCorridor.h"
 
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 
@@ -85,7 +86,11 @@ private:
 	class AllocationType
 	{
 	public:
-		AllocationType() {}
+		AllocationType()
+#ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
+			: m_seq(0)
+#endif
+		{}
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
 		int	m_seq;
@@ -133,7 +138,10 @@ public:
 
 				std::vector<AllocationType>* newBucket = new std::vector<AllocationType>();
 
-				newBucket->reserve(range(iCurrentBucketCapacity*2, 16, 1024));
+				// reserve() allocates bytes but creates no objects. The indexed
+				// slots must contain live T objects, including their constructors.
+				// Construct once on growth; reset() still reuses the same storage.
+				newBucket->resize(range(iCurrentBucketCapacity*2, 16, 1024));
 				m_pool.push_back(newBucket);
 
 				m_nextBucketToAllocate++;
@@ -296,6 +304,9 @@ public:
 	void SelfTest();
 
 private:
+	bool generatePathInternal(const CvPlot*, const CvPlot*, CvSelectionGroup*, int, int, int);
+	PathRoadCorridor m_roadCorridor;
+	bool m_limitRoadCorridor;
 	// Optimized: Inlined the priority queue comparer inside the header to allow complete
 	// compiler inlining. This avoids millions of function call pointer dereference penalties
 	// during A* pathfinding node sorting.

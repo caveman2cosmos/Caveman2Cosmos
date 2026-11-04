@@ -52,6 +52,7 @@ public:
     CvSelectionGroup* getGroupByIndex(int iIndex) const;
 
 private:
+    void releaseInvalidAttackGroups();
     int m_iID;
     PlayerTypes m_eOwner;
     int m_eMission;                // e.g., ARMY_MISSION_ATTACK_CITY

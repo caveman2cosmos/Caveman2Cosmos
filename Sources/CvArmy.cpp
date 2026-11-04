@@ -3,6 +3,7 @@
 #include "CvSelectionGroup.h"
 #include "CvString.h"
 #include "CvPlayerAI.h"
+#include "ArmyRecruitment.h"
 
 #define NO_INDEX -1
 
@@ -52,9 +53,12 @@ void CvArmy::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 
 void CvArmy::addGroup(CvSelectionGroup* pGroup)
 {
-    if (pGroup != NULL)
+    if (pGroup != NULL && pGroup->getID() != m_iLeaderGroupID
+        && (pGroup->getArmyID() == -1 || pGroup->getArmyID() == m_iID)
+        && (m_eMission != ARMY_MISSION_ATTACK_CITY || ArmyRecruitment::eligible(pGroup)))
     {
-        if (pGroup->getHeadUnit() != NULL)
+        if (pGroup->getHeadUnit() != NULL
+            && std::find(m_groupIDs.begin(), m_groupIDs.end(), pGroup->getID()) == m_groupIDs.end())
         {
             m_groupIDs.push_back(pGroup->getID());
             pGroup->setArmyID(m_iID); // mark the group with this army's ID
@@ -109,9 +113,16 @@ bool CvArmy::CheckTargetCity()
     if (pLeaderGroup->getHeadUnit() == NULL) return false;    
     CvPlot* pLeaderPlot = pLeaderGroup->getHeadUnit()->plot();
     CvArea* pArea = pLeaderPlot->area();
-    if (m_pTargetPlot == NULL || pLeaderGroup->at(m_pTargetPlot->getX(), m_pTargetPlot->getY()))
+    const CvPlayerAI& player = GET_PLAYER(pLeaderGroup->getHeadUnit()->getOwner());
+    const CvCity* current = m_pTargetPlot == NULL ? NULL : m_pTargetPlot->getPlotCity();
+    // Keep a valid objective without re-ranking cities or asking for a path.
+    // Arrival, capture, razing, diplomacy and a different land area invalidate it.
+    if (current == NULL || !isPotentialEnemy(player.getTeam(), current->getTeam())
+        || !m_pTargetPlot->isRevealed(player.getTeam(), false)
+        || current->area() != pArea
+        || pLeaderGroup->at(m_pTargetPlot->getX(), m_pTargetPlot->getY()))
     {
-        const CvPlayerAI& player = GET_PLAYER(pLeaderGroup->getHeadUnit()->getOwner());
+        m_pTargetPlot = NULL;
         CvCity* pTargetCity = player.AI_findTargetCity(pArea);
         if (pTargetCity != NULL)
         {
@@ -132,7 +143,8 @@ CvSelectionGroup* CvArmy::findNewLeader()
     for (std::vector<int>::const_iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); ++it)
     {
         CvSelectionGroup* pGroup = GET_PLAYER(getOwner()).getSelectionGroup(*it);
-        if (pGroup == NULL || pGroup->getHeadUnit() == NULL)
+        if (pGroup == NULL || pGroup->getHeadUnit() == NULL
+            || (m_eMission == ARMY_MISSION_ATTACK_CITY && !ArmyRecruitment::eligible(pGroup)))
             continue;
 
         int iStrength = pGroup->getNumUnits(); // helper in DLL: total combat strength
@@ -158,7 +170,9 @@ CvSelectionGroup* CvArmy::findNewLeader()
                 continue;
 
             // skip groups already in another army
-            if (pGroup->getDomainType() != DOMAIN_LAND || (pGroup->getArmyID() != -1 && pGroup->getArmyID() != getID()))
+            if (pGroup->getDomainType() != DOMAIN_LAND
+                || (m_eMission == ARMY_MISSION_ATTACK_CITY && !ArmyRecruitment::eligible(pGroup))
+                || (pGroup->getArmyID() != -1 && pGroup->getArmyID() != getID()))
                 continue;
 
             // distance check (relative to old leader's plot if exists, otherwise skip)
@@ -220,8 +234,39 @@ CvSelectionGroup* CvArmy::findNewLeader()
 }
 
 
+// Existing saves can retain followers recruited before role/garrison checks.
+// Release those assignments before issuing another follow order; otherwise a
+// defender returns to the leader every turn, then leaves again for its fort.
+void CvArmy::releaseInvalidAttackGroups()
+{
+    if (m_eMission != ARMY_MISSION_ATTACK_CITY) return;
+    for (std::vector<int>::iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); )
+    {
+        CvSelectionGroup* group = GET_PLAYER(getOwner()).getSelectionGroup(*it);
+        if (group == NULL || group->getArmyID() != m_iID
+            || *it == m_iLeaderGroupID || !ArmyRecruitment::eligible(group))
+        {
+            if (group != NULL && group->getArmyID() == m_iID && *it != m_iLeaderGroupID)
+            {
+                group->setArmyID(-1);
+                // Cancel only the army's regrouping, never a new guard/heal/build task.
+                if (!group->isHuman() && group->getHeadUnit() != NULL
+                    && group->AI_getMissionAIType() == MISSIONAI_GROUP)
+                {
+                    group->clearMissionQueue();
+                    group->AI_setMissionAI(NO_MISSIONAI, NULL, NULL);
+                    group->setActivityType(ACTIVITY_AWAKE);
+                }
+            }
+            it = m_groupIDs.erase(it);
+        }
+        else ++it;
+    }
+}
+
 void CvArmy::doTurn()
 {
+    releaseInvalidAttackGroups();
     if (m_iLeaderGroupID == NO_INDEX)
         return;
     CvSelectionGroup* pLeaderGroup = getLeader();
@@ -241,6 +286,12 @@ void CvArmy::doTurn()
         return;
     }
 
+    if (m_eMission == ARMY_MISSION_ATTACK_CITY && !ArmyRecruitment::eligible(pLeaderGroup))
+    {
+        disband();
+        return;
+    }
+
     CvPlot* pLeaderPlot = pLeaderGroup->plot();
     if (pLeaderPlot == NULL)
         return;
@@ -251,10 +302,7 @@ void CvArmy::doTurn()
     {
         bool allReady = true;
 
-        if (m_pTargetPlot == NULL)
-        {
-            CheckTargetCity();
-        }
+        CheckTargetCity(); // Cheap validity check; only invalid targets trigger selection.
         // 1) Phase de regroupement autour du leader
         // Iterate a snapshot: removeGroup() below erases from the real m_groupIDs, and doing
         // that while iterating it directly with a raw iterator invalidates the iterator mid-loop.
@@ -361,7 +409,8 @@ void CvArmy::doTurn()
                     if (pPlot == NULL)
                         continue;
 
-                    if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->AI_getMissionAIType() == MISSIONAI_GUARD_CITY
+                    if (!ArmyRecruitment::eligible(pGroup) || pGroup->getArmyID() != -1
+                        || pGroup->AI_getMissionAIType() == MISSIONAI_GUARD_CITY
                         || pGroup->AI_isCityGarrison(pGroup->plot()->getPlotCity()))                        
                         continue;
 
@@ -541,13 +590,22 @@ void CvArmy::disband()
     for (std::vector<int>::iterator it = m_groupIDs.begin(); it != m_groupIDs.end(); ++it)
     {
         CvSelectionGroup* pGroup = GET_PLAYER(getOwner()).getSelectionGroup(*it);
-        if (pGroup != NULL)
+        if (pGroup != NULL && pGroup->getArmyID() == m_iID)
         {
+            if (!pGroup->isHuman() && pGroup->getHeadUnit() != NULL
+                && pGroup->AI_getMissionAIType() == MISSIONAI_GROUP)
+            {
+                pGroup->clearMissionQueue();
+                pGroup->AI_setMissionAI(NO_MISSIONAI, NULL, NULL);
+                pGroup->setActivityType(ACTIVITY_AWAKE);
+            }
             pGroup->setArmyID(-1); // plus d’armée
         }
     }
     m_groupIDs.clear();
-    m_iLeaderGroupID = NULL;
+    CvSelectionGroup* leader = getLeader();
+    if (leader != NULL && leader->getArmyID() == m_iID) leader->setArmyID(-1);
+    m_iLeaderGroupID = NO_INDEX;
 }
 
 CvSelectionGroup* CvArmy::getGroupByIndex(int iIndex) const

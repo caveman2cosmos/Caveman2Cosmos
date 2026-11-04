@@ -706,13 +706,13 @@ void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 	// Unit Type
 	func(m_pUnit->getUnitInfo().getPropertyManipulators());
 
-	// Promotions
-	for (int i=0; i<GC.getNumPromotionInfos(); i++)
+	// Preserve XML-ID order and live callback changes without scanning every
+	// definition. Includes BuildUp, free, equipment and affliction promotions:
+	// the existing owned flag is the same authority as isHasPromotion.
+	for (PromotionTypes promotion = m_pUnit->getNextOwnedPromotion(NO_PROMOTION);
+		promotion != NO_PROMOTION; promotion = m_pUnit->getNextOwnedPromotion(promotion))
 	{
-		if (m_pUnit->isHasPromotion((PromotionTypes)i))
-		{
-			func(GC.getPromotionInfo((PromotionTypes)i).getPropertyManipulators());
-		}
+		func(GC.getPromotionInfo(promotion).getPropertyManipulators());
 	}
 }
 
@@ -732,6 +732,9 @@ void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 	{
 		func(GC.getImprovementInfo(m_pPlot->getImprovementType()).getPropertyManipulators());
 	}
+
+	for (int slot = 0; slot < m_pPlot->getNumAdditionalImprovements(); ++slot)
+		func(GC.getImprovementInfo(m_pPlot->getAdditionalImprovementType(slot)).getPropertyManipulators());
 
 	// Route Type
 	if (m_pPlot->getRouteType() != NO_ROUTE)
@@ -1405,7 +1408,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID) const
 		case GOM_IMPROVEMENT:
 		{
 			// Check plot on which the unit is
-			return m_pUnit->plot()->getImprovementType() == iID;
+			return m_pUnit->plot()->hasImprovement((ImprovementTypes)iID);
 		}
 		case GOM_UNITCOMBAT:
 		{
@@ -1507,7 +1510,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID) const
 		}
 		case GOM_IMPROVEMENT:
 		{
-			return m_pPlot->getImprovementType() == iID;
+			return m_pPlot->hasImprovement((ImprovementTypes)iID);
 		}
 		case GOM_UNITCOMBAT:
 		{

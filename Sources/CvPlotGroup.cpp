@@ -91,7 +91,7 @@ void CvPlotGroup::addPlot(CvPlot* pPlot, bool bRecalculateBonuses)
 	//	Add the zobrist contribution of this plot to the hash
 	m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
 	if ( pPlot->isCity() ||
-		 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
+		 (pPlot->hasAnyImprovement() && pPlot->getBonusType() != NO_BONUS) )
 	{
 		m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
 	}
@@ -134,7 +134,7 @@ void CvPlotGroup::removePlot(CvPlot* pPlot, bool bRecalculateBonuses)
 			//	Remove the zobrist contribution of this plot to the hash
 			m_zobristHashes.allNodesHash ^= pPlot->getZobristContribution();
 			if ( pPlot->isCity() ||
-				 (pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS) )
+				 (pPlot->hasAnyImprovement() && pPlot->getBonusType() != NO_BONUS) )
 			{
 				m_zobristHashes.resourceNodesHash ^= pPlot->getZobristContribution();
 			}
@@ -739,7 +739,7 @@ static bool zobristHashSetter(CvPlotGroup* onBehalfOf, CvPlot* pLoopPlot, void* 
 
 	parm->allNodesHash ^= pLoopPlot->getZobristContribution();
 	if ( pLoopPlot->isCity() ||
-		 (pLoopPlot->getImprovementType() != NO_IMPROVEMENT && pLoopPlot->getBonusType() != NO_BONUS) )
+		 (pLoopPlot->hasAnyImprovement() && pLoopPlot->getBonusType() != NO_BONUS) )
 	{
 		parm->resourceNodesHash ^= pLoopPlot->getZobristContribution();
 	}

@@ -16038,6 +16038,51 @@
 		<Height>4</Height>
 	</LNode>
 	<!-- Era Waterworked -->
+	<LNode Name="Leaf_Reef_Nets_4x4">
+		<Width>4</Width>
+		<Height>4</Height>
+		<Attribute Class="Scalar">bNotBFS:1</Attribute>
+		<Attribute Class="RegionTest">0NW</Attribute>
+		<!-- Fish -->
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS_ABOVE_REEF">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS_ABOVE_REEF">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Above_Reef_Medieval.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS_ABOVE_REEF">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Above_Reef_Renaissance.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS_ABOVE_REEF">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Above_Reef_Industrial.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS_ABOVE_REEF">
+			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
+			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
+			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
+			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Above_Reef_Modern.nif</Attribute>
+			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
+		</ArtRef>
+	</LNode>
 	<LProduction From="PLOT_ROOT">
 		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_WATER_WORKED,!IMPROVEMENT_MINE,!IMPROVEMENT_SHAFT_MINE,!IMPROVEMENT_MODERN_MINE,!IMPROVEMENT_PASTURE,!IMPROVEMENT_QUARRY,!IMPROVEMENT_WHALING_BOATS,!IMPROVEMENT_WINDMILL,!IMPROVEMENT_WATERMILL,!IMPROVEMENT_FORT,!IMPROVEMENT_GEOTHERMAL_FACTORY,!IMPROVEMENT_COMMAND_BUNKER,!IMPROVEMENT_COMMAND_CENTER,!IMPROVEMENT_DESERT_WINDMILL</Attribute>
 		<To Name="Node_12x12"/>
@@ -16822,6 +16867,13 @@
 		<To Name="Node_4x2">
 			<Translate>2.000000,1.000000</Translate>
 			<Rotate>90</Rotate>
+		</To>
+	</LProduction>
+	<LProduction From="PLOT_ROOT" Name="ReefFishingNetsProd">
+		<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Attribute>
+		<Attribute Class="Scalar">bNotBFS:1</Attribute>
+		<To Name="Leaf_Reef_Nets_4x4">
+			<Translate>0,0</Translate>
 		</To>
 	</LProduction>
 </LSystemInfos>

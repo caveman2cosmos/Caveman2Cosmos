@@ -3,6 +3,8 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "NavalDecisionDiagnostics.h"
+#include "AIPerf.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -179,6 +181,9 @@ static PlotSetCache* CachedPlotSets = NULL;
 
 void CvReachablePlotSet::ClearCache()
 {
+    NAVAL_DIAG_BARRIER();
+
+	AI_PERF_COUNT(REACHABLE_CLEARS, 1);
 	PROFILE_EXTRA_FUNC();
 	if (CachedPlotSets != NULL)
 	{
@@ -220,6 +225,7 @@ CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(const CvSelectionGroup
 		if (entry->plotSet->m_group == pGroup && entry->plotSet->m_iFlags == iFlags && entry->plotSet->m_iOutsideOwnedRange == iOutsideOwnedRange)
 		{
 			entry->iLRUSeq = CachedPlotSets->iNextLRU++;
+			AI_PERF_COUNT(REACHABLE_HITS, 1);
 			return entry->plotSet;
 		}
 		if (entry->iLRUSeq < iBestLRU)
@@ -229,17 +235,120 @@ CvReachablePlotSet* CvReachablePlotSet::findCachedPlotSet(const CvSelectionGroup
 		}
 	}
 
+	AI_PERF_COUNT(REACHABLE_MISSES, 1);
+	if (pLRUEntry->plotSet != NULL) AI_PERF_COUNT(REACHABLE_EVICTIONS, 1);
 	SAFE_DELETE(pLRUEntry->plotSet);
 
+#ifdef C2C_AI_PERF_BASELINE
 	pLRUEntry->plotSet = new CvReachablePlotSet(pGroup, iFlags);
+#else
+	// Preserve the full lookup key. Population uses the caller's border limit;
+	// forgetting it here makes every limited-border lookup miss the cache.
+	pLRUEntry->plotSet = new CvReachablePlotSet(pGroup, iFlags, -1, true, iOutsideOwnedRange);
+#endif
 	pLRUEntry->plotSet->m_reachablePlots = new stdext::hash_map<CvPlot*,CvReachablePlotInfo>();
 	pLRUEntry->iLRUSeq = CachedPlotSets->iNextLRU++;
 
 	return pLRUEntry->plotSet;
 }
 
+bool CvReachablePlotSet::containsWithinRange(CvPlot* plot, int iRange)
+{
+ if (m_iRange < iRange) Populate(iRange);
+ return find(plot) != end();
+}
+
+bool CvReachablePlotSet::tryPopulateFromCache(int iRange)
+{
+	if (iRange < 0) return false;
+	if (m_iRange >= iRange) return true;
+	if (!m_bCachable || CachedPlotSets == NULL) return false;
+	for (int i = 0; i < PLOT_SET_CACHE_SIZE; ++i)
+	{
+		CvReachablePlotSetCacheEntry& entry = CachedPlotSets->cacheEntries[i];
+		if (entry.plotSet != NULL && entry.plotSet->m_group == m_group
+			&& entry.plotSet->m_iFlags == m_iFlags
+			&& entry.plotSet->m_iOutsideOwnedRange == m_iOutsideOwnedRange)
+		{
+			if (entry.plotSet->m_iRange < iRange) return false;
+			m_proxyTo = entry.plotSet;
+			m_iRange = iRange;
+			entry.iLRUSeq = CachedPlotSets->iNextLRU++;
+			return true;
+		}
+	}
+	return false;
+}
+
+void CvReachablePlotSet::PopulateForTargets(const std::vector<CvPlot*>& targets, int iRange)
+{
+    NAVAL_DIAG_QUERY(TARGET_FLOOD,m_group->getOwner(),m_group->getID(),m_group->plot()->getX(),m_group->plot()->getY(),m_iFlags,iRange,m_iOutsideOwnedRange,m_bCachable,((int)targets.size()),0,0);
+
+ if (targets.empty())
+ {
+  if (m_iRange == -1 && m_reachablePlots == NULL && m_proxyTo == NULL)
+  {m_bCachable=false;m_reachablePlots=new stdext::hash_map<CvPlot*,CvReachablePlotInfo>();m_iRange=0;}
+  NAVAL_DIAG_VOID_RETURN(m_iRange,m_proxyTo!=NULL);
+ }
+ if (tryPopulateFromCache(iRange)) NAVAL_DIAG_VOID_RETURN(m_iRange,m_proxyTo!=NULL);
+ // Existing populated objects retain the ordinary expansion contract. The
+ // optimized consumers create a fresh view and call this only once.
+ if (m_iRange != -1 || m_reachablePlots != NULL || m_proxyTo != NULL)
+ {
+  if (m_bCachable || m_proxyTo != NULL) {Populate(iRange);NAVAL_DIAG_VOID_RETURN(m_iRange,m_proxyTo!=NULL);}
+  // A previous private target view may be incomplete. Rebuild privately;
+  // never extend it as though it were the ordinary complete-range cache.
+  SAFE_DELETE(m_reachablePlots);m_iRange=-1;
+ }
+ PlotDangerCacheScope dangerCache(m_group->getOwner());
+ AI_PERF_SCOPE(REACHABLE_POPULATE);
+ m_bCachable = false;
+ m_reachablePlots = new stdext::hash_map<CvPlot*,CvReachablePlotInfo>();
+ CvReachablePlotInfo info;memset(&info,0,sizeof(info));
+ (*m_reachablePlots)[m_group->plot()] = info;
+ std::vector<std::pair<CvPlot*,int> > seeds;
+ seeds.push_back(std::make_pair(m_group->plot(),0));
+ m_iRange = 0;
+ enumerateReachablePlotsInternal(iRange,1,seeds,&targets,&m_iRange);
+    NAVAL_DIAG_FINISH(m_iRange,m_proxyTo!=NULL);
+}
+
+namespace {
+// VC71 hash_map is an append-only linear hash here. Its iteration order is
+// bucket then key order. Reconstruct that order for the small boundary only;
+// do not change BFS tie order or depend on private STL layout. Other toolchains
+// retain the original full-map scan until separately validated.
+#if defined(_MSC_VER) && _MSC_VER == 1310
+struct ReachableFrontierOrder
+{
+ typedef stdext::hash_map<CvPlot*,CvReachablePlotInfo> Map;
+ Map::key_compare compare;size_t mask,maximum;
+ ReachableFrontierOrder(const Map& map):compare(map.key_comp()),mask(1),maximum(std::max((size_t)1,(map.size()+Map::bucket_size-1)/Map::bucket_size))
+ {while(mask<maximum-1)mask=(mask<<1)+1;}
+ size_t bucket(CvPlot* p)const{size_t b=compare(p)&mask;return b<maximum?b:b-((mask>>1)+1);}
+ bool operator()(const std::pair<CvPlot*,int>& a,const std::pair<CvPlot*,int>& b)const
+ {const size_t x=bucket(a.first),y=bucket(b.first);return x!=y?x<y:compare(a.first,b.first);}
+};
+#endif
+bool orderReachableFrontier(const stdext::hash_map<CvPlot*,CvReachablePlotInfo>& map,std::vector<std::pair<CvPlot*,int> >& frontier)
+{
+#if defined(_MSC_VER) && _MSC_VER == 1310
+ if (map.size()<512) return false;
+ std::sort(frontier.begin(),frontier.end(),ReachableFrontierOrder(map));return true;
+#else
+ return false;
+#endif
+}
+}
+
 void CvReachablePlotSet::Populate(int iRange)
 {
+    NAVAL_DIAG_QUERY(FLOOD,m_group->getOwner(),m_group->getID(),m_group->plot()->getX(),m_group->plot()->getY(),m_iFlags,iRange,m_iOutsideOwnedRange,m_bCachable,0,0,0);
+
+	// The flood only reads gameplay state. Share danger answers between its
+	// repeated destination tests, but never across moves or separate floods.
+	PlotDangerCacheScope dangerCache(m_group->getOwner());
+	AI_PERF_SCOPE(REACHABLE_POPULATE);
 	PROFILE_FUNC();
 
 	if (m_bCachable)
@@ -253,12 +362,15 @@ void CvReachablePlotSet::Populate(int iRange)
 	else
 	{
 		m_reachablePlots->clear();
+        m_savedFrontier.erase(m_savedFrontier.begin(),m_savedFrontier.end());
 	}
 	m_iRange = getRange();
 
 	if (m_iRange < iRange)
 	{
+		AI_PERF_SCOPE(REACHABLE_EXPANSION);
 		std::vector<std::pair<CvPlot*,int> > seedPlots;
+        CvReachablePlotSet* storage=m_proxyTo==NULL?this:m_proxyTo;
 
 		if ( m_iRange == -1 )
 		{
@@ -276,19 +388,23 @@ void CvReachablePlotSet::Populate(int iRange)
 		}
 		else
 		{
-			for(CvReachablePlotSet::const_iterator itr = begin(), itrend = end(); itr != itrend; ++itr)
-			{
-				if ( itr.stepDistance() == m_iRange )
-				{
-					seedPlots.push_back(std::make_pair(itr.plot(), itr.outsideBorderDistance()));
-				}
-			}
+            seedPlots=storage->m_savedFrontier;
+            if (m_iRange<16 || !orderReachableFrontier(*storage->m_reachablePlots,seedPlots))
+            {
+                seedPlots.erase(seedPlots.begin(),seedPlots.end());
+                for(CvReachablePlotSet::const_iterator itr=begin(),itrend=end();itr!=itrend;++itr)
+                {
+                    if (itr.stepDistance()==m_iRange)
+                        seedPlots.push_back(std::make_pair(itr.plot(),itr.outsideBorderDistance()));
+                }
+            }
 		}
 		enumerateReachablePlotsInternal(iRange - getRange(), getRange()+1, seedPlots);
 		setRange(iRange);
 	}
 
 	m_iRange = iRange;
+    NAVAL_DIAG_FINISH(m_iRange,m_proxyTo!=NULL);
 }
 
 bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags)
@@ -354,29 +470,72 @@ bool CvReachablePlotSet::canMoveBetweenWithFlags(const CvSelectionGroup* group, 
 	return moveToValid(group, pToPlot, iFlags);
 }
 
-void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*,int> >& prevRing)
+void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*,int> >& prevRing, const std::vector<CvPlot*>* targets, int* completedDepth)
 {
-	PROFILE_EXTRA_FUNC();
-	if (iRange > 0 && !prevRing.empty())
-	{
-		std::vector<std::pair<CvPlot*,int> >	nextRing;
+    NAVAL_DIAG_FLOOD_BEGIN();
 
-		stdext::hash_map<CvPlot*, CvReachablePlotInfo>* reachablePlots = (m_proxyTo == NULL ? m_reachablePlots : m_proxyTo->m_reachablePlots);
+	PROFILE_EXTRA_FUNC();
+	if (completedDepth) *completedDepth = iDepth - 1;
+	if (iRange <= 0 || prevRing.empty())
+	{
+		return;
+	}
+
+	stdext::hash_map<CvPlot*, CvReachablePlotInfo>* reachablePlots = (m_proxyTo == NULL ? m_reachablePlots : m_proxyTo->m_reachablePlots);
+	const int iWidth = GC.getMap().getGridWidth();
+	// Membership is needed for every adjacent edge. Keep the original hash map
+	// for metadata and iteration order, but use a flood-local bit per map plot
+	// for these repeated lookups. No answers survive this read-only flood.
+	std::vector<unsigned int> visited((GC.getMap().numPlots() + 31) / 32, 0);
+	// Rejected terminal predicates are independent of the incoming edge.
+	// Every edge still runs its normal validation; reuse only within this flood.
+	std::vector<unsigned int> rejectedTerminals(visited.size(), 0);
+	for (stdext::hash_map<CvPlot*, CvReachablePlotInfo>::const_iterator itr = reachablePlots->begin(); itr != reachablePlots->end(); ++itr)
+	{
+		const int iPlot = itr->first->getY() * iWidth + itr->first->getX();
+		visited[iPlot >> 5] |= 1U << (iPlot & 31);
+	}
+    CvReachablePlotSet* storage=m_proxyTo==NULL?this:m_proxyTo;
+    std::vector<std::pair<CvPlot*,int> >& saved=storage->m_savedFrontier;
+    saved.erase(saved.begin(),saved.end());
+	std::vector<std::pair<CvPlot*,int> > nextRing;
+	while (iRange > 0 && !prevRing.empty())
+	{
+        if (targets != NULL)
+        {
+            bool complete = true;
+            for (size_t t=0;t<targets->size();++t)
+            {
+                const CvPlot* p=(*targets)[t];
+                const int id=p->getY()*iWidth+p->getX();
+                if (!(visited[id>>5] & (1U<<(id&31)))) {complete=false;break;}
+            }
+            if (complete) break;
+        }
+		// VC71 clear() releases capacity; erase keeps this frontier reusable.
+		nextRing.erase(nextRing.begin(), nextRing.end());
 
 		for (std::vector<std::pair<CvPlot*,int> >::const_iterator itr = prevRing.begin(), itrend = prevRing.end(); itr != itrend; ++itr)
 		{
+            NAVAL_DIAG_FLOOD_NODE();
 			foreach_(CvPlot* pAdjacentPlot, (*itr).first->adjacent())
 			{
-				if (reachablePlots->find(pAdjacentPlot) == reachablePlots->end())
+				NAVAL_DIAG_FLOOD_EDGE();
+				const int iPlot = pAdjacentPlot->getY() * iWidth + pAdjacentPlot->getX();
+				const unsigned int iMask = 1U << (iPlot & 31);
+				if (!(visited[iPlot >> 5] & iMask))
 				{
 					bool bValidAsTerminus = false;
 					bool bValid = ContextFreeNewPathValidFunc(m_group, (*itr).first->getX(), (*itr).first->getY(), pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, false, false, 0, NULL, &bValidAsTerminus);
 
-					if (!bValid)
+					// A failed edge may already be legal as a terminal node. The
+					// fallback only adds that fact; do not re-evaluate it when known.
+					if (!bValid && !bValidAsTerminus && !(rejectedTerminals[iPlot >> 5] & iMask))
 					{
 						bool bDummy;
 
 						bValidAsTerminus |= NewPathDestValid(m_group, pAdjacentPlot->getX(), pAdjacentPlot->getY(), m_iFlags, bDummy);
+						if (!bValidAsTerminus) rejectedTerminals[iPlot >> 5] |= iMask;
 					}
 
 					//if ( canMoveBetweenWithFlags(m_group, (*itr), pAdjacentPlot, m_iFlags) )
@@ -401,7 +560,9 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 							info.iOutsideOwnedDistance = 0;
 						}
 
-						(*reachablePlots)[pAdjacentPlot] = info;
+						visited[iPlot >> 5] |= iMask;
+						reachablePlots->insert(std::make_pair(pAdjacentPlot, info));
+                        if (iRange==1 && iDepth>=16) saved.push_back(std::make_pair(pAdjacentPlot,info.iOutsideOwnedDistance));
 
 						if (bValid && pAdjacentPlot->isRevealed(m_group->getTeam(), false))
 						{
@@ -411,6 +572,11 @@ void CvReachablePlotSet::enumerateReachablePlotsInternal(int iRange, int iDepth,
 				}
 			}
 		}
-		enumerateReachablePlotsInternal(iRange - 1, iDepth + 1, nextRing);
+		// Reuse the two frontiers without changing discovery or insertion order.
+		prevRing.swap(nextRing);
+		--iRange;
+		++iDepth;
+		if (completedDepth) *completedDepth = iDepth - 1;
 	}
+    NAVAL_DIAG_FLOOD_END();
 }

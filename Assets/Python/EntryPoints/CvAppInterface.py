@@ -58,6 +58,16 @@ def preGameStart():
 def recalculateModifiers():
 	import CvRandomEventInterface
 	CvRandomEventInterface.recalculateModifiers()
+	import NativePromotions
+	NativePromotions.recalculateModifiers()
+
+def enableNativePromotionsFromLegacySave():
+	import NativePromotions
+	NativePromotions.enableFromLegacySave()
+
+def enablePrimitiveMapsFromLegacySave():
+	import PrimitiveMaps
+	PrimitiveMaps.enableFromLegacySave()
 
 def onPbemSend(argsList):
 	import smtplib, MimeWriter, base64, StringIO

@@ -17,6 +17,9 @@ void CyGamePythonInterface()
 	python::class_<CyGame>("CyGame")
 
 		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
+#ifdef C2C_PERFORMANCE_PORT_TEST
+        .def("recalculateModifiersForBenchmark", &CyGame::recalculateModifiersForBenchmark)
+#endif
 
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
 
@@ -172,6 +175,7 @@ void CyGamePythonInterface()
 		.def("getTeamScore", &CyGame::getTeamScore)
 		.def("isOption", &CyGame::isOption, "bool (eIndex) - returns whether Game Option is valid")
 		.def("setOption", &CyGame::setOption, "void (GameOptionIndex, bEnabled) - sets a Game Option")
+		.def("refreshNativePromotionBuildings", &CyGame::refreshNativePromotionBuildings, "void () - update Native origin effects without granting promotions to existing units")
 		.def("isMPOption", &CyGame::isMPOption, "bool (eIndex) - returns whether MP Option is valid")
 		.def("isForcedControl", &CyGame::isForcedControl, "bool (eIndex) - returns whether Control should be forced")
 		.def("getUnitCreatedCount", &CyGame::getUnitCreatedCount, "int (eIndex) - returns number of this unit type created (?)")

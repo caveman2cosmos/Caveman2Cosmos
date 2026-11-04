@@ -214,8 +214,8 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	PROFILE_EXTRA_FUNC();
 	AI_uninit();
 
-	m_iStuckBusyGroupID = -1;
-	m_iStuckBusyGroupTicks = 0;
+	m_iStuckGroupID = -1;
+	m_iStuckGroupTicks = 0;
 	m_stuckUnitRecoveryCounts.clear();
 
 	m_iPeaceWeight = 0;
@@ -1550,6 +1550,63 @@ void CvPlayerAI::AI_unitUpdate()
 				if (pLoopSelectionGroup && pLoopSelectionGroup->AI_update())
 				{
 					FAssert(pLoopSelectionGroup && pLoopSelectionGroup->getNumUnits() > 0);
+
+					// Companion to the hasBusyUnit() watchdog below: that one can only see a group
+					// that's stuck busy, but a group whose AI_update() keeps "doing something" (and
+					// so returning true, stopping this loop for the tick) without that ever actually
+					// making it busy would never trip it, since hasBusyUnit() never becomes true. If
+					// the exact same group keeps winning this pick every tick, it's stuck the same
+					// way, just without the busy flag - force it to finish for the same reason.
+					if (groupList[i].second == m_iStuckGroupID)
+					{
+						if (++m_iStuckGroupTicks > 100)
+						{
+							CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
+							const int iRecoveryCount = (pHeadUnit != NULL)
+								? ++m_stuckUnitRecoveryCounts[pHeadUnit->getID()]
+								: 0;
+							const bool bScrap = (pHeadUnit != NULL) && (iRecoveryCount >= 3);
+
+							char szOut[1024];
+							if (pHeadUnit != NULL)
+							{
+								CvWString szTempString;
+								getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+								sprintf(szOut, "Player %d (%S) group %d stuck re-deciding without going busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
+									getID(), getName(), pLoopSelectionGroup->getID(), m_iStuckGroupTicks, iRecoveryCount,
+									bScrap ? "scrapping the unit" : "forcing it to finish",
+									pHeadUnit->getName().GetCString(), pLoopSelectionGroup->getNumUnits(),
+									pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+							}
+							else
+							{
+								sprintf(szOut, "Player %d (%S) group %d stuck re-deciding without going busy for %d ticks with no head unit - forcing it to finish\n",
+									getID(), getName(), pLoopSelectionGroup->getID(), m_iStuckGroupTicks);
+							}
+							gDLL->messageControlLog(szOut);
+							FErrorMsg(szOut);
+
+							if (bScrap)
+							{
+								m_stuckUnitRecoveryCounts.erase(pHeadUnit->getID());
+								pHeadUnit->scrap(); // may be a delayed death - group/remaining units still need releasing below
+							}
+
+							pLoopSelectionGroup->clearMissionQueue();
+							foreach_(CvUnit* pUnit, pLoopSelectionGroup->units())
+							{
+								pUnit->finishMoves();
+							}
+
+							m_iStuckGroupID = -1;
+							m_iStuckGroupTicks = 0;
+						}
+					}
+					else
+					{
+						m_iStuckGroupID = groupList[i].second;
+						m_iStuckGroupTicks = 1;
+					}
 					break;
 				}
 			}
@@ -1576,9 +1633,9 @@ void CvPlayerAI::AI_unitUpdate()
 			break;
 		}
 
-		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckBusyGroupID)
+		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckGroupID)
 		{
-			if (++m_iStuckBusyGroupTicks > 500)
+			if (++m_iStuckGroupTicks > 100)
 			{
 				CvUnit* pHeadUnit = pBusyGroup->getHeadUnit();
 
@@ -1597,7 +1654,7 @@ void CvPlayerAI::AI_unitUpdate()
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
-						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks, iRecoveryCount,
+						getID(), getName(), pBusyGroup->getID(), m_iStuckGroupTicks, iRecoveryCount,
 						bScrap ? "scrapping the unit" : "forcing it to finish",
 						pHeadUnit->getName().GetCString(), pBusyGroup->getNumUnits(),
 						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
@@ -1605,7 +1662,7 @@ void CvPlayerAI::AI_unitUpdate()
 				else
 				{
 					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks with no head unit - forcing it to finish\n",
-						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks);
+						getID(), getName(), pBusyGroup->getID(), m_iStuckGroupTicks);
 				}
 				gDLL->messageControlLog(szOut);
 				FErrorMsg(szOut);
@@ -1622,14 +1679,14 @@ void CvPlayerAI::AI_unitUpdate()
 					pUnit->finishMoves();
 				}
 
-				m_iStuckBusyGroupID = -1;
-				m_iStuckBusyGroupTicks = 0;
+				m_iStuckGroupID = -1;
+				m_iStuckGroupTicks = 0;
 			}
 		}
 		else
 		{
-			m_iStuckBusyGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
-			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
+			m_iStuckGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
+			m_iStuckGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
 		}
 	}
 }

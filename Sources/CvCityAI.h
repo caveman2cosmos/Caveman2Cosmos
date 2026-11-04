@@ -813,6 +813,7 @@ private:
 
 	bool buildingMayHaveAnyValue(BuildingTypes eBuilding, int iFocusFlags) const;
 	void CalculateAllBuildingValues(int iFocusFlags);
+	void AI_collectBuildingCandidates(std::vector<BuildingTypes>& candidates, int flags, int threshold, bool maximize, PropertyTypes property);
 	int happynessValue(int iAddedHappyness, int iBaseHappinessLevel, int iBaseHealthLevel) const;
 	int healthValue(int iAddedHealth, int iUseHappinessLevel, int iBaseHealthLevel, int iBaseFoodDifference) const;
 	int worstWorkedPlotValue() const;

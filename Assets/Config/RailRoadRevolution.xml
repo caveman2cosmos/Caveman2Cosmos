@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Native module; Python exposes UI helpers and has no turn-event handlers. -->
+<mod id="RailRoadRevolution" module="RailRoadRevolution"/>

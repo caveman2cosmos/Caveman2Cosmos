@@ -870,6 +870,7 @@ public:
 	DllExport void handleDiplomacySetAIComment(DiploCommentTypes eComment) const;
 
 	void recalculateModifiers();
+	void refreshNativePromotionBuildings();
 
 	void ensureChokePointsEvaluated();
 	int getBaseAirUnitIncrementsbyCargoVolume() const;

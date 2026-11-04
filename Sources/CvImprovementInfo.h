@@ -35,6 +35,8 @@ public:
 	bool isPeakImprovement() const;
 	bool isWaterImprovement() const;
 	bool isOutsideBorders() const;
+	bool isSecondaryLayer() const { return m_bSecondaryLayer; }
+	int getSecondaryLayerBit() const { return m_iSecondaryLayerBit; }
 	bool isMilitaryStructure() const { return m_bMilitaryStructure; }
 	bool isPlacesBonus() const { return m_bPlacesBonus; }
 	bool isPlacesFeature() const { return m_bPlacesFeature; }
@@ -206,6 +208,9 @@ private:
 	std::vector<int> m_aiCategories;
 
 	CvPropertyManipulators m_PropertyManipulators;
+	// Keep existing engine-visible fields at their original offsets.
+	bool m_bSecondaryLayer;
+	int m_iSecondaryLayerBit;
 
 	//Post Load Functions
 	//int m_iHighestCost;

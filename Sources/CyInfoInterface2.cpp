@@ -145,6 +145,7 @@ void CyInfoPythonInterface2()
 
 	python::class_<CvImprovementInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvImprovementInfo", python::no_init)
 
+		.def("isSecondaryLayer", &CvImprovementInfo::isSecondaryLayer)
 		.def("getTilesPerGoody", &CvImprovementInfo::getTilesPerGoody, "int ()")
 		.def("getGoodyUniqueRange", &CvImprovementInfo::getGoodyUniqueRange, "int ()")
 		.def("getUpgradeTime", &CvImprovementInfo::getUpgradeTime, "int ()")

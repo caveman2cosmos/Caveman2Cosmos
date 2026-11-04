@@ -319,7 +319,8 @@ m_bCanAnimalIgnoresImprovements(false),
 m_bCanAnimalIgnoresCities(false),
 m_bNoNonTypeProdMods(false),
 m_bGatherHerd(false),
-m_bCanMergeSplit(true)
+m_bCanMergeSplit(true),
+m_bRailOnly(false)
 {
 	CvInfoUtil(this).initDataMembers();
 
@@ -1261,7 +1262,7 @@ bool CvUnitInfo::isUnitUpgrade(int i) const
 }
 
 
-std::vector<int> CvUnitInfo::getUnitUpgradeChain() const
+const std::vector<int>& CvUnitInfo::getUnitUpgradeChain() const
 {
 	return m_aiUnitUpgradeChain;
 }
@@ -3753,6 +3754,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bForceUpgrade);
 	CheckSum(iSum, m_bGreatGeneral);
 	CheckSum(iSum, m_bSlave);
+	CheckSum(iSum, m_bRailOnly);
 	CheckSum(iSum, m_iPrereqVicinityBonus);
 	CheckSum(iSum, m_iBaseFoodChange);
 	CheckSum(iSum, m_iControlPoints);
@@ -4408,6 +4410,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bForceUpgrade, L"bForceUpgrade");
 	pXML->GetOptionalChildXmlValByName(&m_bGreatGeneral, L"bGreatGeneral");
 	pXML->GetOptionalChildXmlValByName(&m_bSlave, L"bSlave");
+	pXML->GetOptionalChildXmlValByName(&m_bRailOnly, L"bRailOnly");
 	pXML->GetOptionalChildXmlValByName(&m_bRequiresStateReligionInCity, L"bRequiresStateReligionInCity");
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonusType");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
@@ -5425,6 +5428,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bForceUpgrade == bDefault )	m_bForceUpgrade = pClassInfo->isForceUpgrade();
 	if ( m_bGreatGeneral == bDefault )	m_bGreatGeneral = pClassInfo->isGreatGeneral();
 	if ( m_bSlave == bDefault )	m_bSlave = pClassInfo->isSlave();
+	if (m_bRailOnly == bDefault) m_bRailOnly = pClassInfo->isRailOnly();
 	if ( m_iBaseFoodChange == iDefault )	m_iBaseFoodChange = pClassInfo->getBaseFoodChange();
 	if ( m_iControlPoints == iDefault )	m_iControlPoints = pClassInfo->getControlPoints();
 	if ( m_iCommandRange == iDefault )	m_iCommandRange = pClassInfo->getCommandRange();

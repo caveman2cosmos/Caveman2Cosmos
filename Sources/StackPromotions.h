@@ -20,6 +20,29 @@ namespace StackPromotions
         Effects();
     };
 
+    // AI planning always omits derived Aid, including nested combat estimates.
+    // Only explicit mechanical/UI roots can restore exact effects inside planning.
+    // A scope never stores its approximation in the exact effect cache.
+    class EvaluationScope
+    {
+        bool previous;
+        bool previousPlanning;
+        EvaluationScope(const EvaluationScope&);
+        EvaluationScope& operator=(const EvaluationScope&);
+    public:
+        explicit EvaluationScope(bool exact);
+        ~EvaluationScope();
+    };
+    class MechanicsScope
+    {
+        MechanicsScope(const MechanicsScope&);
+        MechanicsScope& operator=(const MechanicsScope&);
+    public:
+        MechanicsScope();
+        ~MechanicsScope();
+    };
+    bool detailed();
+    bool detailedForCombat(bool concreteOpponent);
     bool enabled();
     bool eligible(const CvUnit& unit);
     const Effects& effects(const CvUnit& unit, const CvPlot* at = NULL);

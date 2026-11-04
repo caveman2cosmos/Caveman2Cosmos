@@ -8,6 +8,7 @@
 
 from CvPythonExtensions import CyGlobalContext, GameOptionTypes
 import BugOptionsTab
+import DoctrineOptions
 
 class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
@@ -78,12 +79,14 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__GreaterGreatFarmer"), bCanAdjustSettings)
 
+		DoctrineOptions.sync()
 		#Game Settings
 		self.addLabel(screen, right, "RoMSettings__GameSettings")
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__DefenderWithdraw"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BetterAirInterception"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__BattlefieldPromotions"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "MilitaryDoctrines__Enabled"), DoctrineOptions.canChange())
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__Starsigns"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ImprovedXP"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__WarPrizes"), bCanAdjustSettings)

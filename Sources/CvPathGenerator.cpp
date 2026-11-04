@@ -1,6 +1,13 @@
 //	Internal path generation engine
 
 #include "CvGameCoreDLL.h"
+#include "NavalDecisionDiagnostics.h"
+#include "PathDestinationCheck.h"
+#include "CvPlot.h"
+#include "CvUnit.h"
+#include "PathHeuristicCache.h"
+#include "PathQueueReset.h"
+#include "AIPerf.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
@@ -292,6 +299,7 @@ void CvPathGenerator::ValidatePlotInfo(CvPathGeneratorPlotInfo* pPlotInfo)
 
 CvPathGenerator::CvPathGenerator(CvMap* pMap)
 	: m_map(pMap)
+	, m_limitRoadCorridor(false)
 	, m_plotInfo(new CvPathPlotInfoStore(pMap, 0))
 	, m_nodeAllocationPool(new CvAllocationPool<CvPathNode>())
 	, m_bFoundRoute(false)
@@ -506,9 +514,10 @@ void CvPathGenerator::AdjustChildTreeCosts(CvPathNode* node, int iAmount, bool b
 
 			if (node->m_plot)
 			{
+				CvPlot* const* nodeNeighbors = GC.getMap().pathNeighbors(node->m_plot);
 				for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++ )
 				{
-					CvPlot* pAdjacentPlot = plotDirection(node->m_plot->getX(), node->m_plot->getY(), (DirectionTypes)iI);
+					CvPlot* pAdjacentPlot = nodeNeighbors[iI];
 					if (pAdjacentPlot)
 					{
 						CvPathGeneratorPlotInfo* pAdjacentInfo = m_plotInfo->getPlotInfo(pAdjacentPlot, false);
@@ -579,9 +588,10 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 		}
 	}
 
+	CvPlot* const* nodeNeighbors = GC.getMap().pathNeighbors(node->m_plot);
 	for(int iI = 0; iI < NUM_DIRECTION_TYPES; iI++ )
 	{
-		CvPlot* pAdjacentPlot = plotDirection(node->m_plot->getX(), node->m_plot->getY(), (DirectionTypes)iI);
+		CvPlot* pAdjacentPlot = nodeNeighbors[iI];
 		if (pAdjacentPlot)
 		{
 			CvPathGeneratorPlotInfo* pAdjacentInfo = m_plotInfo->getPlotInfo(pAdjacentPlot, false);
@@ -626,16 +636,20 @@ void CvPathGenerator::DeleteChildTree(CvPathNode* node, bool bIsDeletionRoot)
 bool CvPathGenerator::groupMatches(const CvSelectionGroup* pGroup, int iFlags, uint32_t& iGroupMembershipChecksum)
 {
 	PROFILE_EXTRA_FUNC();
-	if (m_iFlags != iFlags || m_iTurn != GC.getGame().getGameTurn())
-	{
-		return false;
-	}
+	// The caller stores this output even on a miss (new flags/turn/group).
+	// Unit IDs are player-local, so include the owner in cache identity.
 	iGroupMembershipChecksum = 0;
+	CheckSum(iGroupMembershipChecksum, (uint32_t)pGroup->getOwner());
 
 	foreach_(const CvUnit* pLoopUnit, pGroup->units())
 	{
 		CheckSum(iGroupMembershipChecksum, pLoopUnit->getID());
 	}
+	if (m_iFlags != iFlags || m_iTurn != GC.getGame().getGameTurn())
+	{
+		return false;
+	}
+
 	return m_currentGroupMembershipChecksum == iGroupMembershipChecksum;
 }
 
@@ -760,8 +774,73 @@ static void ValidatePathNode(CvPathNode* node)
 #endif
 
 
+namespace {
+    struct OwnedRoadGraph {
+        CvMap* map; PlayerTypes owner; TeamTypes team;
+        OwnedRoadGraph(CvMap* m,const CvSelectionGroup* g):map(m),owner(g->getHeadOwner()),team(g->getHeadTeam()){}
+        int size()const{return map->numPlots();}
+        bool land(int id)const{const CvPlot* p=map->plotByIndex(id);return p->getOwner()==owner && !p->isWater() && p->isRevealed(team,false);}
+        bool road(int id)const{const CvPlot* p=map->plotByIndex(id);return land(id) && (p->isRoute() || p->isCity());}
+        int neighbor(int id,int d)const{const CvPlot* p=map->plotByIndex(id);const CvPlot* n=plotDirection(p->getX(),p->getY(),(DirectionTypes)d);return n?map->plotNum(n->getX(),n->getY()):-1;}
+    };
+}
+
 bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
 {
+    // Preserve existing tree/path reuse before attempting any extra guide.
+    uint32_t checksum;
+    if(pGroup && pGroup->getHeadUnit() && !pGroup->isHuman()
+        && pGroup->getDomainType()==DOMAIN_LAND && iMaxTurns>1
+        && pFrom->getArea()==pTo->getArea()
+        && !(iFlags&(MOVE_DECLARE_WAR|MOVE_THROUGH_ENEMY|MOVE_DIRECT_ATTACK))
+        && stepDistance(pFrom->getX(),pFrom->getY(),pTo->getX(),pTo->getY())>12
+        && !groupMatches(pGroup,iFlags&SIGNIFICANT_PATHING_FLAGS,checksum))
+    {
+        // Reject illegal destinations before BFS/reset. Reuse only within
+        // this read-only query, including its restricted search and fallback.
+        PathDestinationCheck destination(this,pGroup,pTo->getX(),pTo->getY(),iFlags&SIGNIFICANT_PATHING_FLAGS,m_TerminusValidFunc);
+        if(!destination.valid()||destination.requiresWar())
+            return generatePathInternal(pFrom,pTo,pGroup,iFlags,iMaxTurns,iOptimizationLimit);
+        bool guide;
+        {
+
+            const OwnedRoadGraph graph(m_map,pGroup);
+            guide=m_roadCorridor.build(graph,m_map->plotNum(pFrom->getX(),pFrom->getY()),m_map->plotNum(pTo->getX(),pTo->getY()));
+
+        }
+        if(guide)
+        {
+
+            reset();m_limitRoadCorridor=true;
+            bool found;
+            {found=generatePathInternal(pFrom,pTo,pGroup,iFlags,iMaxTurns,iOptimizationLimit);}
+            m_limitRoadCorridor=false;
+            // Restricted trees must never answer a later unrestricted query.
+            // reset leaves the returned path alive until the next query.
+            reset();
+            if(found){return true;}
+
+        }
+        return generatePathInternal(pFrom,pTo,pGroup,iFlags,iMaxTurns,iOptimizationLimit);
+    }
+    return generatePathInternal(pFrom,pTo,pGroup,iFlags,iMaxTurns,iOptimizationLimit);
+}
+
+bool CvPathGenerator::generatePathInternal(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
+{
+    NAVAL_DIAG_QUERY(ASTAR,pGroup?pGroup->getOwner():-1,pGroup?pGroup->getID():-1,pFrom?pFrom->getX():-1,pFrom?pFrom->getY():-1,pTo?pTo->getX():-1,pTo?pTo->getY():-1,iFlags,iMaxTurns,iOptimizationLimit,0,0);
+    NAVAL_DIAG_NODES(m_nodesProcessed,m_nodesCosted);
+
+	// Never retain boolean safety across gameplay mutations.
+	PlotDangerCacheScope dangerCache(pGroup ? pGroup->getOwner() : NO_PLAYER);
+	PathHeuristicContext heuristicContext(pGroup,true,pGroup && pGroup->getHeadUnit() && pGroup->getDomainType()==DOMAIN_LAND);
+	AI_PERF_SCOPE(PATH);
+	AI_PERF_COUNT(PATH_REQUESTS, 1);
+	if(iMaxTurns>16)AI_PERF_COUNT(PATH_LONG_REQUESTS,1);
+#ifdef C2C_AI_PERF_ENABLE
+	const int iNodesProcessedBefore = m_nodesProcessed;
+	const int iNodesCostedBefore = m_nodesCosted;
+#endif
 	PROFILE_FUNC();
 	PROFILE_BEGIN_CONDITIONAL("CvPathGenerator::generatePath.Success", "CvPathGenerator::generatePath.Failure",PATH1);
 
@@ -780,7 +859,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 	bool bRequiresWar;
 
-	if (!m_TerminusValidFunc(pGroup, pTo->getX(), pTo->getY(), iFlags, bRequiresWar))
+	if (!PathDestinationCheck::validate(this,pGroup,pTo->getX(),pTo->getY(),iFlags,m_TerminusValidFunc,bRequiresWar))
 	{
 		m_generatedPath.Set(NULL);
 		bResult = false;
@@ -824,14 +903,23 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		&& m_pBestTerminalNode
 		&& m_pBestTerminalNode->m_iPathTurns <= iMaxTurns)
 		{
+			AI_PERF_SCOPE(PATH_REUSE_VALIDATION);
 			bExistingValid = true;
 			m_generatedPath.trimBefore(pFrom);
 
 			// Validate we can still follow this path (visibility may have changed)
 			for (CvPath::const_iterator itr = m_generatedPath.begin(); itr != m_generatedPath.end(); ++itr)
 			{
-				if (itr.plot() != pFrom && !moveToValid(pGroup, itr.plot(), iFlags))
+				if (itr.plot() != pFrom && itr.plot() != pTo && !moveToValid(pGroup, itr.plot(), iFlags))
 				{
+					// Live passage disagrees with the cached route. Drop the
+					// frontier, plot validity and edge costs before replanning.
+					m_pFrom = NULL;
+					m_pBestTerminalNode = NULL;
+					m_pReplacedNonTerminalNode = NULL;
+					CvPlot::NextCachePathEpoch();
+					CvSelectionGroup::setGroupToCacheFor(NULL);
+					CvSelectionGroup::setGroupToCacheFor(pGroup);
 					bExistingValid = false;
 					break;
 				}
@@ -840,14 +928,19 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 
 		if (bExistingValid)
 		{
+			AI_PERF_COUNT(PATH_REUSED, 1);
 			bResult = true;
 		}
 		else
 		{
+			AI_PERF_COUNT(PATH_SEARCHES, 1);
 			m_generatedPath.Set(NULL);
 
 			if (!bSameGroup || pFrom != m_pFrom)
 			{
+				if (!bSameGroup) AI_PERF_COUNT(PATH_RESET_GROUP, 1);
+				else AI_PERF_COUNT(PATH_RESET_ORIGIN, 1);
+				resetPathQueue(m_priorityQueue);
 				m_nodeAllocationPool->reset();
 				m_plotInfo->reset();
 				m_iTurn = GC.getGame().getGameTurn();
@@ -1062,9 +1155,10 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 						}
 #endif
 						// Re-evaluate which adjacent plot to come at this plot from if the known node is not turn ending
+						CvPlot* const* terminalNeighbors = GC.getMap().pathNeighbors(pTo);
 						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 						{
-							CvPlot* pAdjacentPlot = plotDirection(pTo->getX(), pTo->getY(), (DirectionTypes)iI);
+							CvPlot* pAdjacentPlot = terminalNeighbors[iI];
 							if (pAdjacentPlot)
 							{
 								CvPathGeneratorPlotInfo* pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot, false);
@@ -1241,14 +1335,16 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 							continue;
 						}
 
+						CvPlot* const* plotNeighbors = GC.getMap().pathNeighbors(nodePlot);
 						for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 						{
 							VALIDATE_TREE(root, m_pReplacedNonTerminalNode, m_pBestTerminalNode);
 							VALIDATE_TREE(root, NULL, node);
 
-							CvPlot* pAdjacentPlot = plotDirection(nodePlot->getX(), nodePlot->getY(), (DirectionTypes)iI);
+							CvPlot* pAdjacentPlot = plotNeighbors[iI];
 
-							if (pAdjacentPlot && pAdjacentPlot != pFrom)
+							if (pAdjacentPlot && pAdjacentPlot != pFrom
+                                && (!m_limitRoadCorridor || m_roadCorridor.allows(m_map->plotNum(pAdjacentPlot->getX(),pAdjacentPlot->getY()))))
 							{
 								CvPathGeneratorPlotInfo* pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot);
 								const bool isTerminus = pAdjacentPlot == pTo;
@@ -1714,14 +1810,19 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 			else bResult = false;
 		}
 	}
+	if (!bResult) AI_PERF_COUNT(PATH_FAILURES, 1);
+	AI_PERF_COUNT(PATH_NODES_PROCESSED, m_nodesProcessed - iNodesProcessedBefore);
+	AI_PERF_COUNT(PATH_NODES_COSTED, m_nodesCosted - iNodesCostedBefore);
 	PROFILE_END_CONDITIONAL(bResult, PATH1);
 	//GC.getGame().logOOSSpecial(65, (int)bResult);
 
-	return bResult;
+	NAVAL_DIAG_NODE_RETURN((bResult));
 }
 
 bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, CvSelectionGroup* pGroup, int iFlags, int iMaxTurns, int iOptimizationLimit)
 {
+	// Never retain boolean safety across gameplay mutations.
+	PlotDangerCacheScope dangerCache(pGroup ? pGroup->getOwner() : NO_PLAYER);
 	PROFILE_FUNC();
 	PROFILE_BEGIN_CONDITIONAL("CvPathGenerator::generatePath.Success","CvPathGenerator::generatePath.Failure",PATH2);
 
@@ -1767,8 +1868,16 @@ bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, Cv
 		bExistingValid = true;
 		for (CvPath::const_iterator itr = m_generatedPath.begin(); itr != m_generatedPath.end(); ++itr)
 		{
-			if (itr.plot() != pFrom && !moveToValid(pGroup, itr.plot(), iFlags))
+			if (itr.plot() != pFrom && itr.plot() != pTo && !moveToValid(pGroup, itr.plot(), iFlags))
 			{
+				// Live passage disagrees with the cached route. Drop the
+				// frontier, plot validity and edge costs before replanning.
+				m_pFrom = NULL;
+				m_pBestTerminalNode = NULL;
+				m_pReplacedNonTerminalNode = NULL;
+				CvPlot::NextCachePathEpoch();
+				CvSelectionGroup::setGroupToCacheFor(NULL);
+				CvSelectionGroup::setGroupToCacheFor(pGroup);
 				bExistingValid = false;
 				break;
 			}
@@ -1784,6 +1893,7 @@ bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, Cv
 	m_generatedPath.Set(NULL);
 	if (!bSameGroup || pFrom != m_pFrom)
 	{
+		resetPathQueue(m_priorityQueue);
 		m_nodeAllocationPool->reset();
 		m_plotInfo->reset();
 		m_iTurn = GC.getGame().getGameTurn();
@@ -1810,7 +1920,7 @@ bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, Cv
 	m_pFrom = pFrom;
 
 	// Priority queue setup
-	while (!m_priorityQueue.empty()) m_priorityQueue.pop();
+	resetPathQueue(m_priorityQueue);
 	priorityQueueEntry entry;
 	entry.node = root;
 	entry.iQueuedCost = 0;
@@ -1855,9 +1965,10 @@ bool CvPathGenerator::newgeneratePath(const CvPlot* pFrom, const CvPlot* pTo, Cv
 			continue;
 
 		// Expand neighbors
+		CvPlot* const* plotNeighbors = GC.getMap().pathNeighbors(nodePlot);
 		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
-			CvPlot* pAdjacentPlot = plotDirection(nodePlot->getX(), nodePlot->getY(), (DirectionTypes)iI);
+			CvPlot* pAdjacentPlot = plotNeighbors[iI];
 			if (!pAdjacentPlot || pAdjacentPlot == pFrom) continue;
 
 			CvPathGeneratorPlotInfo* pAdjacentPlotInfo = m_plotInfo->getPlotInfo(pAdjacentPlot);
@@ -2052,6 +2163,7 @@ const CvPath& CvPathGenerator::getLastPath() const
 
 bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const CvPlot* pTo, PlayerTypes ePlayer, UnitTypes eUnit, int iFlags, int iMaxTurns)
 {
+	AI_PERF_SCOPE(HYPOTHETICAL_PATH);
 	PROFILE_FUNC();
 	if (eUnit == NO_UNIT)
 	{
@@ -2070,7 +2182,7 @@ bool CvPathGenerator::generatePathForHypotheticalUnit(const CvPlot* pFrom, const
 	//	FUTURE - might want to move the no-land-units-across-water flags up to the callers once they
 	//	become aware of it.  For now it's here to prevent paths Python generates to build roads etc
 	//	crossing water
-	const bool bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), 0 | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
+	const bool bResult = generatePath(pFrom, pTo, pTempUnit->getGroup(), iFlags | MOVE_NO_LAND_UNITS_ACROSS_WATER, iMaxTurns);
 
 	GET_PLAYER(ePlayer).releaseTempUnit();
 

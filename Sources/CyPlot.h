@@ -119,7 +119,19 @@ public:
 	void setBonusType(int /*BonusTypes*/ eNewValue);
 	int /*ImprovementTypes*/ getImprovementType() const;
 	void setImprovementType(int /*ImprovementTypes*/ eNewValue);
+	int getRevealedPrimaryImprovementType(int team) const;
+	int getNumAdditionalImprovements() const;
+	int getAdditionalImprovementType(int slot) const;
+	int getRevealedAdditionalImprovementType(int slot, int team) const;
+	bool hasImprovement(int type) const;
+	bool setAdditionalImprovementType(int type);
+	bool removeAdditionalImprovementType(int type);
+	int getDisplayedYield(int yield) const;
+	int getPillageImprovementType() const;
 	int /*RouteTypes*/ getRouteType() const;
+	void setRouteLayers(int road, int rail);
+	int getRoadRouteType() const;
+	int getRailRouteType() const;
 	void setRouteType(int /*RouteTypes*/ eNewValue);
 
 	CyCity* getPlotCity() const;

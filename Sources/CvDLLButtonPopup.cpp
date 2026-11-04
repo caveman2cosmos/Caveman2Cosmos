@@ -4,6 +4,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
@@ -729,11 +730,39 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 
 			break;
 		}
+        case BUTTONPOPUP_RAIL_ROAD_REVOLUTION_MIGRATION:
+        {
+            if(pPopupReturn->getButtonClicked()==1)
+            {
+                GC.getGame().setOption(GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION,true);
+                CvMessageControl::getInstance().sendRecalculateModifiers();
+            }
+            break;
+        }
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			if (1 == pPopupReturn->getButtonClicked())
 			{
 				CvMessageControl::getInstance().sendRecalculateModifiers();;
+			}
+			break;
+		}
+		case BUTTONPOPUP_MULTIPLE_IMPROVEMENTS_MIGRATION:
+		{
+			if (1 == pPopupReturn->getButtonClicked())
+			{
+				GC.getGame().setOption(GAMEOPTION_MAP_MULTIPLE_IMPROVEMENTS, true);
+				GC.getGame().recalculateModifiers();
+			}
+			break;
+		}
+		case BUTTONPOPUP_MILITARY_DOCTRINES_MIGRATION:
+		{
+			if (1 == pPopupReturn->getButtonClicked() && !GC.getGame().isNetworkMultiPlayer())
+			{
+				GC.getGame().setOption(GAMEOPTION_COMBAT_MILITARY_DOCTRINES, true);
+				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+				gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 			}
 			break;
 		}
@@ -745,6 +774,22 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				StackPromotions::reset();
 				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 				gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			}
+			break;
+		}
+		case BUTTONPOPUP_PRIMITIVE_MAPS_MIGRATION:
+		{
+			if (1 == pPopupReturn->getButtonClicked())
+			{
+				Cy::call(PYCivModule, "enablePrimitiveMapsFromLegacySave");
+			}
+			break;
+		}
+		case BUTTONPOPUP_NATIVE_PROMOTIONS_MIGRATION:
+		{
+			if (1 == pPopupReturn->getButtonClicked())
+			{
+				Cy::call(PYCivModule, "enableNativePromotionsFromLegacySave");
 			}
 			break;
 		}
@@ -1125,13 +1170,27 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		{
 			return launchGetSaveFormatPopup(pPopup, info);
 		}
+        case BUTTONPOPUP_RAIL_ROAD_REVOLUTION_MIGRATION:
+            return launchRailRoadRevolutionMigrationPopup(pPopup,info);
 		case BUTTONPOPUP_MODIFIER_RECALCULATION:
 		{
 			return launchModifierRecalculationPopup(pPopup, info);
 		}
+		case BUTTONPOPUP_MULTIPLE_IMPROVEMENTS_MIGRATION:
+			return launchMultipleImprovementsMigrationPopup(pPopup, info);
 		case BUTTONPOPUP_STACK_PROMOTIONS_MIGRATION:
 		{
 			return launchStackPromotionsMigrationPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_MILITARY_DOCTRINES_MIGRATION:
+			return launchMilitaryDoctrinesMigrationPopup(pPopup, info);
+		case BUTTONPOPUP_PRIMITIVE_MAPS_MIGRATION:
+		{
+			return launchPrimitiveMapsMigrationPopup(pPopup, info);
+		}
+		case BUTTONPOPUP_NATIVE_PROMOTIONS_MIGRATION:
+		{
+			return launchNativePromotionsMigrationPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_NAME_LIST:
 		{
@@ -2573,6 +2632,15 @@ bool CvDLLButtonPopup::launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &in
 
 bool CvDLLButtonPopup::launchModifierRecalculationPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
+#ifdef C2C_AI_PERF_ENABLE
+	// The disposable benchmark preserves the loaded save's modifiers. This is
+	// equivalent to choosing No; the launcher removes the marker on cleanup.
+	const CvString benchmarkMarker = GC.getInitCore().getDLLPath() + "\\AIPerfBenchmark.active";
+	if (GetFileAttributesA(benchmarkMarker.c_str()) != INVALID_FILE_ATTRIBUTES)
+	{
+		return false;
+	}
+#endif
 	CvWString szBuffer = gDLL->getText("TXT_KEY_POPUP_MODIFIER_RECALCULATION");
 
 	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szBuffer);
@@ -2587,11 +2655,52 @@ bool CvDLLButtonPopup::launchModifierRecalculationPopup(CvPopup* pPopup, CvPopup
 	return true;
 }
 
+bool CvDLLButtonPopup::launchMultipleImprovementsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_MULTIPLE_IMPROVEMENTS_MIGRATION"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_MULTIPLE_IMPROVEMENTS_MIGRATION_BODY"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+	return true;
+}
+
 bool CvDLLButtonPopup::launchStackPromotionsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	if (GC.getGame().isNetworkMultiPlayer() || GC.getGame().isOption(GAMEOPTION_COMBAT_STACK_PROMOTIONS)) return false;
 	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION"));
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_STACK_PROMOTIONS_MIGRATION_BODY"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+	return true;
+}
+
+bool CvDLLButtonPopup::launchMilitaryDoctrinesMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	if (GC.getGame().isNetworkMultiPlayer() || GC.getGame().isOption(GAMEOPTION_COMBAT_MILITARY_DOCTRINES)) return false;
+	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_MILITARY_DOCTRINES_MIGRATION"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_MILITARY_DOCTRINES_MIGRATION_BODY"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+	return true;
+}
+
+bool CvDLLButtonPopup::launchPrimitiveMapsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_PRIMITIVE_MAPS_MIGRATION"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_PRIMITIVE_MAPS_MIGRATION_BODY"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_PRIMITIVE_MAPS_MIGRATION_OK"), NULL, 1, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
+	return true;
+}
+
+bool CvDLLButtonPopup::launchNativePromotionsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info)
+{
+	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, gDLL->getText("TXT_KEY_POPUP_NATIVE_PROMOTIONS_MIGRATION"));
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_POPUP_NATIVE_PROMOTIONS_MIGRATION_BODY"));
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_YES"), NULL, 1, WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_NO"), NULL, 0, WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
@@ -3192,4 +3301,12 @@ bool CvDLLButtonPopup::launchConfirmAmbushPopup(CvPopup* pPopup, CvPopupInfo &in
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
 
 	return true;
+}
+bool CvDLLButtonPopup::launchRailRoadRevolutionMigrationPopup(CvPopup* popup,CvPopupInfo &info)
+{
+    gDLL->getInterfaceIFace()->popupSetHeaderString(popup,gDLL->getText("TXT_KEY_RRR_MIGRATION_TITLE"));
+    gDLL->getInterfaceIFace()->popupSetBodyString(popup,gDLL->getText("TXT_KEY_RRR_MIGRATION_BODY"));
+    gDLL->getInterfaceIFace()->popupAddGenericButton(popup,gDLL->getText("TXT_KEY_POPUP_YES"),NULL,1,WIDGET_GENERAL);
+    gDLL->getInterfaceIFace()->popupAddGenericButton(popup,gDLL->getText("TXT_KEY_POPUP_NO"),NULL,0,WIDGET_GENERAL);
+    gDLL->getInterfaceIFace()->popupLaunch(popup,false,POPUPSTATE_IMMEDIATE);return true;
 }

@@ -4442,15 +4442,7 @@
 			<iLinePriority>1</iLinePriority>
 			<FeatureDefenses>
 				<FeatureDefense>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iFeatureDefense>15</iFeatureDefense>
-				</FeatureDefense>
-				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iFeatureDefense>15</iFeatureDefense>
-				</FeatureDefense>
-				<FeatureDefense>
-					<FeatureType>FEATURE_BAMBOO</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
 				<FeatureDefense>
@@ -4468,15 +4460,7 @@
 			</FeatureDefenses>
             <FeatureAttacks>
                 <FeatureAttack>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
                     <iFeatureAttack>10</iFeatureAttack>
                 </FeatureAttack>
                 <FeatureAttack>
@@ -4517,15 +4501,7 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
             <FeatureDefenses>
                 <FeatureDefense>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureDefense>15</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureDefense>15</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
                     <iFeatureDefense>15</iFeatureDefense>
                 </FeatureDefense>
                 <FeatureDefense>
@@ -4543,15 +4519,7 @@
             </FeatureDefenses>
             <FeatureAttacks>
                 <FeatureAttack>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
                     <iFeatureAttack>10</iFeatureAttack>
                 </FeatureAttack>
                 <FeatureAttack>
@@ -4586,15 +4554,7 @@
 			<iFirstStrikesChange>1</iFirstStrikesChange>
             <FeatureDefenses>
                 <FeatureDefense>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureDefense>20</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureDefense>20</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
                     <iFeatureDefense>20</iFeatureDefense>
                 </FeatureDefense>
                 <FeatureDefense>
@@ -4612,15 +4572,7 @@
             </FeatureDefenses>
             <FeatureAttacks>
                 <FeatureAttack>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
                     <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
                     <iFeatureAttack>10</iFeatureAttack>
                 </FeatureAttack>
                 <FeatureAttack>

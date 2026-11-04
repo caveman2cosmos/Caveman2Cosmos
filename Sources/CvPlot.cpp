@@ -4,6 +4,19 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "UnitTravelConnectivity.h"
+#include "ConnectionRequests.h"
+#include "DoctrinePromotions.h"
+#include "RailRoadRevolution.h"
+#include "RailRoadRules.h"
+
+namespace {
+    bool renderingUnderlyingRoad=false;
+    struct RoadRenderScope {bool previous;RoadRenderScope(bool value):previous(renderingUnderlyingRoad){renderingUnderlyingRoad=value;}~RoadRenderScope(){renderingUnderlyingRoad=previous;}};
+}
+#include "DefenseNeedEvents.h"
+#include "CvContractBroker.h"
+#include "MovementCostCache.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -60,6 +73,7 @@ typedef struct
 {
 	int iValue;
 	int iHealth;
+    bool exactAid;
 } unitDefenderInfo;
 
 static int	g_plotTypeZobristHashes[NUM_PLOT_TYPES];
@@ -67,7 +81,7 @@ static bool g_plotTypeZobristHashesSet = false;
 static int	g_riverDirectionZobristHashes[NUM_CARDINALDIRECTION_TYPES];
 static bool g_riverDirectionZobristHashesSet = false;
 int CvPlot::m_iGlobalCachePathEpoch = 0;
-stdext::hash_map<int,int>* CvPlot::m_resultHashMap = NULL;
+MovementCostCache* CvPlot::m_movementCostCache = NULL;
 static const CvPlot* g_bestDefenderCachePlot = NULL;
 typedef stdext::hash_map<int, unitDefenderInfo> DefenderScoreCache;
 static DefenderScoreCache* g_bestDefenderCache = NULL;
@@ -84,9 +98,9 @@ CvPlot::CvPlot()
 {
 	m_stackSupportRevision = 1;
 	PROFILE_EXTRA_FUNC();
-	if ( m_resultHashMap == NULL )
+	if ( m_movementCostCache == NULL )
 	{
-		m_resultHashMap = new stdext::hash_map<int,int>();
+		m_movementCostCache = new MovementCostCache();
 	}
 
 	if ( g_bestDefenderCache == NULL )
@@ -113,6 +127,7 @@ CvPlot::CvPlot()
 	m_abRevealed = NULL;
 	m_aeRevealedImprovementType = NULL;
 	m_aeRevealedRouteType = NULL;
+	m_aeRevealedRoadRouteType = NULL;
 	m_paiBuildProgress = NULL;
 	m_apaiInvisibleVisibilityCount = NULL;
 
@@ -120,6 +135,7 @@ CvPlot::CvPlot()
 	m_pFeatureSymbol = NULL;
 	m_pPlotBuilder = NULL;
 	m_pRouteSymbol = NULL;
+	m_pUnderlyingRouteSymbol = NULL;
 	m_pRiverSymbol = NULL;
 	m_pFlagSymbol = NULL;
 	m_pFlagSymbolOffset = NULL;
@@ -224,6 +240,7 @@ void CvPlot::uninit()
 
 	SAFE_DELETE_ARRAY(m_aeRevealedImprovementType);
 	SAFE_DELETE_ARRAY(m_aeRevealedRouteType);
+	SAFE_DELETE_ARRAY(m_aeRevealedRoadRouteType);
 
 	SAFE_DELETE_ARRAY(m_aiMountainLeaderCount);
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
@@ -295,8 +312,11 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_eTerrainType = NO_TERRAIN;
 	m_eFeatureType = NO_FEATURE;
 	m_eBonusType = NO_BONUS;
+	m_additionalImprovements.clear();
 	m_eImprovementType = NO_IMPROVEMENT;
 	m_eRouteType = NO_ROUTE;
+	m_eUnderlyingRoadType = NO_ROUTE;
+	m_bRailRoadLayerSeparated = false;
 	m_eRiverNSDirection = NO_CARDINALDIRECTION;
 	m_eRiverWEDirection = NO_CARDINALDIRECTION;
 
@@ -304,6 +324,8 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_workingCity.reset();
 	m_workingCityOverride.reset();
 
+	m_iActivePlayerDangerCacheContext = 0;
+	m_iReadOnlyCarrierPresence = -1;
 	m_iActivePlayerSafeRangeCache = -1;
 	m_iActivePlayerSafeRangeCacheTestMoves = -1;
 	m_bActivePlayerHasDangerCache = false;
@@ -350,7 +372,7 @@ void CvPlot::clearModifierTotals()
 	clearVisibilityCounts();
 
 	// Fix any spurious routes that are on water tiles
-	if (isWater() && getRouteType() != NO_ROUTE && !GC.getRouteInfo(getRouteType()).isSeaTunnel())
+	while (isWater() && getRouteType() != NO_ROUTE && !GC.getRouteInfo(getRouteType()).isSeaTunnel())
 	{
 		setRouteType(NO_ROUTE, false);
 	}
@@ -470,6 +492,7 @@ void CvPlot::hideGraphics(ECvPlotGraphics::type toHide /*= ECvPlotGraphics::ALL*
 	}
 	if (toHide & ECvPlotGraphics::FEATURE)
 	{
+		m_additionalImprovements.clearGraphics();
 		gDLL->getFeatureIFace()->destroy(m_pFeatureSymbol);
 		m_pFeatureSymbol = NULL;
 		if (m_pPlotBuilder)
@@ -487,6 +510,8 @@ void CvPlot::hideGraphics(ECvPlotGraphics::type toHide /*= ECvPlotGraphics::ALL*
 	{
 		gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
 		m_pRouteSymbol = NULL;
+		gDLL->getRouteIFace()->destroy(m_pUnderlyingRouteSymbol);
+		m_pUnderlyingRouteSymbol = NULL;
 	}
 	if (toHide & ECvPlotGraphics::UNIT)
 	{
@@ -572,8 +597,8 @@ void CvPlot::erase()
 	}
 
 	setBonusType(NO_BONUS);
-	setImprovementType(NO_IMPROVEMENT);
-	setRouteType(NO_ROUTE, false);
+	clearAllImprovements();
+	while (isRoute()) setRouteType(NO_ROUTE, false);
 	setFeatureType(NO_FEATURE);
 
 	// disable rivers
@@ -691,6 +716,8 @@ void CvPlot::doTurn()
 			}
 		}
 	}
+
+	if (isOwned()) doAdditionalImprovementUpgrades();
 
 	// Super Forts *bombard*
 	if (!isBombarded() && getDefenseDamage() > 0)
@@ -1148,10 +1175,10 @@ void CvPlot::checkCityRevolt()
 
 void CvPlot::checkFortRevolt()
 {
-	if (getImprovementType() == NO_IMPROVEMENT)
+	if (getMilitaryImprovementType() == NO_IMPROVEMENT)
 		return;
 
-	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
+	const CvImprovementInfo& improvement = GC.getImprovementInfo(getMilitaryImprovementType());
 	const PlayerTypes eOwner = getOwner();
 
 	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
@@ -1832,7 +1859,7 @@ bool CvPlot::isBonusExtracted(const TeamTypes eTeamPerspective) const
 	{
 		return false;
 	}
-	if (!isCity(false, eOwnerTeam) && (getImprovementType() == NO_IMPROVEMENT || !GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eRelevantBonus)))
+	if (!isCity(false, eOwnerTeam) && !isImprovementBonusTrade(eRelevantBonus))
 	{
 		return false;
 	}
@@ -2009,7 +2036,9 @@ bool CvPlot::isWaterAndIsFresh() const
 
 bool CvPlot::isPotentialIrrigation() const
 {
-	if (isCity() || getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation())
+	bool carriesIrrigation = getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isCarriesIrrigation();
+	for (int slot = 0; slot < getNumAdditionalImprovements(); ++slot) carriesIrrigation = carriesIrrigation || GC.getImprovementInfo(getAdditionalImprovementType(slot)).isCarriesIrrigation();
+	if (isCity() || carriesIrrigation)
 	{
 		if (getTeam() != NO_TEAM && GET_TEAM(getTeam()).isIrrigation())
 		{
@@ -2566,10 +2595,7 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
 	int iLevel = 0;
 
-	if (getImprovementType() != NO_IMPROVEMENT)
-	{
-		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
-	}
+	iLevel += getImprovementSeeFrom();
 
 	if (!isWater())
 	{
@@ -2599,10 +2625,7 @@ int CvPlot::getElevationLevel(const bool bExtra) const
 {
 	int iLevel = 3 * getTerrainElevation();
 
-	if (bExtra && getImprovementType() != NO_IMPROVEMENT)
-	{
-		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
-	}
+	if (bExtra) iLevel += getImprovementSeeFrom();
 	return iLevel;
 }
 
@@ -3099,9 +3122,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	const BonusTypes eBonus = getBonusType(eTeam);
 
 	// Special upgrade rule
-	if (bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT && eBonus != NO_BONUS
-	&& GC.getImprovementInfo(getImprovementType()).isImprovementBonusTrade(eBonus)
-	&& !pInfo.isImprovementBonusTrade(eBonus))
+	if (bUpgradeCheck && eBonus != NO_BONUS
+	&& isImprovementBonusTrade(eBonus)
+	&& !isImprovementBonusTradeWith(eImprovement, eBonus))
 	{
 		// Upgrading would remove access to bonus, bad upgrade.
 		return false;
@@ -3198,7 +3221,8 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		{
 			bValid = true;
 		}
-		else if (eFeature != NO_FEATURE && pInfo.getFeatureMakesValid(eFeature))
+		else if (eFeature != NO_FEATURE && (pInfo.getFeatureMakesValid(eFeature)
+			|| CvAdditionalImprovements::usesSecondaryLayer(eImprovement) && CvAdditionalImprovements::featureFor(eImprovement) == eFeature))
 		{
 			bValid = true;
 		}
@@ -3239,7 +3263,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 				// Original code would break the loop as valid after finding first river crossing with a different improvement on the other side.
 				// That would almost always be true unless the river had eImprovement on all other plots with a river crossing from "this" plot.
 				// Now it checks all river crossings from this plot for the same improvement and only validates if this improvement is not found.
-				if (pLoopPlot->getImprovementType() == eImprovement)
+				if (pLoopPlot->hasImprovement(eImprovement))
 				{
 					return false;
 				}
@@ -3466,6 +3490,8 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
+		if (CvAdditionalImprovements::usesSecondaryLayer(eImprovement) && !canAddAdditionalImprovement(eImprovement)) return false;
+
 		if (!canHaveImprovement(eImprovement, GET_PLAYER(ePlayer).getTeam(), bTestVisible))
 		{
 			return false;
@@ -3486,9 +3512,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			}
 		}
 
-		if (getImprovementType() != NO_IMPROVEMENT)
+		if (getImprovementInLayer(eImprovement) != NO_IMPROVEMENT)
 		{
-			if (getImprovementType() == eImprovement)
+			if (getImprovementInLayer(eImprovement) == eImprovement)
 			{
 				return false;
 			}
@@ -3541,9 +3567,10 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	if (eRoute != NO_ROUTE)
 	{
-		if (getRouteType() != NO_ROUTE)
+		const RouteTypes existingLayer=getRouteTypeForBuild(eRoute);
+		if (existingLayer != NO_ROUTE)
 		{
-			if (GC.getRouteInfo(getRouteType()).getValue() >= GC.getRouteInfo(eRoute).getValue())
+			if (GC.getRouteInfo(existingLayer).getValue() >= GC.getRouteInfo(eRoute).getValue())
 			/* Version to allow same route value in future maybe:
 			if (GC.getRouteInfo(getRouteType()).getValue() > GC.getRouteInfo(eRoute).getValue()
 			||  eRoute == getRouteType()) */
@@ -3643,7 +3670,7 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 
 	if (kBuild.getRoute() != NO_ROUTE)
 	{
-		const RouteTypes eCurrentRoute = getRouteType();
+		const RouteTypes eCurrentRoute = getRouteTypeForBuild((RouteTypes)kBuild.getRoute());
 		if (eCurrentRoute != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
 			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
@@ -3801,6 +3828,7 @@ namespace {
 			return 0;
 		}
 		const CvPlot* plotX = unitX->plot();
+        const bool exactAid = StackPromotions::detailedForCombat(pAttacker != NULL);
 
 		CvChecksum checksum;
 		if (cacheAccess != ECacheAccess::None)
@@ -3824,7 +3852,7 @@ namespace {
 				// look in the cache
 				DefenderScoreCache::const_iterator itr = g_bestDefenderCache->find(checksum.get());
 				if (itr != g_bestDefenderCache->end()
-					&& itr->second.iHealth == unitX->getHP())
+					&& itr->second.iHealth == unitX->getHP() && itr->second.exactAid == exactAid)
 				{
 					return itr->second.iValue;
 				}
@@ -3864,6 +3892,7 @@ namespace {
 			unitDefenderInfo info;
 			info.iHealth = unitX->getHP();
 			info.iValue = iValue;
+            info.exactAid = exactAid;
 			(*g_bestDefenderCache)[checksum.get()] = info;
 		}
 		return iValue;
@@ -3924,6 +3953,37 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	return pBestUnit;
 }
 
+
+// Same owner-only selection as getBestDefender(owner), but callers that only
+// ask whether this unit wins can stop at the first better (or earlier tied)
+// defender. Reuse the existing score cache, never cache the boolean answer.
+bool CvPlot::isBestDefender(const CvUnit* candidate) const
+{
+	PROFILE_FUNC();
+	if (candidate == NULL || candidate->plot() != this) return false;
+	if (g_bestDefenderCachePlot != this)
+	{
+		g_bestDefenderCachePlot = this;
+		g_bestDefenderCache->clear();
+	}
+	const PlayerTypes owner = candidate->getOwner();
+	const int value = getDefenderScore(candidate, owner, NO_PLAYER, NULL,
+		false, false, false, false, ECacheAccess::ReadWrite);
+	if (value <= 0) return false;
+	bool found = false;
+	foreach_(const CvUnit* unit, units())
+	{
+		if (unit == candidate)
+		{
+			found = true;
+			continue;
+		}
+		const int other = getDefenderScore(unit, owner, NO_PLAYER, NULL,
+			false, false, false, false, ECacheAccess::ReadWrite);
+		if (other > value || (!found && other == value)) return false;
+	}
+	return found;
+}
 
 CvUnit* CvPlot::getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const
 {
@@ -4032,7 +4092,7 @@ bool CvPlot::isBombardable(const CvUnit* pUnit) const
 		return false;
 	}
 
-	const ImprovementTypes eImprovement = getImprovementType();
+	const ImprovementTypes eImprovement = getMilitaryImprovementType();
 	if(eImprovement == NO_IMPROVEMENT)
 	{
 		return false;
@@ -4064,9 +4124,9 @@ int CvPlot::getDefenseDamage() const
 
 void CvPlot::changeDefenseDamage(int iChange)
 {
-	if ((iChange != 0) && (getImprovementType() != NO_IMPROVEMENT))
+	if ((iChange != 0) && (getMilitaryImprovementType() != NO_IMPROVEMENT))
 	{
-		m_iDefenseDamage = range((m_iDefenseDamage + iChange), 0, GC.getImprovementInfo(getImprovementType()).getDefenseModifier());
+		m_iDefenseDamage = range((m_iDefenseDamage + iChange), 0, GC.getImprovementInfo(getMilitaryImprovementType()).getDefenseModifier());
 
 		if (iChange > 0)
 		{
@@ -4470,15 +4530,20 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 		const ImprovementTypes eImprovement = (
 			bHelp
 			?
-			getRevealedImprovementType(GC.getGame().getActiveTeam())
+			getMilitaryImprovementType(GC.getGame().getActiveTeam())
 			:
-			getImprovementType()
+			getMilitaryImprovementType()
 		);
 		if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
 		&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
 		{
 			// Super Forts begin *bombard*
 			iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
+			for (int slot = 0; slot < CvAdditionalImprovements::CAPACITY; ++slot)
+			{
+				const ImprovementTypes type = bHelp ? getRevealedAdditionalImprovementType(slot, GC.getGame().getActiveTeam()) : getAdditionalImprovementType(slot);
+				if (type != NO_IMPROVEMENT && type != eImprovement) iModifier += GC.getImprovementInfo(type).getDefenseModifier();
+			}
 		}
 	}
 
@@ -4496,56 +4561,61 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 
 void CvPlot::flushMovementCostCache()
 {
-	if ( m_resultHashMap != NULL )
+	if ( m_movementCostCache != NULL )
 	{
-		m_resultHashMap->clear();
+		m_movementCostCache->clear();
 	}
+}
+
+namespace MovementCostInputs
+{
+    // Sufficient inputs to every branch below. Do not use unit/plot Zobrist
+    // fingerprints as identities: distinct edges and profiles may share them.
+    MovementCostCache::Key make(const CvPlot& to,const CvUnit& unit,const CvPlot& from)
+    {
+        typedef MovementCostCache::Key K;
+        K k;k.data[K::DENOMINATOR]=GC.getMOVE_DENOMINATOR();
+        if(unit.flatMovementCost() || unit.getDomainType()==DOMAIN_AIR){k.data[K::MODE]=1;return k;}
+        if((unit.isHuman() && !to.isRevealed(unit.getTeam(),false)) || !from.isValidDomainForLocation(unit))
+        {k.data[K::MODE]=2;k.data[K::MOVES]=unit.maxMoves();return k;}
+        if(!to.isValidDomainForAction(unit)){k.data[K::MODE]=3;return k;}
+        const bool layered=RailRoadRevolution::enabled();
+        const bool river=from.isRiverCrossing(directionXY(&from,&to));
+        const CvTeam& team=GET_TEAM(unit.getTeam());
+        const FeatureTypes feature=to.getFeatureType();
+        k.data[K::TERRAIN]=to.getTerrainType();k.data[K::FEATURE]=feature;
+        k.data[K::DISCOUNT]=unit.getExtraMoveDiscount();
+        k.data[K::FLAGS]=(to.isHills()?1:0)|(to.isAsPeak()?2:0)|
+            (unit.ignoreTerrainCost()?4:0)|
+            (((feature!=NO_FEATURE && unit.isFeatureDoubleMove(feature)) || (to.isHills() && unit.isHillsDoubleMove()))?8:0)|
+            (unit.isTerrainDoubleMove(to.getTerrainType())?16:0)|(unit.isRiverMoveIgnore()?32:0)|
+            (river?64:0)|(team.isBridgeBuilding()?128:0)|(team.isMoveFastPeaks()?256:0)|
+            (layered?512:0)|(unit.getDomainType()==DOMAIN_SEA?1024:0)|
+            ((from.isValidRoute(&unit))?2048:0)|((to.isValidRoute(&unit))?4096:0)|
+            ((RailRoadRules::mayUseRail(from.getTeam(),unit.getTeam()) && RailRoadRules::mayUseRail(to.getTeam(),unit.getTeam()))?8192:0);
+        const RouteTypes routes[4]={from.getRouteType(),to.getRouteType(),
+            layered?from.getRoadRouteType():NO_ROUTE,layered?to.getRoadRouteType():NO_ROUTE};
+        for(int i=0;i<4;++i){k.data[K::FROM_ROUTE+i]=routes[i];k.data[K::FROM_CHANGE+i]=routes[i]==NO_ROUTE?0:team.getRouteChange(routes[i]);}
+        // Flat road costs depend on base movement, terrain costs do not.
+        if(routes[0]!=NO_ROUTE && routes[1]!=NO_ROUTE)k.data[K::MOVES]=unit.baseMoves();
+        k.data[K::HILLS_EXTRA]=GC.getHILLS_EXTRA_MOVEMENT();
+        k.data[K::RIVER_EXTRA]=GC.getRIVER_EXTRA_MOVEMENT();
+        k.data[K::PEAK_EXTRA]=GC.getPEAK_EXTRA_MOVEMENT();
+        return k;
+    }
 }
 
 int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 {
-	//PROFILE_FUNC();
-
-	const int iMoveDenominator = GC.getMOVE_DENOMINATOR();
-
-	int iResult;
-	int iResultKeyHash = -1;
-
-	//	Don't use the cache for human players because that could cause values cached for unrevealed plots to be used on revealed
-	//	ones and visa versa. That not only results in incorrect path generation, but also to OOS errors in multiplayer
-	//	due to the cached values being used at different times (so on one machine the plot may be first seen as revealed, while on
-	//	another as unrevealed)
-	if ( !pUnit->isHuman() ) //&& isRevealed(pUnit->getTeam()->getID()) - cleaner to use this condition directly but
-							 // actually its only accessed in the logic below for humans so isHuman() is a cheaper proxy
-	{
-		iResultKeyHash = pFromPlot->getMovementCharacteristicsHash() ^
-						 (getMovementCharacteristicsHash() << 1) ^ pUnit->getMovementCharacteristicsHash() ^
-						 GET_PLAYER(pUnit->getOwner()).getZobristValue();
-
-		if ( pFromPlot->getOwner() != NO_PLAYER )
-		{
-			iResultKeyHash ^= GET_PLAYER(pFromPlot->getOwner()).getZobristValue();
-		}
-
-		if ( getOwner() != NO_PLAYER )
-		{
-			iResultKeyHash ^= GET_PLAYER(getOwner()).getZobristValue();
-		}
-
-		iResult = -1;
-
-		stdext::hash_map<int,int>::const_iterator match = m_resultHashMap->find(iResultKeyHash);
-		if ( match != m_resultHashMap->end() )
-		{
-			iResult = match->second;
-		}
-
-		if ( iResult != -1 )
-		{
-			return iResult;
-		}
-	}
-
+    const int iMoveDenominator=GC.getMOVE_DENOMINATOR();
+    const bool railRoadRevolution=RailRoadRevolution::enabled();
+    int iResult;
+    MovementCostCache::Key resultKey;
+    if(!pUnit->isHuman()) {
+        resultKey=MovementCostInputs::make(*this,*pUnit,*pFromPlot);
+        iResult=m_movementCostCache->get(resultKey);
+        if(iResult!=-1)return iResult;
+    }
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
 
@@ -4571,7 +4641,12 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 		const bool bRiverCrossing = pFromPlot->isRiverCrossing(directionXY(pFromPlot, this));
 
-		if (pFromPlot->isValidRoute(pUnit) && isValidRoute(pUnit) && (!bRiverCrossing || GET_TEAM(pUnit->getTeam()).isBridgeBuilding()))
+		const int layeredCost=railRoadRevolution && (!bRiverCrossing || GET_TEAM(pUnit->getTeam()).isBridgeBuilding()) ? getRailRoadMovementCost(pUnit,pFromPlot) : -1;
+		if (layeredCost>=0)
+		{
+			iResult=layeredCost;
+		}
+		else if (!railRoadRevolution && pFromPlot->isValidRoute(pUnit) && isValidRoute(pUnit) && (!bRiverCrossing || GET_TEAM(pUnit->getTeam()).isBridgeBuilding()))
 		{
 			const RouteTypes fromRouteType = pFromPlot->getRouteType();
 			const CvRouteInfo& fromRoute = GC.getRouteInfo(fromRouteType);
@@ -4671,7 +4746,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 
 	if (!pUnit->isHuman())
 	{
-		(*m_resultHashMap)[iResultKeyHash] = iResult;
+		m_movementCostCache->set(resultKey, iResult);
 	}
 
 	return iResult;
@@ -4848,6 +4923,8 @@ int CvPlot::calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) 
 
 void CvPlot::invalidateActivePlayerPlotCache()
 {
+	m_iActivePlayerDangerCacheContext = 0;
+	m_iReadOnlyCarrierPresence = -1;
 	m_iActivePlayerSafeRangeCache = -1;
 	m_iActivePlayerSafeRangeCacheTestMoves = -1;
 	m_bActivePlayerHasDangerCache = false;
@@ -5026,6 +5103,7 @@ int CvPlot::plotCount(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const C
 
 	if (iRange == 0)
 	{
+		if (headUnitNode() == NULL) return 0;
 		foreach_(const CvUnit* unitX, units())
 		{
 			if (unitX->isDead()) continue;
@@ -5044,7 +5122,45 @@ int CvPlot::plotCount(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const C
 		// Recurse for each plot in the specified range
 		foreach_(const CvPlot* plotX, rect(iRange, iRange))
 		{
+			if (plotX->headUnitNode() == NULL) continue;
 			iCount += plotX->plotCount(funcA, iData1A, iData2A, pUnit, eOwner, eTeam, funcB, iData1B, iData2B);
+		}
+	}
+	return iCount;
+}
+
+// Saturating count for pure-predicate threshold decisions; no result survives this call.
+int CvPlot::plotCountUpTo(int maxCount, ConstPlotUnitFunc funcA, int iData1A, int iData2A, const CvUnit* pUnit, PlayerTypes eOwner, TeamTypes eTeam, ConstPlotUnitFunc funcB, int iData1B, int iData2B, int iRange) const
+{
+	PROFILE_FUNC();
+
+	if (maxCount <= 0) return 0;
+	int iCount = 0;
+
+	if (iRange == 0)
+	{
+		if (headUnitNode() == NULL) return 0;
+		foreach_(const CvUnit* unitX, units())
+		{
+			if (unitX->isDead()) continue;
+
+			if ((eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
+			&& (eTeam == NO_TEAM || unitX->getTeam() == eTeam)
+			&& (funcA == NULL || funcA(unitX, iData1A, iData2A, pUnit))
+			&& (funcB == NULL || funcB(unitX, iData1B, iData2B, NULL)))
+			{
+				if (++iCount >= maxCount) return maxCount;
+			}
+		}
+	}
+	else
+	{
+		// Recurse for each plot in the specified range
+		foreach_(const CvPlot* plotX, rect(iRange, iRange))
+		{
+			if (plotX->headUnitNode() == NULL) continue;
+			iCount += plotX->plotCountUpTo(maxCount - iCount, funcA, iData1A, iData2A, pUnit, eOwner, eTeam, funcB, iData1B, iData2B);
+			if (iCount >= maxCount) return maxCount;
 		}
 	}
 	return iCount;
@@ -5236,7 +5352,7 @@ bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 			// No team specified, or
 			NO_TEAM == eForTeam
 			// Tile with fort is on no team, or
-		||	NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
+		||	NO_TEAM == getTeam() && GC.getImprovementInfo(getMilitaryImprovementType()).isOutsideBorders()
 			// Fort is within friendly territory of specified team
 		||	GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())
 		)
@@ -5291,7 +5407,7 @@ bool CvPlot::isFriendlyCity(const CvUnit& kUnit, bool bCheckImprovement) const
 bool CvPlot::isHasValidBonus() const
 {
 	if (getBonusType() == NO_BONUS
-	|| getImprovementType() == NO_IMPROVEMENT
+	|| !hasAnyImprovement()
 	|| !isBonusNetwork(getTeam())
 	|| !isWithinTeamCityRadius(getTeam()))
 	{
@@ -5301,7 +5417,7 @@ bool CvPlot::isHasValidBonus() const
 	return (
 		GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechReveal())
 		&& (
-				bonus.isProvidedByImprovementType(getImprovementType())
+				isImprovementBonusTrade(getBonusType())
 			||	GET_TEAM(getTeam()).isHasTech((TechTypes)bonus.getTechObsolete())
 		)
 	);
@@ -5486,6 +5602,27 @@ int CvPlot::getVisibleNonAllyStrength(PlayerTypes ePlayer) const
 	return plotStrength((UnitValueFlags)(UNITVALUE_FLAGS_OFFENSIVE | UNITVALUE_FLAGS_DEFENSIVE), PUF_isNonAlly, ePlayer, 0, NO_PLAYER, NO_TEAM, PUF_isVisible, ePlayer);
 }
 
+bool CvPlot::mayHaveCarrierForLoading() const
+{
+	if (getNumUnits() == 0) return false;
+	// No gameplay mutation occurs in this existing path/flood scope. Do not
+	// reuse an answer during actual movement, loading, promotions or UI queries.
+	if (!PlotDangerCacheScope::token()) return true;
+	prepareActivePlayerDangerCache();
+	if (m_iReadOnlyCarrierPresence >= 0) return m_iReadOnlyCarrierPresence != 0;
+	foreach_(const CvUnit* unit, units())
+	{
+		if (unit->isCarrier())
+		{
+			m_iReadOnlyCarrierPresence = 1;
+			return true;
+		}
+	}
+	m_iReadOnlyCarrierPresence = 0;
+	return false;
+}
+
+
 bool CvPlot::isVisibleEnemyUnit(const CvUnit* pUnit) const
 {
 	return isVisible(pUnit->getTeam(), false) && plotCheck(PUF_isEnemy, pUnit->getOwner(), pUnit->isAlwaysHostile(this), pUnit, NO_PLAYER, NO_TEAM, PUF_isVisible, pUnit->getOwner());
@@ -5554,7 +5691,8 @@ bool CvPlot::isRoute() const
 //Check is to determine if there's a way for a sea unit to be on the plot.
 bool CvPlot::isCanMoveSeaUnits() const
 {
-	return isWater() || getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isCanMoveSeaUnits();
+	const ImprovementTypes type = getMilitaryImprovementType();
+	return isWater() || type != NO_IMPROVEMENT && GC.getImprovementInfo(type).isCanMoveSeaUnits();
 }
 
 bool CvPlot::isSeaTunnel() const
@@ -5594,6 +5732,16 @@ bool CvPlot::isAreaConnectedViaSeaTunnel(int iOtherAreaID) const
 
 bool CvPlot::isValidRoute(const CvUnit* pUnit) const
 {
+	if(RailRoadRevolution::enabled())
+	{
+		const RouteTypes road=getRoadRouteType();
+		const TeamTypes team = getTeam();
+		if (road != NO_ROUTE
+			&& (team == NO_TEAM || GET_TEAM(pUnit->getTeam()).isFriendlyTerritory(team)
+				|| GET_TEAM(pUnit->getTeam()).isOpenBorders(team) || pUnit->isEnemyRoute())
+			&& !(pUnit->getDomainType() == DOMAIN_SEA && GC.getRouteInfo(road).isSeaTunnel())) return true;
+		return getRailRouteType()!=NO_ROUTE && RailRoadRules::mayUseRail(getTeam(),pUnit->getTeam());
+	}
 	if (isRoute())
 	{
 		TeamTypes eTeam = getTeam();
@@ -6056,7 +6204,7 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 	(
 		100 * GC.getGame().getImprovementUpgradeTime(eImprovement)
 		-
-		((getImprovementType() == eImprovement) ? getImprovementUpgradeProgress() : 0)
+		(CvAdditionalImprovements::usesSecondaryLayer(eImprovement) ? m_additionalImprovements.getProgress(eImprovement) : ((getImprovementType() == eImprovement) ? getImprovementUpgradeProgress() : 0))
 	);
 	const int iUpgradeRate =
 	(
@@ -6464,6 +6612,9 @@ void CvPlot::setFlagDirty(bool bNewValue)
 
 void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup)
 {
+    if(eNewValue!=getOwner()) ConnectionRequests::invalidate();
+    UnitTravelConnectivity::PlotChange travelChange(this,0,true,getOwner()!=eNewValue);
+
 	StackSupportPlotChange stackChange(*this);
 	invalidateStackSupport();
 	PROFILE_FUNC();
@@ -6576,6 +6727,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), -1);
 				}
 
+				for (int slot = 0; slot < getNumAdditionalImprovements(); ++slot) GET_PLAYER(getOwner()).changeImprovementCount(getAdditionalImprovementType(slot), -1);
 				updatePlotGroupBonus(false);
 			}
 
@@ -6630,6 +6782,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					}
 				}
 
+				for (int slot = 0; slot < getNumAdditionalImprovements(); ++slot) GET_PLAYER(getOwner()).changeImprovementCount(getAdditionalImprovementType(slot), 1);
 				updatePlotGroupBonus(true);
 			}
 
@@ -6721,6 +6874,11 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				}
 			}
 		}
+		// Membership only. Later worker queries still test area, routes,
+		// legality and incoming missions against the current state.
+		if (eOldOwner != NO_PLAYER) GET_PLAYER(eOldOwner).invalidateOwnedPlotCandidates();
+		if (eNewValue != NO_PLAYER) GET_PLAYER(eNewValue).invalidateOwnedPlotCandidates();
+
 	}
 }
 
@@ -6772,6 +6930,8 @@ bool CvPlot::isAsPeak() const
 
 void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGraphics)
 {
+    UnitTravelConnectivity::Change travelChange(getPlotType()!=eNewValue);
+
 	PROFILE_EXTRA_FUNC();
 	const PlotTypes eOldPlotType = getPlotType();
 
@@ -7290,6 +7450,11 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			}
 		}
 
+		for (int slot = getNumAdditionalImprovements() - 1; slot >= 0 && !bImprovementSet; --slot)
+		{
+			const ImprovementTypes type = getAdditionalImprovementType(slot);
+			if (!canHaveImprovement(type, getTeam())) setAdditionalImprovementType(NO_IMPROVEMENT, type);
+		}
 		// Remove improvement if it's no longer valid for the new feature state, unless prevented by bImprovementSet arg
 		if (getImprovementType() != NO_IMPROVEMENT && !bImprovementSet
 		&& !canHaveImprovement(getImprovementType(), getTeam()))
@@ -7538,9 +7703,9 @@ ImprovementTypes CvPlot::getImprovementType() const
 bool CvPlot::isImprovementDestructible() const
 {
 	return (
-		m_eImprovementType > -1
+		getPillageImprovementType() != NO_IMPROVEMENT
 		&&
-		GC.getImprovementInfo(getImprovementType()).getAirBombDefense() > -1
+		GC.getImprovementInfo(getPillageImprovementType()).getAirBombDefense() > -1
 	);
 }
 // ! Toffer
@@ -7548,10 +7713,19 @@ bool CvPlot::isImprovementDestructible() const
 
 void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
+    UnitTravelConnectivity::PlotChange travelChange(this,UnitTravelConnectivity::relevantImprovement(eNewImprovement)?UnitTravelConnectivity::SEA:0,false,getImprovementType()!=eNewImprovement);
+
 	StackSupportPlotChange stackChange(*this);
 	invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
+	if (CvAdditionalImprovements::usesSecondaryLayer(getImprovementType()) && !migrateAdditionalImprovement()) return;
+	if (CvAdditionalImprovements::usesSecondaryLayer(eNewImprovement))
+	{
+		setAdditionalImprovementType(eNewImprovement);
+		return;
+	}
 	const ImprovementTypes eOldImprovement = getImprovementType();
+	const bool bHadAnyImprovement = hasAnyImprovement();
 
 	if (eOldImprovement != eNewImprovement)
 	{
@@ -7665,7 +7839,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 
 		if (getBonusType() != NO_BONUS)
 		{
-			if ((eNewImprovement == NO_IMPROVEMENT) != (eOldImprovement == NO_IMPROVEMENT))
+			if (bHadAnyImprovement != hasAnyImprovement())
 			{
 				// Newly added or removed improvement on a bonus
 				// Add/remove Zobrist contributuns for all local plot groups
@@ -7745,13 +7919,125 @@ RouteTypes CvPlot::getRouteType() const
 	return (RouteTypes)m_eRouteType;
 }
 
+RouteTypes CvPlot::getRoadRouteType() const
+{
+    const RouteTypes route=getRouteType();
+    return RailRoadRevolution::enabled() && route!=NO_ROUTE && GC.getRouteInfo(route).isRailInfrastructure()
+        ? (RouteTypes)m_eUnderlyingRoadType : route;
+}
+
+RouteTypes CvPlot::getRailRouteType() const
+{
+    const RouteTypes route=getRouteType();
+    return RailRoadRevolution::enabled() && route!=NO_ROUTE && GC.getRouteInfo(route).isRailInfrastructure() ? route : NO_ROUTE;
+}
+
+// Rail units require physical second-layer tracks, including inside cities.
+bool CvPlot::hasUsableRailway() const
+{
+	return !isWater() && getRailRouteType() != NO_ROUTE;
+}
+
+RouteTypes CvPlot::getRouteTypeForBuild(RouteTypes route) const
+{
+    if(!RailRoadRevolution::enabled() || route==NO_ROUTE)return getRouteType();
+    return GC.getRouteInfo(route).isRailInfrastructure() ? getRailRouteType() : getRoadRouteType();
+}
+
+RouteTypes CvPlot::getRevealedRoadRouteType(TeamTypes team,bool debug) const
+{
+    const RouteTypes known=getRevealedRouteType(team,debug);
+    if(!RailRoadRevolution::enabled() || known==NO_ROUTE || !GC.getRouteInfo(known).isRailInfrastructure())return known;
+    if(debug && GC.getGame().isDebugMode())return getRoadRouteType();
+    return team!=NO_TEAM && m_aeRevealedRoadRouteType ? (RouteTypes)m_aeRevealedRoadRouteType[team] : NO_ROUTE;
+}
+
+int CvPlot::getRailRoadMovementCost(const CvUnit* unit,const CvPlot* from) const
+{
+    const int denominator=GC.getMOVE_DENOMINATOR();int result=-1;
+    const TeamTypes team=unit->getTeam();
+    // Decode each endpoint once. The four public layer getters repeat the
+    // option and route-info lookups in this hot movement-cache miss path.
+    const bool layered=RailRoadRevolution::enabled();
+    const RouteTypes rawFrom=from->getRouteType(),rawTo=getRouteType();
+    const bool fromRail=layered&&rawFrom!=NO_ROUTE&&GC.getRouteInfo(rawFrom).isRailInfrastructure();
+    const bool toRail=layered&&rawTo!=NO_ROUTE&&GC.getRouteInfo(rawTo).isRailInfrastructure();
+    const RouteTypes roads[2]={fromRail?(RouteTypes)from->m_eUnderlyingRoadType:rawFrom,toRail?(RouteTypes)m_eUnderlyingRoadType:rawTo};
+    const RouteTypes rails[2]={fromRail?rawFrom:NO_ROUTE,toRail?rawTo:NO_ROUTE};
+    const int moves=unit->baseMoves(),domain=unit->getDomainType();
+    for(int layer=0;layer<2;++layer)
+    {
+        const RouteTypes a=layer?rails[0]:roads[0],b=layer?rails[1]:roads[1];
+        if(a==NO_ROUTE || b==NO_ROUTE)continue;
+        if(!layer && (!from->isValidRoute(unit) || !isValidRoute(unit)))continue;
+        if(layer && (!RailRoadRules::mayUseRail(from->getTeam(),team)||!RailRoadRules::mayUseRail(getTeam(),team)))continue;
+        const CvRouteInfo& x=GC.getRouteInfo(a);const CvRouteInfo& y=a==b?x:GC.getRouteInfo(b);
+        if(domain==DOMAIN_SEA && (x.isSeaTunnel()||y.isSeaTunnel()))continue;
+        const int movement=std::max(1,x.getMovementCost()+GET_TEAM(team).getRouteChange(a));
+        const int other=a==b?movement:std::max(1,y.getMovementCost()+GET_TEAM(team).getRouteChange(b));
+        const int cost=RailRoadRules::edgeCost(movement,x.getFlatMovementCost(),other,y.getFlatMovementCost(),moves,denominator);
+        result=result<0?cost:std::min(result,cost);
+    }
+    return result;
+}
+
+// Explicit two-layer import, including scenario load before final initialization.
+void CvPlot::setRouteLayers(RouteTypes road,RouteTypes rail,bool updateGroups)
+{
+    if(road<NO_ROUTE || road>=GC.getNumRouteInfos() || rail<NO_ROUTE || rail>=GC.getNumRouteInfos())return;
+    if((road!=NO_ROUTE && GC.getRouteInfo(road).isRailInfrastructure()) ||
+        (rail!=NO_ROUTE && !GC.getRouteInfo(rail).isRailInfrastructure()))return;
+    while(isRoute())setRouteType(NO_ROUTE,updateGroups);
+    if(RailRoadRevolution::enabled())
+    {
+        if(road!=NO_ROUTE)setRouteType(road,updateGroups);
+        if(rail!=NO_ROUTE)setRouteType(rail,updateGroups);
+    }
+    else
+    {
+        setRouteType(rail!=NO_ROUTE?rail:road,updateGroups);
+        if(rail!=NO_ROUTE && GC.getGame().isOption(GAMEOPTION_MAP_RAIL_ROAD_REVOLUTION))
+        {
+            m_eUnderlyingRoadType=road;m_bRailRoadLayerSeparated=true;
+            if(road!=NO_ROUTE)m_movementCharacteristicsHash^=RailRoadRules::roadHash(GC.getRouteInfo(road).getZobristValue());
+        }
+    }
+}
+
+void CvPlot::migrateRailRoadRevolution()
+{
+    if(!RailRoadRevolution::enabled() || m_bRailRoadLayerSeparated)return;
+    m_bRailRoadLayerSeparated=true;
+    const RouteTypes rail=getRailRouteType();
+    if(rail==NO_ROUTE)return;
+    const RouteTypes road=RailRoadRevolution::bestRoad(getTeam());
+    m_eUnderlyingRoadType=road;
+    if(road!=NO_ROUTE)m_movementCharacteristicsHash^=RailRoadRules::roadHash(GC.getRouteInfo(road).getZobristValue());
+    for(int i=0;i<MAX_TEAMS;++i)if(GET_TEAM((TeamTypes)i).isAlive() && isVisible((TeamTypes)i,false))
+        setRevealedRouteType((TeamTypes)i,rail);
+}
+
 
 void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 {
+    if(eNewValue!=getRouteType()) ConnectionRequests::invalidate();
+    UnitTravelConnectivity::PlotChange travelChange(this,UnitTravelConnectivity::relevantRoute(eNewValue)?UnitTravelConnectivity::LAND:0,false,isWater() && getRouteType()!=eNewValue);
+
 	PROFILE_EXTRA_FUNC();
 	const RouteTypes eOldRoute = getRouteType();
-
-	if (eOldRoute == eNewValue)
+    const RouteTypes requestedRoute=eNewValue;
+    const RouteTypes oldUnderlying=(RouteTypes)m_eUnderlyingRoadType;
+    RouteTypes newUnderlying=RailRoadRevolution::enabled()?oldUnderlying:NO_ROUTE;
+    if(RailRoadRevolution::enabled())
+    {
+        const RouteTypes road=getRoadRouteType(),rail=getRailRouteType();
+        m_bRailRoadLayerSeparated=true;
+        if(eNewValue==NO_ROUTE){eNewValue=rail!=NO_ROUTE?road:NO_ROUTE;newUnderlying=NO_ROUTE;}
+        else if(GC.getRouteInfo(eNewValue).isRailInfrastructure())newUnderlying=road;
+        else if(rail!=NO_ROUTE){newUnderlying=eNewValue;eNewValue=rail;}
+        else newUnderlying=NO_ROUTE;
+    }
+	if (eOldRoute == eNewValue && oldUnderlying==newUnderlying)
 	{
 		return;
 	}
@@ -7774,6 +8060,9 @@ void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 		m_movementCharacteristicsHash ^= GC.getRouteInfo(eNewValue).getZobristValue();
 	}
 
+    if(oldUnderlying!=NO_ROUTE)m_movementCharacteristicsHash^=RailRoadRules::roadHash(GC.getRouteInfo(oldUnderlying).getZobristValue());
+    m_eUnderlyingRoadType=newUnderlying;
+    if(newUnderlying!=NO_ROUTE)m_movementCharacteristicsHash^=RailRoadRules::roadHash(GC.getRouteInfo(newUnderlying).getZobristValue());
 	m_eRouteType = eNewValue;
 
 	if (isOwned())
@@ -7801,9 +8090,9 @@ void CvPlot::setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroups)
 		updateRouteSymbol(true, true);
 	}
 
-	if (bNewRoute)
+	if (bNewRoute && (!RailRoadRevolution::enabled() || requestedRoute!=NO_ROUTE))
 	{
-		CvEventReporter::getInstance().routeBuilt(eNewValue, getX(), getY());
+		CvEventReporter::getInstance().routeBuilt(RailRoadRevolution::enabled()?requestedRoute:eNewValue, getX(), getY());
 	}
 	else if (bOldSeaRoute)
 	{
@@ -7838,6 +8127,11 @@ void CvPlot::updateCityRoute(bool bUpdatePlotGroup)
 		}
 
 		setRouteType(eCityRoute, bUpdatePlotGroup);
+		if(RailRoadRevolution::enabled())
+		{
+			const RouteTypes road=RailRoadRevolution::bestRoad(getTeam());
+			if(road!=NO_ROUTE)setRouteType(road,bUpdatePlotGroup);
+		}
 	}
 }
 
@@ -7850,6 +8144,8 @@ CvCity* CvPlot::getPlotCity() const
 
 void CvPlot::setPlotCity(CvCity* pNewValue)
 {
+    UnitTravelConnectivity::PlotChange travelChange(this,pNewValue?UnitTravelConnectivity::SEA:0,false,getPlotCity()!=pNewValue);
+
 	StackSupportPlotChange stackChange(*this);
 	invalidateStackSupport();
 	PROFILE_EXTRA_FUNC();
@@ -8512,6 +8808,8 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			iYield += calculateImprovementYieldChange(eImprovement, eYield, ePlayer);
 		}
 
+		iYield += calculateAdditionalImprovementYield(eYield, ePlayer, NO_IMPROVEMENT, bDisplay ? GC.getGame().getActiveTeam() : NO_TEAM);
+
 		if (eRoute != NO_ROUTE)
 		{
 			iYield += GC.getRouteInfo(eRoute).getYieldChange(eYield);
@@ -9166,6 +9464,7 @@ void CvPlot::setDangerCount(int /*PlayerTypes*/ ePlayer, int iNewCount)
 		}
 	}
 
+    if(m_aiDangerCount[ePlayer]!=iNewCount)DefenseNeedEvents::changed();
 	m_aiDangerCount[ePlayer] = iNewCount;
 }
 
@@ -9216,7 +9515,7 @@ void CvPlot::clearVisibilityCounts()
 		SAFE_DELETE_ARRAY(m_apaiInvisibleVisibilityCount);
 	}
 
-	m_resultHashMap->clear();
+	m_movementCostCache->clear();
 	g_bestDefenderCache->clear();
 	m_aPlotTeamVisibilityIntensity.clear();
 	CLLNode<IDInfo>* pUnitNode;
@@ -9812,6 +10111,7 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 		if (!bNewValue) // Un-reveal plot
 		{
 			setRevealedOwner(eTeam, NO_PLAYER);
+			m_additionalImprovements.forget(eTeam);
 			setRevealedImprovementType(eTeam, NO_IMPROVEMENT);
 			setRevealedRouteType(eTeam, NO_ROUTE);
 
@@ -9823,7 +10123,9 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 		else if (eFromTeam == NO_TEAM)
 		{
 			setRevealedOwner(eTeam, getOwner());
+			m_additionalImprovements.reveal(eTeam);
 			setRevealedImprovementType(eTeam, getImprovementType());
+			if (eTeam == GC.getGame().getActiveTeam()) updateAdditionalImprovementGraphics();
 			setRevealedRouteType(eTeam, getRouteType());
 
 			if (pCity != NULL)
@@ -9833,6 +10135,7 @@ void CvPlot::setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool
 		}
 		else // Map trade
 		{
+			m_additionalImprovements.copyRevealed(eTeam, eFromTeam);
 			if (getRevealedOwner(eFromTeam, false) == getOwner())
 			{
 				setRevealedOwner(eTeam, getOwner());
@@ -9936,7 +10239,7 @@ void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
 
-	if (getRevealedRouteType(eTeam, false) != eNewValue)
+	if (getRevealedRouteType(eTeam, false) != eNewValue || (RailRoadRevolution::enabled() && isVisible(eTeam,false) && getRevealedRoadRouteType(eTeam,false)!=getRoadRouteType()))
 	{
 		if (NULL == m_aeRevealedRouteType)
 		{
@@ -9948,6 +10251,15 @@ void CvPlot::setRevealedRouteType(TeamTypes eTeam, RouteTypes eNewValue)
 		}
 
 		m_aeRevealedRouteType[eTeam] = eNewValue;
+        if(RailRoadRevolution::enabled() && (m_aeRevealedRoadRouteType || (eNewValue!=NO_ROUTE && GC.getRouteInfo(eNewValue).isRailInfrastructure())) && (eNewValue==NO_ROUTE || isVisible(eTeam,false)))
+        {
+            if(!m_aeRevealedRoadRouteType)
+            {
+                m_aeRevealedRoadRouteType=new short[MAX_TEAMS];
+                for(int i=0;i<MAX_TEAMS;++i)m_aeRevealedRoadRouteType[i]=NO_ROUTE;
+            }
+            m_aeRevealedRoadRouteType[eTeam]=eNewValue==NO_ROUTE?NO_ROUTE:getRoadRouteType();
+        }
 
 		if (eTeam == GC.getGame().getActiveTeam())
 		{
@@ -10157,6 +10469,8 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			if (GC.getBuildInfo(eBuild).getFeatureChange() != NO_FEATURE)
 			{
 				setFeatureType ((FeatureTypes) GC.getBuildInfo(eBuild).getFeatureChange());
+				if (CvAdditionalImprovements::usesSecondaryLayer(GC.getBuildInfo(eBuild).getImprovement()))
+					setImprovementType(GC.getBuildInfo(eBuild).getImprovement());
 				bCultureDistUpdate = true;
 			}
 
@@ -10183,6 +10497,7 @@ bool CvPlot::hasAnyBuildProgress() const
 
 void CvPlot::updateFeatureSymbolVisibility()
 {
+	updateAdditionalImprovementGraphics();
 	PROFILE_FUNC();
 
 	if (!isGraphicsVisible(ECvPlotGraphics::FEATURE))
@@ -10251,13 +10566,19 @@ void CvPlot::updateFeatureSymbol(bool bForce)
 
 CvRoute* CvPlot::getRouteSymbol() const
 {
-	return m_pRouteSymbol;
+    if(renderingUnderlyingRoad && RailRoadRevolution::enabled())
+    {
+        const RouteTypes known=getRevealedRouteType(GC.getGame().getActiveTeam(),true);
+        if(known!=NO_ROUTE && GC.getRouteInfo(known).isRailInfrastructure())return m_pUnderlyingRouteSymbol;
+    }
+    return m_pRouteSymbol;
 }
 
 
 // XXX route symbols don't really exist anymore...
 void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 {
+	RoadRenderScope mainPass(false);
 	PROFILE_FUNC();
 
 	if ( !isGraphicsVisible(ECvPlotGraphics::ROUTE) )
@@ -10275,6 +10596,7 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 	if (eRoute == NO_ROUTE)
 	{
 		gDLL->getRouteIFace()->destroy(m_pRouteSymbol);
+		gDLL->getRouteIFace()->destroy(m_pUnderlyingRouteSymbol);
 		return;
 	}
 
@@ -10291,6 +10613,22 @@ void CvPlot::updateRouteSymbol(bool bForce, bool bAdjacent)
 	{
 		gDLL->getEntityIFace()->updatePosition((CvEntity *)m_pRouteSymbol); //update position and contours
 	}
+
+    const RouteTypes road=RailRoadRevolution::enabled() && GC.getRouteInfo(eRoute).isRailInfrastructure()
+        ? getRevealedRoadRouteType(GC.getGame().getActiveTeam(),true) : NO_ROUTE;
+    if(road==NO_ROUTE)gDLL->getRouteIFace()->destroy(m_pUnderlyingRouteSymbol);
+    else
+    {
+        RoadRenderScope roadPass(true);
+        if(bForce || !m_pUnderlyingRouteSymbol || gDLL->getRouteIFace()->getRoute(m_pUnderlyingRouteSymbol)!=road)
+        {
+            gDLL->getRouteIFace()->destroy(m_pUnderlyingRouteSymbol);
+            m_pUnderlyingRouteSymbol=gDLL->getRouteIFace()->createRoute();
+            if(m_pUnderlyingRouteSymbol)gDLL->getRouteIFace()->init(m_pUnderlyingRouteSymbol,0,0,road,this);
+            setLayoutDirty(true);
+        }
+        else gDLL->getEntityIFace()->updatePosition((CvEntity*)m_pUnderlyingRouteSymbol);
+    }
 }
 
 
@@ -10701,6 +11039,7 @@ CvUnit* CvPlot::getUnitByIndex(int iIndex) const
 
 void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 {
+    if(!pUnit->isTempUnit())GET_PLAYER(pUnit->getOwner()).getContractBroker().noteDefenseGroupChanged(pUnit->getGroup());
 	PROFILE_EXTRA_FUNC();
 	FAssertMsg(pUnit->at(getX(), getY()), "pUnit is expected to be at getX and getY");
 
@@ -10756,6 +11095,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 
 void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 {
+    if(!pUnit->isTempUnit())GET_PLAYER(pUnit->getOwner()).getContractBroker().noteDefenseGroupChanged(pUnit->getGroup());
 	PROFILE_EXTRA_FUNC();
 	if (pUnit->isCommanderReady())
 	{
@@ -10951,9 +11291,10 @@ void CvPlot::doCulture()
 	// Rewrite so player has a cached vector of all owned forts (Maybe fort should be a new object type),
 	//	and have forts do a doTurn() during the players doTurn(),
 	//	might be necsessary rewrite for being able to produce units in forts anyway.
-	if (getOwner() != NO_PLAYER && getImprovementType() != NO_IMPROVEMENT)
+	if (getOwner() != NO_PLAYER)
 	{
-		doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
+		if (getImprovementType() != NO_IMPROVEMENT) doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
+		for (int slot = 0; slot < getNumAdditionalImprovements(); ++slot) doImprovementCulture(getOwner(), GC.getImprovementInfo(getAdditionalImprovementType(slot)));
 	}
 
 	// Toffer - Decay culture for players that no longer adds culture to this plot
@@ -11045,6 +11386,7 @@ void CvPlot::processArea(CvArea* pArea, int iChange)
 	{
 		pArea->changeNumImprovements(getImprovementType(), iChange);
 	}
+	for (int slot = 0; slot < getNumAdditionalImprovements(); ++slot) pArea->changeNumImprovements(getAdditionalImprovementType(slot), iChange);
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
@@ -11236,6 +11578,8 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BONUSES, &m_eBonusType);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_IMPROVEMENTS, &m_eImprovementType);
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, &m_eRouteType);
+	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, &m_eUnderlyingRoadType);
+	WRAPPER_READ(wrapper, "CvPlot", &m_bRailRoadLayerSeparated);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eRiverNSDirection);
 	WRAPPER_READ(wrapper, "CvPlot", &m_eRiverWEDirection);
 
@@ -11248,6 +11592,8 @@ void CvPlot::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aiYield);
 
+	m_iActivePlayerDangerCacheContext = 0;
+	m_iReadOnlyCarrierPresence = -1;
 	m_iActivePlayerSafeRangeCache = -1;
 	m_iActivePlayerSafeRangeCacheTestMoves = -1;
 	m_bActivePlayerHasDangerCache = false;
@@ -11383,6 +11729,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 
 	SAFE_DELETE_ARRAY(m_aeRevealedRouteType);
+	SAFE_DELETE_ARRAY(m_aeRevealedRoadRouteType);
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
 	if (cCount > 0)
 	{
@@ -11390,6 +11737,14 @@ void CvPlot::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, cCount, m_aeRevealedRouteType);
 	}
 
+    int railRoadRevealedCount=0;
+    WRAPPER_READ_DECORATED(wrapper,"CvPlot",&railRoadRevealedCount,"railRoadRevealedCount");
+    if(railRoadRevealedCount>0 && railRoadRevealedCount<=MAX_TEAMS)
+    {
+        m_aeRevealedRoadRouteType=new short[MAX_TEAMS];
+        for(int i=0;i<MAX_TEAMS;++i)m_aeRevealedRoadRouteType[i]=NO_ROUTE;
+        WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,"CvPlot",REMAPPED_CLASS_TYPE_ROUTES,railRoadRevealedCount,m_aeRevealedRoadRouteType);
+    }
 	WRAPPER_READ_STRING(wrapper, "CvPlot", &m_szScriptData);
 
 	// @SAVEBREAK EVALUATE
@@ -11407,6 +11762,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 		if (iCount > 0)
 		{
 			m_paiBuildProgress = new int[GC.getNumBuildInfos()];
+			// Older saves do not contain builds added by newer XML. Remapping
+			// only writes stored classes, so their new slots must start at zero.
+			memset(m_paiBuildProgress, 0, sizeof(int) * GC.getNumBuildInfos());
 			short* iTempArray = new short[iCount];
 
 			//	Might be old format where it's a raw array so try to load that first
@@ -11550,25 +11908,25 @@ void CvPlot::read(FDataStreamBase* pStream)
 		uint8_t uType8 = 0;
 		uint16_t uCount16 = 0;
 
+		// The two maps are serialized separately, each with its own size.
 		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommanderCountSize");
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommodoreCountSize");
 		while (iSize-- > 0)
 		{
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommanderCountPlayer");
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommanderCountCount");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommodoreCountPlayer");
-            WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommodoreCountCount");
-
 			FAssert(uCount16 > 0);
 			m_commanderCount.insert(std::make_pair(uType8, uCount16));
-
-			FAssert(uCount16 > 0);
-            m_commodoreCount.insert(std::make_pair(uType8, uCount16));
-
-			// Toffer - This is too early to set the player cache, players haven't been read in yet,
-			//	so the cache will be cleared at the player reset before read.
-			//GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
+		iSize = 0;
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommodoreCountSize");
+		while (iSize-- > 0)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommodoreCountPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommodoreCountCount");
+			FAssert(uCount16 > 0);
+			m_commodoreCount.insert(std::make_pair(uType8, uCount16));
+		}
+		// Player caches are rebuilt later: players have not been read yet.
 	}
 
 	// Toffer - Read vectors
@@ -11621,6 +11979,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	m_additionalImprovements.read(wrapper);
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
 	// @SAVEBREAK delete
 	foreach_(const YieldTypes eYield, YieldTypesRange())
@@ -11652,6 +12011,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	{
 		m_movementCharacteristicsHash ^= GC.getRouteInfo(getRouteType()).getZobristValue();
 	}
+	if(m_eUnderlyingRoadType!=NO_ROUTE)m_movementCharacteristicsHash^=RailRoadRules::roadHash(GC.getRouteInfo((RouteTypes)m_eUnderlyingRoadType).getZobristValue());
 	if (getRiverNSDirection() != NO_CARDINALDIRECTION)
 	{
 		m_movementCharacteristicsHash ^= g_riverDirectionZobristHashes[getRiverNSDirection()];
@@ -11717,6 +12077,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_BONUSES, m_eBonusType);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_IMPROVEMENTS, m_eImprovementType);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, m_eRouteType);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, m_eUnderlyingRoadType);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bRailRoadLayerSeparated);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eRiverNSDirection);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eRiverWEDirection);
 
@@ -11880,6 +12242,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper, "CvPlot", REMAPPED_CLASS_TYPE_ROUTES, MAX_TEAMS, m_aeRevealedRouteType);
 	}
 
+    WRAPPER_WRITE_DECORATED(wrapper,"CvPlot",m_aeRevealedRoadRouteType?(int)MAX_TEAMS:0,"railRoadRevealedCount");
+    if(m_aeRevealedRoadRouteType)WRAPPER_WRITE_CLASS_ENUM_ARRAY(wrapper,"CvPlot",REMAPPED_CLASS_TYPE_ROUTES,MAX_TEAMS,m_aeRevealedRoadRouteType);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szScriptData);
 
 	if (NULL != m_paiBuildProgress)
@@ -12003,6 +12367,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayer");
 		}
 	}
+	m_additionalImprovements.write(wrapper);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_aExtraYield.c_array());
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -12010,6 +12375,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 void CvPlot::setLayoutDirty(bool bDirty)
 {
+	if (bDirty) updateAdditionalImprovementGraphics();
 	if (!GC.IsGraphicsInitialized() || !isInViewport())
 	{
 		return;
@@ -12083,6 +12449,18 @@ void CvPlot::getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) 
 	}
 
 	eType = getRevealedImprovementType(GC.getGame().getActiveTeam(), true);
+	// Render raised nets over feature-backed additions without changing the
+	// gameplay improvement, city bonuses, resource connection or fog memory.
+	if (CvAdditionalImprovements::enabled() && eType != NO_IMPROVEMENT
+	&& strcmp(GC.getImprovementInfo(eType).getType(), "IMPROVEMENT_FISHING_BOATS") == 0)
+	{
+		const ImprovementTypes addition = getRevealedAdditionalImprovementType(0, GC.getGame().getActiveTeam());
+		if (CvAdditionalImprovements::featureFor(addition) != NO_FEATURE)
+		{
+			const int visual = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS_ABOVE_REEF");
+			if (visual >= 0) eType = (ImprovementTypes)visual;
+		}
+	}
 
 	if (eType == NO_IMPROVEMENT && isActiveVisible(true) && isBeingWorked() && !isCity())
 	{
@@ -12132,6 +12510,15 @@ void CvPlot::getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWor
 		{
 			bImproved = true;
 			bWorked = isBeingWorked();
+		}
+		for (int slot = 0; !bImproved && slot < CvAdditionalImprovements::CAPACITY; ++slot)
+		{
+			const ImprovementTypes type = getRevealedAdditionalImprovementType(slot, GC.getGame().getActiveTeam());
+			if (type != NO_IMPROVEMENT && GC.getImprovementInfo(type).isImprovementBonusTrade(eType))
+			{
+				bImproved = true;
+				bWorked = isBeingWorked();
+			}
 		}
 	}
 }
@@ -12226,8 +12613,22 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 	}
 
 	iYield += calculateNatureYield(eYield, getTeam(), bIgnoreFeature);
+	const FeatureTypes placedFeature = (FeatureTypes)GC.getBuildInfo(eBuild).getFeatureChange();
+	if (placedFeature != NO_FEATURE)
+	{
+		if (!bIgnoreFeature && getFeatureType() != NO_FEATURE)
+		{
+			iYield -= GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield);
+			if (isRiver()) iYield -= GC.getFeatureInfo(getFeatureType()).getRiverYieldChange(eYield);
+		}
+		iYield += GC.getFeatureInfo(placedFeature).getYieldChange(eYield);
+		if (isRiver()) iYield += GC.getFeatureInfo(placedFeature).getRiverYieldChange(eYield);
+	}
+	const ImprovementTypes builtImprovement = GC.getBuildInfo(eBuild).getImprovement();
+	iYield += calculateAdditionalImprovementYield(eYield, getOwner(), CvAdditionalImprovements::usesSecondaryLayer(builtImprovement) ? builtImprovement : NO_IMPROVEMENT);
+	if (CvAdditionalImprovements::usesSecondaryLayer(builtImprovement) && getImprovementType() != NO_IMPROVEMENT) iYield += calculateImprovementYieldChange(getImprovementType(), eYield, getOwner());
 
-	ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
+	ImprovementTypes eImprovement = builtImprovement;
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -12261,6 +12662,11 @@ int CvPlot::getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUp
 	RouteTypes eRoute = (RouteTypes)GC.getBuildInfo(eBuild).getRoute();
 	if (eRoute != NO_ROUTE)
 	{
+		// An ordinary road built beneath existing rail does not replace its yields.
+		if (RailRoadRevolution::enabled() && getRailRouteType() != NO_ROUTE && !GC.getRouteInfo(eRoute).isRailInfrastructure())
+		{
+			eRoute = getRouteType();
+		}
 		eImprovement = getImprovementType();
 		if (eImprovement != NO_IMPROVEMENT)
 		{
@@ -12344,7 +12750,7 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 
 		for (int i = 0; i < kTrigger.getNumImprovementsRequired(); ++i)
 		{
-			if (kTrigger.getImprovementRequired(i) == getImprovementType())
+			if (hasImprovement((ImprovementTypes)kTrigger.getImprovementRequired(i)))
 			{
 				bFoundValid = true;
 				break;
@@ -12580,6 +12986,9 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bTestVisible) const
 	PROFILE_FUNC();
 
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
+	// Trains cannot be produced off the second-layer rail network.
+	if (!bTestVisible && kUnit.isRailOnly() && !hasUsableRailway()) return false;
 
 	if (isCity())
 	{
@@ -13065,7 +13474,8 @@ void CvPlot::setClaimingOwner(PlayerTypes eNewValue)
 
 bool CvPlot::isActsAsCity() const
 {
-	return getImprovementType() != NO_IMPROVEMENT && GC.getImprovementInfo(getImprovementType()).isActsAsCity();
+	const ImprovementTypes type = getMilitaryImprovementType();
+	return type != NO_IMPROVEMENT && GC.getImprovementInfo(type).isActsAsCity();
 }
 
 
@@ -13195,9 +13605,9 @@ const CvPlot* CvPlot::isInFortControl(bool bIgnoreObstructions, PlayerTypes eDef
 	PROFILE_EXTRA_FUNC();
 	if (!bIgnoreObstructions)
 	{
-		if (getImprovementType() != NO_IMPROVEMENT)
+		if (getMilitaryImprovementType() != NO_IMPROVEMENT)
 		{
-			if (GC.getImprovementInfo(getImprovementType()).isZOCSource())
+			if (GC.getImprovementInfo(getMilitaryImprovementType()).isZOCSource())
 			{
 				if (hasDefender(true, eDefendingPlayer, eAttackingPlayer))
 				{
@@ -13207,9 +13617,9 @@ const CvPlot* CvPlot::isInFortControl(bool bIgnoreObstructions, PlayerTypes eDef
 		}
 	}
 	foreach_(const CvPlot* pAdjacentPlot, adjacent()
-	| filtered(CvPlot::fn::getImprovementType() != NO_IMPROVEMENT))
+	| filtered(bind(CvPlot::getMilitaryImprovementType, _1, NO_TEAM) != NO_IMPROVEMENT))
 	{
-		if (GC.getImprovementInfo(pAdjacentPlot->getImprovementType()).isZOCSource())
+		if (GC.getImprovementInfo(pAdjacentPlot->getMilitaryImprovementType()).isZOCSource())
 		{
 			if (pAdjacentPlot->hasDefender(true, eDefendingPlayer, eAttackingPlayer))
 			{
@@ -13227,9 +13637,9 @@ const CvPlot* CvPlot::isInFortControl(bool bIgnoreObstructions, PlayerTypes eDef
 PlayerTypes CvPlot::controlsAdjacentZOCSource(TeamTypes eAttackingTeam) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (getImprovementType() != NO_IMPROVEMENT)
+	if (getMilitaryImprovementType() != NO_IMPROVEMENT)
 	{
-		if (GC.getImprovementInfo(getImprovementType()).isZOCSource())
+		if (GC.getImprovementInfo(getMilitaryImprovementType()).isZOCSource())
 		{
 			foreach_(const CvUnit* pLoopUnit, units())
 			{
@@ -13242,9 +13652,9 @@ PlayerTypes CvPlot::controlsAdjacentZOCSource(TeamTypes eAttackingTeam) const
 	}
 
 	foreach_(const CvPlot* pAdjacentPlot, adjacent()
-	| filtered(CvPlot::fn::getImprovementType() != NO_IMPROVEMENT))
+	| filtered(bind(CvPlot::getMilitaryImprovementType, _1, NO_TEAM) != NO_IMPROVEMENT))
 	{
-		if (GC.getImprovementInfo(pAdjacentPlot->getImprovementType()).isZOCSource())
+		if (GC.getImprovementInfo(pAdjacentPlot->getMilitaryImprovementType()).isZOCSource())
 		{
 			foreach_(const CvUnit* pLoopUnit, pAdjacentPlot->units())
 			{
@@ -13353,7 +13763,7 @@ int CvPlot::getFeatureTurnDamage() const
 
 int CvPlot::getTotalTurnDamage(const CvUnit* pUnit) const
 {
-	return getTerrainTurnDamage(pUnit) + getFeatureTurnDamage();
+	return getTerrainTurnDamage(pUnit) + (pUnit ? DoctrinePromotions::featureDamage(*pUnit, getFeatureType(), getFeatureTurnDamage()) : getFeatureTurnDamage());
 }
 
 CvUnit* CvPlot::getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate) const
