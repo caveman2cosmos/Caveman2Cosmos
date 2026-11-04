@@ -4,6 +4,12 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "UnitTravelConnectivity.h"
+#include "TransportRequests.h"
+#include "CvUnitAI.h"
+#include "NavalDecisionDiagnostics.h"
+#include "MissionDiagnostics.h"
+#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
 #include "CvCity.h"
@@ -79,6 +85,7 @@ void CvSelectionGroup::uninit()
 // Initializes data members that are serialized.
 void CvSelectionGroup::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 {
+	if (!bConstructorCall) TransportRequests::forget(this);
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -115,6 +122,7 @@ void CvSelectionGroup::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 
 void CvSelectionGroup::kill()
 {
+	TransportRequests::forget(this);
 	FAssert(getOwner() != NO_PLAYER);
 	FAssertMsg(getID() != FFreeList::INVALID_INDEX, "getID() is not expected to be equal with FFreeList::INVALID_INDEX");
 	FAssertMsg(getNumUnits() == 0, "The number of units is expected to be 0");
@@ -578,6 +586,8 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 
 bool CvSelectionGroup::pushMissionInternal(MissionTypes eMission, int iData1, int iData2, int iFlags, bool bAppend, bool bManual, MissionAITypes eMissionAI, const CvPlot* pMissionAIPlot, const CvUnit* pMissionAIUnit)
 {
+    NAVAL_DIAG_BARRIER();
+
 	PROFILE_FUNC();
 
 	FAssert(getOwner() != NO_PLAYER);
@@ -607,6 +617,9 @@ bool CvSelectionGroup::pushMissionInternal(MissionTypes eMission, int iData1, in
 	mission.iPushTurn = GC.getGame().getGameTurn();
 
 	AI_setMissionAI(eMissionAI, pMissionAIPlot, pMissionAIUnit);
+
+	if (!bManual && eMission == MISSION_SKIP && eMissionAI == NO_MISSIONAI)
+		TransportRequests::considerIdle(this);
 
 	const bool bResult = insertAtEndMissionQueue(mission, !bAppend);
 
@@ -1481,7 +1494,7 @@ bool CvSelectionGroup::startMission()
 		if (headMissionQueueNode()->m_data.eMissionType == MISSION_PILLAGE)
 		{
 			// Fast units pillage first
-			int iMaxMovesLeft = 1;
+			int iMaxMovesLeft = 0;
 
 			foreach_(const CvUnit* pLoopUnit, units())
 			{
@@ -1499,9 +1512,11 @@ bool CvSelectionGroup::startMission()
 			}
 
 			bool bDidPillage = false;
-			while (iMaxMovesLeft > 0 && !bDidPillage)
+			// Zero is a valid bucket: units with a fractional move remaining
+			// can still pillage. Use -1 exclusively for "no next candidate".
+			while (iMaxMovesLeft >= 0 && !bDidPillage)
 			{
-				int iNextMaxMovesLeft = 0;
+				int iNextMaxMovesLeft = -1;
 				foreach_(CvUnit* pLoopUnit, units())
 				{
 					if (pLoopUnit->canMove() && pLoopUnit->canPillage(pLoopUnit->plot()))
@@ -2067,11 +2082,11 @@ bool CvSelectionGroup::startMission()
 		{
 			setMissionTimer(GC.getMissionInfo(MISSION_NUKE).getTime());
 		}
-		OutputDebugString(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
+		C2C_MISSION_TRACE(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
 
 		if (!isBusy())
 		{
-			OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			C2C_MISSION_TRACE(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 			if (bDelete)
 			{
 				deleteMissionQueueNode(headMissionQueueNode());
@@ -2080,7 +2095,7 @@ bool CvSelectionGroup::startMission()
 			{
 				return continueMission();
 			}
-			OutputDebugString(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			C2C_MISSION_TRACE(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 			if (IsSelected() && (bCycle || !canAnyMove()))
 			{
@@ -2095,10 +2110,13 @@ bool CvSelectionGroup::startMission()
 bool CvSelectionGroup::continueMission(int iSteps)
 {
 	PROFILE_FUNC();
+	// Only the head evaluates a reinforcement group's adjacent opportunity;
+	// it queues the original destination behind the attack before executing.
+	if(iSteps==0 && getHeadUnit() && static_cast<CvUnitAI*>(getHeadUnit())->AI_defenseDemandAdjacentAttack())return true;
 
 	CLLNode<MissionData>* missionNode = headMissionQueueNode();
 
-	OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+	C2C_MISSION_TRACE(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	FAssert(!isBusy());
 	FAssert(missionNode);
@@ -2136,7 +2154,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		missionNode = headMissionQueueNode();
 		FAssert(getHeadUnit());
 		FAssert(getNumUnits() > 0);
-		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+		C2C_MISSION_TRACE(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
 		// while that bug is fixed, no reason to not be a little more careful
@@ -2334,10 +2352,10 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			}
 			case MISSION_BUILD:
 			{
-				OutputDebugString(CvString::format("%S MISSION_BUILD...\n", getHeadUnit()->getDescription().c_str()).c_str());
+				C2C_MISSION_TRACE(CvString::format("%S MISSION_BUILD...\n", getHeadUnit()->getDescription().c_str()).c_str());
 				if (!groupBuild((BuildTypes)(missionNode->m_data.iData1)))
 				{
-					OutputDebugString(CvString::format("%S Failed...\n", getHeadUnit()->getDescription().c_str()).c_str());
+					C2C_MISSION_TRACE(CvString::format("%S Failed...\n", getHeadUnit()->getDescription().c_str()).c_str());
 					bFailed = true;
 					bDone = true;
 				}
@@ -2349,7 +2367,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	if (missionNode && getNumUnits() > 0)
 	{
-		OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+		C2C_MISSION_TRACE(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		if (!bDone)
 		{
@@ -2434,7 +2452,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 		if (bDone)
 		{
-			OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			C2C_MISSION_TRACE(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 			if (IsSelected() && !bCombat && !canAllSelectedMove())
 			{
@@ -2443,7 +2461,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 			if (!isBusy())
 			{
-				OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+				C2C_MISSION_TRACE(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 				if (!isHuman() || missionNode->m_data.eMissionType != MISSION_MOVE_TO)
 				{
@@ -3060,7 +3078,7 @@ bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 /*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
 {
 #ifdef _DEBUG
-	OutputDebugString("exe is asking if group can move into a plot\n");
+	C2C_MISSION_TRACE("exe is asking if group can move into a plot\n");
 #endif
 	return canEnterPlot(pPlot, bAttack);
 }
@@ -3080,7 +3098,7 @@ bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWa
 /*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
 {
 #ifdef _DEBUG
-	OutputDebugString("exe is asking if group can move into or attack a plot\n");
+	C2C_MISSION_TRACE("exe is asking if group can move into or attack a plot\n");
 #endif
 	return canEnterOrAttackPlot(pPlot, bDeclareWar);
 }
@@ -3291,10 +3309,23 @@ bool CvSelectionGroup::isHasPathToAreaPlayerCity(const PlayerTypes ePlayer, cons
 {
 	PROFILE_FUNC();
 
-	CvReachablePlotSet plotSet(this, iFlags, MAX_INT, false);
-
 	const CvUnit* headUnit = getHeadUnit();
 	const CvPlot* plot = headUnit->plot();
+	// An idle group's transport check used to flood the whole map even when
+	// this player had no city in its area. Reuse the existing optimistic
+	// component filters and the private target view, without caching a decision
+	// across orders, movement or turns. Native path legality still decides.
+	std::vector<CvPlot*> targets;
+	foreach_(const CvCity* cityX, GET_PLAYER(ePlayer).cities())
+	{
+		if (cityX->area() == area()
+			&& UnitTravelConnectivity::landUnitCanReach(headUnit,cityX->plot(),true)
+			&& UnitTravelConnectivity::seaUnitCanReach(headUnit,cityX->plot(),true))
+			targets.push_back(cityX->plot());
+	}
+	if (targets.empty()) return false;
+	CvReachablePlotSet plotSet(this, iFlags, -1, false);
+	plotSet.PopulateForTargets(targets);
 
 	const bool bIgnoreDanger =
 	(
@@ -3354,18 +3385,20 @@ bool CvSelectionGroup::isStranded()
 
 	if (!m_bIsStrandedCacheValid)
 	{
-		m_bIsStrandedCache = calculateIsStranded();
+		m_bIsStrandedCache = calculateIsStranded(TransportRequests::waitingOnly(this));
 		m_bIsStrandedCacheValid = true;
 	}
+	TransportRequests::publish(this, m_bIsStrandedCache);
 	return m_bIsStrandedCache;
 }
 
 void CvSelectionGroup::invalidateIsStrandedCache()
 {
 	m_bIsStrandedCacheValid = false;
+	TransportRequests::dirty(this);
 }
 
-bool CvSelectionGroup::calculateIsStranded()
+bool CvSelectionGroup::calculateIsStranded(bool bTransportWait)
 {
 	PROFILE_FUNC();
 
@@ -3384,22 +3417,23 @@ bool CvSelectionGroup::calculateIsStranded()
 		return false;
 	}
 
-	if (getActivityType() != ACTIVITY_AWAKE && getActivityType() != ACTIVITY_HOLD)
+	if (getActivityType() != ACTIVITY_AWAKE && getActivityType() != ACTIVITY_HOLD
+		&& !(bTransportWait && getActivityType() == ACTIVITY_MISSION))
 	{
 		return false;
 	}
 
-	if (AI_getMissionAIType() != NO_MISSIONAI)
+	if (AI_getMissionAIType() != NO_MISSIONAI && !bTransportWait)
 	{
 		return false;
 	}
 
-	if (getLengthMissionQueue() > 0)
+	if (getLengthMissionQueue() > 0 && !bTransportWait)
 	{
 		return false;
 	}
 
-	if (!canAllMove())
+	if (!canAllMove() && !bTransportWait)
 	{
 		return false;
 	}
@@ -3439,8 +3473,8 @@ bool CvSelectionGroup::calculateIsStranded()
 			return false;
 		}
 
-		if (plot()->getImprovementType() != NO_IMPROVEMENT
-		&& GC.getImprovementInfo(plot()->getImprovementType()).isActsAsCity()
+		if (plot()->getMilitaryImprovementType() != NO_IMPROVEMENT
+		&& GC.getImprovementInfo(plot()->getMilitaryImprovementType()).isActsAsCity()
 		&& canDefend())
 		{
 			return false;
@@ -3568,7 +3602,7 @@ CvPlot* CvSelectionGroup::plot() const
 /*DllExport*/ CvPlot* CvSelectionGroup::plotExternal() const
 {
 #ifdef _DEBUG
-	OutputDebugString("exe is asking for the plot of this group\n");
+	C2C_MISSION_TRACE("exe is asking for the plot of this group\n");
 #endif
 	CvPlot* pResult = plot();
 
@@ -3669,6 +3703,8 @@ bool CvSelectionGroup::groupDeclareWar(const CvPlot* pPlot, bool bForce)
 // Returns true if attack was made...
 bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting)
 {
+    StackPromotions::MechanicsScope exactMechanics;
+    StackPromotions::EvaluationScope aidEvaluation(true);
 	PROFILE_FUNC();
 
 	bFailedAlreadyFighting = false;
@@ -3776,7 +3812,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			{
 				bool bFoundBombard = false;
 
-				OutputDebugString("Attempting to bombard tough plot\n");
+				C2C_MISSION_TRACE("Attempting to bombard tough plot\n");
 				foreach_(CvUnit* pLoopUnit, units())
 				{
 					if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
@@ -4470,13 +4506,20 @@ bool CvSelectionGroup::readyToSelect(bool bAny)
 
 bool CvSelectionGroup::readyToMove(bool bAny, bool bValidate)
 {
-	return ((bAny ? canAnyMove(bValidate) : canAllMove()) && (headMissionQueueNode() == NULL) && (getActivityType() == ACTIVITY_AWAKE) && !isBusy() && !isCargoBusy());
+	// Sleeping/working groups cannot become ready by scanning their members.
+	// canAnyMove(true) only changes AWAKE mixed-movement groups, so retain
+	// that validation even with a queued mission (it prevents a stuck turn).
+	if (getActivityType() != ACTIVITY_AWAKE) return false;
+	const bool hasMission = headMissionQueueNode() != NULL;
+	if (hasMission && !(bAny && bValidate)) return false;
+	return (bAny ? canAnyMove(bValidate) : canAllMove()) && !hasMission
+		&& getActivityType() == ACTIVITY_AWAKE && !isBusy() && !isCargoBusy();
 }
 
 
 bool CvSelectionGroup::readyToAuto() const
 {
-	return (canAllMove() && (headMissionQueueNode() != NULL));
+	return headMissionQueueNode() != NULL && canAllMove();
 }
 
 
@@ -4598,6 +4641,8 @@ ActivityTypes CvSelectionGroup::getActivityType() const
 
 void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSleepType)
 {
+    NAVAL_DIAG_BARRIER();
+
 	PROFILE_EXTRA_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 
@@ -4605,6 +4650,7 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 	{
 		return;
 	}
+	if (TransportRequests::enabled()) invalidateIsStrandedCache();
 	if (m_eActivityType == ACTIVITY_INTERCEPT)
 	{
 		airCircle(false);
@@ -4813,6 +4859,8 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 
 bool CvSelectionGroup::generatePath(const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags, bool bReuse, int* piPathTurns, int iMaxPathLen, int iOptimizationLimit) const
 {
+    NAVAL_DIAG_QUERY(PATH,getOwner(),getID(),pFromPlot?pFromPlot->getX():-1,pFromPlot?pFromPlot->getY():-1,pToPlot?pToPlot->getX():-1,pToPlot?pToPlot->getY():-1,iFlags,bReuse,iMaxPathLen,iOptimizationLimit,piPathTurns!=NULL);
+
 	bool bSuccess;
 
 	PROFILE("CvSelectionGroup::generatePath()");
@@ -4887,6 +4935,7 @@ bool CvSelectionGroup::generatePath(const CvPlot* pFromPlot, const CvPlot* pToPl
 
 #endif
 
+	NAVAL_DIAG_FINISH(bSuccess,piPathTurns?*piPathTurns:0);
 	return bSuccess;
 }
 
@@ -5133,6 +5182,7 @@ int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) c
 // Returns true if the unit is added...
 bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 {
+	if (TransportRequests::enabled()) invalidateIsStrandedCache();
 	PROFILE_EXTRA_FUNC();
 	//PROFILE_FUNC();
 
@@ -5174,7 +5224,7 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 		m_units.insertAtEnd(pUnit->getIDInfo());
 	}
 
-	AI_noteSizeChange(1, pUnit->getCargoVolume());
+	AI_noteSizeChange(1, pUnit->SMCargoVolume());
 
 	if (!bMinimalChange && getOwner() == NO_PLAYER && getNumUnits() > 0)
 	{
@@ -5206,6 +5256,7 @@ bool CvSelectionGroup::containsUnit(const CvUnit* pUnit) const
 
 void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 {
+	if (TransportRequests::enabled()) invalidateIsStrandedCache();
 	PROFILE_EXTRA_FUNC();
 	CvUnit* pOldHeadUnit = getHeadUnit();
 
@@ -5261,7 +5312,7 @@ CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 	}
 	const CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
 
-	AI_noteSizeChange(-1, pLoopUnit ? pLoopUnit->getCargoVolume() : 0);
+	AI_noteSizeChange(-1, pLoopUnit ? -pLoopUnit->SMCargoVolume() : 0);
 
 	return m_units.deleteNode(pNode);
 }
@@ -5307,6 +5358,8 @@ bool CvSelectionGroup::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria*
 void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 {
 	PROFILE_EXTRA_FUNC();
+	// Reject before the native merge can change a committed head's AI role.
+	if(!CvUnitAI::AI_canRegroupDefense(getHeadUnit(),pSelectionGroup?pSelectionGroup->getHeadUnit():NULL))return;
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 
 	// merge groups, but make sure we do not change the head unit AI
@@ -5504,7 +5557,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 {
 	PROFILE_EXTRA_FUNC();
 #ifdef _DEBUG
-	OutputDebugString("exe is asking for a units' index within this group\n");
+	C2C_MISSION_TRACE("exe is asking for a units' index within this group\n");
 #endif
 	FAssertMsg(this != NULL, "CTD incoming");
 	int iIndex = 0;
@@ -5603,11 +5656,14 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 
 void CvSelectionGroup::clearMissionQueue()
 {
+	if (TransportRequests::enabled()) invalidateIsStrandedCache();
+    NAVAL_DIAG_BARRIER();
+
 	PROFILE_FUNC();
 	FAssert(getOwner() != NO_PLAYER);
 	FAssert(getHeadUnit());
 
-	OutputDebugString(CvString::format("%S clearMissionQueue...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group").c_str());
+	C2C_MISSION_TRACE(CvString::format("%S clearMissionQueue...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group").c_str());
 	deactivateHeadMission();
 
 	m_missionQueue.clear();
@@ -5654,7 +5710,7 @@ bool CvSelectionGroup::insertAtEndMissionQueue(MissionData mission, bool bStart)
 
 	m_missionQueue.insertAtEnd(mission);
 
-	OutputDebugString(CvString::format("%S insertAtEndMissionQueue %d...\n", getHeadUnit()->getDescription().c_str(), mission.eMissionType).c_str());
+	C2C_MISSION_TRACE(CvString::format("%S insertAtEndMissionQueue %d...\n", getHeadUnit()->getDescription().c_str(), mission.eMissionType).c_str());
 
 	if (getLengthMissionQueue() == 1 && bStart && !activateHeadMission())
 	{
@@ -5676,7 +5732,7 @@ CLLNode<MissionData>* CvSelectionGroup::deleteMissionQueueNode(CLLNode<MissionDa
 {
 	FAssertMsg(pNode != NULL, "Node is not assigned a valid value");
 	FAssert(getOwner() != NO_PLAYER);
-	OutputDebugString(CvString::format("%S deleteMissionQueueNode %d...\n", getHeadUnit()->getDescription().c_str(), pNode->m_data.eMissionType).c_str());
+	C2C_MISSION_TRACE(CvString::format("%S deleteMissionQueueNode %d...\n", getHeadUnit()->getDescription().c_str(), pNode->m_data.eMissionType).c_str());
 
 	if (pNode == headMissionQueueNode())
 	{

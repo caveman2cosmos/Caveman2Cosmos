@@ -23,7 +23,7 @@ class CvArmy;
  */
 struct MissionTargetInfo
 {
-	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
+	MissionTargetInfo() : iCount(0), iClosest(MAX_INT), iVolume(0) {}
 
 	int	iCount;		//	Num units targeting the mission target
 	int iClosest;	//	How close is the closest
@@ -313,6 +313,7 @@ public:
 	//int AI_PotentialDefenders(CvPlot* pPlot, bool bTestVisible = true) const;
 	int AI_totalMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_areaMissionAIs(const CvArea* pArea, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	void AI_invalidateMissionTargetCache(MissionAITypes eMissionAI) const;
 	int AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
@@ -800,6 +801,7 @@ private:
 
 	typedef stdext::hash_map<const CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
 	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
+	const PlotMissionTargetMap& getMissionTargetMap(MissionAITypes eMissionAI) const;
 	mutable MissionPlotTargetMap m_missionTargetCache;
 };
 
