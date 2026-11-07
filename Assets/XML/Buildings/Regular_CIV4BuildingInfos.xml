@@ -6768,43 +6768,6 @@
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANTARCTIC_SKYSCRAPER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANTARCTIC_SKYSCRAPER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANTARCTIC_SKYSCRAPER_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANTARCTIC_SKYSCRAPER</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>5455</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_ICE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
-			<CommerceChanges>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>5</iYield>
-				<iYield>10</iYield>
-				<iYield>10</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_CRYSTALPUNK</Bonus>
-			<bPrereqPower>1</bPrereqPower>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_CAMP_ANTELOPE</Type>
 			<Description>TXT_KEY_BUILDING_CAMP_ANTELOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAMP_ANTELOPE_PEDIA</Civilopedia>
@@ -25505,41 +25468,6 @@
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CENTER_FOR_THE_STUDY_OF_CIVILIZATION</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CENTER_FOR_THE_STUDY_OF_CIVILIZATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_THE_STUDY_OF_CIVILIZATION_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_THE_STUDY_OF_CIVILIZATION</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>8755</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>20</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COMPUTATIONAL_METAPHYSICS_CENTER</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_SPACEPUNK</Bonus>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bPrereqPower>1</bPrereqPower>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_CENTIPEDE_GATHERER</Type>
 			<Description>TXT_KEY_BUILDING_CENTIPEDE_GATHERER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTIPEDE_GATHERER_PEDIA</Civilopedia>
@@ -35614,34 +35542,6 @@
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRYSTAL_JEWELLER</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CRYSTAL_JEWELLER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_JEWELLER_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRYSTAL_JEWELLER</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>5455</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DELTA_ASSEMBLER</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_CRYSTALPUNK</Bonus>
-			<bPrereqPower>1</bPrereqPower>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FARM_CROP_CUCUMBER</Type>
 			<Description>TXT_KEY_BUILDING_FARM_CROP_CUCUMBER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARM_CROP_CUCUMBER_PEDIA</Civilopedia>
@@ -44633,38 +44533,6 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_ENERGIZED_CRYSTALS</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ENERGIZED_CRYSTALS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ENERGIZED_CRYSTALS_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENERGIZED_CRYSTALS</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>5455</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CRYSTAL_JEWELLER</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_CRYSTALPUNK</Bonus>
-			<bPrereqPower>1</bPrereqPower>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -95906,41 +95774,6 @@
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PHILOSOPHERS_CASTLE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_PHILOSOPHERS_CASTLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PHILOSOPHERS_CASTLE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHILOSOPHERS_CASTLE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<PrereqTech>TECH_BINARY_SEMIOTICS</PrereqTech>
-			<iCost>5455</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COMPUTATIONAL_METAPHYSICS_CENTER</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_CRYSTALPUNK</Bonus>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<bPrereqPower>1</bPrereqPower>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_FACTORY_PHONOGRAPHS</Type>
 			<Description>TXT_KEY_BUILDING_FACTORY_PHONOGRAPHS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FACTORY_PHONOGRAPHS_PEDIA</Civilopedia>
@@ -116991,38 +116824,6 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		    <iHurryCostModifier>100</iHurryCostModifier>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STARGATE</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STARGATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STARGATE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STARGATE</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iCost>18355</iCost>
-			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
-			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
-			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
-			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>10</iYield>
-			</YieldChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
-			</PrereqInCityBuildings>
-			<Bonus>BONUS_STARPUNK</Bonus>
 		    <iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>

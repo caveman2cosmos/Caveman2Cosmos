@@ -1881,55 +1881,6 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEO_PYRAMID</Type>
-			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_NEO_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEO_PYRAMID_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEO_PYRAMID</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_NEO_PYRAMID</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iPrereqPopulation>3</iPrereqPopulation>
-			<iCost>110130</iCost>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>30</iYield>
-			</YieldChanges>
-			<GlobalBuildingExtraCommerces>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CLAYTRONIC_CITY</BuildingType>
-					<CommerceChanges>
-						<iCommerce>0</iCommerce>
-						<iCommerce>3</iCommerce>
-					</CommerceChanges>
-				</BuildingExtraCommerce>
-			</GlobalBuildingExtraCommerces>
-			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
-			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_THE_GREAT_PYRAMID</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
-			<FreeSpecialistCounts>
-				<FreeSpecialistCount>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<iFreeSpecialistCount>3</iFreeSpecialistCount>
-				</FreeSpecialistCount>
-			</FreeSpecialistCounts>
-			<Bonus>BONUS_STARPUNK</Bonus>
-		</BuildingInfo>
-		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_ATMOSPHERIC_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
