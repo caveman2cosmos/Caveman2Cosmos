@@ -1487,6 +1487,10 @@ void CvPlayerAI::AI_unitUpdate()
 			}
 		}
 
+		// If every group that is ready to move is waiting on an answer to a work request,
+		// no answer can arrive this turn, so release those waits and let the turn end.
+		AI_releaseStalledContractWaits();
+
 		if (isHumanPlayer())
 		{
 			// Same reasoning as above: AI_separate() may have changed the cycle, so take a fresh snapshot.
@@ -1631,6 +1635,117 @@ void CvPlayerAI::AI_unitUpdate()
 			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
 		}
 	}
+}
+
+
+// Called when no unit is busy. If every group that is ready to move has a head unit waiting on an answer
+// to a work request it posted this turn, nothing else can move, so no answer can arrive before the turn
+// ends (the end of turn tender pass is what answers such requests). Release those waits for the rest of
+// the turn and rest the groups, so that the turn can end. The test reads game state only: no random numbers,
+// no counters, no tick or time reads. Returns true if at least one group was released.
+bool CvPlayerAI::AI_releaseStalledContractWaits()
+{
+	PROFILE_FUNC();
+
+	if (isHumanPlayer())
+	{
+		return false;
+	}
+
+	// readyToMove(true, true) can put a mixed group to sleep (through canAnyMove), and the walk below can reach
+	// groups that hasReadyUnit(true) would not. So avoid calling it where the answer is already known: first,
+	// nothing can be released unless some head is waiting for an answer (a pure read)...
+	bool bAnyAwaiting = false;
+	foreach_(const CvSelectionGroup * pLoopSelectionGroup, groups())
+	{
+		const CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
+
+		if (pHeadUnit != NULL && !pHeadUnit->isDelayedDeath() && static_cast<const CvUnitAI*>(pHeadUnit)->AI_isAwaitingAnswer())
+		{
+			bAnyAwaiting = true;
+			break;
+		}
+	}
+	if (!bAnyAwaiting)
+	{
+		return false;
+	}
+
+	// ...then walk the same groups with the same readyToMove() call as hasReadyUnit(true) for an AI player,
+	// stopping at the first ready group whose head is not waiting for an answer. A group that fails one of
+	// readyToMove()'s other, read-only terms cannot be ready, so it is skipped without calling readyToMove().
+	std::vector<int> groupIDs;
+	foreach_(CvSelectionGroup * pLoopSelectionGroup, groups())
+	{
+		if (pLoopSelectionGroup->headMissionQueueNode() == NULL
+		&& pLoopSelectionGroup->getActivityType() == ACTIVITY_AWAKE
+		&& !pLoopSelectionGroup->isBusy()
+		&& !pLoopSelectionGroup->isCargoBusy()
+		&& pLoopSelectionGroup->readyToMove(true, true))
+		{
+			CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
+
+			if (pHeadUnit == NULL || pHeadUnit->isDelayedDeath() || !static_cast<CvUnitAI*>(pHeadUnit)->AI_isAwaitingAnswer())
+			{
+				return false;
+			}
+			groupIDs.push_back(pLoopSelectionGroup->getID());
+		}
+	}
+
+	if (groupIDs.empty())
+	{
+		return false;
+	}
+
+	const int iGameTurn = GC.getGame().getGameTurn();
+	int iReleased = 0;
+
+	foreach_(const int iGroupID, groupIDs)
+	{
+		CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(iGroupID);
+
+		if (pLoopSelectionGroup == NULL)
+		{
+			continue;
+		}
+		CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
+
+		if (pHeadUnit == NULL)
+		{
+			continue;
+		}
+		static_cast<CvUnitAI*>(pHeadUnit)->AI_releaseContractWait();
+		iReleased++;
+
+		bool bSkip = false;
+		if (pLoopSelectionGroup->readyToMove(true, true))
+		{
+			pLoopSelectionGroup->pushMission(MISSION_SKIP);
+			bSkip = true;
+		}
+		// Evaluated whatever the log level, so that logging never changes what is evaluated
+		const bool bStillReady = bSkip && pLoopSelectionGroup->readyToMove(true, true);
+
+		if (gUnitLogLevel >= 2)
+		{
+			logContractBroker(1, "QR release: turn=%d pl=%d unit=%d grp=%d units=%d x=%d y=%d skip=%d",
+				iGameTurn, getID(), pHeadUnit->getID(), iGroupID, pLoopSelectionGroup->getNumUnits(), pHeadUnit->getX(), pHeadUnit->getY(), bSkip ? 1 : 0);
+
+			if (bStillReady)
+			{
+				logContractBroker(1, "QR still ready: turn=%d pl=%d unit=%d grp=%d",
+					iGameTurn, getID(), pHeadUnit->getID(), iGroupID);
+			}
+		}
+	}
+
+	if (iReleased > 0 && gUnitLogLevel >= 2)
+	{
+		logContractBroker(1, "QR summary: turn=%d pl=%d released=%d rngseed=%lu",
+			iGameTurn, getID(), iReleased, GC.getGame().getSorenRand().getSeed());
+	}
+	return iReleased > 0;
 }
 
 

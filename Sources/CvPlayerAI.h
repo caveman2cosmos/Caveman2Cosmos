@@ -133,6 +133,7 @@ public:
 
 	int AI_movementPriority(const CvSelectionGroup* pGroup) const;
 	void AI_unitUpdate();
+	bool AI_releaseStalledContractWaits();
 
 	void AI_makeAssignWorkDirty();
 	

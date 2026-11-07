@@ -131,6 +131,7 @@ CvUnitAI& CvUnitAI::operator=(const CvUnitAI& other)
 	m_contractsLastEstablishedTurn = other.m_contractsLastEstablishedTurn;
 	m_contractualState = other.m_contractualState;
 	m_iAwaitingContractStuckPasses = other.m_iAwaitingContractStuckPasses;
+	m_iContractWaitReleasedTurn = other.m_iContractWaitReleasedTurn;
 	m_eIntendedConstructBuilding = other.m_eIntendedConstructBuilding;
 	m_eIntendedHeritage = other.m_eIntendedHeritage;
 	m_iPredictedHitPoints = other.m_iPredictedHitPoints;
@@ -181,6 +182,7 @@ void CvUnitAI::AI_reset(UnitAITypes eUnitAI, bool bConstructorCall)
 	m_contractsLastEstablishedTurn = -1;
 	m_contractualState = CONTRACTUAL_STATE_NONE;
 	m_iAwaitingContractStuckPasses = 0;
+	m_iContractWaitReleasedTurn = -1;
 
 	m_eIntendedConstructBuilding = NO_BUILDING;
 	m_eIntendedHeritage = NO_HERITAGE;
@@ -22484,8 +22486,26 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
+	if (m_iContractWaitReleasedTurn == GC.getGame().getGameTurn())
+	{
+		return false;
+	}
 	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
+}
+
+bool CvUnitAI::AI_isAwaitingAnswer() const
+{
+	const int iGameTurn = GC.getGame().getGameTurn();
+
+	return (m_contractsLastEstablishedTurn == iGameTurn &&
+			m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER &&
+			m_iContractWaitReleasedTurn != iGameTurn);
+}
+
+void CvUnitAI::AI_releaseContractWait()
+{
+	m_iContractWaitReleasedTurn = GC.getGame().getGameTurn();
 }
 
 bool CvUnitAI::processContracts(int iMinPriority)
