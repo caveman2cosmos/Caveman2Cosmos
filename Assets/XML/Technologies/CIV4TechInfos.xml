@@ -31854,6 +31854,16 @@
 			<iCost>154284</iCost>
 			<iGridX>130</iGridX>
 			<iGridY>7</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>9</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_WEAPONIZED_DISINTEGRATION</PrereqTech>
 			</OrPreReqs>
@@ -31918,6 +31928,20 @@
 			<iCost>154284</iCost>
 			<iGridX>130</iGridX>
 			<iGridY>11</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_INTERSTELLAR_COLONIZATION</PrereqTech>
 			</OrPreReqs>
@@ -34434,6 +34458,16 @@
 			<iCost>338869</iCost>
 			<iGridX>145</iGridX>
 			<iGridY>13</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_DARK_MATTER_ENGINEERING</PrereqTech>
 			</OrPreReqs>
@@ -34953,6 +34987,16 @@
 			<iCost>366008</iCost>
 			<iGridX>147</iGridX>
 			<iGridY>17</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_DARK_ENERGY_HARVESTING</PrereqTech>
 			</OrPreReqs>
@@ -36193,6 +36237,16 @@
 			<iCost>621429</iCost>
 			<iGridX>156</iGridX>
 			<iGridY>7</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_OMNIBENEVOLENT_MANDATE</PrereqTech>
 			</OrPreReqs>
@@ -36808,6 +36862,40 @@
 			<bRepeat>1</bRepeat>
 			<iGridX>160</iGridX>
 			<iGridY>9</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_RELIGION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_SIMULATION_AWARENESS</PrereqTech>
 			</OrPreReqs>
