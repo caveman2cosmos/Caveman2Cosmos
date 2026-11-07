@@ -193,6 +193,17 @@ public:
 	bool AI_isAwaitingContract() const;
 
     /**
+     * Returns true if the unit is awaiting an answer to a work request this turn
+     * and its wait has not been released this turn.
+     */
+	bool AI_isAwaitingAnswer() const;
+
+    /**
+     * Releases the unit's contract wait for the rest of the current turn.
+     */
+	void AI_releaseContractWait();
+
+    /**
      * Returns true if the unit is a city garrison.
      */
 	bool AI_isCityGarrison(const CvCity* pCity) const;
@@ -470,6 +481,7 @@ protected:
 	int m_contractsLastEstablishedTurn;
 	ContractualState m_contractualState;
 	int m_iAwaitingContractStuckPasses;
+	int m_iContractWaitReleasedTurn;
 
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
