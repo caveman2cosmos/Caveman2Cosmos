@@ -33,6 +33,7 @@
 #include "FAStarNode.h"
 #endif
 #include <CvWorkerService.h>
+#include "CvSafetyPruning.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -16454,13 +16455,8 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	{
 		return;
 	}
-	int iPathTurns = 0;
-	if (!generatePath(plotX, (iPass > 0 ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns, iRange))
-	{
-		return;
-	}
-	int iCount = 0;
 
+	int iStationedDefendersCount = 0;
 	foreach_(const CvUnit * unitX, plotX->units())
 	{
 		if (unitX->getOwner() == getOwner() && unitX->canDefend())
@@ -16473,49 +16469,103 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 			{
 				FAssert(unitX != this);
 				FAssert(pHeadUnit != getGroup()->getHeadUnit());
-				iCount++;
+				iStationedDefendersCount++;
 			}
 		}
 	}
-	int iValue = iCount * 100;
 
 	// If the current danger includes animals then simply running to our
-	//	borders is defense to at least the animal component of the current danger
-	if (bAnimalDanger)
-	{
-		if (plotX->getOwner() == getOwner())
-		{
-			iValue += 75;
-		}
-		else if (plotX->getOwner() != NO_PLAYER && !atWar(plotX->getTeam(), getTeam()))
-		{
-			iValue += 50;
-		}
-	}
-	iValue += plotX->defenseModifier(getTeam(), false);
+	// borders is defense to at least the animal component of the current danger
+	const bool bOwnedBySelf = (plotX->getOwner() == getOwner());
+	const bool bOwnedByNonHostile = (!bOwnedBySelf && plotX->getOwner() != NO_PLAYER && !atWar(plotX->getTeam(), getTeam()));
+	const int iDeterministicBase = CvSafetyPruning::calcDeterministicPlotBase(
+		iStationedDefendersCount,
+		bAnimalDanger,
+		bOwnedBySelf,
+		bOwnedByNonHostile,
+		plotX->defenseModifier(getTeam(), false));
 
-	if (atPlot(plotX))
-	{
-		iValue += 50;
-	}
-	else
-		iValue += GC.getGame().getSorenRandNum(50, "AI Safety");
-	{
-		const int iTerrainDamage = plotX->getTotalTurnDamage(getGroup());
+	const bool bAtPlot = atPlot(plotX);
+	const int iStepDist = bAtPlot ? 0 : stepDistance(getX(), getY(), plotX->getX(), plotX->getY());
+	const CvSafetyPruning::UnitMovementProfile movementProfile(
+		baseMoves(),
+		getGroup()->movesLeft(),
+		getDomainType(),
+		flatMovementCost()
+	);
 
-		if (iTerrainDamage > 0)
+	// Stage 1 pruning: fast upper bound before querying terrain damage or plot danger
+	if (iBestValue > 0 && CvSafetyPruning::calcFastUpperScore(iDeterministicBase, bAtPlot, iStepDist, movementProfile) <= iBestValue)
+	{
+		return;
+	}
+
+	const int iTerrainDamage = plotX->getTotalTurnDamage(getGroup());
+	const int iUnitDamage = getDamagePercent();
+
+	// Stage 2a pruning: upper bound with terrain damage alone (without querying plot danger)
+	if (iTerrainDamage > 0 && CvSafetyPruning::shouldPruneBeforePath(
+		iDeterministicBase,
+		bAtPlot,
+		iUnitDamage,
+		iTerrainDamage,
+		false /*bPlotInDanger*/,
+		iStepDist,
+		movementProfile,
+		iBestValue))
+	{
+		return;
+	}
+
+	// Stage 2b pruning: only query AI_getAnyPlotDanger before generatePath if danger halving
+	// would actually cause this plot to be pruned.
+	bool bDangerChecked = false;
+	bool bPlotInDanger = false;
+	if (CvSafetyPruning::shouldPruneBeforePath(
+		iDeterministicBase,
+		bAtPlot,
+		iUnitDamage,
+		iTerrainDamage,
+		true /*bPlotInDanger*/,
+		iStepDist,
+		movementProfile,
+		iBestValue))
+	{
+		bDangerChecked = true;
+		bPlotInDanger = GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1, false);
+		if (bPlotInDanger)
 		{
-			iValue *= std::max(1, 100 - getDamagePercent() - iTerrainDamage);
-			iValue /= 200;
+			return;
 		}
 	}
-	iValue = iValue * 5 / (iPathTurns + 4);
+
+	int iPathTurns = 0;
+	if (!generatePath(plotX, (iPass > 0 ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns, iRange))
+	{
+		return;
+	}
+
+	const int iBonusOrRoll = bAtPlot
+		? CvSafetyPruning::CURRENT_PLOT_STAY_BONUS
+		: GC.getGame().getSorenRandNum(CvSafetyPruning::RANDOM_SAFETY_ROLL_MAX, "AI Safety");
+	int iValue = CvSafetyPruning::calcFinalPlotScore(
+		iDeterministicBase,
+		iBonusOrRoll,
+		iUnitDamage,
+		iTerrainDamage,
+		iPathTurns,
+		iBestValue,
+		false /*bPlotInDanger*/);
 
 	if (iValue > iBestValue)
 	{
-		if (GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1, false))
+		if (!bDangerChecked)
 		{
-			iValue /= 2;
+			bPlotInDanger = GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plotX, 1, false);
+		}
+		if (bPlotInDanger)
+		{
+			iValue /= CvSafetyPruning::IN_DANGER_SCORE_DIVISOR;
 		}
 		if (iValue > iBestValue)
 		{
@@ -16548,23 +16598,37 @@ bool CvUnitAI::AI_safety(int iRange)
 	{
 		if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 		{
+			// Evaluate current plot first inside the pass to establish baseline iBestValue
+			// without short-circuiting the outer pass loop before plotSet is evaluated.
+			AI_safetyEval(plot(), iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+
 			CvReachablePlotSet plotSet(getGroup(), (iPass > 0) ? MOVE_IGNORE_DANGER : 0, iSearchRange);
 
 			for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 			{
 				const CvPlot* plotX = itr.plot();
-				AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				if (plotX != plot())
+				{
+					AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				}
 			}
 		}
 		else
 		{
+			if (AI_plotValid(plot()))
+			{
+				AI_safetyEval(plot(), iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+			}
 			foreach_(const CvPlot * plotX, plot()->rect(iSearchRange, iSearchRange))
 			{
 				if (!AI_plotValid(plotX))
 				{
 					continue;
 				}
-				AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				if (plotX != plot())
+				{
+					AI_safetyEval(plotX, iPass, iRange, bAnimalDanger, iBestValue, &pBestPlot);
+				}
 			}
 		}
 	}
@@ -16573,11 +16637,15 @@ bool CvUnitAI::AI_safety(int iRange)
 	{
 		if (atPlot(pBestPlot))
 		{
+#ifdef _DEBUG
 			OutputDebugString(CvString::format("%S (%d) seeking safety stays put at (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+#endif
 			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
+#ifdef _DEBUG
 		OutputDebugString(CvString::format("%S (%d) seeking safety moves to (%d,%d)\n", getDescription().c_str(), m_iID, pBestPlot->getX(), pBestPlot->getY()).c_str());
+#endif
 		// Check iPass > 1 here because we always increment it as we exit the loop, so it will be 1 higher than when pBestPlot was assigned a value
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0));
 	}
@@ -16589,7 +16657,9 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun, int iRange) const
 {
 	PROFILE_FUNC();
 
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("%S (%d) AI_reachHome (%d,%d)...%d\n", getDescription().c_str(), m_iID, m_iX, m_iY, (int)bMockRun).c_str());
+#endif
 
 	if (bMockRun && plot()->getOwner() == getOwner())
 	{
