@@ -7,8 +7,11 @@
 #include <cstdlib>
 
 // Pure helper functions for CvUnitAI::AI_safety and CvUnitAI::AI_safetyEval.
-// Kept free of heavy engine headers so both CvGameCoreDLL (MSVC 2003) and
-// standalone C++ unit tests can include and exercise the exact production logic.
+// Kept free of heavy engine headers so both CvGameCoreDLL and standalone C++
+// tests (see Test/CvSafetyPruning/) can include and exercise the exact
+// production logic: scoring bit-identical to the pre-pruning formula, and
+// admissibility of every pruning bound (no plot the old code would have
+// chosen is ever pruned).
 
 namespace CvSafetyPruning
 {
@@ -45,7 +48,11 @@ namespace CvSafetyPruning
 	static const int MIN_EXHAUSTED_MOVES_PATH_TURNS = 1;
 	static const int MIN_IMMOBILE_PATH_TURNS = 1;
 
-	// Domain types matching DomainTypes in CvEnums.h for standalone test compatibility
+	// Mirror of DomainTypes in CvEnums.h (C2C ordering: SEA=0, AIR=1, LAND=2,
+	// IMMOBILE=3 — deliberately NOT the vanilla BtS ordering). Duplicated here so
+	// this header stays engine-free for the standalone tests in Test/CvSafetyPruning/.
+	// Pinned at compile time by STATIC_ASSERT checks in CvUnitAI.cpp; if DomainTypes
+	// is ever reshuffled or extended, those asserts fail the build.
 	enum SafetyPruningDomain
 	{
 		SAFETY_DOMAIN_SEA = 0,
@@ -74,12 +81,10 @@ namespace CvSafetyPruning
 		}
 	};
 
-	inline int stepDist(int iX1, int iY1, int iX2, int iY2)
-	{
-		const int iDX = std::abs(iX1 - iX2);
-		const int iDY = std::abs(iY1 - iY2);
-		return iDX > iDY ? iDX : iDY;
-	}
+	// Note: callers must supply wrap-aware step distance (stepDistance() from
+	// CvGameCoreUtils.h). A plain Chebyshev distance without map wrapping would
+	// overestimate distance, which would overestimate min path turns and make
+	// the pruning bounds unsound.
 
 	inline int calcDeterministicPlotBase(
 		int iDefendingUnitCount,
