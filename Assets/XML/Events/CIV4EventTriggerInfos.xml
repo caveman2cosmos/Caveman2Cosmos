@@ -4057,11 +4057,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_TEA_TRADE</Type>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_TEA</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_TEA_TRADE</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TEA_1</Text>
+					<Text>TXT_KEY_EVENT_TRIGGER_TEA_TRADE_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>

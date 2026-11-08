@@ -2903,7 +2903,7 @@
 		<Spanish>Los magistrados del Tribunal en el imperio %s1_civ_adjective han descubierto falsificaciones en los registros del tesoro.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
+		<Tag>TXT_KEY_EVENTTRIGGER_TEA_TRADE</Tag>
 		<English>%s1_civ_adjective citizens who are socially advanced have adopted imported %s4_civ_adjective tea as their beverage of choice.</English>
 		<French>Les citoyens %s1:2_civ_adjective, qui sont socialement avancés, ont adopté le thé %s4_civ_adjective d'importation comme boisson préférée.</French>
 		<German>%s1:3_civ_adjective Bürger der gehobenen sozialen Schicht trinken nun am liebsten importierten %s4:2_civ_adjective Tee.</German>
@@ -9127,7 +9127,7 @@
 		<Spanish>Loados sean los logros de nuestro reverenciado gran maestro herrero.</Spanish>
 	</TEXT>
     <TEXT>
-        <Tag>TXT_KEY_EVENT_WAR_TAXES_2</Tag>
+        <Tag>TXT_KEY_NEWS_EVENT_WAR_TAXES_3</Tag>
         <English>The %s1_civ_adjective is in total war mode and are taxing their people to the bone.</English>
 		<French>Les %s1:3_civ_adjective sont en mode guerre totale et taxe son peuple jusqu'à l'os.</French>
     </TEXT>
@@ -14581,9 +14581,9 @@
 		<Russian>Отчет от наших финансовых интендантов показал, что за последнее время наши налоговые сборы были более чем оптимистичными.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_TEA_1</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TEA_TRADE_1</Tag>
 		<English>Imported %s1_civ_adjective tea has become all the rage amongst our social elite.</English>
-		<French>Nos ouvriers ont trouvé des plantes, ils l'appellent thé.</French>
+		<French>Le thé %s1:2_civ_adjective importé fait fureur parmi notre élite sociale.</French>
 		<German>Die soziale Elite findet importierten %s1:2_civ_adjective Tee momentan absolut toll.</German>
 		<Italian>Il tè %s1_civ_adjective d'importazione è il preferito dall'élite della nostra società.</Italian>
 		<Spanish>El té %s1:1_civ_adjective de importación ha causado sensación entre los miembros de nuestra élite social.</Spanish>

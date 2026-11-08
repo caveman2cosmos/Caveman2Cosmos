@@ -129,7 +129,7 @@
 			<Type>EVENT_WAR_TAXES_3</Type>
 			<Description>TXT_KEY_EVENT_WAR_TAXES_3</Description>
 			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENT_WAR_TAXES_2</Text>
+				<Text>TXT_KEY_NEWS_EVENT_WAR_TAXES_3</Text>
 			</WorldNewsTexts>
 			<iHappy>-1</iHappy>
 			<PythonCallback>applyWarTax</PythonCallback>
