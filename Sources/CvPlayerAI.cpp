@@ -1417,26 +1417,34 @@ void CvPlayerAI::AI_unitUpdate()
 			OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
 		}
 		*/
+#ifdef _DEBUG
 		OutputDebugString("Group cycle:\n");
+#endif
 		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 		{
 			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
+#ifdef _DEBUG
 			OutputDebugString(CvString::format("	%d with %d units at (%d,%d)\n",
 				pLoopSelectionGroup->getID(),
 				pLoopSelectionGroup->getNumUnits(),
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getX(),
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getY()).c_str());
+#endif
 		}
 
 		FAssert(m_selectionGroups[CURRENT_MAP]->getCount() > m_groupCycles[CURRENT_MAP]->getLength());	//	Other way round not seen - not handled currently
+#ifdef _DEBUG
 		OutputDebugString("Selection groups:\n");
+#endif
 		foreach_(CvSelectionGroup * pLoopSelectionGroup, groups())
 		{
+#ifdef _DEBUG
 			OutputDebugString(CvString::format("	%d with %d units at (%d,%d)\n",
 				pLoopSelectionGroup->getID(),
 				pLoopSelectionGroup->getNumUnits(),
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getX(),
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->getY()).c_str());
+#endif
 			if (pLoopSelectionGroup->getHeadUnit() != m_pTempUnit)
 			{
 				updateGroupCycle(pLoopSelectionGroup->getHeadUnit(), true);
@@ -1923,7 +1931,9 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 						if (iHighCultureCount >= GC.getGame().culturalVictoryNumCultureCities())
 						{
 							//Raze city enemy needs for cultural victory unless we greatly over power them
+#ifdef _DEBUG
 							OutputDebugString("  Razing enemy cultural victory city");
+#endif
 							bRaze = true;
 						}
 					}
@@ -2073,7 +2083,9 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 				{
 					if (pCity->isHolyCity((ReligionTypes)iI))
 					{
+#ifdef _DEBUG
 						OutputDebugString("	  Reduction for holy city");
+#endif
 
 						if (getStateReligion() == iI)
 						{
@@ -6691,7 +6703,9 @@ void CvPlayerAI::AI_chooseResearch()
 		{
 			CvTechInfo& tech = GC.getTechInfo(eBestTech);
 
+#ifdef _DEBUG
 			OutputDebugString(CvString::format("Game turn %d, AI chooses tech %S\n", GC.getGame().getGameTurn(), tech.getDescription()).c_str());
+#endif
 			pushResearch(eBestTech);
 		}
 	}
@@ -8777,13 +8791,17 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				const int iTurns = getTreatyLength();
 				const int iGoldValuePercent = AI_goldTradeValuePercent();
 				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
+#ifdef _DEBUG
 				OutputDebugString(CvString::format("%S (%d)\n\tValueDiff=%d, iGoldValuePercent=%d, iGoldData=%d\n\t\tAI_getGoldValue=%d\n", getCivilizationDescription(0), getID(), iValueDiff, iGoldValuePercent, iGoldData, AI_getGoldValue(iGoldData, iGoldValuePercent)).c_str());
+#endif
 
 				// Account for rounding errors
 				while (iGoldData < MAX_INT && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 				{
 					iGoldData++;
+#ifdef _DEBUG
 					OutputDebugString(CvString::format("\tValueDiff=%d, iGoldValuePercent=%d, iGoldData=%d\n\t\tAI_getGoldValue=%d\n", iValueDiff, iGoldValuePercent, iGoldData, AI_getGoldValue(iGoldData, iGoldValuePercent)).c_str());
+#endif
 				}
 				iGoldData = std::min(iGoldData / iTurns, GET_PLAYER(ePlayer).AI_maxGoldPerTurnTrade(getID()));
 
