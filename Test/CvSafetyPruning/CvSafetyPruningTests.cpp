@@ -191,13 +191,15 @@ static void testAdmissibilitySweep(long iterations)
         int base = 1 + rng.next(12);
         int ml = rng.chance(3) ? 0 : 1 + rng.next(12);
         int dist = atPlot ? 0 : 1 + rng.next(15);
-        int pt = rng.next(15);                    // actual A* turns
+        UnitMovementProfile profile(base, ml, dom, flat);
+        int det = calcDeterministicPlotBase(defenders, animal, own, nonHostile, defMod);
+
+        // Sample an engine-feasible A* turn count (minTurns <= actual turns).
+        int minT = calcMinPossiblePathTurns(atPlot, dist, profile);
+        int pt = minT + rng.next(15);             // actual A* turns
         int roll = rng.next(50);
         bool danger = rng.chance(2);
         int best = rng.next(400);
-
-        UnitMovementProfile profile(base, ml, dom, flat);
-        int det = calcDeterministicPlotBase(defenders, animal, own, nonHostile, defMod);
 
         // Old-code acceptance (value > best, halved once if in danger):
         int actual = oldCodeScore(defenders, animal, own, nonHostile, defMod, atPlot, roll, dmg, td, pt);
@@ -228,9 +230,6 @@ static void testAdmissibilitySweep(long iterations)
         if (prunes && oldAccepts)
         {
             ++killed;
-            // A prune that removes an old-code winner is only sound if the
-            // min-turn model was already lying (minTurns > actual turns).
-            int minT = calcMinPossiblePathTurns(atPlot, dist, profile);
             if (minT <= pt)
             {
                 if (unsound < 5)
