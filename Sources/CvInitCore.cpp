@@ -1701,10 +1701,10 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	// AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
 	if (saveVersion != SAVE_FORMAT_VERSION)
 	{
-		const char* reason = CvString::format("Save format version is not compatible, version=(%d) expected version=(%d)!", saveVersion, SAVE_FORMAT_VERSION).c_str();
+		const CvString reason = CvString::format("Save format version is not compatible, version=(%d) expected version=(%d)!", saveVersion, SAVE_FORMAT_VERSION);
 
-		::MessageBox(NULL, reason, "Unreadable Save Game!", MB_OK);
-		throw std::invalid_argument(reason);
+		::MessageBox(NULL, reason.c_str(), "Unreadable Save Game!", MB_OK);
+        throw std::invalid_argument(reason.c_str());
 	}
 
 	//	Asset checksum of the build that did the save

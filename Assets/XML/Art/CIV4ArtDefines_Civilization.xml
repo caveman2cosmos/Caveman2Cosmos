@@ -64,8 +64,8 @@
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CARTHAGE</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,5,1</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Carthage.dds</Path>
-			<bWhiteFlag>1</bWhiteFlag>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Carthag.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_CELTS</Type>

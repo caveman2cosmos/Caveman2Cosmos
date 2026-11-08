@@ -51,22 +51,22 @@ class HeritageScreen:
 
 		if xRes > 1700:
 			self.iSize = 64
-			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
 			self.iOff = 8
 		elif xRes > 1400:
 			self.iSize = 56
-			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
 			self.iOff = 6
 		else:
 			self.iSize = 48
-			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
 			self.iOff = 4
 
 		Y_BOT_TEXT = yRes - H_EDGE + 8
 
 		H_STAT_BAR = 7*H_EDGE/3
 		self.Y_STAT_BAR = Y_STAT_BAR = yRes - H_STAT_BAR
-		self.Y_MID_STAT_BAR = y = Y_STAT_BAR + (H_STAT_BAR - H_EDGE)/2 - 6
+		self.Y_MID_STAT_BAR = Y_STAT_BAR + (H_STAT_BAR - H_EDGE) / 2 - 6
 
 		# Caching
 		self.iTab = 0
@@ -77,9 +77,9 @@ class HeritageScreen:
 		self.CANCEL = AFM.getInterfaceArtInfo("INTERFACE_BUTTONS_CANCEL").getPath()
 		self.aWidgetBucket = []
 		self.nWidgetCount = 0
-		self.xTraits = x0 = xRes/2 + 8
+		self.xTraits = xRes / 2 + 8
 		self.yTraits = y0 = H_EDGE + 32
-		self.hTraits = h0 = yRes - y0 - H_EDGE
+		self.hTraits = yRes - y0 - H_EDGE
 
 		# Base Screen
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -184,13 +184,9 @@ class HeritageScreen:
 
 	def drawTraits(self, screen):
 		xRes = self.xRes
-		yRes = self.yRes
-		xMid = self.xMid
 		H_EDGE = self.H_EDGE
 		iPlayer = self.iPlayer
 		team = self.team
-
-		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.aFontList
 
 		x0 = self.xTraits
 		y0 = self.yTraits
@@ -217,6 +213,7 @@ class HeritageScreen:
 
 
 	def fillTraitsPanel(self, screen, iPlayer):
+		screen.deleteWidget("TraitsMultiLine")
 		player = GC.getPlayer(iPlayer)
 		txt = ""
 		for iTrait in xrange(GC.getNumTraitInfos()):
@@ -264,15 +261,9 @@ class HeritageScreen:
 		if not screen.isActive():
 			return
 		HandleInputUtil.debugInput(inputClass)
-		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
-		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iBtn	= inputClass.iButtonType
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
-		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")
 
 		szSplit = NAME.split("|")
 		BASE = szSplit[0]

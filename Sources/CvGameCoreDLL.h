@@ -3,6 +3,9 @@
 #ifndef CvGameCoreDLL_h__
 #define CvGameCoreDLL_h__
 
+#define ENABLE_FOGWAR_DECAY
+//#define NO_CAN_MERGE_BONUS
+
 //
 // includes (pch) for gamecore dll files
 // Author - Mustafa Thamer
@@ -225,7 +228,6 @@ int DECLARE_FLAGS(ECacheAccess::flags);
 // #define STRENGTH_IN_NUMBERS
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
-// #define NOMADIC_START
 
 //
 // Cache feature macros

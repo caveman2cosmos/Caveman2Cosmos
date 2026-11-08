@@ -463,7 +463,11 @@ void CvGame::updateColoredPlots()
 				}
 			}
 		}
-		if (pHeadSelectedUnit->getGroup()->hasCommander() || pHeadSelectedUnit->getGroup()->canFight() && pPlot->inCommandField(eOwner))
+		//CyUnit.getDomainType() == DomainTypes.DOMAIN_SEA:
+		//pUnit->getDomainType() == (DomainTypes)
+		//(DomainTypes)iI != DOMAIN_SEA
+
+		if (pHeadSelectedUnit->getGroup()->hasCommander() || (pHeadSelectedUnit->getGroup()->canFight() && (pHeadSelectedUnit->getDomainType() == DOMAIN_LAND)) && pPlot->inCommandField(eOwner))
 		{
 			NiColorA cField(GC.getColorInfo(GC.getCOLOR_RED()).getColor());
 			cField.a = 0.75f;
@@ -473,6 +477,17 @@ void CvGame::updateColoredPlots()
 				gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cField, AREA_BORDER_LAYER_COMMAND_FIELD);
 			}
 		}
+
+		if (pHeadSelectedUnit->getGroup()->hasCommodore() || pHeadSelectedUnit->getGroup()->canFight() && (pHeadSelectedUnit->getDomainType() == DOMAIN_SEA) && pPlot->inCommandCommodoreField(eOwner))
+        {
+        	NiColorA cmField(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
+        	cmField.a = 0.75f;
+            // ERROR IS HERE FOR NOW maybe
+        	foreach_(const CvPlot* plotX, player.getCommodoreFieldPlots())
+        	{
+        		gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cmField, AREA_BORDER_LAYER_COMMAND_FIELD);
+        	}
+        }
 
 		// Dale - RB: Field Bombard START
 		if (GC.isDCM_RANGE_BOMBARD())
@@ -1193,6 +1208,13 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 					}
 				}
 			}
+			// Size Matters: merging a multi-unit selection group bulk-merges every eligible
+            // same-type/size triple in the group, so fire a single group message rather than
+            // a per-unit merge command (which would otherwise queue one popup per unit).
+            else if (iData2 == COMMAND_MERGE && pHeadSelectedUnit->getGroup()->getNumUnits() > 1)
+            {
+                CvMessageControl::getInstance().sendMergeAll(pHeadSelectedUnit->getID());
+            }
 			else
 			{
 				foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())

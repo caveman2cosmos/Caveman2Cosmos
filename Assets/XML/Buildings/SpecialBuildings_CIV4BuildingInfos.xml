@@ -152,7 +152,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-2</iHealth>
+			<iHealth>-3</iHealth>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -361,25 +361,29 @@
 					</Or>
 					<Or>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FLAMINGO</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_FLAMINGO</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_PEACOCK</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_PEACOCK</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_SECRETARY_BIRD</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_SECRETARY_BIRD</ID>
 						</Has>
 						<Has>
-							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_VULTURE</ID>
+							<GOMType>GOM_HERITAGE</GOMType>
+							<ID>HERITAGE_FOLKLORE_VULTURE</ID>
 						</Has>
 					</Or>
 				</And>
 			</ConstructCondition>
 			<iCost>60</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
@@ -481,9 +485,15 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
+			<YieldChanges>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -584,6 +594,8 @@
 			<Description>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_PEDIA</Civilopedia>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
+			<iHappiness>-1</iHappiness>
+			<iHealth>-1</iHealth>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM</BuildingType>
@@ -596,15 +608,18 @@
 			<TechHappinessChanges>
 				<TechHappinessChange>
 					<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
-					<iHappiness>-1</iHappiness>
+					<iHappiness>-3</iHappiness>
+					<iHealth>-3</iHealth>
 				</TechHappinessChange>
 				<TechHappinessChange>
 					<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-					<iHappiness>-2</iHappiness>
+					<iHappiness>-4</iHappiness>
+					<iHealth>-4</iHealth>
 				</TechHappinessChange>
 				<TechHappinessChange>
 					<PrereqTech>TECH_HUMANISM</PrereqTech>
-					<iHappiness>-1</iHappiness>
+					<iHappiness>-3</iHappiness>
+					<iHealth>-3</iHealth>
 				</TechHappinessChange>
 			</TechHappinessChanges>
 			<bAutoBuild>1</bAutoBuild>
@@ -665,6 +680,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CARPOOL</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -724,12 +743,9 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<YieldChanges>
-				<iYield>0</iYield>
+				<iYield>1</iYield>
 				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<bAutoBuild>1</bAutoBuild>
@@ -1176,6 +1192,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1345</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1219,6 +1239,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1345</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_WATER_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1276,10 +1300,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -1685,8 +1707,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -1799,8 +1826,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -1875,8 +1907,13 @@
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -2230,7 +2267,7 @@
 				<Bonus>BONUS_CAT</Bonus>
 				<Bonus>BONUS_HORSE</Bonus>
 			</PrereqBonuses>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<PropertyManipulators>
@@ -2289,6 +2326,7 @@
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
 			</CommerceModifiers>
@@ -2381,7 +2419,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_BLACKMAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BLACKMAIL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
 			</CommerceModifiers>
@@ -2413,6 +2451,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-10</iYield>
@@ -2496,6 +2535,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BRIBERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -2531,6 +2571,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_BURGLARY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -2663,6 +2704,7 @@
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHealth>-3</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -2703,6 +2745,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -2730,7 +2773,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CHILD_LABOR_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-5</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -2762,6 +2806,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_CORRUPTION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -2799,7 +2844,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_COUNTERFEITING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_COUNTERFEITING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BANKING</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -2871,7 +2916,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_DOMESTIC_VIOLENCE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -2894,6 +2939,7 @@
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
@@ -2933,6 +2979,8 @@
 			<Bonus>BONUS_DRUGS</Bonus>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -2971,8 +3019,10 @@
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<iHealth>-1</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -2989,8 +3039,8 @@
 			<Description>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ELDER_ABUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<iHealth>-3</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-4</iHealth>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>5</iRevIdxLocal>
 			<PropertyManipulators>
@@ -3013,6 +3063,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EMBEZZLEMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<iHappiness>-1</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3066,7 +3117,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_EXTORTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_EXTORTION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 			</CommerceModifiers>
@@ -3097,7 +3148,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FALSE_ACCUSATIONS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ORATORY</PrereqTech>
 			<iHealth>-1</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>4</iInsidiousness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -3119,6 +3170,8 @@
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<iHealth>-1</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>20</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -3146,7 +3199,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_FORGERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_FORGERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3171,6 +3224,8 @@
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHealth>-5</iHealth>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3210,6 +3265,8 @@
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-10</iCommerce>
 			</CommerceModifiers>
@@ -3316,6 +3373,8 @@
 			<Bonus>BONUS_FIREARMS</Bonus>
 			<iHealth>-3</iHealth>
 			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iInsidiousness>4</iInsidiousness>
 			<iRevIdxLocal>60</iRevIdxLocal>
 			<UnitCombatFreeExperiences>
@@ -3347,7 +3406,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3419,6 +3478,8 @@
 			</UnitCombatFreeExperiences>
 			<iHealth>-4</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-30</iHealthPercentPerPopulation>
 			<iRevIdxLocal>50</iRevIdxLocal>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3444,7 +3505,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_IDENTITY_THEFT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -3487,7 +3548,8 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>20</iInsidiousness>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-4</iHappiness>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3624,6 +3686,8 @@
 				<BuildingType>BUILDING_ALCATRAZ</BuildingType>
 			</PrereqOrBuildings>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<iInsidiousness>15</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -3714,8 +3778,10 @@
 			<Description>TXT_KEY_BUILDING_CRIME_LOOTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LOOTING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHealth>-3</iHealth>
-			<iHappiness>-3</iHappiness>
+			<iHealth>-5</iHealth>
+			<iHappiness>-5</iHappiness>
+            <iHappinessPercentPerPopulation>-40</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-10</iYield>
 				<iYield>-20</iYield>
@@ -3761,7 +3827,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_LYING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_LYING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>1</iInsidiousness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -3814,6 +3880,8 @@
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-30</iHealthPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3878,6 +3946,7 @@
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -3919,7 +3988,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_MONEY_LAUNDERING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MONEY_LAUNDERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CORPORATION</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
@@ -3946,8 +4015,9 @@
 			<Description>TXT_KEY_BUILDING_CRIME_MUGGING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MUGGING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<iHealth>-3</iHealth>
+			<iHealth>-4</iHealth>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
@@ -3982,6 +4052,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_MURDER_PEDIA</Civilopedia>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<CommerceModifiers>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4014,8 +4086,10 @@
 			<Description>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGAN_TRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
-			<iHealth>-4</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHealth>-6</iHealth>
+			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-20</iHealthPercentPerPopulation>
 			<iInsidiousness>8</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4085,8 +4159,8 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<iHealth>-4</iHealth>
-			<iHappiness>-4</iHappiness>
+			<iHealth>-2</iHealth>
+			<iHappiness>-10</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -4179,6 +4253,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RACKETEERING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iHappiness>-2</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
@@ -4215,6 +4290,8 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_RAPE_PEDIA</Civilopedia>
 			<iHealth>-4</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iInsidiousness>8</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4249,6 +4326,8 @@
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iHealth>-8</iHealth>
 			<iHappiness>-6</iHappiness>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-10</iYield>
 				<iYield>-20</iYield>
@@ -4292,6 +4371,7 @@
 			<Bonus>BONUS_FIREARMS</Bonus>
 			<iHealth>-5</iHealth>
 			<iHappiness>-8</iHappiness>
+            <iHappinessPercentPerPopulation>-50</iHappinessPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<iRevIdxLocal>100</iRevIdxLocal>
 			<PropertyManipulators>
@@ -4353,7 +4433,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_SEXUAL_HARASSMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SEXUAL_HARASSMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<iInsidiousness>1</iInsidiousness>
 			<PropertyManipulators>
 				<PropertySource>
@@ -4374,7 +4454,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_SHOPLIFTING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SHOPLIFTING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
@@ -4484,7 +4564,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_SOLICITING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<iHealth>-2</iHealth>
-			<iHappiness>-1</iHappiness>
+			<iHappiness>-2</iHappiness>
 			<iInsidiousness>2</iInsidiousness>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
@@ -4583,6 +4663,8 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-3</iHappiness>
+            <iHappinessPercentPerPopulation>-10</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-35</iHealthPercentPerPopulation>
 			<iInsidiousness>3</iInsidiousness>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -4691,7 +4773,7 @@
 			<Description>TXT_KEY_BUILDING_CRIME_VIGILANTISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_VIGILANTISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
-			<iHappiness>-2</iHappiness>
+			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4736,8 +4818,8 @@
 			<Description>TXT_KEY_BUILDING_CRIME_WEAPONS_TRAFFICKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_WEAPONS_TRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
-			<iHealth>-4</iHealth>
-			<iHappiness>-2</iHappiness>
+			<iHealth>-5</iHealth>
+			<iHappiness>-3</iHappiness>
 			<iMilitaryProductionModifier>-20</iMilitaryProductionModifier>
 			<iInsidiousness>10</iInsidiousness>
 			<iRevIdxLocal>50</iRevIdxLocal>
@@ -4787,6 +4869,8 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>1</iInsidiousness>
 			<iHappiness>-1</iHappiness>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
+            <iHealthPercentPerPopulation>-10</iHealthPercentPerPopulation>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
@@ -4865,6 +4949,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-5</iHealth>
+            <iHealthPercentPerPopulation>-75</iHealthPercentPerPopulation>
 			<iHappiness>-6</iHappiness>
 			<YieldModifiers>
 				<iYield>-5</iYield>
@@ -4896,6 +4981,7 @@
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-3</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-4</iHappiness>
 			<YieldModifiers>
 				<iYield>-3</iYield>
@@ -4923,6 +5009,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-5</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>-5</iYield>
@@ -4959,6 +5046,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-1</iHealth>
+            <iHealthPercentPerPopulation>-5</iHealthPercentPerPopulation>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -4978,6 +5066,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iHealth>-4</iHealth>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<iHappiness>-5</iHappiness>
 			<YieldModifiers>
 				<iYield>-4</iYield>
@@ -5015,6 +5104,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-2</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-3</iHappiness>
 			<YieldModifiers>
 				<iYield>-2</iYield>
@@ -5052,6 +5142,7 @@
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<iHealth>-6</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
 				<iYield>-6</iYield>
@@ -5105,6 +5196,7 @@
 			<ObsoleteTech>TECH_REGENERATIVE_MEDICINE</ObsoleteTech>
 			<iHealth>-9</iHealth>
 			<iHappiness>-9</iHappiness>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<YieldModifiers>
 				<iYield>-9</iYield>
 				<iYield>-10</iYield>
@@ -5135,6 +5227,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-7</iHealth>
+            <iHealthPercentPerPopulation>-60</iHealthPercentPerPopulation>
 			<iHappiness>-7</iHappiness>
 			<YieldModifiers>
 				<iYield>-7</iYield>
@@ -5162,6 +5255,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-4</iHealth>
+            <iHealthPercentPerPopulation>-65</iHealthPercentPerPopulation>
 			<iHappiness>-4</iHappiness>
 			<YieldModifiers>
 				<iYield>-4</iYield>
@@ -5193,6 +5287,7 @@
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
 			<iHealth>-10</iHealth>
+            <iHealthPercentPerPopulation>-100</iHealthPercentPerPopulation>
 			<iHappiness>-10</iHappiness>
 			<YieldModifiers>
 				<iYield>-10</iYield>
@@ -5220,6 +5315,7 @@
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-2</iHealth>
+            <iHealthPercentPerPopulation>-40</iHealthPercentPerPopulation>
 			<iHappiness>-2</iHappiness>
 			<YieldModifiers>
 				<iYield>-2</iYield>
@@ -5246,6 +5342,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
 			<iHealth>-1</iHealth>
+            <iHealthPercentPerPopulation>-15</iHealthPercentPerPopulation>
 			<iHappiness>-2</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -5271,6 +5368,7 @@
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_ANTIBIOTICS</ObsoleteTech>
 			<iHealth>-8</iHealth>
+            <iHealthPercentPerPopulation>-70</iHealthPercentPerPopulation>
 			<iHappiness>-8</iHappiness>
 			<YieldModifiers>
 				<iYield>-8</iYield>
@@ -5299,6 +5397,7 @@
 			<Bonus>BONUS_PIG</Bonus>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-3</iHealth>
+            <iHealthPercentPerPopulation>-25</iHealthPercentPerPopulation>
 			<iHappiness>-3</iHappiness>
 			<YieldModifiers>
 				<iYield>-3</iYield>
@@ -5326,6 +5425,7 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_SMART_DRUGS</ObsoleteTech>
 			<iHealth>-6</iHealth>
+            <iHealthPercentPerPopulation>-50</iHealthPercentPerPopulation>
 			<iHappiness>-6</iHappiness>
 			<YieldModifiers>
 				<iYield>-6</iYield>
@@ -5433,13 +5533,27 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
+            <TechYieldChanges>
+                <TechYieldChange>
+                    <PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
+                    <TechYield>
+                        <iYield>800</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_AUTOMATED_TRAFFIC</PrereqTech>
+                    <TechYield>
+                        <iYield>900</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
+                    <TechYield>
+                        <iYield>800</iYield>
+                    </TechYield>
+                </TechYieldChange>
+            </TechYieldChanges>
 			<TechCommerceChanges>
-				<TechCommerceChange>
-					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
-					<CommercePercents>
-						<iCommercePercent>800</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIGITIZATION</TechType>
 					<CommercePercents>
@@ -5455,21 +5569,9 @@
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
-					<CommercePercents>
-						<iCommercePercent>900</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
 					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>800</iCommercePercent>
-					</CommercePercents>
-				</TechCommerceChange>
-				<TechCommerceChange>
-					<TechType>TECH_ONLINE_COMMUNITY</TechType>
-					<CommercePercents>
 						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
@@ -5615,6 +5717,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -8352,6 +8458,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -8398,7 +8508,7 @@
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>5</iPropertyValue>
+					<iPropertyValue>3</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
@@ -8436,6 +8546,10 @@
 				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>60</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
@@ -8668,7 +8782,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -8799,14 +8913,11 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -8890,10 +9001,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -8950,7 +9059,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-2</iHealth>
+			<iHealth>-5</iHealth>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -8985,9 +9094,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9018,9 +9128,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9053,9 +9164,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9093,9 +9205,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9126,13 +9239,14 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9167,9 +9281,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9205,9 +9320,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9237,9 +9353,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9271,9 +9388,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9310,9 +9428,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9346,9 +9465,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9382,9 +9502,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -9423,9 +9544,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9463,9 +9585,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9511,9 +9634,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>9</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9548,9 +9672,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9582,9 +9707,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9618,9 +9744,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9655,9 +9782,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9691,9 +9819,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9728,9 +9857,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -9768,9 +9898,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9806,9 +9937,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9845,9 +9977,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>12</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9883,9 +10016,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9918,9 +10052,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9954,9 +10089,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -9994,9 +10130,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>8</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -10030,9 +10167,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -10068,9 +10206,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>8</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -10251,11 +10390,8 @@
 			<iHealth>1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10908,7 +11044,7 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11046,9 +11182,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<CommerceModifiers>
-				<iCommerce>6</iCommerce>
-			</CommerceModifiers>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>6</iYield>
+            </YieldModifiers>
 			<iAsset>3</iAsset>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -11073,9 +11211,11 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<CommerceModifiers>
-				<iCommerce>2</iCommerce>
-			</CommerceModifiers>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>2</iYield>
+            </YieldModifiers>
 			<iAsset>1</iAsset>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
@@ -11323,14 +11463,12 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11499,6 +11637,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1685</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_SMOKING_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -11516,12 +11658,13 @@
 			<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<GlobalCommerceModifiers>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<GlobalYieldModifiers>
 				<iYield>5</iYield>
 				<iYield>10</iYield>
+				<iYield>2</iYield>
 			</GlobalYieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -11551,11 +11694,11 @@
 				<BuildingType>BUILDING_NIGHT_CLUB</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MUSICAL_NOTATION</ObsoleteTech>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>2</iCommerce>
+            </CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -11589,6 +11732,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_SAFETY_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -13088,10 +13235,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -13535,6 +13680,10 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -13872,11 +14021,17 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 			</ReplacementBuildings>
+            <iHappiness>-1</iHappiness>
+            <iHealth>-1</iHealth>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>2</iYield>
 			</YieldModifiers>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -13907,8 +14062,11 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -13950,6 +14108,9 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
@@ -14007,9 +14168,9 @@
 			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -14038,8 +14199,11 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 			</ReplacementBuildings>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -14067,6 +14231,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GARRISON</BuildingType>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
@@ -14111,9 +14278,12 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 			</ReplacementBuildings>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -14139,6 +14309,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+            <CommerceChanges>
+                <iCommerce>-1</iCommerce>
+            </CommerceChanges>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 			</ReplacementBuildings>
@@ -14171,6 +14344,44 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_SLAVE_COMPOUND_TUTOR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_TUTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
+			</ReplacementBuildings>
+			<CommerceChanges>
+				<iCommerce>-1</iCommerce>
+				<iCommerce>3</iCommerce>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>2</iAsset>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_TUTOR</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ORDINANCE_SMOKE_DETECTOR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -14186,6 +14397,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1080</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_MANY</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14246,8 +14461,13 @@
 			</PrereqInCityBuildings>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>1</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -14267,7 +14487,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-5</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -14396,11 +14616,11 @@
 			<bWater>1</bWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
-			<PrereqBonuses>
-				<Bonus>BONUS_BAMBOO</Bonus>
-				<Bonus>BONUS_WOOD</Bonus>
-				<Bonus>BONUS_PRIME_TIMBER</Bonus>
-			</PrereqBonuses>
+            <PrereqVicinityBonuses>
+                <VicinityBonus>BONUS_BAMBOO</VicinityBonus>
+                <VicinityBonus>BONUS_WOOD</VicinityBonus>
+                <VicinityBonus>BONUS_PRIME_TIMBER</VicinityBonus>
+            </PrereqVicinityBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
@@ -14410,14 +14630,12 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14442,12 +14660,14 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
@@ -14562,14 +14782,12 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14591,6 +14809,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1475</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_FEW</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_NORMAL</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14671,8 +14893,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -14711,8 +14938,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<iHappiness>4</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>20</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>20</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
@@ -14753,8 +14985,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -14793,11 +15030,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14833,11 +15075,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14873,11 +15120,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14913,11 +15165,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14953,11 +15210,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14993,11 +15255,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15033,11 +15300,16 @@
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
-			<CommerceChanges>
-				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>10</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldChanges>
+            <CommerceChanges>
+                <iCommerce>0</iCommerce>
+                <iCommerce>0</iCommerce>
+                <iCommerce>10</iCommerce>
+            </CommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15242,9 +15514,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
+				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -15298,12 +15571,15 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
@@ -15318,7 +15594,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW_PEDIA</Civilopedia>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
 			<PrereqOrFeature>
@@ -15431,6 +15707,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-15</iHappinessPercentPerPopulation>
 			<iInsidiousness>5</iInsidiousness>
 			<iRevIdxLocal>1</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_THIEF</PropertySpawnUnit>
@@ -15454,6 +15731,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<iInsidiousness>7</iInsidiousness>
 			<iRevIdxLocal>2</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_ROGUE</PropertySpawnUnit>
@@ -15477,6 +15755,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<iInsidiousness>15</iInsidiousness>
 			<iRevIdxLocal>3</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_BURGLAR</PropertySpawnUnit>
@@ -15502,6 +15781,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-30</iHappinessPercentPerPopulation>
 			<iInsidiousness>30</iInsidiousness>
 			<PropertySpawnUnit>UNIT_HACKER</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -15531,6 +15811,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-35</iHappinessPercentPerPopulation>
 			<iInsidiousness>20</iInsidiousness>
 			<iEspionageDefense>-5</iEspionageDefense>
 			<iRevIdxLocal>20</iRevIdxLocal>
@@ -15560,6 +15841,7 @@
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<iInsidiousness>2</iInsidiousness>
 			<PropertySpawnUnit>UNIT_CUTTHROAT</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -15585,6 +15867,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-20</iHappinessPercentPerPopulation>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_TOBACCO</BonusType>
@@ -15635,6 +15918,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+            <iHappinessPercentPerPopulation>-25</iHappinessPercentPerPopulation>
 			<iInsidiousness>25</iInsidiousness>
 			<PropertySpawnUnit>UNIT_BIKER_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
@@ -15767,6 +16051,9 @@
 			<Description>TXT_KEY_BUILDING_HOUSING_BARK_HUTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_BARK_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BARK_WORKING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_BARK</Bonus>
 			<PrereqOrFeature>
@@ -15795,14 +16082,11 @@
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-2</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -16008,6 +16292,10 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>870</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_SMALL</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_NORMAL</CostComplexityModifier>
 			<FreeBuilding>BUILDING_SAFETY_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
@@ -16061,10 +16349,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>

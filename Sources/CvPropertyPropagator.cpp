@@ -87,6 +87,24 @@ GameObjectTypes CvPropertyPropagator::getTargetObjectType() const
 
 bool CvPropertyPropagator::isActive(const CvGameObject* pObject) const
 {
+	// Beta: Nomadic Start's Fruit/Hunt/Material/Lore properties only propagate with the option enabled.
+	if (!GC.getGame().isOption(GAMEOPTION_NOMADIC_START))
+	{
+		static std::vector<PropertyTypes> aeNomadProperties;
+		if (aeNomadProperties.empty())
+		{
+			static const char* aszNomadProperties[] = { "PROPERTY_FRUIT", "PROPERTY_HUNT", "PROPERTY_MATERIAL", "PROPERTY_LORE" };
+			for (size_t i = 0; i < sizeof(aszNomadProperties) / sizeof(aszNomadProperties[0]); ++i)
+			{
+				aeNomadProperties.push_back((PropertyTypes)GC.getInfoTypeForString(aszNomadProperties[i], true));
+			}
+		}
+		if (algo::any_of_equal(aeNomadProperties, getProperty()))
+		{
+			return false;
+		}
+	}
+
 	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
 	{
 		if (m_pExprActive)

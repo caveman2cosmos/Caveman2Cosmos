@@ -272,17 +272,16 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -298,17 +297,10 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_MOON_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_PANDA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_URSIDAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BEARS</Type>
@@ -338,6 +330,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BEARS</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -377,12 +373,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
 			<Bonus>BONUS_CAT</Bonus>
-			<iCost>624</iCost>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
@@ -402,9 +403,10 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
-			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_SABRETOOTH</Type>
+				<Type>HERITAGE_FOLKLORE_PALEOLITHIC_CAT</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BIG_CATS</Type>
@@ -424,6 +426,48 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
+			<Type>BUILDING_HERITAGE_BIG_CATS</Type>
+			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
+			<Description>TXT_KEY_BUILDING_HERITAGE_BIG_CAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_BIG_CAT_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BIG_CATS</ArtDefineTag>
+			<PrereqTech>TECH_HERITAGE</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
+			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
+			<iConquestProb>0</iConquestProb>
+			<iAsset>4</iAsset>
+			<iPower>2</iPower>
+			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>7</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BIG_CAT</BuildingType>
+			</PrereqInCityBuildings>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
+		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TRAINER_BISON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
@@ -437,15 +481,16 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_BISON</Bonus>
-			<iCost>624</iCost>
-			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -458,8 +503,6 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
@@ -467,9 +510,12 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_BISON</Type>
+				<Type>HERITAGE_TAXON_BOVINAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_BISON</Type>
@@ -499,6 +545,10 @@
 			</MapCategoryTypes>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BISON</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -537,16 +587,18 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_DEER</Bonus>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -560,15 +612,16 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_REINDEER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
 				<BuildingType>BUILDING_HERD_DEER</BuildingType>
 				<BuildingType>BUILDING_CAMP_MEGALOCEROS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_DEER</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_DEER</Type>
@@ -600,6 +653,10 @@
 			<iMinLatitude>45</iMinLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_DEER</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -637,16 +694,18 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iMaxLatitude>45</iMaxLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -659,11 +718,13 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_GIRAFFE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_GIRAFFES</Type>
@@ -695,6 +756,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_GIRAFFES</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -742,16 +807,14 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
 				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
@@ -770,25 +833,17 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_MAMMOTH</Bonus>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iMinLatitude>40</iMinLatitude>
-			<iHealth>-1</iHealth>
-			<iHappiness>1</iHappiness>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>500</iYield>
-					</TechYield>
-				</TechYieldChange>
-			</TechYieldChanges>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -805,7 +860,6 @@
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
@@ -843,6 +897,10 @@
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_MAMMOTHS</FreeBuilding>
 			<iMinLatitude>40</iMinLatitude>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -879,7 +937,7 @@
 				<BuildingType>BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</BuildingType>
 			</ReplacementBuildings>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -895,7 +953,7 @@
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
+				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
 			<iWarWearinessModifier>-5</iWarWearinessModifier>
 			<iRevIdxLocal>-1</iRevIdxLocal>
@@ -922,6 +980,10 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>800</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -958,15 +1020,17 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -980,15 +1044,12 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_TAXON_RHINOCEROTIDAE</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_RHINOS</Type>
@@ -1019,6 +1080,10 @@
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_RHINOS</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -1060,15 +1125,13 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<YieldChanges>
-				<iYield>1</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
@@ -1085,9 +1148,15 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>624</iCost>
+			<iCost>1038</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
+			<CommerceChanges>
+				<iCommerce>-5</iCommerce>
+			</CommerceChanges>
 			<iMaxLatitude>45</iMaxLatitude>
-			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -1104,12 +1173,13 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_CAMP_ZEBRA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqOrHeritage>
+				<Type>HERITAGE_FOLKLORE_ZEBRA</Type>
+			</PrereqOrHeritage>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_HERITAGE_ZEBRAS</Type>
@@ -1141,6 +1211,10 @@
 			<iMaxLatitude>45</iMaxLatitude>
 			<FreeBuilding>BUILDING_EFFECT_HERITAGE_ZEBRAS</FreeBuilding>
 			<iCost>139</iCost>
+			<CostSizeModifier>BUILDINGCOSTSIZE_MEDIUM</CostSizeModifier>
+			<CostCountModifier>BUILDINGCOSTCOUNT_ONE</CostCountModifier>
+			<CostMaterialsModifier>BUILDINGCOSTMATERIALS_CHEAP</CostMaterialsModifier>
+			<CostComplexityModifier>BUILDINGCOSTCOMPLEXITY_COMPLEX</CostComplexityModifier>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>

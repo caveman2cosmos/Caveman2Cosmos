@@ -135,6 +135,9 @@ class WBTechScreen:
 		ePanelBlack	= PanelStyles.PANEL_STYLE_MAIN_BLACK25
 
 		ScPnl = "TechScrollPanel"
+		if ScPnl in self.aWidgetBucket:
+			screen.deleteWidget(ScPnl)
+			self.aWidgetBucket.remove(ScPnl)
 		screen.addScrollPanel(ScPnl, "", 0, 28, xRes + 8, yRes - 88, PanelStyles.PANEL_STYLE_MAIN)
 		self.aWidgetBucket.append(ScPnl)
 
@@ -159,7 +162,7 @@ class WBTechScreen:
 			name = font + self.getTechListName(iTech, info)
 
 			CELL = CELL_0 + str(iTech)
-			if (iRow + iCol) % 2:
+			if (iRow * nCol + iCol) % 2:
 				screen.attachPanelAt(ScPnl, CELL, "", "", True, False, ePanelBlack, x, y, wCol, h2, eWidGen, 999, iTech)
 				screen.setStyle(CELL, "Panel_Tan15_Style")
 			else:

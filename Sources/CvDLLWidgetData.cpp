@@ -1816,7 +1816,17 @@ void CvDLLWidgetData::parseCityNameHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_CITY_POPULATION", pHeadSelectedCity->getRealPopulation()));
 
-		GAMETEXT.setTimeStr(szTempBuffer, pHeadSelectedCity->getGameTurnFounded(), false);
+		bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+		if (bHistoricalCalendar)
+		{
+			int yearfounded = pHeadSelectedCity->getGameDateFounded(bHistoricalCalendar);
+			GAMETEXT.setYearStrAC(szTempBuffer, yearfounded, false);
+		}
+		else
+		{
+			int turnfounded = pHeadSelectedCity->getGameTurnFounded();
+			GAMETEXT.setTimeStr(szTempBuffer, turnfounded, false);
+		}
 		szBuffer.append(NEWLINE);
 		szBuffer.append(gDLL->getText("TXT_KEY_CITY_FOUNDED", szTempBuffer.GetCString()));
 
@@ -2082,6 +2092,32 @@ void CvDLLWidgetData::parseConscriptHelp(CvWidgetDataStruct &widgetDataStruct, C
 				}
 			}
 // BUG - Conscript Limit - end
+		}
+		else
+		{
+			// No unit currently trainable here has a conscription value, so the block above
+			// never runs - without this, the whole tooltip (including the "requires civic X"
+			// hint) went completely blank, hiding the real reason Draft was unavailable.
+			if (GET_PLAYER(pHeadSelectedCity->getOwner()).getMaxConscript() == 0)
+			{
+				bool bFirst = true;
+				for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
+				{
+					if (getWorldSizeMaxConscript((CivicTypes)iI) > 0)
+					{
+						setListHelp(szBuffer, gDLL->getText("TXT_KEY_REQUIRES"), GC.getCivicInfo((CivicTypes)iI).getDescription(), gDLL->getText("TXT_KEY_OR").c_str(), bFirst);
+						bFirst = false;
+					}
+				}
+				if (!bFirst)
+				{
+					szBuffer.append(ENDCOLR);
+				}
+			}
+			else
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_NO_CONSCRIPT_UNIT_AVAILABLE"));
+			}
 		}
 	}
 }
@@ -3292,7 +3328,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			// BUG - Fortify/Sleep All Action - end
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_AMBUSH ||
-				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE)
+				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE ||
+				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_HUNT)
 			{
 				bool bAssassinate = GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ASSASSINATE;
 				CvWStringBuffer szCombatBuffer;

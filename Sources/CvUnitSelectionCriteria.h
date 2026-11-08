@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifndef CIV4_UNIT_SELECTION_CRITERIA_H
 #define CIV4_UNIT_SELECTION_CRITERIA_H
@@ -37,6 +37,7 @@ public:
 		, m_bNoNegativeProperties(false)
 		, m_bIsHealer(false)
 		, m_bIsCommander(false)
+		, m_bIsCommodore(false)
 	{ }
 
 	UnitAITypes		m_eUnitAI;
@@ -50,6 +51,7 @@ public:
 	bool			m_bNoNegativeProperties;
 	bool			m_bIsHealer;
 	bool			m_bIsCommander;
+	bool			m_bIsCommodore;
 
 	CvUnitSelectionCriteria& UnitAI(UnitAITypes UnitAI) { m_eUnitAI = UnitAI; return *this; }
 	CvUnitSelectionCriteria& IgnoreAdvisor(AdvisorTypes IgnoreAdvisor) { m_eIgnoreAdvisor = IgnoreAdvisor; return *this; }
@@ -62,21 +64,9 @@ public:
 	CvUnitSelectionCriteria& NoNegativeProperties(bool NoNegativeProperties) { m_bNoNegativeProperties = NoNegativeProperties; return *this; }
 	CvUnitSelectionCriteria& IsHealer(bool IsHealer) { m_bIsHealer = IsHealer; return *this; }
 	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
+	CvUnitSelectionCriteria& IsCommodore(bool IsCommodore) { m_bIsCommodore = IsCommodore; return *this; }
 
-	CvString getDescription() const
-	{
-		if (m_eProperty != NO_PROPERTY)
-		{
-			return (
-				CvString::format(
-					"Property %s for %S",
-					m_bPropertyBeneficial ? "improver" : "worsener",
-					GC.getPropertyInfo(m_eProperty).getDescription()
-				)
-			);
-		}
-		return CvString("");
-	}
+	CvString getDescription() const;
 
 	int getHash() const
 	{
@@ -108,6 +98,10 @@ public:
 		{
 			iResult |= 0x8;
 		}
+		if (m_bIsCommodore)
+        {
+        	iResult |= 0x8;
+        }
 
 		return iResult;
 	}

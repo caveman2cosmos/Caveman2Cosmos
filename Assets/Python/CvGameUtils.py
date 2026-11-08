@@ -80,7 +80,6 @@ class CvGameUtils:
 					iTech = GC.getProcessInfo(iProcess).getTechPrereq()
 					if iTech == -1 or CyTeam.isHasTech(iTech):
 						return True
-					return False
 			elif PROCESS == TYPE:
 				bFound = True
 		return False

@@ -83,6 +83,8 @@ class Forgetful:
 	def setDropDown(self):
 		szDropdownName = "ForgetfulType"
 		screen = CyGInterfaceScreen("ForgetfulScreen", self.screenId)
+		if screen.getWidget(szDropdownName):  # Check if it exists first
+			screen.deleteWidget(szDropdownName)
 		screen.addDropDownBoxGFC(szDropdownName, 12, 12, 180, WidgetTypes.WIDGET_GENERAL, 1, 2, FontTypes.GAME_FONT)
 		for i in xrange(self.iTypes):
 			screen.addPullDownString(szDropdownName, self.lForgetful[i][0], i, i, i == self.iForgetfulType)
@@ -93,6 +95,8 @@ class Forgetful:
 		iWidth = self.xRes - 16
 		w0 = (iWidth - 64)/3
 		screen = CyGInterfaceScreen("ForgetfulScreen", self.screenId)
+		if screen.getWidget(Table):  # Guard this too
+			screen.deleteWidget(Table)
 		screen.addTableControlGFC(Table, 4, 8, 52, iWidth, self.yRes - 60, True, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader(Table, 0, "ID", 64)
 		screen.setTableColumnHeader(Table, 1, "NAME", w0)
@@ -118,18 +122,21 @@ class Forgetful:
 	def back(self):
 		if self.iForgetfulType > 0:
 			self.iForgetfulType -= 1
-			self.setDropDown()
 		else:
 			self.iForgetfulType = self.iTypes - 1
-			self.setDropDown()
+		self.drawTable()  # Not setDropDown()
 
 	def forward(self):
 		if self.iForgetfulType < self.iTypes - 1:
 			self.iForgetfulType += 1
-			self.setDropDown()
 		else:
 			self.iForgetfulType = 0
-			self.setDropDown()
+		self.drawTable()  # Not setDropDown()
 
 	def onClose(self):
+		try:
+			screen = CyGInterfaceScreen("ForgetfulScreen", self.screenId)
+			screen.hideScreen()
+		except:
+			pass
 		del self.lForgetful, self.screenId, self.xRes, self.yRes, self.iTypes

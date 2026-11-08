@@ -9,6 +9,10 @@ localText = CyTranslator()
 
 class CvSpaceShipScreen:
 	"Spaceship Screen"
+
+	def __init__(self):
+		self.createdButtons = set()
+
 	def interfaceScreen (self, iFinishedProject):
 
 		#create screen
@@ -24,6 +28,7 @@ class CvSpaceShipScreen:
 		self.Y_SCREEN = self.windowHeight / 2 - self.H_SCREEN / 2
 		self.Y_TITLE = self.Y_SCREEN + 20
 		self.activeProject = iFinishedProject
+		self.lastVictoryCountdown = -1
 
 		self.PADDING = 15
 		self.W_EXIT = 120
@@ -122,10 +127,12 @@ class CvSpaceShipScreen:
 	def rebuildComponentPanel(self):
 		screen = CyGInterfaceScreen( "SpaceShipScreen", CvScreenEnums.SPACE_SHIP_SCREEN)
 		self.removeComponentsPanel()
+		screen.addPanel("SpaceShipMainPanel", "", "", true, true, self.X_SCREEN, self.Y_SCREEN, self.W_SCREEN, self.H_SCREEN, PanelStyles.PANEL_STYLE_EMPTY)
 
 		#check if already landed spaceship
 		activeTeam = GC.getGame().getActiveTeam()
 		victoryCountdown = GC.getTeam(activeTeam).getVictoryCountdown(self.spaceVictory)
+		self.lastVictoryCountdown = victoryCountdown
 		gameState = GC.getGame().getGameState()
 		if(not (((gameState == GameStateTypes.GAMESTATE_EXTENDED) and (victoryCountdown > 0)) or (victoryCountdown == 0))):
 
@@ -157,9 +164,9 @@ class CvSpaceShipScreen:
 				screen.setLabel("ComponentInProductionLabel" + str(i), "ComponentPanel" + str(i), localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_IN_PRODUCTION_LABEL", (inProduction,)), 1<<0, xPosition + self.componentInProductionLabelXOffset, yPosition + self.componentInProductionLabelYOffset, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 				#panel color
-				if(completed >= required): #green
+				if completed >= required: #green
 					screen.setPanelColor("ComponentPanel" + str(i), 85, 150, 87)
-				else: #check if can build
+				else: #check if you can build
 					canBuild = True
 					if(not GC.getTeam(activeTeam).isHasTech(component.getTechPrereq())):
 						canBuild = False
@@ -168,19 +175,25 @@ class CvSpaceShipScreen:
 							if(GC.getTeam(activeTeam).getProjectCount(j) < component.getProjectsNeeded(j)):
 								canBuild = False
 
-					if(not canBuild): #grey
+					if not canBuild: #grey
 						screen.setPanelColor("ComponentPanel" + str(i), 128, 128, 128)
+					else: #yellow - can build but not complete
+						screen.setPanelColor("ComponentPanel" + str(i), 200, 200, 100)
 
 				#type button if necessary
-				if(screen.spaceShipCanChangeType(index) and (victoryCountdown < 0)):
-					screen.setButtonGFC("ComponentTypeButton" + str(i), localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_TYPE_BUTTON", ()), "", xPosition + self.componentTypeXOffset, yPosition + self.componentTypeYOffset, self.componentTypeWidth, self.componentTypeHeight, WidgetTypes.WIDGET_GENERAL, self.TYPE_BUTTON, i, ButtonStyles.BUTTON_STYLE_STANDARD )
+				if screen.spaceShipCanChangeType(index) and (victoryCountdown < 0):
+					buttonName = "ComponentTypeButton" + str(i)
+					self.createdButtons.add(buttonName)
+					screen.setButtonGFC(buttonName, localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_TYPE_BUTTON", ()), "", xPosition + self.componentTypeXOffset, yPosition + self.componentTypeYOffset, self.componentTypeWidth, self.componentTypeHeight, WidgetTypes.WIDGET_GENERAL, self.TYPE_BUTTON, i, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 				#zoom button
-				if(victoryCountdown < 0):
-					screen.setButtonGFC("ComponentZoomButton" + str(i), localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ZOOM_BUTTON", ()), "", xPosition + self.componentZoomXOffset, yPosition + self.componentZoomYOffset, self.componentZoomWidth, self.componentZoomHeight, WidgetTypes.WIDGET_GENERAL, self.ZOOM_BUTTON, i, ButtonStyles.BUTTON_STYLE_STANDARD )
+				if victoryCountdown < 0:
+					buttonName = "ComponentZoomButton" + str(i)
+					self.createdButtons.add(buttonName)
+					screen.setButtonGFC(buttonName, localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ZOOM_BUTTON", ()), "", xPosition + self.componentZoomXOffset, yPosition + self.componentZoomYOffset, self.componentZoomWidth, self.componentZoomHeight, WidgetTypes.WIDGET_GENERAL, self.ZOOM_BUTTON, i, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 				#add button
-				if(index == self.activeProject):
+				if index == self.activeProject:
 					screen.setButtonGFC("ComponentAddButton", localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ADD_BUTTON", ()), "", xPosition - xPositionOffset + self.componentAddXOffset, yPosition + self.componentAddYOffset, self.componentAddWidth, self.componentAddHeight, WidgetTypes.WIDGET_GENERAL, self.ADD_BUTTON, i, ButtonStyles.BUTTON_STYLE_STANDARD )
 
 				#component model
@@ -188,12 +201,11 @@ class CvSpaceShipScreen:
 				screen.addSpaceShipWidgetGFC("ComponentModel" + str(i), xPosition + self.componentModelXOffset, yPosition + self.componentModelYOffset, self.componentModelWidth, self.componentModelHeight, index, modelType, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			#launch button
-			activeTeam = GC.getGame().getActiveTeam()
-			if(victoryCountdown > 0):
+			if victoryCountdown > 0:
 				victoryDate = CyGameTextMgr().getTimeStr(GC.getGame().getGameTurn() + victoryCountdown, false)
 				screen.setLabel("ArrivalLabel1", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_ARRIVAL", ()) + ": " + victoryDate + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL1, self.Y_ARRIVAL_LABEL1, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				screen.setLabel("ArrivalLabel2", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_TURNS", ()) + ": " + str(victoryCountdown) + "</font></color>", 1<<0, self.X_ARRIVAL_LABEL2, self.Y_ARRIVAL_LABEL2, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			elif(GC.getTeam(GC.getGame().getActiveTeam()).canLaunch(self.spaceVictory)):
+			elif GC.getTeam(GC.getGame().getActiveTeam()).canLaunch(self.spaceVictory):
 				delay = GC.getTeam(GC.getGame().getActiveTeam()).getVictoryDelay(self.spaceVictory)
 				screen.setLabel("LaunchLabel", "SpaceShipMainPanel", "<color=255,255,0><font=3b>" + localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_TRAVEL_TIME_LABEL", (delay,)) + "</font></color>", 1<<0, self.X_LAUNCH_LABEL, self.Y_LAUNCH_LABEL, 0, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				screen.setButtonGFC("LaunchButton", localText.getText("TXT_KEY_SPACE_SHIP_SCREEN_LAUNCH_BUTTON", ()), "", self.X_LAUNCH, self.Y_LAUNCH, self.W_LAUNCH, self.H_LAUNCH, WidgetTypes.WIDGET_GENERAL, self.LAUNCH_BUTTON, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
@@ -209,6 +221,10 @@ class CvSpaceShipScreen:
 		screen.deleteWidget("LaunchLabel")
 		screen.deleteWidget("LaunchButton")
 		screen.deleteWidget("ExitButton")
+		screen.deleteWidget("ArrivalLabel1")
+		screen.deleteWidget("ArrivalLabel2")
+		screen.deleteWidget("FinishedLabel")
+		screen.deleteWidget("FinishedLabel2")
 
 		for i in range(self.numComponents):
 			screen.deleteWidget("ComponentPanel" + str(i))
@@ -216,16 +232,23 @@ class CvSpaceShipScreen:
 			screen.deleteWidget("ComponentCompletedLabel" + str(i))
 			screen.deleteWidget("ComponentRequiredLabel" + str(i))
 			screen.deleteWidget("ComponentInProductionLabel" + str(i))
-			screen.deleteWidget("ComponentTypeButton" + str(i))
-			screen.deleteWidget("ComponentZoomButton" + str(i))
+			# Only delete it if they were created
+			if "ComponentTypeButton" + str(i) in self.createdButtons:
+				screen.deleteWidget("ComponentTypeButton" + str(i))
+			if "ComponentZoomButton" + str(i) in self.createdButtons:
+				screen.deleteWidget("ComponentZoomButton" + str(i))
 			screen.deleteWidget("ComponentModel" + str(i))
+
+		self.createdButtons.clear()
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-		if(inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED):
+		if inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED:
 			data1 = inputClass.getData1()
 			data2 = inputClass.getData2()
-			if(data1 == self.TYPE_BUTTON):
+			if data1 == self.TYPE_BUTTON:
+				if data2 < 0 or data2 >= len(self.componentProjects):  # bounds check
+					return 0
 				screen = CyGInterfaceScreen( "SpaceShipScreen", CvScreenEnums.SPACE_SHIP_SCREEN)
 				xPosition = self.X_SCREEN + self.componentPanelXOffset
 				yPosition = self.Y_SCREEN + self.componentPanelYOffset + data2 * self.componentPanelHeight
@@ -235,6 +258,8 @@ class CvSpaceShipScreen:
 				modelType = GC.getTeam(activeTeam).getProjectDefaultArtType(index)
 				screen.addSpaceShipWidgetGFC("ComponentModel" + str(data2), xPosition + self.componentModelXOffset, yPosition + self.componentModelYOffset, self.componentModelWidth, self.componentModelHeight, index, modelType, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			elif(data1 == self.ZOOM_BUTTON):
+				if data2 < 0 or data2 >= len(self.componentProjects):  # bounds check
+					return 0
 				screen = CyGInterfaceScreen( "SpaceShipScreen", CvScreenEnums.SPACE_SHIP_SCREEN)
 				screen.spaceShipZoom(self.componentProjects[data2])
 			elif(data1 == self.ADD_BUTTON):

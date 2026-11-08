@@ -28,6 +28,7 @@ public:
 	SeasonTypes getSeason() const;
 	int getDay() const;
 	uint32_t GetTick() const;
+	void setTick(uint32_t newTick);
 
 	CvDateIncrement getIncrement(GameSpeedTypes eGameSpeed = NO_GAMESPEED) const;
 	void increment(GameSpeedTypes eGameSpeed = NO_GAMESPEED);

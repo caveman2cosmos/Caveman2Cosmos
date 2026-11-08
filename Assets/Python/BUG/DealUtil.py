@@ -167,6 +167,9 @@ class Deal(object):
 	def __init__(self, deal):
 		self.deal = deal
 
+	def isReversed(self):
+		return False
+
 	def getID(self):
 		return self.deal.getID()
 

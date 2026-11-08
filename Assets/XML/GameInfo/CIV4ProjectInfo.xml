@@ -22,8 +22,13 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iWorldTradeRoutes>1</iWorldTradeRoutes>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
@@ -498,7 +503,7 @@
 			<TechPrereq>TECH_WEATHER_CONTROL</TechPrereq>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>55240</iCost>
-			<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
+						<MovieDefineTag>ART_DEF_MOVIE_EDEN</MovieDefineTag>
 			<Button>Art/Interface/Buttons/Buildings/Eden.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>
@@ -568,8 +573,9 @@
 			<iGlobalHealth>1</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
-				<iCommerce>15</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>20</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<Button>,Art/Interface/Buttons/Buildings/Evolution.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,8,3</Button>
 		</ProjectInfo>
@@ -584,8 +590,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iCost>16040</iCost>
 			<iGlobalHappiness>1</iGlobalHappiness>
+            <YieldModifiers>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>10</iYield>
+            </YieldModifiers>
 			<CommerceModifiers>
-				<iCommerce>10</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
 			<Button>,Art/Interface/Buttons/Techtree/TheoryofEverything.dds,Art/Interface/Buttons/RoM_Techtree_Atlas2.dds,4,2</Button>

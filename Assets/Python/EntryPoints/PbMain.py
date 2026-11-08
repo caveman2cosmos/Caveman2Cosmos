@@ -7,7 +7,7 @@
 from CvPythonExtensions import *
 import PbWizard
 import PbAdmin
-
+# potential mark for deletion TODO: MurderMesa/Scvijc
 localText = CyTranslator()
 app = None
 bAdmin = False

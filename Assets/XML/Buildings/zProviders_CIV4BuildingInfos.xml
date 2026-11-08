@@ -132,7 +132,6 @@
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 				<BuildingType>BUILDING_ANT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_ASSASSIN_BUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_ASSASSIN_BUG_SANCTUARY</BuildingType>
@@ -632,9 +631,7 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MODERN_EARTHWORKS</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_ARCHAEOPTERYX_FOSSILS</BuildingType>
@@ -954,9 +951,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMS</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
 				<BuildingType>BUILDING_MEAT_INDUSTRY_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrBuildings>

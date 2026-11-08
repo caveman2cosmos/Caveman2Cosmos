@@ -4,11 +4,12 @@
 	<TEXT>
 		<Tag>TXT_WORD_CARGO</Tag>
 		<English>Cargo</English>
+		<French>Cargaison</French>
 		<German>Fracht</German>
 		<Spanish>Carga</Spanish>
 		<Italian>Carico</Italian> <!--infoscreen building list-->
 		<Polish>&#163;adowno&#156;&#230;</Polish>
-		<Russian>Транспорт</Russian>
+		<Russian>Груз</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_CITY</Tag>
@@ -132,7 +133,7 @@
 		<Italian>sulla propria casella</Italian> <!-- unit Enforcers -->
 		<Spanish>Casilla</Spanish>
 		<Polish>Pole</Polish>
-		<Russian>Участок</Russian>
+		<Russian>Клетка</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_RECOMMENDATIONS</Tag>
@@ -144,13 +145,15 @@
 	<TEXT>
 		<Tag>TXT_WORD_SPOT</Tag>
 		<English>Spot</English>
+		<French>Vision</French>
 		<German>Sicht</German>
 		<Italian>Tipo e forza d'[COLOR_HIGHLIGHT_TEXT]individuazione[COLOR_REVERT]:</Italian> <!-- unit Ambusher with Hide and Seek active -->
+		<Russian>Тип и мощность обнаружения</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_TEAM</Tag>
 		<English>Team</English>
-		<French>Equipe</French>
+		<French>Équipe</French>
 		<Italian>squadra</Italian>
 		<Spanish>Equipo</Spanish>
 		<Polish>Dru&#191;yna</Polish>
@@ -164,7 +167,7 @@
 		<Italian>unità</Italian>
 		<Spanish>Unidad</Spanish>
 		<Polish>Jednostka</Polish>
-		<Russian>Отряд</Russian>
+		<Russian>Подразделение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_WORD_WITH</Tag>

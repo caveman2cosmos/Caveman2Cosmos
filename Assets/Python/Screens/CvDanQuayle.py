@@ -19,7 +19,6 @@ class CvDanQuayle:
 		self.LIST_ID = "CvDanQuayleList"
 		self.TEXT_ID = "CvDanQuayleText"
 		self.SCORE_ID = "CvDanQuayleScore"
-		self.SCORE_ID = "CvDanQuayleScore"
 		self.WIDGET_HEADER = "CvDanQuayleHeader"
 
 		self.X_SCREEN = 500

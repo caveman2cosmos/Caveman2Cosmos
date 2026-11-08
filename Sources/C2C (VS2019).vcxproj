@@ -222,6 +222,7 @@
     <ClCompile Include="CounterSet.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
+    <ClCompile Include="CvArmy.cpp" />
     <ClCompile Include="CvBonusInfo.cpp" />
     <ClCompile Include="CvDiplomacyClasses.cpp" />
     <ClCompile Include="CvHallOfFameInfo.cpp" />
@@ -238,6 +239,7 @@
     <ClCompile Include="CvSettlerAI.cpp" />
     <ClCompile Include="CvTraitInfo.cpp" />
     <ClCompile Include="CvUnitCombatInfo.cpp" />
+    <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CvWorkerService.cpp" />
@@ -376,6 +378,7 @@
     <ClCompile Include="SCvDebug.cpp" />
     <ClCompile Include="SCvInternalGlobals.cpp" />
     <ClCompile Include="SCyDebug.cpp" />
+    <ClInclude Include="CvArmy.h" />
     <ClInclude Include="CvDiplomacyClasses.h" />
     <ClInclude Include="CvPlayerOptionInfo.h" />
     <ClInclude Include="CvPythonCityLoader.h" />

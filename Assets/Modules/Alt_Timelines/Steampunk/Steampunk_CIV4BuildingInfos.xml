@@ -390,14 +390,12 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>6</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<PowerYieldModifiers>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
 			</PowerYieldModifiers>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>

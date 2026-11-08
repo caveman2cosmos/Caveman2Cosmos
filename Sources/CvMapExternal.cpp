@@ -152,7 +152,7 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 
 	if (result == NULL)
 	{
-		OutputDebugString(CvString::format("    Plot at (%d,%d): NULL\n").c_str());
+		OutputDebugString(CvString::format("    Plot at index %d: NULL\n", iIndex).c_str());
 	}
 	return result;
 }

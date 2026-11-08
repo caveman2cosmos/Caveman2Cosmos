@@ -171,7 +171,7 @@ class WBPlotScreen:
 		screen.setText("EditLandMark", "Background", sText, 1<<1, iX + iSignWidth, iY - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		lSigns = []
-		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
+		for _ in xrange(GC.getMAX_PLAYERS()):
 			lSigns.append(-1)
 		for i in xrange(CyEngine().getNumSigns()):
 			pSign = CyEngine().getSignByIndex(i)
@@ -445,7 +445,7 @@ class WBPlotScreen:
 
 		screen.addTableControlGFC("WBPlotType", 1, iX, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBPlotType", 0, "", iWidth)
-		for iTerrain in xrange(PlotTypes.NUM_PLOT_TYPES):
+		for _ in xrange(PlotTypes.NUM_PLOT_TYPES):
 			screen.appendTableRow("WBPlotType")
 
 		iTerrain = GC.getInfoTypeForString("TERRAIN_PEAK")
@@ -453,7 +453,6 @@ class WBPlotScreen:
 		TerrainInfo = GC.getTerrainInfo(iTerrain)
 		if pPlot.getPlotType() == PlotTypes.PLOT_PEAK:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			sHeader = TerrainInfo.getDescription()
 		sText = "<font=3>" + sColor + TerrainInfo.getDescription() + "</font></color>"
 		screen.setTableText("WBPlotType", 0, 0, sText, TerrainInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7875, iTerrain, 1<<0)
 
@@ -462,7 +461,6 @@ class WBPlotScreen:
 		TerrainInfo = GC.getTerrainInfo(iTerrain)
 		if pPlot.getPlotType() == PlotTypes.PLOT_HILLS:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			sHeader = TerrainInfo.getDescription()
 		sText = "<font=3>" + sColor + TerrainInfo.getDescription() + "</font></color>"
 		screen.setTableText("WBPlotType", 0, 1, sText, TerrainInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7875, iTerrain, 1<<0)
 
@@ -471,7 +469,6 @@ class WBPlotScreen:
 		TerrainInfo = GC.getTerrainInfo(iTerrain)
 		if pPlot.getPlotType() == PlotTypes.PLOT_LAND:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			sHeader = TerrainInfo.getDescription()
 		sText = "<font=3>" + sColor + TerrainInfo.getDescription() + "</font></color>"
 		screen.setTableText("WBPlotType", 0, 2, sText, TerrainInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7875, iTerrain, 1<<0)
 
@@ -480,7 +477,6 @@ class WBPlotScreen:
 		TerrainInfo = GC.getTerrainInfo(iTerrain)
 		if pPlot.getPlotType() == PlotTypes.PLOT_OCEAN:
 			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-			sHeader = TerrainInfo.getDescription()
 		sText = "<font=3>" + sColor + TerrainInfo.getDescription() + "</font></color>"
 		screen.setTableText("WBPlotType", 0, 3, sText, TerrainInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7875, iTerrain, 1<<0)
 

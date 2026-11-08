@@ -15,7 +15,12 @@ class CvCity;
 class CvEventTriggerInfo;
 class CvSelectionGroup;
 class CvUnitSelectionCriteria;
+class CvArmy;
 
+/**
+ * Stores information about a mission target for AI planning.
+ * - Tracks number of units targeting, closest distance, and total volume.
+ */
 struct MissionTargetInfo
 {
 	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
@@ -28,6 +33,9 @@ struct MissionTargetInfo
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
 #ifdef PLOT_DANGER_CACHING
+// C2C Optimization: Player-aware plot danger caching. Adding ePlayer allows the cache
+// to be safely shared or queried contextually, and increasing cache size to 128
+// matches C2C's scale (larger maps, more players, and heavier pathing queries).
 struct plotDangerCacheEntry
 {
 	plotDangerCacheEntry()
@@ -35,6 +43,7 @@ struct plotDangerCacheEntry
 		, plotY(-1)
 		, iRange(-1)
 		, bTestMoves(false)
+		, ePlayer(NO_PLAYER)
 		, iResult(-1)
 		, iLastUseCount(0)
 	{}
@@ -43,12 +52,17 @@ struct plotDangerCacheEntry
 	int plotY;
 	int iRange;
 	bool bTestMoves;
+	PlayerTypes ePlayer;
 	int iResult;
 	int iLastUseCount;
 };
 
-#define PLOT_DANGER_CACHE_SIZE 24
+#define PLOT_DANGER_CACHE_SIZE 128
 
+/**
+ * Manages a fixed-size cache of plot danger entries.
+ * - Provides clear method and tracks usage counter.
+ */
 class plotDangerCache
 {
 public:
@@ -64,6 +78,7 @@ public:
 			foreach_(plotDangerCacheEntry& entry, entries)
 			{
 				entry.iLastUseCount = 0;
+				entry.ePlayer = NO_PLAYER;
 			}
 		}
 	}
@@ -73,6 +88,12 @@ public:
 };
 #endif
 
+/**
+ * AI player logic for managing all aspects of a civilization.
+ * - Handles turn-based decisions, unit and city management, diplomacy, research, and victory strategies.
+ * - Contains routines for evaluating yields, commerce, military, city sites, attitudes, and more.
+ * - Integrates with city and unit AI, caching, and global game state.
+ */
 class CvPlayerAI : public CvPlayer
 {
 
@@ -112,8 +133,20 @@ public:
 
 	int AI_movementPriority(const CvSelectionGroup* pGroup) const;
 	void AI_unitUpdate();
+	bool AI_releaseStalledContractWaits();
 
 	void AI_makeAssignWorkDirty();
+	
+/**
+ * Assigns working plots and specialists for the city.
+ * - Updates special yield multipliers.
+ * - Removes invalid plots and excess specialists.
+ * - Ensures home plot is always worked.
+ * - Removes worst citizens if over population limit.
+ * - Assigns unassigned population to plots or specialists.
+ * - If automated, optimizes assignments for best yields.
+ * - Updates UI if city is selected.
+ */	
 	void AI_assignWorkingPlots();
 	void AI_updateAssignWork();
 
@@ -160,6 +193,7 @@ public:
 	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
 	bool AI_avoidScience() const;
+	bool AI_hasCriticalGold() const;
 	bool AI_isFinancialTrouble() const;
 	short AI_fundingHealth(int iExtraExpense = 0, int iExtraExpenseMod = 0) const;
 	short AI_safeFunding() const;
@@ -418,6 +452,7 @@ public:
 
 	int AI_getTotalCityThreat() const;
 	int AI_getTotalFloatingDefenseNeeded() const;
+	int AI_getTotalProperty(PropertyTypes eProperty) const;
 
 
 	int AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat = NULL) const;
@@ -458,6 +493,58 @@ public:
 
 	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
+
+#ifdef CVARMY_BREAKSAVE
+	void AI_formArmies();   // Nouvelle fonction de cr�ation des arm�es
+#endif
+
+	/**
+	 * \brief Calculate the relative viability of a unit type for a given AI role.
+	 *
+	 * This function evaluates all units of the specified domain and determines
+	 * how strong the best unit of the requested AI type is compared to other
+	 * available units in the same domain.
+	 *
+	 * \param eUnitAI The Unit AI role to evaluate (e.g., UNITAI_ATTACK, UNITAI_CITY_DEFENSE).
+	 * \param eDomain The domain of units to consider (DOMAIN_LAND, DOMAIN_SEA, DOMAIN_AIR).
+	 *
+	 * \return An integer representing the relative strength of the best unit
+	 *         for the requested AI type compared to the strongest other unit
+	 *         in the same domain. The value is scaled by 100.
+	 *
+	 * \note
+	 * - Units are considered only if they are available to the player's team
+	 *   (weight > 0 or prerequisite tech known).
+	 * - Compares combat strength (`getCombat()`) of units.
+	 *
+	 * \see CvUnitInfo::getUnitAIType()
+	 * \see GET_TEAM()
+	 * \see CvPlayerAI::m_aiUnitWeights
+	 *
+	 * \dot
+	 * digraph AI_calculateUnitAIViability {
+	 *   rankdir=LR;
+	 *   node [shape=box, style=filled, color=lightblue];
+	 *   Start [label="Start"];
+	 *   ForEachUnit [label="For each unit in domain"];
+	 *   CheckAvailability [label="Check if player can use unit"];
+	 *   CheckUnitAI [label="Does unit match eUnitAI?"];
+	 *   UpdateBestAI [label="Update iBestUnitAIStrength"];
+	 *   UpdateBestOther [label="Update iBestOtherStrength"];
+	 *   ReturnValue [label="Return (100 * iBestUnitAIStrength) / iBestOtherStrength"];
+	 *
+	 *   Start -> ForEachUnit;
+	 *   ForEachUnit -> CheckAvailability;
+	 *   CheckAvailability -> CheckUnitAI [label="Yes"];
+	 *   CheckAvailability -> UpdateBestOther [label="No"];
+	 *   CheckUnitAI -> UpdateBestAI [label="Yes"];
+	 *   CheckUnitAI -> UpdateBestOther [label="No"];
+	 *   UpdateBestAI -> ForEachUnit;
+	 *   UpdateBestOther -> ForEachUnit;
+	 *   ForEachUnit -> ReturnValue [label="End loop"];
+	 * }
+	 * \enddot
+	 */
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
 
 	void AI_updateBonusValue();
@@ -561,6 +648,21 @@ protected:
 
 	static CvPlayerAI* m_aPlayers;
 
+	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same
+	// selection group is still the (sole) reason hasBusyUnit() is true across many
+	// consecutive engine ticks, something is stuck and not making progress on its own -
+	// see AI_unitUpdate(). Transient, not saved: resets naturally via group ID mismatch.
+	int m_iStuckBusyGroupID;
+	int m_iStuckBusyGroupTicks;
+
+	// How many times the watchdog above has had to force-resolve a given unit (keyed by head
+	// unit ID), across however many separate stuck episodes. A unit that keeps tripping the
+	// watchdog has some persistent, non-self-correcting problem (e.g. a permanently unreachable
+	// destination) rather than a one-off hiccup; after repeated recoveries it gets scrapped
+	// instead of indefinitely being reset only to get stuck again. Transient, not saved - count
+	// restarts from 0 after a reload.
+	std::map<int, int> m_stuckUnitRecoveryCounts;
+
 	int m_iPeaceWeight;
 	int m_iEspionageWeight;
 	int m_iAttackOddsChange;
@@ -580,6 +682,12 @@ protected:
 	bool m_bHasInquisitionTarget;
 
 	mutable TechTypes m_eBestResearchTarget; // Koshling - retain beeline target to minmimize need for recalculation
+
+	// C2C Optimization: Cached values to speed up AI_isFinancialTrouble check
+	mutable bool m_bFinancialTroubleCache;
+	mutable int m_iFinancialTroubleCacheTurn;
+	mutable int64_t m_iFinancialTroubleCacheGold;
+	mutable int m_iFinancialTroubleCacheNumCities;
 
 	mutable volatile int m_iAveragesCacheTurn;
 
@@ -624,6 +732,7 @@ protected:
 	bool m_bWasFinancialTrouble;
 	int m_iTurnLastProductionDirty;
 
+
 	void AI_doCounter();
 	void AI_doMilitary();
 
@@ -652,7 +761,7 @@ protected:
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 
 	void AI_convertUnitAITypesForCrush();
-	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData) const;
+	int AI_eventValue(EventTypes eEvent, const EventTriggeredData& kTriggeredData, std::vector<bool>* pvbVisited = NULL) const;
 
 	void AI_doEnemyUnitData();
 	void AI_invalidateCloseBordersAttitudeCache();

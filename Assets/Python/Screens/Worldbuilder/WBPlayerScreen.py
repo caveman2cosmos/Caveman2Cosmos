@@ -206,7 +206,6 @@ class WBPlayerScreen:
 				screen.setTableText("WBPlayerResearch", iColumn, iRow, "<font=3>" + sColor + sText + "</color></font>", ItemInfo.getButton(), WidgetTypes.WIDGET_PYTHON, 7871, iTechX, 1<<0)
 
 		if iCurrentTech > -1:
-			sText = u"%s: %d/%d%c" %(GC.getTechInfo(iCurrentTech).getDescription(), pTeam.getResearchProgress(iCurrentTech), pTeam.getResearchCost(iCurrentTech), GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
 			screen.setButtonGFC("CurrentResearchPlus", "", "", iX + iWidth - 50, iY - 30, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 			screen.setButtonGFC("CurrentResearchMinus", "", "", iX + iWidth - 25, iY - 30, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 		screen.setLabel("CurrentProgressText", "Background", "<font=3b>" + sCurrentTech + "</font>", 1<<2, iX + iWidth/2, iY - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -400,7 +399,6 @@ class WBPlayerScreen:
 				self.placeResearch()
 
 		elif inputClass.getFunctionName() == "WBPlayerReligions":
-			iReligion = inputClass.getData1()
 			pPlayer.setLastStateReligion(inputClass.getData1())
 			self.placeReligions()
 

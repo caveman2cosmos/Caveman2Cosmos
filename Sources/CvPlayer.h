@@ -19,6 +19,9 @@
 #include "CvUnitAI.h"
 #include "index_iterator_base.h"
 #include "LinkedList.h"
+#ifdef CVARMY_BREAKSAVE
+	#include "CvArmy.h"
+#endif
 
 class CvArea;
 class CvDiploParameters;
@@ -27,8 +30,20 @@ class CvPlot;
 class CvPopupInfo;
 class CvUnitSelectionCriteria;
 class CvUpgradeCache;
+class CvPlayerAI;
 
 #define	UNIT_BIRTHMARK_TEMP_UNIT	20000
+
+#define MAX_RESEARCH_RATE_VALUE 1999999999
+#define MAX_COMMERCE_RATE_VALUE 1999999999
+#define MAX_COMMERCE_VALUE 900000000
+#define MAX_RESEARCH_RATE_VALUE100 1999999999
+#define MAX_COMMERCE_RATE_VALUE100 1999999999
+#define MAX_COMMERCE_RATE_MODIFIER_VALUE 1999999999
+#define MAX_GOLD_VALUE 9999999999999999
+#define MAX_GOLD_PER_TURN_VALUE 1999999999
+#define MIN_TOL_FALSE_ACCUMULATE -9999
+#define MIN_TOL_FALSE_RESEARCH -9999
 
 //	Struct used to hold civic switch history
 typedef struct civcSwitchInstance
@@ -81,6 +96,8 @@ protected:
 	std::vector<int> m_idleCities;
 	std::vector<CvUnit*> m_commanders;
 	std::vector<CvPlot*> m_commandFieldPlots;
+	std::vector<CvUnit*> m_commodores;
+	std::vector<CvPlot*> m_commodoreFieldPlots;
 
 	void processHeritage(const HeritageTypes eType, const int iChange);
 	std::vector<HeritageTypes> m_myHeritage;
@@ -282,7 +299,7 @@ public:
 	DllExport bool canFound(int iX, int iY, bool bTestVisible = false) const;
 	void found(int iX, int iY, CvUnit* pUnit = NULL);
 
-	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false) const;
+	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bPropertySpawn = false, UnitTypes eUpgradeFromUnit = NO_UNIT) const;
 	bool canConstruct(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bAffliction = false, bool bExposed = false) const;
 	bool canConstructInternal(BuildingTypes eBuilding, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, TechTypes eIgnoreTechReq = NO_TECH, int* probabilityEverConstructable = NULL, bool bExposed = false) const;
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
@@ -291,6 +308,8 @@ public:
 	bool isProductionMaxedUnit(UnitTypes eUnit) const;
 	bool isProductionMaxedProject(ProjectTypes eProject) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
+	int getProductionNeededPreMerged(const UnitTypes eUnit) const;
+	bool isPreMergedUnitBuildEnabled() const;
 	int getProductionNeeded(BuildingTypes eBuilding) const;
 	int getProductionNeeded(ProjectTypes eProject) const;
 	int getProductionModifier(UnitTypes eUnit) const;
@@ -967,7 +986,7 @@ public:
 	void changeUnitCount(const UnitTypes eUnit, const int iChange);
 	int getUnitCountSM(const UnitTypes eUnit) const;
 	void changeUnitCountSM(const UnitTypes eUnit, const int iChange);
-	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0) const;
+	bool isUnitMaxedOut(const UnitTypes eUnit, const int iExtra = 0, const UnitTypes eExcludeUnit = NO_UNIT) const;
 	int getUnitMaking(const UnitTypes eUnit) const;
 	void changeUnitMaking(const UnitTypes eUnit, int iChange);
 	int getUnitCountPlusMaking(const UnitTypes eUnit) const;
@@ -1129,6 +1148,13 @@ public:
 	CvUnit* getUnit(int iID) const;
 	CvUnit* addUnit();
 	void deleteUnit(int iID);
+
+#ifdef CVARMY_BREAKSAVE
+	CvArmy* getArmy(int iArmyID) const;
+
+	void deleteArmy(int iArmyID);
+
+#endif
 
 	// selection groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvSelectionGroup, group_iterator, firstSelectionGroup, nextSelectionGroup);
@@ -1402,16 +1428,20 @@ public:
 	void listCommander(bool bAdd, CvUnit* unit);
 	std::vector<CvUnit*> getCommanders() const { return m_commanders; }
 
+	void listCommodore(bool bAdd, CvUnit* unit);
+    std::vector<CvUnit*> getCommodores() const { return m_commodores; }
+
 	void setCommandFieldPlot(bool bNewValue, CvPlot* aPlot);
 	std::vector<CvPlot*> getCommandFieldPlots() const { return m_commandFieldPlots; }
+
+	void setCommodoreFieldPlot(bool bNewValue, CvPlot* aPlot);
+	std::vector<CvPlot*> getCommodoreFieldPlots() const { return m_commodoreFieldPlots; }
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
 	void changeFreeSpecialistCount(SpecialistTypes eIndex, int iChange);
 
 	bool hasValidBuildings(TechTypes eTech) const;
-
-	void checkAIStrategy();
 
 	void setCityCommerceModifierDirty(CommerceTypes eCommerce);
 
@@ -1620,6 +1650,7 @@ protected:
 	int m_iSecondMergeSelection;
 	int m_iSplittingUnit;
 	int m_iAmbushingUnit;
+	int m_iAmbushingTargetUnit;
 	bool m_bAssassinate;
 
 	int m_iBuildingInflation;
@@ -1641,6 +1672,7 @@ protected:
 	int	m_zobristValue;
 
 	bool m_turnHadUIInteraction;
+
 
 public:
 	void verifyUnitStacksValid();
@@ -1986,6 +2018,10 @@ protected:
 	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
 	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
 
+#ifdef CVARMY_BREAKSAVE
+	FFreeListTrashArray<CvArmy>							  m_armies;
+#endif 
+
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;
 	CvEventMap m_mapEventCountdown;
@@ -2272,8 +2308,10 @@ public:
 	void setSplittingUnit(int iNewValue);
 
 	int getAmbushingUnit() const;
+	int getAmbushingTargetUnit() const;
 	bool isAssassinate() const;
 	void setAmbushingUnit(int iNewValue, bool bAssassinate = false);
+	void setAmbushingTargetUnit(int iNewValue, bool bAssassinate = true);
 
 	int getGreatGeneralPointsForType(const UnitTypes eUnit) const;
 	void setGreatGeneralPointsForType(const UnitTypes eUnit, const int iValue);

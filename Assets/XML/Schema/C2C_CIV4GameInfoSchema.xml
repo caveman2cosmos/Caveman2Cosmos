@@ -117,7 +117,7 @@
 	<ElementType name="iInsidiousness" content="textOnly" dt:type="int"/>
 	<ElementType name="iInvestigation" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreedomFighterChange" content="textOnly" dt:type="int"/>
-	<ElementType name="iBeelineStingsTechCostModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iCuttingEdgeCutsTechCostModifier" content="textOnly" dt:type="int"/>
 	<!--Booleans-->
 	<ElementType name="bAllReligionsActive" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBansNonStateReligions" content="textOnly" dt:type="boolean"/>
@@ -1346,6 +1346,7 @@
 	<ElementType name="ImprovementHappinessChanges" content="eltOnly">
 		<element type="ImprovementHappinessChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+    <ElementType name="iHealthPercentPerPopulation" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="ImprovementHealthPercentChange" content="eltOnly">
 		<element type="ImprovementType"/>
@@ -1682,7 +1683,7 @@
 		<element type="iAnarchyPercent" minOccurs="0"/>
 		<element type="iEventChancePerTurn" minOccurs="0"/>
 		<element type="iSoundtrackSpace" minOccurs="0"/>
-		<element type="iBeelineStingsTechCostModifier" minOccurs="0"/>
+		<element type="iCuttingEdgeCutsTechCostModifier" minOccurs="0"/>
 		<element type="bFirstSoundtrackFirst" minOccurs="0"/>
 		<element type="EraInfoSoundtracks" minOccurs="0"/>
 		<element type="CitySoundscapes" minOccurs="0"/>

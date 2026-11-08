@@ -101,8 +101,8 @@ def setXMLOptionsfromIniFile():
 
 def resetOptions():
 	import BugOptions
-	ANewDawnoptions = BugOptions.getOptions("DiplomacySettings").options
-	for option in ANewDawnoptions:
+	ANewDawnOptions = BugOptions.getOptions("DiplomacySettings").options
+	for option in ANewDawnOptions:
 		option.resetValue()
 	setXMLOptionsfromIniFile()
 	BugCore.game.RoMSettings.setRoMReset(False)

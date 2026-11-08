@@ -7,6 +7,8 @@ class DebugScreen:
 
 	def __init__(self, screenId):
 		self.screenId = screenId
+		self.testCodes = ""
+		self.testCodeLog = ""
 
 	def getScreen(self):
 		return CyGInterfaceScreen("DebugScreen", self.screenId)
@@ -181,7 +183,7 @@ class DebugScreen:
 				screen.show("DS_Tab" + str(self.iTab))
 				screen.hide("DS_Tab" + str(ID))
 				screen.show("DS_Col_Tab" + str(ID))
-				self.deleteAllWidgets(screen, aName)
+				self.deleteAllWidgets(screen, self.getName)
 				self.initTab(screen, ID)
 
 			elif self.iTab == 0:
@@ -189,13 +191,13 @@ class DebugScreen:
 				if NAME == "TestCode":
 					self.runTestCode(ID)
 
-				elif "TestCodeLogExit":
+				elif NAME == "TestCodeLogExit":
 					self.closeLog(screen)
 
 	def update(self, fDelta): return
 
 	def onClose(self):
 		self.getScreen().setDying(True)
-		del self.tooltip, self.eWidGen, self.nWidgetCount, self.aFontList, self.iTab, self.tabList, \
+		del self.tooltip, self.testCodes, self.eWidGen, self.nWidgetCount, self.aFontList, self.iTab, self.tabList, \
 			self.xRes, self.yRes, self.H_EDGE_PANEL, self.Y_TOP_PAGE, self.H_PAGE, self.Y_BOT_TEXT, \
 			self.iTestCodeColumns, self.hTestBtn, self.wTestBtn, self.yTestBtn, self.testCodeScroll, self.iTestNum, self.testCodeLog

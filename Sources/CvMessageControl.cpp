@@ -298,6 +298,14 @@ void CvMessageControl::sendMergeUnit(int iUnitID)
 	}
 }
 
+void CvMessageControl::sendMergeAll(int iHeadUnitID)
+{
+	if (NO_PLAYER != GC.getGame().getActivePlayer())
+	{
+		gDLL->sendMessageData(new CvNetMergeAll(GC.getGame().getActivePlayer(), iHeadUnitID));
+	}
+}
+
 void CvMessageControl::sendSplitUnit(bool bConfirm)
 {
 	if (NO_PLAYER != GC.getGame().getActivePlayer())

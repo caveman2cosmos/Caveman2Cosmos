@@ -34,7 +34,7 @@ class CvVictoryMovieScreen:
 		screen = CyGInterfaceScreen( "VictoryMovieScreen", CvScreenEnums.VICTORY_MOVIE_SCREEN )
 		screen.setDimensions(screen.centerX(0), screen.centerY(0), -1, -1)
 		screen.setRenderInterfaceOnly(True)
-		screen.enableWorldSounds( false )
+		screen.enableWorldSounds( False )
 		screen.addDDSGFC("VictoryMovieScreenBackground", ArtFileMgr.getInterfaceArtInfo("SCREEN_BG_OPAQUE").getPath(), 0, 0, -1, -1, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.addPanel( "VictoryMovieTopPanel", u"", u"", False, False, self.X_SCREEN, self.Y_SCREEN, self.W_SCREEN, self.BORDER_HEIGHT, PanelStyles.PANEL_STYLE_TOPBAR )
 		screen.addPanel( "VictoryMovieBottomPanel", u"", u"", False, False, self.X_SCREEN, self.H_SCREEN-(self.BORDER_HEIGHT+3), self.W_SCREEN, self.BORDER_HEIGHT+3, PanelStyles.PANEL_STYLE_BOTTOMBAR )
@@ -47,7 +47,7 @@ class CvVictoryMovieScreen:
 			self.X_EXIT, self.Y_EXIT, 400, 100, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 
 		# Play the movie
-		movieFilePath = CyArtFileMgr().getMovieArtInfo(movieArtDef).getPath()
+		movieFilePath = ArtFileMgr.getMovieArtInfo(movieArtDef).getPath()
 		screen.playMovie( movieFilePath, -1, -1, -1, -1, 0)
 
 	def closeScreen(self):
@@ -60,9 +60,9 @@ class CvVictoryMovieScreen:
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
-		screen = CyGInterfaceScreen( "VictoryMovieScreen", CvScreenEnums.VICTORY_MOVIE_SCREEN )
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_MOVIE_DONE or inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED):
-			return self.hideScreen()
+			self.hideScreen()
+			return 1
 		return 0
 
 	def update(self, fDelta):

@@ -45,7 +45,6 @@ class ANewDawnSettings:
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MAX_BOMBARD_DEFENSE):
 				ANewDawnOpt.setMaxBombardDefense(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MIN_CITY_DISTANCE):
-				print ("WWWWWWWWWWWW", data2, data3)
 				ANewDawnOpt.setMinCityDistance(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_CANNOT_CLAIM_OCEAN):
 				ANewDawnOpt.setCanNotClaimOcean(data3)
@@ -73,10 +72,28 @@ class ANewDawnSettings:
 				ANewDawnOpt.setMultipleReligionSpread(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TERRAIN_DAMAGE):
 				ANewDawnOpt.setTerrainDamage(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY):
+				ANewDawnOpt.setFogWarDecay(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS):
+				ANewDawnOpt.setFogWarNbTurns(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH):
+				ANewDawnOpt.setMinorCivTech(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL):
+				ANewDawnOpt.setAssassinateMinimal(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE):
+				ANewDawnOpt.setAssassinateChoice(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NO_AUTO_CORPORATION_FOUNDING):
 				ANewDawnOpt.setNoAutoCorporationFounding(data3)
 			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY):
 				ANewDawnOpt.setFlexibleDifficultyAI(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR):
+				ANewDawnOpt.setHistoricalAccurateCalendar(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT):
+				ANewDawnOpt.setNextTraitCultureReqPercent(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT):
+				ANewDawnOpt.setTechUpscaledCostsPercent(data3)
+			elif data2 == int(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT):
+				ANewDawnOpt.setExpUpscaledBuildingAndUnitCostsPercent(data3)
 		#Change Difficulty
 		elif protocol == DIFFICULTY_EVENT_ID:
 			pPlayer = GC.getPlayer(data1)
@@ -216,7 +233,7 @@ def updateAliveCivsOption():
 		CyPlayer = GC.getPlayer(iPlayer)
 		if CyPlayer.isHuman() and CyPlayer.isAlive():
 			descs.append(GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getShortDescription())
-	sort(descs)
+	descs.sort()
 	aliveCivsOption.setValues(descs)
 
 def changedCurrentDifficulty(option, value):
@@ -267,13 +284,56 @@ def changedNoAutoCorporationFounding(option, value):
 def changedWarPrizes(option, value):
 	GC.setDefineINT("WAR_PRIZES", int(value))
 
+def changedNationalUnitLimitInitial(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", int(value))
+
+def changedNationalUnitLimitPerEra(option, value):
+	GC.setDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", int(value))
+
+def changedNextTraitCultureReqPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_NEXT_TRAIT_CULTURE_REQ_PERCENT), int(value), 0)
+
+def changedTechUpscaledCostsPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT), int(value), 0)
+
+def changedExpUpscaledBuildingAndUnitCostsPercent(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_EXP_UPSCALED_BUILDING_AND_UNIT_COSTS_PERCENT), int(value), 0)
+
 def changedFlexibleDifficultyAI(option, value):
 	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY, value)
 	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY), int(value), 0)
 
+def changedHistoricalAccurateCalendar(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR), int(value), 0)
+
 def changedInfrastructureIgnoresImprovements(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_INFRASTRUCTURE_IGNORES_IMPROVEMENTS), int(value), 0)
+
+def changedFogWarDecay(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_DECAY), int(value), 0)
+
+def changedFogWarNbTurns(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_FOGWAR_NBTURNS), int(value), 0)
+
+def changedMinorCivTech(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_MINORCIV_TECH), int(value), 0)
+
+def changedAssassinateMinimal(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_MINIMAL), int(value), 0)
+
+def changedAssassinateChoice(option, value):
+	GC.getGame().setModderGameOption(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE, value)
+	CyMessageControl().sendModNetMessage(MODDERGAMEOPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderGameOptionTypes.MODDERGAMEOPTION_ASSASSINATE_CHOICE), int(value), 0)
+
 
 
 def setXMLOptionsfromIniFile():
@@ -313,16 +373,25 @@ def setXMLOptionsfromIniFile():
 	changedReforestation(ANewDawnOpt, ANewDawnOpt.isReforestation())
 	changedSeaTunnels(ANewDawnOpt, ANewDawnOpt.isSeaTunnels())
 	changedWarPrizes(ANewDawnOpt, ANewDawnOpt.isWarPrizes())
+	changedNextTraitCultureReqPercent(ANewDawnOpt, ANewDawnOpt.getNextTraitCultureReqPercent())
+	changedTechUpscaledCostsPercent(ANewDawnOpt, ANewDawnOpt.getTechUpscaledCostsPercent())
+	changedExpUpscaledBuildingAndUnitCostsPercent(ANewDawnOpt, ANewDawnOpt.getExpUpscaledBuildingAndUnitCostsPercent())
 	changedFlexibleDifficultyAI(ANewDawnOpt, ANewDawnOpt.isFlexibleDifficultyAI())
+	changedHistoricalAccurateCalendar(ANewDawnOpt, ANewDawnOpt.isHistoricalAccurateCalendar())
 	changedInfrastructureIgnoresImprovements(ANewDawnOpt, ANewDawnOpt.isInfrastructureIgnoresImprovements())
-
+	changedFogWarDecay(ANewDawnOpt, ANewDawnOpt.isFogWarDecay())
+	changedFogWarNbTurns(ANewDawnOpt, ANewDawnOpt.getFogWarNbTurns())
+	changedMinorCivTech(ANewDawnOpt, ANewDawnOpt.getMinorCivTech())
+	changedAssassinateMinimal(ANewDawnOpt, ANewDawnOpt.isAssassinateMinimal())
+	changedAssassinateChoice(ANewDawnOpt, ANewDawnOpt.isAssassinateChoice())
+		
 	ANewDawnOpt.setPlayerColor(0)
 	ANewDawnOpt.setCurrentDifficulty(0)
 
 def resetOptions():
 	import BugOptions
-	ANewDawnoptions = BugOptions.getOptions("RoMSettings").options
-	for i in range(len(ANewDawnoptions)):
-		ANewDawnoptions[i].resetValue()
+	ANewDawnOptions = BugOptions.getOptions("RoMSettings").options
+	for i in range(len(ANewDawnOptions)):
+		ANewDawnOptions[i].resetValue()
 	setXMLOptionsfromIniFile()
 	ANewDawnOpt.setRoMReset(False)

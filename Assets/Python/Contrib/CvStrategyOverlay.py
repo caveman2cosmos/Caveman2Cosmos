@@ -249,8 +249,8 @@ class DotMapLayer(StrategyLayer):
 		self.bAlt = not self.bAlt
 
 	def reset(self):
+		super(DotMapLayer, self).reset()
 		self.cities = {}
-		self.dirty = False
 
 	def read(self):
 		data = SdToolKit.sdGetGlobal("StrategyOverlay", "CityDataDict")

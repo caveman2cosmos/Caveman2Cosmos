@@ -567,6 +567,26 @@ class PediaBuilding:
 			if iListLength > 1:
 				screen.attachLabel(panelName, "", szBracketR)
 			aList2 = []
+		# Heritage Req
+		szChild = PF + "HERITAGE"
+		for iPrereqOrHeritage in CvTheBuildingInfo.getPrereqOrHeritage():
+			aList2.append(iPrereqOrHeritage)
+		if aList2:
+			if bPlus:
+				screen.attachLabel(panelName, "", szAnd)
+			else:
+				bPlus = True
+			iListLength = len(aList2)
+			if  iListLength > 1:
+				screen.attachLabel(panelName, "", szBracketL)
+			for i in range(iListLength):
+				ID = aList2[i]
+				if i != 0:
+					screen.attachLabel(panelName, "", szOr)
+				screen.attachImageButton(panelName, szChild + str(ID), GC.getHeritageInfo(ID).getButton(), enumGBS, eWidGen, 1, 1, False)
+			if iListLength > 1:
+				screen.attachLabel(panelName, "", szBracketR)
+			aList2 = []
 		# Feature Req
 		szChild = PF + "FEATURE"
 		for i in range(GC.getNumFeatureInfos()):

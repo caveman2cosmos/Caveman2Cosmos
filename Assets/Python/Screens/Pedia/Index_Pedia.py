@@ -186,7 +186,7 @@ class Index:
 					screen.setTextAt("Letter|" + szLetter, "IndexLetters", szFontEdge + szA, 1<<2, iX, 4, 0, eFontTitle, eWidGen, iList, i + iLetter)
 					iLetter += 1
 					iX += dX
-				do(LIST[iList], BUTTON, WIDGET, iType - iOffset, 0, 1<<0)
+				do(LIST[iList], BUTTON, WIDGET, iType + iOffset, 0, 1<<0)
 				i += 1
 			nRowList.append(i + iLetter)
 			for i in range(iList + 1):

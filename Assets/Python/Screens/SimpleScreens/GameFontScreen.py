@@ -81,13 +81,13 @@ def GameFontScreen():
 
 	iRow = -1
 	iID = 8482
-	for j in xrange(650): # Increase this range when needed, when it no longer displays all icons in GameFont.tga due to a content expansion in that atlas texture.
+	for _ in xrange(650): # Increase this range when needed, when it no longer displays all icons in GameFont.tga due to a content expansion in that atlas texture.
 		iRow += 1
 		iID += 1
 		screen.appendTableRow(TABLE)
 		screen.setTableText(TABLE, 0, iRow , str(iID), "", eWidGen, 1, 1, 1<<0)
 		screen.setTableText(TABLE, 1, iRow , unichr(iID), "", eWidGen, 1, 1, 1<<0)
-		screen.setTableText(TABLE, 2, iRow , u"<font=4>%c" % iID, "", eWidGen, 1, 1, 1<<0)
+		screen.setTableText(TABLE, 2, iRow , u"<font=4>%c</font>" % iID, "", eWidGen, 1, 1, 1<<0)
 
 		if iID >= iHappy and iID <= iRandom:
 			screen.setTableText(TABLE, 4, iRow , aList0[iID - iHappy], "", eWidGen, 1, 2, 1<<0)
@@ -97,16 +97,18 @@ def GameFontScreen():
 		while i < iMax:
 			if aList1[i][0] == iID:
 				info = aList1.pop(i)[1]
+				iMax -= 1
 				if bFound:
 					screen.appendTableRow(TABLE)
 					iRow += 1
+					screen.setTableText(TABLE, 2, iRow, u"<font=4>%c</font>" % iID, "", eWidGen, 1, 1, 1<<0)
 				bFound = True
 				if info == szBonusClass:
 					screen.setTableText(TABLE, 4, iRow, szBonusClass, "", eWidGen, 1, 2, 1<<0)
 				else:
 					screen.setTableText(TABLE, 3, iRow, "", info.getButton(), eWidGen, 1, 2, 1<<0)
 					screen.setTableText(TABLE, 4, iRow, info.getType(), "", eWidGen, 1, 2, 1<<0)
-				iMax -= 1
-			i += 1
+			else:
+				i += 1
 
 	screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)

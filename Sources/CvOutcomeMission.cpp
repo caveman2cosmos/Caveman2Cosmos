@@ -76,8 +76,43 @@ void callSetPayer(const CvGameObject* pObject, const CvGameObject** ppPayer)
 bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 {
 	PROFILE_EXTRA_FUNC();
-	//if (!bTestVisible)
-	//{
+
+	// Beta: Nomad Band's gather/defend/research/build missions only usable with Nomadic Start enabled.
+	if (!GC.getGame().isOption(GAMEOPTION_NOMADIC_START))
+	{
+		static const char* aszNomadMissions[] =
+		{
+			"MISSION_NOMAD_DEFENDER",
+			"MISSION_NOMAD_RESEARCH",
+			"MISSION_NOMAD_RECON",
+			"MISSION_NOMAD_BUILD_FORAGE_CAMP",
+			"MISSION_NOMAD_BUILD_HUNTING_CAMP",
+			"MISSION_NOMAD_BUILD_LORE_CIRCLE",
+			"MISSION_NOMAD_BUILD_CAMPFIRE",
+			"MISSION_NOMAD_BUILD_SHELTER",
+			"MISSION_NOMAD_BUILD_TRADING_POST",
+			"MISSION_NOMAD_BUILD_TRAPS",
+			"MISSION_NOMAD_BUILD_DRUM_CIRCLE",
+			"MISSION_NOMAD_BUILD_RITUAL_SITE",
+			"MISSION_NOMAD_BUILD_COOKING_PIT",
+		};
+		static std::vector<MissionTypes> aeNomadMissions;
+		if (aeNomadMissions.empty())
+		{
+			for (size_t i = 0; i < sizeof(aszNomadMissions) / sizeof(aszNomadMissions[0]); ++i)
+			{
+				aeNomadMissions.push_back((MissionTypes)GC.getInfoTypeForString(aszNomadMissions[i], true));
+			}
+		}
+
+		if (algo::any_of_equal(aeNomadMissions, m_eMission))
+		{
+			return false;
+		}
+	}
+
+	if (!bTestVisible)
+	{
 		if (m_iCost)
 		{
 			if (GET_PLAYER(pUnit->getOwner()).getGold() < m_iCost->evaluate(pUnit->getGameObject()))
@@ -89,7 +124,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 		if (m_pPlotCondition)
 			if (!m_pPlotCondition->evaluate(pUnit->plot()->getGameObject()))
 				return false;
-	//}
+	}
 
 	if (m_pUnitCondition)
 		if (!m_pUnitCondition->evaluate(pUnit->getGameObject()))
@@ -100,8 +135,8 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 		return false;
 	}
 
-	//if (!bTestVisible)
-	//{
+	if (!bTestVisible)
+	{
 		if (!getPropertyCost()->isEmpty())
 		{
 			const CvGameObject* pPayer = NULL;
@@ -124,7 +159,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 				return false;
 			}
 		}
-	//}
+	}
 
 	return true;
 }
@@ -134,7 +169,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 	if (!m_PropertyCost.isEmpty())
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(L"Cost: ");
+		szBuffer.append(gDLL->getText("TXT_KEY_COST"));
 		m_PropertyCost.buildCompactChangesString(szBuffer);
 	}
 
@@ -145,7 +180,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 			CvWString szTempBuffer;
 
 			szBuffer.append(NEWLINE);
-			szBuffer.append(L"Cost: ");
+			szBuffer.append(gDLL->getText("TXT_KEY_COST"));
 			m_iCost->buildDisplayString(szBuffer);
 		}
 	}

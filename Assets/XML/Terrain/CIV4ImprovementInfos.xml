@@ -73,7 +73,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -83,7 +83,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -93,7 +93,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -103,7 +103,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -113,7 +113,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -123,7 +123,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -133,7 +133,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -143,7 +143,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -153,7 +153,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -163,7 +163,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -173,7 +173,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -233,7 +233,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -244,7 +244,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -254,7 +254,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -263,7 +263,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -272,7 +272,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -282,7 +282,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -290,7 +290,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -300,7 +300,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -311,7 +311,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -320,7 +320,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -332,7 +332,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -379,7 +379,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -390,7 +390,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -400,7 +400,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -409,7 +409,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -418,7 +418,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -427,7 +427,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -435,7 +435,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -444,7 +444,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -455,7 +455,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -464,7 +464,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -476,7 +476,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -500,7 +500,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -510,7 +510,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -519,7 +519,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -527,7 +527,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -538,7 +538,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -548,7 +548,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -558,7 +558,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -567,7 +567,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -616,7 +616,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -625,7 +625,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -634,7 +634,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -644,7 +644,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -654,7 +654,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -664,7 +664,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -674,7 +674,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -682,7 +682,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -705,7 +705,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -713,7 +713,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -722,6 +722,8 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -731,7 +733,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -739,6 +741,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -747,7 +750,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -755,6 +758,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -763,7 +767,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -771,7 +775,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -779,7 +783,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -787,7 +791,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -797,7 +801,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -805,7 +809,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -813,7 +817,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -821,7 +825,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -829,7 +833,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -837,7 +841,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -845,7 +849,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -853,7 +857,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -886,7 +890,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -955,7 +959,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -965,7 +969,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -977,7 +981,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -987,7 +991,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -997,7 +1001,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1007,7 +1011,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1015,7 +1019,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1025,7 +1029,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1037,7 +1041,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1047,7 +1051,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1057,7 +1061,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1067,7 +1071,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1075,7 +1079,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1087,7 +1091,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1095,7 +1099,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1122,7 +1126,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1130,7 +1134,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1138,7 +1142,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1148,7 +1152,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1156,7 +1160,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1164,7 +1168,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1172,7 +1176,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1180,7 +1184,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1188,7 +1192,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1196,7 +1200,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1204,7 +1208,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1212,7 +1216,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1220,7 +1224,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1228,7 +1232,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1236,7 +1240,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1268,13 +1272,17 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>40</iPillageGold>
+			<bCarriesIrrigation>1</bCarriesIrrigation>
+			<IrrigatedYieldChange>
+				<iYield>1</iYield>
+			</IrrigatedYieldChange>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_APPLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1284,7 +1292,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1296,7 +1304,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1306,7 +1314,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1316,7 +1324,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1326,7 +1334,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1334,7 +1342,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1344,7 +1352,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1356,7 +1364,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1366,7 +1374,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1376,7 +1384,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1384,7 +1392,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
@@ -1394,7 +1402,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
@@ -1406,7 +1414,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1414,7 +1422,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1485,7 +1493,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1515,7 +1523,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1542,6 +1550,12 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
+			<bCarriesIrrigation>1</bCarriesIrrigation>
+			<IrrigatedYieldChange>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</IrrigatedYieldChange>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
@@ -1555,7 +1569,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1565,7 +1579,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1574,7 +1588,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -1585,7 +1599,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1595,7 +1609,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1605,7 +1619,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1615,7 +1629,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1625,7 +1639,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1634,7 +1648,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -1645,7 +1659,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1655,7 +1669,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1665,7 +1679,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1675,7 +1689,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1685,7 +1699,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1695,7 +1709,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1705,7 +1719,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1715,7 +1729,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1725,7 +1739,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1735,7 +1749,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1815,7 +1829,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -1826,7 +1840,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1836,7 +1850,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1846,7 +1860,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1856,7 +1870,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1866,7 +1880,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1876,7 +1890,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1886,7 +1900,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1896,7 +1910,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1906,7 +1920,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1916,7 +1930,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1926,7 +1940,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1936,7 +1950,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1946,7 +1960,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1956,7 +1970,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1966,7 +1980,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1976,7 +1990,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1986,7 +2000,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -1995,7 +2009,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -2006,7 +2020,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -2034,7 +2048,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2044,7 +2058,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2054,7 +2068,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2064,7 +2078,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2074,7 +2088,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2084,7 +2098,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2094,7 +2108,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2102,7 +2116,9 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2112,7 +2128,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2122,7 +2138,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2132,7 +2148,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2142,7 +2158,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2152,7 +2168,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2162,7 +2178,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2172,7 +2188,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2182,7 +2198,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2192,7 +2208,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2202,7 +2218,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2211,7 +2227,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -2222,7 +2238,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -2254,7 +2270,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -2316,7 +2332,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -2393,7 +2409,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -2425,7 +2441,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
@@ -2569,7 +2585,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -2580,7 +2596,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -2639,7 +2655,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TAR_GATHERER</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ADHESIVES</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
@@ -2699,7 +2715,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>4</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iAdvancedStartCost>48</iAdvancedStartCost>
@@ -2954,7 +2970,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -3073,7 +3089,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3084,7 +3100,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -3149,7 +3165,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -3160,7 +3176,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -3171,7 +3187,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3180,7 +3196,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3189,7 +3205,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
@@ -3200,7 +3216,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -3211,7 +3227,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
@@ -3222,7 +3238,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -3233,7 +3249,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -3246,7 +3262,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3255,7 +3271,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
@@ -3266,7 +3282,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
@@ -3279,7 +3295,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3290,7 +3306,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3301,7 +3317,7 @@
 					<YieldChanges>
 						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3312,7 +3328,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3321,7 +3337,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
@@ -3332,7 +3348,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
@@ -3345,7 +3361,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3356,7 +3372,7 @@
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3367,7 +3383,7 @@
 					<YieldChanges>
 						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3376,7 +3392,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
@@ -3387,7 +3403,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
@@ -3398,7 +3414,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
@@ -3409,7 +3425,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
@@ -3420,7 +3436,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3431,7 +3447,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3440,7 +3456,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3450,7 +3466,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3461,7 +3477,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3472,7 +3488,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3483,7 +3499,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3494,7 +3510,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3504,7 +3520,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3516,7 +3532,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3527,7 +3543,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>11</iYieldChange>
+						<iYieldChange>13</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3537,7 +3553,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3549,7 +3565,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>11</iYieldChange>
+						<iYieldChange>13</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3560,7 +3576,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3571,7 +3587,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3582,7 +3598,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3593,7 +3609,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>11</iYieldChange>
+						<iYieldChange>13</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3604,7 +3620,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>11</iYieldChange>
+						<iYieldChange>13</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3615,7 +3631,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3626,7 +3642,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>11</iYieldChange>
+						<iYieldChange>13</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3636,7 +3652,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3648,7 +3664,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3658,7 +3674,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3669,7 +3685,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3680,7 +3696,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3691,7 +3707,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3702,7 +3718,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3714,7 +3730,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -3828,7 +3844,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -3838,7 +3854,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3847,7 +3863,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3856,7 +3872,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -3865,7 +3881,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
@@ -3876,7 +3892,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -3887,7 +3903,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -3898,7 +3914,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -4069,7 +4085,7 @@
 			</YieldChanges>
 			<iAdvancedStartCost>5</iAdvancedStartCost>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
+<!--			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>-->
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
@@ -4105,7 +4121,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4113,7 +4129,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4121,7 +4137,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4129,7 +4145,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4137,7 +4153,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4145,7 +4161,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4153,7 +4169,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4161,7 +4177,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -4199,7 +4215,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4209,7 +4225,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4220,7 +4236,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4232,7 +4248,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4242,7 +4258,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4253,7 +4269,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4264,7 +4280,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4274,7 +4290,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4285,7 +4301,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4297,7 +4313,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4308,7 +4324,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4319,7 +4335,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4330,7 +4346,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4340,7 +4356,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4351,7 +4367,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4363,7 +4379,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4373,7 +4389,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4384,7 +4400,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4395,7 +4411,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4406,7 +4422,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4417,7 +4433,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -4552,7 +4568,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4563,7 +4579,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4573,7 +4589,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4584,8 +4600,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4595,8 +4610,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4607,7 +4621,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4617,8 +4631,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4628,8 +4641,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4639,7 +4651,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4649,7 +4661,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4659,7 +4671,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4670,7 +4682,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4681,7 +4693,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4692,7 +4704,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4703,7 +4715,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4714,7 +4726,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4725,7 +4737,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -4735,7 +4747,7 @@
 					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
+						<iYield>2</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -4769,7 +4781,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4780,7 +4792,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4791,7 +4803,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4804,7 +4816,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4815,7 +4827,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4827,7 +4839,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4839,7 +4851,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4850,7 +4862,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4862,7 +4874,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4879,7 +4891,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4891,7 +4903,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4903,7 +4915,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4915,7 +4927,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>10</iYieldChange>
+						<iYieldChange>12</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4927,7 +4939,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4938,7 +4950,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4950,7 +4962,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4963,7 +4975,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -4974,7 +4986,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4986,7 +4998,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -4999,7 +5011,7 @@
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5011,7 +5023,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5023,7 +5035,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5034,7 +5046,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5047,7 +5059,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5059,7 +5071,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5071,7 +5083,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -5151,7 +5163,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5162,7 +5174,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5173,7 +5185,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5186,7 +5198,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5197,7 +5209,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5209,7 +5221,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5221,7 +5233,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5232,7 +5244,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5244,7 +5256,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5261,7 +5273,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5273,7 +5285,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5285,7 +5297,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5297,7 +5309,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5309,7 +5321,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5320,7 +5332,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5332,7 +5344,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5345,7 +5357,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5357,7 +5369,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -5468,7 +5480,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5479,7 +5491,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5490,7 +5502,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5503,7 +5515,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5514,7 +5526,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5526,7 +5538,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5538,7 +5550,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5549,7 +5561,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5561,7 +5573,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5578,7 +5590,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5590,7 +5602,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5602,7 +5614,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5614,7 +5626,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5626,7 +5638,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5637,7 +5649,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5649,7 +5661,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5662,7 +5674,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5674,7 +5686,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -5820,7 +5832,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5831,7 +5843,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5842,7 +5854,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5855,7 +5867,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5866,7 +5878,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5878,7 +5890,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5890,7 +5902,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5901,7 +5913,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5913,7 +5925,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -5930,7 +5942,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5942,7 +5954,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5954,7 +5966,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5966,7 +5978,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-3</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5978,7 +5990,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -5989,7 +6001,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6002,7 +6014,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6014,7 +6026,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -6232,7 +6244,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6244,7 +6256,7 @@
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6256,7 +6268,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6267,7 +6279,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6279,7 +6291,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6289,7 +6301,7 @@
 					<iDiscoverRand>500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6302,7 +6314,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6314,7 +6326,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6461,7 +6473,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6470,7 +6482,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6479,7 +6491,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6488,7 +6500,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6498,7 +6510,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6508,7 +6520,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -6553,7 +6565,17 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>-1</iYieldChange>
+						<iYieldChange>4</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TIN_ORE</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
+						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6563,7 +6585,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6572,7 +6594,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6583,7 +6605,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6592,7 +6614,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6601,7 +6623,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6610,7 +6632,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6619,7 +6641,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6629,7 +6651,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6639,7 +6661,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -6722,7 +6744,7 @@
 					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>7</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6733,7 +6755,7 @@
 					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>8</iYieldChange>
+						<iYieldChange>10</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6745,7 +6767,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>6</iYieldChange>
-						<iYieldChange>4</iYieldChange>
+						<iYieldChange>6</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6755,7 +6777,7 @@
 					<iDiscoverRand>625</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>9</iYieldChange>
+						<iYieldChange>11</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6905,7 +6927,7 @@
 					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>5</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6916,7 +6938,7 @@
 					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>6</iYieldChange>
+						<iYieldChange>8</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -6936,7 +6958,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>5</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -6950,7 +6972,7 @@
 					<iDiscoverRand>1250</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>7</iYieldChange>
+						<iYieldChange>9</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7086,7 +7108,7 @@
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7097,7 +7119,7 @@
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7117,7 +7139,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>4</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7131,7 +7153,7 @@
 					<iDiscoverRand>2500</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>5</iYieldChange>
+						<iYieldChange>7</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7289,7 +7311,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7300,7 +7322,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7320,7 +7342,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7334,7 +7356,7 @@
 					<iDiscoverRand>5000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7385,7 +7407,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<PrereqTech>TECH_WOODWORKING</PrereqTech>
+			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<bRequiresFeature>1</bRequiresFeature>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
@@ -7429,7 +7451,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -7443,7 +7465,7 @@
 					<iDiscoverRand>10000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -7456,14 +7478,14 @@
 			<Type>IMPROVEMENT_SUBURBS</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SUBURBS</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SUBURBS_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SUBURBS</ArtDefineTag>
 			<PrereqNatureYields>
 				<iYield>1</iYield>
 			</PrereqNatureYields>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
-				<iYieldChange>13</iYieldChange>
+				<iYieldChange>14</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
@@ -7629,7 +7651,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>4</iYieldChange>
-				<iYieldChange>10</iYieldChange>
+				<iYieldChange>11</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
@@ -7777,7 +7799,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
-				<iYieldChange>8</iYieldChange>
+				<iYieldChange>9</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iHealthPercent>-50</iHealthPercent>
@@ -7916,7 +7938,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>6</iYieldChange>
+				<iYieldChange>7</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
@@ -7972,7 +7994,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
@@ -8014,7 +8036,7 @@
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-3</iYieldChange>
-				<iYieldChange>11</iYieldChange>
+				<iYieldChange>12</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -8191,7 +8213,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>9</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -8354,7 +8376,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WORKSHOP</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>4</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
@@ -8514,7 +8536,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HYDRO_DAM</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>9</iYieldChange>
+				<iYieldChange>10</iYieldChange>
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
@@ -8551,7 +8573,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WATERMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WATERMILL</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -8597,7 +8619,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>7</iYieldChange>
-				<iYieldChange>6</iYieldChange>
+				<iYieldChange>7</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_WINDMILL</ImprovementPillage>
@@ -8688,7 +8710,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WINDMILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINDMILL</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
@@ -8734,7 +8756,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<bPeakMakesValid>1</bPeakMakesValid>
 			<bPeakImprovement>1</bPeakImprovement>
@@ -8762,7 +8784,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -8851,7 +8873,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<RiverSideYieldChange>
 				<iYield>0</iYield>
@@ -8994,7 +9016,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_PEAT_CUTTER</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
@@ -9015,7 +9037,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_THATCH_CUTTER</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9080,7 +9102,7 @@
 			<YieldChanges>
 				<iYieldChange>-1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_STARGAZING</PrereqTech>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
@@ -9179,7 +9201,7 @@
 			<bPeakMakesValid>1</bPeakMakesValid>
 			<bPeakImprovement>1</bPeakImprovement>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>6</iYieldChange>
 			</YieldChanges>
@@ -9201,7 +9223,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_JUNGLE_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_JUNGLE_CAMP</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<RiverSideYieldChange>
@@ -9368,7 +9390,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_SEED_CAMP</ImprovementPillage>
@@ -9503,7 +9525,7 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_WETLANDS_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WETLANDS_CAMP</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -10264,9 +10286,9 @@
 			</FeatureMakesValids>
 			<ImprovementPillage>IMPROVEMENT_FORTIFIED_CAVE</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
-			<iCulture>3</iCulture>
+			<iCulture>5</iCulture>
 			<iCultureRange>1</iCultureRange>
-			<iUniqueRange>2</iUniqueRange>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
@@ -10292,10 +10314,11 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
-			<iCulture>2</iCulture>
+			<iCulture>5</iCulture>
 			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
-			<iUniqueRange>2</iUniqueRange>
+			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
+            <iCultureRange>1</iCultureRange>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 			<!-- Trade provider technically necessary otherwise players would need to build palisades on caves tiles w/resources -->
@@ -10481,7 +10504,453 @@
 			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 		</ImprovementInfo>
+
+        <!-- Resource Outpost / Minor Settlement -->
+        <ImprovementInfo>
+            <Type>IMPROVEMENT_GATHERING_CAMP</Type>
+            <Description>TXT_KEY_IMPROVEMENT_GATHERING_CAMP</Description>
+            <Civilopedia>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Civilopedia>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_SEED_CAMP</ArtDefineTag>
+            <PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
+            <iAdvancedStartCost>10</iAdvancedStartCost>
+            <bActsAsCity>1</bActsAsCity>
+            <iUpgradeTime>5</iUpgradeTime>
+            <iDefenseModifier>-30</iDefenseModifier>
+            <bOutsideBorders>1</bOutsideBorders>
+            <TerrainMakesValids>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BARREN</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_GRASSLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_LUSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MUDDY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PLAINS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ROCKY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SCRUB</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TAIGA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+            </TerrainMakesValids>
+            <iCulture>10</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
+            <ImprovementUpgrade>IMPROVEMENT_RESOURCE_OUTPOST</ImprovementUpgrade>
+            <bBombardable>1</bBombardable>
+            <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+            <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+        </ImprovementInfo>
+
+        <ImprovementInfo>
+            <Type>IMPROVEMENT_RESOURCE_OUTPOST</Type>
+            <Description>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOST</Description>
+            <Civilopedia>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Civilopedia>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_COTTAGE</ArtDefineTag>
+            <PrereqTech>TECH_CARPENTRY</PrereqTech>
+            <iAdvancedStartCost>10</iAdvancedStartCost>
+            <iUpgradeTime>5</iUpgradeTime>
+            <iDefenseModifier>-15</iDefenseModifier>
+            <bOutsideBorders>1</bOutsideBorders>
+            <bActsAsCity>1</bActsAsCity>
+            <TerrainMakesValids>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BARREN</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_GRASSLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_LUSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MUDDY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PLAINS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ROCKY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SCRUB</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TAIGA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+            </TerrainMakesValids>
+            <iCulture>20</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
+            <ImprovementUpgrade>IMPROVEMENT_RESOURCE_SETTLEMENT</ImprovementUpgrade>
+            <bBombardable>1</bBombardable>
+            <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+            <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+        </ImprovementInfo>
+
+        <ImprovementInfo>
+            <Type>IMPROVEMENT_RESOURCE_SETTLEMENT</Type>
+            <Description>TXT_KEY_IMPROVEMENT_RESOURCE_SETTLEMENT</Description>
+            <Civilopedia>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Civilopedia>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_HAMLET</ArtDefineTag>
+            <PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+            <iAdvancedStartCost>10</iAdvancedStartCost>
+            <iUpgradeTime>5</iUpgradeTime>
+            <bOutsideBorders>1</bOutsideBorders>
+            <bActsAsCity>1</bActsAsCity>
+            <TerrainMakesValids>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BARREN</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_GRASSLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_LUSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MUDDY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PLAINS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ROCKY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SCRUB</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TAIGA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+            </TerrainMakesValids>
+            <iCulture>30</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
+            <ImprovementUpgrade>IMPROVEMENT_RESOURCE_TOWN</ImprovementUpgrade>
+            <bBombardable>1</bBombardable>
+            <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+            <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+        </ImprovementInfo>
+
+        <ImprovementInfo>
+            <Type>IMPROVEMENT_RESOURCE_TOWN</Type>
+            <Description>TXT_KEY_IMPROVEMENT_RESOURCE_TOWN</Description>
+            <Civilopedia>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Civilopedia>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_VILLAGE</ArtDefineTag>
+            <PrereqTech>TECH_ELECTRICITY</PrereqTech>
+            <iAdvancedStartCost>10</iAdvancedStartCost>
+            <iUpgradeTime>5</iUpgradeTime>
+            <iDefenseModifier>15</iDefenseModifier>
+            <bOutsideBorders>1</bOutsideBorders>
+            <bActsAsCity>1</bActsAsCity>
+            <TerrainMakesValids>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BARREN</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_GRASSLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_LUSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MUDDY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PLAINS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ROCKY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SCRUB</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TAIGA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+            </TerrainMakesValids>
+            <iCulture>40</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
+            <ImprovementUpgrade>IMPROVEMENT_RESOURCE_COMPLEX</ImprovementUpgrade>
+            <bBombardable>1</bBombardable>
+            <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+            <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+        </ImprovementInfo>
+
+        <ImprovementInfo>
+            <Type>IMPROVEMENT_RESOURCE_COMPLEX</Type>
+            <Description>TXT_KEY_IMPROVEMENT_RESOURCE_COMPLEX</Description>
+            <Civilopedia>TXT_KEY_IMPROVEMENT_RESOURCE_OUTPOSTS_PEDIA</Civilopedia>
+            <ArtDefineTag>ART_DEF_IMPROVEMENT_TOWN</ArtDefineTag>
+            <PrereqTech>TECH_METAMATERIALS</PrereqTech>
+            <iAdvancedStartCost>10</iAdvancedStartCost>
+            <iUpgradeTime>5</iUpgradeTime>
+            <iDefenseModifier>30</iDefenseModifier>
+            <bOutsideBorders>1</bOutsideBorders>
+            <bActsAsCity>1</bActsAsCity>
+            <TerrainMakesValids>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BARREN</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DESERT</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_DUNES</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_GRASSLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ICE</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_LUSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MARSH</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_MUDDY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_PLAINS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_ROCKY</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_BADLAND</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_JAGGED</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_SCRUB</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TAIGA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+                <TerrainMakesValid>
+                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
+                    <bMakesValid>1</bMakesValid>
+                </TerrainMakesValid>
+            </TerrainMakesValids>
+            <iCulture>50</iCulture>
+            <bRequiresBonus>1</bRequiresBonus>
+            <bBombardable>1</bBombardable>
+            <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+            <bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+        </ImprovementInfo>
+
 		<!-- FEATUREFORMING / TERRAFORMING -->
 		<!-- Plant Forest -->
 		<ImprovementInfo>
@@ -10935,7 +11404,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -11005,7 +11474,7 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -11044,7 +11513,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11052,7 +11521,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11060,7 +11529,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11070,7 +11539,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11080,7 +11549,7 @@
 					<YieldChanges>
 						<iYieldChange>1</iYieldChange>
 						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11088,7 +11557,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11096,7 +11565,7 @@
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -11158,7 +11627,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HARVEST_KELP</ArtDefineTag>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>2</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
@@ -11326,7 +11795,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>3</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<bRequiresFeature>1</bRequiresFeature>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -11366,7 +11835,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_TIDAL_HARNESS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -11416,7 +11885,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>4</iYieldChange>
+				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -11528,7 +11997,7 @@
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11538,7 +12007,7 @@
 					<iDepletionRand>2000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -11549,7 +12018,7 @@
 					<iDepletionRand>2000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -11560,7 +12029,7 @@
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -11627,7 +12096,7 @@
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
@@ -11637,7 +12106,7 @@
 					<iDepletionRand>2000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>-2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
@@ -11697,7 +12166,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<bWaterImprovement>1</bWaterImprovement>
@@ -12070,7 +12539,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_GOODY_HUT</ArtDefineTag>
 			<bGoody>1</bGoody>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iTilesPerGoody>40</iTilesPerGoody>
+			<iTilesPerGoody>35</iTilesPerGoody>
 			<iGoodyRange>3</iGoodyRange>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>
@@ -12136,7 +12605,7 @@
 			<bWaterImprovement>1</bWaterImprovement>
 			<bGoody>1</bGoody>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iTilesPerGoody>40</iTilesPerGoody>
+			<iTilesPerGoody>35</iTilesPerGoody>
 			<iGoodyRange>3</iGoodyRange>
 			<iAirBombDefense>-1</iAirBombDefense>
 			<TerrainMakesValids>

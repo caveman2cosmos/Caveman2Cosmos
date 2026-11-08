@@ -19,7 +19,6 @@ class BugNJAGCOptionsTab(BugOptionsTab.BugOptionsTab):
 		column = self.addOneColumnLayout(screen, panel)
 
 		left, center, right = self.addThreeColumnLayout(screen, column, "Views")
-		#self.addSpacer(screen, center, "Scores_New_Columns", 3)
 
 		self.addCheckbox(screen, left, "NJAGC__AlternateText")
 		self.addIntDropdown(screen, right, center, "NJAGC__AltTiming")

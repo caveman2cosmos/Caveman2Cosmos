@@ -3,7 +3,8 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_ORGANIC_INFANTRY</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_HITECH</Combat>
 			<SubCombatTypes>

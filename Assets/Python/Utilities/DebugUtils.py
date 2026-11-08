@@ -26,7 +26,7 @@ class DebugUtils:
 		map = GC.getMap()
 		if iNBonuses < map.getGridWidth() * map.getGridHeight():
 			for x in xrange(map.getGridWidth()):
-				for y in xrange((iNBonuses/map.getGridWidth())+1):
+				for y in xrange((iNBonuses//map.getGridWidth())+1):
 					map.plot(x,y).setBonusType((x + y * map.getGridWidth())%iNBonuses)
 
 	def allImprovements(self):
@@ -34,7 +34,7 @@ class DebugUtils:
 		map = GC.getMap()
 		if (iNImprovements < map.getGridWidth() * map.getGridHeight()):
 			for x in xrange(map.getGridWidth()):
-				for y in xrange((iNImprovements/map.getGridWidth())+1):
+				for y in xrange((iNImprovements//map.getGridWidth())+1):
 					map.plot(x,y).setImprovementType((x + y * map.getGridWidth())%iNImprovements)
 
 
@@ -120,7 +120,10 @@ class DebugUtils:
 			if iObject == iNumUnits: # City"
 				CyPlayer.initCity(iX, iY)
 			else:
-				iSpawnNum = int(popupReturn.getEditBoxString(0))
+				try:
+					iSpawnNum = int(popupReturn.getEditBoxString(0))
+				except ValueError:
+					iSpawnNum = 1
 				while iSpawnNum > 0:
 					CyPlayer.initUnit(iObject, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 					iSpawnNum -= 1
@@ -214,7 +217,7 @@ def applyTechCheat(iPlayer, userData, popupReturn):
 
 	iPlayer = popupReturn.getSelectedPullDownValue(0)
 	iPlayers = 0
-	if iPlayer == GC.getMAX_PC_PLAYERS():
+	if iPlayer == GC.getMAX_PLAYERS():
 		player = []
 		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			CyPlayerX = GC.getPlayer(iPlayerX)
@@ -249,7 +252,7 @@ def applyTechCheat(iPlayer, userData, popupReturn):
 # Event 1003
 def initEditCity(px, py):
 	local = CyTranslator()
-	city = CyMap().plot(px,py).getPlotCity()
+	city = GC.getMap().plot(px,py).getPlotCity()
 	iOwner = city.getOwner()
 
 	# create popup
@@ -301,28 +304,32 @@ def applyEditCity(iPlayer, userData, popupReturn):
 		city.setName(szName, False)
 
 	# Population
-	iValue = int(popupReturn.getEditBoxString(1))
-	if iValue:
-		city.changePopulation(iValue)
+	try:
+		iPopChange = int(popupReturn.getEditBoxString(1))
+	except ValueError:
+		iPopChange = 0
+	if iPopChange:
+		city.changePopulation(iPopChange)
 
-	iValue = int(popupReturn.getEditBoxString(2))
-	if iValue:
-		city.setCulture(iOwner, iValue, True)
+	try:
+		iCultureChange = int(popupReturn.getEditBoxString(2))
+	except ValueError:
+		iCultureChange = 0
+	if iCultureChange:
+		city.setCulture(iOwner, iCultureChange, True)
 
 	# Buildings
 	iNumBuildings = GC.getNumBuildingInfos()
 	iBuilding = popupReturn.getSelectedListBoxValue(0)
-	if iBuilding > -1 and popupReturn.getSelectedPullDownValue(0) > 0:
-		if iBuilding == iNumBuildings + 1:
-			return 0
-		# Toggles buildings in cities
+	bChange = popupReturn.getSelectedPullDownValue(0) > 0
+
+	if bChange and iBuilding > -1:
 		bAdd = popupReturn.getSelectedPullDownValue(0) == 1
-		if iBuilding != -1:
-			if iBuilding == iNumBuildings:
-				for i in range(iBuilding):
-					city.changeHasBuilding(i, bAdd)
-			else:
-				city.changeHasBuilding(iBuilding, bAdd)
+		if iBuilding == iNumBuildings:  # "All buildings" sentinel
+			for i in range(iNumBuildings):
+				city.changeHasBuilding(i, bAdd)
+		elif iBuilding < iNumBuildings:  # valid single building
+			city.changeHasBuilding(iBuilding, bAdd)
 
 
 def putOneOfEveryUnit():

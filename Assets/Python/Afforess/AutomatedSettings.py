@@ -167,7 +167,7 @@ def changedMostExpensive(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_UPGRADE_MOST_EXPENSIVE, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_UPGRADE_MOST_EXPENSIVE), int(value), 0)
 
-def changedMostExpierenced(option, value):
+def changedMostExperienced(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_UPGRADE_MOST_EXPERIENCED, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_UPGRADE_MOST_EXPERIENCED), int(value), 0)
 

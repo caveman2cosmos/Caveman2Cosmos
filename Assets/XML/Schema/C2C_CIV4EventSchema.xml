@@ -75,6 +75,7 @@
 	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="bUnitsOnPlot" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOwnPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNotOnCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iMaxNumReligions" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumReligions" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumCorporations" content="textOnly" dt:type="int"/>
@@ -195,6 +196,9 @@
 	<ElementType name="TerrainType" content="textOnly"/>
 	<ElementType name="iTerrainChange" content="textOnly" dt:type="int"/>
 	<ElementType name="ImprovementsRequired" content="eltOnly">
+		<element type="ImprovementType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="NotImprovementsRequired" content="eltOnly">
 		<element type="ImprovementType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="ImprovementType" content="textOnly"/>
@@ -397,10 +401,12 @@
 		<element type="iNumBuildingsGlobal" minOccurs="0"/>
 		<element type="iNumPlotsRequired" minOccurs="0"/>
 		<element type="bOwnPlot" minOccurs="0"/>
+		<element type="bNotOnCity" minOccurs="0"/>
 		<element type="iPlotType" minOccurs="0"/>
 		<element type="FeaturesRequired" minOccurs="0"/>
 		<element type="TerrainsRequired" minOccurs="0"/>
 		<element type="ImprovementsRequired" minOccurs="0"/>
+		<element type="NotImprovementsRequired" minOccurs="0"/>
 		<element type="BonusesRequired" minOccurs="0"/>
 		<element type="RoutesRequired" minOccurs="0"/>
 		<element type="ReligionsRequired" minOccurs="0"/>

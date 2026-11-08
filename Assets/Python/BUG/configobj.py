@@ -502,29 +502,29 @@ class Section(dict):
     # Extra methods - not in a normal dictionary
 
     def clearKeyComments(self, key):
-    	"""Clears all comments for the given key."""
-    	if key in self.scalars or key in self.sections:
+        """Clears all comments for the given key."""
+        if key in self.scalars or key in self.sections:
             self.comments[key] = []
             self.inline_comments[key] = ''
 
     def addKeyComment(self, key, comment=None):
-    	"""Adds the given text as a single-line comment with a leading '# '."""
-    	if key in self.scalars or key in self.sections:
-	    	if comment is None:
-	    		comment = ''
-	    	elif comment == '':
-	    		comment = '#'
-	    	else:
-	    		comment = '# ' + comment
-    		self.comments.setdefault(key, []).append(comment)
+        """Adds the given text as a single-line comment with a leading '# '."""
+        if key in self.scalars or key in self.sections:
+            if comment is None:
+                comment = ''
+            elif comment == '':
+                comment = '#'
+            else:
+                comment = '# ' + comment
+            self.comments.setdefault(key, []).append(comment)
 
     def setInlineKeyComment(self, key, comment):
-    	"""Sets the given text as the single inline comment with a leading '# '."""
-    	if key in self.scalars or key in self.sections:
-    		if comment:
-    			self.inline_comments[key] = '# ' + comment
-    		else:
-    			self.inline_comments[key] = ''
+        """Sets the given text as the single inline comment with a leading '# '."""
+        if key in self.scalars or key in self.sections:
+            if comment:
+                self.inline_comments[key] = '# ' + comment
+            else:
+                self.inline_comments[key] = ''
 
     def dict(self):
         """
@@ -1138,7 +1138,7 @@ class ConfigObj(Section):
                     if not final_encoding:
                         # skip UTF8
                         continue
-                    if infile.startswith(BOM):
+                    if line.startswith(BOM):
                         ### BOM discovered
                         ##self.BOM = True
                         # Don't need to remove BOM
@@ -1523,8 +1523,8 @@ class ConfigObj(Section):
         dquot = '"%s"'
         noquot = "%s"
         wspace_plus = ' \r\t\n\v\t\'"'
-        tsquot = '"""%s"""'
-        tdquot = "'''%s'''"
+        tdquot = '"""%s"""'
+        tsquot = "'''%s'''"
         if not value:
             return '""'
         if (not self.list_values and '\n' not in value) or not (multiline and
@@ -1858,7 +1858,7 @@ class ConfigObj(Section):
         else:
             start = self._a_to_u(' ' * NUM_INDENT_SPACES)
         if not comment.startswith('#') and not comment.startswith(';'):
-            start += _a_to_u('# ')
+            start += self._a_to_u('# ')
         return (start + comment)
 
     def _compute_indent_string(self, depth):
@@ -1884,23 +1884,23 @@ class ConfigObj(Section):
         self.initial_comment = []
 
     def addInitialComment(self, comment=None):
-    	if comment is None:
-    		self.initial_comment.append('')
-    	elif comment == '':
-    		self.initial_comment.append('#')
-    	else:
-    		self.initial_comment.append('# ' + comment)
+        if comment is None:
+            self.initial_comment.append('')
+        elif comment == '':
+            self.initial_comment.append('#')
+        else:
+            self.initial_comment.append('# ' + comment)
 
-	def clearFinalComment(self):
-		self.final_comment = []
+    def clearFinalComment(self):
+        self.final_comment = []
 
     def addFinalComment(self, comment=None):
-    	if comment is None:
-    		self.final_comment.append('')
-    	elif comment == '':
-    		self.final_comment.append('#')
-    	else:
-    		self.final_comment.append('# ' + comment)
+        if comment is None:
+            self.final_comment.append('')
+        elif comment == '':
+            self.final_comment.append('#')
+        else:
+            self.final_comment.append('# ' + comment)
 
     def write(self, outfile=None, section=None):
         """
@@ -1942,12 +1942,16 @@ class ConfigObj(Section):
             int_val = self.interpolation
             self.interpolation = False
             section = self
-            for line in self.initial_comment:
-                line = self._decode_element(line)
-                stripped_line = line.strip()
-                if stripped_line and not stripped_line.startswith(cs):
-                    line = csp + line
-                out.append(line)
+            try:
+                for line in self.initial_comment:
+                    line = self._decode_element(line)
+                    stripped_line = line.strip()
+                    if stripped_line and not stripped_line.startswith(cs):
+                        line = csp + line
+                    out.append(line)
+            except:
+                self.interpolation = int_val
+                raise
         #
         indent_string = self._a_to_u(
             self._compute_indent_string(section.depth))

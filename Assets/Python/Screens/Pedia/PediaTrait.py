@@ -10,19 +10,18 @@ class Page:
 		self.H_PEDIA_PAGE = H_PEDIA_PAGE = parent.H_PEDIA_PAGE
 		self.W_PEDIA_PAGE = parent.W_PEDIA_PAGE
 
-		self.Y_ROW_1 = Y_ROW_1 = parent.Y_PEDIA_PAGE
+		self.Y_ROW_1 = parent.Y_PEDIA_PAGE
 
 		self.H_TOP_ROW = H_TOP_ROW = (H_PEDIA_PAGE - H_BOT_ROW * 3) / 4
 		self.H_BOT_ROW = H_BOT_ROW
 
-		self.X_COL_1 = X_COL_1 = parent.X_PEDIA_PAGE
+		self.X_COL_1 = parent.X_PEDIA_PAGE
 
 		self.S_ICON = H_TOP_ROW - 10
 
 
 	def interfaceScreen(self, iTheTrait):
 		GC = CyGlobalContext()
-		TRNSLTR = CyTranslator()
 		CvTheTraitInfo = GC.getTraitInfo(iTheTrait)
 		aName = self.main.getNextWidgetName
 

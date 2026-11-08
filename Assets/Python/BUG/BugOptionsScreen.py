@@ -20,22 +20,37 @@ def clearAllTranslations(argsList=None):
 
 class BugOptionsScreen:
 	# BUG Mod Options Screen
+	
 	def __init__(self):
 		import BugOptions
 		self.iScreenHeight = 50
 		self.options = BugOptions.getOptions()
 		self.tabs = []
+		self.pTabControl = None
 
 	def addTab(self, tab):
 		self.tabs.append(tab)
 		tab.setOptions(self.options)
 
 	def interfaceScreen(self):
+		import CvScreenEnums
+		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
+		xRes = screen.getXResolution()
+		yRes = screen.getYResolution()
+		xSize = 950
+		ySize = 715
+		if xRes > 2500 and yRes > 1100:
+			xSize = 1650
+			ySize = 1015
+
+		# Keep the options window inside the visible resolution.
+		xSize = min(xSize, max(200, xRes - 40))
+		ySize = min(ySize, max(200, yRes - 40))
 		"Initial creation of the screen"
 		title = BugUtil.getPlainText("TXT_KEY_BUG_OPT_TITLE", "C2C Options")
 		self.pTabControl = CyGTabCtrl(title, False, False)
 		self.pTabControl.setModal(1)
-		self.pTabControl.setSize(950, 715)
+		self.pTabControl.setSize(xSize, ySize)
 		self.pTabControl.setControlsExpanding(False)
 		self.pTabControl.setColumnLength(self.iScreenHeight)
 		self.createTabs()
@@ -51,8 +66,10 @@ class BugOptionsScreen:
 
 	def close(self):
 		self.options.write()
-		self.pTabControl.destroy()
-		self.pTabControl = None
+		tabControl = self.pTabControl
+		if tabControl is not None:
+			self.pTabControl = None
+			tabControl.destroy()
 		CyGlobalContext().refreshOptionsBUG()
 
 	def setOptionValue(self, name, value):

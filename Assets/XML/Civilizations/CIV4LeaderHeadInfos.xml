@@ -12,15 +12,15 @@
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
+					<TraitType>TRAIT_BARBARIC</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
 			<DefaultTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultTraits>
 			<DefaultComplexTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
@@ -452,15 +452,15 @@
 			<iAttackOddsChangeRand>20</iAttackOddsChangeRand>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_BARBARIAN</TraitType>
+					<TraitType>TRAIT_BARBARIC</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
 			<DefaultTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultTraits>
 			<DefaultComplexTraits>
-				<TraitType>TRAIT_BARBARIAN</TraitType>
+				<TraitType>TRAIT_BARBARIC</TraitType>
 			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
@@ -772,22 +772,6 @@
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
-			<DefaultTraits>
-				<TraitType>TRAIT_PHILOSOPHICAL</TraitType>
-				<TraitType>TRAIT_AGGRESSIVE</TraitType>
-				<TraitType>TRAIT_MEGALOMANIAC</TraitType>
-				<TraitType>TRAIT_PHILOSOPHICAL1</TraitType>
-				<TraitType>TRAIT_AGGRESSIVE1</TraitType>
-				<TraitType>TRAIT_MEGALOMANIAC1</TraitType>
-			</DefaultTraits>
-			<DefaultComplexTraits>
-				<TraitType>TRAIT_PHILOSOPHICAL</TraitType>
-				<TraitType>TRAIT_AGGRESSIVE</TraitType>
-				<TraitType>TRAIT_MEGALOMANIAC</TraitType>
-				<TraitType>TRAIT_PHILOSOPHICAL1</TraitType>
-				<TraitType>TRAIT_AGGRESSIVE1</TraitType>
-				<TraitType>TRAIT_MEGALOMANIAC1</TraitType>
-			</DefaultComplexTraits>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>

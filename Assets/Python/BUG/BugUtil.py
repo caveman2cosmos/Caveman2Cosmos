@@ -174,7 +174,7 @@ def formatFloat(number, decimals=0):
 	and returns the resulting string.
 	"""
 	if decimals <= 0:
-		return "%f" % number
+		return "%.0f" % number
 	else:
 		return ("%." + str(decimals) + "f") % number
 
@@ -306,6 +306,7 @@ class Timer:
 		"""Resets all times to zero and stops the timer."""
 		self._initial = None
 		self._start = None
+		self._final = None
 		self._time = 0
 		self._total = 0
 		return self

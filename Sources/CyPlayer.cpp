@@ -390,6 +390,16 @@ int CyPlayer::getUnitProductionNeeded(int /*UnitTypes*/ iIndex) const
 	return m_pPlayer->getProductionNeeded((UnitTypes) iIndex);
 }
 
+int CyPlayer::getUnitProductionNeededPreMerged(int /*UnitTypes*/ iIndex) const
+{
+	return m_pPlayer->getProductionNeededPreMerged((UnitTypes) iIndex);
+}
+
+bool CyPlayer::isPreMergedUnitBuildEnabled() const
+{
+	return m_pPlayer->isPreMergedUnitBuildEnabled();
+}
+
 int CyPlayer::getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const
 {
 	return m_pPlayer->getProductionNeeded((BuildingTypes) iIndex);

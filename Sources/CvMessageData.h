@@ -578,6 +578,21 @@ private:
 	int m_iUnitID;
 };
 
+//  Merge all eligible same-type/size units within a selection group (Size Matters)
+class CvNetMergeAll : public CvMessageData
+{
+public:
+	CvNetMergeAll();
+	CvNetMergeAll(PlayerTypes ePlayer, int iUnitID);
+	virtual void Debug(char* szAddendum);
+	virtual void Execute();
+	virtual void PutInBuffer(FDataStreamBase* pStream);
+	virtual void SetFromBuffer(FDataStreamBase* pStream);
+private:
+	PlayerTypes m_ePlayer;
+	int m_iUnitID;
+};
+
 //  Split Unit
 class CvNetConfirmSplitUnit : public CvMessageData
 {

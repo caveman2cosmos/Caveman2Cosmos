@@ -36,8 +36,6 @@ class CvHallOfFameScreen:
 		self.LEADER_DROPDOWN_ID = "HallOfFameScreenLeaderDropdown"
 		self.DIFFICULTY_DROPDOWN_ID = "HallOfFameScreenDifficultyDropdown"
 		self.MAPSIZE_DROPDOWN_ID = "HallOfFameScreenMapsizeDropdown"
-		self.CLIMATE_DROPDOWN_ID = "HallOfFameScreenClimateDropdown"
-		self.SEALEVEL_DROPDOWN_ID = "HallOfFameScreenSealevelDropdown"
 		self.ERA_DROPDOWN_ID = "HallOfFameScreenEraDropdown"
 		self.SPEED_DROPDOWN_ID = "HallOfFameScreenSpeedDropdown"
 		self.VICTORY_DROPDOWN_ID = "HallOfFameScreenVictoryDropdown"
@@ -86,8 +84,6 @@ class CvHallOfFameScreen:
 		self.iLeaderFilter = -1
 		self.iHandicapFilter = -1
 		self.iWorldFilter = -1
-		self.iClimateFilter = -1
-		self.iSeaLevelFilter = -1
 		self.iEraFilter = -1
 		self.iSpeedFilter = -1
 		self.iVictoryFilter = -1
@@ -183,12 +179,6 @@ class CvHallOfFameScreen:
 		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
 		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
 
-		#yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
-		#xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
-
-		yDropDown = self.DROPDOWN_SPACING_Y * (iNumDropDowns % 2) + self.DROPDOWN_Y
-		xDropDown = (self.DROPDOWN_WIDTH  + self.DROPDOWN_SPACING_X) * (iNumDropDowns / 2) + self.DROPDOWN_SPACING_X
-
 		# Multiplayer dropdown initialization
 		screen.addDropDownBoxGFC(self.MULTIPLAYER_DROPDOWN_ID, xDropDown, yDropDown, self.DROPDOWN_WIDTH, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		if self.iMultiplayerFilter == 1:
@@ -215,8 +205,6 @@ class CvHallOfFameScreen:
 		return ((self.iLeaderFilter == -1 or self.iLeaderFilter == replayInfo.getLeader(replayInfo.getActivePlayer()))
 			and (self.iHandicapFilter == -1 or self.iHandicapFilter == replayInfo.getDifficulty())
 			and (self.iWorldFilter == -1 or self.iWorldFilter == replayInfo.getWorldSize())
-			and (self.iClimateFilter == -1 or self.iClimateFilter == replayInfo.getClimate())
-			and (self.iSeaLevelFilter == -1 or self.iSeaLevelFilter == replayInfo.getSeaLevel())
 			and (self.iEraFilter == -1 or self.iEraFilter == replayInfo.getEra())
 			and (self.iSpeedFilter == -1 or self.iSpeedFilter == replayInfo.getGameSpeed())
 			and (self.iVictoryFilter == -1 or self.iVictoryFilter == replayInfo.getVictoryType())
@@ -227,6 +215,7 @@ class CvHallOfFameScreen:
 
 		screen = self.getScreen()
 
+		screen.deleteWidget(self.TABLE_ID)
 		screen.addTableControlGFC(self.TABLE_ID, 10, 2, 2 * self.DROPDOWN_SPACING_Y + self.DROPDOWN_Y, 1018, 545, True, True, 16, 16, TableStyles.TABLE_STYLE_STANDARD)
 		screen.enableSelect(self.TABLE_ID, False)
 		screen.enableSort(self.TABLE_ID)
@@ -240,7 +229,6 @@ class CvHallOfFameScreen:
 		screen.setTableColumnHeader(self.TABLE_ID, 7, localText.getText("TXT_KEY_HOF_SCREEN_SIZE", ()), 100)
 		screen.setTableColumnHeader(self.TABLE_ID, 8, localText.getText("TXT_KEY_HOF_SCREEN_STARTING_ERA", ()), 100)
 		screen.setTableColumnHeader(self.TABLE_ID, 9, localText.getText("TXT_KEY_HOF_SCREEN_GAME_SPEED", ()), 105)
-#		screen.setTableColumnHeader(self.TABLE_ID, , "", 73)
 
 		# count the filtered replays
 		iNumGames = 0
@@ -255,12 +243,7 @@ class CvHallOfFameScreen:
 		for i in range(self.hallOfFame.getNumGames()):
 			replayInfo = self.hallOfFame.getReplayInfo(i)
 			if self.isDisplayed(replayInfo):
-				szVictory = u""
-				if replayInfo.getVictoryType() <= 0:
-					szVictory = localText.getText("TXT_KEY_NONE", ())
-				else:
-					szVictory = gc.getVictoryInfo(replayInfo.getVictoryType()).getDescription()
-# BUG - Win/Loss Info - start
+				# BUG - Win/Loss Info - start
 				results = {
 					True: localText.getText("TXT_KEY_HOF_WINLOSS_WIN", ()),
 					False: localText.getText("TXT_KEY_HOF_WINLOSS_LOSS", ())
@@ -284,8 +267,6 @@ class CvHallOfFameScreen:
 						szVictory,
 						gc.getHandicapInfo(replayInfo.getDifficulty()).getDescription(),
 						gc.getWorldInfo(replayInfo.getWorldSize()).getDescription(),
-#						gc.getClimateInfo(replayInfo.getClimate()).getDescription(),
-#						gc.getSeaLevelInfo(replayInfo.getSeaLevel()).getDescription(),
 						gc.getEraInfo(replayInfo.getEra()).getDescription(),
 						gc.getGameSpeedInfo(replayInfo.getGameSpeed()).getDescription(),
 						i)
@@ -326,6 +307,7 @@ class CvHallOfFameScreen:
 		count = 0
 		while msgNum >= 0:
 			msg = replay.getReplayMessageText(msgNum)
+			count += 1
 			if count > 100:
 				BugUtil.debug("no victory message in first 100; skipping")
 				break
@@ -359,16 +341,6 @@ class CvHallOfFameScreen:
 				iIndex = screen.getSelectedPullDownID(self.MAPSIZE_DROPDOWN_ID)
 				self.iWorldFilter = screen.getPullDownData(self.MAPSIZE_DROPDOWN_ID, iIndex)
 				self.drawContents()
-			elif (inputClass.getFunctionName() == self.CLIMATE_DROPDOWN_ID):
-				screen = self.getScreen()
-				iIndex = screen.getSelectedPullDownID(self.CLIMATE_DROPDOWN_ID)
-				self.iClimateFilter = screen.getPullDownData(self.CLIMATE_DROPDOWN_ID, iIndex)
-				self.drawContents()
-			elif (inputClass.getFunctionName() == self.SEALEVEL_DROPDOWN_ID):
-				screen = self.getScreen()
-				iIndex = screen.getSelectedPullDownID(self.SEALEVEL_DROPDOWN_ID)
-				self.iSeaLevelFilter = screen.getPullDownData(self.SEALEVEL_DROPDOWN_ID, iIndex)
-				self.drawContents()
 			elif (inputClass.getFunctionName() == self.ERA_DROPDOWN_ID):
 				screen = self.getScreen()
 				iIndex = screen.getSelectedPullDownID(self.ERA_DROPDOWN_ID)
@@ -398,7 +370,7 @@ class CvHallOfFameScreen:
 			if (inputClass.getFunctionName() == self.EXIT_ID):
 				screen = self.getScreen()
 				screen.hideScreen()
-			elif (inputClass.getFunctionName() == self.REPLAY_BUTTON_ID and self.bAllowReplay):
+			elif (inputClass.getFunctionName().startswith(self.REPLAY_BUTTON_ID) and self.bAllowReplay):
 				iRow = inputClass.getID()
 				if iRow < len(self.infoList):
 					CvScreensInterface.replayScreen.replayInfo = self.hallOfFame.getReplayInfo(self.infoList[iRow][10])

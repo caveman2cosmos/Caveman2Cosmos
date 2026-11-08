@@ -16,11 +16,26 @@
 	<Define>
 		<!-- Tech Diffusion: Threshold percentage of top known tech score at which extra tech welfare help begins. -->
 		<DefineName>TECH_DIFFUSION_WELFARE_THRESHOLD</DefineName>
-		<iDefineIntVal>90</iDefineIntVal>
+		<iDefineIntVal>95</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Power of tech welfare assitance. BBAI default: 30, for plain BTS: 0 -->
+		<!-- Tech Diffusion: Power of tech welfare assistance. BBAI default: 30, for plain BTS: 0 -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Tech Diffusion: Extra knownExp weight granted per contact when our capital is actually trade-network connected to theirs (roads/harbors), on top of the open borders weight. -->
+		<DefineName>TECH_DIFFUSION_TRADE_CONNECTED_BONUS</DefineName>
+		<fDefineFloatVal>1.5</fDefineFloatVal>
+	</Define>
+	<Define>
+		<!-- Tech Diffusion: knownExp value that represents "fully substantiated contact" for welfare purposes; welfare's magnitude scales linearly with knownExp up to this value instead of being a flat on/off gate. -->
+		<DefineName>TECH_DIFFUSION_WELFARE_KNOWNEXP_NORM</DefineName>
+		<fDefineFloatVal>3.5</fDefineFloatVal>
+	</Define>
+	<Define>
+		<!-- Tech Diffusion: Maximum multiplier welfare's score-gap ratio (bestScore / ourScore) can apply. -->
+		<DefineName>TECH_DIFFUSION_WELFARE_RATIO_CAP</DefineName>
+		<fDefineFloatVal>3.0</fDefineFloatVal>
 	</Define>
 </Civ4Defines>

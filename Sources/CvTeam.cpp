@@ -1374,7 +1374,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 						{
 							// Player is not on our team nor on the team we declared war on.
-							if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID(), false) && GET_PLAYER((PlayerTypes)iJ).getTeam() != eTeam
+							if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID(), false) && GET_PLAYER((PlayerTypes)iJ).getTeam() != eTeam
 							// Friends with the leader of the team we declared war on
 							&& GET_PLAYER((PlayerTypes)iJ).AI_getAttitude(teamFoe.getLeaderID()) >= ATTITUDE_PLEASED)
 							{
@@ -2604,8 +2604,18 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	}
 	uint64_t iCost = 100 * iInitialCost;
 
-	int iBeelineStingsTechCostModifier = 0;
-	if (GC.getGame().isOption(GAMEOPTION_TECH_BEELINE_STINGS))
+	int iPlayersInEra = 0;
+    for (int iI = 0; iI < MAX_PLAYERS; iI++)
+    {
+        if (!GET_PLAYER((PlayerTypes)iI).isAlive())
+            continue;
+
+        if (GET_PLAYER((PlayerTypes)iI).getCurrentEra() == GET_PLAYER(getLeaderID()).getCurrentEra())
+            iPlayersInEra++;
+    }
+
+	int iCuttingEdgeCutsTechCostModifier = 0;
+	if (GC.getGame().isOption(GAMEOPTION_TECH_CUTTING_EDGE_CUTS) && iPlayersInEra < 3)
 	{
 		const int iTechEra = GC.getTechInfo(eTech).getEra();
 		int iPlayerEra = MAX_INT;
@@ -2625,8 +2635,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 			{
 				if (iI >= iTechEra && iI < iPlayerEra)
 				{
-					iBeelineStingsTechCostModifier += GC.getEraInfo((EraTypes)iI).getBeelineStingsTechCostModifier();
-					//just need to add the tag iBeelineStingsModifier to Era Infos.
+					iCuttingEdgeCutsTechCostModifier += GC.getEraInfo((EraTypes)iI).getCuttingEdgeCutsTechCostModifier();
 				}
 				else if (iI >= iPlayerEra)
 				{
@@ -2647,21 +2656,21 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 	iCost *= std::max(0, GC.getTECH_COST_EXTRA_TEAM_MEMBER_MODIFIER() * getNumMembers());
 	iCost /= 100;
 
-	int iMod = iBeelineStingsTechCostModifier;
+	int iMod = iCuttingEdgeCutsTechCostModifier;
 
 	if (!isNPC() && !isHuman(true))
 	{
-		iMod =
+		iMod +=
 			(
 				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIResearchPercent() - 100
 				+
 				GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * GET_PLAYER(getLeaderID()).getCurrentEra()
 			);
+
+		// TEMP: flat AI research buff on top of the handicap curve, independent of difficulty, until AI play quality improves. Remove once AI no longer needs the crutch.
+		iMod -= 10;
 	}
-	if (GC.getGame().isOption(GAMEOPTION_TECH_UPSCALED_COSTS))
-	{
-		iMod += GC.getUPSCALED_RESEARCH_COST_MODIFIER();
-	}
+	iMod += GC.getGame().getModderGameOption(MODDERGAMEOPTION_TECH_UPSCALED_COSTS_PERCENT);
 	if (iMod != 0)
 	{
 		iCost = getModifiedIntValue64(iCost, iMod);
@@ -5064,7 +5073,9 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 	}
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	FAssertMsg(m_pabHasTech, "m_pabHasTech is not expected to be equal with NULL");
-	return m_pabHasTech[eIndex];
+	if (m_pabHasTech)
+		return m_pabHasTech[eIndex];
+	return false;
 }
 
 
@@ -5621,6 +5632,23 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			gDLL->getInterfaceIFace()->setDirty(ResearchButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}
+
+		// C2C Optimization: Invalidate vicinity bonus caches for all cities of team players when a new tech is researched
+		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
+		{
+			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			if (kLoopPlayer.isAlive() && kLoopPlayer.getTeam() == getID())
+			{
+				for (CvPlayer::city_iterator cityIt = kLoopPlayer.beginCities(); cityIt != kLoopPlayer.endCities(); ++cityIt)
+				{
+					CvCity* pLoopCity = *cityIt;
+					if (pLoopCity != NULL)
+					{
+						pLoopCity->invalidateVicinityCache();
+					}
+				}
+			}
+		}
 	}
 	else
 	{
@@ -6130,8 +6158,8 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
 					}
 				}
+				break;
 			}
-			break;
 		}
 	}
 	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())

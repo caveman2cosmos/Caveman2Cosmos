@@ -69,6 +69,8 @@ public:
 	bool getNotShowInCity() const;
 	bool EnablesOtherBuildings() const;
 	bool EnablesUnits() const						{ return m_bEnablesUnits; }
+	// Cache of buildings that are unlocked/enabled by this building, to optimize CalculateAllBuildingValues in AI city building value scans.
+	const std::vector<BuildingTypes>& getEnabledBuildingsList() const { return m_aEnabledBuildingsList; }
 
 	int getMaxGlobalInstances() const				{ return m_iMaxGlobalInstances; }
 	int getMaxTeamInstances() const					{ return m_iMaxTeamInstances; }
@@ -85,6 +87,10 @@ public:
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
+	int getProductionCostSize() const		        { return m_iProductionCostSize; }
+	int getProductionCostCount() const		        { return m_iProductionCostCount; }
+	int getProductionCostMaterials() const		    { return m_iProductionCostMaterials; }
+	int getProductionCostComplexity() const		    { return m_iProductionCostComplexity; }
 	int getHurryCostModifier() const				{ return m_iHurryCostModifier; }
 	int getHurryAngerModifier() const				{ return m_iHurryAngerModifier; }
 	int getMinAreaSize() const						{ return m_iMinAreaSize; }
@@ -573,6 +579,10 @@ private:
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
+	int m_iProductionCostSize;
+	int m_iProductionCostCount;
+	int m_iProductionCostMaterials;
+	int m_iProductionCostComplexity;
 	int m_iHurryCostModifier;
 	int m_iHurryAngerModifier;
 	int m_iMinAreaSize;
@@ -811,6 +821,7 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
+	std::vector<BuildingTypes> m_aEnabledBuildingsList; // Precalculated list of buildings enabled by this building
 };
 
 #endif

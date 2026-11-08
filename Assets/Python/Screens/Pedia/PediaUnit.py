@@ -268,7 +268,6 @@ class PediaUnit:
 				if nGOMOr > 1:
 					aReqList.append(braR)
 				aList2 = []
-				nGOMOr = 0
 
 		# Civic Req
 		szChild = PF + "CIVIC"
@@ -347,8 +346,6 @@ class PediaUnit:
 					n += 1
 				if nOr > 1:
 					aReqList.append(braR)
-				aList1 = []
-				nOr = 0
 
 			if aList3:
 				if nGOMOr > 1:
@@ -362,8 +359,6 @@ class PediaUnit:
 					n += 1
 				if nGOMOr > 1:
 					aReqList.append(braR)
-				aList3 = []
-				nGOMOr = 0
 
 		# Upgrades To
 		aUpgList = []
@@ -373,6 +368,7 @@ class PediaUnit:
 			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
 		iType = CvTheUnitInfo.getObsoleteTech()
+		H_SCROLL = H_BOT_ROW - 50
 		if aReqList or aUpgList or iType != -1:
 			W_BOT_ROW = W_PEDIA_PAGE
 			x = (H_BOT_ROW - S_BOT_ROW) / 2
@@ -385,7 +381,6 @@ class PediaUnit:
 				screen.setImageButtonAt(PF + "TECH" + str(iType), Pnl, GC.getTechInfo(iType).getButton(), x, x + 4, S_BOT_ROW, S_BOT_ROW, eWidGen, 1, 1)
 				W_BOT_ROW -= H_BOT_ROW + 8
 			if aReqList or aUpgList:
-				H_SCROLL = H_BOT_ROW - 50
 				i = len(aReqList)
 				j = len(aUpgList)
 				if aReqList and aUpgList:
@@ -413,7 +408,6 @@ class PediaUnit:
 					x = 4
 					y = H_SCROLL / 2 - 12
 					for entry in aReqList:
-						NAME = entry[0]
 						if entry[0] == "TXT":
 							x += entry[3]
 							screen.setLabelAt(aName(), Pnl, entry[1], entry[2], x, y, 0, eFontTitle, eWidGen, 0, 0)

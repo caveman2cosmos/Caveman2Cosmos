@@ -241,7 +241,7 @@ def sdObjectUpdateVal(ModID, object, var, val):
 	if isinstance(object, CyGame):
 		table = BugData.findTable(ModID, 'Game')
 		if table and var in table:
-			table[var] = delta
+			table[var] = val
 			return True
 		return False
 

@@ -294,6 +294,10 @@
 			<Type>INTERFACE_UNHEALTHY_PERSON</Type>
 			<Path>Art/Interface/Buttons/General/Unhealthy_Person.dds</Path>
 		</InterfaceArtInfo>
+        <InterfaceArtInfo>
+            <Type>INTERFACE_FIRE_ALERT</Type>
+            <Path>Art/Interface/buttons/filters/showfireon.dds</Path>
+        </InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>INTERFACE_MINIMAP_RESOURCE</Type>
 			<Path>Art/Interface/MainScreen/toggle_resource.dds</Path>

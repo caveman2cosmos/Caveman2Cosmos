@@ -117,6 +117,20 @@ bool CvSelectionGroupAI::AI_update()
 
 	if (isForceUpdate())
 	{
+		
+		LOG_UNIT_BLOCK(4, {
+			UnitAITypes eUnitAi = this->getHeadUnit()->AI_getUnitAIType();
+			MissionAITypes eMissionAI = AI_getMissionAIType();
+			CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+			CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+			CvWString StrUnitName = this->getHeadUnit()->getNameNoDesc();
+			if (StrUnitName.length() == 0)
+			{
+				StrUnitName = this->getHeadUnit()->getName(0).GetCString();
+			}
+
+			logBBAI("Player %d Group ID %d, men� par %d %S of Type %S, at (%d, %d), Mission %S [stack size %d], Was fortified/BuildUp, Force to Awake...", getOwner(), m_iID, this->getHeadUnit()->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), getX(), getY(), MissionInfos.GetCString(), getNumUnits());
+		});
 		clearMissionQueue(); // XXX ???
 		setActivityType(ACTIVITY_AWAKE);
 		setForceUpdate(false);
@@ -145,6 +159,11 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				LOG_PLAYER_BLOCK(1, {
+					logAiEvaluations(1, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
@@ -165,6 +184,11 @@ bool CvSelectionGroupAI::AI_update()
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				LOG_PLAYER_BLOCK(1, {
+					logAiEvaluations(1, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
+				});
 				sprintf
 				(
 					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
@@ -177,13 +201,30 @@ bool CvSelectionGroupAI::AI_update()
 
 				pHeadUnit->finishMoves();
 			}
+			
 			else if (readyToMove())
 			{
 				FErrorMsg("splitting group");
+				LOG_PLAYER_BLOCK(1, {
+					CvPlot * pPlot = this->plot();
+					int XCoord = -99;
+					int YCoord = -99;
+					if (pPlot != NULL)
+					{
+						XCoord = pPlot->getX();
+						YCoord = pPlot->getY();
+					}
+					logAiEvaluations(1, "pHeadUnit NULL, Splitting Group %d [%d, %d]",
+					this->m_iID,
+					XCoord, YCoord);
+				});
 				splitGroup(1);
 				break;
 			}
-			else FErrorMsg("error");
+			else
+			{
+				FErrorMsg("error in CvSelectionGroupAI::AI_update()");
+			}
 
 			break;
 		}
@@ -226,7 +267,15 @@ bool CvSelectionGroupAI::AI_update()
 		}
 	}
 
-	if (!bDead && !isHuman() && !AI_isAwaitingContract())
+	// Human AUTOMATED groups are AI-controlled too (they pass the AI_isControlled() gate at
+    // the top of this function), so they need the same end-of-update termination safety as AI
+    // groups -- in particular the MISSION_SKIP fallback below. Without it, an automated unit
+    // that stays readyToMove() after the update loop (e.g. an automated hunter that heals
+    // without consuming its move and is then re-awakened by CvUnitAI::AI_update) is re-offered
+    // every outer AI_unitUpdate pass: it re-runs its whole cascade each pass (observed ~196x/
+    // turn via [UNT/act] heal-spam) and, in rare states, the turn never terminates. The
+    // original !isHuman() guard wrongly excluded automated human groups from this safety.
+    if (!bDead && (!isHuman() || isAutomated()) && !AI_isAwaitingContract())
 	{
 		bool bFollow = false;
 
@@ -417,6 +466,10 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		{
 			//	There was no attacker in the first place!
 			iResult = 0;
+			if ( bWin != NULL )
+            {
+                *bWin = false;
+            }
 		}
 		else
 		{
@@ -568,6 +621,18 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 		}
 	}
 
+	if (!pUnit->isCommodore())
+	{
+		const CvUnit* pCommodore = pUnit->getCommodore();
+		if (pCommodore)
+		{
+			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pCommodore->getUnitCombatKeyedInfo().begin(), end = pCommodore->getUnitCombatKeyedInfo().end(); it != end; ++it)
+			{
+				iTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+			}
+		}
+	}
+
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherUnit->getUnitCombatKeyedInfo().begin(), end = pOtherUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
 	{
 		iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
@@ -584,6 +649,18 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 			}
 		}
 	}
+
+    if (!pOtherUnit->isCommodore())
+    	{
+    		const CvUnit* pOtherCommodore = pOtherUnit->getCommodore();
+    		if (pOtherCommodore)
+    		{
+    			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommodore->getUnitCombatKeyedInfo().begin(), end = pOtherCommodore->getUnitCombatKeyedInfo().end(); it != end; ++it)
+    			{
+    				iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+    			}
+    		}
+    	}
 
 	return iTotalCombatMods >= iOtherTotalCombatMods;
 }
@@ -747,7 +824,8 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 	}
 
 	bool bDivideFirst = false;
-	int compareRatio = AI_sumStrength(pPlot, eDomainType, flags);
+	int iAttackStrength = AI_sumStrength(pPlot, eDomainType, flags);
+	int compareRatio = iAttackStrength;
 	if (compareRatio >= (MAX_INT/100))
 	{
 		compareRatio /= 100;
@@ -778,12 +856,26 @@ int CvSelectionGroupAI::AI_compareStacks(const CvPlot* pPlot, StackCompare::flag
 		strengthFlags |= StrengthFlags::TestPotentialEnemy;
 	}
 	int defenderSum = pPlot->AI_sumStrength(NO_PLAYER, eOwner, eDomainType, strengthFlags, iRange);
-
 	if (bDivideFirst)
 	{
 		defenderSum /= 100;
 	}
 	compareRatio /= std::max(1, defenderSum);
+	LOG_UNIT_BLOCK(4, {
+		CvUnit* pUnit = this->getHeadUnit();
+		FAssert(pUnit != NULL);
+		UnitAITypes eUnitAi = pUnit->AI_getUnitAIType();
+		MissionAITypes eMissionAI = this->AI_getMissionAIType();
+		CvWString StrunitAIType = GC.getUnitAIInfo(eUnitAi).getType();
+		CvWString MissionInfos = MissionAITypeToString(eMissionAI);
+		CvWString StrUnitName = pUnit->getName();
+		if (StrUnitName.length() == 0)
+		{
+			StrUnitName = pUnit->getName(0).GetCString();
+		}
+		logAiEvaluations(4,"Player %d Group ID %d Head ID %d, %S of Type %S, at (%d, %d), Evaluation of Combat Odds [stack size %d], Attack %d Defense %d, Ratio %d", 
+			getOwner(), m_iID, pUnit->getID(), StrUnitName.GetCString(), StrunitAIType.GetCString(), pPlot->getX(), pPlot->getY(), getNumUnits(), iAttackStrength, defenderSum, compareRatio);
+	});
 
 	return compareRatio;
 }
@@ -1177,12 +1269,12 @@ int CvSelectionGroupAI::AI_getGenericValueTimes100(UnitValueFlags eFlags) const
 	return iResult;
 }
 
-bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const
+bool CvSelectionGroupAI::AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity, PropertyTypes pProperty) const
 {
 	PROFILE_EXTRA_FUNC();
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		if (pLoopUnit->AI_beneficialPropertyValueToCity(pCity, NO_PROPERTY) > 0)
+		if (pLoopUnit->AI_beneficialPropertyValueToCity(pCity, pProperty) > 0)
 		{
 			return true;
 		}

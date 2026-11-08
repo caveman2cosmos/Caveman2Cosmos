@@ -90,6 +90,8 @@ CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 		return new CvNetChooseTrait();
 	case GAMEMESSAGE_CHOOSE_MERGE_UNIT:
 		return new CvNetChooseMergeUnit();
+	case GAMEMESSAGE_MERGE_ALL:
+    	return new CvNetMergeAll();
 	case GAMEMESSAGE_CONFIRM_SPLIT_UNIT:
 		return new CvNetConfirmSplitUnit();
 	case GAMEMESSAGE_IMPROVEMENT_UPGRADE:
@@ -1641,6 +1643,43 @@ void CvNetChooseTrait::SetFromBuffer(FDataStreamBase* pStream)
 	pStream->Read(&m_bNewValue);
 }
 
+CvNetMergeAll::CvNetMergeAll() : CvMessageData(GAMEMESSAGE_MERGE_ALL), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)
+{
+}
+
+CvNetMergeAll::CvNetMergeAll(PlayerTypes ePlayer, int iUnitID) : CvMessageData(GAMEMESSAGE_MERGE_ALL), m_ePlayer(ePlayer), m_iUnitID(iUnitID)
+{
+}
+
+void CvNetMergeAll::Debug(char* szAddendum)
+{
+	sprintf(szAddendum, "Merge All In Group, head unit: %d", m_iUnitID);
+}
+
+void CvNetMergeAll::Execute()
+{
+	if (m_ePlayer != NO_PLAYER)
+	{
+		CvUnit* pHeadUnit = GET_PLAYER(m_ePlayer).getUnit(m_iUnitID);
+		if (pHeadUnit != NULL)
+		{
+			pHeadUnit->doMergeAllInGroup();
+		}
+	}
+}
+
+void CvNetMergeAll::PutInBuffer(FDataStreamBase* pStream)
+{
+	pStream->Write(m_ePlayer);
+	pStream->Write(m_iUnitID);
+}
+
+void CvNetMergeAll::SetFromBuffer(FDataStreamBase* pStream)
+{
+	pStream->Read((int*)&m_ePlayer);
+	pStream->Read((int*)&m_iUnitID);
+}
+
 CvNetChooseMergeUnit::CvNetChooseMergeUnit() : CvMessageData(GAMEMESSAGE_CHOOSE_MERGE_UNIT), m_ePlayer(NO_PLAYER), m_iUnitID(NO_UNIT)
 {
 }
@@ -2089,12 +2128,23 @@ void CvNetConfirmAmbush::Execute()
 		if (GET_PLAYER(m_ePlayer).getAmbushingUnit() != FFreeList::INVALID_INDEX && m_bConfirm)
 		{
 			CvUnit* pAttacker = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getAmbushingUnit());
-			bool bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
-			if (pAttacker->plot() == NULL)
+			int DefID = GET_PLAYER(m_ePlayer).getAmbushingTargetUnit();
+			if (!pAttacker) return;
+			if (pAttacker->plot() == NULL)	return;
+			CvPlot* pPlot = pAttacker->plot();
+			CvUnit* pDefender = NULL;
+			if (DefID != FFreeList::INVALID_INDEX)
 			{
-				return;
+				foreach_(CvUnit* unitX, pPlot->units())
+				{
+					if (unitX->getID() == DefID)
+					{
+						pDefender = unitX;
+					}
+				}
 			}
-			pAttacker->enactAmbush(bAssassinate);
+			bool bAssassinate = GET_PLAYER(m_ePlayer).isAssassinate();
+			pAttacker->enactAmbush(bAssassinate, pDefender);
 			GET_PLAYER(m_ePlayer).setAmbushingUnit(FFreeList::INVALID_INDEX);
 		}
 	}

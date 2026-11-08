@@ -82,7 +82,7 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
 	OutputDebugString("Initializing Map: Start\n");
 	PROFILE("CvMap::init");
-	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%s, climate=%s, sealevel=%s, num custom options=%6",
+	gDLL->logMemState( CvString::format("CvMap::init begin - world size=%S, climate=%S, sealevel=%S, num custom options=%d",
 		GC.getWorldInfo(GC.getInitCore().getWorldSize()).getDescription(),
 		GC.getClimateInfo(GC.getInitCore().getClimate()).getDescription(),
 		GC.getSeaLevelInfo(GC.getInitCore().getSeaLevel()).getDescription(),
@@ -250,11 +250,15 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 			m_iGridWidth = GC.getMapInfo(getType()).getGridWidth();
 			m_iGridHeight = GC.getMapInfo(getType()).getGridHeight();
 		}
-		if (GC.getMapInfo(getType()).getWrapX() > 0 && GC.getMapInfo(getType()).getWrapY() > 0)
-		{
-			m_bWrapX = GC.getMapInfo(getType()).getWrapX();
-			m_bWrapY = GC.getMapInfo(getType()).getWrapY();
-		}
+		// X-wrap and Y-wrap are independent (e.g. a cylinder is wrapX=1, wrapY=0), so set each on its own.
+        if (GC.getMapInfo(getType()).getWrapX() > 0)
+        {
+            m_bWrapX = true;
+        }
+        if (GC.getMapInfo(getType()).getWrapY() > 0)
+        {
+            m_bWrapY = true;
+        }
 	}
 /*******************************/
 /***** Parallel Maps - End *****/
@@ -294,13 +298,13 @@ void CvMap::setup()
 {
 	PROFILE("CvMap::setup");
 
-	gDLL->getFAStarIFace()->Initialize(&GC.getPathFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getInterfacePathFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getStepFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), stepDestValid, stepHeuristic, stepCost, stepValid, stepAdd, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getRouteFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, routeValid, NULL, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getBorderFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, borderValid, NULL, NULL, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getAreaFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, areaValid, NULL, joinArea, NULL);
-	gDLL->getFAStarIFace()->Initialize(&GC.getPlotGroupFinder(), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, plotGroupValid, NULL, countPlotGroup, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getPathFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getInterfacePathFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), pathDestValid, pathHeuristic, pathCost, pathValid, pathAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getStepFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), stepDestValid, stepHeuristic, stepCost, stepValid, stepAdd, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getRouteFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, routeValid, NULL, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getBorderFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, borderValid, NULL, NULL, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getAreaFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, areaValid, NULL, joinArea, NULL);
+	gDLL->getFAStarIFace()->Initialize(&GC.getPlotGroupFinder(m_eType), getGridWidth(), getGridHeight(), isWrapX(), isWrapY(), NULL, NULL, NULL, plotGroupValid, NULL, countPlotGroup, NULL);
 }
 
 
@@ -390,19 +394,23 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 
 struct TravelingUnit
 {
-	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
-		: numTurnsUntilArrival(numTravelTurns)
+	TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns, MapTypes originMap)
+		: numTurnsUntilArrival(numTravelTurns), originMap(originMap)
 	{
 		unit = static_cast<const CvUnitAI&>(travelingUnit);
 	}
 
 	CvUnitAI unit;
+
 	int numTurnsUntilArrival;
+	MapTypes originMap;
 };
 
 void CvMap::moveUnitToMap(CvUnit& unit, int numTravelTurns)
 {
-	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns));
+	// Assumes the current map is the one that this function is being called from
+	// You can't click the unit's move map mission without having it selected, so this should be a safe assumption
+	m_IncomingUnits.push_back(new TravelingUnit(unit, numTravelTurns, CURRENT_MAP));
 	unit.kill(true, NO_PLAYER);
 }
 
@@ -419,8 +427,40 @@ void CvMap::updateIncomingUnits()
 
 			const CvUnitAI& unit = travelingUnit->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
-			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
+			// Default is to pick a completely random coordinate
+			// Arriving at MAP_MOON, MAP_MARS, MAP_VENUS, or MAP_TITAN should not override these
+			// (Toaster) Perhaps in these maps, if the unit-owner has a city there, the unit always arrives at one of those cities?
+			int iDestX = GC.getGame().getSorenRandNum(m_iGridWidth, "Multimap arriving unit default x coordinate");
+			int iDestY = GC.getGame().getSorenRandNum(m_iGridHeight, "Multimap arriving unit default y coordinate");
+
+			// TODO: Arrival location logic for other source-destination pairs
+
+			if (m_eType == MAP_EARTH)
+			{
+				// Units arriving on Earth always arrive at the owner's capital
+				const CvCity* pCapital = owner.getCapitalCity();
+				if (pCapital != NULL)
+                {
+                    iDestX = pCapital->getX();
+                    iDestY = pCapital->getY();
+                }
+			}
+			else if (m_eType == MAP_CISLUNAR)
+			{
+				if (travelingUnit->originMap < MAP_CISLUNAR)
+				{
+					// Many units traveling from Earth to Cislunar can initially only operate in Orbit plots, which are the bottom 3 rows of the map
+					// TODO: Better logic is probably to find all Orbit plots and pick one of those randomly
+					iDestY = GC.getGame().getSorenRandNum(3, "Multimap arriving unit Earth to Cislunar y coordinate");
+				}
+				else
+				{
+					// Arriving from outside Earth, so units spawn on the opposite side of Orbit instead
+					iDestY = m_iGridHeight - 1 - GC.getGame().getSorenRandNum(3, "Multimap arriving unit non-Earth to Cislunar y coordinate");
+				}
+			}
+
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), iDestX, iDestY, unit.AI_getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
 				static_cast<CvUnitAI&>(*newUnit) = unit;
@@ -476,15 +516,25 @@ void CvMap::updateFlagSymbolsInternal(bool bForce)
 }
 
 
-void CvMap::updateFog()
+void CvMap::updateFog(const bool bApplyDecay)
 {
 	PROFILE_FUNC();
 
 	for (int iI = 0; iI < numPlots(); iI++)
 	{
-		plotByIndex(iI)->updateFog();
+		plotByIndex(iI)->updateFog(bApplyDecay);
 	}
 }
+
+#ifdef ENABLE_FOGWAR_DECAY
+void CvMap::InitFogDecay(const bool pWithRandom)
+{
+	for (int iI = 0; iI < numPlots(); iI++)
+	{
+		plotByIndex(iI)->InitFogDecay(pWithRandom);
+	}
+}
+#endif
 
 
 void CvMap::updateVisibility()
@@ -1297,6 +1347,11 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	OutputDebugString("Reading Map: End\n");
+
+#ifdef ENABLE_FOGWAR_DECAY
+	InitFogDecay(true);
+#endif
+
 }
 
 // save object to a stream

@@ -142,8 +142,8 @@
 				<change module="AutomatedSettings" function="changedMostExpensive"/>
 			</option>
 
-			<option id="MostExpierenced" key="MostExpierenced" type="boolean" default="False" get="isMostExpierenced" set="setMostExpierenced">
-				<change module="AutomatedSettings" function="changedMostExpierenced"/>
+			<option id="MostExperienced" key="MostExperienced" type="boolean" default="False" get="isMostExperienced" set="setMostExperienced">
+				<change module="AutomatedSettings" function="changedMostExperienced"/>
 			</option>
 
 			<list id="MinimumUpgradeGold" key="MinimumUpgradeGold" type="int" default="75"

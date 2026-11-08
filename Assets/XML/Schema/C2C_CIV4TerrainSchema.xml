@@ -281,6 +281,7 @@
 	<ElementType name="bNoRiver" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoAdjacent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresFlatlands" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRequiresBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresRiver" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCoastalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
@@ -717,6 +718,7 @@
 		<element type="bRiverSideMakesValid" minOccurs="0"/>
 		<element type="bNoFreshWater" minOccurs="0"/>
 		<element type="bRequiresFlatlands" minOccurs="0"/>
+		<element type="bRequiresBonus" minOccurs="0"/>
 		<element type="bRequiresRiverSide" minOccurs="0"/>
 		<element type="bRequiresIrrigation" minOccurs="0"/>
 		<element type="bCarriesIrrigation" minOccurs="0"/>

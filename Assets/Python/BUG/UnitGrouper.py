@@ -423,8 +423,9 @@ class GroupingStats:
 
 	def _processUnit(self, player, team, unitStats):
 		keys = self.grouping.calcGroupKeys(unitStats.unit, player, team)
-		for key in keys:
-			self.groups[key]._addUnit(unitStats)
+		if keys:
+			for key in keys:
+				self.groups[key]._addUnit(unitStats)
 
 	def itergroups(self):
 		return self.groups.itervalues()

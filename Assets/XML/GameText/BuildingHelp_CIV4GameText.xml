@@ -7,6 +7,7 @@
 		<German>[ICON_BULLET]kann %F1_CmrcIcon-Rate anpassen</German>
 		<Italian>[ICON_BULLET]Può regolare il ritmo del %F1_CmrcIcon</Italian>
 		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
+		<Russian>[ICON_BULLET]Может регулировать %F1_CmrcIcon ставку</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AFFLICTION_OUTBREAK_LEVEL_CHANGE</Tag>
@@ -14,11 +15,13 @@
 		<French>[ICON_BULLET]Modifie les chances d'épidémie de %s1_Affliction de %d2_Amount.</French>
 		<Italian>[ICON_BULLET]Modifica le chance di un'epidemia di %s1_Affliction del %d2_Amount.</Italian>
 		<Polish>[ICON_BULLET]Reguluje szanse na wybuch: %s1_Affliction o %d2_Amount.</Polish>
+		<Russian>[ICON_BULLET]Изменяет базовый порог вспышки %s1_Affliction на %d2_Amount.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AID_RATE</Tag>
 		<English>[ICON_BULLET]%D1_Amount Aid in Overcoming %s2_Type Afflictions within the City</English>
 		<French>[ICON_BULLET]%D1_Amount d'aide pour surmonter les afflications de type %s2_Type au sein de la ville</French>
+		<Russian>[ICON_BULLET]%D1_Amount помощь внутри города в преодолении болезней в количестве %s2_Type</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_AIRLIFT</Tag>
@@ -96,7 +99,7 @@
 		<Italian>[ICON_BULLET]Viene [COLOR_HIGHLIGHT_TEXT]costruito automaticamente[COLOR_REVERT] dai tuoi cittadini quando i prerequisiti sono soddisfatti</Italian> <!-- city screen hover automated building -->
 		<Spanish>Este edificio será automáticamente construido por tus ciudadanos cuando se cumplan todos sus requisitos</Spanish>
 		<Polish>Ten budynek zostanie wzniesiony przez mieszka&#241;c&#243;w miasta gdy wymagania zostan&#185; spe&#179;nione</Polish>
-		<Russian>Ýòî çäàíèå ñòðîèòñÿ àâòîìàòè÷åñêè âàøèìè ãðàæäàíàìè ïðè âûïîëíåíèè âñåõ íåîáõîäèìûõ óñëîâèé</Russian>
+		<Russian>Cтроится автоматически при выполнении необходимых условий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_BIRTH_RATE_MOD</Tag>
@@ -417,6 +420,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
 		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Promotion gratuite [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] pour[SPACE]</French>
 		<Italian>[NEWLINE][ICON_BULLET]Promozione gratuita [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] per ogni nuova[SPACE]</Italian> <!-- city screen hover automated building -->
 		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
 		<Russian>[NEWLINE][ICON_BULLET]Бесплатная квалификация "[COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT]" для[SPACE]</Russian>
@@ -424,6 +428,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON</Tag>
 		<English>[SPACE]new units that are[SPACE]</English>
+		<French>[SPACE]les nouvelles unités qui sont[SPACE]</French>
 		<Italian>[SPACE]</Italian>
 		<Russian>[SPACE]новые подразделения, которые[SPACE]</Russian>
 	</TEXT>
@@ -495,7 +500,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_TRAIT</Tag>
 		<English>[ICON_BULLET]As long as this building is active, its owning player gains the %s1_Trait Trait.</English>
 		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
-		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет черту %s1_Trait.</Russian>
+		<Russian>[ICON_BULLET]Пока это здание активно, владеющий им игрок сохраняет качество %s1_Trait.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP</Tag>
@@ -574,6 +579,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
 		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
+		<French>[ICON_BULLET]Bâtiment offert gratuitement sur le même continent par[SPACE]</French>
 		<German>[ICON_BULLET]kostenloses Gebäude auf dem gleichen Kontinent[SPACE]</German>
 		<Russian>[ICON_BULLET]На том же континенте постройка дается бесплатно благодаря[SPACE]</Russian>
 	</TEXT>
@@ -590,9 +596,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD</Tag>
 		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Modificateur national de coût %d1%% :[SPACE]</French>
 		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] per gli edifici:[SPACE]</Italian> <!-- city screen hover on building unique culture -->
+		<Italian>[NEWLINE][ICON_BULLET]Modificatore costo nazionale [COLOR_HIGHLIGHT_TEXT]%d1%%[COLOR_REVERT] per gli edifici:[SPACE]</Italian>
 		<Russian>[NEWLINE][ICON_BULLET]Общегосударственное изменение цены на %d1%%:[SPACE]</Russian>
+		<!-- city screen hover on building unique culture -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT</Tag>
@@ -690,7 +698,7 @@
 		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
 		<Italian>[ICON_BULLET]Felicità [COLOR_HIGHLIGHT_TEXT]%D1_change[COLOR_REVERT] [ICON_HAPPY] con un leader [COLOR_HIGHLIGHT_TEXT]%s2_trait[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
-		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для предподителей с чертой %s2_trait</Russian>
+		<Russian>[ICON_BULLET]%D1_change[ICON_HAPPY] для лидеров с качеством %s2_trait</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_ALL_CITIES</Tag>
@@ -906,6 +914,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles nationales.[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать национальные чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -929,6 +938,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour construire :[SPACE]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Necessario[COLOR_REVERT] per costruire (se non ancora in possesso): </Italian> <!-- hover on building rock gatherer -->
 		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Может потребоваться для строительства[SPACE]</Russian>
@@ -936,6 +946,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
 		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour construire n'importe où dans l'empire :[SPACE]</French>
 		<Italian>[ICON_BULLET]Necessario per costruire in qualsiasi città:[NEWLINE][ICON_BULLET]</Italian>
 		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Необходимо для строительства в любой месте вашей цивилизации:[SPACE]</Russian>
@@ -943,6 +954,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
 		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
+		<French>[ICON_BULLET]Nécessaire pour entraîner :[SPACE]</French>
 		<Italian>[ICON_BULLET]Potrebbe essere indispensabile per addestrare:[NEWLINE][TAB]</Italian>
 		<German>[ICON_BULLET]optional erforderlich für die Ausbildung von:[SPACE]</German>
 		<Russian>[ICON_BULLET]Может потребоваться для обучения[SPACE]</Russian>
@@ -1411,6 +1423,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_SPREADS_RELIGION</Tag>
 		<English>[ICON_BULLET]%F1 spread change: %D2</English>
+		<French>[ICON_BULLET]%F1 modification de la propagation : %D2</French>
 		<Russian>[ICON_BULLET]%F1 изменение распространения: %D2</Russian>
 	</TEXT>
 	<TEXT>
@@ -1434,6 +1447,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num Team Wonders.[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles d'équipe.[COLOR_REVERT]</French>
 		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать командные чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -1628,12 +1642,13 @@
 		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Mod%% быстрее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Mod%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
 		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
-		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать мировые чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
+		<French>[COLOR_WARNING_TEXT]Le niveau actuel de culture de cette ville ne peut supporter que %d1_Num merveilles du monde.[COLOR_REVERT]</French>
+		<Russian>[COLOR_WARNING_TEXT]Уровень культуры этого города может поддерживать великие чудеса только в количестве: %d1_Num.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>
@@ -1642,7 +1657,7 @@
 		<German>[ICON_BULLET]Weltwunder (%d1_Num zulässig)</German>
 		<Italian>[ICON_BULLET]Meraviglia mondiale (%d1_Num [NUM1:permessa:permesse])</Italian>
 		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
-		<Russian>[ICON_BULLET]Мировое чудо (может быть только %d1_Num)</Russian>
+		<Russian>[ICON_BULLET]Великое чудо (может быть только %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_LEFT</Tag>
@@ -1651,7 +1666,7 @@
 		<German>[SPACE](Weltwunder: %d1_Num übrig)</German>
 		<Italian>[SPACE](Meraviglia mondiale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
 		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
-		<Russian>[SPACE](Мировое чудо: %d1_Num осталось)</Russian>
+		<Russian>[SPACE](Великое чудо: осталось %d1_Num)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_ZONE_OF_CONTROL</Tag>

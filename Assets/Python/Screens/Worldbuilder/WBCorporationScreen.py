@@ -20,6 +20,7 @@ class WBCorporationScreen:
 	def interfaceScreen(self, iPlayerX):
 		screen = CyGInterfaceScreen("WBCorporationScreen", CvScreenEnums.WB_CORPORATION)
 		global iSelectedPlayer
+		global bHeadquarter
 
 		iSelectedPlayer = iPlayerX
 
@@ -84,6 +85,8 @@ class WBCorporationScreen:
 		iWidth = screen.getXResolution() * 3/4 - 20
 		iHeight = (screen.getYResolution() - iY - 100) / 24 * 24 + 2
 
+		screen.deleteWidget("WBAllCorporations")
+		screen.deleteWidget("WBCityCorporations")
 		screen.addTableControlGFC("WBAllCorporations", 1 + GC.getNumCorporationInfos(), iX, iY, iWidth, 50, False, True, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBAllCorporations", 0, "", 150)
 		for i in xrange(2):
@@ -96,7 +99,7 @@ class WBCorporationScreen:
 			sText = u"%c" %(GC.getCorporationInfo(i).getChar())
 			screen.setTableColumnHeader("WBAllCorporations", i + 1, "", (iWidth - 150) / GC.getNumCorporationInfos())
 			screen.setTableText("WBAllCorporations", i + 1, 0, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8201, i, 1<<2)
-			screen.setTableText("WBAllCorporations", i + 1, 1, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8201, i, 1<<2)
+			screen.setTableText("WBAllCorporations", i + 1, 1, "<font=4>" + sText + "</font>", "", WidgetTypes.WIDGET_PYTHON, 8301, i, 1<<2)
 
 		screen.addTableControlGFC("WBCityCorporations", 3 + GC.getNumCorporationInfos(), iX, iY + 60, iWidth, iHeight, False, True, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBCityCorporations", 0, "", 24)
@@ -129,6 +132,7 @@ class WBCorporationScreen:
 		iWidth = screen.getXResolution()/4 - 40
 		iHeight = (screen.getYResolution() - iY - 40) / 24 * 24 + 2
 
+		screen.deleteWidget("WBHeadquarter")
 		screen.addTableControlGFC("WBHeadquarter", 3, iX, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBHeadquarter", 0, "", 24)
 		screen.setTableColumnHeader("WBHeadquarter", 1, "", 24)
@@ -149,7 +153,6 @@ class WBCorporationScreen:
 	def handleInput(self, inputClass):
 		screen = CyGInterfaceScreen("WBCorporationScreen", CvScreenEnums.WB_CORPORATION)
 		global iSelectedPlayer
-		global bHeadquarter
 		global iOwnerType
 
 		if inputClass.getButtonType() == WidgetTypes.WIDGET_PYTHON:
@@ -158,9 +161,17 @@ class WBCorporationScreen:
 				iPlayerX = inputClass.getData1() - 7200
 				WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(GC.getPlayer(iPlayerX).getCity(iCityID))
 
-			elif inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
-				iPlayerX = inputClass.getData2() /10000
+			elif inputClass.getData1() == 7876:
+				iPlayerX = inputClass.getData2() / 10000
 				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayerX)
+
+			elif inputClass.getData1() == 7872:
+				# iCiv = inputClass.getData2()
+				# 7872 passes iCiv not a player, no navigation possible from civ alone
+                # Temp patch to leave the button working for now(or forever)
+				iPlayerX = inputClass.getData2() / 10000
+				WBPlayerScreen.WBPlayerScreen(self.WB).interfaceScreen(iPlayerX)
+				pass
 
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
@@ -185,7 +196,10 @@ class WBCorporationScreen:
 
 		elif inputClass.getFunctionName() == "WBCityCorporations":
 			if inputClass.getData1() == 8201:
-				pCity = lCities[inputClass.getData()][0]
+				iRow = inputClass.getData()
+				if iRow < 0 or iRow >= len(lCities):
+					return 1
+				pCity = lCities[iRow][0]
 				if bHeadquarter:
 					self.editHeadquarter(inputClass.getData2(), pCity)
 				else:
@@ -211,6 +225,13 @@ class WBCorporationScreen:
 		if pCity.isHeadquartersByType(item):
 			CyGame().clearHeadquarters(item)
 		else:
+			bonuses = GC.getCorporationInfo(item).getPrereqBonuses()
+			if bonuses and not any(pCity.hasBonus(eBonus) for eBonus in bonuses):
+				CyInterface().addImmediateMessage(
+					CyTranslator().getText("TXT_KEY_WB_CORPORATION_NO_BONUS", (pCity.getName(), GC.getCorporationInfo(item).getDescription())),
+					"AS2D_ERROR"
+				)
+				return
 			CyGame().setHeadquarters(item, pCity, False)
 		self.placeHeadquarter()
 

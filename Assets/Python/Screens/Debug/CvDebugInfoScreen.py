@@ -104,17 +104,14 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		d_TableData = {}
 		d_TableData[0] = self.setTeams()
 
-		strBuffer = ""
 		list_loopRowData = []
 
 		for x in range(self.iNumTeams):
 			strBuffer = gc.getTeam(x).getName()
 			list_loopRowData.append(strBuffer)
-			strBuffer = ""
 
 			for y in range(self.iNumTeams):
 				pTeamX = gc.getTeam(x)
-				#pTeamY = gc.getTeam(y)
 
 				# if the same team
 				if x != y:
@@ -162,33 +159,28 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		d_TableData = {}
 		d_TableData[0] = self.setPlayers()
 
-		strBuffer = ""
 		list_loopRowData = []
 
 		for x in range(self.iNumPlayers):
 
 			strBuffer = gc.getPlayer(x).getName()
 			list_loopRowData.append(strBuffer)
-			strBuffer = ""
 
 			for y in range(self.iNumPlayers):
 				pPlayerX = gc.getPlayer(x)
-				pPlayerY = gc.getPlayer(y)
 
 				pTeamX = gc.getTeam(pPlayerX.getTeam())
-				#pTeamY = gc.getTeam(pPlayerY.getTeam())
 
 				# if the same Player
 				if ( not x == y ):
 
 					# if teams have met
-					if pTeamX.isHasMet(y):
+					if pTeamX.isHasMet(gc.getPlayer(y).getTeam()):
 
 						iPlayerXAttitudeTowardPlayerY = pPlayerX.AI_getAttitude(y)
 
 						strBuffer = "%s" %(gc.getAttitudeInfo(iPlayerXAttitudeTowardPlayerY).getDescription(),)
 						list_loopRowData.append(strBuffer)
-						strBuffer = ""
 						continue # prevents the value from getting overwritten by a font icon
 
 					# else they have not met
@@ -200,7 +192,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 					strBuffer = "Ally"
 
 				list_loopRowData.append(strBuffer)
-				strBuffer = ""
 
 			d_TableData[x+1] = list_loopRowData
 			list_loopRowData = []
@@ -212,7 +203,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 	def drawPlayerCivics(self):
 		d_TableData = {}
-		strName = ""
 		list_loopRowData = []
 
 		d_TableData[0] = self.setPlayers("Civics")
@@ -234,7 +224,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 	def drawPlayerOverviewInfo(self):
 		d_TableData = {}
-		strName = ""
 		list_loopRowData = []
 
 		d_TableData[0] = self.setPlayers("Civ Info")
@@ -276,7 +265,6 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		self.COLUMN_X = 75
 
 		d_TableData = {}
-		strName = ""
 		list_loopRowData = []
 
 		d_TableData[0] = self.setPlayers("Unit AI")
@@ -329,13 +317,8 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 		areas = [area for (area_size, area) in area_sizes]
 
 		bonus_infos = [gc.getBonusInfo(i) for i in range(gc.getNumBonusInfos())]
-		title_list = [u"BonusDistro"] + [u"Area"] + [u"Size"] + [u"Starting Plots"] + [u"Unique Bonus Types"] + [u"Total Bonuses"]
-
-		bonusList = ""
-		for bonus in bonus_infos:
-			bonusList += bonus.getDescription()[0]
-		title_list += bonusList
-
+		title_list = [u"BonusDistro", u"Area", u"Size", u"Starting Plots", u"Unique Bonus Types", u"Total Bonuses"]
+		title_list += [bonus.getDescription() for bonus in bonus_infos]
 		d_TableData[0] = title_list
 
 		total = 0
@@ -406,14 +389,8 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 
 		numColumns = len(d_TableData[0])
 
-		#print "NumColumns = %d" %numColumns
-		#print d_TableData
-
-		#scrollPanel = self.getNextWidgetName()
-		#screen.addScrollPanel(scrollPanel, u"", 0, 100, 1000,580, PanelStyles.PANEL_STYLE_DEFAULT)
 
 		szTableName = self.getNextWidgetName()
-		#screen.attachTableControlGFC(scrollPanel, szTableName, numColumns, True, True, 32,32,TableStyles.TABLE_STYLE_STANDARD)
 		screen.addTableControlGFC(szTableName, numColumns, 0, 100, 1000, 580, True, True, 32,32,TableStyles.TABLE_STYLE_STANDARD)
 
 		columnHeaders = d_TableData[0]
@@ -478,11 +455,8 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 	def InfoType (self, inputClass):
 		screen = self.getScreen()
 		'called when the player activates the drop down box'
-		#print inputClass.getNotifyCode()
 
 		if ( inputClass.getNotifyCode() == int(NotifyCode.NOTIFY_LISTBOX_ITEM_SELECTED) ) :
-			#return
-			#szPulldownID = str(inputClass.getID())
 			# Get the ID that was selected...
 			iSelectedID = screen.getSelectedPullDownID( self.szDebugInfoPulldownID )
 			self.deleteAllWidgets()

@@ -3,24 +3,30 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT</Tag>
 		<English>Full city screen on build prompt</English>
-		<Italian>Accedi schermo città dalla scelta di costruzione</Italian> <!-- city screen, ciy option upper right -->
+		<French>Écran complet de la ville lors de l'invite de construction</French>
+		<Italian>Accedi schermo città dalla scelta di costruzione</Italian>
 		<Russian>Полный экран города при запросе строительства</Russian>
+		<!-- city screen, ciy option upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_FULL_CITY_SCREEN_BUILD_PROMPT_HELP</Tag>
 		<English>Enter full city screen, rather than just select city, when the player is prompted on what to build next.</English>
+		<French>Entrer dans l'écran complet de la ville, plutôt que de simplement sélectionner la ville, lorsque le joueur est invité à choisir quoi construire ensuite.</French>
 		<Italian>Entra nello [COLOR_HIGHLIGHT_TEXT]schermo della città[COLOR_REVERT] quando viene chiesto cosa costruire, invece di selezionare semplicemente la città</Italian>
 		<Russian>Открывать полный экран города, а не только меню выбора, когда игроку предлагается указать, что строить дальше.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN</Tag>
 		<English>Delay city cycle to end of turn</English>
-		<Italian>Ciclo città alla fine del turno</Italian> <!-- city screen, ciy option upper right -->
+		<French>Retarder le cycle des villes jusqu'à la fin du tour</French>
+		<Italian>Ciclo città alla fine del turno</Italian>
 		<Russian>Задержать цикл города до конца хода</Russian>
+		<!-- city screen, ciy option upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_DELAY_CITY_CYCLE_To_END_OF_TURN_HELP</Tag>
 		<English>City cycle process will initiate when you try to end the turn</English>
+		<French>Le processus de cycle des villes s'initiera lorsque vous essayerez de terminer le tour</French>
 		<Italian>I processi del ciclo città verrano iniziati quando si prova  a [COLOR_HIGHLIGHT_TEXT]terminare il turno[COLOR_REVERT]</Italian>
 		<Russian>Цикл города начнется, когда вы завершите ход</Russian>
 	</TEXT>
@@ -36,6 +42,7 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNCONSTRUCTABLE_BUILDINGS_HELP</Tag>
 		<English>Hides all buildings that cannot be constructed. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
+		<French>Masque tous les bâtiments qui ne peuvent pas être construits. C'est la valeur par défaut utilisée lors du chargement d'une sauvegarde ou du démarrage d'une nouvelle partie. Activer cette option ne modifiera pas la sélection de filtre actuelle pour n'importe laquelle de vos villes.</French>
 		<Italian>Nasconde tutti gli [COLOR_HIGHLIGHT_TEXT]edifici che non possono essere costruiti[COLOR_REVERT] (questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita ,l'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città)</Italian>
 		<Russian>Скрывает все здания, которые нельзя построить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
 	</TEXT>
@@ -51,19 +58,23 @@
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_HIDE_UNTRAINABLE_UNITS_HELP</Tag>
 		<English>Hides all units that cannot be trained. This is the default value used when loading a save or starting a new game. Toggling this option won't change the current filter selection for any of your cities.</English>
-		<Russian>Скрывает все подразделения, которые нельзя обучить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
+		<French>Masque toutes les unités qui ne peuvent pas être entraînées. C'est la valeur par défaut utilisée lors du chargement d'une sauvegarde ou du démarrage d'une nouvelle partie. Activer cette option ne modifiera pas la sélection de filtre actuelle pour n'importe laquelle de vos villes.</French>
 		<Italian>Nasconde tutte le [COLOR_HIGHLIGHT_TEXT]unità che non possono essere addestrate[COLOR_REVERT] (questa è l'impostazione predefinita utilizzata dopo il caricamento di un salvataggio o all'inizio di una nuova partita, l'attivazione di questa opzione non cambierà la selezione del filtro corrente per nessuna delle tue città)</Italian>
+		<Russian>Скрывает все подразделения, которые нельзя обучить. Это значение по умолчанию, используемое после загрузки сохранения или начала новой игры. Переключение данной опции не изменит текущие настройки фильтров ни в одном другом вашем городе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE</Tag>
 		<English>Icon size: %d1 pixels</English>
-		<Italian>Grandezza delle icone: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] pixel</Italian> <!-- city screen, ciy option upper right -->
+		<French>Taille d'icône : %d1 pixels</French>
+		<Italian>Grandezza delle icone: [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] pixel</Italian>
 		<Russian>Размер иконки: %d1 пикселей</Russian>
+		<!-- city screen, ciy option upper right -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_OPTION_CITY_ICON_SIZE_HELP</Tag>
 		<English>The size of the main city selection icons, and unit/building icons within the construction tabs.</English>
-		<Russian>Размер основных иконок выбора города и иконок подразделений/зданий на вкладках строительства.</Russian>
+		<French>La taille des icônes principales de sélection de ville, et des icônes d'unités/bâtiments dans les onglets de construction.</French>
 		<Italian>Cambia la [COLOR_HIGHLIGHT_TEXT]dimensione delle principali icone[COLOR_REVERT] nello schermo della città e nelle unità e edifici nello schermo di produzione</Italian>
+		<Russian>Размер основных иконок выбора города и иконок подразделений/зданий на вкладках строительства.</Russian>
 	</TEXT>
 </Civ4GameText>

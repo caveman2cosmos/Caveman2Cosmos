@@ -201,6 +201,7 @@ class WBEventScreen:
 
 	def placeOtherCities(self):
 		screen = CyGInterfaceScreen("WBEventScreen", CvScreenEnums.WB_EVENT)
+		screen.deleteWidget("WBOtherCity")
 		if iOtherPlayer == -1:
 			screen.hide("WBOtherCity")
 			return
@@ -304,7 +305,7 @@ class WBEventScreen:
 
 		elif inputClass.getFunctionName() == "WBEventPlayer":
 			if inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
-				iEventPlayer = inputClass.getData2() /10000
+				iEventPlayer = inputClass.getData2() //10000
 				iSelectedUnit = -1
 				if iEventPlayer == iOtherPlayer:
 					iOtherPlayer = -1
@@ -316,7 +317,7 @@ class WBEventScreen:
 
 		elif inputClass.getFunctionName() == "WBOtherPlayer":
 			if inputClass.getData1() == 7876 or inputClass.getData1() == 7872:
-				iTemp = inputClass.getData2() /10000
+				iTemp = inputClass.getData2() //10000
 				if iOtherPlayer == iTemp:
 					iOtherPlayer = -1
 				else:
@@ -379,7 +380,7 @@ class WBEventScreen:
 			iCity = -1
 			if pPlot.isCity():
 				iCity = pPlot.getPlotCity().getID()
-			triggerData = pPlayer.initTriggeredData(iSelectedEvent, True, iCity, pPlot.getX(), pPlot.getY(), iOtherPlayer, iOtherCity, iSelectedReligion, iSelectedCorporation, iSelectedUnit, iSelectedBuilding)
+			pPlayer.initTriggeredData(iSelectedEvent, True, iCity, pPlot.getX(), pPlot.getY(), iOtherPlayer, iOtherCity, iSelectedReligion, iSelectedCorporation, iSelectedUnit, iSelectedBuilding)
 			screen.hideScreen()
 		return 1
 

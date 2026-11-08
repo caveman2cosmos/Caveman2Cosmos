@@ -1,11 +1,14 @@
 #include "CvGameCoreDLL.h"
+#include "CvDefines.h"
 #include "CityOutputHistory.h"
 #include "CvArea.h"
 #include "CvCity.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"
+#include "CvGameAI.h"
 #include "CyUnit.h"
+#include "CvGame.h"
 #include "CvUnitSelectionCriteria.h"
 
 //
@@ -269,6 +272,11 @@ int CyCity::getProductionTurnsLeft() const
 int CyCity::getUnitProductionTurnsLeft(int /*UnitTypes*/ iUnit, int iNum) const
 {
 	return m_pCity->getProductionTurnsLeft((UnitTypes) iUnit, iNum);
+}
+
+int CyCity::getUnitProductionTurnsLeftPreMerged(int /*UnitTypes*/ iUnit) const
+{
+	return m_pCity->getProductionTurnsLeftPreMerged((UnitTypes) iUnit);
 }
 
 int CyCity::getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int iNum) const
@@ -571,7 +579,16 @@ CyArea* CyCity::waterArea() const
 
 int CyCity::getGameTurnFounded() const
 {
-	return m_pCity->getGameTurnFounded();
+	CvGame& GAME = GC.getGame();
+	bool bHistoricalCalendar = GAME.isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	return m_pCity->getGameTurnFounded(bHistoricalCalendar);
+}
+
+int CyCity::getGameDateFounded() const
+{
+	CvGame& GAME = GC.getGame();
+	bool bHistoricalCalendar = GAME.isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	return m_pCity->getGameDateFounded(bHistoricalCalendar);
 }
 
 int CyCity::getGameTurnAcquired() const
@@ -594,7 +611,7 @@ void CyCity::changePopulation(int iChange)
 	m_pCity->changePopulation(iChange);
 }
 
-int CyCity::getRealPopulation() const
+int64_t CyCity::getRealPopulation() const
 {
 	return m_pCity->getRealPopulation();
 }
@@ -1557,6 +1574,11 @@ void CyCity::clearOrderQueue()
 void CyCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce)
 {
 	m_pCity->pushOrder(eOrder, iData1, iData2, bSave, bPop, bAppend, bForce);
+}
+
+void CyCity::pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce)
+{
+	m_pCity->pushPreMergeTrainOrder(eUnit, bSave, bPop, bAppend, bForce);
 }
 
 void CyCity::popOrder(int iNum, bool bFinish, bool bChoose)

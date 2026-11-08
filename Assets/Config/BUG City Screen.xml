@@ -52,12 +52,19 @@
 			<option id="BaseWeightHammer" key="BaseWeightHammer" type="int" default="8"/>
 			<option id="BaseWeightCommerce" key="BaseWeightCommerce" type="int" default="6"/>
 
+            <!-- Production overflow cap: turns of base production a city may bank as
+			     overflow before the excess is converted to gold. Default 2. -->
+            <option id="ProductionOverflowLimit" key="ProductionOverflowLimit" type="int" default="2"/>
+
 			<!-- City option screen -->
 			<option id="BuildIconSize" key="Build Icon Size" type="int" default="64" get="getBuildIconSize" set="setBuildIconSize"/>
 			<option id="HideUnconstructableBuildings" key="HideUnconstructableBuildings" type="boolean" default="True" get="isHideUnconstructableBuildings" set="setHideUnconstructableBuildings"/>
 			<option id="HideUntrainableUnits" key="HideUntrainableUnits" type="boolean" default="True" get="isHideUntrainableUnits" set="setHideUntrainableUnits"/>
 			<option id="FullCityScreenOnEmptyBuildQueue" key="FullCityScreenOnEmptyBuildQueue" type="boolean" default="False" get="isFullCityScreenOnEmptyBuildQueue" set="setFullCityScreenOnEmptyBuildQueue"/>
 			<option id="DelayCityCycleToEndOfTurn" key="DelayCityCycleToEndOfTurn" type="boolean" default="true" get="isDelayCityCycleToEndOfTurn" set="setDelayCityCycleToEndOfTurn"/>
+			<option id="BuildList__PreMergedUnit" key="PreMergedUnit" type="boolean" default="True"
+					label="Build Pre-Merged Unit"
+					help="When checked, cities with Size Matters enabled can build a unit already merged to the current era's max rank, for a correspondingly higher one-time production cost."/>
 		</section>
 	</options>
 </mod>

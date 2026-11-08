@@ -37,7 +37,6 @@ class WBCityEditScreen:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		screen.setText("WBCityEditExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
-		sText = "<font=3b>%s, X: %d, Y: %d</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(pCity.plot().getLatitude(),)), pCity.getX(), pCity.getY())
 
 		sText = u"<font=3b>%s ID: %d, %s: %d</font>" %(CyTranslator().getText("TXT_WORD_CITY", ()), pCity.getID(), CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()), pPlot.getArea())
 		screen.setLabel("PlotScreenHeaderB", "Background", "<font=4b>" + sText + "</font>", 1<<2, screen.getXResolution()/2, 50, -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
@@ -138,7 +137,7 @@ class WBCityEditScreen:
 
 	def placeMap(self):
 		screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
-		iY = 110
+		screen.deleteWidget("PlotView")
 		iWidth = screen.getXResolution()/2 - 40
 		iMapHeight = min((screen.getYResolution()/2 - 195), iWidth * 2/3)
 		iMapWidth = iMapHeight * 3/2
@@ -238,6 +237,12 @@ class WBCityEditScreen:
 		screen.setButtonGFC("CityEspionageHealthMinus", "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 		sText = u"<font=3>%s %s: %d</font>" %(CyTranslator().getText("TXT_WORD_ESPIONAGE",()), CyTranslator().getText("[ICON_UNHEALTHY]", ()), pCity.getEspionageHealthCounter())
 		screen.setLabel("CityEspionageHealthText", "Background", sText, 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+
+		iY += 30
+		screen.setButtonGFC("CityEspionageHappyPlus", "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
+		screen.setButtonGFC("CityEspionageHappyMinus", "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
+		sText = u"<font=3>%s %s: %d</font>" %(CyTranslator().getText("TXT_WORD_ESPIONAGE",()), CyTranslator().getText("[ICON_UNHAPPY]", ()), pCity.getEspionageHappinessCounter())
+		screen.setLabel("CityEspionageHappyText", "Background", sText, 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
 		screen.setButtonGFC("CityTemporaryHappyPlus", "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
@@ -414,14 +419,14 @@ class WBCityEditScreen:
 				pCity.changeFood(- min(iChange, pCity.getFood()))
 			self.placeStats()
 
-		elif inputClass.getFunctionName().find("CityDefense") > -1:
+		elif inputClass.getFunctionName() in ("CityDefensePlus", "CityDefenseMinus"):
 			if inputClass.getData1() == 1030:
 				pCity.changeDefenseDamage(min(iChange, GC.getMAX_CITY_DEFENSE_DAMAGE() - pCity.getDefenseDamage()))
 			elif inputClass.getData1() == 1031:
 				pCity.changeDefenseDamage(- min(iChange, pCity.getDefenseDamage()))
 			self.placeStats()
 
-		elif inputClass.getFunctionName().find("CityTradeRoute") > -1:
+		elif inputClass.getFunctionName() in ("CityTradeRoutePlus", "CityTradeRouteMinus"):
 			if inputClass.getData1() == 1030:
 				pCity.changeExtraTradeRoutes(min(iChange, pCity.getMaxTradeRoutes() - pCity.getTradeRoutes()))
 			elif inputClass.getData1() == 1031:
@@ -435,9 +440,8 @@ class WBCityEditScreen:
 				pCity.changeCulture(iPlayer, - min(iChange, pCity.getCulture(iPlayer)), True)
 			self.placeStats()
 
-		elif inputClass.getFunctionName() == ("CityCultureLevel"):
+		elif inputClass.getFunctionName() == "CityCultureLevel":
 			iIndex = screen.getSelectedPullDownID("CityCultureLevel")
-			pCity.setOccupationTimer(0)
 			pCity.setCulture(iPlayer, GC.getCultureLevelInfo(iIndex).getSpeedThreshold(CyGame().getGameSpeedType()), True)
 			self.placeStats()
 
@@ -483,14 +487,14 @@ class WBCityEditScreen:
 				pCity.changeDefyResolutionAngerTimer(- min(iChange, pCity.getDefyResolutionAngerTimer()))
 			self.placeStats()
 
-		elif inputClass.getFunctionName().find("CityEspionageHappy") > -1:
+		elif inputClass.getFunctionName() in ("CityEspionageHappyPlus", "CityEspionageHappyMinus"):
 			if inputClass.getData1() == 1030:
 				pCity.changeEspionageHappinessCounter(iChange)
 			elif inputClass.getData1() == 1031:
 				pCity.changeEspionageHappinessCounter(- min(iChange, pCity.getEspionageHappinessCounter()))
 			self.placeStats()
 
-		elif inputClass.getFunctionName().find("CityEspionageHealth") > -1:
+		elif inputClass.getFunctionName() in ("CityEspionageHealthPlus", "CityEspionageHealthMinus"):
 			if inputClass.getData1() == 1030:
 				pCity.changeEspionageHealthCounter(iChange)
 			elif inputClass.getData1() == 1031:

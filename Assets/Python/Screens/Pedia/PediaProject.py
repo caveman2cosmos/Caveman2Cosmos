@@ -15,7 +15,6 @@ class PediaProject:
 
 		W_PEDIA_PAGE = parent.W_PEDIA_PAGE
 
-		W_BASE = 64 + H_TOP_ROW + W_PEDIA_PAGE / 8
 		W_HALF_PP = W_PEDIA_PAGE / 2
 
 		self.X_COL_1 = X_COL_1 = parent.X_PEDIA_PAGE

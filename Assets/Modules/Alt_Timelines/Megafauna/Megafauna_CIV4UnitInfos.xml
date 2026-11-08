@@ -3,7 +3,8 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_BEARRIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -44,6 +45,7 @@
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
+			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<UnitUpgrades>
 				<UnitType>UNIT_BEARKNIGHT</UnitType>
 			</UnitUpgrades>
@@ -72,12 +74,30 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>94</iCost>
+			<iCost>169</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>30</iPursuit>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_FLINT</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE_WOODEN</UnitCombatType>
@@ -102,7 +122,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BEARKNIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -206,7 +227,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRAINED_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -268,12 +290,15 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<iCost>94</iCost>
+			<iCost>250</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>9</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCityAttack>25</iCityAttack>
+			<iCityAttack>20</iCityAttack>
+			<iCollateralDamage>100</iCollateralDamage>
+			<iCollateralDamageLimit>75</iCollateralDamageLimit>
+			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_SIEGE_WOODEN</UnitCombatType>
@@ -318,7 +343,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TAMED_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -365,6 +391,12 @@
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_COLD1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<Buildings>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -414,7 +446,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_MAMMOTH_RIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -487,7 +520,7 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>130</iCost>
 			<iMoves>1</iMoves>
@@ -546,7 +579,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -611,7 +645,7 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_BOMBARD_MAMMOTH</UnitType>
 			</UnitUpgrades>
-			<iCost>375</iCost>
+			<iCost>475</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -658,7 +692,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BALLISTA_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -733,7 +768,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_MAMMOTH</BonusType>
-			<iCost>255</iCost>
+			<iCost>495</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -784,7 +819,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BOMBARD_MAMMOTH</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SIEGE</SubCombatType>
@@ -872,7 +908,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>500</iCost>
+			<iCost>550</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>23</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -1062,7 +1098,7 @@
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
-			<iWorkRate>270</iWorkRate>
+			<iWorkRate>135</iWorkRate>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -1095,7 +1131,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_WOODEN</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1181,7 +1218,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_STONE</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1232,7 +1270,7 @@
 				<UnitType>UNIT_MAPINGUARI_OBSIDIAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<iCost>70</iCost>
+			<iCost>76</iCost>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -1266,7 +1304,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_OBSIDIAN</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1318,7 +1357,7 @@
 				<UnitType>UNIT_MAPINGUARI</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>99</iCost>
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1353,7 +1392,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1444,7 +1484,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MAPINGUARI_PIKE</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1531,7 +1572,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RHINO_SWORDSMAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1627,7 +1669,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WAR_RHINO</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1658,6 +1701,7 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_RHINO_SWORDSMAN</UnitType>
@@ -1673,9 +1717,9 @@
 				<BuildingType>BUILDING_EFFECT_HERITAGE_RHINOS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>94</iCost>
+			<iCost>138</iCost>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<bStampede>1</bStampede>
@@ -1701,6 +1745,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -1847,6 +1893,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CAVALRY</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2037,6 +2085,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CHARIOT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_THROWING</SubCombatType>
@@ -2152,6 +2202,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_CUIRASSIER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -2337,6 +2389,8 @@
 		<UnitInfo>
 			<Type>UNIT_ZEBRA_KNIGHT</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -2480,6 +2534,8 @@
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2532,12 +2588,6 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqAndBuildings>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_CAT</BonusType>
-					<iProductonModifier>15</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARCAT</UnitType>
 			</UnitUpgrades>
@@ -2549,6 +2599,7 @@
 				</InvisibilityIntensityType>
 			</InvisibilityIntensityTypes>
 			<bNoCapture>1</bNoCapture>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -2566,8 +2617,8 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<iCost>92</iCost>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iCost>132</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -2623,6 +2674,8 @@
 			<Description>TXT_KEY_UNIT_WARCAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARCAT_PEDIA</Civilopedia>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL</SubCombatType>
@@ -2703,7 +2756,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
@@ -2759,6 +2812,8 @@
 		<UnitInfo>
 			<Type>UNIT_GUARDCAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2858,7 +2913,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>425</iCost>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>20</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -2905,6 +2960,8 @@
 		<UnitInfo>
 			<Type>UNIT_POLICE_CAT</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3011,7 +3068,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>800</iCost>
-			<iBaseUpkeep>5</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>36</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -3079,6 +3136,8 @@
 		<UnitInfo>
 			<Type>UNIT_FELINE_SUPERIOR</Type>
 			<Combat>UNITCOMBAT_FELINE</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_LAW_ENFORCEMENT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3191,7 +3250,7 @@
 				</UnitCombatTarget>
 			</UnitCombatTargets>
 			<iCost>5300</iCost>
-			<iBaseUpkeep>7</iBaseUpkeep>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>160</iCombat>
 			<FlankingStrikesbyUnitCombat>
@@ -3258,7 +3317,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3327,13 +3387,31 @@
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_BISON</BonusType>
-			<iCost>94</iCost>
+			<iCost>169</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
+			<BonusProductionModifiers>
+				<BonusProductionModifier>
+					<BonusType>BONUS_FLINT</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_STONE</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+				<BonusProductionModifier>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iProductonModifier>5</iProductonModifier>
+				</BonusProductionModifier>
+			</BonusProductionModifiers>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_ELEPHANT_RIDER</UnitType>
@@ -3370,7 +3448,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEERRIDER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -3381,6 +3460,7 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_SHORT_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_DIST_SHORTBOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
@@ -3431,7 +3511,10 @@
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<iCost>94</iCost>
+            <TechTypes>
+                <PrereqTech>TECH_ARCHERY</PrereqTech>
+            </TechTypes>
+			<iCost>155</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -3442,8 +3525,6 @@
 			<iEarlyWithdraw>25</iEarlyWithdraw>
 			<iCollateralDamageLimit>100</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>4</iCollateralDamageMaxUnits>
-			<iCityDefense>50</iCityDefense>
-			<iHillsDefense>25</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -3478,6 +3559,16 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>
@@ -3501,7 +3592,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEER_ARCHER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -3635,7 +3727,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DEER_LIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -3776,7 +3869,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_ARCHER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -3902,7 +3996,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CROSSBOW</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
@@ -4060,7 +4155,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CUIRASSIER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4244,7 +4340,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CARABINIER</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4427,7 +4524,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_DRAGOON</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -4581,7 +4679,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_CAVALRY</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4768,7 +4867,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GIRAFFE_TRENCH_CAVALRY</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_GUN</SubCombatType>
@@ -4967,7 +5067,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_URBAN_GIRAFFEMAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -5106,6 +5207,8 @@
 		<UnitInfo>
 			<Type>UNIT_LLAMA_RIDER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -5140,8 +5243,8 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
-			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_AUTOGYRO</UnitType>
 				<UnitType>UNIT_ARMORED_CAR</UnitType>
@@ -5174,7 +5277,11 @@
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_LLAMA</BonusType>
-			<iCost>100</iCost>
+			<UnitCombatMod>
+				<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
+				<iUnitCombatMod>20</iUnitCombatMod>
+			</UnitCombatMod>
+			<iCost>125</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -5254,6 +5361,8 @@
 		<UnitInfo>
 			<Type>UNIT_LLAMA_ARCHER</Type>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ARCHER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>

@@ -348,5 +348,23 @@
 			<bVisible>0</bVisible>
 			<Button>Art/Interface/Buttons/Actions/autodefender.dds</Button>
 		</AutomateInfo>
+		<AutomateInfo>
+			<Description>TXT_KEY_ACTION_AUTOMATE_HERD</Description>
+			<Help>TXT_KEY_ACTION_AUTOMATE_HERD_HELP</Help>
+			<HotKey>KB_D</HotKey>
+			<bAltDown>0</bAltDown>
+			<bShiftDown>0</bShiftDown>
+			<bCtrlDown>0</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<HotKeyAlt/>
+			<bAltDownAlt>0</bAltDownAlt>
+			<bShiftDownAlt>0</bShiftDownAlt>
+			<bCtrlDownAlt>0</bCtrlDownAlt>
+			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<Command>COMMAND_AUTOMATE</Command>
+			<Automate>AUTOMATE_HERD</Automate>
+			<bVisible>1</bVisible>
+			<Button>Art/Interface/Buttons/Actions/Automate.dds</Button>
+		</AutomateInfo>
 	</AutomateInfos>
 </Civ4AutomateInfos>

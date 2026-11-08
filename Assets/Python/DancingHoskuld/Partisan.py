@@ -98,6 +98,11 @@ def onCityAcquired(argsList):
 	if nPartisan > -1 and CyPlayerOld.hasTrait(GC.getInfoTypeForString('TRAIT_PROTECTIVE')):
 		nPartisan += 1
 
+	# +3 partisans with Nationhood civic (only loserPlayer)
+	iNationhood = GC.getInfoTypeForString('CIVIC_NATIONALIST')
+	if iNationhood > -1 and CyPlayerOld.isCivic(iNationhood):
+		nPartisan += 3
+
 	elif nPartisan < 1: return
 
 ##########################
@@ -110,7 +115,7 @@ def onCityAcquired(argsList):
 	# Check all city radius plots
 	iX = CyCity.getX()
 	iY = CyCity.getY()
-	firstRing = [(iX-1, iY-1), (iX-1, iY), (iX-1, iY-1), (iX, iY-1), (iX, iY+1), (iX+1, iY-1), (iX+1, iY), (iX+1, iY+1)]
+	firstRing = [(iX-1, iY-1), (iX-1, iY), (iX-1, iY+1), (iX, iY-1), (iX, iY+1), (iX+1, iY-1), (iX+1, iY), (iX+1, iY+1)]
 	plots = []
 	for iXLoop in range(iX - 3, iX + 4, 1):
 		for iYLoop in range(iY - 3, iY + 4, 1):

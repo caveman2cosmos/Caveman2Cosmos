@@ -141,7 +141,7 @@ class SevoPediaRoute:
 					if not iTech in aTechList:
 						aTechList.append(iTech)
 		for i in aTechList:
-			screen.attachImageButton( panelName, "", gc.getTechInfo(iTech).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 2, False )
+			screen.attachImageButton( panelName, "", gc.getTechInfo(i).getButton(), GenericButtonSizes.BUTTON_SIZE_46, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, i, 2, False )
 
 		RouteInfo = gc.getRouteInfo(self.iRoute)
 		bFirst = True

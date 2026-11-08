@@ -335,7 +335,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<iCost>773</iCost>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
 			<iXPValueDefense>3</iXPValueDefense>

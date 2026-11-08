@@ -27,9 +27,11 @@
 			<iHealth>-2</iHealth>
 			<iTradeRoutes>1</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>5</iYield>
+            </YieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
@@ -94,10 +96,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 				<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
@@ -165,9 +165,11 @@
 			<iHealth>-1</iHealth>
 			<iTradeRoutes>3</iTradeRoutes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>20</iCommerce>
-			</CommerceChanges>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>20</iYield>
+            </YieldChanges>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AIRPORT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
@@ -259,8 +261,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
+            <YieldChanges>
+                <iYield>0</iYield>
+                <iYield>0</iYield>
+                <iYield>3</iYield>
+            </YieldChanges>
 			<CommerceChanges>
-				<iCommerce>3</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>

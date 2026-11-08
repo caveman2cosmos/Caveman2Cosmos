@@ -51,6 +51,46 @@ BuildingFilterBase::~BuildingFilterBase()
 
 }
 
+namespace
+{
+	// Whether the building's XML definition has any capability to produce the given commerce type at all,
+	// regardless of whether the net effect in a specific city currently rounds down to zero.
+	bool hasIntrinsicCommerce(const CvBuildingInfo& buildingInfo, CommerceTypes eCommerce)
+	{
+		return buildingInfo.getCommerceChange(eCommerce) > 0
+			|| buildingInfo.getCommercePerPopChange(eCommerce) > 0
+			|| buildingInfo.getCommerceModifier(eCommerce) > 0
+			|| buildingInfo.getSpecialistExtraCommerce(eCommerce) > 0
+			|| buildingInfo.getGlobalCommerceModifier(eCommerce) > 0;
+	}
+
+	// Whether the building's XML definition has any capability to produce the given yield at all,
+	// regardless of whether the net effect in a specific city currently rounds down to zero.
+	bool hasIntrinsicYield(const CvBuildingInfo& info, YieldTypes eYield)
+	{
+		foreach_(const PlotArray& pair, info.getPlotYieldChanges())
+		{
+			if (pair.second[eYield] > 0)
+			{
+				return true;
+			}
+		}
+		foreach_(const TerrainArray& pair, info.getTerrainYieldChanges())
+		{
+			if (pair.second[eYield] > 0)
+			{
+				return true;
+			}
+		}
+		return info.getYieldChange(eYield) > 0
+			|| info.getYieldPerPopChange(eYield) > 0
+			|| info.getYieldModifier(eYield) > 0
+			|| info.getAreaYieldModifier(eYield) > 0
+			|| info.getGlobalYieldModifier(eYield) > 0
+			|| info.getGlobalSeaPlotYieldChange(eYield) > 0;
+	}
+}
+
 bool BuildingFilterCanBuild::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	if (pCity)
@@ -79,16 +119,39 @@ BuildingFilterIsCommerce::BuildingFilterIsCommerce(CommerceTypes eCommerce, bool
 
 bool BuildingFilterIsCommerce::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
-	if (pCity)
+	// Check the city-specific net effect first, but fall back to the building's intrinsic
+	// capability so a contribution that rounds down to zero in this particular city
+	// (e.g. less than 1 commerce) doesn't hide the building from the filter.
+	if (pCity && pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding) > 0)
 	{
-		return pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding) > 0;
+		return true;
 	}
-	const CvBuildingInfo& buildingInfo = GC.getBuildingInfo(eBuilding);
-	return buildingInfo.getCommerceChange(m_eCommerce) > 0
-		|| buildingInfo.getCommercePerPopChange(m_eCommerce) > 0
-		|| buildingInfo.getCommerceModifier(m_eCommerce) > 0
-		|| buildingInfo.getSpecialistExtraCommerce(m_eCommerce) > 0
-		|| buildingInfo.getGlobalCommerceModifier(m_eCommerce) > 0;
+	return hasIntrinsicCommerce(GC.getBuildingInfo(eBuilding), m_eCommerce);
+}
+
+BuildingFilterIsYieldAndCommerce::BuildingFilterIsYieldAndCommerce(YieldTypes eYield, CommerceTypes eCommerce, bool bInvert)
+	: BuildingFilterBase(bInvert), m_eYield(eYield), m_eCommerce(eCommerce) {}
+
+bool BuildingFilterIsYieldAndCommerce::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
+{
+	// For both yield and commerce, check the city-specific net effect first, but fall back to the
+	// building's intrinsic capability so a contribution that rounds down to zero in this particular
+	// city (e.g. less than 1 commerce/yield) doesn't hide the building from the filter.
+	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+
+	const bool bHasYield =
+	(
+		(pCity && pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0)
+		|| hasIntrinsicYield(info, m_eYield)
+	);
+
+	const bool bHasCommerce =
+	(
+		(pCity && pCity->getAdditionalCommerceTimes100ByBuilding(m_eCommerce, eBuilding) > 0)
+		|| hasIntrinsicCommerce(info, m_eCommerce)
+	);
+
+	return bHasYield || bHasCommerce;
 }
 
 BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : BuildingFilterBase(bInvert), m_eYield(eYield) {}
@@ -96,32 +159,14 @@ BuildingFilterIsYield::BuildingFilterIsYield(YieldTypes eYield, bool bInvert) : 
 bool BuildingFilterIsYield::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
 {
 	PROFILE_EXTRA_FUNC();
-	if (pCity)
+	// Check the city-specific net effect first, but fall back to the building's intrinsic
+	// capability so a contribution that rounds down to zero in this particular city
+	// (e.g. less than 1 yield) doesn't hide the building from the filter.
+	if (pCity && pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0)
 	{
-		return pCity->getAdditionalYieldByBuilding(m_eYield, eBuilding, true) > 0;
+		return true;
 	}
-	const CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
-
-	foreach_(const PlotArray& pair, info.getPlotYieldChanges())
-	{
-		if (pair.second[m_eYield] > 0)
-		{
-			return true;
-		}
-	}
-	foreach_(const TerrainArray& pair, info.getTerrainYieldChanges())
-	{
-		if (pair.second[m_eYield] > 0)
-		{
-			return true;
-		}
-	}
-	return info.getYieldChange(m_eYield) > 0
-		|| info.getYieldPerPopChange(m_eYield) > 0
-		|| info.getYieldModifier(m_eYield) > 0
-		|| info.getAreaYieldModifier(m_eYield) > 0
-		|| info.getGlobalYieldModifier(m_eYield) > 0
-		|| info.getGlobalSeaPlotYieldChange(m_eYield) > 0;
+	return hasIntrinsicYield(GC.getBuildingInfo(eBuilding), m_eYield);
 }
 
 bool BuildingFilterIsHappiness::isFilteredBuilding(const CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding) const
@@ -309,7 +354,7 @@ void BuildingFilterList::init()
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_FOOD] = new BuildingFilterIsYield(YIELD_FOOD);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_CULTURE] = new BuildingFilterIsCommerce(COMMERCE_CULTURE);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_ESPIONAGE] = new BuildingFilterIsCommerce(COMMERCE_ESPIONAGE);
-	m_apBuildingFilters[BUILDING_FILTER_SHOW_GOLD] = new BuildingFilterIsCommerce(COMMERCE_GOLD);
+	m_apBuildingFilters[BUILDING_FILTER_SHOW_GOLD] = new BuildingFilterIsYieldAndCommerce(YIELD_COMMERCE, COMMERCE_GOLD);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_PRODUCTION] = new BuildingFilterIsYield(YIELD_PRODUCTION);
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_HAPPINESS] = new BuildingFilterIsHappiness();
 	m_apBuildingFilters[BUILDING_FILTER_SHOW_HEALTH] = new BuildingFilterIsHealth();

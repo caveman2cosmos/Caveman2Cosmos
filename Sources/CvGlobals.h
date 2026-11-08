@@ -208,13 +208,13 @@ public:
 	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
 	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
 	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
-	FAStar& getPathFinder() const;
-	FAStar& getInterfacePathFinder() const;
-	FAStar& getStepFinder() const;
-	FAStar& getRouteFinder() const;
-	FAStar& getBorderFinder() const;
-	FAStar& getAreaFinder() const;
-	FAStar& getPlotGroupFinder() const;
+	FAStar& getPathFinder(MapTypes map = NO_MAP) const;
+	FAStar& getInterfacePathFinder(MapTypes map = NO_MAP) const;
+	FAStar& getStepFinder(MapTypes map = NO_MAP) const;
+	FAStar& getRouteFinder(MapTypes map = NO_MAP) const;
+	FAStar& getBorderFinder(MapTypes map = NO_MAP) const;
+	FAStar& getAreaFinder(MapTypes map = NO_MAP) const;
+	FAStar& getPlotGroupFinder(MapTypes map = NO_MAP) const;
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e) const;
@@ -383,6 +383,7 @@ public:
 	int getNumBonusInfos() const;
 	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
+	const std::vector<BuildingTypes>& getBonusAssociatedBuildings(BonusTypes eBonus) const;
 
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
@@ -454,8 +455,11 @@ public:
 	int getNumOutcomeInfos() const;
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
-	int iStuckUnitID;
-	int iStuckUnitCount;
+	// Per-unit (not global) consecutive stuck-in-groupMove() counters, keyed by unit ID.
+	// A single shared counter let unrelated units reset each other's progress, which meant
+	// a genuinely stuck unit could sit ready-to-move forever instead of ever hitting the
+	// finishMoves() escape - see CvSelectionGroup::groupMove().
+	std::map<int, int> stuckUnitMoveCounts;
 
 	void updateReplacements();
 
@@ -690,6 +694,18 @@ public:
 	CvString*& getDirectionTypes();
 	CvString& getDirectionTypes(AutomateTypes e);
 
+	CvString*& getBuildingCostSizeTypes();
+	CvString& getBuildingCostSizeTypes(BuildingCostSizeTypes e);
+
+	CvString*& getBuildingCostCountTypes();
+	CvString& getBuildingCostCountTypes(BuildingCostCountTypes e);
+
+	CvString*& getBuildingCostMaterialsTypes();
+	CvString& getBuildingCostMaterialsTypes(BuildingCostMaterialsTypes e);
+
+	CvString*& getBuildingCostComplexityTypes();
+	CvString& getBuildingCostComplexityTypes(BuildingCostComplexityTypes e);
+
 	int& getNumFootstepAudioTypes();
 	CvString*& getFootstepAudioTypes();
 	CvString& getFootstepAudioTypes(int i);
@@ -852,6 +868,8 @@ protected:
 	DirectionTypes m_aaeXYDirection[DIRECTION_DIAMETER][DIRECTION_DIAMETER];
 
 	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
+
+	std::vector<BuildingTypes>* m_ppbBonusAssociatedBuildings;
 
 	/***********************************************************************************************************************
 	Globals loaded from XML
@@ -1084,6 +1102,11 @@ protected:
 	CvString *m_paszAutomateTypes;
 
 	CvString *m_paszDirectionTypes;
+
+	CvString *m_paszBuildingCostSizeTypes;
+	CvString *m_paszBuildingCostCountTypes;
+	CvString *m_paszBuildingCostMaterialsTypes;
+	CvString *m_paszBuildingCostComplexityTypes;
 
 	CvString *m_paszFootstepAudioTypes;
 	int m_iNumFootstepAudioTypes;
@@ -2224,11 +2247,6 @@ extern CvGlobals gGlobalsProxy;	// for debugging
 //
 inline cvInternalGlobals& cvInternalGlobals::getInstance()
 {
-	// AIAndy: This function is called so often, it is not worth it to do this safety check on something that will not happen with the code changes we do nowadays
-	//if ( gGlobals == NULL )
-	//{
-	//	::MessageBoxA(NULL, "cvInternalGlobals::getInstance() called prior to instantiation\n","CvGameCore",MB_OK);
-	//}
 	return *gGlobals;
 }
 

@@ -11,7 +11,7 @@
 			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
 				<BonusType>BONUS_MAMMOTH</BonusType>

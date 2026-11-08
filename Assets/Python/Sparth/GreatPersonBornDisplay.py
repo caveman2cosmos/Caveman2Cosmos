@@ -4,12 +4,16 @@
 
 from CvPythonExtensions import *
 
+
 def init():
 	import CvScreenEnums
 	global g_iScreen
 	g_iScreen = CvScreenEnums.GREAT_PEOPLE_SCREEN
 
 init()
+
+# globals
+GC = CyGlobalContext()
 
 g_GreatPeople = {
 	"UNIT_PROPHET"			: "ART_DEF_BACKGROUND_PROPHET",
@@ -31,7 +35,10 @@ def onGreatPersonBorn(argsList):
 	if CyGame().isNetworkMultiPlayer() or CyGame().isPitbossHost():
 		return
 
-	if iPlayer == CyGame().getActivePlayer():
+	if iPlayer != -1 and iPlayer == CyGame().getActivePlayer() :
+		
+		if GC.getPlayer(iPlayer).isHumanDisabled():
+			return
 
 		sUnitName = CyUnit.getNameNoDesc()
 		if sUnitName == "": return
@@ -69,7 +76,7 @@ def onGreatPersonBorn(argsList):
 
 		iType = CyUnit.getUnitType()
 		Info = CyGlobalContext().getUnitInfo(iType)
-		sGreat = ""
+
 		for i in xrange(Info.getNumUnitNames()):
 			sName = Info.getUnitNames(i)
 			if CyTranslator().getText(sName, ()) == sUnitName:

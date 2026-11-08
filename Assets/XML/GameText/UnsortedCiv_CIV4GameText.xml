@@ -30,7 +30,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HARUN_1</Tag>
-		<English>Of course you can refuse me this favor if you want, but it you do, I wouldn't hang out at the markets tonight...</English>
+		<English>Of course you can refuse me this favor if you want, but if you do, I wouldn't hang out at the markets tonight...</English>
 		<French>Bien sûr, vous pouvez me refuser cette faveur, si vous voulez, mais il vous le faites, je vous conseille de ne pas traîner dans les rues le soir...</French>
 		<Polish>Oczywi&#156;cie mo&#191;esz odwdzi&#234;czy&#230; si&#234; mi za t&#185; przys&#179;ug&#234;, ale je&#156;li nie chcesz to nie musisz...</Polish>
 		<Russian>Конечно, вы можете отказать мне в этом одолжении, если хотите, но если вы это сделаете, я бы не стал торчать сегодня на базарах...</Russian>
@@ -45,6 +45,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_HITLER_1</Tag>
 		<English>I totally came in "assistance", can I have help removing weaklings?</English>
+		<French>Je suis totalement venu en "assistance", puis-je avoir de l'aide pour éliminer les faibles ?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_IVAN_1</Tag>
@@ -78,6 +79,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SMOKE_JAGUAR_1</Tag>
 		<English>Give this to [OUR_CIV_SHORT] or I'll snap your neck like a twig!</English>
+		<French>Donne cela aux [OUR_CIV_SHORT] ou je briserai ton cou comme une brindille !</French>
 		<Polish>Dawaj to nam lub z&#179;ami&#234; Tw&#243;j kark jak ga&#179;&#185;zk&#234;!</Polish>
 		<Russian>Отдай нам [OUR_CIV_SHORT], или я переломаю тебе шею, как ветку!</Russian>
 	</TEXT>
@@ -150,6 +152,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_HITLER_1</Tag>
 		<English>I WILL DESTROY [CT_EMPIRE] IF I DON'T GET WHAT I WANT!!!</English>
+		<French>JE DÉTRUIRAI [CT_EMPIRE] SI JE N'OBTIENS PAS CE QUE JE VEUX !!!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_IVAN_1</Tag>
@@ -183,6 +186,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SMOKE_JAGUAR_1</Tag>
 		<English>Hand this over or the next skull to adorn my necklace will be yours!</English>
+		<French>Donne-moi ça ou le prochain crâne qui ornera mon collier sera le tien !</French>
 		<Polish>Dawaj mi to czego chc&#234; lub do&#179;&#185;cz&#234; Twoj&#185; czaszk&#234; do mojego naszyjnika!</Polish>
 		<Russian>Отдай нам этот череп, иначе следующим украшением для моего ожерелья станет твой череп!</Russian>
 	</TEXT>
@@ -204,9 +208,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, the neans dislike to take advantage of the weaks, but maybe you like to be in grace with the strongs...</English>
+		<English>Good days and pleasant nights, the Neans dislike to taking advantage of the weak, but perhaps you prefer to stay in the good graces of the strong.</English>
 		<French>Bons jours et nuits plaisantes, nous n'aimons pas tirer avantage des faibles, mais peut-être que vous voulez être dans de bonnes graces avec les plus forts...</French>
-		<Spanish>Buenos dias y placenteras noches, a los neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
+		<Spanish>Buenos dias y placenteras noches, a los Neans nos disgusta tomar ventaja de los debiles, pero quizas tu quieras estar en gracia con los fuertes...</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, Neandertalczycy nie lubi&#185; gn&#234;bi&#230; s&#179;abszych, ale mo&#191;e jednak chcesz by&#230; w sojuszu z silniejszymi...</Polish>
 		<Russian>Õîðîøèå äíè è ïðèÿòíûå íî÷è, âîîáùå-òî íåïðèÿòíî èñïîëüçîâàòü ìîÿ ïðåèìóùåñòâî íàä òâîÿ íåìîùü, íî ìîæåò òâîÿ áóäåò áëàãîäàðíà çà ðåøèòåëüíîñòü...</Russian>
 	</TEXT>
@@ -254,7 +258,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_HITLER_1</Tag>
-		<English>My milita- people needs stuff, and everything in [CT_EMPIRE], can I have stuff?</English>
+		<English>My people require resources. Everything in [CT_EMPIRE] belongs to those with strength. Surrender what I ask, or it will be taken.</English>
+		<French>Mon peuple a besoin de ressources. Tout dans [CT_EMPIRE] appartient à ceux qui ont de la force. Cède ce que je demande, ou cela sera pris.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_IVAN_1</Tag>
@@ -289,6 +294,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SMOKE_JAGUAR_1</Tag>
 		<English>See this necklace? These skulls used to belong to people who didn't pay me tribute. Kinda says something, doesn't it, [CT_NAME].</English>
+		<French>Tu vois ce collier ? Ces crânes appartenaient à des gens qui ne m'ont pas payé de tribut. Ça en dit long, n'est-ce pas, [CT_NAME].</French>
 		<Polish>Widzisz ten naszyjnik? Czaszki z kt&#243;rych go zrobiono nale&#191;a&#179;y do ludzi, kt&#243;rzy nie p&#179;acili mi trybutu. To o czym&#156; &#156;wiadczy, nieprawda&#191;?</Polish>
 		<Russian>Видишь это ожерелье? Эти черепа принадлежали людям, которые не платили мне дани. Ну, ты все верно понял, не так ли, [CT_NAME]?</Russian>
 	</TEXT>
@@ -310,15 +316,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, may your mighty people help the neans when they are in need.</English>
+		<English>Good days and pleasant nights, may your mighty people help the Neans in our time of need.</English>
 		<French>Bons jours et nuits plaisantes, que votre brillant peuple puisse venir en aide à ceux dans le besoin.</French>
-		<Spanish>Buenos dias y placenteras noches, podria tu fabuloso pueblo ayudar a los neans cuando lo necesitan.</Spanish>
+		<Spanish>Buenos dias y placenteras noches, podria tu fabuloso pueblo ayudar a los Neans cuando lo necesitan.</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, niech Tw&#243;j silny lud pomo&#191;e nam kiedy potrzebujemy pomocy!</Polish>
 		<Russian>Äà ïîñëàòü âàì äîáðûé äóõè óäà÷à òâîåìó ìîãó÷èé ïëåìÿ, âû ïîìîæåòå íàì, êîãäà íàøà áûòü â áåäå?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABUBAKR_1</Tag>
-		<English>What you will need to understand, [CT_NAME], is that anyone who fights on behalf of Allah, when he dies, the first drop of blood that comes out, all of his sins will be forgiven.</English>
+		<English>What you must understand, [CT_NAME], is that anyone who dies fighting for Allah has all their sins forgiven with the first drop of blood.</English>
 		<French>Ce que vous aurez besoin de comprendre, [CT_NAME], est que toute personne qui se bat au nom d'Allah, lorsqu'il meurt, à la première goutte de sang versé, est pardonné de tous ses péchés.</French>
 		<Polish>[CT_NAME], musisz zrozumie&#230;, &#191;e ten kto walczy w imi&#234; Allaha, kiedy umiera, z pierwsza kropl&#185; przelanej krwi, wszystkie jego grzechy zostaj&#185; odpuszczone.</Polish>
 		<Russian>Что вам нужно понять, [CT_NAME], так это то, что любому, сражающемуся от имени Аллаха, после смерти простятся все грехи единственной каплей крови.</Russian>
@@ -361,6 +367,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CALIGULA_1</Tag>
 		<English>Hate the [OUR_EMPIRE], if you must [CT_NAME]. Just so long as you fear as always.</English>
+		<French>Déteste [OUR_EMPIRE], si tu le dois [CT_NAME]. Tant que tu continues à craindre comme toujours.</French>
 		<Polish>Mo&#159;esz nienawidie&#230; [OUR_EMPIRE], a je&#156;li musisz to nawet [CT_NAME]. P&#243;ki b&#234;dziesz si&#234; nas ba&#179;.</Polish>
 		<Russian>Знай же,[CT_NAME]: я ненавижу [OUR_EMPIRE]. Посему трепещи перед нашей мощью.</Russian>
 	</TEXT>
@@ -385,7 +392,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CLEOPATRA_1</Tag>
-		<English>Do not underestimate our resolve, [CT_NAME]. All strange and terrible events are welcome by the [OUR_EMPIRE], but comforts we despise.</English>
+		<English>Do not underestimate our resolve, [CT_NAME]. The [OUR_EMPIRE] welcomes adversity, we reject complacency and comfort.</English>
 		<French>Ne sous-estimez pas ma détermination, [CT_NAME]. Tous les événements étranges et terribles sont les bienvenus par le [OUR_EMPIRE], mais nous méprisons confort.</French>
 		<German>Unterschätze unsere Entschlossenhait nicht, [CT_NAME]. Alle seltsamen und schrecklichen Ereignisse sind willkommen im [OUR_EMPIRE], aber wir verabscheuen die Bequemlichkeit.</German>
 		<Spanish>No subestimes nuestra determinación, [CT_NAME]. Todos los sucesos extraños y terribles son bienvenidos por el [OUR_EMPIRE], solamente despreciamos las comodidades.</Spanish>
@@ -394,7 +401,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CUNHAMBEBE_1</Tag>
-		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. Help us safe our precious rainforest and you'll have our eternal gratitude!</English>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. Help us protect our rainforests and you'll have our eternal gratitude!</English>
+		<French>Salutations, [CT_NAME] ! Je suis [OUR_NAME] du peuple [OUR_CIV_ADJ]. Aide-nous à protéger nos forêts tropicales et tu auras notre gratitude éternelle !</French>
 		<Italian>Saluti, [CT_NAME]! Io sono [OUR_NAME] del popolo [OUR_CIV_ADJ]. Aiutaci a salvare la nostra preziosa foresta pluviale e avrai la nostra eterna gratitudine!</Italian>
 		<Polish>Witam, [CT_NAME]! Jestem [OUR_NAME] z ludu [OUR_CIV_ADJ]. Pom&#243;&#191; nam zachowa&#230; cenny las deszczowy, a b&#234;dziemy dozgonnie wdzi&#234;czni!</Polish>
 		<Russian>Ïðèâåòñòâóþ, [CT_NAME]! ß, [OUR_NAME], èç íàðîäà [OUR_CIV_ADJ]. Ïîìîãèòå íàì ñáåðå÷ü íàø äîæäåâîé ëåñ è Âû áóäåòå èìåòü íàøó âå÷íóþ ïðèçíàòåëüíîñòü!</Russian>
@@ -402,7 +410,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DAVID_1</Tag>
 		<English>Greetings. I am [OUR_NAME], and I welcome you, with a hand on the heart, to the the land of [OUR_CIV_SHORT].</English>
-		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le cœur, l'à la terre de [OUR_CIV_SHORT].</French>
+		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le coeur, l'à la terre de [OUR_CIV_SHORT].</French>
 		<German>Grüße. Ich bin [OUR_NAME], und ich begrüße dich, mit einer Hand auf dem Herzen, zum Land von [OUR_CIV_SHORT].</German>
 		<Italian>Saluti. Sono [OUR_NAME] e ti accolgo favorevolmente, con una mano sul cuore, alla terra di [OUR_CIV_SHORT].</Italian>
 		<Spanish>Saludos. Soy [OUR_NAME], y te doy la bienvenida, con una mano en el corazón, el tierra de [OUR_CIV_SHORT].</Spanish>
@@ -411,6 +419,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DE_WITT_1</Tag>
 		<English>I am [OUR_NAME] of the [OUR_EMPIRE]. Know that I shall be a fair and forthright adversary, if not a... calculating... one.</English>
+		<French>Je suis [OUR_NAME] de [OUR_EMPIRE]. Sache que je serai un adversaire juste et franc, sinon... calculateur.</French>
 		<Polish>Jestem [OUR_NAME] z [OUR_EMPIRE]. Wiedz, &#159;e b&#234;d&#234; wymagaj&#185;cym, ale uczciwym przeciwnikiem.</Polish>
 		<Russian>Я - [OUR_NAME] из [OUR_EMPIRE]. Знай, что я буду честным и решительным, если не... расчетливым... противником.</Russian>
 	</TEXT>
@@ -436,6 +445,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HADRIAN_1</Tag>
 		<English>I am [OUR_NAME] of the [OUR_EMPIRE]. Know that I shall be a fair and forthright adversary, if not a... calculating... one.</English>
+		<French>Je suis [OUR_NAME] de [OUR_EMPIRE]. Sache que je serai un adversaire juste et franc, sinon... calculateur.</French>
 		<Polish>Jestem [OUR_NAME] z [OUR_EMPIRE]. Wiedz, &#159;e b&#234;d&#234; wymagaj&#185;cym, ale uczciwym przeciwnikiem.</Polish>
 		<Russian>Я [OUR_NAME], правитель [OUR_EMPIRE]. Знай, что я буду честным и откровенным партнером и противником, если не... расчетливым.</Russian>
 	</TEXT>
@@ -449,6 +459,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HEKE_1</Tag>
 		<English>KA MATE! KA ORA, KA MATE! KA ORA...</English>
+		<French>KA MATE ! KA ORA, KA MATE ! KA ORA...</French>
 		<Russian>ÊÀ ÌÀÒÅ! ÊÀ ÎÐÀ, ÊÀ ÌÀÒÅ! ÊÀ ÎÐÀ....</Russian>
 	</TEXT>
 	<TEXT>
@@ -480,6 +491,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HITLER_1</Tag>
 		<English>I am [OUR_NAME], Führer of the [OUR_CIV_ADJ] people. We will restore our betrayed nation to greatness. You will not stand in our way.</English>
+		<French>Je suis [OUR_NAME], Führer du peuple [OUR_CIV_ADJ]. Nous restaurerons notre nation trahie à sa grandeur. Vous ne vous dresserez pas sur notre chemin.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HTN_1</Tag>
@@ -491,6 +503,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ITZCOATL_1</Tag>
 		<English>Hello [CT_NAME], I am [OUR_NAME], conqueror of the Tepenecs and liberator of the mighty [OUR_CIV_ADJ] people. Tell me, friend, what blood type are you?</English>
+		<French>Bonjour [CT_NAME], je suis [OUR_NAME], conquérant des Tepenecs et libérateur du puissant peuple [OUR_CIV_ADJ]. Dis-moi, ami, quel est ton groupe sanguin ?</French>
 		<Polish>Witaj [CT_NAME], Jestem [OUR_NAME], zdobywca Tepanek&#243;w i wyzwoliciel pot&#234;znego ludu [OUR_CIV_ADJ]. Powiedz mi, przyjacielu, jakiej grupy krwi jeste&#156;?</Polish>
 		<Russian>Приветствую, [CT_NAME], я - [OUR_NAME], покоритель Тепенеков и освободитель могущественного племени [OUR_CIV_ADJ]. Поведай нам, друг, какая у тебя группа крови?</Russian>
 	</TEXT>
@@ -592,6 +605,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PEDRO_II_1</Tag>
 		<English>I am [OUR_NAME] of the [OUR_EMPIRE]. Shall we discuss our future together? If one does not look ahead, one remains behind.</English>
+		<French>Je suis [OUR_NAME] de [OUR_EMPIRE]. Discutons-nous de notre avenir commun ? Si l'on ne regarde pas vers l'avant, on reste en arrière.</French>
 		<Italian>Io sono [OUR_NAME] dell'[OUR_EMPIRE]. Vogliamo discutere del nostro futuro insieme? Se non si guarda avanti, si rimane indietro.</Italian>
 		<Polish>Jestem [OUR_NAME] z [OUR_EMPIRE]. Czy mo&#191;emy przedyskutowa&#230; nasz&#185; wsp&#243;ln&#185; przysz&#179;o&#156;&#230;?</Polish>
 		<Russian>ß, [OUR_NAME], èç ñòðàíû [OUR_EMPIRE]. Íàì ñòîèò îáñóäèòü íàøå ñîâìåñòíîå áóäóùåå? Åñëè íå ñìîòðåòü íàïåðåä, òî îñòàíåøüñÿ âå÷íî îòñòàþùèì.</Russian>
@@ -599,10 +613,11 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PHILIP_II_1</Tag>
 		<English>Observe your enemies, [CT_NAME] of the [CT_EMPIRE], for they first find your faults.</English>
+		<French>Observe tes ennemis, [CT_NAME] de [CT_EMPIRE], car ce sont eux qui trouvent d'abord tes défauts.</French>
 		<German>Überwache Deine Feinde, [CT_NAME] vom [CT_EMPIRE], denn sie entdecken Deine Fehler als erste.</German>
-		<Spanish>Observa a tus enemigos, [CT_NAME] del [CT_EMPIRE], dado que son los primeros en descubrir tus errores.</Spanish>
 		<Polish>Obserwuj swoich wrog&#243;w, [CT_NAME] z [CT_EMPIRE], bo to oni pierwszy odkryj&#185; twoje b&#179;&#234;dy.</Polish>
 		<Russian>Следите за своими врагами, [CT_NAME] из [CT_EMPIRE], ибо они первыми находят ваши недостатки.</Russian>
+		<Spanish>Observa a tus enemigos, [CT_NAME] del [CT_EMPIRE], dado que son los primeros en descubrir tus errores.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_RICHELIEU_1</Tag>
@@ -616,7 +631,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SEJONG_1</Tag>
-		<English>I am honored to meet you. We will be watching you closely, [CT_NAME]. It is often darkest underneath the lampstand.</English>
+		<English>I am honored to meet you. We will be watching you closely, [CT_NAME]. It is often darkest beneath the lampstand.</English>
 		<French>Je suis honoré de vous rencontrer. Nous allons vous surveiller de près, [CT_NAME]. Il fait souvent plus sombre sous le chandelier.</French>
 		<German>Ich fühle mich geehrt, Dir zu begegnen. Wir werden Dich genau beobachten, [CT_NAME]. Unter dem Ständer der Leuchte ist es oft am dunkelsten.</German>
 		<Spanish>Es un honor conocerte. Te estaremos observando de cerca, [CT_NAME]. Normalmente lo más oscuro está debajo de la lámpara.</Spanish>
@@ -633,12 +648,14 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>Welcome [CT_NAME]. I am [OUR_NAME], ruler of and master of the [OUR_EMPIRE]. Will you accept peace, or shall I spill your blood on the streets and wear your head as a trinket?</English>
+		<French>Bienvenue [CT_NAME]. Je suis [OUR_NAME], souverain et maître de [OUR_EMPIRE]. Accepteras-tu la paix, ou devrais-je répandre ton sang dans les rues et porter ta tête comme un bibelot ?</French>
 		<Polish>Witam [CT_NAME]. Jestem [OUR_NAME], w&#179;adca i pan Imperium [OUR_EMPIRE]. Zaakceptujesz pok&#243;j, czy mo&#191;e Twoja krew poleje si&#234; po ulicach, a ja b&#234;d&#234; nosi&#179; Twoj&#185; g&#179;ow&#234; jako ozdob&#234;?</Polish>
 		<Russian>Добро пожаловать, [CT_NAME]. Я - [OUR_NAME], правитель и владыка [OUR_EMPIRE]. Примешь ли ты мир, или я буду проливать твою кровь на улицах и носить твою голову как безделушку?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SMOKE_JAGUAR_2</Tag>
 		<English>Welcome to our land of riches, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE].</English>
+		<French>Bienvenue dans notre terre de richesses, [CT_NAME]. Je suis [OUR_NAME] de [OUR_EMPIRE].</French>
 		<Polish>Witamy w naszej krainie bogactw, [CT_NAME]. Jestem [OUR_NAME] z [OUR_EMPIRE].</Polish>
 		<Russian>Добро пожаловать в нашу благодатную страну, [CT_NAME]. Я - [OUR_NAME] из [OUR_EMPIRE].</Russian>
 	</TEXT>
@@ -688,7 +705,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WRUB_1</Tag>
-		<English>Good days and pleasant nights, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Make no mistake, we are polite and kind people, apart from good-looking, wich is obvious, but if you are not as good as we are, our stones will taste your blood.</English>
+		<English>Good days and pleasant nights, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Make no mistake, we are polite and kind people, apart from good-looking, which is obvious, but if you are not as good as we are, our stones will taste your blood.</English>
 		<French>Bons jours et nuits plaisantes, [CT_NAME]! Je suis [OUR_NAME] de [OUR_EMPIRE]. Ne vous méprenez pas, nous sommes un peuple poli et gentil, même si notre apparence est plutôt brutale. Mais si vous n'êtes pas assez bons avec nous, nos pierres goûterons le sang.</French>
 		<Spanish>Buenos dias y placenteras noches, [CT_NAME]! Soy [OUR_NAME] de los [OUR_EMPIRE]. No te lleves a error, somos educados y amables, aparte de guapos, como es mas que obvio, pero si no resultas tan bueno como nosotros, nuestras piedras probaran tu sangre.</Spanish>
 		<Polish>Dobrych dni i przyjemnych nocy, [CT_NAME]! Jestem [OUR_NAME] z [OUR_EMPIRE]. Nie pope&#179;nij b&#179;edu, jeste&#156;my &#179;agodnymi i mi&#179;ymi lud&#159;mi, je&#156;li jednak Ty nie b&#234;dziesz dla mnie mi&#179;y, to nasze kamienie skosztuj&#185; Twojej krwi.</Polish>
@@ -704,6 +721,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YAGAN_1</Tag>
 		<English>Greetings. I am [OUR_NAME] of the [OUR_EMPIRE]. We are all visitors to this time, this place. Our purpose here is to observe and grow, and then we return home.</English>
+		<French>Salutations. Je suis [OUR_NAME] de [OUR_EMPIRE]. Nous sommes tous des visiteurs de ce temps, de ce lieu. Notre but ici est d'observer et de grandir, puis nous rentrons chez nous.</French>
 		<German>Grüße. Ich bin [OUR_NAME] vom [OUR_EMPIRE]. Wir sind nur Gäste hier, in dieser Zeit, an diesem Ort. Wir alle sind Durchreisende. Unser Ziel ist es zu beobachten, zu lernen, zu wachsen und zu lieben - und dann kehren wir wieder heim, zurück nach Hause.</German>
 		<Italian>Saluti. Io sono [OUR_NAME] dell'[OUR_EMPIRE]. Siamo tutti visitatori di questo tempo e di questo posto. Il nostro scopo qui è di osservare e crescere, in cambio otteniamo una casa.</Italian>
 		<Polish>Witam. Jestem [OUR_NAME] z [OUR_EMPIRE]. Wszyscy jeste&#156;my go&#156;cmi tych czas&#243;w, tego miejsca. Naszym celem jest obserwacja i wzrost, a p&#243;&#159;niej wr&#243;cimy do domu.</Polish>
@@ -711,7 +729,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_YUNUPINGU_1</Tag>
-		<English>Welcome, [CT_NAME]. Know that the [OUR_CIV_SHORT] endeavour to live in peace with this land.</English>
+		<English>Welcome, [CT_NAME]. Know that the [OUR_CIV_SHORT] endeavor to live in peace with this land.</English>
+		<French>Bienvenue, [CT_NAME]. Sache que les [OUR_CIV_SHORT] s'efforcent de vivre en paix avec cette terre.</French>
 		<Italian>Benvenuto, [CT_NAME]. Sappi che gli [OUR_CIV_SHORT] desiderano vivere in pace con questa terra.</Italian>
 		<Polish>Witamy, [CT_NAME]. Wiedz, &#191;e g&#179;ownym celem [OUR_CIV_SHORT] jest &#191;ycie w harmonii z otaczaj&#185;cym nas &#156;wiatem.</Polish>
 		<Russian>Äîáðî ïîæàëîâàòü, [CT_NAME]. Âåäîìî ìíå, ÷òî [OUR_CIV_SHORT] ñòðåìÿòñÿ æèòü â ìèðå íà ýòîé çåìëå.</Russian>
@@ -754,13 +773,14 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HIAWATHA_1</Tag>
 		<English>My heart beats for you like the shining Big-Sea-Water, [CT_NAME]!</English>
-		<French>Mon cœur bat pour toi comme l'éclat de l'écume, [CT_NAME]!</French>
+		<French>Mon coeur bat pour toi comme l'éclat de l'écume, [CT_NAME]!</French>
 		<Polish>Moje serce bije dla Ciebie jak b&#179;yszcz&#185;ce Wielko-Morze, [CT_NAME]!</Polish>
 		<Russian>Мое сердце бьется за тебя, как сияющая вода Большого моря, [CT_NAME]!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_HITLER_1</Tag>
 		<English>It is nice to hear from our vassal - I mean "friend", [CT_EMPIRE]. What weaklings we should eat?</English>
+		<French>C'est agréable d'avoir des nouvelles de notre vassal - je veux dire "ami", [CT_EMPIRE]. Quels faibles devrions-nous dévorer ?</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_IVAN_1</Tag>
@@ -795,13 +815,14 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>Good evening, [CT_NAME]. Let's have fun watching the ball game and then have even more fun sacrificing the losers to the gods!</English>
+		<French>Bonsoir, [CT_NAME]. Amusons-nous à regarder le jeu de balle et ensuite amusons-nous encore plus à sacrifier les perdants aux dieux !</French>
 		<Polish>Dobry wiecz&#243;r, [CT_NAME]. Obejrzyjmy sobie gr&#234; w pi&#179;k&#234;, a p&#243;&#159;niej zabawmy si&#234; w sk&#179;adanie w ofierze zawodnik&#243;w z dru&#191;yny kt&#243;ra przegra&#179;a!</Polish>
 		<Russian>Добрый вечер, [CT_NAME]. Давайте повеселимся, наблюдая за игрой в мяч, а затем получим еще больше удовольствия, принося проигравших в жертву богам!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SOLOMON_1</Tag>
 		<English>My heart gives me joy when you present yourself.</English>
-		<French>Mon cœur me donne la joie quand vous vous présentez.</French>
+		<French>Mon coeur me donne la joie quand vous vous présentez.</French>
 		<German>Mein Herz gibt mir Freude, wenn du dich darstellst.</German>
 		<Italian>Il mio cuore si riempie di gioia quando ti fai vedere.</Italian>
 		<Spanish>Mi corazón me da alegría cuando te presentas.</Spanish>
@@ -867,6 +888,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_HITLER_1</Tag>
 		<English>I'm thinking about enslaving you, and torturing your empire.</English>
+		<French>Je pense à t'asservir et à torturer ton empire.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_IVAN_1</Tag>
@@ -901,6 +923,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>I'd like to sacrifice you to the gods, [CT_NAME], but they probably wouldn't stand that revolting stench of yours... what do you want?</English>
+		<French>J'aimerais te sacrifier aux dieux, [CT_NAME], mais ils ne supporteraient probablement pas cette odeur répugnante qui est la tienne... que veux-tu ?</French>
 		<Polish>Chcia&#179;bym z&#179;o&#191;y&#230; Ci&#234; w ofierze bogom, [CT_NAME], ale podejrzewam, &#191;e bogowie nie wytrzymali by Twojego obrzydliwego zapachu... czego chcesz?</Polish>
 		<Russian>Я хотел бы принести вас в жертву богам, [CT_NAME], но они, вероятно, не выдержат вашей отвратительной вони... Ладно, чего вам надо?</Russian>
 	</TEXT>
@@ -973,10 +996,12 @@
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_HITLER_1</Tag>
 		<English>PEACE? HAK HAK HAK!!!!!</English>
+		<French>LA PAIX ? HAK HAK HAK !!!!!</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_IVAN_1</Tag>
 		<English>Certainly not. The war will continue until I decide it is time to resume peace, or you are conquered!</English>
+		<French>Certainement pas. La guerre continuera jusqu'à ce que je décide qu'il est temps de reprendre la paix, ou que vous soyez conquis !</French>
 		<German>Auf keinen Fall! Der Krieg wird so lange fortgeführt, bis ich entscheide, dass die Zeit für den Frieden gekommen ist, oder Ihr besiegt seid!</German>
 		<Italian>Certo che no. La guerra continuerà fino a quando io non deciderò di fare pace o tu sarai sconfitto totalmente!</Italian>
 		<Polish>Napewno nie. Wojna b&#234;dzie kontynuowana do czasu, a&#191; nie zdecyduje inaczej!</Polish>
@@ -1005,6 +1030,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>Peace? What's the word I'm thinking of... It's at the tip of my tongue... oh yeah! NO!!!</English>
+		<French>La paix ? Quel est le mot auquel je pense... C'est sur le bout de ma langue... ah oui ! NON !!!</French>
 		<Polish>Pok&#243;j? Co to za s&#179;owo o jakim my&#156;l&#234;... Jest na ko&#241;cu j&#234;zyka... a ju&#191; wiem! NIE!!!</Polish>
 		<Russian>Мир? О каком слове я думаю... Оно на кончике моего языка... о да! НЕТ!!!</Russian>
 	</TEXT>
@@ -1077,10 +1103,12 @@
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_HITLER_1</Tag>
 		<English>YOU TALK TO ME? NEIN, I'M FUHREROUS!</English>
+		<French>TU ME PARLES ? NEIN, JE SUIS FUHRIEUX !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_IVAN_1</Tag>
 		<English>No! I absolutely refuse to speak with you!</English>
+		<French>Non ! Je refuse absolument de parler avec toi !</French>
 		<German>Nein! Ich weigere mich mit Dir zu sprechen!</German>
 		<Polish>Nie! Absolutnie odmawiam rozmowy z Tob&#185;!</Polish>
 		<Russian>Не буде тобе радех, собачий сынъ, еретик! Вон!</Russian>
@@ -1108,6 +1136,7 @@
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SMOKE_JAGUAR_1</Tag>
 		<English>What are YOU doing here? Get out before you get speared, you piece of toucan leavings!</English>
+		<French>Que fais-TU ici ? Sors avant de te faire embrocher, espèce de déjection de toucan !</French>
 		<Polish>Co TY tutaj robisz? Wyno&#156; si&#234;, zanim zostaniesz zabity, Ty kawa&#179;ku odchod&#243;w tukana!</Polish>
 		<Russian>Что ты здесь делаешь? Убирайся, пока тебя не проткнули, объедок тушки тукана!</Russian>
 	</TEXT>
@@ -1129,7 +1158,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_WRUB_1</Tag>
-		<English>Don´t disturb, we have stones to sharp.</English>
+		<English>Don´t disturb, we have stones to sharpen.</English>
 		<French>Ne nous dérangez pas, nous avons des pierres à tailler.</French>
 		<Spanish>No molestes, tenemos piedras que afilar.</Spanish>
 		<Polish>Nie przeszkadzaj, mamy kamienie do zaostrzenia!</Polish>
@@ -1778,7 +1807,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_ADJECTIVE</Tag>
 		<English>Aboriginal</English>
-		<French>Aborigène</French>
+		<French>
+			<Text>aborigène:aborigène:aborigènes:aborigènes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<German>aboriginisch</German>
 		<Italian>
 			<Text>Aborigeno:Aborigena:Aborigeni:Aborigene</Text>
@@ -1786,7 +1819,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Polish>Aboryge&#241;ska</Polish>
-		<Russian>àáîðèãåíû</Russian>
+		<Russian>Австралоидск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES</Tag>
@@ -1795,14 +1828,14 @@
 		<German>Reich der Aborigenes</German>
 		<Italian>Impero Aborigeno</Italian>
 		<Polish>Imperium Aborygen&#243;w</Polish>
-		<Russian>Ïëåìÿ àáîðèãåíîâ</Russian>
+		<Russian>Австралоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_PEDIA</Tag>
 		<English>It is believed that first human migration to Australia was achieved when this landmass earlier formed part of the Sahul continent, connected to the island of New Guinea via a land bridge. It is also possible that people came by boat across the Timor Sea. The exact timing of the arrival of the ancestors of the Indigenous Australians has been a matter of dispute among archaeologists. The most conservative widely-accepted timeline for first arrival is between 40,000 - 50,000 years BP. This means there have been more than 1250 generations in Australia. A 48,000 BC date is based on a few sites in northern Australia dated using thermoluminescence. A large number of sites have been radiocarbon dated to around 38,000 BC, leading some researchers to doubt the accuracy of the thermoluminescence technique. Some estimates have been given as wide as from 30,000 to 68,000 BC.[PARAGRAPH:2]There is no clear or accepted racial origin of the indigenous people of Australia. Although they migrated to Australia through Southeast Asia they are not related to any known Asian population. Nor are they related to the nearby peoples of Melanesia or Polynesia. There is some speculation that they are related to some racial groups in India, based on mitochondrial DNA evidence. In view of the very long time they have been in Australia, almost entirely isolated from other human populations, it is unlikely that they will be found to be closely related to any identifiable racial group.[PARAGRAPH:2]The term "Indigenous Australians" encompasses a large number of diverse communities and societies, with notably different modes of subsistence, cultural practices, languages, technologies and inhabited environments. However, these peoples also share a larger set of traits, and are otherwise seen as being broadly related. A collective identity as Indigenous Australians is recognised and exists alongside the identity and membership of many local community and traditional groups. The Australian Aboriginal population is for the most part urbanised, but a substantial number live in settlements (often located on the site of former church missions) in what are considered remote areas. The health and economic difficulties facing both groups are substantial. Aboriginal people, particularly youths, are substantially more likely to be imprisoned than the general population, and the rate of suicides in police custody remains quite high. Rates of unemployment, health problems and poverty are likewise higher than the general population; and school retention rate and university attendance is lower. Before the British colonisation, there were a great many different Aboriginal groups, each with their own individual culture, belief structure, and language (approximately 300 different languages existed at the time of European settlement). These cultures overlapped to a greater or lesser extent, and evolved over time. Indigenous Australian Aboriginal communities are often called tribes, and there are several hundred in Australia, although the exact number is unknown, because in many parts of Australia, there are no clear tribes or nations. The word 'community' is often used to describe Aboriginal groups as a more acceptable word. Sometimes smaller communities are referred to as tribes, and other times many communities are included in the same 'tribe'. Sometimes the different language groups are called tribes, although it can be very difficult to distinguish between different languages and dialects of a single language. The situation is complicated by the fact that sometimes up to twenty or thirty different names (either spelled differently in English, or using a different word altogether) are used for the same tribe or community. The largest Aboriginal communities today are the Pitjantjatjara, the Arrernte, the Luritja and the Warlpiri, all from the Northern Territory.</English>
 		<German>Die Aborigines sind die Ureinwohner Australiens. Sie besiedelten vor etwa 40000 bis 60000 Jahren den Kontinent vom Norden ausgehend. Aborigines sind kein einheitliches Volk, sondern bestehen aus Stämmen oder Clans mit oft höchst unterschiedlichen Gebräuchen und Sprachen: Je nach Definition und Quelle gab es vor der Ankunft der Briten etwa 400 bis 700 verschiedene Stämme der Aborigines, die vorwiegend als Jäger und Sammler lebten.[PARAGRAPH:2]Das Wort Aborigine bedeutet im Englischen allgemein Ureinwohner; es war ursprünglich die Bezeichnung für die Ureinwohner im Latium, einer Landschaft im frühen Italien. Als Name speziell für die Ureinwohner Australiens wurde es erstmals 1803 schriftlich dokumentiert; inzwischen gilt Aborigines im Englischen als abwertend und wird durch Aboriginal ersetzt. Selbst bezeichnen sich Aborigines meist in ihren jeweiligen Sprachen, zum Beispiel Koori im Südosten Australiens oder Anangu im Zentrum. In englischer Sprache nennen sie sich "black fellas". Die deutsche Sprache benutzt weiterhin den Begriff Aborigine.[PARAGRAPH:2]Der Zeitpunkt, an dem die indigene Bevölkerung Australien erreichte, ist nicht geklärt. Mitochondriale DNA-Vergleiche (mtDNA) lassen darauf schließen, dass Aborigines Nachfahren von Menschen einer der ersten Emigrationswellen aus Afrika sind und ihre Vorfahren Afrika vor 100000 bis 130000 Jahren verlassen haben, um sich dann über Europa, Asien und entlang der Küste Südostasiens bis nach Australien auszubreiten. Australien war zu dieser Zeit Teil des Kontinents Sahul und mit Neuguinea über eine Landbrücke verbunden. Eine Landbrücke zum asiatischen Festland hat aber nie bestanden, so dass eine Besiedlung Groß-Australiens nicht ohne Überwindung des Wallacea-Meeres möglich gewesen wäre. Schwimmend wäre das nicht möglich gewesen, und da die Erfindung seetauglicher Boote vor über 60000 Jahren als sehr unwahrscheinlich gilt, wird eine sehr frühe Besiedlung Australiens überwiegend abgelehnt. Für die Ankunft der Aborigines wird am häufigsten ein Zeitraum zwischen 40000 und 50000 v.Chr. genannt. Das etwas präzisere Datum von 48000 v.Chr. basiert auf Messungen von Siedlungen in Nordaustralien mithilfe der Thermolumineszenzdatierung. Der Mungo Man, dessen Überreste 1974 in der Nähe des Lake Mungo in New South Wales gefunden wurden, ist der älteste bisher in Australien gefundene Mensch. Auch wenn sein exaktes Alter unter Wissenschaftlern umstritten ist, geht man von etwa 40000 Jahren aus. Nahebei wurde Mungo Lady aus demselben Zeitraum gefunden; bei ihr lässt sich ein komplexes Feuerbestattungs-Ritual nachweisen. Steinwerkzeuge, die am See gefunden wurden, konnten auf ein Alter von 50000 Jahren bestimmt werden. Da sich der Lake Mungo im Südosten Australiens befindet, gehen viele Archäologen davon aus, dass die ersten Menschen einige tausend Jahre früher in Nordwest-Australien angekommen sein müssen.[PARAGRAPH:2]Die britische Kolonisation Australiens begann 1788 mit der Ankunft der First Fleet in der Botany Bay. Die ersten Kontakte zwischen den Mitgliedern der ersten Flotte unter Arthur Phillip und den Aborigines sollen zunächst vorwiegend friedlich gewesen sein, da Phillip anwies, die Aborigines gut zu behandeln. Man betrieb Handel mit Lebensmitteln, weil die Kolonisten sich noch nicht selbst versorgen konnten. Bennelong, ein Mitglied der Eora, war ein Vermittler zwischen den beiden Kulturen, der Englisch lernte und seine Sprache lehrte und so zu einer Verständigung beitrug.[PARAGRAPH:1]Nach Schätzungen des Australian Bureau of Statistics sank die Bevölkerung der Aborigines von den ursprünglich 300.000 bis 1 Million bis 1920 auf 60000. Große Teile der Aborigines starben an eingeschleppten Krankheiten wie Influenza oder bei der Pockenepidemie von 1789, bei der unter anderem mehr als 50 % der Darug getötet wurden. Sterilität von Frauen nahm wegen Geschlechtskrankheiten zu, die sie sich vor allem durch Prostitution und Sex-Sklaverei zuzogen. Nach Schätzungen von Henry Reynolds starben bei gewaltsamen Auseinandersetzungen 3000 Siedler und 20000 Aborigines. Im 19. und frühen 20. Jahrhundert kam es zu vielen, zum Teil tödlichen Auseinandersetzungen und einer Welle von Massakern an Aborigines, wie zum Beispiel dem Myall-Creek-Massaker oder dem Cape-Grim-Massaker, an denen in einigen Fällen auch das Native-Police-Corps teilnahm, eine Polizeitruppe, die hauptsächlich aus Aborigines bestand. Auslöser von Konflikten war zumeist der Zugang zu Nahrungsquellen. Da Schafe und Rinder der Siedler Wasserlöcher und Grasland zerstörten, verloren Aborigines ihre Lebensgrundlage und begannen stattdessen, das Vieh der Siedler zu jagen, um sich zu ernähren. Hinzu kam, dass Aborigines etwas wie Landbesitz nicht kennen; sie verstehen sich vielmehr als Bewahrer des Landes, das sie pflegen und hüten, dem sie aber auch entnehmen können, was sie brauchen, solange es dadurch nicht gefährdet wird.[PARAGRAPH:1]In einem Versuch, die Konflikte zu entschärfen, wurden den Völkern der Aborigines in der Mitte des 19. Jahrhunderts von einem Komitee der britischen Regierung Protektorate zugewiesen. Dort sollten sie sich nach dem Vorbild der Kolonialisten Siedlungen errichten und Landwirtschaft betreiben. In Tasmanien wurden bereits in den 1830er Jahren im Black War mit der Black Line die Tasmanier zusammengetrieben und nach Flinders Island deportiert. Der Begriff Black Line geht darauf zurück, dass die Soldaten schwarz gekleidet waren und in einer Linie im Abstand von einigen Metern zum Nebenmann die Einheimischen vor sich hergetrieben haben. Zuletzt wurde in der Western Desert in den 1950ern und 1960ern durchgesetzt, dass Aborigines ihre traditionelle Lebensweise als nomadische Jäger und Sammler aufgeben und auf dem Gebiet von Maralinga Tjarutja Atomwaffentests durchgeführt werden sollten. Eine kleine Gruppe aus dem Volk der Pintupi, genannt die Pintupi Nine, lebte noch bis 1984 als Vollnomaden in traditioneller Lebensweise.[PARAGRAPH:1]Mit Beginn des 20. Jahrhunderts und bis in die 1970er Jahre wurden Kinder von Aborigines aus ihren Familien in den Reservaten systematisch zwangsweise entfernt und zur Adoption in weiße Familien oder in Missionen gegeben. Die Jungen wurden zu Farmhelfern ausgebildet, die Mädchen zu Haushaltshilfen. War das arbeitsfähige Alter erreicht, wurden sie an die umliegenden Farmen weitergeleitet. Diese Unmenschlichkeit ging mit dem Begriff Gestohlene Generationen in die australische und die Menschheitsgeschichte ein. Das hauptsächliche Ziel war es, insbesondere Aborigines mit teilweise weißen Vorfahren zu assimilieren und Teil der weißen Gesellschaft werden zu lassen. Es gab die Überzeugung, dass dadurch nach vier Generationen kein aboriginaler Genanteil mehr vorhanden ist. Betroffen waren je nach Region und Zeitraum etwa 1/3 bis 1/10 aller Kinder. Der Bericht Bringing them Home der Australian Human Rights Commission von 1997 setzte sich mit dem Thema der Gestohlenen Generationen auseinander und führte dazu, dass der National Sorry Day eingerichtet wurde.</German>
 		<Polish>Aborygeni (z &#179;ac. ab origine - "od pocz&#185;tku", czyli "ci, kt&#243;rzy byli tu od pocz&#185;tku") - rdzenni mieszka&#241;cy Australii. Przybyli tam oko&#179;o 40-65 tys. lat temu prawdopodobnie z po&#179;udniowo-wschodniej Azji, przez pomost wyspowy dzisiejszej Indonezji i wysp&#234; Now&#185; Gwine&#234;. Prowadzili koczowniczy tryb &#191;ycia. Byli uzale&#191;nieni od otaczaj&#185;cego ich &#156;rodowiska i bardzo z nim zwi&#185;zani. Do ich podstawowych zaj&#234;&#230; nale&#191;a&#179;y: &#179;owiectwo i zbieractwo, a w rejonach nadbrze&#191;nych tak&#191;e rybo&#179;&#243;wstwo. W 1770 roku, gdy James Cook dotar&#179; do Australii istnia&#179;o od ponad 500 do 600 plemion aboryge&#241;skich u&#191;ywaj&#185;cych co najmniej 500 indywidualnych j&#234;zyk&#243;w. Obecnie Aborygeni zamieszkuj&#185; g&#179;&#243;wnie s&#179;abo zaludnione i nieurodzajne obszary Australii Zachodniej, Queensland i Terytorium P&#243;&#179;nocnego. Liczna populacja Aborygen&#243;w zamieszkuje tak&#191;e ubo&#191;sze przedmie&#156;cia w wielkich australijskich miastach.</Polish>
-		<Russian>[NEWLINE][TAB]Считается, что первая миграция людей в Австралию была осуществлена, когда этот массив суши ранее составлял часть континента Сахул, соединенного с островом Новая Гвинея сухопутным мостом. Также возможно, что люди переправлялись на лодке через Тиморское море. Точное время прибытия предков коренных австралийцев было предметом споров среди археологов. Самый консервативный и общепринятый временной график для первого прибытия находится между 40 000 - 50 000 лет назад. Это означает, что в Австралии было более 1250 поколений. Дата 48000 до н.э. основана на нескольких памятниках на севере Австралии, датированных с помощью термолюминесценции. Большое количество участков было датировано радиоуглеродным методом примерно 38 000 лет до нашей эры, что заставляет некоторых исследователей сомневаться в точности метода термолюминесценции. По некоторым оценкам, диапазон от 30 000 до 68 000 лет до нашей эры.[PARAGRAPH:2]Нет четкого или общепринятого расового происхождения коренных жителей Австралии. Хотя они мигрировали в Австралию через Юго-Восточную Азию, они не связаны ни с одним известным азиатским населением. Они также не связаны с соседними народами Меланезии или Полинезии. Есть некоторые предположения, что они связаны с некоторыми расовыми группами в Индии, основываясь на данных митохондриальной ДНК. Ввиду того, что они очень долго находились в Австралии, почти полностью изолированные от других человеческих популяций, маловероятно, что они будут тесно связаны с какой-либо идентифицируемой расовой группой.[PARAGRAPH:2]Термин «коренные австралийцы» охватывает большое количество разнообразных сообществ и обществ с существенно разными способами существования, культурными обычаями, языками, технологиями и обитаемой средой. Однако эти народы также имеют более широкий набор черт, и в остальном рассматриваются как широко связанные. Коллективная идентичность коренных австралийцев признана и существует наряду с самобытностью и членством многих местных общин и традиционных групп. Австралийские аборигены по большей части урбанизированы, но значительная их часть проживает в поселениях (часто расположенных на месте бывших церковных миссий) в отдаленных районах. Обе группы сталкиваются с серьезными проблемами со здоровьем и экономическими проблемами. У аборигенов, особенно молодежи, вероятность попасть в тюрьму значительно выше, чем у населения в целом, и уровень самоубийств во время содержания под стражей в полиции остается довольно высоким. Уровень безработицы, проблем со здоровьем и бедности также выше, чем у населения в целом; и уровень удержания в школе и посещаемости университетов ниже. До британской колонизации существовало очень много различных групп аборигенов, каждая со своей собственной культурой, структурой верований и языком (во время европейского заселения существовало около 300 различных языков). Эти культуры пересекались в большей или меньшей степени и со временем эволюционировали. Коренные общины австралийских аборигенов часто называют племенами, и в Австралии их несколько сотен, хотя точное число неизвестно, потому что во многих частях Австралии нет явных племен или наций. Слово «сообщество» часто используется для описания групп аборигенов как более приемлемого слова. Иногда более мелкие сообщества называют племенами, а иногда многие сообщества входят в одно и то же «племя». Иногда разные языковые группы называют племенами, хотя бывает очень сложно различить разные языки и диалекты одного языка. Ситуация осложняется тем, что иногда для одного и того же племени или сообщества используется до двадцати или тридцати разных имен (либо написанных по-разному в английском языке, либо с использованием разных слов). Самыми крупными общинами аборигенов сегодня являются Питьянтьатьяра, Аррернте, Луритжа и Варлпири, все они происходят с Северной территории.</Russian>
+		<Russian>Считается, что первая миграция людей в Австралию произошла, когда этот массив суши был частю континента Сахул, соединенного с Новой Гвинеей сухопутным мостом. Также возможно, что люди переправлялись на лодках через Тиморское море. Точная дата первого прибытия предков коренных австралийцев является предметом спора среди археологов. Наиболее консервативный общепринятый вариант приходится на промежуток 40 000 - 50 000 лет назад. Это означает, что в Австралии сменилось более 1250 поколений. Дата 48 000 до нашей эры основана на возрасте нескольких объектов на севере Австралии, вычисленным с помощью термолюминесценции. Однако, большое количество находок было датировано радиоуглеродным методом примерно 38 000 годом до нашей эры, что заставляет некоторых исследователей сомневаться в точности метода термолюминесценции. По некоторым оценкам, диапазон составляет от 30 000 до 68 000 лет до нашей эры.[PARAGRAPH:2]Нет четкого или общепринятого расового происхождения коренных жителей Австралии. Хотя они мигрировали в Австралию через Юго-Восточную Азию, они не родственны ни одному известному азиатскому народу. Они также не связаны с близкорасположенным к ним населением Меланезии или Полинезии. Есть предположение, что они относятся к некоторым расовым группам из Индии, основыванное на данных митохондриальной ДНК. Ввиду того, что они очень долго жили в Австралии, в практически полной изоляции от других человеческих популяций, маловероятно, что они будут тесно связаны с какой-либо идентифицируемой расовой группой.[PARAGRAPH:2]Понятие «коренные австралийцы» охватывает большое количество разнообразных общин и обществ, заметно отличающихся друг от друга способами существования, культурными обычаями, языками, технологиями и средой обитания. Однако у этих народов есть множество общих черт, и в целом они считаются родственными. Коллективная идентичность коренных австралийцев признана и существует наряду с самобытностью и принадлежностью ко многим местным общинам и традиционным группам. Австралийские аборигены в большинстве своем живут в городах, но значительная их часть проживает в поселениях (часто расположенных на местах бывших церковных миссий) в отдаленных районах. Обе группы сталкиваются со значительными трудностями в областях здравоохранения и экономики. У аборигенов, особенно молодежи, вероятность попасть в тюрьму значительно выше, чем у населения в целом, и уровень самоубийств во время содержания под стражей в полиции остается довольно высоким. Уровни безработицы, проблем со здоровьем и бедности также превосходят общие; а показатели удержания в школах и посещаемости университетов ниже. До британской колонизации существовало очень много различных групп аборигенов, каждая со своей собственной культурой, структурой верований и языком (к моменту заселения европейцами существовало около 300 различных языков). Эти культуры в большей или меньшей степени пересекались и развивались с течением времени. Общины австралийских аборигенов часто называют племенами, которых на континенте насчитывается несколько сотен, хотя точное число неизвестно, потому что во многих частях Австралии нет явных племен или народов. Слово «сообщество» нередко используется для описания групп аборигенов как более приемлемое. Иногда более мелкие сообщества называют племенами, а иногда многие сообщества включают в одно и то же «племя». Бывает, что разные языковые группы называют племенами, хотя подчас очень сложно провести различие между разными языками и диалектами одного языка. Ситуация осложняется тем, что иногда для одного и того же племени или сообщества используется до двадцати-тридцати отдельных имен (либо по-разному пишущихся по-английски, либо вообще использующих другое слово). Крупнейшими общинами аборигенов сегодня являются Питьянтьатьяра, Аррернте, Луритжа и Варлпири; все они проживают на Северной территории.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ABORIGINES_SHORT</Tag>
@@ -1810,19 +1843,23 @@
 		<French>Aborigènes</French>
 		<Italian>Aborigeni</Italian>
 		<Polish>Aborygeni</Polish>
-		<Russian>Àáîðèãåíû</Russian>
+		<Russian>Австралоиды</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_ADJECTIVE</Tag>
 		<English>Brazilian</English>
-		<French>Brésilien</French>
+		<French>
+			<Text>brésilien:brésilienne:brésiliens:brésiliennes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<Italian>
 			<Text>Brasiliano:Brasiliana:Brasiliani:Brasiliane</Text>
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Polish>Brazylijska</Polish>
-		<Russian>áðàçèëüöû</Russian>
+		<Russian>Бразильск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BRAZIL</Tag>
@@ -1830,7 +1867,7 @@
 		<French>Empire brésilien</French>
 		<Italian>Impero Brasiliano</Italian>
 		<Polish>Cesarstwo Brazylii</Polish>
-		<Russian>Áðàçèëèÿ</Russian>
+		<Russian>Бразильцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_BRAZIL_PEDIA</Tag>
@@ -1844,12 +1881,12 @@
 		<French>Brésil</French>
 		<Italian>Brasile</Italian>
 		<Polish>Brazylia</Polish>
-		<Russian>Áðàçèëüöû</Russian>
+		<Russian>Бразильцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_ADJECTIVE</Tag>
 		<English>Israeli</English>
-		<French>Israelite</French>
+		<French>Israélite</French>
 		<German>Israelischer</German>
 		<Italian>
 			<Text>Israeliano:Israeliana:Israeliani:Israeliane</Text>
@@ -1857,7 +1894,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Italian>
 		<Spanish>Israelí</Spanish>
-		<Russian>èçðàèëüòÿíå</Russian>
+		<Russian>Израильск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ISRAEL</Tag>
@@ -1866,7 +1903,7 @@
 		<German>Israelischer Reich</German>
 		<Italian>Impero Israeliano</Italian>
 		<Spanish>Imperio israelí</Spanish>
-		<Russian>Èçðàèëü</Russian>
+		<Russian>Израильтяне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_PEDIA</Tag>
@@ -1877,13 +1914,13 @@
 		<Tag>TXT_KEY_CIVILIZATION_ISRAEL_SHORT</Tag>
 		<English>Israel</English>
 		<Italian>Israele</Italian>
-		<Russian>Èçðàèëüòÿíå</Russian>
+		<Russian>Израильтяне</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JIVARO_ADJECTIVE</Tag>
 		<English>Jivaro</English>
 		<Polish>Jiwaro</Polish>
-		<Russian>õèâàðî</Russian>
+		<Russian>Хиварск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JIVARO</Tag>
@@ -1891,7 +1928,7 @@
 		<French>Empire jivaro</French>
 		<Italian>Impero Jivaro</Italian>
 		<Polish>Imperium Jiwaro</Polish>
-		<Russian>Ïëåìÿ õèâàðî</Russian>
+		<Russian>Хиваро</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JIVARO_PEDIA</Tag>
@@ -1902,12 +1939,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_JIVARO_SHORT</Tag>
 		<English>Jivaro</English>
+		<Russian>Хиваро</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAORI_ADJECTIVE</Tag>
 		<English>Maori</English>
 		<Polish>Maoryski</Polish>
-		<Russian>Ìàîðè</Russian>
+		<Russian>Маорийск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAORI</Tag>
@@ -1915,7 +1953,7 @@
 		<French>Empire maori</French>
 		<Italian>Impero Maori</Italian>
 		<Polish>Imperium Maorys&#243;w</Polish>
-		<Russian>Ïëåìåíà ìàîðè</Russian>
+		<Russian>Маори</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_MAORI_PEDIA</Tag>
@@ -1927,15 +1965,19 @@
 		<Tag>TXT_KEY_CIVILIZATION_MAORI_SHORT</Tag>
 		<English>Maori</English>
 		<Polish>Maorysi</Polish>
-		<Russian>ìàîðè</Russian>
+		<Russian>Маори</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_ADJECTIVE</Tag>
 		<English>Neanderthal</English>
-		<French>Néanderthal</French>
+		<French>
+			<Text>néanderthal:néanderthale:néanderthals:néanderthales</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
 		<Spanish>Neandertal</Spanish>
 		<Polish>Neandertalski</Polish>
-		<Russian>Íåàíäåðòàëüöû</Russian>
+		<Russian>Неандертальск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL</Tag>
@@ -1943,12 +1985,12 @@
 		<French>Empire du Néanderthal</French>
 		<Spanish>Imperio Neandertal</Spanish>
 		<Polish>Imperium Neandertalczyk&#243;w</Polish>
-		<Russian>Íåàíäåðòàëüöû</Russian>
+		<Russian>Неандертальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_NEANDERTHAL_PEDIA</Tag>
 		<English>The Neanderthals or Neandertals are an extinct species of human in the genus Homo, possibly a subspecies of Homo sapiens. They are very closely related to modern humans, differing in DNA by only 0.3%, which however is twice that of the widest DNA gap found among contemporary humans. Remains left by Neanderthals include bones and stone tools, which are found from western Europe to central Asia. The species is named after Neandertal ("Neander Valley"), the location in Germany where it was first discovered.Neanderthals are generally classified by palaeontologists as the species Homo neanderthalensis, but a minority consider them to be a subspecies of Homo sapiens, (Homo sapiens neanderthalensis). The first humans with proto-Neanderthal traits are believed to have existed in Europe as early as 600,000–350,000 years ago.The exact date of their extinction is disputed. Fossils found in the Vindija Cave in Croatia have been dated to between 33,000 and 32,000 years old, and Neanderthal artifacts from Gorham's Cave in Gibraltar are believed to be less than 30,000 years old, but a recent study has redated fossils at two Spanish sites as 45,000 years old, 10,000 years older than previously thought, and may cast doubt on recent datings of other sites. Cro-Magnon (early-modern-human) skeletal remains showing some "Neanderthal traits" have been found in Lagar Velho (Portugal) and dated to 24,500 years ago, suggesting that there may have been an extensive admixture of the Cro-Magnon and Neanderthal populations in that region.Several cultural assemblages have been linked to the Neanderthals in Europe. The earliest, the Mousterian stone tool culture, dates to about 300,000 years ago. Late Mousterian artifacts were found in Gorham's Cave on the south-facing coast of Gibraltar. Other tool cultures associated with the Neanderthals include the Châtelperronian, the Aurignacian, and the Gravettian; their tool assemblages appear to have developed gradually within their populations, rather than being introduced by new population groups arriving in the region.With an average cranial capacity of 1600cc, Neanderthal's cranial capacity is known to be notably larger than the 1400cc average for all races of modern humans, indicating that their brain size was at least as large, if not larger. In 2008, a group of scientists produced a study using three-dimensional computer-assisted reconstructions of Neanderthal infants based on fossils found in Russia and Syria. The study indicated that Neanderthal and modern human brains were the same size at birth, but by adulthood, the Neanderthal brain was larger than the modern human brain. They were much stronger than modern humans, having particularly strong arms and hands. Males stood 164–168 cm (65–66 in) and females about 152–156 cm (60–61 in) tall.Genetic evidence published in 2010 suggests that Neanderthals contributed to the DNA of anatomically modern humans, probably through interbreeding between 80,000 and 50,000 years ago with the population of anatomically modern humans who had recently migrated from Africa. According to the study, by the time that population began dispersing across Eurasia, Neanderthals genes constituted as much as 1–4% of its genome (roughly equivalent to having one Neanderthal great-great-great-grandparent). Ötzi the iceman, Europe's oldest preserved mummy, was found to possess an even higher percentage of Neanderthal ancestry. Recent findings suggest there may be even more Neandarthal genes in human, non-African genes than previously expected, at about 20% of the human genome instead.In December 2013, researchers reported evidence that Neanderthals practiced burial behavior and intentionally buried their dead. In addition, scientists reported, for the first time, the entire genome of a Neanderthal. The genome was extracted from the toe bone of a 130,000-year-old Neanderthal found in a Siberian cave.</English>
-		<Spanish>El hombre de Neandertal (Homo neanderthalensis) es una especie extinta del género Homo que habitó Europa y partes de Asia occidental desde hace 230 000 hasta 28 000 años atrás, durante el Pleistoceno medio y superior y culturalmente integrada en el Paleolítico medio. En un periodo de aproximadamente 5000 años se cree convivió paralelamente en los mismos territorios europeos con el Hombre de Cro-Magnon, primeros hombres modernos en Europa. Esta convivencia se ha demostrado por fósiles hallados en las cuevas de Châtelperron.Sus características definidoras, a partir de los huesos fósiles descubiertos hasta ahora (unos 400 individuos), son: esqueleto robusto, pelvis ancha, extremidades cortas y robustas, tórax en barril, arcos supraorbitarios resaltados, frente baja e inclinada, faz prominente, mandíbulas sin mentón y gran capacidad craneal —1550 cm³—. Vivían en grupos sociales organizados, formados por alrededor de unos treinta miembros casi todos con parentesco (clanes), dominaban el fuego y podían fabricar herramientas rústicas que incluían huesos y piedras.Los neandertales fueron una especie bien adaptada al frío extremo congruente con la cuarta y última glaciación. Tenían un cráneo alargado y amplio, baja estatura y complexión robusta, y nariz amplia de aletas prominentes; rasgos que denotan adaptación a climas fríos, como se puede observar actualmente en las poblaciones del Ártico, y muy probablemente dueños de un olfato más desarrollado que el hombre moderno. Su cerebro era igual o incluso más grande que el de los hombres modernos.Un neandertal medio podía alcanzar unos 1,65 m, era de contextura pesada, dentadura prominente y musculatura robusta. Si bien su estructura ósea no los hacía corredores de largo aliento, sí podían hacer cortas y rápidas carreras persecutorias o escapistas; eran sobre todo caminantes de largas distancias. Estudios anatómicos han determinado que el neandertal podía articular una fonética limitada respecto a la que actualmente posee el hombre moderno, debido a la ubicación de la laringe, situada más arriba que la de este. Otros estudios recientes indican que los neandertales podían dar grandes mascadas a su alimento gracias a una mayor apertura bucal.3 La expectativa de vida de un miembro adulto en un medio ambiente tan extremo, riguroso y hostil no sobrepasaba los 40 años en los hombres y 30 en las mujeres.El estilo de herramientas líticas utilizadas en el Paleolítico medio por los neandertales se conoce como la cultura Musteriense, así llamada por haber sido encontradas por primera vez en el yacimiento arqueológico Le Moustier. La cultura musteriense está caracterizada por la utilización de la técnica de talla Levallois. Estas herramientas fueron producidas usando martillos de percusión blandos, de hueso o madera. En los últimos tiempos de los neandertales aparece en el registro arqueológico el estilo Châtelperroniense, considerado como más "avanzado" que el musteriense.</Spanish>
+		<Spanish>El hombre de Neandertal (Homo neanderthalensis) es una especie extinta del género Homo que habitó Europa y partes de Asia occidental desde hace 230 000 hasta 28 000 años atrás, durante el Pleistoceno medio y superior y culturalmente integrada en el Paleolítico medio. En un periodo de aproximadamente 5000 años se cree convivió paralelamente en los mismos territorios europeos con el Hombre de Cro-Magnon, primeros hombres modernos en Europa. Esta convivencia se ha demostrado por fósiles hallados en las cuevas de Châtelperron.Sus características definidoras, a partir de los huesos fósiles descubiertos hasta ahora (unos 400 individuos), son: esqueleto robusto, pelvis ancha, extremidades cortas y robustas, tórax en barril, arcos supraorbitarios resaltados, frente baja e inclinada, faz prominente, mandíbulas sin mentón y gran capacidad craneal -1550 cm³-. Vivían en grupos sociales organizados, formados por alrededor de unos treinta miembros casi todos con parentesco (clanes), dominaban el fuego y podían fabricar herramientas rústicas que incluían huesos y piedras.Los neandertales fueron una especie bien adaptada al frío extremo congruente con la cuarta y última glaciación. Tenían un cráneo alargado y amplio, baja estatura y complexión robusta, y nariz amplia de aletas prominentes; rasgos que denotan adaptación a climas fríos, como se puede observar actualmente en las poblaciones del Ártico, y muy probablemente dueños de un olfato más desarrollado que el hombre moderno. Su cerebro era igual o incluso más grande que el de los hombres modernos.Un neandertal medio podía alcanzar unos 1,65 m, era de contextura pesada, dentadura prominente y musculatura robusta. Si bien su estructura ósea no los hacía corredores de largo aliento, sí podían hacer cortas y rápidas carreras persecutorias o escapistas; eran sobre todo caminantes de largas distancias. Estudios anatómicos han determinado que el neandertal podía articular una fonética limitada respecto a la que actualmente posee el hombre moderno, debido a la ubicación de la laringe, situada más arriba que la de este. Otros estudios recientes indican que los neandertales podían dar grandes mascadas a su alimento gracias a una mayor apertura bucal.3 La expectativa de vida de un miembro adulto en un medio ambiente tan extremo, riguroso y hostil no sobrepasaba los 40 años en los hombres y 30 en las mujeres.El estilo de herramientas líticas utilizadas en el Paleolítico medio por los neandertales se conoce como la cultura Musteriense, así llamada por haber sido encontradas por primera vez en el yacimiento arqueológico Le Moustier. La cultura musteriense está caracterizada por la utilización de la técnica de talla Levallois. Estas herramientas fueron producidas usando martillos de percusión blandos, de hueso o madera. En los últimos tiempos de los neandertales aparece en el registro arqueológico el estilo Châtelperroniense, considerado como más "avanzado" que el musteriense.</Spanish>
 		<Polish>Cz&#179;owiek neandertalski, neandertalczyk - wymar&#179;y przedstawiciel rodzaju Homo (cz&#179;owiek), znany z plejstocenu (ok. 400 000 do ok. 24 500 lat temu), w zale&#191;no&#156;ci od autor&#243;w klasyfikowany jako podgatunek cz&#179;owieka rozumnego - Homo sapiens neanderthalensis - lub odr&#234;bny od niego gatunek - Homo neanderthalensis. Neandertalczyk prawdopodobnie ewoluowa&#179; z Homo heidelbergensis lub formy z nim blisko spokrewnionej w &#156;rodkowym plejstocenie. Pierwsze cechy neandertalskie pojawi&#179;y si&#234; u hominid&#243;w w Europie ok. 400 -350 tys. lat temu. Neandertalczycy rozprzestrzenili si&#234; po Europie (z wyj&#185;tkiem pokrytej lodowcem[potrzebne &#159;r&#243;d&#179;o] Skandynawii) i na Bliskim Wschodzie. W okresie du&#191;ych waha&#241; klimatycznych wykazywali przystosowania do zimnego klimatu. Prawdopodobnie w tym czasie zacz&#234;li u&#191;ywa&#230; odzie&#191;y (dla ochrony od zimna) oraz bi&#191;uterii. Nieliczne &#156;lady wskazuj&#185; na obecno&#156;&#230; podobnych form w po&#179;udniowej Syberii i p&#243;&#179;nocnej Afryce.</Polish>
 		<Russian>[NEWLINE][TAB]Неандертальцы - вымерший вид человека из рода Homo, возможно, подвид Homo sapiens. Они очень тесно связаны с современными людьми, различаясь по ДНК всего на 0,3%, что, однако, вдвое больше, чем самый большой разрыв в ДНК, обнаруженный среди современных людей. Останки, оставленные неандертальцами, включают кости и каменные орудия труда, которые находят от Западной Европы до Центральной Азии. Вид назван в честь неандертальца («Долина Неандера»), места в Германии, где он был впервые обнаружен. Палеонтологи обычно классифицируют неандертальцев как вид Homo neanderthalensis, но меньшинство считает их подвидом Homo sapiens (Homo sapiens neanderthalensis). Считается, что первые люди с прото-неандертальскими чертами существовали в Европе еще 600 000–350 000 лет назад. Точная дата их исчезновения оспаривается. Окаменелости, найденные в пещере Виндия в Хорватии, датируются возрастом от 33000 до 32000 лет, а артефакты неандертальцев из пещеры Горхэм в Гибралтаре, как полагают, имеют возраст менее 30 000 лет, но недавнее исследование переориентировало окаменелости на двух испанских участках как 45000. лет, на 10 000 лет старше, чем считалось ранее, и может поставить под сомнение недавние датировки других сайтов. Остатки скелетов кроманьонцев (раннего современного человека), демонстрирующие некоторые «черты неандертальцев», были обнаружены в Лагар-Велью (Португалия) и датированы 24 500 лет назад, что позволяет предположить, что здесь, возможно, была обширная примесь кроманьонцев и неандертальцев. Несколько культурных сообществ были связаны с неандертальцами в Европе. Самая ранняя, мустьерская культура каменных орудий, датируется примерно 300 000 лет назад. Артефакты позднего мустье были найдены в пещере Горхэм на южном побережье Гибралтара. Другие орудийные культуры, связанные с неандертальцами, включают шательперронский, ориньякский и граветтианский; их совокупности орудий труда, по-видимому, развивались постепенно внутри их популяций, а не вводились новыми группами населения, прибывающими в регион. Известно, что при средней емкости черепа 1600 куб. см объем черепа неандертальца заметно превышает средний объем черепа 1400 куб. см для всех рас. современных людей, что указывает на то, что размер их мозга был как минимум таким же, если не больше. В 2008 году группа ученых провела исследование с использованием трехмерных компьютерных реконструкций младенцев неандертальцев на основе окаменелостей, найденных в России и Сирии. Исследование показало, что мозг неандертальца и современного человека при рождении был одинакового размера, но к зрелому возрасту мозг неандертальца был больше, чем мозг современного человека. Они были намного сильнее современных людей, обладая особенно сильными руками. Рост мужчин составлял 164–168 см (65–66 дюймов), а рост женщин - около 152–156 см (60–61 дюйм). Генетические данные, опубликованные в 2010 году, предполагают, что неандертальцы внесли свой вклад в ДНК анатомически современных людей, вероятно, путем скрещивания между 80 000 и 50 000 лет назад с населением анатомически современных людей, которые недавно мигрировали из Африки. Согласно исследованию, к тому времени, когда эта популяция начала рассредоточиться по Евразии, гены неандертальцев составляли до 1–4% ее генома (примерно эквивалентно наличию одного прапрапрадеда неандертальца). Было обнаружено, что ледяной человек Эци, самая старая сохранившаяся мумия в Европе, имеет еще более высокий процент неандертальского происхождения. Недавние результаты предполагают, что в человеческих, неафриканских генах может быть даже больше неандартальских генов, чем предполагалось ранее, а это около 20% человеческого генома. В декабре 2013 года исследователи сообщили о доказательствах того, что неандертальцы практиковали погребение и намеренно хоронили своих мертвецов. Кроме того, ученые впервые сообщили о полном геноме неандертальца. Геном был извлечен из пальца ноги 130 000-летнего неандертальца, найденного в сибирской пещере.</Russian>
 	</TEXT>
@@ -1958,12 +2000,12 @@
 		<French>Néanderthal</French>
 		<Spanish>Neandertal</Spanish>
 		<Polish>Neandertalczycy</Polish>
-		<Russian>íåàíäåðòàëüöû</Russian>
+		<Russian>Неандертальцы</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_TUPI_ADJECTIVE</Tag>
 		<English>Tupi</English>
-		<Russian>Òóïè</Russian>
+		<Russian>Тупийск.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_TUPI</Tag>
@@ -1971,7 +2013,7 @@
 		<French>Empire tupi</French>
 		<Italian>Impero Tupi</Italian>
 		<Polish>Imperium Tupi</Polish>
-		<Russian>Ïëåìåíà òóïè</Russian>
+		<Russian>Тупи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_TUPI_PEDIA</Tag>
@@ -1981,12 +2023,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVILIZATION_TUPI_SHORT</Tag>
 		<English>Tupi</English>
-		<Russian>òóïè</Russian>
+		<Russian>Тупи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABUBAKR</Tag>
 		<English>Abu Bakr</English>
-		<Russian>Àáó Áàêð</Russian>
+		<Russian>Абу Бакр</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ABUBAKR_PEDIA</Tag>
@@ -1998,7 +2040,7 @@
 		<Tag>TXT_KEY_LEADER_AFONSO</Tag>
 		<English>Afonso I</English>
 		<German>Alfons I.</German>
-		<Russian>Àôîíñó I</Russian>
+		<Russian>Афонсу I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_AFONSO_PEDIA</Tag>
@@ -2009,7 +2051,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ATOTOZTLI</Tag>
 		<English>Atotoztli</English>
-		<Russian>Àòîòîçòëè</Russian>
+		<Russian>Атотоцли</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ATOTOZTLI_PEDIA</Tag>
@@ -2045,7 +2087,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
-		<Russian>Âàñèëèé</Russian>
+		<Russian>Василий II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BASIL_PEDIA</Tag>
@@ -2058,7 +2100,7 @@
 		<English>Ben Gurion</English>
 		<French>Ben Gourion</French>
 		<Spanish>Ben-Gurión</Spanish>
-		<Russian>Áåí-Ãóðèîí</Russian>
+		<Russian>Бен-Гурион</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_BEN_GURION_PEDIA</Tag>
@@ -2070,7 +2112,7 @@
 		<English>Caligula</English>
 		<Italian>Caligola</Italian>
 		<Polish>Kaligula</Polish>
-		<Russian>Êàëèãóëà</Russian>
+		<Russian>Калигула</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CALIGULA_PEDIA</Tag>
@@ -2081,7 +2123,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CETSHWAYO</Tag>
 		<English>Cetshwayo</English>
-		<Russian>Êåò÷âàéî</Russian>
+		<Russian>Кетчвайо</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CETSHWAYO_PEDIA</Tag>
@@ -2097,7 +2139,7 @@
 		<Italian>Carlo V</Italian>
 		<Spanish>Carlos I</Spanish>
 		<Polish>Karol V</Polish>
-		<Russian>Êàðë V</Russian>
+		<Russian>Карл V</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHARLES_V_PEDIA</Tag>
@@ -2110,20 +2152,20 @@
 		<English>Chief Head Hunter</English>
 		<French>Chef des Réducteurs de Tête</French>
 		<Polish>W&#243;dz &#163;owca G&#179;&#243;w</Polish>
-		<Russian>Îõîòíèê çà ñêàëüïàìè</Russian>
+		<Russian>Главарь охотников за головами</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CHIEF_HEAD_HUNTER_PEDIA</Tag>
 		<English>[H1]Chief Head Hunter[\H1][NEWLINE][NEWLINE][BOLD]Lived:[\BOLD] ?-?[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Headhunting is the practice of taking a person's head after killing him or her. In Amazonia, the only people known to have shrunk human heads are the Shuar, Achuar, Huambisa and Aguaruna, Jivaroan peoples of Ecuador and Peru. Among the Shuar, a shrunken head is known as a tsantsa, also transliterated tzantza. The Shuar in Ecuador and Peru, along the Amazon River, practiced headhunting in order to make shrunken heads for ritual use. The Shuar still produce replica heads which they sell to tourists, and there are still some splinter Shuar tribes that continue to practice headhunting.</English>
 		<Polish>[H1]W&#243;dz &#163;owca G&#179;&#243;w[\H1][NEWLINE][NEWLINE][BOLD]&#175;y&#179;:[\BOLD] ?-?[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][NEWLINE]&#163;owcy g&#179;&#243;w (ang. head hunters) - w etnografii okre&#156;lenie lud&#243;w, praktykuj&#185;cych zdobywanie jako trofeum wojennego g&#179;&#243;w zabitych wrog&#243;w. Zazwyczaj przypisywali czaszkom szczeg&#243;lne w&#179;a&#156;ciwo&#156;ci magiczne. Praktyki takie mia&#179;y miejsce w r&#243;&#191;nych cz&#234;&#156;ciach &#156;wiata, zazwyczaj wymienia si&#234; w tym kontek&#156;cie np. Nag&#243;w z p&#243;&#179;nocno-wschodnich Indii czy Dajak&#243;w z Borneo.</Polish>
-		<Russian>[H1]Охотник за головами[\H1][NEWLINE][NEWLINE][BOLD]Годы жизни: [\BOLD] ?-?[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Охота за головами - это практика отсечения головы человека после его убийства в качестве трофея. В Амазонии единственные народы, которые, насколько известно, высушивают человеческие головы, - это шуар, ачуар, хуамбиса и агуаруна, племена хиваро Эквадора и Перу. У шуаров сморщенная голова известна как цанца, также транслитерированная цанца. Шуары в Эквадоре и Перу, на берегу реки Амазонки, практиковали хедхантинг, чтобы делать сморщенные головы для ритуального использования. Шуар до сих пор производят копии голов, которые продают туристам, и есть еще несколько отколовшихся племен шуаров, которые продолжают заниматься охотой за головами.</Russian>
+		<Russian>[H1]Главарь охотников за головами[\H1][NEWLINE][NEWLINE][BOLD]Годы жизни:[\BOLD] ?-?[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE]Охота за головами - это практика забирать в качестве трофея голову человека после его убийства. В Амазонии единственные народы, которые, насколько известно, высушивают человеческие головы, - это шуара, ачуара, уамбиса и агуаруна, племена хиваро Эквадора и Перу. Среди шуаров сушеная голова известна как тсантса, также транслитерируемая как цанца. Шуары в Эквадоре и Перу, вдоль реки Амазонки, практиковали охоту за головами, чтобы засушивать их для ритуального использования. Шуара до сих пор производят муляжи голов, которые продают туристам, но осталось еще несколько отколовшихся племен, продолжающих заниматься охотой за головами.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CLEOPATRA</Tag>
 		<English>Cleopatra</English>
 		<French>Clèopatre</French>
 		<Polish>Kleopatra</Polish>
-		<Russian>Êëåîïàòðà</Russian>
+		<Russian>Клеопатра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CLEOPATRA_PEDIA</Tag>
@@ -2134,7 +2176,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CUNHAMBEBE</Tag>
 		<English>Cunhambebe</English>
-		<Russian>Êóíõàìáåáå</Russian>
+		<Russian>Кунхамбебе</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CUNHAMBEBE_PEDIA</Tag>
@@ -2146,7 +2188,7 @@
 		<Tag>TXT_KEY_LEADER_DAVID</Tag>
 		<English>David</English>
 		<Italian>Davide</Italian>
-		<Russian>Äàâèä</Russian>
+		<Russian>Давид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DAVID_PEDIA</Tag>
@@ -2156,7 +2198,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DE_WITT</Tag>
 		<English>Johan de Witt</English>
-		<Russian>ßí äå Âèòò</Russian>
+		<Russian>Ян де Витт</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DE_WITT_PEDIA</Tag>
@@ -2168,7 +2210,7 @@
 		<Tag>TXT_KEY_LEADER_DIDO</Tag>
 		<English>Dido</English>
 		<French>Didon</French>
-		<Russian>Äèäîíà</Russian>
+		<Russian>Дидона</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DIDO_PEDIA</Tag>
@@ -2179,7 +2221,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_FRANCO</Tag>
 		<English>Francisco Franco</English>
-		<Russian>Ôðàíêî</Russian>
+		<Russian>Франсиско Франко</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_FRANCO_PEDIA</Tag>
@@ -2210,7 +2252,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Àäðèàí</Russian>
+		<Russian>Адриан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HADRIAN_PEDIA</Tag>
@@ -2221,7 +2263,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HARUN</Tag>
 		<English>Harun al-Rashid</English>
-		<Russian>Õàðóí àð-Ðàøèä</Russian>
+		<Russian>Харун ар-Рашид</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HARUN_PEDIA</Tag>
@@ -2232,7 +2274,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HEKE</Tag>
 		<English>Heke</English>
-		<Russian>Õåêå</Russian>
+		<Russian>Хеке</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HEKE_PEDIA</Tag>
@@ -2245,7 +2287,7 @@
 		<English>Henry VIII</English>
 		<Italian>Enrico VIII</Italian>
 		<Polish>Henryk VIII</Polish>
-		<Russian>Ãåíðèõ VIII</Russian>
+		<Russian>Генрих VIII</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HENRY_VIII_PEDIA</Tag>
@@ -2256,7 +2298,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIAWATHA</Tag>
 		<English>Hiawatha</English>
-		<Russian>Ãàéàâàòà</Russian>
+		<Russian>Гайавата</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIAWATHA_PEDIA</Tag>
@@ -2267,7 +2309,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIROHITO</Tag>
 		<English>Hirohito</English>
-		<Russian>Õèðîõèòî</Russian>
+		<Russian>Хирохито</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HIROHITO_PEDIA</Tag>
@@ -2278,11 +2320,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HITLER</Tag>
 		<English>Hitler</English>
-		<Russian>Ãèòëåð</Russian>
+		<Russian>Гитлер</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HITLER_PEDIA</Tag>
-		<English>[H1]Adolph Hitler[\H1][NEWLINE][BOLD]Fuhrer of Germany[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1889 - 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Adolf Hitler was an Austrian-born German politician who led the National Socialist German Workers Party, more commonly known as the Nazi Party. He was Chancellor of Germany (1933-1945) and Führer of Germany (1934-1945). Hitler was a decorated veteran of World War I who achieved leadership of the Nazi Party in Weimar Germany. Following his imprisonment after a failed coup, he gained support by promoting nationalism, antisemitism and anti-communism with charismatic oratory and propaganda. While imprisoned at Landsberg he dictated Mein Kampf (My Struggle, originally entitled "Four Years of Struggle against Lies, Stupidity, and Cowardice") to his deputy Rudolf Hess. The book, dedicated to Thule Society member Dietrich Eckart, was an autobiography and an exposition of his ideology.[PARAGRAPH:1]The political turning point for Hitler came when the Great Depression hit Germany in 1930. The Weimar Republic had never been firmly rooted and was openly opposed by right-wing conservatives (including monarchists), communists and the Nazis. As the parties loyal to the democratic, parliamentary republic found themselves unable to agree on counter-measures, their Grand Coalition broke up and was replaced by a minority cabinet. The president reluctantly agreed to appoint Hitler Chancellor of a coalition government formed by the NSDAP and DNVP.The only other Nazi besides Hitler to get a portfolio was Wilhelm Frick, who was given the relatively powerless interior ministry. As a concession to the Nazis, Goring was named minister without portfolio. While Papen intended to use Hitler as a figurehead, the Nazis gained key positions. For instance, as part of the deal in which Hitler became Chancellor, Göring was named interior minister of Prussia—giving him command of the largest police force in Germany.[PARAGRAPH:1]On the morning of 30 January 1933, in Hindenburg's office, Adolf Hitler was sworn in as Chancellor during what some observers later described as a brief and simple ceremony. The Nazis' seizure of power subsequently became known as the Machtergreifung. Hitler established the Reichssicherheitsdienst as his personal bodyguards. In March 1938, Hitler pressured Austria into unification with Germany (the Anschluss) and made a triumphant entry into Vienna on 14 March. Next, he intensified a crisis over the German-speaking Sudetenland districts of Czechoslovakia.[PARAGRAPH:1]On 30 September 1938, a one-day conference was held in Munich attended by Hitler, Chamberlain, Daladier and Mussolini that led to the Munich Agreement, which gave to Hitler's ostensible demands by handing over the Sudetenland districts to Germany. Though Chamberlain was well-satisfied with the Munich conference, leading to his infamous claim to have secured “peace in our time”, Hitler was privately furious about being “cheated” out of the war he was desperate to have in 1938. As a result of the summit, Hitler was TIME magazine's Man of the Year for 1938.on 23 August 1939, Hitler concluded a secret non-aggression pact (the Molotov-Ribbentrop Pact) with Joseph Stalin, agreeing to partition Poland. On 1 September, Germany invaded western Poland. Britain and France declared war on Germany on 3 September but did not immediately act. Not long after this, on 17 September, Soviet forces invaded eastern Poland.[PARAGRAPH:1]On 22 June 1941, three million German troops attacked the Soviet Union, breaking the non-aggression pact Hitler had concluded with Stalin two years earlier. This invasion, Operation Barbarossa, seized huge amounts of territory, including the Baltic states, Belarus, and Ukraine. It also encircled and destroyed many Soviet forces, which Stalin had ordered not to retreat. However, the Germans were stopped barely short of Moscow in December 1941 by the Russian winter and fierce Soviet resistance. The invasion failed to achieve the quick triumph Hitler wanted. Hitler's declaration of war against the United States on 11 December 1941, four days after the Empire of Japan's attack on Pearl Harbor, Hawaii and six days after Nazi Germany's closest approach to Moscow, set him against a coalition that included the world's largest empire (the British Empire), the world's greatest industrial and financial power (the United States), and the world's largest army (the Soviet Union).[PARAGRAPH:1]By late 1944, the Red Army had driven the Germans back into Central Europe and the Western Allies were advancing into Germany. Hitler realized that Germany had lost the war, but allowed no retreats. He hoped to negotiate a separate peace with America and Britain, a hope buoyed by the death of Franklin D. Roosevelt on 12 April 1945. Hitler's stubbornness and defiance of military realities also allowed the Holocaust to continue. He also ordered the complete destruction of all German industrial infrastructure before it could fall into Allied hands, saying that Germany's failure to win the war forfeited its right to survive. The Axis Powers occupied most of continental Europe and parts of Asia and Africa. Eventually the Allies defeated the Wehrmacht and Schutzstaffel. By 1945, Germany was in ruins. Hitler's bid for territorial conquest and racial subjugation caused the deaths of tens of millions of people, including the systematic genocide of an estimated six million Jews, not including various additional "undesirable" populations, in what is known as the Holocaust.[PARAGRAPH:1]On 30 April 1945, after intense street-to-street combat, when Soviet troops were within a block or two of the Reich Chancellory, Hitler committed suicide, shooting himself while simultaneously biting into a cyanide capsule. Hitler's body and that of Eva Braun (his mistress whom he had married the day before) were put in a bomb crater, doused in gasoline by Otto Gunsche and other Führerbunker aides, and set alight as the Red Army advanced and shelling continued.</English>
+		<English>[H1]Adolph Hitler[\H1][NEWLINE][BOLD]Fuhrer of Germany[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1889 - 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Adolf Hitler was an Austrian-born German politician who led the National Socialist German Workers Party, more commonly known as the Nazi Party. He was Chancellor of Germany (1933-1945) and Führer of Germany (1934-1945). Hitler was a decorated veteran of World War I who achieved leadership of the Nazi Party in Weimar Germany. Following his imprisonment after a failed coup, he gained support by promoting nationalism, antisemitism and anti-communism with charismatic oratory and propaganda. While imprisoned at Landsberg he dictated Mein Kampf (My Struggle, originally entitled "Four Years of Struggle against Lies, Stupidity, and Cowardice") to his deputy Rudolf Hess. The book, dedicated to Thule Society member Dietrich Eckart, was an autobiography and an exposition of his ideology.[PARAGRAPH:1]The political turning point for Hitler came when the Great Depression hit Germany in 1930. The Weimar Republic had never been firmly rooted and was openly opposed by right-wing conservatives (including monarchists), communists and the Nazis. As the parties loyal to the democratic, parliamentary republic found themselves unable to agree on counter-measures, their Grand Coalition broke up and was replaced by a minority cabinet. The president reluctantly agreed to appoint Hitler Chancellor of a coalition government formed by the NSDAP and DNVP.The only other Nazi besides Hitler to get a portfolio was Wilhelm Frick, who was given the relatively powerless interior ministry. As a concession to the Nazis, Goring was named minister without portfolio. While Papen intended to use Hitler as a figurehead, the Nazis gained key positions. For instance, as part of the deal in which Hitler became Chancellor, Göring was named interior minister of Prussia-giving him command of the largest police force in Germany.[PARAGRAPH:1]On the morning of 30 January 1933, in Hindenburg's office, Adolf Hitler was sworn in as Chancellor during what some observers later described as a brief and simple ceremony. The Nazis' seizure of power subsequently became known as the Machtergreifung. Hitler established the Reichssicherheitsdienst as his personal bodyguards. In March 1938, Hitler pressured Austria into unification with Germany (the Anschluss) and made a triumphant entry into Vienna on 14 March. Next, he intensified a crisis over the German-speaking Sudetenland districts of Czechoslovakia.[PARAGRAPH:1]On 30 September 1938, a one-day conference was held in Munich attended by Hitler, Chamberlain, Daladier and Mussolini that led to the Munich Agreement, which gave to Hitler's ostensible demands by handing over the Sudetenland districts to Germany. Though Chamberlain was well-satisfied with the Munich conference, leading to his infamous claim to have secured “peace in our time”, Hitler was privately furious about being “cheated” out of the war he was desperate to have in 1938. As a result of the summit, Hitler was TIME magazine's Man of the Year for 1938.on 23 August 1939, Hitler concluded a secret non-aggression pact (the Molotov-Ribbentrop Pact) with Joseph Stalin, agreeing to partition Poland. On 1 September, Germany invaded western Poland. Britain and France declared war on Germany on 3 September but did not immediately act. Not long after this, on 17 September, Soviet forces invaded eastern Poland.[PARAGRAPH:1]On 22 June 1941, three million German troops attacked the Soviet Union, breaking the non-aggression pact Hitler had concluded with Stalin two years earlier. This invasion, Operation Barbarossa, seized huge amounts of territory, including the Baltic states, Belarus, and Ukraine. It also encircled and destroyed many Soviet forces, which Stalin had ordered not to retreat. However, the Germans were stopped barely short of Moscow in December 1941 by the Russian winter and fierce Soviet resistance. The invasion failed to achieve the quick triumph Hitler wanted. Hitler's declaration of war against the United States on 11 December 1941, four days after the Empire of Japan's attack on Pearl Harbor, Hawaii and six days after Nazi Germany's closest approach to Moscow, set him against a coalition that included the world's largest empire (the British Empire), the world's greatest industrial and financial power (the United States), and the world's largest army (the Soviet Union).[PARAGRAPH:1]By late 1944, the Red Army had driven the Germans back into Central Europe and the Western Allies were advancing into Germany. Hitler realized that Germany had lost the war, but allowed no retreats. He hoped to negotiate a separate peace with America and Britain, a hope buoyed by the death of Franklin D. Roosevelt on 12 April 1945. Hitler's stubbornness and defiance of military realities also allowed the Holocaust to continue. He also ordered the complete destruction of all German industrial infrastructure before it could fall into Allied hands, saying that Germany's failure to win the war forfeited its right to survive. The Axis Powers occupied most of continental Europe and parts of Asia and Africa. Eventually the Allies defeated the Wehrmacht and Schutzstaffel. By 1945, Germany was in ruins. Hitler's bid for territorial conquest and racial subjugation caused the deaths of tens of millions of people, including the systematic genocide of an estimated six million Jews, not including various additional "undesirable" populations, in what is known as the Holocaust.[PARAGRAPH:1]On 30 April 1945, after intense street-to-street combat, when Soviet troops were within a block or two of the Reich Chancellory, Hitler committed suicide, shooting himself while simultaneously biting into a cyanide capsule. Hitler's body and that of Eva Braun (his mistress whom he had married the day before) were put in a bomb crater, doused in gasoline by Otto Gunsche and other Führerbunker aides, and set alight as the Red Army advanced and shelling continued.</English>
 		<Polish>[H1]Adolf Hitler[\H1][NEWLINE][BOLD]Fuhrer Niemiec[\BOLD][NEWLINE][BOLD]&#175;y&#179;:[\BOLD] 1889 - 1945[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][NEWLINE]Niemiecki polityk pochodzenia austriackiego, kanclerz Rzeszy od 30 stycznia 1933, W&#243;dz i kanclerz Rzeszy (niem. Der Führer und Reichskanzler) od 2 sierpnia 1934 (&#179;&#185;cz&#185;c stanowiska prezydenta i kanclerza Rzeszy), przyw&#243;dca Narodowo-Socjalistycznej Niemieckiej Partii Robotnik&#243;w (NSDAP), Cz&#179;owiek Roku 1938 wed&#179;ug tygodnika "Time", ideolog niemieckiej odmiany faszyzmu zwanej od jego nazwiska hitleryzmem, narodowym socjalizmem lub nazizmem - od niemieckiej nazwy partii (niem. Nationalsozialistische Deutsche Arbeiterpartei), tw&#243;rca i dyktator III Rzeszy niemieckiej, zbrodniarz wojenny, odpowiedzialny za zbrodnie przeciw ludzko&#156;ci. Uznawany jest przez wi&#234;kszo&#156;&#230; historyk&#243;w za osobi&#156;cie odpowiedzialnego za polityk&#234; rasow&#185; nazistowskich Niemiec, Holocaust oraz za &#156;mier&#230; milion&#243;w ludzi zabitych podczas jego rz&#185;d&#243;w. Agresywna polityka zagraniczna, kt&#243;r&#185; stosowa&#179;, doprowadzi&#179;a do rozpocz&#234;cia przez Niemcy II wojny &#156;wiatowej, w wyniku kt&#243;rej zgin&#234;&#179;o ok. 50 milion&#243;w ludzi.</Polish>
 		<Russian>[H1]Адольф Гитлер[\H1][NEWLINE][BOLD]Фюрер Германии[\BOLD][NEWLINE][BOLD]Годы жизни: [\BOLD]1889 - 1945[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Адольф Гитлер был немецким политиком австрийского происхождения, возглавлявшим национал-социалистическую рабочую партию Германии, более известную как Нацистская партия. Он был канцлером Германии (1933-1945) и фюрером Германии (1934-1945). Гитлер был награжденным ветераном Первой мировой войны, который возглавил нацистскую партию в Веймарской Германии. После заключения в тюрьму после провалившегося путча он получил поддержку немецкого крупного капитала и реваншистки настроенной военщины, пропагандируя национализм, антисемитизм и антикоммунизм с харизматическими ораторами и пропагандой. Находясь в заключении в Ландсберге, он продиктовал «Майн кампф» («Моя борьба», первоначально озаглавленная «Четыре года борьбы против лжи, глупости и трусости») своему заместителю Рудольфу Гессу. Книга, посвященная члену Общества Туле Дитриху Эккарту, была автобиографией и изложением его идеологии.[PARAGRAPH:1]Политический поворотный момент для Гитлера наступил, когда Германию поразила Великая депрессия в 1930 году. Веймарская республика никогда не имела прочных корней, и ей открыто противостояли правые консерваторы (включая монархистов), коммунисты и нацисты. Поскольку партии, лояльные к демократической парламентской республике, оказались не в состоянии договориться о контрмерах, их большая коалиция распалась и была заменена кабинетом меньшинства. Президент неохотно согласился назначить Гитлера канцлером коалиционного правительства, сформированного НСДАП и НННП. Единственным нацистом, получившим портфель, помимо Гитлера, был Вильгельм Фрик, которому было поручено относительно слабое министерство внутренних дел. В качестве уступки нацистам Геринга назначили министром без портфеля. В то время как Папен намеревался использовать Гитлера в качестве подставного лица, нацисты заняли ключевые позиции. Например, в рамках сделки, по которой Гитлер стал канцлером, Геринг был назначен министром внутренних дел Пруссии, что дало ему командование крупнейшими полицейскими силами в Германии.[PARAGRAPH:1]Утром 30 января 1933 года в офисе Гинденбурга Адольф Гитлер был приведен к присяге в качестве канцлера во время того, что некоторые наблюдатели позже назвали короткой и простой церемонией. Захват власти нацистами впоследствии стал известен как Machtergreifung. Гитлер учредил Reichssicherheitsdienst в качестве своих личных телохранителей. В марте 1938 года Гитлер вынудил Австрию объединиться с Германией (аншлюс) и совершил триумфальный въезд в Вену 14 марта. Затем он усилил кризис в немецкоязычных Судетских районах Чехословакии.[PARAGRAPH:1]30 сентября 1938 года в Мюнхене состоялась однодневная конференция, на которой присутствовали Гитлер, Чемберлен, Даладье и Муссолини, которая привела к Мюнхенскому соглашению, которое удовлетворило непомерные требования Гитлера и передало районы Судетской области Германии. Хотя Чемберлен был вполне удовлетворен Мюнхенской конференцией, которая привела к его печально известному заявлению об обеспечении «мира в наше время», Гитлер в частном порядке был в ярости из-за того, что его «обманом» вывели из войны, которую он отчаянно хотел вести в 1938 году. В ходе саммита Гитлер был человеком года по версии журнала TIME в 1938 году. 23 августа 1939 года Гитлер заключил тайный пакт о ненападении (пакт Молотова-Риббентропа) с Иосифом Сталиным, согласившись разделить Польшу. 1 сентября Германия вторглась в западную Польшу. Великобритания и Франция объявили войну Германии 3 сентября, но не предприняли немедленных действий. Вскоре после этого, 17 сентября, советские войска заняли восточные воеводства Польши, аннексированные ранее у Советской России по Рижскому договору 1921 года.[PARAGRAPH:1]22 июня 1941 года три миллиона немецких солдат напали на Советский Союз, вероломно нарушив пакт о ненападении, заключенный Гитлером со Сталиным двумя годами ранее. Это вторжение, операция «Барбаросса», охватило огромные территории, включая регион Балтии, Беларусь и Советскую Украину. В самом начале войны Вермахт окружил и уничтожил многие советские войска, которым Сталин приказал удерживать позиции и не отступать. Однако в декабре 1941 года немцы были остановлены незадолго до Москвы из-за ожесточенного советского сопротивления и неготовности к войне в холодное время года. Вторжение не привело к быстрой победе, на которую рассчитывал Гитлер. Объявление Гитлером войны Соединенным Штатам 11 декабря 1941 года, через четыре дня после нападения Японской империи на Перл-Харбор на Гавайях и через шесть дней после ближайшего приближения нацистской Германии к Москве, настроило против него коалицию, в которую входила крупнейшая в мире империя (Британская империя), крупнейшая промышленная и финансовая держава мира (Соединенные Штаты) и крупнейшая континентальная держава с самой большой армией в мире (Советский Союз).[PARAGRAPH:1]К концу 1944 года Красная Армия вытеснила немцев обратно в Центральную Европу, а западные союзники в это время открыли второй фронт и наступали в Германию. Гитлер осознал, что Германия проиграла войну, но не даже не помышлял о капитуляции. Он надеялся заключить сепаратный мир с Америкой и Великобританией, и эта надежда была поддержана преждевременной смертью Франклина Делано Рузвельта 12 апреля 1945 года. Упрямство Гитлера и игнорирование военных реалий также продлило время нацистского террора на оккупированных территориях. Он также приказал полностью разрушить всю немецкую промышленную инфраструктуру, прежде чем она попадет в руки союзников, заявив, что неспособность Германии выиграть войну лишает ее права на выживание. Державы оси заняли большую часть континентальной Европы, а также части Азии и Африки. В конце концов союзники разгромили Вермахт. К 1945 году Германия была в руинах. Заявление Гитлера о территориальном завоевании и расовом подчинении привело к гибели десятков миллионов людей, включая систематический геноцид примерно шести миллионов евреев, не считая различных дополнительных «нежелательных» групп населения, в так называемом Холокосте, а также множества мирных граждан на оккупированных территориях стран Восточной Европы и Советского Союза.[PARAGRAPH:1]30 апреля 1945 года, после ожесточенных уличных боев, когда советские войска находились в пределах одного или двух кварталов от рейхсканцелярии, Гитлер покончил жизнь самоубийством, застрелившись, одновременно раскусив капсулу с цианидом. Тело Гитлера и тело Евы Браун (его любовницы, на которой он женился накануне) были спрятаны в воронке от авиабомбы, облиты бензином Отто Гунше и другими помощниками фюрербункера и подожжены, когда Красная Армия продвигалась вперед и продолжались обстрелы. Хотя война в Европе длилась после этого еще почти неделю, самоубийство фюрера, фактически, поставило точку в истории «Тысячелетнего Рейха».</Russian>
 	</TEXT>
@@ -2304,7 +2346,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Polish>
-		<Russian>Ãåíðèõ Ìîðåïëàâàòåëü</Russian>
+		<Russian>Генрих Мореплаватель</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HTN_PEDIA</Tag>
@@ -2315,7 +2357,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ITZCOATL</Tag>
 		<English>Itzcoatl</English>
-		<Russian>Èöêîàòëü</Russian>
+		<Russian>Ицкоатль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ITZCOATL_PEDIA</Tag>
@@ -2329,7 +2371,7 @@
 		<German>Ivan IV.</German>
 		<Spanish>Iván IV</Spanish>
 		<Polish>Iwan IV</Polish>
-		<Russian>Èâàí Ãðîçíûé</Russian>
+		<Russian>Иван Грозный</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_IVAN_PEDIA</Tag>
@@ -2340,7 +2382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JAYAVARMAN</Tag>
 		<English>Jayavarman VII</English>
-		<Russian>Äæàÿâàðìàí VII</Russian>
+		<Russian>Джаяварман VII</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JAYAVARMAN_PEDIA</Tag>
@@ -2355,7 +2397,7 @@
 		<German>Johanna von Orléans</German>
 		<Italian>Giovanna d'Arco</Italian>
 		<Polish>Joanna d'Arc</Polish>
-		<Russian>Æàííà ä'Àðê</Russian>
+		<Russian>Жанна д'Арк</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_JOANOFARC_PEDIA</Tag>
@@ -2365,8 +2407,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KIM</Tag>
-		<English>Kim Jong Il</English>
-		<Russian>Êèì ×åí Èð</Russian>
+		<English>Kim Jong II</English>
+		<Russian>Ким Чен Ир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_KIM_PEDIA</Tag>
@@ -2377,7 +2419,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LENIN</Tag>
 		<English>Lenin</English>
-		<Russian>Ëåíèí</Russian>
+		<Russian>Ленин</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LENIN_PEDIA</Tag>
@@ -2408,7 +2450,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ëåîíèä I</Russian>
+		<Russian>Леонид I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEONIDAS_PEDIA</Tag>
@@ -2419,7 +2461,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN</Tag>
 		<English>Logan</English>
-		<Russian>Ëîãàí</Russian>
+		<Russian>Логан</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LOGAN_PEDIA</Tag>
@@ -2434,7 +2476,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MEIJI</Tag>
 		<English>Meiji</English>
-		<Russian>Ìýéäçè</Russian>
+		<Russian>Мэйдзи</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_MEIJI_PEDIA</Tag>
@@ -2450,7 +2492,7 @@
 		<Italian>Nabucodonosor II</Italian>
 		<Spanish>Nabucodonosor II</Spanish>
 		<Polish>Nabuchodonozor II</Polish>
-		<Russian>Íàâóõîäîíîñîð II</Russian>
+		<Russian>Навуходоносор II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_NEBUCHADREZZAR_PEDIA</Tag>
@@ -2463,19 +2505,19 @@
 		<English>Nefertiti</English>
 		<French>Néfertiti</French>
 		<Polish>Nefretete</Polish>
-		<Russian>Íåôåðòèòè</Russian>
+		<Russian>Нефертити</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_NEFERTITI_PEDIA</Tag>
 		<English>[H1]Nefertiti[\H1][NEWLINE][BOLD]Great Royal Wife of Akhenatent[\BOLD][NEWLINE][BOLD]Dates:[\BOLD] c. 1370 - c. 1330 BC[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE]Nefertiti was the Great Royal Wife (chief consort) of the Egyptian Pharaoh Akhenaten. Nefertiti and her husband were known for changing Egypt's religion from a polytheistic religion to a henotheistic religion. They revered only one god, Aten, the sun disc. This was not strictly monotheism, as they did not deny the existence of other gods. She had many titles; for example, at Karnak there are inscriptions that read «Heiress, Great of Favours, Possessed of Charm, Exuding Happiness, Mistress of Sweetness, beloved one, soothing the king's heart in his house, soft-spoken in all, Mistress of Upper and Lower Egypt, Great King's Wife, whom he loves, Lady of the Two Lands, Nefertiti».[PARAGRAPH:1]She was made famous by her bust, now in Berlin's Altes Museum, shown to the right. The bust is one of the most copied works of ancient Egypt. It was attributed to the sculptor Thutmose, and it was thought to have been found in his workshop. The bust itself is notable for exemplifying the understanding Ancient Egyptians had regarding realistic facial proportions. Recently, it has been suggested by Swiss art historian Henri Stierlin that the bust is a copy dating from 1912.[PARAGRAPH:1]Some scholars believe that Nefertiti ruled briefly after her husband's death and before the accession of Tutankhamun as Smenkhkare, although this identification is a matter of ongoing debate. During Akhenaten's reign (and perhaps after) Nefertiti enjoyed unprecedented power, and by the twelfth year of his reign, there is evidence that she may have been elevated to the status of co-regent: equal in status to the pharaoh himself. She was often depicted on temple walls the same size as the king, signifying her importance, and shown worshiping the Aten alone. Perhaps most impressively, Nefertiti is shown on a relief from the temple at Amarna which is now in the MFA in Boston, smiting a foreign enemy with a mace before the Aten. Such depictions had traditionally been reserved for the pharaoh alone, and yet Nefertiti was depicted as such.[PARAGRAPH:1]The Coregency Stela may show her as a co-regent with her husband, who possibly ruled after his death. It is thought by some scholars that Nefertiti changed her name, first to Ankhkheperure Neferneferuaten and later to Ankhkheperure Smenkhkare and that she enjoyed a brief sole rule under the latter name. it is also believed that, as her husband's co-regent and successor she might have attempted to reconcile the Atenist and Traditional religions Nefertiti would have prepared for her death and for the succession of her daughter, now named Ankhsenamun, and her stepson, Tutankhamun. They would have been educated in the traditional way, worshiping the old gods. This theory has Neferneferuaten dying after two years of kingship and was then succeeded by Tutankhamun, thought to have been a son of Akhenaten. He married Nefertiti's daughter Ankhesenpaaten. The royal couple were young and inexperienced, by any estimation of their age, and Ankhesenpaaten bore two stillborn (and premature) daughters whose mummies were found by Howard Carter in Tutankhamen's tomb. Some theories believe that Nefertiti was still alive and held influence on the younger royals.[PARAGRAPH:1]Nefertiti's place as an icon in popular culture is secure as she has become somewhat of a celebrity. After Cleopatra she is the second most famous "Queen" of Egypt in the Western imagination and influenced through photographs that changed standards of feminine beauty of the 20th century, and is often referred to as "the most beautiful woman in the world".</English>
 		<Polish>[H1]Nefretete[\H1][NEWLINE][BOLD]Wielka &#175;ona Kr&#243;la Akhenatent[\BOLD][NEWLINE][BOLD]Daty:[\BOLD] ok. 1370 - ok. 1330 p.n.e[NEWLINE][PARAGRAPH:1][BOLD]T&#179;o:[\BOLD][NEWLINE]&#175;ona faraona Echnatona z XVIII dynastii ( Amenhotep IV/Amenhatpa IV). Prawdopodobnie imi&#234; jej wymawia&#179;o si&#234; jako Nafteta. Pochodzenie Nefertiti nie jest do ko&#241;ca jasne. Przedstawia si&#234; teori&#234; jakoby by&#179;a ksi&#234;&#191;niczk&#185; mitannijsk&#185; - co t&#179;umaczy&#179;oby jej imi&#234;, uto&#191;samia si&#234; j&#185; te&#191; z Taduhep&#185;. Cz&#234;sto przyjmuje si&#234; tak&#191;e, i&#191; by&#179;a c&#243;rk&#185; doradcy dworu Aj, kt&#243;ry wst&#185;pi&#179; na tron po &#156;mierci Tutanchamona. By&#179;a ukochan&#185; &#191;on&#185; Echnatona, z kt&#243;rym mia&#179;a 6 c&#243;rek: Meritaton, Maketaton, Anchesenpaaton, Neferneferuaton-Taszerit, Neferneferure i Setepenre. Prawdopodobnie zosta&#179;a wyniesiona na tron jako wsp&#243;&#179;regent i przybra&#179;a imi&#234; Neferneferuaton ("Nadzwyczajna pi&#234;kno&#156;&#230; Atona"). Jako jedyna kr&#243;lowa w historii Egiptu jest przedstawiana na nielicznych zachowanych p&#179;askorze&#159;bach w pozach zarezerwowanych dla faraon&#243;w, np. zwyci&#234;&#191;ania lub upokarzania wrog&#243;w Egiptu. By&#179;a tak&#191;e macoch&#185; Tutanchamona, syna ze zwi&#185;zku Echnatona i jego drugorz&#234;dnej &#191;ony Kiji. Stawiane s&#185; tak&#191;e hipotezy, &#191;e po &#156;mierci swego m&#234;&#191;a obj&#234;&#179;a tron jako Anchcheperure Semenchkare.</Polish>
-		<Russian>[H1]Нефертити[\H1][NEWLINE][BOLD]Великая царственная супруга Эхнатона[\BOLD][NEWLINE][BOLD]Годы жизни:[\BOLD] ок. 1370 - 1330 гг. до н.э.[NEWLINE][PARAGRAPH:1][BOLD]Биография:[\BOLD][NEWLINE][TAB]Нефертити была «главной супругой» древнеегипетского фараона XVIII династии Нового царства Эхнатона (Аменхотепа IV, ок. 1351-1334 до н. э.). Время правления Эхнатона и Нефертити, известное как «амарнский период», ознаменовалось религиозной реформой (атонизм), когда главным божеством провозгласили бога Атона. Роль самой царицы в проведении «солнцепоклоннического переворота» спорна. Царица широко известна благодаря обнаруженному в 1912 году экспедицией Людвига Борхардта своему скульптурному бюсту (ныне представлен в Новом музее Берлина) в реалистичной манере амарнского искусства. Автором скульптуры считается скульптор Тутмос, в руинах мастерской которого бюст найден.[PARAGRAPH:1][PARAGRAPH:1]Предполагается, что Эхнатон, тогда еще Аменхотеп IV, и Нефертити поженились незадолго до его восшествия на трон. Невесте было 12-15 лет, жених был ее старше на несколько лет. Согласно одной из популярных версий, Нефертити вероятно была иноземной принцессой, имя которой можно примено перевести, как «Красавица пришла». Якобы, Нефертити - это присланная в жены Аменхотепу III митаннийская принцесса Тадухепа. Аменхотеп III скончался вскорости после прибытия Тадухепы к египетскому двору, и царевна стала женой его сына Аменхотепа IV (Эхнатона). И все же большинство исследователей склонны считать Нефертити знатной египтянкой.[PARAGRAPH:1]Нефертити полностью поддерживала религиозные преобразования, начатые мужем, и была не менее убежденной сторонницей новой религии, чем Эхнатон. Некоторые авторы даже отводят Нефертити роль инициатора религиозной реформации, движущей силы и верховного жреца божества Атона и даже соправительницы Эхнатона. В гробнице фараона Эйе одна из надписей посвящена Нефертити: «Она проводит Атона на покой сладостным голосом и прекрасными руками с систрами, при звуке голоса ее ликуют». На так называемых «талататах», песчаниковых блоках из храма Атона в Карнаке, супруга Эхнатона изображена чаще самого фараона. Эхнатон всегда появлялся на публике в сопровождении супруги, Нефертити принимала участие во всех значимых религиозных церемониях, о чем свидетельствуют их многочисленные совместные изображения. [PARAGRAPH:1]На 12-м году правления Эхнатона умирает вторая дочь царственной четы - принцесса Макетатон, а вскоре и сама Нефертити исчезает с исторической арены; ее место заняла второстепенная царица Кийа, а позже - старшая дочь Нефертити - Меритатон. К 14-му году правления Эхнатона (1336 до н. э.) все упоминания о царице исчезают. Одна из статуй, обнаруженных в мастерской скульптора Тутмоса, показывает Нефертити на склоне лет. Идущая царица одета в облегающее платье, с сандалиями на ногах. Имеется предположение, что загадочной правительницей Нефернефруатон была Нефертити, получившая на 5 год правления мужа новое атоническое имя Нефернефруатон-Нефертити. Эхнатон сделал ее соправителем, в то время как Кийа стала его главной женой. Нефернефруатон могла оставаться регентшей при малолетнем Тутанхамоне. Для продолжения родословной был заключен брак между Тутанхамоном и дочерью Нефертити Анхесенамон.[PARAGRAPH:1]Любовь царской четы стала одним из основных сюжетов для художников Ахетатона - столицы Эхнатона и Нефертити. Никогда еще в египетском искусстве не появлялись произведения, столь живо демонстрирующие чувства царственных супругов. Нефертити играла исключительно важную роль в религиозной жизни Египта того времени, сопровождая супруга во время жертвоприношений, священнодействий и религиозных празднеств. Она была живым воплощением животворящей силы солнца, дарующей жизнь. В Гемпаатоне и Хутбенбене - больших храмах бога Атона в Фивах ей возносили молитвы; ни одно из храмовых действ не могло происходить без нее, залога плодородия и процветания всей страны. «Она проводит Атона на покой сладостным голосом и прекрасными руками с систрами, - говорится о ней в надписях гробниц вельмож-современников, - при звуке голоса ее ликуют». Стены зала, возведенного Эхнатоном на 6-м году правления в своей столице для празднования церемонии Сед, были декорированы колоссальными скульптурными изображениями Нефертити, отождествленной с богиней Тефнут - богиней влаги, дочерью Солнца-Ра, стоящей на поддержании мировой гармонии и божественного закона. В этой ипостаси Нефертити могла изображаться в качестве сфинкса, поражающей врагов Египта палицей. Обладавшая огромной властью и полномочиями, царица чаще всего изображалась в своем излюбленном головном уборе — высоком синем парике, обвитом золотыми лентами и уреем, который символически подчеркивал ее связь с грозными богинями, дочерьми Солнца.[PARAGRAPH:1]Нефертити не была обнаружена или опознана среди уже найденных мумий. Долгое время полагали, что мумия KV35YL из гробницы KV35 и есть останки супруги Эхнатона, однако более поздние исследования показали, что останки принадлежали матери Тутанхамона. После этого считалось, что мумия Нефертити, вероятно, утрачена. Однако в ходе исследований прилежащей территории к гробнице Тутанхамона в 2010-х гг. появилась надежда на находку тайного захоронения в не обнаруженных до сих пор пустотах. Раскопки, планируемые в следующем десятилетии, дают возможность обрести заново останки полулегендарной царицы.	</Russian>
+		<Russian>[H1]Нефертити[\H1][NEWLINE][BOLD]Великая царственная супруга Эхнатона[\BOLD][NEWLINE][BOLD]Годы жизни:[\BOLD] ок. 1370 - 1330 гг. до н.э.[NEWLINE][PARAGRAPH:1][BOLD]Биография:[\BOLD][NEWLINE][TAB]Нефертити была «главной супругой» древнеегипетского фараона XVIII династии Нового царства Эхнатона (Аменхотепа IV, ок. 1351-1334 до н. э.). Время правления Эхнатона и Нефертити, известное как «амарнский период», ознаменовалось религиозной реформой (атонизм), когда главным божеством провозгласили бога Атона. Роль самой царицы в проведении «солнцепоклоннического переворота» спорна. Царица широко известна благодаря обнаруженному в 1912 году экспедицией Людвига Борхардта своему скульптурному бюсту (ныне представлен в Новом музее Берлина) в реалистичной манере амарнского искусства. Автором скульптуры считается скульптор Тутмос, в руинах мастерской которого бюст найден.[PARAGRAPH:1][PARAGRAPH:1]Предполагается, что Эхнатон, тогда еще Аменхотеп IV, и Нефертити поженились незадолго до его восшествия на трон. Невесте было 12-15 лет, жених был ее старше на несколько лет. Согласно одной из популярных версий, Нефертити вероятно была иноземной принцессой, имя которой можно примено перевести, как «Красавица пришла». Якобы, Нефертити - это присланная в жены Аменхотепу III митаннийская принцесса Тадухепа. Аменхотеп III скончался вскорости после прибытия Тадухепы к египетскому двору, и царевна стала женой его сына Аменхотепа IV (Эхнатона). И все же большинство исследователей склонны считать Нефертити знатной египтянкой.[PARAGRAPH:1]Нефертити полностью поддерживала религиозные преобразования, начатые мужем, и была не менее убежденной сторонницей новой религии, чем Эхнатон. Некоторые авторы даже отводят Нефертити роль инициатора религиозной реформации, движущей силы и верховного жреца божества Атона и даже соправительницы Эхнатона. В гробнице фараона Эйе одна из надписей посвящена Нефертити: «Она проводит Атона на покой сладостным голосом и прекрасными руками с систрами, при звуке голоса ее ликуют». На так называемых «талататах», песчаниковых блоках из храма Атона в Карнаке, супруга Эхнатона изображена чаще самого фараона. Эхнатон всегда появлялся на публике в сопровождении супруги, Нефертити принимала участие во всех значимых религиозных церемониях, о чем свидетельствуют их многочисленные совместные изображения. [PARAGRAPH:1]На 12-м году правления Эхнатона умирает вторая дочь царственной четы - принцесса Макетатон, а вскоре и сама Нефертити исчезает с исторической арены; ее место заняла второстепенная царица Кийа, а позже - старшая дочь Нефертити - Меритатон. К 14-му году правления Эхнатона (1336 до н. э.) все упоминания о царице исчезают. Одна из статуй, обнаруженных в мастерской скульптора Тутмоса, показывает Нефертити на склоне лет. Идущая царица одета в облегающее платье, с сандалиями на ногах. Имеется предположение, что загадочной правительницей Нефернефруатон была Нефертити, получившая на 5 год правления мужа новое атоническое имя Нефернефруатон-Нефертити. Эхнатон сделал ее соправителем, в то время как Кийа стала его главной женой. Нефернефруатон могла оставаться регентшей при малолетнем Тутанхамоне. Для продолжения родословной был заключен брак между Тутанхамоном и дочерью Нефертити Анхесенамон.[PARAGRAPH:1]Любовь царской четы стала одним из основных сюжетов для художников Ахетатона - столицы Эхнатона и Нефертити. Никогда еще в египетском искусстве не появлялись произведения, столь живо демонстрирующие чувства царственных супругов. Нефертити играла исключительно важную роль в религиозной жизни Египта того времени, сопровождая супруга во время жертвоприношений, священнодействий и религиозных празднеств. Она была живым воплощением животворящей силы солнца, дарующей жизнь. В Гемпаатоне и Хутбенбене - больших храмах бога Атона в Фивах ей возносили молитвы; ни одно из храмовых действ не могло происходить без нее, залога плодородия и процветания всей страны. «Она проводит Атона на покой сладостным голосом и прекрасными руками с систрами, - говорится о ней в надписях гробниц вельмож-современников, - при звуке голоса ее ликуют». Стены зала, возведенного Эхнатоном на 6-м году правления в своей столице для празднования церемонии Сед, были декорированы колоссальными скульптурными изображениями Нефертити, отождествленной с богиней Тефнут - богиней влаги, дочерью Солнца-Ра, стоящей на поддержании мировой гармонии и божественного закона. В этой ипостаси Нефертити могла изображаться в качестве сфинкса, поражающей врагов Египта палицей. Обладавшая огромной властью и полномочиями, царица чаще всего изображалась в своем излюбленном головном уборе - высоком синем парике, обвитом золотыми лентами и уреем, который символически подчеркивал ее связь с грозными богинями, дочерьми Солнца.[PARAGRAPH:1]Нефертити не была обнаружена или опознана среди уже найденных мумий. Долгое время полагали, что мумия KV35YL из гробницы KV35 и есть останки супруги Эхнатона, однако более поздние исследования показали, что останки принадлежали матери Тутанхамона. После этого считалось, что мумия Нефертити, вероятно, утрачена. Однако в ходе исследований прилежащей территории к гробнице Тутанхамона в 2010-х гг. появилась надежда на находку тайного захоронения в не обнаруженных до сих пор пустотах. Раскопки, планируемые в следующем десятилетии, дают возможность обрести заново останки полулегендарной царицы.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PACHACUTI</Tag>
 		<English>Pachacuti</English>
 		<French>Pachacutec</French>
-		<Russian>Ïà÷àêóòåê</Russian>
+		<Russian>Пачакутек</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PACHACUTI_PEDIA</Tag>
@@ -2486,7 +2528,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PEDRO_II</Tag>
 		<English>Dom Pedro II</English>
-		<Russian>Ïåäðó II</Russian>
+		<Russian>Педру II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PEDRO_II_PEDIA</Tag>
@@ -2498,7 +2540,7 @@
 		<Tag>TXT_KEY_LEADER_PHILIP_II</Tag>
 		<English>Philip II</English>
 		<Polish>Filip II</Polish>
-		<Russian>Ôèëèïï II</Russian>
+		<Russian>Филипп II</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_PHILIP_II_PEDIA</Tag>
@@ -2509,7 +2551,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RICHELIEU</Tag>
 		<English>Richelieu</English>
-		<Russian>Ðèøåëüå</Russian>
+		<Russian>Ришелье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_RICHELIEU_PEDIA</Tag>
@@ -2520,12 +2562,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SEJONG</Tag>
 		<English>Sejong</English>
-		<Russian>Ñå÷æîí</Russian>
+		<Russian>Седжон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SEJONG_PEDIA</Tag>
 		<English>[H1]Sejong the Great[\H1][NEWLINE][BOLD]Fourth ruler of the Joseon Dynasty[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1397 - 1450[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Sejong the Great, born Yi Do, was the fourth ruler of the Joseon Dynasty of Korea from 1418 to 1450. He was also a skilled linguist who apparently personally created the native Korean alphabet Hangul. Although there are circumstantial clues he may have been assisted by family members, most believe that he was the one who actually invented the alphabet, mainly due to the resistance he faced from the intellectuals of the day.[PARAGRAPH:1]Sejong is also credited with the invention of a rain gauge, striking water clocks, and a sundial.[PARAGRAPH:1]Following the principles of Neo-Confucianism, Sejong was also a humanitarian who proclaimed that there must be three trials before a final judgment is reached, and he prohibited brutality in the punishment of criminals, such as flogging.[PARAGRAPH:1]He was an effective military planner. During his era, his army invaded Tsushima to reduce and eliminate heavy Japanese pirate activities along the southern coast line. On the northern border, he established 4 forts and 6 posts to safeguard his people from the hostile nomads living in Manchuria. He also created various military regulations and units to strengthen the safety of his kingdom.[PARAGRAPH:1]Sejong is one of only two Korean rulers honored with the appellation "the Great," the other being Gwanggaeto the Great of Goguryeo.[PARAGRAPH:1]Sejong was the third son of King Taejong. When he was ten, he became Grand Prince Chungnyeong and married a daughter of Sim On of Cheongsong, commonly known as Sim-ssi, who later was given the title Princess-Consort Soheon.[PARAGRAPH:1]Sejong established the Hall of Worthies (Jiphyeonjeon) in 1420 in the royal palace, Sejong gathered intellectuals from around Korea. The scholars of the Hall of Worthies documented history, drafted documents and compiled books on various topics. Sejong's writings are also a highly regarded. He composed the famous Yongbi Eocheon Ga ("Songs of Flying Dragons", 1445), Seokbo Sangjeol ("Episodes from the Life of Buddha", July 1447), Worin Cheon-gang Jigok ("Songs of the Moon Shining on a Thousand Rivers", July 1447), and the reference Dongguk Jeong-un ("Dictionary of Proper Sino-Korean Pronunciation", September 1447). Sejong died at the age of 52 and was buried at the Yeong Mausoleum. His successor was his first son, Munjong.[PARAGRAPH:1]Sejongno (a street) and the Sejong Center for the Performing Arts both located in central Seoul are named after King Sejong, and he is depicted on the South Korean 10,000 Won note.</English>
-		<French>[H1]Sejong le Grand[\H1][NEWLINE][BOLD]Quatrième souverain de la dynastie Joseon[\BOLD][NEWLINE][BOLD]Vivait:[\BOLD] 1397 - 1450[NEWLINE][PARAGRAPH:2][BOLD]Contexte:[\BOLD][NEWLINE]Sejong le Grand, né Yi Do, était le quatrième souverain de la dynastie Joseon de Corée de 1418 à 1450. Il était également un linguiste qualifié qui a apparemment créé personnellement l'alphabet coréen natif Hangul. Bien qu'il y ait des indices circonstanciels, il peut avoir été aidé par des membres de sa famille, la plupart pensent que c'est lui qui a réellement inventé l'alphabet, principalement en raison de la résistance qu'il a rencontrée de la part des intellectuels de l'époque.[PARAGRAPH:1]Sejong est également crédité avec l'invention d'un pluviomètre, des horloges à eau frappantes et d'un cadran solaire.[PARAGRAPH:1]Suivant les principes du néo-confucianisme, Sejong était également un humanitaire qui a proclamé qu'il devait y avoir trois procès avant qu'un jugement définitif ne soit rendu, et il a interdit la brutalité dans la punition des criminels, comme la flagellation.[PARAGRAPH:1]Il était un planificateur militaire efficace. À son époque, son armée a envahi Tsushima pour réduire et éliminer les activités de pirates japonais lourds le long de la côte sud. À la frontière nord, il a établi 4 forts et 6 postes pour protéger son peuple des nomades hostiles vivant en Mandchourie. Il a également créé divers règlements et unités militaires pour renforcer la sécurité de son royaume.[PARAGRAPH:1]Sejong est l'un des deux seuls dirigeants coréens honorés de l'appellation "le Grand", l'autre étant Gwanggaeto le Grand de Goguryeo.[PARAGRAPH:1]Sejong était le troisième fils du roi Taejong. À l'âge de dix ans, il devint grand prince Chungnyeong et épousa une fille de Sim On de Cheongsong, communément appelé Sim-ssi, qui reçut plus tard le titre de princesse-consort Soheon.[PARAGRAPH:1]Sejong fonda le Hall of Worthies ( Jiphyeonjeon) en 1420 au palais royal, Sejong a rassemblé des intellectuels de toute la Corée. Les érudits du Hall of Worthies ont documenté l'histoire, rédigé des documents et compilé des livres sur divers sujets. Les écrits de Sejong sont également très appréciés. Il a composé le célèbre Yongbi Eocheon Ga ("Chants de dragons volants", 1445), Seokbo Sangjeol ("Épisodes de la vie de Bouddha", juillet 1447), Worin Cheon-gang Jigok ("Chants de la lune qui brille sur mille rivières" ", Juillet 1447), et la référence Dongguk Jeong-un (" Dictionnaire de prononciation sino-coréenne ", septembre 1447). Sejong est décédé à l'âge de 52 ans et a été enterré au mausolée de Yeong. Son successeur était son premier fils, Munjong.[PARAGRAPH:1]Sejongno (une rue) et le Sejong Center for the Performing Arts, tous deux situés dans le centre de Séoul, portent le nom du roi Sejong, et il est représenté sur la note sud-coréenne de 10 000 won.</French>
+		<French>[H1]Sejong le Grand[\H1][NEWLINE][BOLD]Quatrième souverain de la dynastie Joseon[\BOLD][NEWLINE][BOLD]Vivait:[\BOLD] 1397 - 1450[NEWLINE][PARAGRAPH:2][BOLD]Contexte:[\BOLD][NEWLINE]Sejong le Grand, né Yi Do, était le quatrième souverain de la dynastie Joseon de Corée de 1418 à 1450. Il était également un linguiste qualifié qui a apparemment créé personnellement l'alphabet coréen natif Hangul. Bien qu'il y ait des indices circonstanciels, il peut avoir été aidé par des membres de sa famille, la plupart pensent que c'est lui qui a réellement inventé l'alphabet, principalement en raison de la résistance qu'il a rencontrée de la part des intellectuels de l'époque.[PARAGRAPH:1]Sejong est également crédité avec l'invention d'un pluviomètre, des horloges à eau frappantes et d'un cadran solaire.[PARAGRAPH:1]Suivant les principes du néo-confucianisme, Sejong était également un humanitaire qui a proclamé qu'il devait y avoir trois procès avant qu'un jugement définitif ne soit rendu, et il a interdit la brutalité dans la punition des criminels, comme la flagellation.[PARAGRAPH:1]Il était un planificateur militaire efficace. À son époque, son armée a envahi Tsushima pour réduire et éliminer les activités de pirates japonais lourds le long de la côte sud. À la frontière nord, il a établi 4 forts et 6 postes pour protéger son peuple des nomades hostiles vivant en Mandchourie. Il a également créé divers règlements et unités militaires pour renforcer la sécurité de son royaume.[PARAGRAPH:1]Sejong est l'un des deux seuls dirigeants coréens honorés de l'appellation "le Grand", l'autre étant Gwanggaeto le Grand de Goguryeo.[PARAGRAPH:1]Sejong était le troisième fils du roi Taejong. À l'âge de dix ans, il devint grand prince Chungnyeong et épousa une fille de Sim On de Cheongsong, communément appelé Sim-ssi, qui reçut plus tard le titre de princesse-consort Soheon.[PARAGRAPH:1]Sejong fonda le Hall of Worthies ( Jiphyeonjeon) en 1420 au palais royal, Sejong a rassemblé des intellectuels de toute la Corée. Les érudits du Hall of Worthies ont documenté l'histoire, rédigé des documents et compilé des livres sur divers sujets. Les écrits de Sejong sont également très appréciés. Il a composé le célèbre Yongbi Eocheon Ga ("Chants de dragons volants", 1445), Seokbo Sangjeol ("Épisodes de la vie de Bouddha", juillet 1447), Worin Cheon-gang Jigok ("Chants de la lune qui brille sur mille rivières", Juillet 1447), et la référence Dongguk Jeong-un ("Dictionnaire de prononciation sino-coréenne", septembre 1447). Sejong est décédé à l'âge de 52 ans et a été enterré au mausolée de Yeong. Son successeur était son premier fils, Munjong.[PARAGRAPH:1]Sejongno (une rue) et le Sejong Center for the Performing Arts, tous deux situés dans le centre de Séoul, portent le nom du roi Sejong, et il est représenté sur la note sud-coréenne de 10 000 won.</French>
 		<Polish>[H1]Sejong Wielki[\H1][NEWLINE][BOLD]Czwarty w&#179;adca Dynastii Joseon[\BOLD][NEWLINE][BOLD]&#175;y&#179;:[\BOLD] 1397 - 1450</Polish>
 		<Russian>[H1]Сечжон Великий[\H1][NEWLINE][BOLD]Четвертый правитель династии Чосон[\BOLD][NEWLINE][BOLD]Годы жизни:[\BOLD] 1397 - 1450 гг.[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Сечжон, также Седжон-тэван, носивший родовое имя Ли До был четвертым правителем корейской династии Чосон с 1418 по 1450 год. Он также был опытным лингвистом, который, очевидно, лично создал корейский алфавит хангыль. Хотя есть косвенные подсказки, что ему, возможно, помогали члены семьи, большинство считает, что именно он изобрел алфавит, главным образом из-за сопротивления, с которым он столкнулся со стороны интеллектуалов того времени.[PARAGRAPH:1]Сечжону также приписывают изобретение дождемера, водяных и солнечных часов.[PARAGRAPH:1]Следуя принципам неоконфуцианства, Сечжон был также гуманистом, постановив, что при судебных делах должно быть проведено три испытания, прежде чем будет принято окончательное решение, и он запретил излишнюю жестокость при наказании преступников, включая пытки и телесные наказания. [PARAGRAPH:1]Он был эффективным военным стратегом и полководцем. В его эпоху его армия вторглась на Цусиму с целью ликвидации разорительных набегов японских пиратов вдоль южной береговой линии. На северной границе он установил 4 крупные крепости и 6 аванпостов для защиты своего народа от враждебных кочевников, проживавших в Маньчжурии. Он также создал различные артикулы и реорганизовал войска, чтобы укрепить безопасность своего царства.[PARAGRAPH:1]Сечжон - один из двух корейских правителей, удостоенных звания «Великий», другим был Квангэтхо Тамдок (391-412 гг.) из династии Когуре.[PARAGRAPH:1]Сечжон был третьим сыном короля Тхэджона. Когда ему было десять лет, он стал наследником принца Чхуннен, третьего сына монарха, и женился на дочери Чонджу Ли, широко известной как Сохен-ванху, которой позже дали титул принцесса-консорт Сохеон.[PARAGRAPH:1]В 1420 году Сечжон учредил придворную академию Чипхенджон («Зал достойных»), ученые которой разработали слоговой алфавит хангыль, являющийся в настоящее время основой корейской письменности. Ученые из Чипхенджон документировали историю, составляли проекты документов и составляли книги на различные темы. Работы Сечжона также высоко ценятся. Он сочинил знаменитого Йонгби Еченга («Песни летающих драконов», 1445), Сэкбо Сангчжоль («Эпизоды из жизни Будды», июль 1447), Орин Чхонганг Чжидок («Песня Луны, сияющей в тысячи рек»). », Июль 1447 г.), и Дунгук чжон-ун («Словарь правильного китайско-корейского произношения», сентябрь 1447 г.). Сечжон умер в возрасте 52 лет и был похоронен в мавзолее Йонг. Его преемником стал его первый сын Мунджон.[PARAGRAPH:1]Седжонно (улица) и Центр прикладных видов искусства Сечжона, расположенные в центральной части Сеула, названы в честь короля Сечжона, также он изображен на южнокорейской купюре в 10 000 вон.</Russian>
 	</TEXT>
@@ -2533,7 +2575,7 @@
 		<Tag>TXT_KEY_LEADER_SENNACHERIB</Tag>
 		<English>Sennacherib</English>
 		<Polish>Sennacheryb</Polish>
-		<Russian>Ñèíàõõåðèá</Russian>
+		<Russian>Синаххериб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SENNACHERIB_PEDIA</Tag>
@@ -2546,7 +2588,7 @@
 		<English>Smoke Jaguar</English>
 		<French>Jaguar Nébuleux</French>
 		<Polish>Dymi&#185;cy Jaguar</Polish>
-		<Russian>Äûì÷àòûé ßãóàð</Russian>
+		<Russian>Как-Ути-Виц-Кавиль</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SMOKE_JAGUAR_PEDIA</Tag>
@@ -2561,7 +2603,7 @@
 		<German>Salomo</German>
 		<Italian>Salomone</Italian>
 		<Spanish>Salomón</Spanish>
-		<Russian>Ñîëîìîí</Russian>
+		<Russian>Соломон</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_SOLOMON_PEDIA</Tag>
@@ -2571,20 +2613,20 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TAIZONG</Tag>
 		<English>Taizong</English>
-		<Russian>Òàéöçóí</Russian>
+		<Russian>Тай-цзун</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_TAIZONG_PEDIA</Tag>
 		<English>[H1]Taizong of Tang[\H1][NEWLINE][BOLD]2nd Emperor of the Tang Dynasty[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 599 - 649 CE[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Emperor Taizong of Tang (January 23, 599 – July 10, 649), personal name Li Shìmín, was the second emperor of the Tang Dynasty of China, ruling from 626 to 649. As he encouraged his father, Li Yuan (later Emperor Gaozu) to rise against Sui Dynasty rule at Taiyuan in 617 and subsequently defeated several of his most important rivals, he was ceremonially regarded as a cofounder of the dynasty along with Emperor Gaozu. He is typically considered one of the greatest, if not the greatest, emperor in all of Chinese history. Throughout the rest of Chinese history, Emperor Taizong's reign was regarded as the exemplary model against which all other emperors were measured, and his "Reign of Zhen'guan" was considered a golden age of Chinese history and required study for future crown princes. During his reign, Tang China flourished economically and militarily. For more than a century after his death, Tang China enjoyed peace and prosperity. In 630, Emperor Taizong sent his general Li Jing against Eastern Tujue -- to which Tang had once submitted -- defeating and capturing its Jiali Khan Ashina Duobi and destroying Eastern Tujue power. This made Tang the dominant power in East and Central Asia, and Emperor Taizong subsequently took the title of Tian Kehan ("Heavenly Khan"). Emperor Taizong was, in opposition to nobility of the time, a frank rationalist, openly laughing of superstitions and heaven's claimed signs, and modifying important rites in order to ease agricultural labour. The modern Chinese historian Bo Yang opined that Emperor Taizong achieved greatness by accepting criticism that others would find difficult to accept and trying hard not to abuse his absolute power (using Emperor Yang of Sui as a negative example), as well as employing capable chancellors Fang Xuanling, Du Ruhui, and Wei Zheng. Emperor Taizong's wife Empress Zhangsun served as a capable assistant to him as well.</English>
 		<Polish>[H1]Taizong z Tang[\H1][NEWLINE][BOLD]Drug Cesarz z Dynastii Tang[\BOLD][NEWLINE][BOLD]&#175;y&#179;:[\BOLD] 599 - 649 n.e.[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][NEWLINE]Tang Taizong - jego osobiste imi&#234; to Li Shěmin, by&#179; drugim cesarzem z chi&#241;skiej dynastii Tang, panuj&#185;cym od 626 do 649. Na og&#243;&#179; jest uwa&#191;any za jednego z najwi&#234;kszych, o ile nie najwi&#234;kszego cesarza w ca&#179;ej chi&#241;skiej historii. Stanowi&#179; on miar&#234;, do kt&#243;rej por&#243;wnywano wszystkich innych cesarzy. Za czas&#243;w jego rz&#185;d&#243;w Chiny Tang&#243;w prosperowa&#179;y ekonomicznie i militarnie. Po&#156;miertnie otrzyma&#179; imi&#234; Wen Huangdi.</Polish>
-		<Russian>[H1]Тай-цзун[\H1][NEWLINE][BOLD]Второй император эпохи Тан[\BOLD][NEWLINE][BOLD]Годы жизни: [\BOLD]599 - 649 гг.[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Император Тайцзун Тан (23 января 599 г. - 10 июля 649 г.), личное имя Ли Шиминь, был вторым императором из династии Тан в Китае, правившим с 626 по 649 гг. при поддержке своего отца Ли Юаня (позже императора Гаоцзуна).[PARAGRAPH:1]Ли Шиминь происходил из древней китайской служилой аристократической семьи, которая на протяжении 200 лет владела землями на севере при тобасской династии Вэй, поэтому в значительной степени смешалась с табгачским населением. Отец Ли Шиминя, Ли Юань был по происхождению безземельный юноша, которому удалось очаровать Люй-Хоу, дочь придворного вельможи, и благодаря этому браку стать наместником в Тайюане. Ли Юань был самым талантливым военачальником кавалерии императора Ян Ди из династии Суй. Абсурдная антинародная политика последнего вызвала против него ряд крестьянских восстаний, однако Ли Юань на первых порах был лоялен к Ян Ди. Тем не менее, Ли Шиминь вскоре убедил отца, который в то время отбивал натиск восточных тюркютов под руководством Шибир-хана, в необходимости примирения с Шибир-ханом и совместной с ним борьбы в ходе гражданской войны против императора-деспота. Когда в 617 Ли Юань был коронован в Чанъане под именем Гаоцзун, Ли Шиминь стал вторым лицом в государстве, а поскольку его отец, будучи умелым генералом, не отличался успехом в политике, часто сам решал политические вопросы.[PARAGRAPH:1]Прогрессивные реформы Ли Шиминя вызвали недовольство бывших приспешников режима Ян Ди, а также части конфуцианских чиновников, занимавших руководящие должности в обществе. В результате, при дворе возобладали консерваторы, которые побудили Ли Юаня в мае 626 издать указ об ограничении буддизма и даосизма, направленный, в первую очередь, против Ли Шиминя. Братья Ли Шиминя (Ли Цзяньчэн и Ли Юаньцзи), возглавившие придворную клику, вызвали его во дворец, намереваясь расправиться с ним. Когда Ли Шиминь прибыл к отцу 2 июля 626, Ли Цзяньчэн совершил покушение на своего брата, однако оно провалилось, и Ли Шиминь поразил его ответной стрелой. Ли Юань тотчас же отменил свой указ и назначил Ли Шиминя наследником престола. 4 сентября 626 Ли Шиминь окончательно отстранил от власти своего отца и был коронован, приняв храмовое имя Тайцзун.[PARAGRAPH:1]Условия, в которых Тай-цзун пришел к власти, были катастрофическими: за годы правления династии Суй население Китая сократилось на 2/3. При Тай-цзуне завершается складывание феодального централизованного государства. Этому способствовали реорганизация государственного аппарата, введение обязательных государственных экзаменов для отбора на чиновничьи должности, укрепление армии, составление (с 631) кодекса законов.[PARAGRAPH:1]Правление Тай-цзуна связано с первой в истории Китая попыткой создания синтетической культуры, объединяющей китайскую цивилизацию со степными кочевниками. Миллионное население востока Великой степи стало главной социальной базой для преобразований Ли Шиминя, считавшего себя в равной мере как императором китайцев, так и каганом степняков. Ближайший круг советников Тай-цзуна составляли китайские (даосские и конфуцианские) мудрецы, в том числе Вэй Чжэн, Фан Сюаньлин и Ван Гуй, а также степняки, отобранные по критерию личной преданности (в их числе однорукий уйгурский военачальник Киби Хели и тюркютский царевич из рода Ашина Шени). Политика Тай-цзуна, сохранявшая национальную идентичность народов степи, породила в Китае интерес ко всему тюркскому; был издан китайско-тюркский словарь, даже в столице империи Чанъане появились юрты по образцу степных. Позже националистическая партия в правящих кругах страны будет рассматривать династию Тан времен Тай-цзуна в качестве «табгачской».[PARAGRAPH:1]Тай-цзун вел завоевательные войны с Когуре, государствами к северо-западу от танских владений. При нем владения Китая расширились так далеко на запад, как никогда до него. Стабилизировав внутреннюю ситуацию в Китае, Тай-цзун инспирировал восстание уйгуров и других нетюркютских народов Великой степи против Восточно-тюркского каганата, после чего сам напал на его владения с шестью китайскими армиями в 628—630. К 635 к владениям Тай-цзуна был присоединен Тогон, а вскоре преимущественно тюркские по своему этническому составу войска, находившиеся под командованием китайских военачальников, взяли Гаочан, в результате чего Китай получил контроль над всем восточным отрезком Великого шелкового пути. Продолжая движение на запад, войска Тай-цзуна заняли более 70 городов Средней и Центральной Азии, от Кашгара до Бухары. В результате танских завоеваний Китай получил контроль не только над Восточным Туркестаном, но и над значительную часть современных Киргизстана и Узбекистана. Неудачными оказались только военные действия императора против северокорейского государства Когуре: в 645 танские армии потеряли инициативу, остановившись у крепости Ансинсон, героические защитники которой сдерживали агрессоров на протяжении 60 дней. Затянувшаяся до зимы осада Ансинсона ослабила китайскую армию, потерявшую 80 % обозной тягловой силы при отступлении. Тем не менее, силы Когуре были подорваны, и в 668 это государство прекратило свое существование.[PARAGRAPH:1]В начале 648 года, достигнув значительных результатов во внешней и внутренней политике, приблизившись к пятидесятилетнему рубежу император Тай-цзун счел необходимым изложить свои взгляды на главные задачи правителя Поднебесной. Причисляя себя к государям-основателям, и мечтая о том, чтобы танская династия не шла к упадку по пути предшественниц, Тай-цзун решил подсказать будущему императору Гаоцзуну как наилучшим образом управлять страной и подданными. Для этой цели он создал политическое завещание «Ди Фань», написанное в виде правил, практического руководства для преемников на троне. Вручая «Ди Фань» наследнику, он сказал: «Здесь сказано о том, как совершенствовать себя и управлять государством». Сочинение состояло из введения, заключения и двенадцать глав (пянь), объединенных в четыре цзюаня. В первую часть входили главы - Сущность правителя, Жаловать родственников уделами, Искать мудрецов; во вторую - Быть внимательным назначая на должности, Внимать увещеваниям, Отстранять клеветников; в третью - Остерегаться излишеств, Почитать бережливость, Награждать и наказывать; в четвертую - Поощрять земледелие, Обращать внимание на военное дело, Ценить гражданские занятия.[PARAGRAPH:1]Ли Шиминь умер 10 июля 649. Его гробница в Чанъане, украшенная высокохудожественными горельефами, считается одним из лучших образцов архитектуры эпохи Тан. Сын и наследник Тай-цзуна, Ли Чжи (тронное имя Гао-цзун), хотя и не обладал отцовскими способностями, но уверенно продолжил его успешную политику.</Russian>
+		<Russian>[H1]Тай-цзун[\H1][NEWLINE][BOLD]Второй император эпохи Тан[\BOLD][NEWLINE][BOLD]Годы жизни: [\BOLD]599 - 649 гг.[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][NEWLINE][TAB]Император Тайцзун Тан (23 января 599 г. - 10 июля 649 г.), личное имя Ли Шиминь, был вторым императором из династии Тан в Китае, правившим с 626 по 649 гг. при поддержке своего отца Ли Юаня (позже императора Гаоцзуна).[PARAGRAPH:1]Ли Шиминь происходил из древней китайской служилой аристократической семьи, которая на протяжении 200 лет владела землями на севере при тобасской династии Вэй, поэтому в значительной степени смешалась с табгачским населением. Отец Ли Шиминя, Ли Юань был по происхождению безземельный юноша, которому удалось очаровать Люй-Хоу, дочь придворного вельможи, и благодаря этому браку стать наместником в Тайюане. Ли Юань был самым талантливым военачальником кавалерии императора Ян Ди из династии Суй. Абсурдная антинародная политика последнего вызвала против него ряд крестьянских восстаний, однако Ли Юань на первых порах был лоялен к Ян Ди. Тем не менее, Ли Шиминь вскоре убедил отца, который в то время отбивал натиск восточных тюркютов под руководством Шибир-хана, в необходимости примирения с Шибир-ханом и совместной с ним борьбы в ходе гражданской войны против императора-деспота. Когда в 617 Ли Юань был коронован в Чанъане под именем Гаоцзун, Ли Шиминь стал вторым лицом в государстве, а поскольку его отец, будучи умелым генералом, не отличался успехом в политике, часто сам решал политические вопросы.[PARAGRAPH:1]Прогрессивные реформы Ли Шиминя вызвали недовольство бывших приспешников режима Ян Ди, а также части конфуцианских чиновников, занимавших руководящие должности в обществе. В результате, при дворе возобладали консерваторы, которые побудили Ли Юаня в мае 626 издать указ об ограничении буддизма и даосизма, направленный, в первую очередь, против Ли Шиминя. Братья Ли Шиминя (Ли Цзяньчэн и Ли Юаньцзи), возглавившие придворную клику, вызвали его во дворец, намереваясь расправиться с ним. Когда Ли Шиминь прибыл к отцу 2 июля 626, Ли Цзяньчэн совершил покушение на своего брата, однако оно провалилось, и Ли Шиминь поразил его ответной стрелой. Ли Юань тотчас же отменил свой указ и назначил Ли Шиминя наследником престола. 4 сентября 626 Ли Шиминь окончательно отстранил от власти своего отца и был коронован, приняв храмовое имя Тайцзун.[PARAGRAPH:1]Условия, в которых Тай-цзун пришел к власти, были катастрофическими: за годы правления династии Суй население Китая сократилось на 2/3. При Тай-цзуне завершается складывание феодального централизованного государства. Этому способствовали реорганизация государственного аппарата, введение обязательных государственных экзаменов для отбора на чиновничьи должности, укрепление армии, составление (с 631) кодекса законов.[PARAGRAPH:1]Правление Тай-цзуна связано с первой в истории Китая попыткой создания синтетической культуры, объединяющей китайскую цивилизацию со степными кочевниками. Миллионное население востока Великой степи стало главной социальной базой для преобразований Ли Шиминя, считавшего себя в равной мере как императором китайцев, так и каганом степняков. Ближайший круг советников Тай-цзуна составляли китайские (даосские и конфуцианские) мудрецы, в том числе Вэй Чжэн, Фан Сюаньлин и Ван Гуй, а также степняки, отобранные по критерию личной преданности (в их числе однорукий уйгурский военачальник Киби Хели и тюркютский царевич из рода Ашина Шени). Политика Тай-цзуна, сохранявшая национальную идентичность народов степи, породила в Китае интерес ко всему тюркскому; был издан китайско-тюркский словарь, даже в столице империи Чанъане появились юрты по образцу степных. Позже националистическая партия в правящих кругах страны будет рассматривать династию Тан времен Тай-цзуна в качестве «табгачской».[PARAGRAPH:1]Тай-цзун вел завоевательные войны с Когуре, государствами к северо-западу от танских владений. При нем владения Китая расширились так далеко на запад, как никогда до него. Стабилизировав внутреннюю ситуацию в Китае, Тай-цзун инспирировал восстание уйгуров и других нетюркютских народов Великой степи против Восточно-тюркского каганата, после чего сам напал на его владения с шестью китайскими армиями в 628-630. К 635 к владениям Тай-цзуна был присоединен Тогон, а вскоре преимущественно тюркские по своему этническому составу войска, находившиеся под командованием китайских военачальников, взяли Гаочан, в результате чего Китай получил контроль над всем восточным отрезком Великого шелкового пути. Продолжая движение на запад, войска Тай-цзуна заняли более 70 городов Средней и Центральной Азии, от Кашгара до Бухары. В результате танских завоеваний Китай получил контроль не только над Восточным Туркестаном, но и над значительную часть современных Киргизстана и Узбекистана. Неудачными оказались только военные действия императора против северокорейского государства Когуре: в 645 танские армии потеряли инициативу, остановившись у крепости Ансинсон, героические защитники которой сдерживали агрессоров на протяжении 60 дней. Затянувшаяся до зимы осада Ансинсона ослабила китайскую армию, потерявшую 80 % обозной тягловой силы при отступлении. Тем не менее, силы Когуре были подорваны, и в 668 это государство прекратило свое существование.[PARAGRAPH:1]В начале 648 года, достигнув значительных результатов во внешней и внутренней политике, приблизившись к пятидесятилетнему рубежу император Тай-цзун счел необходимым изложить свои взгляды на главные задачи правителя Поднебесной. Причисляя себя к государям-основателям, и мечтая о том, чтобы танская династия не шла к упадку по пути предшественниц, Тай-цзун решил подсказать будущему императору Гаоцзуну как наилучшим образом управлять страной и подданными. Для этой цели он создал политическое завещание «Ди Фань», написанное в виде правил, практического руководства для преемников на троне. Вручая «Ди Фань» наследнику, он сказал: «Здесь сказано о том, как совершенствовать себя и управлять государством». Сочинение состояло из введения, заключения и двенадцать глав (пянь), объединенных в четыре цзюаня. В первую часть входили главы - Сущность правителя, Жаловать родственников уделами, Искать мудрецов; во вторую - Быть внимательным назначая на должности, Внимать увещеваниям, Отстранять клеветников; в третью - Остерегаться излишеств, Почитать бережливость, Награждать и наказывать; в четвертую - Поощрять земледелие, Обращать внимание на военное дело, Ценить гражданские занятия.[PARAGRAPH:1]Ли Шиминь умер 10 июля 649. Его гробница в Чанъане, украшенная высокохудожественными горельефами, считается одним из лучших образцов архитектуры эпохи Тан. Сын и наследник Тай-цзуна, Ли Чжи (тронное имя Гао-цзун), хотя и не обладал отцовскими способностями, но уверенно продолжил его успешную политику.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_THEODORA</Tag>
 		<English>Theodora</English>
 		<French>Théodora</French>
 		<Polish>Teodora</Polish>
-		<Russian>Ôåîäîðà</Russian>
+		<Russian>Феодора</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_THEODORA_PEDIA</Tag>
@@ -2599,28 +2641,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WILHELMINA_PEDIA</Tag>
-		<English>[H1]Wilhelmina[\H1][NEWLINE][BOLD]Queen of the Netherlands[NEWLINE]Lived:[\BOLD] August 31, 1890 - 30 April, 1962[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]She was the only child of King William III and his second wife, Emma of Waldeck and Pyrmont. Her childhood was characterised by a close relationship with her parents, especially with her father, who was already 63 years of age when she was born.[PARAGRAPH:1]Since King William already had three sons with his first wife, Queen Sophie, when Wilhelmina was born, there was little chance she would ascend the throne. However, William outlived all of his sons, the last of whom died when Wilhelmina was four.[PARAGRAPH:1]King William III died on November 23, 1890 and, although Princess Wilhelmina became Queen of the Netherlands instantly, her mother, Emma, was named Regent until her 18th birthday.[PARAGRAPH:1]In 1901 she married Hendrik, Duke of Mecklenburg-Schwerin. Although the marriage was said to be essentially without love, initially Wilhelmina truly cared for Hendrik, and it is likely that those feelings were mutual. Hendrik however, suffered from his role as prince-consort, stating that it was boring to be nothing more than decoration, forced always to walk one step behind his wife. He had no power in the Netherlands, and Wilhelmina made sure this remained so.[PARAGRAPH:1]Although the Netherlands remained neutral during World War I, sizeable German investments in the Dutch economy combined with a large trading partnership in goods forced the United Kingdom to blockade the Dutch ports in an attempt to weaken the German Empire. The Dutch government traded with Germany in response. German soldiers were given Edam cheese for their rations before an assault. Wilhemina was a "soldier's queen"; being a woman, she could not be Supreme Commander, but she nevertheless used every opportunity she had to inspect her forces. On many occasions she appeared without prior notice, wishing to see the reality, not a prepared show. She loved her soldiers, but was very unhappy with most of her governments, which used the military as a constant source for budget-cutting. Wilhelmina wanted a small but well trained and equipped army. However, this was far from the reality. In the war, she felt she was a "Queen-On-Guard". She was always wary of a German attack, especially in the beginning. However, violation of Dutch territorial sovereignty came from both Britain and the United States, who, with the blockade, captured many Dutch trade and cargo ships in an attempt to disrupt the German war effort. This led to increased tensions between the Netherlands and the Allied forces.[PARAGRAPH:1]Civil unrest, spurred on by the Bolshevik revolt in Imperial Russia in 1917, gripped the Netherlands after the war. A socialist leader named Troelstra tried to overthrow the government and the Queen. Instead of a violent revolution, he wanted to control the Tweede Kamer, the legislative body of Parliament, and hoped to achieve this by means of elections, convinced that the working class would support him. However, the popularity of the young Queen helped restore confidence in the government. Wilhelmina brought about a mass show of support by riding with her daughter through the mobs in an open carriage. It was very clear that the revolution would not succeed.[PARAGRAPH:1]On 10 May 1940, Nazi Germany invaded the Netherlands, and Queen Wilhelmina and her family fled to the United Kingdom three days later. Queen Wilhelmina had wanted to stay in the Netherlands: she had planned to go to the southern province of Zeeland with her troops in order to coordinate further resistance from the town of Breskens and remain there until help arrived, much as King Albert I of Belgium had done during World War I. She went aboard a British cruiser at The Hague, which was to take her there. However, when she was on board the captain stated that he was forbidden to make contact with the Dutch shore, as Zeeland was under heavy attack from the Luftwaffe and it was too dangerous to return. Wilhelmina then took the decision to go to Britain, planning to return as soon as possible. Wilhelmina also spent time in Canada during the war, staying at the Governor General's residence, Rideau Hall. It was said that while she was there she made a great impact on the household, notably for living relatively simply. The Queen insisted on doing her shopping personally, walking the streets of Ottawa unassisted (though simply raising her hand to stop traffic whenever she wished to cross the road), and travelling to the United States on a regular civilian train.[PARAGRAPH:1]During the war her photograph was a sign of resistance against the Germans. Like Winston Churchill, Queen Wilhelmina broadcast messages to the Dutch people over Radio Oranje. As always, the Queen pulled no punches, calling Adolf Hitler "the arch-enemy of mankind". Her late-night broadcasts were eagerly awaited by her people, who had to hide in order to listen to them illegally. During the war, the Queen was almost killed by a bomb that took the lives of several of her guards and severely damaged her country home near South Mimms in England. In 1944 Queen Wilhelmina became only the second woman to be inducted into the Order of the Garter. Churchill described her as the only real man among the governments-in-exile in London.[PARAGRAPH:1]In England she developed ideas about a new political and social life for the Dutch after the liberation. She wanted a strong cabinet formed by people active in the resistance. She dismissed De Geer during the war and installed a prime minister with the approval of other Dutch politicians. The Queen "hated" politicians, instead stating a love for the people. When the Netherlands was liberated in 1945 she was disappointed to see the same political factions taking power as before the war.[PARAGRAPH:1]Following the end of World War II, Queen Wilhelmina made the decision not to return to her palace but move into a mansion in The Hague, where she lived for eight months, and she travelled through the countryside to motivate people, sometimes using a bicycle instead of a car. However, in 1947, while the country was still recovering from World War II, the revolt in the oil-rich Dutch East Indies saw sharp criticism of the Queen by the Dutch economic elite. Her loss of popularity and the forced departure from the East Indies under international pressure led to her abdication soon after.[PARAGRAPH:1]On September 4, 1948, after a reign of 58 years and 50 days, Wilhelmina abdicated in favour of her daughter Juliana. She was thenceforward styled "Her Royal Highness Princess Wilhelmina of the Netherlands". After her reign, the influence of the Dutch monarchy began to decline but the country's love for its royal family continued. No longer queen, Wilhelmina retreated to Het Loo Palace, making few public appearances until the country was devastated by the North Sea flood of 1953. Once again she travelled around the country to encourage and motivate the Dutch people.[PARAGRAPH:1]Queen Wilhelmina died at the age of 82 on November 28, 1962 and was buried in the Dutch Royal Family crypt in the Nieuwe Kerk in Delft, on 8 December 1962. The funeral was, at her request and contrary to protocol, completely in white to give expression to her belief that earthly death was the beginning of eternal life.
-		</English>
-		<Polish>[H1]Wilhelmina[\H1][NEWLINE][BOLD]Kr&#243;lowa Holandii[NEWLINE]&#175;y&#179;a:[\BOLD] 31 Sierpnia 1890 - 30 Kwietnia 1962[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][PARAGRAPH:1]C&#243;rka Wilhelma III i jego drugiej &#191;ony - Emmy Waldeck-Pyrmont. Kiedy si&#234; urodzi&#179;a, &#191;y&#179; jeszcze jej przyrodni brat Aleksander, z ma&#179;&#191;e&#241;stwa jej ojca z Zofi&#185; Wirtembersk&#185;, i Wilhelmina nie by&#179;a brana pod uwag&#234; jako przysz&#179;a kr&#243;lowa. Jednak jej ojciec prze&#191;y&#179; swego syna i zmar&#179;, kiedy dziewczynka mia&#179;a 10 lat. Na skutek zmian w prawie mog&#179;a obj&#185;&#230; tron, jednak do uzyskania przez ni&#185; pe&#179;noletno&#156;ci w&#179;adz&#234; sprawowa&#179;a jej matka - jako regentka. Wilhelmina tak opisywa&#179;a swoje trudne dzieci&#241;stwo w zamkni&#234;ciu: "Zawsze otacza&#179;y mnie mury nie do przebicia [...] rzadko mog&#179;am cho&#230;by zobaczy&#230; spo&#179;ecze&#241;stwo. Od czasu do czasu dalekie echa &#191;ycia na zewn&#185;trz przedziera&#179;y si&#234; przez otaczaj&#185;c&#185; mnie pustk&#234;, ale nic ponadto". W 1901 po&#156;lubi&#179;a Henryka, ksi&#234;cia Mecklenburg-Schwerin, o kt&#243;rym m&#243;wiono, i&#191; by&#179; playboyem i alkoholikiem. Podobno j&#185; zdradza&#179; i mia&#179; kilkoro nie&#156;lubnych dzieci. Ich jedyne dziecko - Juliana - przysz&#179;o na &#156;wiat 30 kwietnia 1909. Dzie&#241; ten by&#179; uroczy&#156;cie &#156;wi&#234;towany w Holandii, a narodziny Juliany zosta&#179;y - jak si&#234; uwa&#191;a - odebrane jako cud. 10 maja 1940 wojska hitlerowskich Niemiec uderzy&#179;y na Holandi&#234;. Kr&#243;lowa Wilhelmina chcia&#179;a zosta&#230; w kraju - planowa&#179;a przeniesienie si&#234; na po&#179;udnie, do Zelandii, gdzie mog&#179;aby koordynowa&#230; dzia&#179;ania w&#179;asnych wojsk w oparciu o baz&#234; w miejscowo&#156;ci Breskens, w oczekiwaniu na nadej&#156;cie alianckiej odsieczy tak, jak kr&#243;l Belgii, Albert I zrobi&#179; w czasie I wojny &#156;wiatowej. Opu&#156;ci&#179;a wi&#234;c Hag&#234; na pok&#179;adzie brytyjskiego niszczyciela, kt&#243;ry mia&#179; j&#185; zawie&#191;&#230; na po&#179;udnie, jednak&#191;e gdy by&#179;a w morzu, Zelandia znalaz&#179;a si&#234; pod silnymi nalotami Luftwaffe i uznano, &#191;e jej powr&#243;t b&#234;dzie zbyt niebezpieczny. Wilhelminie nie pozosta&#179;o nic innego ni&#191; skorzysta&#230; z oferty Jerzego VI i przyj&#185;&#230; azyl w Wielkiej Brytanii. Uda&#179;a si&#234; wi&#234;c do Zjednoczonego Kr&#243;lestwa gotowa wr&#243;ci&#230; do kraju tak szybko, jak si&#234; tylko da. Holenderskie si&#179;y zbrojne skapitulowa&#179;y 15 maja. Kr&#243;lowa Wilhelmina stan&#234;&#179;a na czele holenderskiego rz&#185;du na uchod&#159;stwie, ustalaj&#185;c zakresy obowi&#185;zk&#243;w i natychmiast powiadamiaj&#185;c o tym nar&#243;d. Stosunki mi&#234;dzy rz&#185;dem a kr&#243;low&#185; by&#179;y napi&#234;te, a wzajemna niech&#234;&#230; narasta&#179;a w miar&#234; trwania wojny. Tymczasem Wilhelmina by&#179;a bardzo popularna i szanowana przez &#156;wiatowych przyw&#243;dc&#243;w. Rz&#185;d nie mia&#179; parlamentu, kt&#243;ry m&#243;g&#179;by go wspiera&#230;, a urz&#234;dnik&#243;w raczej niewielu. Premier Dirk Jan de Geer uwa&#191;a&#179;, &#191;e alianci przegraj&#185; wojn&#234; i zamierza&#179; wynegocjowa&#230; z Niemcami separatystyczny uk&#179;ad pokojowy. W tej sytuacji Wilhelmina nie widzia&#179;a innego wyj&#156;cia, jak zdymisjonowa&#230; premiera.
-		</Polish>
+		<English>[H1]Wilhelmina[\H1][NEWLINE][BOLD]Queen of the Netherlands[NEWLINE]Lived:[\BOLD] August 31, 1890 - 30 April, 1962[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]She was the only child of King William III and his second wife, Emma of Waldeck and Pyrmont. Her childhood was characterised by a close relationship with her parents, especially with her father, who was already 63 years of age when she was born.[PARAGRAPH:1]Since King William already had three sons with his first wife, Queen Sophie, when Wilhelmina was born, there was little chance she would ascend the throne. However, William outlived all of his sons, the last of whom died when Wilhelmina was four.[PARAGRAPH:1]King William III died on November 23, 1890 and, although Princess Wilhelmina became Queen of the Netherlands instantly, her mother, Emma, was named Regent until her 18th birthday.[PARAGRAPH:1]In 1901 she married Hendrik, Duke of Mecklenburg-Schwerin. Although the marriage was said to be essentially without love, initially Wilhelmina truly cared for Hendrik, and it is likely that those feelings were mutual. Hendrik however, suffered from his role as prince-consort, stating that it was boring to be nothing more than decoration, forced always to walk one step behind his wife. He had no power in the Netherlands, and Wilhelmina made sure this remained so.[PARAGRAPH:1]Although the Netherlands remained neutral during World War I, sizeable German investments in the Dutch economy combined with a large trading partnership in goods forced the United Kingdom to blockade the Dutch ports in an attempt to weaken the German Empire. The Dutch government traded with Germany in response. German soldiers were given Edam cheese for their rations before an assault. Wilhemina was a "soldier's queen"; being a woman, she could not be Supreme Commander, but she nevertheless used every opportunity she had to inspect her forces. On many occasions she appeared without prior notice, wishing to see the reality, not a prepared show. She loved her soldiers, but was very unhappy with most of her governments, which used the military as a constant source for budget-cutting. Wilhelmina wanted a small but well trained and equipped army. However, this was far from the reality. In the war, she felt she was a "Queen-On-Guard". She was always wary of a German attack, especially in the beginning. However, violation of Dutch territorial sovereignty came from both Britain and the United States, who, with the blockade, captured many Dutch trade and cargo ships in an attempt to disrupt the German war effort. This led to increased tensions between the Netherlands and the Allied forces.[PARAGRAPH:1]Civil unrest, spurred on by the Bolshevik revolt in Imperial Russia in 1917, gripped the Netherlands after the war. A socialist leader named Troelstra tried to overthrow the government and the Queen. Instead of a violent revolution, he wanted to control the Tweede Kamer, the legislative body of Parliament, and hoped to achieve this by means of elections, convinced that the working class would support him. However, the popularity of the young Queen helped restore confidence in the government. Wilhelmina brought about a mass show of support by riding with her daughter through the mobs in an open carriage. It was very clear that the revolution would not succeed.[PARAGRAPH:1]On 10 May 1940, Nazi Germany invaded the Netherlands, and Queen Wilhelmina and her family fled to the United Kingdom three days later. Queen Wilhelmina had wanted to stay in the Netherlands: she had planned to go to the southern province of Zeeland with her troops in order to coordinate further resistance from the town of Breskens and remain there until help arrived, much as King Albert I of Belgium had done during World War I. She went aboard a British cruiser at The Hague, which was to take her there. However, when she was on board the captain stated that he was forbidden to make contact with the Dutch shore, as Zeeland was under heavy attack from the Luftwaffe and it was too dangerous to return. Wilhelmina then took the decision to go to Britain, planning to return as soon as possible. Wilhelmina also spent time in Canada during the war, staying at the Governor General's residence, Rideau Hall. It was said that while she was there she made a great impact on the household, notably for living relatively simply. The Queen insisted on doing her shopping personally, walking the streets of Ottawa unassisted (though simply raising her hand to stop traffic whenever she wished to cross the road), and travelling to the United States on a regular civilian train.[PARAGRAPH:1]During the war her photograph was a sign of resistance against the Germans. Like Winston Churchill, Queen Wilhelmina broadcast messages to the Dutch people over Radio Oranje. As always, the Queen pulled no punches, calling Adolf Hitler "the arch-enemy of mankind". Her late-night broadcasts were eagerly awaited by her people, who had to hide in order to listen to them illegally. During the war, the Queen was almost killed by a bomb that took the lives of several of her guards and severely damaged her country home near South Mimms in England. In 1944 Queen Wilhelmina became only the second woman to be inducted into the Order of the Garter. Churchill described her as the only real man among the governments-in-exile in London.[PARAGRAPH:1]In England she developed ideas about a new political and social life for the Dutch after the liberation. She wanted a strong cabinet formed by people active in the resistance. She dismissed De Geer during the war and installed a prime minister with the approval of other Dutch politicians. The Queen "hated" politicians, instead stating a love for the people. When the Netherlands was liberated in 1945 she was disappointed to see the same political factions taking power as before the war.[PARAGRAPH:1]Following the end of World War II, Queen Wilhelmina made the decision not to return to her palace but move into a mansion in The Hague, where she lived for eight months, and she travelled through the countryside to motivate people, sometimes using a bicycle instead of a car. However, in 1947, while the country was still recovering from World War II, the revolt in the oil-rich Dutch East Indies saw sharp criticism of the Queen by the Dutch economic elite. Her loss of popularity and the forced departure from the East Indies under international pressure led to her abdication soon after.[PARAGRAPH:1]On September 4, 1948, after a reign of 58 years and 50 days, Wilhelmina abdicated in favour of her daughter Juliana. She was thenceforward styled "Her Royal Highness Princess Wilhelmina of the Netherlands". After her reign, the influence of the Dutch monarchy began to decline but the country's love for its royal family continued. No longer queen, Wilhelmina retreated to Het Loo Palace, making few public appearances until the country was devastated by the North Sea flood of 1953. Once again she travelled around the country to encourage and motivate the Dutch people.[PARAGRAPH:1]Queen Wilhelmina died at the age of 82 on November 28, 1962 and was buried in the Dutch Royal Family crypt in the Nieuwe Kerk in Delft, on 8 December 1962. The funeral was, at her request and contrary to protocol, completely in white to give expression to her belief that earthly death was the beginning of eternal life.</English>
+		<Polish>[H1]Wilhelmina[\H1][NEWLINE][BOLD]Kr&#243;lowa Holandii[NEWLINE]&#175;y&#179;a:[\BOLD] 31 Sierpnia 1890 - 30 Kwietnia 1962[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][PARAGRAPH:1]C&#243;rka Wilhelma III i jego drugiej &#191;ony - Emmy Waldeck-Pyrmont. Kiedy si&#234; urodzi&#179;a, &#191;y&#179; jeszcze jej przyrodni brat Aleksander, z ma&#179;&#191;e&#241;stwa jej ojca z Zofi&#185; Wirtembersk&#185;, i Wilhelmina nie by&#179;a brana pod uwag&#234; jako przysz&#179;a kr&#243;lowa. Jednak jej ojciec prze&#191;y&#179; swego syna i zmar&#179;, kiedy dziewczynka mia&#179;a 10 lat. Na skutek zmian w prawie mog&#179;a obj&#185;&#230; tron, jednak do uzyskania przez ni&#185; pe&#179;noletno&#156;ci w&#179;adz&#234; sprawowa&#179;a jej matka - jako regentka. Wilhelmina tak opisywa&#179;a swoje trudne dzieci&#241;stwo w zamkni&#234;ciu: "Zawsze otacza&#179;y mnie mury nie do przebicia [...] rzadko mog&#179;am cho&#230;by zobaczy&#230; spo&#179;ecze&#241;stwo. Od czasu do czasu dalekie echa &#191;ycia na zewn&#185;trz przedziera&#179;y si&#234; przez otaczaj&#185;c&#185; mnie pustk&#234;, ale nic ponadto". W 1901 po&#156;lubi&#179;a Henryka, ksi&#234;cia Mecklenburg-Schwerin, o kt&#243;rym m&#243;wiono, i&#191; by&#179; playboyem i alkoholikiem. Podobno j&#185; zdradza&#179; i mia&#179; kilkoro nie&#156;lubnych dzieci. Ich jedyne dziecko - Juliana - przysz&#179;o na &#156;wiat 30 kwietnia 1909. Dzie&#241; ten by&#179; uroczy&#156;cie &#156;wi&#234;towany w Holandii, a narodziny Juliany zosta&#179;y - jak si&#234; uwa&#191;a - odebrane jako cud. 10 maja 1940 wojska hitlerowskich Niemiec uderzy&#179;y na Holandi&#234;. Kr&#243;lowa Wilhelmina chcia&#179;a zosta&#230; w kraju - planowa&#179;a przeniesienie si&#234; na po&#179;udnie, do Zelandii, gdzie mog&#179;aby koordynowa&#230; dzia&#179;ania w&#179;asnych wojsk w oparciu o baz&#234; w miejscowo&#156;ci Breskens, w oczekiwaniu na nadej&#156;cie alianckiej odsieczy tak, jak kr&#243;l Belgii, Albert I zrobi&#179; w czasie I wojny &#156;wiatowej. Opu&#156;ci&#179;a wi&#234;c Hag&#234; na pok&#179;adzie brytyjskiego niszczyciela, kt&#243;ry mia&#179; j&#185; zawie&#191;&#230; na po&#179;udnie, jednak&#191;e gdy by&#179;a w morzu, Zelandia znalaz&#179;a si&#234; pod silnymi nalotami Luftwaffe i uznano, &#191;e jej powr&#243;t b&#234;dzie zbyt niebezpieczny. Wilhelminie nie pozosta&#179;o nic innego ni&#191; skorzysta&#230; z oferty Jerzego VI i przyj&#185;&#230; azyl w Wielkiej Brytanii. Uda&#179;a si&#234; wi&#234;c do Zjednoczonego Kr&#243;lestwa gotowa wr&#243;ci&#230; do kraju tak szybko, jak si&#234; tylko da. Holenderskie si&#179;y zbrojne skapitulowa&#179;y 15 maja. Kr&#243;lowa Wilhelmina stan&#234;&#179;a na czele holenderskiego rz&#185;du na uchod&#159;stwie, ustalaj&#185;c zakresy obowi&#185;zk&#243;w i natychmiast powiadamiaj&#185;c o tym nar&#243;d. Stosunki mi&#234;dzy rz&#185;dem a kr&#243;low&#185; by&#179;y napi&#234;te, a wzajemna niech&#234;&#230; narasta&#179;a w miar&#234; trwania wojny. Tymczasem Wilhelmina by&#179;a bardzo popularna i szanowana przez &#156;wiatowych przyw&#243;dc&#243;w. Rz&#185;d nie mia&#179; parlamentu, kt&#243;ry m&#243;g&#179;by go wspiera&#230;, a urz&#234;dnik&#243;w raczej niewielu. Premier Dirk Jan de Geer uwa&#191;a&#179;, &#191;e alianci przegraj&#185; wojn&#234; i zamierza&#179; wynegocjowa&#230; z Niemcami separatystyczny uk&#179;ad pokojowy. W tej sytuacji Wilhelmina nie widzia&#179;a innego wyj&#156;cia, jak zdymisjonowa&#230; premiera.</Polish>
 		<Russian>[H1]Вильгельмина[\H1][NEWLINE][BOLD]Королева Нидерландов[NEWLINE]Годы жизни:[\BOLD] 31 августа 1890 - 30 апреля 1962[NEWLINE][PARAGRAPH:2][BOLD]Биография:[\BOLD][PARAGRAPH:1]Она была единственным ребенком короля Вильгельма III и его второй жены, Эммы Вальдек и Пирмонт. Ее детство характеризовалось теплыми отношениями с ее родителями, особенно с ее отцом, которому было уже 63 года, когда она родилась.[PARAGRAPH:1]Поскольку у короля Вильгельма уже было три сына с его первой женой, королевой Софией, когда родилась Вильгельмина, было мало шансов, что она вступит на престол. Однако Вильгельм пережил всех своих сыновей, последние из которых умерли, когда Вильгельмине было четыре года.[PARAGRAPH:1]Король Вильгельм III умер 23 ноября 1890 года, и хотя принцесса Вильгельмина мгновенно стала королевой Нидерландов, ее мать, Эмма, была назначена регентом до ее 18-летия.[PARAGRAPH:1]В 1901 году она вышла замуж за Хендрика, герцога Мекленбург-Шверинского. Хотя брак, как говорили, по сути был без любви, изначально Вильгельмина действительно заботилась о Хендрике, и вполне вероятно, что эти чувства были взаимными. Хендрик, однако, очень тяготился своей церемониальной ролью принца-консорта, заявив, что скучно быть не более, чем украшением и тенью своей жены. У него не было власти в Нидерландах, и Вильгельмина позаботилась о том, чтобы это продолжалось.[PARAGRAPH:1]Хотя Нидерланды оставались нейтральными во время Первой мировой войны, значительные немецкие инвестиции в голландскую экономику в сочетании с большим торговым партнерством в товарах вынудили Великобританию блокировать порты Нидерландов в попытке ослабить Германскую империю. Голландское правительство торговало с Германией в ответ. Перед штурмом немецким солдатам давали эдамский сыр для пайков. Вильгемина была «королевой солдат»; будучи женщиной, она не могла быть Верховным главнокомандующим, но, тем не менее, она использовала любую возможность, чтобы осмотреть свои силы. Во многих случаях она появлялась без предварительного уведомления, желая увидеть реальность, а не готовое шоу. Она любила своих солдат, но была очень недовольна большинством правительств, которые использовали вооруженные силы в качестве постоянного источника сокращения бюджета. Вильгельмина хотела маленькую, но хорошо обученную и экипированную армию. Однако это было далеко от реальности. На войне она чувствовала себя королевой на страже. Она всегда опасалась нападения немцев, особенно в начале. Тем не менее, нарушение территориального суверенитета Нидерландов произошло со стороны Великобритании и Соединенных Штатов, которые с помощью блокады захватили много голландских торговых и грузовых судов в попытке сорвать военные действия Германии. Это привело к усилению напряженности в отношениях между Нидерландами и союзными войсками.[PARAGRAPH:1]Волнения и анархия, вызванные революцией в царской России в феврале 1917 года, охватили и Нидерланды после войны. Лидер социалистов по имени Троэльстра пытался свергнуть правительство и королеву. Вместо насильственной революции он хотел контролировать законодательный орган парламента, и рассчитывал добиться этого путем выборов, убежденный, что рабочий класс поддержит его. Однако популярность молодой королевы помогла восстановить доверие к правительству. Вильгельмина вызвала массовую демонстрацию поддержки, катаясь со своей дочерью через толпы в открытой коляске. Было совершенно ясно, что революция не удастся.[PARAGRAPH:1]10 мая 1940 года нацистская Германия вторглась в Нидерланды, а королева Вильгельмина и ее семья через три дня бежали в Великобританию. Королева Вильгельмина хотела остаться в Нидерландах: она планировала отправиться со своими войсками в южную провинцию Зеландии, чтобы координировать дальнейшее сопротивление со стороны города Брескенс и оставаться там до прибытия помощи, так же как и король Бельгии Альберт I сделано во время Первой мировой войны. Она отправилась на борт британского крейсера в Гааге, который должен был отвезти ее туда. Однако, когда она была на борту, капитан заявил, что ему запрещено вступать в контакт с голландским берегом, поскольку Зеландия подверглась сильной атаке со стороны люфтваффе, и возвращаться было слишком опасно. Затем Вильгельмина приняла решение отправиться в Великобританию, планируя вернуться как можно скорее. Вильгельмина также провела время в Канаде во время войны, оставаясь в резиденции генерал-губернатора, Ридо Холл. Было сказано, что, находясь там, она оказала большое влияние на домохозяйство, в частности, на то, чтобы жить относительно просто. Королева настояла на том, чтобы лично делать покупки, ходить по улицам Оттавы без посторонней помощи (хотя просто поднимать руку, чтобы остановить движение, когда она захочет перейти дорогу) и путешествовать в Соединенные Штаты на обычном гражданском поезде.[PARAGRAPH:1]Во время войны ее фотография была признаком сопротивления немцам. Как и Уинстон Черчилль, королева Вильгельмина транслировала сообщения голландцам по радио Оранье. Как всегда, королева не наносила ударов, называя Адольфа Гитлера «заклятым врагом человечества». Ее ночные трансляции с нетерпением ждали ее люди, которые должны были скрываться, чтобы слушать их незаконно. Во время войны королева была почти убита бомбой, которая унесла жизни нескольких ее охранников и нанесла серьезный ущерб ее загородному дому недалеко от Южного Ми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WRUB</Tag>
 		<English>Wrub</English>
-		<Russian>Ãðóá</Russian>
+		<Russian>Груб</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WRUB_PEDIA</Tag>
 		<English>Wrub sounds good for a Neanderthal leader, as, obviously, there are no records for any.</English>
-		<Spanish>No suena mal Wrub como lider Neandertal, menos aún cuando no se puede decir nada en contra.</Spanish>
+		<French>Wrub semble approprié pour un leader néandertalien, car, évidemment, il n'y a aucun enregistrement pour ce nom.</French>
 		<Polish>Wrub to przypuszczalny w&#243;dz neandertalczyk&#243;w.</Polish>
-		<Russian>Ãðóá çâó÷èò íåïëîõî äëÿ ëèäåðà íåàíäåðòàëüöà,âåäü, ÷òî î÷åâèäíî, î íåì íåò íèêàêèõ çàïèñåé.</Russian>
+		<Russian>Груб - звучит неплохо для лидера-неандертальца, ведь очевидно, что никаких записей о нем не существует.</Russian>
+		<Spanish>No suena mal Wrub como lider Neandertal, menos aún cuando no se puede decir nada en contra.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WU</Tag>
 		<English>Wu</English>
-		<Russian>Ó Öçýòÿíü</Russian>
+		<Russian>У Цзэтянь</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_WU_PEDIA</Tag>
@@ -2632,7 +2673,7 @@
 		<Tag>TXT_KEY_LEADER_YAGAN</Tag>
 		<English>Yagan</English>
 		<Polish>Jagan</Polish>
-		<Russian>ßãàí</Russian>
+		<Russian>Яган</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YAGAN_PEDIA</Tag>
@@ -2644,11 +2685,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YUNUPINGU</Tag>
 		<English>Yunupingu</English>
-		<Russian>Þíóïèíãó</Russian>
+		<Russian>Юнупингу</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_YUNUPINGU_PEDIA</Tag>
-		<English>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Community Leader, Australian Indigenous Community [\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c.1948 - present[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies' rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners' terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</English>
+		<English>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Community Leader, Australian Indigenous Community [\BOLD][NEWLINE][BOLD]Lived:[\BOLD] c.1948 - present[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, and an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</English>
 		<Polish>[H1]Galarrwuy Yunupingu [\H1][NEWLINE][BOLD]Przyw&#243;dca Spo&#179;eczno&#156;ci Aborygen&#243;w[\BOLD][NEWLINE][BOLD]Urodzi&#179; si&#234;:[\BOLD] ok.1948[NEWLINE][PARAGRAPH:2][BOLD]T&#179;o:[\BOLD][NEWLINE]Galarrwuy Yunupingu is a leader in the Australian Indigenous community, and has been involved in the fight for Land Rights throughout his career. He was 1978 Australian of the Year.[PARAGRAPH:1]He was born at Melville Bay near Yirrkala on 1948 June 30, and is a member of the Gumatj clan of the Yolngu people. He attended Mission School at Yirrkala in his formative years, and moved to Brisbane to study at the Methodist Bible College for two years, returning to Gove in 1967. In the early 1960's with his father, the Gumatj clan leader Mungurrawuy, he entered the struggle for Land Rights, and helped draw up the Bark Petition at Yirrkala. He came to national attention in the late 1960's for his role in the landmark, but unsuccessful Gove Land Rights Case. This legal action was the first by Indigenous Australians to challenge mining companies' rights to exploit traditional lands. He became a prominent leader and strong voice on behalf of Aboriginal people in the Northern Territory and Australia, gaining respect and admiration from many. In 1969 he was elected to the Yirrkala town council.[PARAGRAPH:1]In 1975 he joined the Northern Land Council (NLC), the authority appointed under the Aboriginal Land Rights (NT) Act 1976 to represent traditional Aboriginal landowners and Aboriginal people. He was chairman of the NLC from 1977-1980, an executive member until 1983 when he was re-elected as chairman, and has remained in that position to date (2004). He has led a number of negotiations with mining and government bodies. As chair of the NLC, he led the Gagudju people in negotiations with mining and government bodies. Not opposed to mining in principle, Yunupingu sees it as a way for Aboriginal people to escape the welfare trap if it is conducted on the traditional owners' terms. These include a fair distribution of the economic benefits and respect for the land and specific sacred sites. He said: 'We will continue to fight for the right to make our own decisions about our own land.'[PARAGRAPH:1]In 1978 he was awarded the Honour of Australian of the Year for his negotiations on the Ranger uranium mine agreement. He said the award 'would help him to shake off the image of ratbag and radical' and would give him 'greater strength as an individual and as a leader'. It was also a recognition for Aboriginal people as 'the indigenous people of this country who must share in its future'. In 1985, he was made a Member of the Order of Australia (AM) for his services to the Aboriginal community. Galarrwuy Yunupingu is one of 100 "Australian Living National Treasures" selected by the National Trust as leaders in society "considered to have a great influence over our environment because of the standards and examples they set".</Polish>
 		<Russian>[H1]Ãàëàðâýé Þíóïèíãó[\H1][NEWLINE][BOLD]Ëèäåð çåìëÿ÷åñòâà àâñòðàëèéñêèõ àáîðèãåíîâ [\BOLD][NEWLINE][BOLD]Ãîäû æèçíè: [\BOLD]c.1948 - íàñò. âðåìÿ[NEWLINE][PARAGRAPH:2][BOLD]Áèîãðàôèÿ:[\BOLD][NEWLINE][TAB]Галарву Юнупингу - лидер австралийского коренного населения, на протяжении всей своей карьеры принимавший участие в борьбе за земельные права. Он был австралийцем 1978 года.[PARAGRAPH:1]Он родился в заливе Мелвилл недалеко от Йирркала 30 июня 1948 года и является членом клана Гуматж из народа Йолнгу. В годы становления он посещал миссионерскую школу в Йирркале и переехал в Брисбен, чтобы проучиться в методистском библейском колледже в течение двух лет, а затем вернулся в Гоув в 1967 году. В начале 1960-х вместе со своим отцом, лидером клана Гумати Мунгурравуй, он вступил в борьбу. за земельные права и помог составить петицию Барка в Йирркале. Он привлек национальное внимание в конце 1960-х годов благодаря своей роли в знаковом, но неудачном деле о земельных правах правительства. Этот судебный иск был первым иском коренных австралийцев, который оспорил права горнодобывающих компаний на использование традиционных земель. Он стал выдающимся лидером и сильным голосом от имени аборигенов Северной территории и Австралии, завоевав уважение и восхищение многих. В 1969 году он был избран депутатом городского совета Йирркала.[PARAGRAPH:1]В 1975 году он присоединился к Северному земельному совету (СЗС), органу, назначенному в соответствии с Законом 1976 года о земельных правах аборигенов (СЗ), чтобы представлять традиционных землевладельцев-аборигенов и аборигенов. Он был председателем СЗС с 1977-1980, исполнительным членом до 1983 года, когда он был переизбран председателем, и остается на этой должности до настоящего времени (2004). Он провел ряд переговоров с горнодобывающими и государственными органами. Как председатель СЗС, он руководил людьми Гагуджу на переговорах с горнодобывающими и государственными органами. Юнупингу, в принципе, не возражая против добычи полезных ископаемых, считает, что аборигены могут вырваться из ловушки благосостояния, если она будет вестись на условиях традиционных владельцев. К ним относятся справедливое распределение экономических выгод и уважение к земле и определенным священным местам. Он сказал: «Мы продолжим бороться за право принимать собственные решения относительно нашей собственной земли».[PARAGRAPH:1]В 1978 году он был удостоен звания «Австралиец года» за переговоры по соглашению о урановом руднике «Рейнджер». Он сказал, что эта награда «поможет ему избавиться от образа болвана и радикала» и придаст ему «большую силу как личность и как лидер». Это также было признанием аборигенов как «коренных жителей этой страны, которые должны участвовать в ее будущем». В 1985 году он стал членом Ордена Австралии за заслуги перед сообществом аборигенов. Галарву Юнупингу является одним из 100 «живых национальных сокровищ Австралии», выбранных Национальным фондом в качестве лидеров общества, «имеющих большое влияние на окружающую среду из-за установленных ими стандартов и примеров».</Russian>
 	</TEXT>

@@ -31,3 +31,5 @@ Currently we can't tell the exe that the last playable slot is slot 39, because 
 I'm thinking we may have to give neadnerthals and higher NPC slots a unique dll/python handled city bar, perhaps not use the city object at all for their cities.
 That way we could fix the bug where the exe allows the player to define regular starting players in the NPC slots by telling the exe that slot 39 is the last playable one.
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+Matt: delete EVENTTRIGGER_BONUS_TAX

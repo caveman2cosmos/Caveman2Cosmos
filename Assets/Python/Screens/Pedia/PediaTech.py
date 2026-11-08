@@ -13,7 +13,7 @@ class PediaTech:
 		H_PEDIA_PAGE = parent.H_PEDIA_PAGE
 
 		self.Y_TOP_ROW = Y_TOP_ROW = parent.Y_PEDIA_PAGE
-		self.Y_BOT_ROW = Y_BOT_ROW = Y_TOP_ROW + H_PEDIA_PAGE - H_BOT_ROW
+		self.Y_BOT_ROW = Y_TOP_ROW + H_PEDIA_PAGE - H_BOT_ROW
 
 		self.H_TOP_ROW = H_TOP_ROW = (H_PEDIA_PAGE - H_BOT_ROW * 3) / 4
 		self.H_BOT_ROW = H_BOT_ROW
@@ -97,7 +97,6 @@ class PediaTech:
 		screen.enableSelect(Pnl, False)
 
 		iEra = CvTheTechInfo.getEra()
-#		szTechEra = TRNSLTR.changeTextColor(GC.getEraInfo(iEra).getDescription(), iEra * 255 / GC.getNumEraInfos())
 		if CyPlayer:
 			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(CyPlayer.getTeam()).getResearchCost(iTheTech),))
 		else:
@@ -258,7 +257,6 @@ class PediaTech:
 						aList1.append(["TXT", "<font=4b>%d" % iAmount, 1<<1, 16, 0])
 					aList1.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
 					n += 1
-				aList2 = []
 
 			if aList3:
 				if nOr > 1:
@@ -276,7 +274,6 @@ class PediaTech:
 					n += 1
 				if nOr > 1:
 					aList1.append(braR)
-				aList3 = []
 
 		if aList1:
 			Pnl = aName()
@@ -285,7 +282,6 @@ class PediaTech:
 			x = 4
 			y = H_SCROLL / 2 - 12
 			for entry in aList1:
-				#NAME = entry[0]
 				if entry[0] == "TXT":
 					x += entry[3]
 					screen.setLabelAt(aName(), Pnl, entry[1], entry[2], x, y, 0, eFontTitle, eWidGen, 0, 0)

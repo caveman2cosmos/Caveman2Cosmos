@@ -205,12 +205,12 @@ int CvTalkingHeadMessage::getExpireTurn() const
 	switch (m_eMessageType)
 	{
 	case MESSAGE_TYPE_INFO:
-		iExpireTurn += 2;
+		iExpireTurn += 1;
 		break;
 	case MESSAGE_TYPE_CHAT:
 		iExpireTurn += 20;
 		break;
-    case MESSAGE_TYPE_COMBAT_MESSAGE:
+	case MESSAGE_TYPE_COMBAT_MESSAGE:
 		iExpireTurn += 20;
 		break;
 	case MESSAGE_TYPE_MINOR_EVENT:

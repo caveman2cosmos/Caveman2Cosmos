@@ -158,7 +158,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
+            <DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -489,13 +489,13 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
-			<iCost>8</iCost>
+			<iCost>7</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iWithdrawalProb>10</iWithdrawalProb>
+			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>50</iEarlyWithdraw>
 			<iAnimalCombat>50</iAnimalCombat>
 			<iAsset>2</iAsset>
@@ -512,7 +512,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
+			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WANDERER</UnitType>
 			</SupersedingUnits>
@@ -530,7 +530,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -540,6 +539,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -547,7 +547,6 @@
 			<Description>TXT_KEY_UNIT_SCOUT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -577,13 +576,13 @@
 			</NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<iCost>15</iCost>
+			<iCost>11</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
-			<iWithdrawalProb>40</iWithdrawalProb>
+			<iWithdrawalProb>50</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
 			<iAnimalCombat>25</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -623,6 +622,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -630,7 +630,6 @@
 			<Description>TXT_KEY_UNIT_GUIDE</Description>
 			<Civilopedia>TXT_KEY_UNIT_GUIDE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -713,7 +712,6 @@
 			<Description>TXT_KEY_UNIT_EXPLORER</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXPLORER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
@@ -743,7 +741,7 @@
 			</NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
-			<iCost>170</iCost>
+			<iCost>175</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
@@ -811,6 +809,7 @@
 			<bBarbCoExist>1</bBarbCoExist>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bPassage>1</bPassage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
 			<UnitUpgrades>
 				<UnitType>UNIT_ADVENTURER</UnitType>
@@ -831,7 +830,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_LLAMA</BonusType>
-			<iCost>70</iCost>
+			<iCost>110</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -884,6 +883,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1146,7 +1146,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CHASER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1166,6 +1165,7 @@
 			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1178,7 +1178,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1197,20 +1197,20 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<iCost>21</iCost>
+			<iCost>17</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>1</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
-			<iPursuit>10</iPursuit>
+			<iPursuit>20</iPursuit>
 			<iCityAttack>-75</iCityAttack>
-			<iAnimalCombat>125</iAnimalCombat>
-			<iEarlyWithdraw>30</iEarlyWithdraw>
+			<iAnimalCombat>100</iAnimalCombat>
+			<iEarlyWithdraw>40</iEarlyWithdraw>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
+					<iUnitCombatMod>100</iUnitCombatMod>
 				</UnitCombatMod>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
@@ -1262,10 +1262,10 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRACKER</Type>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1276,7 +1276,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -1289,6 +1288,16 @@
 			<Description>TXT_KEY_UNIT_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -1310,7 +1319,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_HUNTER</UnitType>
@@ -1376,7 +1385,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HUNTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1387,7 +1395,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_JAVELIN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -1400,11 +1407,26 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
+			<bOnlyAttackAnimals>1</bOnlyAttackAnimals>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1448,7 +1470,7 @@
 			<PursuitVSUnitCombatTypes>
 				<PursuitVSUnitCombatType>
 					<PursuitVSUnitCombat>UNITCOMBAT_ANIMAL</PursuitVSUnitCombat>
-					<iPursuitVSUnitCombat>20</iPursuitVSUnitCombat>
+					<iPursuitVSUnitCombat>25</iPursuitVSUnitCombat>
 				</PursuitVSUnitCombatType>
 			</PursuitVSUnitCombatTypes>
 			<UnitCombatTargets>
@@ -1488,7 +1510,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_RANGER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1522,7 +1543,7 @@
 				<UnitType>UNIT_WARDEN</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1597,7 +1618,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WARDEN</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1630,7 +1650,7 @@
 				<UnitType>UNIT_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1705,7 +1725,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GAME_HUNTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1738,7 +1757,7 @@
 				<UnitType>UNIT_BIG_GAME_HUNTER</UnitType>
 			</UnitUpgrades>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -1813,7 +1832,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIG_GAME_HUNTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -1842,7 +1860,7 @@
 			<Description>TXT_KEY_UNIT_BIG_GAME_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -2054,7 +2072,7 @@
 		<UnitInfo>
 			<Type>UNIT_SPECIAL_AGENT</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_SPY</Combat>
 			<SubCombatTypes>
@@ -2337,7 +2355,7 @@
 		<UnitInfo>
 			<Type>UNIT_SLEEPER</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SPY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SLEEPER</Description>
@@ -2397,7 +2415,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_1</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2454,7 +2472,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_2</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2511,7 +2529,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_3</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2568,7 +2586,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_4</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2625,7 +2643,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_5</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2682,7 +2700,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_6</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2739,7 +2757,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_7</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2796,7 +2814,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_ADVENTURE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2853,7 +2871,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_BULLSEYE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2910,7 +2928,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_BURGERWORLD</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -2967,7 +2985,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_EMPCLOTH</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3024,7 +3042,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_EWTRADE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3081,7 +3099,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_FASHION</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3138,7 +3156,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_MALLWART</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3195,7 +3213,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_MAPSTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3252,7 +3270,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_MCDOWELLS</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3309,7 +3327,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_MILEHIGH</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3366,7 +3384,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_MOBBY</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3423,7 +3441,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MOONBEAN_EXECUTIVE</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3480,7 +3498,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_RED</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3537,7 +3555,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_SAFARI</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3594,7 +3612,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_ULTSOLDIER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -3651,7 +3669,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXECUTIVE_WONKA</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_EXECUTIVE</Combat>
 			<SubCombatTypes>
@@ -5299,7 +5317,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CAODAI_MISSIONARY</Type>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
@@ -5584,7 +5601,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_INQUISITOR</Type>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
@@ -5709,7 +5726,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_BRUTE</UnitType>
 			</SupersedingUnits>
-			<iCost>4</iCost>
+			<iCost>3</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -5782,6 +5799,7 @@
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5809,7 +5827,7 @@
 			</UnitCombatMods>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<BonusType>BONUS_WOOD</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -5877,6 +5895,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5908,6 +5927,10 @@
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>1</iConscription>
 			<iAsset>1</iAsset>
@@ -5969,6 +5992,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6069,6 +6093,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6079,7 +6104,7 @@
 			</UnitUpgrades>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<iCost>56</iCost>
+			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -6245,6 +6270,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6360,6 +6386,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6463,6 +6490,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6473,7 +6501,7 @@
 				<UnitType>UNIT_AXEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
 			</UnitUpgrades>
-			<iCost>56</iCost>
+			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -6573,6 +6601,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
@@ -6761,6 +6790,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
@@ -6768,7 +6798,7 @@
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
 			</UnitUpgrades>
-			<iCost>59</iCost>
+			<iCost>66</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -7258,6 +7288,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_STONE_SPEARMAN</UnitType>
@@ -7304,6 +7335,10 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WOOD</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<iProductonModifier>15</iProductonModifier>
@@ -7353,6 +7388,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_OBSIDIAN_SPEARMAN</UnitType>
@@ -7407,6 +7443,10 @@
 					<BonusType>BONUS_FLINT</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>2</iConscription>
 			<iAsset>1</iAsset>
@@ -7452,6 +7492,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
@@ -7477,7 +7518,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<BonusType>BONUS_OBSIDIAN</BonusType>
-			<iCost>56</iCost>
+			<iCost>63</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -7549,6 +7590,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_PIKEMAN</UnitType>
@@ -7607,6 +7649,10 @@
 					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>3</iConscription>
 			<iAsset>2</iAsset>
@@ -7702,7 +7748,7 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_BLADE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_H2H_LONG_POLEARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_SHORT_BLADE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_HEAVY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -7722,6 +7768,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
@@ -7808,6 +7855,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_MUSKETMAN</UnitType>
@@ -7892,6 +7940,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_COMPOSITE_BOWMAN</UnitType>
@@ -7911,6 +7960,20 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>95</iCost>
@@ -7987,6 +8050,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+			<TechTypes>
+				<PrereqTech>TECH_ARCHERY</PrereqTech>
+			</TechTypes>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<iCost>145</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -7997,6 +8063,28 @@
 			<iFirstStrikes>1</iFirstStrikes>
 			<iCityDefense>50</iCityDefense>
 			<iHillsDefense>25</iHillsDefense>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FEATHERS</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>1</iAsset>
 			<iPower>5</iPower>
 			<UnitMeshGroups>
@@ -8460,6 +8548,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <PrereqTech>TECH_TOOL_MAKING</PrereqTech>
 			<Description>TXT_KEY_UNIT_STONE_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_THROWER_PEDIA</Civilopedia>
 			<MapCategoryTypes>
@@ -8492,10 +8581,21 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SLINGER</UnitType>
@@ -8581,6 +8681,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitAIs>
 				<UnitAI>
@@ -8614,11 +8715,18 @@
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
 			<iWithdrawalProb>7</iWithdrawalProb>
 			<iEarlyWithdraw>70</iEarlyWithdraw>
-			<iCollateralDamage>2</iCollateralDamage>
-			<iCollateralDamageLimit>7</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityDefense>20</iCityDefense>
 			<iHillsDefense>20</iHillsDefense>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ROPE</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitCombatMods>
 				<UnitCombatMod>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
@@ -8679,6 +8787,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_JAVELINEER</UnitType>
@@ -8717,10 +8826,10 @@
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iChanceFirstStrikes>2</iChanceFirstStrikes>
-			<iWithdrawalProb>10</iWithdrawalProb>
+			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>60</iEarlyWithdraw>
 			<iCollateralDamage>3</iCollateralDamage>
-			<iCollateralDamageLimit>10</iCollateralDamageLimit>
+			<iCollateralDamageLimit>20</iCollateralDamageLimit>
 			<iCollateralDamageMaxUnits>1</iCollateralDamageMaxUnits>
 			<iCityAttack>5</iCityAttack>
 			<iCityDefense>15</iCityDefense>
@@ -8743,6 +8852,10 @@
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>15</iProductonModifier>
+                </BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iConscription>4</iConscription>
 			<iAsset>2</iAsset>
@@ -8790,6 +8903,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<UnitUpgrades>
@@ -8824,7 +8938,37 @@
 				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
 			</PrereqBonuses>
-			<iCost>125</iCost>
+			<iCost>130</iCost>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ALCOHOL</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FISH_OIL</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GHEE_OIL</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KEROSENE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OLIVE_OIL</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TAR</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHALE_OIL</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -8917,6 +9061,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
 				<UnitType>UNIT_SKIRMISHER</UnitType>
@@ -11648,6 +11793,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -11696,6 +11842,22 @@
 					<iUnitCombatMod>75</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_BLITZ</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
 			<iAsset>1</iAsset>
 			<iPower>6</iPower>
 			<UnitMeshGroups>
@@ -11750,6 +11912,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -11787,6 +11950,24 @@
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iPursuit>25</iPursuit>
 			<iEarlyWithdraw>30</iEarlyWithdraw>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FeatureAttacks>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -11855,6 +12036,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -11907,6 +12089,30 @@
 					<iUnitCombatMod>75</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_BLITZ</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<iAsset>1</iAsset>
 			<iPower>6</iPower>
 			<UnitMeshGroups>
@@ -12165,6 +12371,24 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_STONE</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OBSIDIAN</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HORSEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_HORSEMAN_PEDIA</Civilopedia>
@@ -12172,6 +12396,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
@@ -12206,7 +12431,7 @@
 				<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_HORSE</BonusType>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
@@ -12807,7 +13032,7 @@
 				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
-			<iCost>210</iCost>
+			<iCost>250</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>10</iCombat>
@@ -14135,44 +14360,30 @@
 					<iFeatureAttack>-25</iFeatureAttack>
 				</FeatureAttack>
 			</FeatureAttacks>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNIT_SPEARMAN</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNIT_HEAVY_PIKEMAN</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
 			<UnitAttackMods>
 				<UnitAttackMod>
 					<UnitType>UNIT_CANNON</UnitType>
 					<iModifier>50</iModifier>
 				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_SPEARMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
-				<UnitAttackMod>
-					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitAttackMod>
 			</UnitAttackMods>
-			<UnitDefenseMods>
-				<UnitDefenseMod>
-					<UnitType>UNIT_SPEARMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-				<UnitDefenseMod>
-					<UnitType>UNIT_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-				<UnitDefenseMod>
-					<UnitType>UNIT_HEAVY_PIKEMAN</UnitType>
-					<iModifier>50</iModifier>
-				</UnitDefenseMod>
-			</UnitDefenseMods>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
-					<iUnitCombatMod>50</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
 			<iAsset>4</iAsset>
 			<iPower>27</iPower>
 			<UnitMeshGroups>
@@ -14397,6 +14608,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ELEPHANT_RIDER</Type>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -14429,11 +14641,11 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
-				<UnitType>UNIT_NEANDERTHAL_ELEPHANT_RIDER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -14454,15 +14666,15 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_ELEPHANT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
+			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<iCost>95</iCost>
+			<iCost>240</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>25</iCityAttack>
@@ -14486,6 +14698,9 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
+            <iCollateralDamage>80</iCollateralDamage>
+            <iCollateralDamageLimit>50</iCollateralDamageLimit>
+            <iCollateralDamageMaxUnits>3</iCollateralDamageMaxUnits>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
 			<UnitMeshGroups>
@@ -14700,7 +14915,7 @@
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
-			<iCost>240</iCost>
+			<iCost>300</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -15050,6 +15265,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAMEL_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAMEL_RIDER_PEDIA</Civilopedia>
@@ -15057,6 +15278,7 @@
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
@@ -15086,7 +15308,7 @@
 				<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_CAMEL</BonusType>
-			<iCost>90</iCost>
+			<iCost>140</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>6</iCombat>
@@ -15118,6 +15340,12 @@
 			</UnitCombatMods>
 			<iAsset>2</iAsset>
 			<iPower>8</iPower>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>10</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -17886,7 +18114,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LOG_RAM</Type>
-			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_LOG_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -17946,7 +18173,7 @@
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
-			<iCost>82</iCost>
+			<iCost>85</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -17968,7 +18195,7 @@
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
-					<iProductonModifier>15</iProductonModifier>
+					<iProductonModifier>30</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
@@ -17991,7 +18218,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BATTERING_RAM</Type>
-			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_BATTERING_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -18091,7 +18317,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SIEGE_RAM</Type>
-			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_SIEGE_RAM</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -18194,7 +18419,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SIEGE_TOWER</Type>
-			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_SIEGE_TOWER</Capture>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -26315,10 +26539,21 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRIBAL_GUARDIAN</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
 			<Description>TXT_KEY_UNIT_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+            <DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -26334,32 +26569,33 @@
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
 			</SubCombatTypes>
-			<Domain>DOMAIN_IMMOBILE</Domain>
-			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
+			<Domain>DOMAIN_LAND</Domain>
+            <ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<UnitUpgrades>
-				<UnitType>UNIT_ENFORCERS</UnitType>
-				<UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
+				<UnitType>UNIT_PALACE_GUARD</UnitType>
+                <UnitType>UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</UnitType>
 			</UnitUpgrades>
-			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iCost>60</iCost>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCityDefense>200</iCityDefense>
+			<iCityDefense>250</iCityDefense>
 			<iAsset>1</iAsset>
 			<iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -26373,6 +26609,158 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_PALACE_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_PALACE_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_PALACE_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_KINGS_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>120</iCost>
+            <iBaseUpkeep>4</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>3</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>250</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_TRIBAL_GUARDIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_KINGS_GUARD</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <bUnlimitedException>1</bUnlimitedException>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Description>TXT_KEY_UNIT_KINGS_GUARD</Description>
+            <Civilopedia>TXT_KEY_UNIT_KINGS_GUARD_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_MILITARY</Advisor>
+            <Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
+            <PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_CITY_DEFENSE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_TWO_HANDED</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_CLUB</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <UnitUpgrades>
+                <UnitType>UNIT_EARLY_IMP_GUARD</UnitType>
+            </UnitUpgrades>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryHappiness>1</bMilitaryHappiness>
+            <bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryProduction>1</bMilitaryProduction>
+            <iCost>420</iCost>
+            <iBaseUpkeep>5</iBaseUpkeep>
+            <iMoves>1</iMoves>
+            <iCombat>4</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityDefense>250</iCityDefense>
+            <iAsset>1</iAsset>
+            <iPower>3</iPower>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_PALACE</BuildingType>
+            </PrereqAndBuildings>
+            <UnitMeshGroups>
+                <iGroupSize>3</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>3</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>2</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_ROME_PRAETORIAN</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_WATCHER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -26434,6 +26822,7 @@
 			<bNoCapture>1</bNoCapture>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bCounterSpy>1</bCounterSpy>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
@@ -26457,8 +26846,8 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
-			<iCost>18</iCost>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iCost>14</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iEnclose>2</iEnclose>
@@ -26587,8 +26976,8 @@
 					<bUnitCombatDefender>1</bUnitCombatDefender>
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
-			<iCost>40</iCost>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iCost>47</iCost>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iStealthCombatModifier>5</iStealthCombatModifier>
@@ -26722,7 +27111,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -26873,7 +27262,7 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<iCost>210</iCost>
-			<iBaseUpkeep>5</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>8</iCombat>
 			<iStealthStrikes>1</iStealthStrikes>
@@ -27008,7 +27397,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>6</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -27150,7 +27539,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>7</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -27288,7 +27677,7 @@
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<iBaseUpkeep>8</iBaseUpkeep>
+			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -27424,7 +27813,7 @@
 				<UnitType>UNIT_POLICE_APC</UnitType>
 			</UnitUpgrades>
 			<iCost>720</iCost>
-			<iBaseUpkeep>9</iBaseUpkeep>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -27747,7 +28136,7 @@
 				<UnitType>UNIT_SWAT_TEAM</UnitType>
 			</UnitUpgrades>
 			<iCost>975</iCost>
-			<iBaseUpkeep>11</iBaseUpkeep>
+			<iBaseUpkeep>10</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -28087,7 +28476,7 @@
 				</UnitCombatDefender>
 			</UnitCombatDefenders>
 			<iCost>1825</iCost>
-			<iBaseUpkeep>14</iBaseUpkeep>
+			<iBaseUpkeep>13</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iCombat>100</iCombat>
 			<iFirstStrikes>2</iFirstStrikes>
@@ -28212,7 +28601,7 @@
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>3580</iCost>
-			<iBaseUpkeep>15</iBaseUpkeep>
+			<iBaseUpkeep>14</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<VisibilityIntensityTypes>
 				<VisibilityIntensityType>
@@ -28477,7 +28866,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EXILE</Type>
-			<iInstanceCostModifier>50</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -28490,7 +28880,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_ROCK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_ROCK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -28571,7 +28960,7 @@
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
-			<iCost>17</iCost>
+			<iCost>13</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -28627,7 +29016,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_THIEF</Type>
-			<iInstanceCostModifier>50</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -28652,6 +29042,16 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<Description>TXT_KEY_UNIT_THIEF</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -28714,7 +29114,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<iCost>43</iCost>
+			<iCost>46</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -28810,7 +29210,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ROGUE</Type>
-			<iInstanceCostModifier>50</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -28838,6 +29239,16 @@
 			<Description>TXT_KEY_UNIT_ROGUE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_INFILTRATOR</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -28897,7 +29308,7 @@
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
-			<iCost>68</iCost>
+			<iCost>73</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -28994,7 +29405,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BURGLAR</Type>
-			<iInstanceCostModifier>50</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -29180,7 +29592,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CUTTHROAT</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -29392,7 +29805,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SCOUNDREL</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -29608,7 +30022,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GUNFIGHTER</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -29821,7 +30236,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_THUG</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -30244,7 +30660,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ROBBER</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -30445,7 +30862,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BIKER_GANG</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -30649,7 +31067,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STREET_GANG</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -30847,7 +31266,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HACKER</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -31062,7 +31482,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TECHNARCHIST</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CRIMINAL</Combat>
 			<SubCombatTypes>
@@ -31346,6 +31767,20 @@
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
 			<iCargo>1</iCargo>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_COMMANDO</PromotionType>
@@ -31680,6 +32115,24 @@
 			<iCaptureProbabilityModifier>5</iCaptureProbabilityModifier>
 			<SpecialCargo>SPECIALUNIT_CAPTIVE</SpecialCargo>
 			<iCargo>2</iCargo>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COPPER_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BRONZE_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_IRON_WARES</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_COMMANDO</PromotionType>
@@ -32129,7 +32582,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_AMBUSHER</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -32158,6 +32612,16 @@
 			<Description>TXT_KEY_UNIT_AMBUSHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_AMBUSHER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FLINT</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRIME_TIMBER</BonusType>
+                    <iProductonModifier>5</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -32184,6 +32648,7 @@
 			<bIgnoreZoneofControl>1</bIgnoreZoneofControl>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoNonOwnedCityEntry>1</bNoNonOwnedCityEntry>
 			<bSabotage>1</bSabotage>
 			<bStealPlans>1</bStealPlans>
@@ -32216,7 +32681,7 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
-			<iCost>92</iCost>
+			<iCost>97</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<Invisible>INVISIBLE_CAMOUFLAGE</Invisible>
@@ -32282,7 +32747,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STALKERS</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -32355,6 +32821,7 @@
 			</InvisibilityIntensityTypes>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bSabotage>1</bSabotage>
 			<bDestroy>1</bDestroy>
 			<bStealPlans>1</bStealPlans>
@@ -32436,7 +32903,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ASSASSIN</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -32651,7 +33119,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SHARPSHOOTER</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -32824,7 +33292,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SNIPER</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -33186,7 +33654,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MSNIPER</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -33346,7 +33814,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SPECIAL_FORCES</Type>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -33541,7 +34010,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HTSNIPER</Type>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -33705,8 +34174,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LAWYER</Type>
-			<iMaxPlayerInstances>2</iMaxPlayerInstances>
-			<iInstanceCostModifier>50</iInstanceCostModifier>
+			<iMaxPlayerInstances>5</iMaxPlayerInstances>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ADMINISTRATOR</Combat>
 			<SubCombatTypes>
@@ -33839,7 +34308,7 @@
 		<UnitInfo>
 			<Type>UNIT_JUDGE</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>20</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_ADMINISTRATOR</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
@@ -34046,7 +34515,7 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>300</iWorkRate>
+			<iWorkRate>150</iWorkRate>
 			<iCombat>10</iCombat>
 			<iFirstStrikes>1</iFirstStrikes>
 			<iAsset>6</iAsset>
@@ -34169,7 +34638,7 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>350</iWorkRate>
+			<iWorkRate>175</iWorkRate>
 			<iCombat>15</iCombat>
 			<iAsset>12</iAsset>
 			<iPower>12</iPower>
@@ -34233,8 +34702,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -34254,16 +34721,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -34442,7 +34899,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_ARISTOCRACY</PrereqTech>
-			<iCost>200</iCost>
+			<iCost>270</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAsset>1</iAsset>
@@ -34995,7 +35452,7 @@
 			<iCost>215</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iCombat>10</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35064,7 +35521,7 @@
 			<Type>UNIT_WARLORDII</Type>
 			<iMaxPlayerInstances>2</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDIIS</Capture>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -35118,7 +35575,7 @@
 			<iCost>335</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>125</iWorkRate>
+			<iWorkRate>62</iWorkRate>
 			<iCombat>15</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35189,7 +35646,7 @@
 			<Type>UNIT_WARLORDIII</Type>
 			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -35245,7 +35702,7 @@
 			<iCost>425</iCost>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>150</iWorkRate>
+			<iWorkRate>75</iWorkRate>
 			<iCombat>25</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35328,7 +35785,7 @@
 			<Type>UNIT_WARLORDIV</Type>
 			<iMaxPlayerInstances>4</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDIVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -35380,7 +35837,7 @@
 			<iCost>630</iCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>175</iWorkRate>
+			<iWorkRate>85</iWorkRate>
 			<iCombat>40</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -35463,7 +35920,7 @@
 			<Type>UNIT_WARLORDV</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDVS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -35764,7 +36221,7 @@
 			<Type>UNIT_WARLORDVI</Type>
 			<iMaxPlayerInstances>6</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDVIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -35882,7 +36339,7 @@
 			<Type>UNIT_WARLORDVII</Type>
 			<iMaxPlayerInstances>7</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDVIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -36000,7 +36457,7 @@
 			<Type>UNIT_WARLORDVIII</Type>
 			<iMaxPlayerInstances>8</iMaxPlayerInstances>
 			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Capture>UNIT_WARLORDVIIIS</Capture>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
@@ -37469,7 +37926,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
 				<BuildingType>BUILDING_IRONWORKS</BuildingType>
-				<BuildingType>BUILDING_PONT_DU_GARD</BuildingType>
 				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
 				<BuildingType>BUILDING_HQ_BULLSEYE</BuildingType>
@@ -37857,7 +38313,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>25</iAsset>
 			<UnitMeshGroups>
@@ -37998,7 +38454,7 @@
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CAPTAIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_COMMANDER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_COMMODORE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -38013,15 +38469,11 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_GREAT_ADMIRAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GREAT_ADMIRAL</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_ADMIRALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GREAT_ADMIRAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
@@ -38031,6 +38483,12 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
+            <UnitUpgrades>
+                <UnitType>UNIT_MASTER_SAILOR_WAR_CANOE</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_KAYAK</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_UBOAT</UnitType>
+                <UnitType>UNIT_MASTER_SAILOR_EARLY_CARRIER</UnitType>
+            </UnitUpgrades>
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_MASCOT</BuildingType>
@@ -38047,7 +38505,7 @@
 				</Flavor>
 			</Flavors>
 			<iCost>-1</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>25</iAsset>
 			<iPower>75</iPower>
@@ -38247,7 +38705,11 @@
 			</Buildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_CHASER</UnitType>
+<!--				<UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
 			</UnitUpgrades>
+<!--            <SupersedingUnits>-->
+<!--                <UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
+<!--            </SupersedingUnits>-->
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -38455,6 +38917,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38468,7 +38931,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -38478,18 +38940,12 @@
 			<Description>TXT_KEY_UNIT_SHEPHERD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>2</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -38526,11 +38982,10 @@
 				<BonusType>BONUS_HORSE</BonusType>
 				<BonusType>BONUS_LLAMA</BonusType>
 			</PrereqBonuses>
-			<iCost>65</iCost>
+			<iCost>70</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -38571,6 +39026,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38593,9 +39049,9 @@
 			<Description>TXT_KEY_UNIT_CARTWRIGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARTWRIGHT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -38638,7 +39094,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>2</iAsset>
 			<iPower>3</iPower>
@@ -38660,6 +39115,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38673,7 +39129,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -38683,18 +39138,12 @@
 			<Description>TXT_KEY_UNIT_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>5</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -38725,7 +39174,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>3</iAsset>
 			<iPower>4</iPower>
@@ -38763,6 +39211,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38785,7 +39234,6 @@
 			<Description>TXT_KEY_UNIT_SIEGE_ENGINEER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SIEGE_ENGINEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>5</iNumHealSupport>
@@ -38814,7 +39262,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>4</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>3</iAsset>
 			<iPower>4</iPower>
@@ -38836,6 +39283,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -38855,9 +39303,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -38867,7 +39313,6 @@
 			<Description>TXT_KEY_UNIT_FIELD_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_FIELD_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -38875,11 +39320,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -38908,7 +39348,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -38948,6 +39387,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -38971,7 +39411,6 @@
 			<Description>TXT_KEY_UNIT_GEAR_MECHANIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_GEAR_MECHANIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
@@ -39009,7 +39448,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>4</iAsset>
 			<iPower>7</iPower>
@@ -39031,6 +39469,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOUNTED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -39052,9 +39491,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -39064,7 +39501,6 @@
 			<Description>TXT_KEY_UNIT_MEDICAL_VET</Description>
 			<Civilopedia>TXT_KEY_UNIT_MEDICAL_VET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>7</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -39072,11 +39508,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
-					<iHeal>8</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<UnitUpgrades>
@@ -39109,7 +39540,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>10</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39149,6 +39579,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39174,7 +39605,6 @@
 			<Description>TXT_KEY_UNIT_MACHINIST</Description>
 			<Civilopedia>TXT_KEY_UNIT_MACHINIST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>7</iNumHealSupport>
@@ -39227,7 +39657,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
@@ -39249,6 +39678,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39274,7 +39704,6 @@
 			<Description>TXT_KEY_UNIT_MECHANIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_MECHANIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
@@ -39321,7 +39750,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>6</iAsset>
 			<iPower>15</iPower>
@@ -39343,6 +39771,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39368,7 +39797,6 @@
 			<Description>TXT_KEY_UNIT_AVIATION_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_AVIATION_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>6</iNumHealSupport>
@@ -39418,7 +39846,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>6</iAsset>
 			<iPower>10</iPower>
@@ -39440,6 +39867,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -39468,7 +39896,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>9</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -39524,7 +39951,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>25</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39548,6 +39974,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39573,7 +40000,6 @@
 			<Description>TXT_KEY_UNIT_FLIGHT_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLIGHT_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>9</iNumHealSupport>
@@ -39623,7 +40049,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>8</iAsset>
 			<iPower>15</iPower>
@@ -39645,6 +40070,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -39674,7 +40100,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>10</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -39735,7 +40160,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>30</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -39759,6 +40183,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39784,7 +40209,6 @@
 			<Description>TXT_KEY_UNIT_JET_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_JET_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -39834,7 +40258,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>20</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>10</iAsset>
 			<iPower>20</iPower>
@@ -39856,6 +40279,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -39878,7 +40302,6 @@
 			<Description>TXT_KEY_UNIT_PROGRAMMER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PROGRAMMER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -39916,7 +40339,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>10</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
@@ -39947,6 +40369,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -39977,7 +40400,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>11</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40035,7 +40457,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>5</iMoves>
-			<iCombat>40</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -40059,6 +40480,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40084,7 +40506,6 @@
 			<Description>TXT_KEY_UNIT_ASTRONAUTIC_TECHNICIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASTRONAUTIC_TECHNICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -40145,7 +40566,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>25</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>12</iAsset>
 			<iPower>25</iPower>
@@ -40167,6 +40587,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_GUN</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40189,7 +40610,6 @@
 			<Description>TXT_KEY_UNIT_SOFTWARE_DEVELOPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOFTWARE_DEVELOPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -40240,7 +40660,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>15</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>14</iAsset>
 			<iPower>15</iPower>
@@ -40271,6 +40690,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HELICOPTER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_ONLY</SubCombatType>
@@ -40301,7 +40721,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>12</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40367,7 +40786,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>60</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -40391,6 +40809,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HITECH</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -40417,7 +40836,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<iNumHealSupport>12</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -40448,7 +40866,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>20</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iAsset>19</iAsset>
 			<iPower>50</iPower>
@@ -40478,6 +40895,7 @@
 			<Type>UNIT_NANITE_REPAIR_CLOUD</Type>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -40500,7 +40918,6 @@
 			<Description>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NANITE_REPAIR_CLOUD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>12</iNumHealSupport>
@@ -40601,7 +41018,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>17</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>140</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>85</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -40640,6 +41056,7 @@
 			<Type>UNIT_ANIMA_REPAIR_CLOUD</Type>
 			<Combat>UNITCOMBAT_NANITE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SWARM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -40662,7 +41079,6 @@
 			<Description>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANIMA_REPAIR_CLOUD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iNumHealSupport>14</iNumHealSupport>
@@ -40756,7 +41172,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>19</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iCombat>160</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>85</iWithdrawalProb>
 			<iEarlyWithdraw>75</iEarlyWithdraw>
@@ -40796,6 +41211,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -40809,7 +41225,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -40831,12 +41246,9 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WILD_HERBS_GATHERER</BuildingType>
-				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEALER</UnitType>
@@ -40846,19 +41258,13 @@
 			<iCost>18</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>1</iCombat>
 			<iNumHealSupport>3</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>3</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>1</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -40902,6 +41308,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -40915,7 +41322,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -40937,8 +41343,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
@@ -40956,20 +41360,14 @@
 			</SupersedingUnits>
 			<iCost>45</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>5</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>3</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41009,6 +41407,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41022,7 +41421,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41044,8 +41442,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<PrereqTech>TECH_FOLK_MEDICINE</PrereqTech>
 			<PrereqBonuses>
 				<BonusType>BONUS_ALCOHOL</BonusType>
@@ -41063,20 +41459,14 @@
 			</UnitUpgrades>
 			<iCost>138</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>4</iBaseUpkeep>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>5</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>7</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41116,6 +41506,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41129,7 +41520,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41151,8 +41541,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>
 			<PrereqBonuses>
@@ -41168,20 +41556,14 @@
 			</UnitUpgrades>
 			<iCost>220</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>5</iBaseUpkeep>
+			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>5</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>6</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -41221,6 +41603,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41234,7 +41617,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41256,8 +41638,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_PLAGUE_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
@@ -41271,9 +41651,8 @@
 			</UnitUpgrades>
 			<iCost>310</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>6</iBaseUpkeep>
+			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>7</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>7</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41281,11 +41660,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>13</iHeal>
 					<iAdjacentHeal>1</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>9</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>6</iAsset>
@@ -41324,6 +41698,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -41337,7 +41712,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41359,8 +41733,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
@@ -41373,9 +41745,8 @@
 			</UnitUpgrades>
 			<iCost>480</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>7</iBaseUpkeep>
+			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>9</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iNumHealSupport>8</iNumHealSupport>
 			<HealUnitCombatTypes>
@@ -41383,11 +41754,6 @@
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>15</iHeal>
 					<iAdjacentHeal>2</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>11</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>7</iAsset>
@@ -41426,6 +41792,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -41441,7 +41808,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -41463,8 +41829,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BonusType>BONUS_PHARMACEUTICALS</BonusType>
 			<PrereqOrBuildings>
@@ -41477,21 +41841,15 @@
 			</UnitUpgrades>
 			<iCost>595</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>8</iBaseUpkeep>
+			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iXPValueDefense>2</iXPValueDefense>
-			<iCombat>10</iCombat>
 			<iNumHealSupport>9</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>17</iHeal>
 					<iAdjacentHeal>3</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>13</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
 			<iAsset>8</iAsset>
@@ -41530,6 +41888,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -41591,17 +41950,14 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_AMBULANCE_II</UnitType>
 			</UnitUpgrades>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<iCost>750</iCost>
-			<iBaseUpkeep>9</iBaseUpkeep>
+			<iBaseUpkeep>8</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>15</iCombat>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>10</iNumHealSupport>
@@ -41656,6 +42012,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -41715,19 +42072,16 @@
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+				<UnitType>UNIT_EARLY_MEDIVAC</UnitType>
 			</UnitUpgrades>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<iCost>1025</iCost>
-			<iBaseUpkeep>10</iBaseUpkeep>
+			<iBaseUpkeep>9</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>25</iCombat>
 			<iWithdrawalProb>15</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>11</iNumHealSupport>
@@ -41782,6 +42136,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -41821,8 +42176,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
 			<BonusType>BONUS_HELICOPTERS</BonusType>
 			<PrereqBonuses>
@@ -41852,7 +42205,6 @@
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>7</iDropRange>
-			<iCombat>40</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -41908,6 +42260,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -41947,8 +42300,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_VERTICAL_FLIGHT</PrereqTech>
@@ -41978,7 +42329,6 @@
 			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iDropRange>10</iDropRange>
-			<iCombat>60</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -42034,6 +42384,7 @@
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
@@ -42087,16 +42438,16 @@
 				<BuildingType>BUILDING_MEGATOWER_MEDICAL_LEVEL</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bNoCapture>1</bNoCapture>
+            <UnitUpgrades>
+                <UnitType>UNIT_MEDEVAC_DROPSHIP</UnitType>
+            </UnitUpgrades>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<iCost>2600</iCost>
-			<iBaseUpkeep>13</iBaseUpkeep>
+			<iBaseUpkeep>12</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>70</iCombat>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
 			<iNumHealSupport>14</iNumHealSupport>
@@ -42148,6 +42499,7 @@
 			<Special>SPECIALUNIT_VTOL</Special>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HELICOPTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -42188,8 +42540,6 @@
 			<bMechanized>1</bMechanized>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_REGENERATIVE_MEDICINE</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SKYROADS</PrereqTech>
@@ -42244,10 +42594,9 @@
 			</TrainCondition>
 			<iCost>3900</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
-			<iBaseUpkeep>15</iBaseUpkeep>
+			<iBaseUpkeep>14</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iDropRange>20</iDropRange>
-			<iCombat>90</iCombat>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>30</iWithdrawalProb>
 			<iEarlyWithdraw>100</iEarlyWithdraw>
@@ -42867,7 +43216,10 @@
 			<Description>TXT_KEY_UNIT_UNMANNED_TRIKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_TRIKE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
+			<bBarbCoExist>1</bBarbCoExist>
+			<bNoBadGoodies>1</bNoBadGoodies>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bPassage>1</bPassage>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -42881,6 +43233,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
 			<BonusType>BONUS_TIRES</BonusType>
 			<PrereqBonuses>
@@ -43465,7 +43818,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseDiscover>1000</iBaseDiscover>
+			<iBaseDiscover>100000</iBaseDiscover>
 			<iDiscoverMultiplier>2</iDiscoverMultiplier>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -43656,6 +44009,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -43670,7 +44024,7 @@
 			</UnitUpgrades>
 			<iCost>16</iCost>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<iBaseUpkeep>2</iBaseUpkeep>
+			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<Buildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
@@ -43688,7 +44042,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -43699,24 +44053,44 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>2</iReduceAnarchyLength>
+							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>12</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>9</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>6</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>3</iReduceAnarchyLength>
+							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -43727,7 +44101,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>1</iAmountPerTurn>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
@@ -43788,7 +44162,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_LINGUISTICS</PrereqTech>
 			<iCost>151</iCost>
-			<iBaseUpkeep>3</iBaseUpkeep>
+			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
@@ -43810,7 +44184,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -43821,24 +44195,44 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>3</iReduceAnarchyLength>
+							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>20</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>15</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>10</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>4</iReduceAnarchyLength>
+							<iReduceAnarchyLength>5</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -43849,7 +44243,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
@@ -43920,7 +44314,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -43931,24 +44325,44 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>4</iReduceAnarchyLength>
+							<iReduceAnarchyLength>5</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>24</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>18</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>12</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>5</iReduceAnarchyLength>
+							<iReduceAnarchyLength>6</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -43959,7 +44373,7 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
@@ -44026,7 +44440,7 @@
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
-							<iChance>80</iChance>
+							<iChance>70</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -44037,24 +44451,44 @@
 									</Adapt>
 								</iCommerce>
 							</Commerces>
-							<iReduceAnarchyLength>6</iReduceAnarchyLength>
+							<iReduceAnarchyLength>7</iReduceAnarchyLength>
 							<bKill>1</bKill>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
-							<iChance>20</iChance>
+							<iChance>30</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
 								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_DEFAULT</ID>
-										<Constant>16</Constant>
-									</Adapt>
+									<If>
+										<Has>
+											<GOMType>GOM_PROMOTION</GOMType>
+											<ID>PROMOTION_ELITE_ARTIST</ID>
+										</Has>
+										<Adapt>
+											<ID>ADAPT_DEFAULT</ID>
+											<Constant>32</Constant>
+										</Adapt>
+										<If>
+											<Has>
+												<GOMType>GOM_PROMOTION</GOMType>
+												<ID>PROMOTION_VERY_EXPERIENCED_ARTIST</ID>
+											</Has>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>24</Constant>
+											</Adapt>
+											<Adapt>
+												<ID>ADAPT_DEFAULT</ID>
+												<Constant>16</Constant>
+											</Adapt>
+										</If>
+									</If>
 								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
-							<iReduceAnarchyLength>7</iReduceAnarchyLength>
+							<iReduceAnarchyLength>8</iReduceAnarchyLength>
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
@@ -44065,13 +44499,12 @@
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_SAME_PLOT</RelationType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EARLY_FOOD_MERCHANT_C2C</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_EARLY_FOOD_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44090,6 +44523,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -44103,7 +44537,221 @@
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
-			<UnitUpgrades>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHALE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHRIMP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUREX</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LOBSTER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FISH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CRAB</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CLAM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WALRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POULTRY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MUSHROOMS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GRAPES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_VANILLA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PRICKLY_PEAR</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEYOTE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KAVA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCOA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OLIVES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POMEGRANATE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PISTACHIO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPAYA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MANGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LEMONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUAVAS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_FIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DATES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCONUT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BANANA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_APPLE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_ALMONDS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_WHEAT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SQUASH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RICE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PUMPKIN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_POTATOES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MELONS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CORN</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BARLEY</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BISON</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DEER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_GUINEA_PIGS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_KANGAROO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_MAMMOTH</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RABBIT</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_BEAVERS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PIG</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SHEEP</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COW</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <UnitUpgrades>
 				<UnitType>UNIT_FOOD_CARAVAN</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -44135,10 +44783,10 @@
 				</Flavor>
 			</Flavors>
 			<iAIWeight>10</iAIWeight>
-			<iCost>47</iCost>
+			<iCost>59</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iBaseFoodChange>30</iBaseFoodChange>
+			<iBaseFoodChange>40</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -44157,7 +44805,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FOOD_CARAVAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_FOOD_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44169,7 +44816,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ASSISTED_MULE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -44189,6 +44835,7 @@
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoCapture>1</bNoCapture>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
 			<UnitUpgrades>
@@ -44229,7 +44876,7 @@
 			<iCost>115</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iBaseFoodChange>72</iBaseFoodChange>
+			<iBaseFoodChange>82</iBaseFoodChange>
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
@@ -44248,7 +44895,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FOOD_SUPPLY_TRAIN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_FOOD_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44260,7 +44906,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ASSISTED_MULE</SubCombatType>
@@ -44331,7 +44976,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FOOD_FREIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_FOOD_FREIGHT</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44412,7 +45056,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_EARLY_MERCHANT_C2C</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_EARLY_MERCHANT_C2C</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44430,10 +45073,85 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
+            <DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLY_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_TRADE_CARAVAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -44473,7 +45191,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>47</iCost>
+			<iCost>59</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iBaseTrade>15</iBaseTrade>
@@ -44515,7 +45233,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_TRADE_CARAVAN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_TRADE_CARAVAN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44527,7 +45244,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ASSISTED_MULE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -44546,6 +45262,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoNonTypeProdMods>1</bNoNonTypeProdMods>
 			<bOnlyDefensive>1</bOnlyDefensive>
+            <bMilitaryTrade>1</bMilitaryTrade>
 			<bNoCapture>1</bNoCapture>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -44591,6 +45308,80 @@
 			<iCombat>2</iCombat>
 			<iAnimalCombat>100</iAnimalCombat>
 			<iAsset>1</iAsset>
+            <BonusProductionModifiers>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HENNA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_INDIGO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PAPYRUS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_OPIUM</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TOBACCO</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PARROTS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_COCA</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_PEARLS</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_AMBER</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_RUBIES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DIAMOND</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_SAPPHIRES</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_JADE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_TURQUOISE</BonusType>
+                    <iProductonModifier>1</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_HORSE</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_DONKEY</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_LLAMA</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+                <BonusProductionModifier>
+                    <BonusType>BONUS_CAMEL</BonusType>
+                    <iProductonModifier>2</iProductonModifier>
+                </BonusProductionModifier>
+            </BonusProductionModifiers>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -44626,7 +45417,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUPPLY_TRAIN</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_SUPPLY_TRAIN</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44639,7 +45429,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_STAFF</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ASSISTED_MULE</SubCombatType>
@@ -44731,7 +45520,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_FREIGHT</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
 			<Capture>UNIT_FREIGHT</Capture>
 			<Combat>UNITCOMBAT_TRADE</Combat>
 			<SubCombatTypes>
@@ -44869,7 +45657,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<FreePromotions>
 				<FreePromotion>
@@ -44884,7 +45672,11 @@
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_TRACKER</UnitType>
+<!--				<UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
 			</UnitUpgrades>
+<!--            <SupersedingUnits>-->
+<!--                <UnitType>UNIT_NEANDERTHAL_MASTER_CHASER</UnitType>-->
+<!--            </SupersedingUnits>-->
 			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -44961,7 +45753,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -44992,16 +45783,20 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_HUNTER</UnitType>
+<!--				<UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>-->
 			</UnitUpgrades>
+<!--            <SupersedingUnits>-->
+<!--                <UnitType>UNIT_MASTER_NEANDERTHAL_TRACKER</UnitType>-->
+<!--            </SupersedingUnits>-->
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -45071,7 +45866,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_JAVELIN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -45089,7 +45883,7 @@
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -45110,8 +45904,12 @@
 			<iMoves>3</iMoves>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
+<!--				<UnitType>UNIT_MASTER_NEANDERTHAL_HUNTER</UnitType>-->
 			</UnitUpgrades>
-			<iCombat>5</iCombat>
+<!--            <SupersedingUnits>-->
+<!--                <UnitType>UNIT_NEANDERTHAL_MASTER_HUNTER</UnitType>-->
+<!--            </SupersedingUnits>-->
+			<iCombat>4</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -45201,7 +45999,7 @@
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -45220,7 +46018,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>6</iCombat>
+			<iCombat>5</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
@@ -45313,7 +46111,7 @@
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -45332,7 +46130,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>8</iCombat>
+			<iCombat>7</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>80</iPursuit>
@@ -45429,7 +46227,7 @@
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -45448,7 +46246,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iCombat>11</iCombat>
+			<iCombat>10</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
@@ -45541,7 +46339,7 @@
 			</MapCategoryTypes>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_HUNTER</UnitAIType>
@@ -45560,7 +46358,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iCombat>16</iCombat>
+			<iCombat>15</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>40</iPursuit>
@@ -45699,7 +46497,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>9</Constant>
+										<Constant>55</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46155,13 +46953,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>8</Constant>
+										<Constant>16</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>2</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46176,13 +46974,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46197,13 +46995,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46218,13 +47016,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>4</Constant>
+										<Constant>8</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46246,7 +47044,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>3</Constant>
+										<Constant>6</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46265,7 +47063,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46284,7 +47082,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46303,7 +47101,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46322,7 +47120,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46341,7 +47139,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>24</Constant>
+										<Constant>48</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46360,7 +47158,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>6</Constant>
+										<Constant>12</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46379,7 +47177,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>12</Constant>
+										<Constant>24</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46398,7 +47196,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>24</Constant>
+										<Constant>48</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46569,13 +47367,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>40</Constant>
+										<Constant>80</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>10</Constant>
+										<Constant>20</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46590,13 +47388,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46611,13 +47409,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46632,13 +47430,13 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>50</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>15</Constant>
+										<Constant>30</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46752,7 +47550,7 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>90</iWorkRate>
+			<iWorkRate>45</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -46777,7 +47575,7 @@
 								<iYield>
 									<Adapt>
 										<ID>ADAPT_DEFAULT</ID>
-										<Constant>25</Constant>
+										<Constant>100</Constant>
 									</Adapt>
 								</iYield>
 							</Yields>
@@ -46788,8 +47586,8 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HASHISHIN</Type>
-			<iMaxPlayerInstances>3</iMaxPlayerInstances>
-			<iInstanceCostModifier>30</iInstanceCostModifier>
+            <iMaxPlayerInstances>5</iMaxPlayerInstances>
+            <iInstanceCostModifier>5</iInstanceCostModifier>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_STRIKE_TEAM</Combat>
 			<SubCombatTypes>
@@ -47026,8 +47824,6 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_ANIMALS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -47061,16 +47857,6 @@
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>10</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</UnitCombatType>
-					<iHeal>6</iHeal>
-					<iAdjacentHeal>0</iAdjacentHeal>
-				</HealUnitCombatType>
-				<HealUnitCombatType>
-					<UnitCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</UnitCombatType>
-					<iHeal>4</iHeal>
 					<iAdjacentHeal>0</iAdjacentHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
@@ -47307,7 +48093,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_LOKI</Type>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47508,7 +48294,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_GLADIATOR</Type>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>

@@ -105,7 +105,6 @@
     <Compile Include="Contrib\RandomNameUtils.py" />
     <Compile Include="Contrib\ReminderEventManager.py" />
     <Compile Include="Contrib\RevDCM.py" />
-    <Compile Include="Contrib\RevDCMReligionControl.py" />
     <Compile Include="Contrib\Roman.py" />
     <Compile Include="Contrib\SdToolKit.py" />
     <Compile Include="Contrib\Sevopedia\SevoPediaReligion.py" />

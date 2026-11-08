@@ -7,6 +7,8 @@
 
 // The following #defines should not be moddable...
 
+#define CVARMY_BREAKSAVE
+
 #define MOVE_IGNORE_DANGER								(0x00000001)
 #define MOVE_SAFE_TERRITORY								(0x00000002)
 #define MOVE_NO_ENEMY_TERRITORY							(0x00000004)

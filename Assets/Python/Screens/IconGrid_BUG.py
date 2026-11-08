@@ -171,7 +171,7 @@ class IconGrid_BUG:
 		self.yStart = iY
 
 
-	def getPrefferedWidth(self):
+	def getPreferedWidth(self):
 		self.calculateLayout()
 
 		prefferedWidth = self.scrollArrowSize + self.scrollSpace + self.minColSpace * (len(self.columns) - 1)
@@ -195,7 +195,7 @@ class IconGrid_BUG:
 
 
 
-	def getPrefferedHeight(self):
+	def getPreferedHeight(self):
 		self.calculateLayout()
 		initHeight = self.totalRowHeight * self.numRows + self.minRowSpace * (self.numRows - 1)
 
@@ -228,18 +228,17 @@ class IconGrid_BUG:
 		self.addControls()
 
 	def hideGrid(self):
-		self.widgetCount = 0
 		self.hideControls()
 
 
 	def appendRow(self, sRowHeader, sMessage, iFont=3):
 		self.data.append(RowData(sRowHeader, sMessage, iFont, len(self.columns)))
 
- 	def addIcon(self, iRowIndex, iColumnIndex, sImage, iSize, widgetType, iData1, iData2=-1, bEnabled=True):
- 		self.data[iRowIndex].addIcon(iColumnIndex, sImage, iSize, widgetType, iData1, iData2, bEnabled)
+	def addIcon(self, iRowIndex, iColumnIndex, sImage, iSize, widgetType, iData1, iData2=-1, bEnabled=True):
+		self.data[iRowIndex].addIcon(iColumnIndex, sImage, iSize, widgetType, iData1, iData2, bEnabled)
 
- 	def setText(self, iRowIndex, iColumnIndex, sText, iFont=3):
- 		self.data[iRowIndex].setText(iColumnIndex, sText, iFont)
+	def setText(self, iRowIndex, iColumnIndex, sText, iFont=3):
+		self.data[iRowIndex].setText(iColumnIndex, sText, iFont)
 
 	def addStackedBar(self, iRowIndex, iColumnIndex, fValue, sColor, sText, iFont=3):
 #		BugUtil.debug("addStackedbar %i %i %s %s %i" % (iColumnIndex, fValue, sColor, sText, iFont))
@@ -271,7 +270,7 @@ class IconGrid_BUG:
 		self.refresh()
 
 	def scrollBottom(self):
-		self.scrollPosition = len(self.data) - self.numRows
+		self.scrollPosition = max(0, len(self.data) - self.numRows)
 		self.refresh()
 
 	def handleInput(self, inputClass):
@@ -483,7 +482,6 @@ class IconGrid_BUG:
 #						BugUtil.debug("Stacked Bar value %i" % (stackedbarData.value))
 						szBar_ID = self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB"
 						if stackedbarData.value > 0:
-							szBar_ID = self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB"
 							self.screen.addStackedBarGFC(szBar_ID,
 														 currentX + 6, textY + iSBarOffset_Y, width, 25,
 														 InfoBarTypes.NUM_INFOBAR_TYPES, WidgetTypes.WIDGET_GENERAL, -1, -1 )
@@ -556,7 +554,7 @@ class IconGrid_BUG:
 				self.firstRowY += 5
 				availableHeight -= 5
 		else:
-			self.colCroupHeight = 0
+			self.colGroupHeight = 0
 			self.headerY = self.yStart
 			self.firstRowY = self.headerY + self.headerHeight
 			availableHeight = self.height - self.headerHeight
@@ -572,15 +570,13 @@ class IconGrid_BUG:
 			self.totalRowHeight += self.rowBorderWidth * 2
 
 		self.numRows = (availableHeight + self.minRowSpace) / (self.totalRowHeight + self.minRowSpace)
-		self.rowSpace = (availableHeight - self.numRows * self.totalRowHeight) / (self.numRows - 1)
+		self.rowSpace = (availableHeight - self.numRows * self.totalRowHeight) / max(1, self.numRows - 1)
 
 	def addControls(self):
 		self.addGroups()
 		self.addHeader()
 
 		# add the rows
-		self.leaderHeadName = self.getNextWidgetName()
-		self.multiListName = self.getNextWidgetName()
 		self.rowName = self.getNextWidgetName()
 
 		for rowIndex in range(self.numRows):
@@ -781,20 +777,9 @@ class IconGrid_BUG:
 		self.hideGroups()
 		self.hideHeader()
 
-		# add the rows
-		self.leaderHeadName = self.getNextWidgetName()
-		self.multiListName = self.getNextWidgetName()
-		self.rowName = self.getNextWidgetName()
-
 		for rowIndex in range(self.numRows):
 			self.hideRow(rowIndex)
 
-		self.scrollUpArrow = self.getNextWidgetName()
-		self.scrollDownArrow = self.getNextWidgetName()
-		self.pageUpArrow = self.getNextWidgetName()
-		self.pageDownArrow = self.getNextWidgetName()
-		self.scrollTopArrow = self.getNextWidgetName()
-		self.scrollBottomArrow = self.getNextWidgetName()
 		self.screen.deleteWidget(self.scrollUpArrow)
 		self.screen.deleteWidget(self.scrollDownArrow)
 		self.screen.deleteWidget(self.pageUpArrow)
@@ -803,14 +788,11 @@ class IconGrid_BUG:
 		self.screen.deleteWidget(self.scrollBottomArrow)
 
 	def hideGroups(self):
-		self.groupPanelName = self.getNextWidgetName()
-
 		for index in range(len(self.columnGroups)):
 			if (self.columnGroups[index].label != ""):
 				self.screen.deleteWidget(self.groupPanelName + str(index))
 
 	def hideHeader(self):
-		self.headerName = self.getNextWidgetName()
 		self.screen.deleteWidget(self.headerName)
 
 	def hideRow(self, rowIndex):
@@ -854,27 +836,45 @@ class IconGrid_BUG:
 
 	def deleteAllWidgets(self):
 		i = self.widgetCount - 1
-		while (i >= 0):
+		while i >= 0:
 			self.widgetCount = i
 			self.screen.deleteWidget(self.getNextWidgetName())
 			i -= 1
 
 		self.widgetCount = 0
 
-		self.screen.hide(self.scrollDownArrow)
+		self.screen.hide(self.scrollUpArrow)
 		self.screen.hide(self.scrollDownArrow)
 
 		maxIndex = min(self.numRows, len(self.data))
 		for rowIndex in range(maxIndex):
 			self.screen.hide(self.rowName + str(rowIndex) + "name")
-
 			self.screen.deleteWidget(self.rowName + str(rowIndex))
+
 			startIndex = 0
 			for groupIndex in range(len(self.columnGroups)):
 				colGroup = self.columnGroups[groupIndex]
-				if (colGroup.label != ""):
-					currentX += self.groupBorder
-
 				for offset in range(colGroup.length):
 					if (self.columns[startIndex + offset] == GRID_ICON_COLUMN):
 						self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+					elif (self.columns[startIndex + offset] == GRID_MULTI_LIST_COLUMN):
+						self.screen.deleteWidget(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+					elif (self.columns[startIndex + offset] == GRID_TEXT_COLUMN):
+						self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+					elif (self.columns[startIndex + offset] == GRID_STACKEDBAR_COLUMN):
+						self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+						self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB")
+						self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "T")
+				startIndex += colGroup.length
+
+			for offset in range(len(self.columns) - startIndex):
+				if (self.columns[startIndex + offset] == GRID_ICON_COLUMN):
+					self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+				elif (self.columns[startIndex + offset] == GRID_MULTI_LIST_COLUMN):
+					self.screen.deleteWidget(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+				elif (self.columns[startIndex + offset] == GRID_TEXT_COLUMN):
+					self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+				elif (self.columns[startIndex + offset] == GRID_STACKEDBAR_COLUMN):
+					self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset))
+					self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "SB")
+					self.screen.hide(self.rowName + str(rowIndex) + "_" + str(startIndex + offset) + "T")

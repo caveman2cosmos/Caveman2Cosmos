@@ -166,7 +166,9 @@ typedef struct CvReachablePlotSetCacheEntry
 	int					iLRUSeq;
 } CvReachablePlotSetCacheEntry;
 
-#define	PLOT_SET_CACHE_SIZE	2
+// C2C Optimization: Increased cache size from 2 to 16 to reduce cache eviction rate
+// during AI pathing and group movement evaluations across large mod maps.
+#define	PLOT_SET_CACHE_SIZE	16
 typedef struct
 {
 	CvReachablePlotSetCacheEntry	cacheEntries[PLOT_SET_CACHE_SIZE];

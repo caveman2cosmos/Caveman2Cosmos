@@ -683,6 +683,16 @@ bool CyUnit::isCommander() const
 	return m_pUnit->isCommander();
 }
 
+void CyUnit::setCommodore(bool bNewValue)
+{
+	m_pUnit->setCommodore(bNewValue);
+}
+
+bool CyUnit::isCommodore() const
+{
+	return m_pUnit->isCommodore();
+}
+
 int CyUnit::getControlPointsLeft() const
 {
 	return m_pUnit->getCommanderComp()->getControlPointsLeft();
@@ -691,6 +701,16 @@ int CyUnit::getControlPointsLeft() const
 int CyUnit::getControlPoints() const
 {
 	return m_pUnit->getCommanderComp()->getControlPoints();
+}
+
+int CyUnit::getCommodoreControlPointsLeft() const
+{
+	return m_pUnit->getCommodoreComp()->getControlPointsLeft();
+}
+
+int CyUnit::getCommodoreControlPoints() const
+{
+	return m_pUnit->getCommodoreComp()->getControlPoints();
 }
 
 float CyUnit::getRealExperience() const

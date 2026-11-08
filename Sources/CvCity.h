@@ -21,6 +21,9 @@ class CvPlotGroup;
 class CvUnit;
 class CvUnitSelectionCriteria;
 
+#define CITY_MAX_YIELD_RATE    99000000
+#define CITY_MAX_YIELD_RATE100 1900000000
+
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
@@ -103,6 +106,15 @@ public:
 	void doTurn();
 	void doAutobuild();
 	void checkPropertyBuildings();
+	void doFireCheck();
+
+protected:
+	BuildingTypes getFireBuildingTarget(int iFlammRand) const;
+	void burnBuildingByFire(BuildingTypes eBuilding);
+	void doFireMinor();
+	void doFireMajor();
+	void doFireCatastrophic();
+public:
 
 	bool isCitySelected() const;
 	DllExport bool canBeSelected() const;
@@ -191,7 +203,7 @@ public:
 	int getMaxNumTeamWonders() const;
 	int getMaxNumNationalWonders() const;
 
-	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false, bool bPropertySpawn = false) const;
+	bool canTrain(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false, bool bPropertySpawn = false, UnitTypes eUpgradeFromUnit = NO_UNIT) const;
 	bool canTrainInternal(UnitTypes eUnit, bool bContinue = false, bool bTestVisible = false, bool bIgnoreCost = false, bool bIgnoreUpgrades = false) const;
 	bool canTrain(UnitCombatTypes eUnitCombat) const;
 
@@ -239,6 +251,7 @@ public:
 	int getProductionProgress() const;
 	int getProductionNeeded() const;
 	int getProductionNeeded(const OrderData& order) const;
+	bool isPreMergeOrder(UnitTypes eUnit) const;
 	int getProductionNeeded(UnitTypes eUnit) const;
 	int getProductionNeeded(BuildingTypes eType) const;
 	int getProductionNeeded(ProjectTypes eProject) const;
@@ -248,6 +261,7 @@ public:
 	int getTotalProductionQueueTurnsLeft() const;
 	int getProductionTurnsLeft() const;
 	int getProductionTurnsLeft(UnitTypes eUnit, int iNum) const;
+	int getProductionTurnsLeftPreMerged(UnitTypes eUnit) const;
 	int getProductionTurnsLeft(BuildingTypes eType, int iNum) const;
 	int getProductionTurnsLeft(ProjectTypes eProject, int iNum) const;
 	int getProductionTurnsLeft(int iProductionNeeded, int iProduction, int iFirstProductionDifference, int iProductionDifference) const;
@@ -274,7 +288,7 @@ public:
 	bool hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool bCountThisTurn = false) const;
 
 	UnitTypes getConscriptUnit() const;
-	CvUnit* initConscriptedUnit();
+	CvUnit* initConscriptedUnit(UnitTypes eConscriptUnit = NO_UNIT);
 	int getConscriptPopulation() const;
 	int flatConscriptAngerLength() const;
 	bool canConscript(bool bOnCapture = false) const;
@@ -496,17 +510,21 @@ public:
 	CvPlot* getRallyPlot() const;
 	void setRallyPlot(const CvPlot* pPlot);
 
-	int getGameTurnFounded() const;
-	void setGameTurnFounded(int iNewValue);
+	int getGameTurnFounded(const bool bACalendar = false) const;
+	void setGameTurnFounded(const int iNewValue, const bool bACalendar = false);
 
-	int getGameTurnAcquired() const;
-	void setGameTurnAcquired(int iNewValue);
+	int getGameDateFounded(const bool bACalendar = false) const;
+	void setGameDateFounded(const int iNewValue, const bool bACalendar = false);
+
+	int getGameTurnAcquired(const bool bHistoricalCalendar = false) const;
+	int getGameDateAcquired(const bool bHistoricalCalendar = false) const;
+	void setGameTurnAcquired(const int iNewValue, const bool bHistoricalCalendar = false);
 
 	int getPopulation() const;
 	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
-	int getRealPopulation() const;
+	int64_t getRealPopulation() const;
 
 	int getHighestPopulation() const;
 	void setHighestPopulation(int iNewValue);
@@ -820,6 +838,9 @@ public:
 
 	bool isWeLoveTheKingDay() const;
 	void setWeLoveTheKingDay(bool bNewValue);
+
+	int getFireEffectTurns() const;
+	void setFireEffectTurns(int iNewValue);
 
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
@@ -1167,6 +1188,7 @@ public:
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
+	void pushPreMergeTrainOrder(UnitTypes eUnit, bool bSave, bool bPop, bool bAppend, bool bForce = false);
 	void popOrder(int iNum, bool bFinish = false, bool bChoose = false, bool bResolveList = true);
 	void startHeadOrder();
 	void stopHeadOrder();
@@ -1296,6 +1318,7 @@ public:
 	void clearVicinityBonusCache(BonusTypes eBonus);
 	bool hasVicinityBonus(BonusTypes eBonus) const;
 	void clearRawVicinityBonusCache(BonusTypes eBonus);
+	void invalidateVicinityCache();
 	bool hasRawVicinityBonus(BonusTypes eBonus) const;
 	void checkBuildings(bool bAlertOwner = true);
 	void doVicinityBonus();
@@ -1719,6 +1742,7 @@ protected:
 	bool m_bDrafted;
 	bool m_bAirliftTargeted;
 	bool m_bWeLoveTheKingDay;
+	int m_iFireEffectTurns;
 	bool m_bCitizensAutomated;
 	bool m_bProductionAutomated;
 	bool m_bWallOverride;
@@ -2134,7 +2158,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, calcCorporateMaintenance);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getID);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getPopulation);
-		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, getRealPopulation);
+		DECLARE_MAP_FUNCTOR_CONST(CvCity, int64_t, getRealPopulation);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, goodHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, badHealth);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, int, happyLevel);

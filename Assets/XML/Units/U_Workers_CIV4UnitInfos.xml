@@ -51,6 +51,7 @@
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_PREHISTORIC -->
 				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+				<BuildType>BUILD_GATHERING_CAMP_KILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
@@ -72,13 +73,14 @@
 				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST_KILL</BuildType>
 				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
 				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 			</Builds>
 			<iCost>12</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -140,6 +142,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -190,7 +193,7 @@
 			<iCost>90</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>150</iWorkRate>
+			<iWorkRate>75</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_DONKEY</BonusType>
@@ -268,6 +271,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -316,6 +320,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -350,6 +355,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -365,7 +371,7 @@
 			<iCost>120</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>225</iWorkRate>
+			<iWorkRate>112</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -429,6 +435,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -477,6 +484,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -511,6 +519,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -528,7 +537,7 @@
 			<iCost>135</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>240</iWorkRate>
+			<iWorkRate>120</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -598,6 +607,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -646,6 +656,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -680,6 +691,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -702,7 +714,7 @@
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>125</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -776,6 +788,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -824,6 +837,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -858,6 +872,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -875,7 +890,7 @@
 			<iCost>165</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>260</iWorkRate>
+			<iWorkRate>130</iWorkRate>
 			<iAsset>1</iAsset>
 			<FreePromotions>
 				<FreePromotion>
@@ -949,6 +964,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -997,6 +1013,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1031,6 +1048,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1048,7 +1066,7 @@
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>125</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1122,6 +1140,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -1170,6 +1189,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1204,6 +1224,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1221,7 +1242,7 @@
 			<iCost>140</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>240</iWorkRate>
+			<iWorkRate>120</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1322,6 +1343,7 @@
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -1356,6 +1378,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1392,7 +1415,7 @@
 			<iCost>600</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>300</iWorkRate>
+			<iWorkRate>150</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1490,7 +1513,7 @@
 			<iCost>800</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>400</iWorkRate>
+			<iWorkRate>200</iWorkRate>
 			<iCombat>20</iCombat>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -1601,6 +1624,7 @@
 				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_RESOURCE_TOWN</BuildType>
 				<BuildType>BUILD_FACTORY</BuildType>
 				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
@@ -1638,6 +1662,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -1651,7 +1676,7 @@
 			<iCost>848</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>350</iWorkRate>
+			<iWorkRate>175</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1766,6 +1791,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -1783,7 +1809,7 @@
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>475</iWorkRate>
+			<iWorkRate>237</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -1888,6 +1914,7 @@
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
 				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
 				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RESOURCE_COMPLEX</BuildType>
 				<BuildType>BUILD_RECLAIM_LAND</BuildType>
 				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
@@ -1922,7 +1949,7 @@
 			<iCost>3500</iCost>
 			<iBaseUpkeep>7</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>500</iWorkRate>
+			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2014,7 +2041,7 @@
 			<iCost>61</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -2127,7 +2154,7 @@
 			<iCost>100</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>150</iWorkRate>
+			<iWorkRate>75</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
@@ -2267,7 +2294,7 @@
 			<iCost>233</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>200</iWorkRate>
+			<iWorkRate>100</iWorkRate>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
@@ -2412,7 +2439,7 @@
 			<iCost>492</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iWorkRate>300</iWorkRate>
+			<iWorkRate>150</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2518,7 +2545,7 @@
 			<iCost>1729</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iWorkRate>500</iWorkRate>
+			<iWorkRate>250</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2577,7 +2604,7 @@
 			<iCost>1000</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2641,7 +2668,7 @@
 			</BonusProductionModifiers>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2705,7 +2732,7 @@
 			</BonusProductionModifiers>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iWorkRate>100</iWorkRate>
+			<iWorkRate>50</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -2761,6 +2788,7 @@
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_TRAIL</BuildType>
 				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<BuildType>BUILD_RESOURCE_OUTPOST</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
@@ -2808,6 +2836,7 @@
 				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
 				<BuildType>BUILD_FORT</BuildType>
+				<BuildType>BUILD_RESOURCE_SETTLEMENT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
 				<BuildType>BUILD_PAVED_ROAD</BuildType>
 				<BuildType>BUILD_WATERMILL</BuildType>
@@ -2861,7 +2890,7 @@
 			<iCost>250</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>150</iWorkRate>
+			<iWorkRate>75</iWorkRate>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

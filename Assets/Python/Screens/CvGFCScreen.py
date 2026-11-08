@@ -19,7 +19,6 @@ class CvGFCScreen:
 		return screen
 
 	def setCloseButton(self, widgetname, text, x, y):
-		#self.getScreen().setButtonGFC(widgetname, text, "", x, y, 50,50, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
 		return
 
 	def addText(self, widgetName,message, iX,iY, iWidth, iHeight):

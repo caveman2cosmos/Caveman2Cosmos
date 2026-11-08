@@ -187,9 +187,9 @@ class BugEventManager(CvEventManager.CvEventManager):
 		Prints a warning if eventType is already defined.
 		"""
 		if self.hasEvent(eventType):
-			print "[WARNING] BugEventManager - event '%s' already defined", eventType
+			print "[WARNING] BugEventManager - event '%s' already defined" % eventType
 		else:
-			print "BugEventManager - adding event '%s'", eventType
+			print "BugEventManager - adding event '%s'" % eventType
 			self.EventHandlerMap[eventType] = []
 
 	def addEventHandler(self, eventType, eventHandler=None):
@@ -310,16 +310,13 @@ class BugEventManager(CvEventManager.CvEventManager):
 		If a handler returns non-zero, processing is terminated, and no subsequent handlers are invoked. (Changed)
 		"""
 		if self.EventHandlerMap.has_key(eventType):
-			bHandled = False
 			for eventHandler in self.EventHandlerMap[eventType]:
 				try:
 					A = eventHandler(argsList)
 					if A:
-						bHandled = True
+						return 1
 				except:
 					BugUtil.trace("Error in %s event handler %s", eventType, eventHandler)
-			if bHandled:
-				return 1
 		return 0
 
 	def _handleOnPreSaveEvent(self, eventType, argsList):
@@ -338,7 +335,9 @@ class BugEventManager(CvEventManager.CvEventManager):
 		if self.EventHandlerMap.has_key(eventType):
 			for eventHandler in self.EventHandlerMap[eventType]:
 				try:
-					result += eventHandler(argsList)
+					value = eventHandler(argsList)
+					if value is not None:
+						result += str(value)
 				except:
 					BugUtil.trace("Error in %s event handler %s", eventType, eventHandler)
 		return result
@@ -388,7 +387,7 @@ class BugEventManager(CvEventManager.CvEventManager):
 				stroke = InputUtil.Keystroke(key, self.bAlt, self.bCtrl, self.bShift)
 				if stroke in self.shortcuts:
 					if DebugUtils.bDebugMode:
-						print "BugEventManager - calling handler for shortcut %s"
+						print "BugEventManager - calling handler for shortcut %s" % stroke
 					self.shortcuts[stroke](argsList)
 		return 0
 

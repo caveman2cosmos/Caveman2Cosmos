@@ -88,7 +88,6 @@ class WBProjectScreen:
 		self.sortProjects()
 
 	def sortProjects(self):
-		screen = CyGInterfaceScreen( "WBProjectScreen", CvScreenEnums.WB_PROJECT)
 		global lProject
 		lProject = []
 		for i in xrange(GC.getNumProjectInfos()):
@@ -220,13 +219,15 @@ class WBProjectScreen:
 			iCount = max(iCount, - pTeamX.getProjectCount(item))
 		else:
 			Info = GC.getProjectInfo(item)
-			iTeam = Info.getMaxTeamInstances()
+			iTeamMax = Info.getMaxTeamInstances()
 			iWorld = Info.getMaxGlobalInstances()
-			iMax = max(iTeam, iWorld)
-			if iTeam > -1 and iWorld > -1:
-				iMax = min(iTeam, iWorld)
+			iMax = max(iTeamMax, iWorld)
+			if iTeamMax > -1 and iWorld > -1:
+				iMax = min(iTeamMax, iWorld)
 			if iMax > -1:
 				iCount = min(iCount, iMax - pTeamX.getProjectCount(item))
+				if iCount <= 0:
+					return
 		pTeamX.changeProjectCount(item, iCount)
 		if WorldBuilder.bPython and iCount > 0:
 			pCapital = GC.getPlayer(pTeamX.getLeaderID()).getCapitalCity()

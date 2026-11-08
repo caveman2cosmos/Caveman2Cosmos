@@ -79,6 +79,85 @@ void UnitCompCommander::changeCommandRange(const int iChange)
 	}
 }
 
+
+//------------------------------------------------------------------------------------------------------
+//  CLASS: UnitCompCommodore
+//------------------------------------------------------------------------------------------------------
+UnitCompCommodore::UnitCompCommodore(const CvUnit* unit, short iCP, short iCPL, short iCR) // Used when loading save
+{
+	m_unit = unit;
+	m_iControlPoints = iCP;
+	m_iControlPointsLeft = iCPL;
+	m_iCommandRange = iCR;// not sure if problem is here
+	m_bReady = m_iControlPointsLeft > 0;
+}
+UnitCompCommodore::~UnitCompCommodore() { }
+
+UnitCompCommodore::UnitCompCommodore(const CvUnit* unit, CvUnitInfo* unitInfo) // Used when unit becomes commodore
+{
+	m_unit = unit;
+	m_iControlPoints = unitInfo->getControlPoints();
+	m_iControlPointsLeft = m_iControlPoints;
+	m_iCommandRange = unitInfo->getCommandRange();
+	m_bReady = m_iControlPointsLeft > 0;
+
+	FAssertMsg(m_bReady, "A commodore with no CP is no commodore at all...");
+}
+
+
+void UnitCompCommodore::changeControlPoints(const int iChange)
+{
+	if (iChange != 0)
+	{
+		m_iControlPoints += iChange;
+		changeControlPointsLeft(iChange);
+
+		FAssertMsg(m_iControlPoints > 0, "A commodore with no CP is no commodore at all...");
+	}
+}
+
+void UnitCompCommodore::changeControlPointsLeft(const int iChange)
+{
+	if (iChange != 0)
+	{
+		const bool bWasReady = m_bReady;
+
+		m_iControlPointsLeft += iChange;
+		m_bReady = m_iControlPointsLeft > 0;
+
+		if (bWasReady != m_bReady)
+		{
+			m_unit->plot()->countCommodore(m_bReady, m_unit);
+		}
+	}
+}
+
+void UnitCompCommodore::restoreControlPoints()
+{
+	if (m_iControlPointsLeft < m_iControlPoints)
+	{
+		changeControlPointsLeft(m_iControlPoints - m_iControlPointsLeft);
+	}
+}
+
+void UnitCompCommodore::changeCommandRange(const int iChange)
+{
+	if (iChange != 0)
+	{
+		if (m_bReady)
+		{
+			m_unit->plot()->countCommodore(false, m_unit);
+		}
+		m_iCommandRange += iChange;
+
+		if (m_bReady)
+		{
+			m_unit->plot()->countCommodore(true, m_unit);
+		}
+	}
+}
+
+
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompWorker
 //------------------------------------------------------------------------------------------------------
@@ -92,7 +171,7 @@ UnitCompWorker::~UnitCompWorker()
 	m_extraWorkModForBuilds.clear();
 }
 
-UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo) // Used when unit becomes commander
+UnitCompWorker::UnitCompWorker(CvUnitInfo* unitInfo)
 {
 	m_iHillsWorkModifier = unitInfo->getHillsWorkModifier();
 	m_iPeaksWorkModifier = unitInfo->getPeaksWorkModifier();

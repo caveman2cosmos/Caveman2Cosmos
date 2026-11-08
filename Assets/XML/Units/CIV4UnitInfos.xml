@@ -120,6 +120,7 @@ Base XP gained when defending
 			<iXPValueDefense>6</iXPValueDefense>
 			<iAsset>5</iAsset>
 			<iPower>1000</iPower>
+			<bSuicide>1</bSuicide>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>0.75</fMaxSpeed>
@@ -510,7 +511,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_POISON_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -639,7 +640,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_FUSION_NOVA</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>
@@ -765,7 +766,7 @@ Base XP gained when defending
 		<UnitInfo>
 			<Type>UNIT_TURN</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
-			<iInstanceCostModifier>15</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<Combat>UNITCOMBAT_DOOM</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_BALLISTIC</SubCombatType>

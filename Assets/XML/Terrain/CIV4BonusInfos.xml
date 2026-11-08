@@ -18,7 +18,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -68,7 +68,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -122,7 +122,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -184,7 +184,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -240,7 +240,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -286,7 +286,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -352,7 +352,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -394,7 +394,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -446,7 +446,7 @@
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -508,7 +508,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
@@ -565,7 +565,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -621,6 +621,7 @@
 			<iMinLatitude>-30</iMinLatitude>
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -689,7 +690,7 @@
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -755,7 +756,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -825,7 +826,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -877,7 +878,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -940,7 +941,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -998,7 +999,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -1056,7 +1057,7 @@
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -1120,7 +1121,7 @@
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -1182,7 +1183,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -1249,7 +1250,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -1334,7 +1335,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>15</iAITradeModifier>
 			<iPlacementOrder>1</iPlacementOrder>
@@ -1383,7 +1384,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -1459,7 +1460,7 @@
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
@@ -1521,7 +1522,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHealth>-1</iHealth>
@@ -1577,7 +1578,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -1630,7 +1631,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>4</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -1705,7 +1706,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>4</iAITradeModifier>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -1761,7 +1762,7 @@
 			<TechCityTrade>TECH_WEAVING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -1829,7 +1830,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -1899,7 +1900,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -1962,7 +1963,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>3</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -2058,7 +2059,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -2111,7 +2112,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>140</iConstAppearance>
@@ -2181,7 +2182,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -2227,7 +2228,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_GATHERING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -2274,7 +2275,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>-1</iHealth>
 			<iHappiness>1</iHappiness>
@@ -2322,7 +2323,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -2387,7 +2388,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -2453,7 +2454,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>4</iAITradeModifier>
 			<iHealth>-1</iHealth>
@@ -2513,7 +2514,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -2576,7 +2577,7 @@
 			<YieldChanges>
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -2625,7 +2626,7 @@
 			<TechReveal>TECH_GATHERING</TechReveal>
 			<TechCityTrade>TECH_HERBALISM</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -2700,7 +2701,7 @@
 			<TechCityTrade>TECH_WOODWORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -2770,7 +2771,7 @@
 			<TechCityTrade>TECH_CAMELID_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>0</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
@@ -2824,7 +2825,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_ANIMAL_HUSBANDRY</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -2889,7 +2890,7 @@
 			<TechCityTrade>TECH_EQUINE_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>3</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
@@ -2949,7 +2950,7 @@
 			<TechCityTrade>TECH_EQUINE_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
@@ -3017,7 +3018,7 @@
 			<TechCityTrade>TECH_CAMELID_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>0</iPlacementOrder>
@@ -3066,7 +3067,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_CANINE_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -3140,7 +3141,7 @@
 			<TechCityTrade>TECH_CANINE_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -3190,7 +3191,7 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>7</iAITradeModifier>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -3267,7 +3268,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -3314,7 +3315,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -3395,10 +3396,10 @@
 			<BonusClassType>BONUSCLASS_STRATEGIC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ELEPHANTS</ArtDefineTag>
 			<TechReveal>TECH_SCAVENGING</TechReveal>
-			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
+			<TechCityTrade>TECH_ELEPHANT_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>4</iAITradeModifier>
@@ -3480,7 +3481,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -3542,7 +3543,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -3597,7 +3598,7 @@
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>3</iPlacementOrder>
@@ -3645,7 +3646,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -3724,7 +3725,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -3836,7 +3837,7 @@
 			<TechReveal>TECH_SCAVENGING</TechReveal>
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -3894,7 +3895,7 @@
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
@@ -3954,7 +3955,7 @@
 			<TechCityTrade>TECH_SCAVENGING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -4001,7 +4002,7 @@
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -4050,7 +4051,7 @@
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -4109,7 +4110,7 @@
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -4191,7 +4192,7 @@
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -4270,7 +4271,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -4315,7 +4316,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -4376,7 +4377,7 @@
 			<TechReveal>TECH_TRAP_FISHING</TechReveal>
 			<TechCityTrade>TECH_FISHING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -4459,7 +4460,7 @@
 			<TechCityTrade>TECH_HARPOON_MAKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>1</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -4526,7 +4527,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>6</iAITradeModifier>
 			<iHappiness>1</iHappiness>
@@ -4598,7 +4599,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -4719,7 +4720,7 @@
 			<TechCityTrade>TECH_INDUSTRIALISM</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -4814,7 +4815,7 @@
 			<TechCityTrade>TECH_COAL_MINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>2</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
@@ -4899,7 +4900,7 @@
 			<TechCityTrade>TECH_COPPER_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -4985,7 +4986,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -5072,7 +5073,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -5239,11 +5240,11 @@
 			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GOLD_ORE</ArtDefineTag>
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
-			<TechCityTrade>TECH_MINING</TechCityTrade>
+			<TechCityTrade>TECH_SOFT_HAMMER_PERCUSSION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>6</iAITradeModifier>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -5331,7 +5332,7 @@
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -5417,7 +5418,7 @@
 			<TechCityTrade>TECH_LEAD_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -5504,7 +5505,7 @@
 			<TechCityTrade>TECH_GEOLOGY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>6</iPlacementOrder>
@@ -5592,7 +5593,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -5680,7 +5681,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -5767,7 +5768,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -5854,7 +5855,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>2</iAITradeModifier>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -5942,7 +5943,7 @@
 			<TechCityTrade>TECH_ANCIENT_BALLISTICS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -6042,7 +6043,7 @@
 			<TechCityTrade>TECH_BRONZE_WORKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>5</iPlacementOrder>
@@ -6128,7 +6129,7 @@
 			<TechCityTrade>TECH_ADVANCED_METALLURGY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -6216,8 +6217,8 @@
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>30</iAITradeModifier>
 			<iPlacementOrder>2</iPlacementOrder>
@@ -6307,7 +6308,7 @@
 			<TechCityTrade>TECH_NATURAL_PIGMENTS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>200</iConstAppearance>
@@ -6405,7 +6406,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>7</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
@@ -6492,7 +6493,7 @@
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>2</iPlacementOrder>
@@ -6569,7 +6570,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -6600,10 +6601,10 @@
 			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OBSIDIAN</ArtDefineTag>
 			<TechReveal>TECH_GATHERING</TechReveal>
-			<TechCityTrade>TECH_OBSIDIAN_WEAPONS</TechCityTrade>
+			<TechCityTrade>TECH_HARD_HAMMER_PERCUSSION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -6678,7 +6679,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>5</iAITradeModifier>
 			<iHealth>1</iHealth>
@@ -6741,7 +6742,7 @@
 			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
@@ -6826,7 +6827,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -6891,7 +6892,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>5</iPlacementOrder>
 			<iConstAppearance>100</iConstAppearance>
@@ -6987,7 +6988,7 @@
 			<TechCityTrade>TECH_VOLCANOLOGY</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -7069,7 +7070,7 @@
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
@@ -7150,7 +7151,7 @@
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>8</iPlacementOrder>
@@ -7292,7 +7293,7 @@
 			<TechCityTrade>TECH_REFINING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>3</iYieldChange>
+				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
 			<iPlacementOrder>2</iPlacementOrder>
@@ -7429,7 +7430,7 @@
 			<TechCityTrade>TECH_ECOLOGICAL_ENGINEERING</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>2</iYieldChange>
+				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iPlacementOrder>7</iPlacementOrder>
@@ -7527,7 +7528,7 @@
 			<YieldChanges>
 				<iYieldChange>-2</iYieldChange>
 				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iPlacementOrder>7</iPlacementOrder>
 			<iConstAppearance>50</iConstAppearance>

@@ -1,4 +1,5 @@
 // game.cpp
+//#define NO_RANDOM
 
 
 #include "FProfiler.h"
@@ -20,6 +21,7 @@
 #include "CvMessageControl.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
+#include "CvGameTextMgr.h"
 #include "CvPlot.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
@@ -34,6 +36,10 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvBuildingFilters.h"
 #include "CvUnitFilters.h"
+
+#ifdef NO_RANDOM
+	int iNumAlea;
+#endif
 
 
 //	Koshling - save game compatibility between (most) builds
@@ -574,12 +580,11 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 
-	// Toffer - We have some issues with signs disappearing,
-	//	not sure if these are really needed, commented out as a test.
-	//gDLL->getEngineIFace()->clearSigns();
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 	OutputDebugString("onFinalInitialized: End\n");
+
+	writeRealtimeLogMetadata(true);
 }
 
 // Toffer - This is only called when starting new games, or after regenerating map, right before turn 0 starts.
@@ -604,8 +609,11 @@ void CvGame::doPreTurn0()
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
-	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(getActivePlayer()).getStartingPlot()->getY());
-
+    const CvPlot* pStartPlot = GET_PLAYER(getActivePlayer()).getStartingPlot();
+    if (pStartPlot != NULL)
+    {
+        GC.getCurrentViewport()->bringIntoView(pStartPlot->getX(), pStartPlot->getY());
+    }
 	OutputDebugString("doPreTurn0: End\n");
 }
 
@@ -843,6 +851,12 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	//	and it is necessary as the game type is GAME_NONE in that specific instance as it kinda takes you to the main menu,
 	//	but reset won't be called again unless one aborts loading the scenario when it asks what options you want for it.
 	const bool bStartingGameSession = !bConstructorCall && (GC.getInitCore().getType() != GAME_NONE || m_bWorldBuilder);
+	if (m_bWorldBuilder && !bConstructorCall)
+	{
+		// Notify the engine that WorldBuilder mode has ended so it clears any fog/reveal override it applied;
+		//	a plain assignment here would desync m_bWorldBuilder from the engine's real WorldBuilder state.
+		gDLL->getInterfaceIFace()->setWorldBuilder(false);
+	}
 	m_bWorldBuilder = false;
 
 	if (bStartingGameSession && isFinalInitialized())
@@ -2209,7 +2223,7 @@ void CvGame::update()
 	startProfilingDLL(false);
 
 	//OutputDebugString(CvString::format("Start profiling(false) for CvGame::update()\n").c_str());
-	PROFILE_BEGIN("CvGame::update");
+	PROFILE_BEGIN("CvGame::update",UPD1);
 	{
 		PROFILE("CvGame::update.ViewportInit");
 
@@ -2304,7 +2318,7 @@ again:
 		if (NO_PLAYER != getActivePlayer() && playerAct.getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
 			gDLL->getInterfaceIFace()->setInAdvancedStart(true);
-			gDLL->getInterfaceIFace()->setWorldBuilder(true);
+			setWorldBuilder(true);
 		}
 	}
 
@@ -2321,7 +2335,7 @@ again:
 		}
 	}
 	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	PROFILE_END();
+	PROFILE_END(UPD1);
 	stopProfilingDLL(false);
 }
 
@@ -3331,15 +3345,21 @@ void CvGame::setGameTurn(int iNewValue)
 		GC.getInitCore().setGameTurn(iNewValue);
 		FASSERT_NOT_NEGATIVE(getGameTurn());
 
-		if (m_iDateTurn == iNewValue - 1)
-		{
-			m_currentDate.increment();
-		}
-		else
-		{
-			m_currentDate = CvDate::getDate(iNewValue);
+		bool bHistoricalCalendar = isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+
+		if (!bHistoricalCalendar) {
+			if (m_iDateTurn == iNewValue - 1)
+			{
+				m_currentDate.increment();
+			}
+			else
+			{
+				m_currentDate = CvDate::getDate(iNewValue);
+			}
 		}
 		m_iDateTurn = iNewValue;
+
+		doCalculateCurrentTick();
 
 		updateBuildingCommerce();
 
@@ -3376,7 +3396,18 @@ CvDate CvGame::getCurrentDate()
 		m_currentDate = CvDate::getDate(getGameTurn());
 		m_iDateTurn = getGameTurn();
 	}
+	doCalculateCurrentTick();
 	return m_currentDate;
+}
+
+int CvGame::getTurnHACValue(int iTurn) const
+{
+	std::map<int, int>::const_iterator it = turnHACValues.find(iTurn);
+	if (it != turnHACValues.end())
+	{
+		return it->second;
+	}
+	return -1;
 }
 
 
@@ -4346,6 +4377,10 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 
 /*DllExport*/ bool CvGame::isDebugMode() const
 {
+#ifdef _DEBUG
+	return true;
+#endif // _DEBUG
+
 	return m_bDebugMode;
 }
 
@@ -4544,7 +4579,13 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 
 		if (GC.IsGraphicsInitialized())
 		{
+#ifdef ENABLE_FOGWAR_DECAY
+			GC.getMap().InitFogDecay(true);
+			if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+				GC.getMap().updateFog(true);
+#else
 			GC.getMap().updateFog();
+#endif
 			GC.getMap().updateVisibility();
 			GC.getMap().updateSymbols();
 			GC.getMap().updateMinimapColor();
@@ -4606,7 +4647,16 @@ void CvGame::setHandicapType(HandicapTypes eHandicap)
 				{
 					for (int j = 0; j < MAX_PLAYERS; j++)
 					{
-						GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+						// Skip empty/leaderless player slots: getNewCityProductionValue() ->
+                        // getProductionModifier() -> hasTrait() asserts (getLeaderType() >= 0) for
+                        // unused slots, and dead/never-used players have no city production to cost.
+                        // On a mature-game load (averageHandicaps -> setHandicapType) the unguarded
+                        // loop fired this assert hundreds of times, bloating Asserts.log to ~hundreds
+                        // of MB and stalling the load on Assert builds.
+                        if (GET_PLAYER((PlayerTypes)j).isAlive())
+                        {
+                            GET_PLAYER((PlayerTypes)j).setUnitExtraCost((UnitTypes)i, GET_PLAYER((PlayerTypes)j).getNewCityProductionValue());
+                        }
 					}
 				}
 			}
@@ -4859,7 +4909,7 @@ TeamTypes CvGame::getRankTeam(int iRank) const
 
 void CvGame::setRankTeam(int iRank, TeamTypes eTeam)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	FASSERT_BOUNDS(0, MAX_TEAMS, iRank);
 
 	if (getRankTeam(iRank) != eTeam)
 	{
@@ -5685,7 +5735,9 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-	PROFILE_BEGIN("CvGame::doTurn()");
+	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
+
+	writeRealtimeLogMetadata(false);
 
 	// END OF TURN
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
@@ -5853,7 +5905,7 @@ void CvGame::doTurn()
 	gDLL->getEngineIFace()->SetDirty(GlobePartialTexture_DIRTY_BIT, true);
 	gDLL->getEngineIFace()->DoTurn();
 
-	PROFILE_END();
+	PROFILE_END(DOTURN1);
 
 	foreach_(CvMap* map, GC.getMaps())
 	{
@@ -6206,6 +6258,11 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
 				const int iArea = pPlot->getArea();
+
+				if (!pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
+				{
+					continue;
+				}
 				// Check area unit type density not exceeded if specified
 				if (iMinAreaPlotsPerUnitType > 0
 				&& areaPopulationMap[iArea].find(eUnit) != areaPopulationMap[iArea].end()
@@ -6623,7 +6680,7 @@ void CvGame::doHeadquarters()
 
 							for (int iK = 0; iK < GC.getNumCorporationInfos(); iK++)
 							{
-								iValue += GET_PLAYER((PlayerTypes)iJ).getHasCorporationCount((CorporationTypes)iK) * 20;
+								iValue += GET_PLAYER(kLoopTeam.getLeaderID()).getHasCorporationCount((CorporationTypes)iK) * 20;
 							}
 
 							if (iValue < iBestValue)
@@ -6955,7 +7012,7 @@ void CvGame::createBarbarianUnits()
 		{
 			const CvPlot* pPlot = GC.getMap().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getMIN_BARBARIAN_STARTING_DISTANCE());
 
-			if (pPlot == NULL)
+			if (pPlot == NULL || !pPlot->isMapCategoryType(GC.getMAPCATEGORY_EARTH()))
 				continue;
 
 			UnitTypes eBestUnit = NO_UNIT;
@@ -7077,77 +7134,78 @@ void CvGame::updateMoves()
 
 	if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			aiShuffle[iI] = iI;
-		}
+		for (int i = 0; i < MAX_PLAYERS; ++i)
+			aiShuffle[i] = i;
 	}
-	else shuffleArray(aiShuffle, MAX_PLAYERS, getSorenRand());
-
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	else
 	{
-		CvPlayer& player = GET_PLAYER((PlayerTypes)(aiShuffle[iI]));
+		shuffleArray(aiShuffle, MAX_PLAYERS, getSorenRand());
+	}
 
-		if (player.isAlive() && player.isTurnActive())
+	for (int idx = 0; idx < MAX_PLAYERS; ++idx)
+	{
+		const int iPlayer = aiShuffle[idx];
+		CvPlayer& player = GET_PLAYER((PlayerTypes)iPlayer);
+
+		if (!player.isAlive() || !player.isTurnActive())
+			continue;
+
+		const bool isHuman = player.isHumanPlayer();
+		const bool isAutoMoves = player.isAutoMoves();
+
+		// For the human we want auto-moves last so the player can change
+		// orders on their automated units before hitting enter, but for the AI
+		// it is desirable to start with automated units in case the automation is broken
+		// be events, so that we know this before all other units process
+		if (isHuman)
 		{
-			// For the human we want auto-moves last so the player can change
-			// orders on their automated units before hitting enter, but for the AI
-			// it is desirable to start with automated units in case the automation is broken
-			// be events, so that we know this before all other units process
-			if (player.isHumanPlayer())
+			PROFILE("CvGame::updateMoves.Human");
+
+			if (isAutoMoves)
 			{
-				PROFILE("CvGame::updateMoves.Human");
-
-				if (player.isAutoMoves())
+				if (player.hasReadyUnautomatedUnit(false))
 				{
-					if (player.hasReadyUnautomatedUnit(false))
-					{
-						// Pre-emptorary turn end so make sure we run the unit AIs now
-						player.AI_unitUpdate();
-					}
-					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-					if (!player.hasBusyUnit())
-					{
-						player.setAutoMoves(false);
-					}
+					player.AI_unitUpdate();
 				}
-				else
+				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
+
+				if (!player.hasBusyUnit())
 				{
-					if (!player.hasReadyUnautomatedUnit(false))
-					{
-						player.AI_unitUpdate();
-					}
-					/*
-					// A unit ready to move at this point is one the player needs to interact with
-					if (player.hasReadyUnautomatedUnit(true))
-					{
-						player.setTurnHadUIInteraction(true);
-					}
-					*/
+					player.setAutoMoves(false);
 				}
 			}
 			else
 			{
-				PROFILE("CvGame::updateMoves.AI");
-
-				// Always try to do automations first for the AI
-				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-
-				if (!player.isAutoMoves())
+				if (!player.hasReadyUnautomatedUnit(false))
 				{
 					player.AI_unitUpdate();
-					player.getContractBroker().postProcessUnitsLookingForWork();
+				}
+				// Uncomment if UI interaction tracking is needed
+				// if (player.hasReadyUnautomatedUnit(true))
+				// {
+				//     player.setTurnHadUIInteraction(true);
+				// }
+			}
+		}
+		else
+		{
+			PROFILE("CvGame::updateMoves.AI");
 
-					if (!player.hasBusyUnit() && !player.hasReadyUnit(true))
-					{
-						player.setAutoMoves(true);
-					}
-				}
-				else if (!player.hasBusyUnit())
+			algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
+
+			if (!isAutoMoves)
+			{
+				player.AI_unitUpdate();
+				player.getContractBroker().postProcessUnitsLookingForWork();
+
+				if (!player.hasBusyUnit() && !player.hasReadyUnit(true))
 				{
-					player.setAutoMoves(false);
+					player.setAutoMoves(true);
 				}
+			}
+			else if (!player.hasBusyUnit())
+			{
+				player.setAutoMoves(false);
 			}
 		}
 	}
@@ -7235,6 +7293,12 @@ bool CvGame::testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScor
 		*pbEndScore = false;
 	}
 	if (!isVictoryValid(eVictory))
+	{
+		return false;
+	}
+
+	//Calvitix : in duel, the initial score can be at the beginning very buggy
+	if (getGameTurn() < 100)
 	{
 		return false;
 	}
@@ -7857,13 +7921,23 @@ int CvGame::getSorenRandNum(int iNum, const char* pszLog)
 {
 	PROFILE_EXTRA_FUNC();
 	int iScale = 0;
-	while(iNum > MAX_UNSIGNED_SHORT)
+	while (iNum > MAX_UNSIGNED_SHORT)
 	{
 		iNum /= 2;
 		iScale++;
 	}
 
+#ifdef NO_RANDOM
+	iNumAlea += 1;
+	if (iNumAlea < 1 || iNumAlea >= 10)
+	{
+		iNumAlea = 1;
+	}
+	int Result = iNum * iNumAlea / 10;
+#else
 	int Result = m_sorenRand.get(iNum, pszLog);
+#endif
+
 
 	while(iScale-- > 0)
 	{
@@ -8243,6 +8317,13 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bDiploVictoryEnabled);
 	WRAPPER_READ_ARRAY(wrapper,"CvGame",MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
 
+	// Modder game options (BUG menu / ModderGameOptionTypes). These were previously not saved and
+    // relied on Python re-pushing them from the BUG ini on load; that left them at 0 for any consumer
+    // that runs during load/first-turn (e.g. the leader trait-promotion threshold), which read the
+    // 0 fallback instead of the player's chosen value (#156). Tag-based wrapper: absent in old saves,
+    // in which case the array keeps its reset default of 0 and the Python push still fills it.
+    WRAPPER_READ_ARRAY(wrapper,"CvGame",NUM_MODDERGAMEOPTION_TYPES, m_aiModderGameOption);
+
 	// Super forts adaptation to C2C - has this game state had its choke points calculated?
 	WRAPPER_READ(wrapper,"CvGame", &m_iChokePointCalculationVersion);
 
@@ -8484,6 +8565,24 @@ void CvGame::read(FDataStreamBase* pStream)
 	//WRAPPER_SKIP_ELEMENT(wrapper,"CvGame",m_bCircumnavigated, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
+
+	{
+		int iSize = 0;
+		WRAPPER_READ_DECORATED(wrapper, "CvGame", &iSize, "turnHACValuesSize");
+		turnHACValues.clear();
+		if (iSize > 0)
+		{
+			std::vector<int> keys(iSize);
+			std::vector<int> values(iSize);
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvGame", iSize, &keys[0], "turnHACKeys");
+			WRAPPER_READ_ARRAY_DECORATED(wrapper, "CvGame", iSize, &values[0], "turnHACValues");
+			for (int i = 0; i < iSize; i++)
+			{
+				turnHACValues[keys[i]] = values[i];
+			}
+		}
+	}
+
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 	//establish improvement costs
@@ -8541,6 +8640,10 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_iMercyRuleCounter);
 	WRAPPER_WRITE(wrapper, "CvGame", m_bDiploVictoryEnabled);
 	WRAPPER_WRITE_ARRAY(wrapper, "CvGame", MAX_PLAYERS, m_aiFlexibleDifficultyTimer);
+
+	// Modder game options (BUG menu / ModderGameOptionTypes) - persist so the value is authoritative
+    // on load instead of relying on a Python re-push that may land after first-turn consumers. See read().
+    WRAPPER_WRITE_ARRAY(wrapper, "CvGame", NUM_MODDERGAMEOPTION_TYPES, m_aiModderGameOption);
 
 	// Super forts adaptation to C2C - has this game state had its choke points calculated?
 	WRAPPER_WRITE(wrapper,"CvGame", m_iChokePointCalculationVersion);
@@ -8667,6 +8770,23 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvGame", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_paiTechGameTurnDiscovered);
+
+	{
+		std::vector<int> keys;
+		std::vector<int> values;
+		for (std::map<int, int>::const_iterator it = turnHACValues.begin(); it != turnHACValues.end(); ++it)
+		{
+			keys.push_back(it->first);
+			values.push_back(it->second);
+		}
+		int iSize = keys.size();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "turnHACValuesSize");
+		if (iSize > 0)
+		{
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvGame", iSize, &keys[0], "turnHACKeys");
+			WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvGame", iSize, &values[0], "turnHACValues");
+		}
+	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -9300,7 +9420,7 @@ void CvGame::doVoteResults()
 					szBuffer += NEWLINE + gDLL->getText("TXT_KEY_POPUP_DIPLOMATIC_VOTING_VICTORY", GET_TEAM(eTeam).getName().GetCString(), countVote(*pVoteTriggered, (PlayerVoteTypes)eTeam), getVoteRequired(eVote, eVoteSource), countPossibleVote(eVote, eVoteSource));
 				}
 
-				for (int iI = MAX_PC_TEAMS; iI >= 0; --iI)
+				for (int iI = MAX_PC_TEAMS -1; iI >= 0; --iI)
 				{
 					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
@@ -9720,12 +9840,15 @@ void CvGame::changeHighToLowCounter(int iChange)
 void CvGame::doFinalFive()
 {
 	PROFILE_EXTRA_FUNC();
-	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 5)
+	if (!isGameMultiPlayer() && isOption(GAMEOPTION_CHALLENGE_CUT_LOSERS) && countCivPlayersAlive() > 15) //CALVITIX REMINDER - TO RESTORE
 	{
 		changeCutLosersCounter(1);
 		if (getCutLosersCounter() >= GC.getDefineINT("CUT_LOSERS_TURN_INCREMENT") * GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent() / 100)
 		{
-			GET_PLAYER(getRankPlayer(countCivPlayersAlive() -1)).setAlive(false);
+			CvPlayer& pPlayer = GET_PLAYER(getRankPlayer(countCivPlayersAlive() - 1));
+			if (!pPlayer.isHumanPlayer())
+			{
+				pPlayer.setAlive(false);
 			changeCutLosersCounter(getCutLosersCounter() * -1);
 
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
@@ -9740,6 +9863,7 @@ void CvGame::doFinalFive()
 				}
 			}
 		}
+	}
 	}
 }
 
@@ -9810,10 +9934,42 @@ void CvGame::doIncreasingDifficulty()
 	}
 }
 
+void CvGame::doCalculateCurrentTick()
+{
+	bool bHistoricalCalendar = isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	//logging::logMsg("C2C.log", "[BUG] bHistoricalCalendar: %S", bHistoricalCalendar);
+	if (bHistoricalCalendar) 
+	{
+		if (turnHACValues.find(m_iDateTurn) == turnHACValues.end()) 
+		{
+			uint32_t currentTick = calculateCurrentTick();
+
+			uint32_t endTechTick = GC.getDefineINT("HISTORICAL_ACCURATE_ERA_RANGE_FUTURE_START");
+			endTechTick = (200000 + endTechTick) * 360;
+			if (currentTick > endTechTick) //more than 6000 AD
+			{
+				m_currentDate.increment();
+			}
+			//oldYear = 
+			if (currentTick > m_currentDate.GetTick() ||  m_currentDate.GetTick() == (CvDate::getDate(getGameTurn()).GetTick())) {
+				m_currentDate.setTick(currentTick);
+			}
+			turnHACValues[m_iDateTurn] = currentTick;
+		}
+		else
+		{
+			m_currentDate.setTick(turnHACValues[m_iDateTurn]);
+		}
+	}
+}
+
 void CvGame::doFlexibleDifficulty()
 {
 	PROFILE_EXTRA_FUNC();
-	logging::logMsg("C2C.log", "doFlexibleDifficulty");
+	if (GC.getLogging())
+	{
+		logging::logMsg("C2C.log", "doFlexibleDifficulty");
+	}
 
 	const bool bFlexDiffForAI = isModderGameOption(MODDERGAMEOPTION_AI_USE_FLEXIBLE_DIFFICULTY);
 	const bool bIncreasingDifficulty = isOption(GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY);
@@ -9828,15 +9984,23 @@ void CvGame::doFlexibleDifficulty()
 		if (playerX.isAlive() && GET_TEAM(playerX.getTeam()).getLeaderID() == ePlayer)
 		{
 			int iTurns = playerX.getModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS);
+
 			int iTimer = getFlexibleDifficultyTimer(ePlayer);
 			const bool bHuman = playerX.isHumanPlayer(true);
 
 			if (bFlexDiffForAI && !bHuman)
 			{
 				iTurns = getModderGameOption(MODDERGAMEOPTION_FLEXIBLE_DIFFICULTY_AI_TURN_INCREMENTS);
+				if (iTurns == 0)
+				{
+					iTurns = 50;
+				}				
 			}
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] (%d / %d) turns until next flexible difficulty check for Player: %S\n", iTimer, iTurns, playerX.getName());
+			}
 
 			//Increase timer
 			iTimer++;
@@ -9844,13 +10008,19 @@ void CvGame::doFlexibleDifficulty()
 
 			if (iTimer < iTurns) continue;
 
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S, Checking Flexible Difficulty\n", playerX.getName());
+			}
 
 			if (!playerX.isModderOption(MODDEROPTION_FLEXIBLE_DIFFICULTY) && (!bFlexDiffForAI || bHuman))
 			{
 				continue;
 			}
-			logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", playerX.getName());
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S has Flexible Difficulty Enabled\n", playerX.getName());
+			}
 
 			int iMinHandicap = 0;
 			// Toffer - The whole point of the increasing difficulty challenge is that the human handicap only increases.
@@ -9899,7 +10069,10 @@ void CvGame::doFlexibleDifficulty()
 					}
 				}
 			}
-			FAssertMsg(iAliveCount > 0, "iAliveCount can not be <= 0");
+			if (iAliveCount <= 0)
+			{
+				continue;
+			}
 			const int iMeanScore = iTotalScore / iAliveCount;
 			int iVariance = 0;
 			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
@@ -9911,7 +10084,10 @@ void CvGame::doFlexibleDifficulty()
 					const int iScore = getPlayerScore((PlayerTypes)iJ);
 					// iVariance is sum of squared difference from mean
 					iVariance += (iMeanScore - iScore) * (iMeanScore - iScore);
-					logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log", "[Flexible Difficulty] Adding score for player %S, score: %d\n", pPlayer.getName(), iScore);
+					}
 				}
 			}
 			const int stddev = intSqrt(10000 * iVariance / iAliveCount);
@@ -9920,12 +10096,15 @@ void CvGame::doFlexibleDifficulty()
 
 			
 
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
-				playerX.getName(), iCurrentScore,
-				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
-				iMeanScore, stddev
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty] Player: %S, Score: %d, Difficulty: %S, Avg Score: %d, Std Dev: %d/100\n",
+					playerX.getName(), iCurrentScore,
+					GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
+					iMeanScore, stddev
+				);
+			}
 			int iNewHandicap =
 			(
 				playerX.getHandicapType() > iMaxHandicap
@@ -9953,7 +10132,11 @@ void CvGame::doFlexibleDifficulty()
 			int stddevHandi = static_cast<int>((stddev * (basicMaxCap/diff*100))/100);
 			int handicapBias = static_cast<int>(stddevHandi*((multiplier*playerX.getHandicapType())-(multiplier*default_difficult)));
 
-			double normalized = 1.80*((double)(iCurrentScore-iLowestScore)/(double)(iBestScore-iLowestScore))-0.90;
+			const double scoreRange = (double)(iBestScore - iLowestScore);
+            double normalized = (scoreRange != 0.0) ? 1.80*((double)(iCurrentScore-iLowestScore)/scoreRange)-0.90 : 0.0;
+            // Keep normalized strictly inside (-1, 1) so the atanh logs stay finite (avoid log(0) at the extremes).
+            if (normalized > 0.999) { normalized = 0.999; }
+            else if (normalized < -0.999) { normalized = -0.999; }
 			double atanh2 = 2.0 * (std::log(1.0+normalized) - std::log(1.0-normalized))/2.0;
 
 			int increase1 = 100*(iCurrentScore+((int)((double)iCurrentScore*atanh2)))-handicapBias;
@@ -9963,38 +10146,53 @@ void CvGame::doFlexibleDifficulty()
 			bool isChangeIncrease = std::abs(std::max(increase1, increase2)-std::min(increase1, increase2)) > stddev;
     		bool isChangeDecrease = std::abs(std::max(decrease1, decrease2)-std::min(decrease1, decrease2)) > stddev;
 
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty DEBUG DATA] Player: %S, Score: %d, Total Score: %d, Alive Count: %d, iVariance: %d, Avg Score: %d, Handicap Bias: %d, atanh2: %f,Std Dev: %d\n",
-				playerX.getName(), iCurrentScore, iTotalScore, iAliveCount, iVariance,
-				iMeanScore, handicapBias, atanh2, stddev
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty DEBUG DATA] Player: %S, Score: %d, Total Score: %d, Alive Count: %d, iVariance: %d, Avg Score: %d, Handicap Bias: %d, atanh2: %f,Std Dev: %d\n",
+					playerX.getName(), iCurrentScore, iTotalScore, iAliveCount, iVariance,
+					iMeanScore, handicapBias, atanh2, stddev
+				);
+			}
 
 			//Increased Difficulty (player's score is > 1 std dev away)
 			if (increase1>increase2 && isChangeIncrease)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
+				if (GC.getLogging())
+				{
+					logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev above average.\n", playerX.getName());
+				}
 				if (iNewHandicap < (GC.getNumHandicapInfos() - 1) && iNewHandicap < iMaxHandicap)
 				{
-					logging::logMsg("C2C.log",
-						"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
-						playerX.getName(),
-						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() + 1)).getDescription()
-					);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log",
+							"[Flexible Difficulty] Player: %S difficulty is increasing from %S to %S\n",
+							playerX.getName(),
+							GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+							GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() + 1)).getDescription()
+						);
+					}
 					iNewHandicap++;
 				}
 			}
 			else if (decrease1<decrease2 && isChangeDecrease)
 			{
-				logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
+				if (GC.getLogging())
+				{
+					logging::logMsg("C2C.log", "[Flexible Difficulty] Player: %S score is > 1 std dev below average.\n", playerX.getName());
+				}
 				if (iNewHandicap > 0 && iNewHandicap > iMinHandicap)
 				{
-					logging::logMsg("C2C.log",
-						"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
-						playerX.getName(),
-						GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
-						GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() - 1)).getDescription()
-					);
+					if (GC.getLogging())
+					{
+						logging::logMsg("C2C.log",
+							"[Flexible Difficulty] Player: %S difficulty is decreasing from %S to %S\n",
+							playerX.getName(),
+							GC.getHandicapInfo(playerX.getHandicapType()).getDescription(),
+							GC.getHandicapInfo((HandicapTypes)(playerX.getHandicapType() - 1)).getDescription()
+						);
+					}
 					iNewHandicap--;
 				}
 			}
@@ -10014,12 +10212,15 @@ void CvGame::doFlexibleDifficulty()
 					iNewHandicap
 				)
 			);
-			logging::logMsg("C2C.log",
-				"[Flexible Difficulty] Player: %S, New Handicap: %d, Current Difficult: %S, Min Handicap: %d, Max Handicap: %d\n",
-				playerX.getName(), iNewHandicap,
-				GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
-				iMinHandicap, iMaxHandicap
-			);
+			if (GC.getLogging())
+			{
+				logging::logMsg("C2C.log",
+					"[Flexible Difficulty] Player: %S, New Handicap: %d, Current Difficult: %S, Min Handicap: %d, Max Handicap: %d\n",
+					playerX.getName(), iNewHandicap,
+					GC.getHandicapInfo((HandicapTypes)playerX.getHandicapType()).getDescription(),
+					iMinHandicap, iMaxHandicap
+				);
+			}
 			if (iNewHandicap != playerX.getHandicapType())
 			{
 				if (bHuman)
@@ -10997,7 +11198,7 @@ bool CvGame::canEverResearch(TechTypes eTech) const
 {
 	if (isOption(GAMEOPTION_NO_FUTURE))
 	{
-		if ((EraTypes)GC.getTechInfo(eTech).getEra() > GC.getC2C_ERA_ATOMIC())
+		if ((EraTypes)GC.getTechInfo(eTech).getEra() > GC.getC2C_ERA_INFORMATION())
 		{
 			if (!GC.getTechInfo(eTech).isRepeat())
 			{
@@ -11369,8 +11570,13 @@ void CvGame::recalculateModifiers()
 
 	GC.getMap().setupGraphical();
 	GC.getMap().updateVisibility();
+#ifdef ENABLE_FOGWAR_DECAY
+	GC.getMap().InitFogDecay(true);
+	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_FOGWAR_DECAY))
+		GC.getMap().updateFog(true);
+#else
 	GC.getMap().updateFog();
-
+#endif
 	Cy::call_optional(PYCivModule, "recalculateModifiers");
 
 	m_bRecalculatingModifiers = false;
@@ -11528,7 +11734,7 @@ int CvGame::getTopPopCount() const
 
 int CvGame::getWinForLosingResearchModifier(const int iCities, const int iPop) const
 {
-	return 100 - (100 * iCities / getTopCityCount() + 100 * iPop / getTopPopCount()) / 2;
+	return 100 - (100 * iCities / std::max(1, getTopCityCount()) + 100 * iPop / std::max(1, getTopPopCount())) / 2;
 }
 
 
@@ -11617,7 +11823,7 @@ bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bC
 
 	if (isOption(GAMEOPTION_CHALLENGE_ONE_CITY)
 	|| getMaxCityElimination() > 0
-	|| bConquest && city->getPopulation() == 1)
+	|| (bConquest && city->getPopulation() == 1 && city->getNumWorldWonders() == 0))
 	{
 		return true;
 	}
@@ -11632,3 +11838,216 @@ void CvGame::setWorldBuilder(const bool bNewValue)
 		gDLL->getInterfaceIFace()->setWorldBuilder(bNewValue);
 	}
 }
+
+namespace {
+	std::string utf8_encode(const wchar_t* wstr)
+	{
+		if (!wstr || wstr[0] == L'\0') return std::string();
+		int size_needed = WideCharToMultiByte(CP_UTF8, 0, wstr, -1, NULL, 0, NULL, NULL);
+		std::string strTo(size_needed, 0);
+		WideCharToMultiByte(CP_UTF8, 0, wstr, -1, &strTo[0], size_needed, NULL, NULL);
+		if (!strTo.empty() && strTo[strTo.size() - 1] == '\0')
+		{
+			strTo.resize(strTo.size() - 1);
+		}
+		return strTo;
+	}
+
+	std::string json_escape(const std::string &str)
+	{
+		std::string escaped;
+		escaped.reserve(str.size());
+		for (size_t i = 0; i < str.size(); ++i)
+		{
+			char c = str[i];
+			switch (c)
+			{
+				case '"':  escaped += "\\\""; break;
+				case '\\': escaped += "\\\\"; break;
+				case '\b': escaped += "\\b";  break;
+				case '\f': escaped += "\\f";  break;
+				case '\n': escaped += "\\n";  break;
+				case '\r': escaped += "\\r";  break;
+				case '\t': escaped += "\\t";  break;
+				default:
+					if (c >= 0 && c < 32)
+					{
+						char buf[8];
+						sprintf(buf, "\\u%04x", c);
+						escaped += buf;
+					}
+					else
+					{
+						escaped += c;
+					}
+					break;
+			}
+		}
+		return escaped;
+	}
+
+	std::string json_escape_w(const wchar_t* wstr)
+	{
+		return json_escape(utf8_encode(wstr));
+	}
+}
+
+void CvGame::writeRealtimeLogMetadata(bool bTruncate)
+{
+	if (!isOption(GAMEOPTION_REALTIME_EVENT_LOGGING))
+	{
+		return;
+	}
+
+	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\realtimeevents.log";
+	std::ofstream stream;
+	stream.open(szFile.c_str(), bTruncate ? std::ios::trunc : std::ios::app);
+	if (!stream.is_open())
+	{
+		return;
+	}
+
+	std::string gameSpeed = "NO_GAMESPEED";
+	std::string gameSpeedName = "Unknown";
+	if (getGameSpeedType() != NO_GAMESPEED)
+	{
+		gameSpeed = GC.getGameSpeedInfo(getGameSpeedType()).getType();
+		gameSpeedName = json_escape_w(GC.getGameSpeedInfo(getGameSpeedType()).getDescription());
+	}
+
+	std::string calendar = "CALENDAR_DEFAULT";
+	switch (getCalendar())
+	{
+		case CALENDAR_BI_YEARLY: calendar = "CALENDAR_BI_YEARLY"; break;
+		case CALENDAR_YEARS: calendar = "CALENDAR_YEARS"; break;
+		case CALENDAR_TURNS: calendar = "CALENDAR_TURNS"; break;
+		case CALENDAR_SEASONS: calendar = "CALENDAR_SEASONS"; break;
+		case CALENDAR_MONTHS: calendar = "CALENDAR_MONTHS"; break;
+		case CALENDAR_WEEKS: calendar = "CALENDAR_WEEKS"; break;
+		case CALENDAR_NO_SEASONS: calendar = "CALENDAR_NO_SEASONS"; break;
+		default: calendar = "CALENDAR_DEFAULT"; break;
+	}
+
+	std::string difficulty = "NO_HANDICAP";
+	if (getHandicapType() != NO_HANDICAP)
+	{
+		difficulty = GC.getHandicapInfo(getHandicapType()).getType();
+	}
+
+	PlayerTypes eActivePlayer = getActivePlayer();
+	CvPlayer* pActivePlayer = (eActivePlayer != NO_PLAYER) ? &GET_PLAYER(eActivePlayer) : NULL;
+
+	std::ostringstream playersJson;
+	playersJson << "[";
+	bool bFirstPlayer = true;
+	for (int i = 0; i < MAX_PLAYERS; ++i)
+	{
+		CvPlayer& player = GET_PLAYER((PlayerTypes)i);
+		if (player.isAlive())
+		{
+			if (!bFirstPlayer)
+			{
+				playersJson << ",";
+			}
+			bFirstPlayer = false;
+
+			std::string leaderName = "Unknown";
+			if (player.getLeaderType() != NO_LEADER)
+			{
+				leaderName = GC.getLeaderHeadInfo(player.getLeaderType()).getType();
+			}
+
+			bool bMetByHuman = false;
+			if (pActivePlayer != NULL)
+			{
+				if (eActivePlayer == (PlayerTypes)i)
+				{
+					bMetByHuman = true;
+				}
+				else
+				{
+					TeamTypes eActiveTeam = pActivePlayer->getTeam();
+					TeamTypes ePlayerTeam = player.getTeam();
+					if (eActiveTeam != NO_TEAM && ePlayerTeam != NO_TEAM)
+					{
+						bMetByHuman = (eActiveTeam == ePlayerTeam) || GET_TEAM(eActiveTeam).isHasMet(ePlayerTeam);
+					}
+				}
+			}
+			else
+			{
+				bMetByHuman = true;
+			}
+
+			playersJson << "{"
+				<< "\"id\":" << i << ","
+				<< "\"name\":\"" << json_escape_w(player.getName()) << "\","
+				<< "\"civ\":\"" << json_escape_w(player.getCivilizationDescription(0)) << "\","
+				<< "\"leader\":\"" << leaderName << "\","
+				<< "\"isHuman\":" << (player.isHuman() ? "true" : "false") << ","
+				<< "\"metByHuman\":" << (bMetByHuman ? "true" : "false")
+				<< "}";
+		}
+	}
+	playersJson << "]";
+
+	stream << "{"
+		<< "\"type\":\"metadata\","
+		<< "\"gameSpeed\":\"" << gameSpeed << "\","
+		<< "\"gameSpeedName\":\"" << gameSpeedName << "\","
+		<< "\"calendar\":\"" << calendar << "\","
+		<< "\"difficulty\":\"" << difficulty << "\","
+		<< "\"startTurn\":" << getStartTurn() << ","
+		<< "\"startYear\":" << getStartYear() << ","
+		<< "\"currentTurn\":" << getGameTurn() << ","
+		<< "\"players\":" << playersJson.str()
+		<< "}" << std::endl;
+
+	stream.close();
+}
+
+void CvGame::addRealtimeLogEvent(PlayerTypes ePlayer, const CvTalkingHeadMessage& message)
+{
+	if (!isOption(GAMEOPTION_REALTIME_EVENT_LOGGING))
+	{
+		return;
+	}
+
+	const CvString szFile = GC.getInitCore().getDLLPath() + "\\..\\realtimeevents.log";
+	std::ofstream stream;
+	stream.open(szFile.c_str(), std::ios::app);
+	if (!stream.is_open())
+	{
+		return;
+	}
+
+	CvWString szDate;
+	GAMETEXT.setTimeStr(szDate, message.getTurn(), true);
+
+	std::string playerCiv = "Unknown";
+	if (ePlayer != NO_PLAYER)
+	{
+		playerCiv = json_escape_w(GET_PLAYER(ePlayer).getCivilizationDescription(0));
+	}
+
+	ColorTypes eColor = message.getFlashColor();
+	std::string colorName = "NO_COLOR";
+	if (eColor != NO_COLOR && eColor >= 0 && eColor < GC.getNumColorInfos())
+	{
+		colorName = GC.getColorInfo(eColor).getType();
+	}
+
+	stream << "{"
+		<< "\"type\":\"event\","
+		<< "\"turn\":" << message.getTurn() << ","
+		<< "\"date\":\"" << json_escape_w(szDate.GetCString()) << "\","
+		<< "\"playerId\":" << (int)ePlayer << ","
+		<< "\"playerCiv\":\"" << playerCiv << "\","
+		<< "\"messageType\":" << (int)message.getMessageType() << ","
+		<< "\"color\":\"" << colorName << "\","
+		<< "\"description\":\"" << json_escape_w(message.getDescription()) << "\""
+		<< "}" << std::endl;
+
+	stream.close();
+}
+

@@ -37,6 +37,10 @@
 					<Directory>Bad_Karma</Directory>
 					<bLoad>1</bLoad>
 				</Module>
+				<Module> <!-- Nomad Camp unit + Nomadic Start beta game option content -->
+					<Directory>NomadDemo</Directory>
+					<bLoad>1</bLoad>
+				</Module>
 				<Module> <!-- This module contains unfinished/early stage work, and things meant to be templates -->
 					<Directory>zWIP</Directory>
 					<bLoad>0</bLoad>

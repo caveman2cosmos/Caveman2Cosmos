@@ -10,6 +10,7 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
+#include "CvGameCoreUtils.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -37,6 +38,11 @@ int CvDate::getDay() const
 uint32_t CvDate::GetTick() const
 {
 	return m_iTick;
+}
+
+void CvDate::setTick(uint32_t newTick) 
+{
+	m_iTick = newTick;
 }
 
 int CvDate::getMonth() const
@@ -72,6 +78,7 @@ SeasonTypes CvDate::getSeason() const
 	return NO_SEASON; // This will never be executed
 }
 
+
 CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 {
 	PROFILE_EXTRA_FUNC();
@@ -100,8 +107,21 @@ CvDateIncrement CvDate::getIncrement(GameSpeedTypes eGameSpeed) const
 void CvDate::increment(GameSpeedTypes eGameSpeed)
 {
 	const CvDateIncrement inc = getIncrement(eGameSpeed);
-	m_iTick += inc.m_iIncrementDay;
-	m_iTick += (inc.m_iIncrementMonth * 30);
+
+	double dateModifier = 1.0;
+	GameSpeedTypes eActualGameSpeed = eGameSpeed;
+	if (eGameSpeed == NO_GAMESPEED)
+	{
+		eActualGameSpeed = GC.getGame().getGameSpeedType();
+	}
+	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+
+	int incrementValue = 0;
+	incrementValue += static_cast<uint32_t>(inc.m_iIncrementDay);
+	incrementValue += static_cast<uint32_t>(inc.m_iIncrementMonth * 30);
+
+
+	m_iTick += incrementValue;
 }
 
 void CvDate::increment(int iTurns, GameSpeedTypes eGameSpeed)
@@ -148,6 +168,57 @@ CvDate CvDate::getStartingDate()
 	return CvDate();
 }
 
+static CvDate getStandardDate(int iTurn, GameSpeedTypes eGameSpeed)
+{
+	CvDate date;
+	int iRemainingTurns = 0;
+
+	GameSpeedTypes eActualGameSpeed = eGameSpeed;
+	if (eGameSpeed == NO_GAMESPEED)
+	{
+		if (GC.getGamePointer() != NULL)
+		{
+			eActualGameSpeed = GC.getGame().getGameSpeedType();
+		}
+		else
+		{
+			return date;
+		}
+	}
+	CvGameSpeedInfo& kInfo = GC.getGameSpeedInfo(eActualGameSpeed);
+	const std::vector<CvDateIncrement>& aIncrements = kInfo.getIncrements();
+	if (!kInfo.getEndDatesCalculated())
+	{
+		CvDate::calculateEndDates(eActualGameSpeed);
+	}
+
+	for (int i=0; i<(int)aIncrements.size(); i++)
+	{
+		if (iTurn <= aIncrements[i].m_iendTurn)
+		{
+			if (i==0)
+			{
+				iRemainingTurns = iTurn;
+				date = CvDate::getStartingDate();
+			}
+			else
+			{
+				iRemainingTurns = iTurn - aIncrements[i-1].m_iendTurn;
+				date = aIncrements[i-1].m_endDate;
+			}
+			break;
+		}
+		else
+		{
+			iRemainingTurns = iTurn - aIncrements[i].m_iendTurn;
+			date = aIncrements[i].m_endDate;
+		}
+	}
+
+	date.increment(iRemainingTurns, eGameSpeed);
+	return date;
+}
+
 CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 {
 	PROFILE_EXTRA_FUNC();
@@ -189,7 +260,46 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 			date = aIncrements[i].m_endDate;
 		}
 	}
-	date.increment(iRemainingTurns, eGameSpeed);
+
+	CvDate standardDate = date;
+	standardDate.increment(iRemainingTurns, eGameSpeed);
+
+	bool bHistoricalCalendar = GC.getGame().isModderGameOption(MODDERGAMEOPTION_USE_HISTORICAL_ACCURATE_CALENDAR);
+	if (bHistoricalCalendar) 
+	{
+		int iHACTick = GC.getGame().getTurnHACValue(iTurn);
+		if (iHACTick != -1)
+		{
+			date.setTick(iHACTick);
+		}
+		else
+		{
+			int iCurrentTurn = 0;
+			int iCurrentHACTick = 0;
+			int iCurrentStandardTick = 0;
+
+			if (GC.getGamePointer() != NULL)
+			{
+				iCurrentTurn = GC.getGame().getGameTurn();
+				int iHACVal = GC.getGame().getTurnHACValue(iCurrentTurn);
+				if (iHACVal != -1)
+				{
+					iCurrentHACTick = iHACVal;
+				}
+				else
+				{
+					iCurrentHACTick = calculateCurrentTick();
+				}
+				iCurrentStandardTick = getStandardDate(iCurrentTurn, eGameSpeed).GetTick();
+			}
+			int iShift = iCurrentHACTick - iCurrentStandardTick;
+			date.setTick(standardDate.GetTick() + iShift);
+		}
+	}
+	else
+	{
+		date.increment(iRemainingTurns, eGameSpeed);
+	}
 	return date;
 }
 

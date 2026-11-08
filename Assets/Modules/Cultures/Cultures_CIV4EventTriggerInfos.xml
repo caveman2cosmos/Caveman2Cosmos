@@ -14,7 +14,7 @@
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Toxcatl.dds</EventArt>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>6</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iNumUnits>1</iNumUnits>
 			<BuildingsRequired>

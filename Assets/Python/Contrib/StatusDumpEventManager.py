@@ -140,7 +140,7 @@ class StatusDumpEvent(AbstractStatusDumpEvent):
 		return str(zcurrturn)
 
 	def _getFileName(self):
-		zsFileName = "%s_%s.txt" % (GC.getActivePlayer().getName(), self._getGameYear())
+		zsFileName = "%s_%s.txt" % (GC.getPlayer(GAME.getActivePlayer()).getName(), self._getGameYear())
 		return zsFileName
 
 	def _writeMsg(self, sMsg, vColor="Black", vBold=True, vUnderline=True, vOpenSpoiler="", vCloseSpoiler=False):

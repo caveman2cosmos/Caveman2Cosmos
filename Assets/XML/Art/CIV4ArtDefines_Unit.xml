@@ -38122,7 +38122,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CARAVEL_MESO_AMERICAN</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/trireme.dds</Button>
+			<Button>Art/Interface/Buttons/Units/sparth/caravel.dds</Button>
 			<fScale>0.1</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
 			<NIF>Art/Units/meso_american_sparth/caravel/trireme_fx.nif</NIF>
@@ -72412,7 +72412,7 @@
 			<fScale>0.39</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Units/unique/taureg/TauregCamel/TuaregCamelRider.nif</NIF>
-			<KFM>Art/Units/Camel_Rider/camelrider.kfm</KFM>
+			<KFM>Art/Units/unique/taureg/TauregCamel/camelrider.kfm</KFM>
 			<SHADERNIF>Art/Units/unique/taureg/TauregCamel/TuaregCamelRider.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>

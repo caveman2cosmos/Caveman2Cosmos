@@ -107,6 +107,8 @@ public:
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible) const;
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex) const;
+	int getUnitProductionNeededPreMerged(int /*UnitTypes*/ iIndex) const;
+	bool isPreMergedUnitBuildEnabled() const;
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const;
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const;
 

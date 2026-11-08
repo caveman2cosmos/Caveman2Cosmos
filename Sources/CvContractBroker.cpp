@@ -59,6 +59,7 @@ void CvContractBroker::cleanup()
 	logContractBroker(1, "Cleaning Up <%S> ContractBroker Contracted Units: %d Advertising Tenders: %d Advertising Units: %d",
 		GET_PLAYER(m_eOwner).getName(),
 		m_contractedUnits.size(),
+		m_advertisingTenders.size(),
 		m_advertisingUnits.size());
 
 	logContractBroker(1, "     <%S>Current Work requests: %d", m_ownerName, m_workRequests.size());
@@ -68,7 +69,7 @@ void CvContractBroker::cleanup()
 	m_contractedUnits.clear();
 	m_advertisingTenders.clear();
 	m_iEmployedUnits = 0;
-	for (unsigned int iI = 0; iI < (int)m_workRequests.size(); iI++)
+	for (unsigned int iI = 0; iI < (int)m_workRequests.size();)
 	{
 		if (m_workRequests[iI].bFulfilled)
 		{
@@ -76,6 +77,10 @@ void CvContractBroker::cleanup()
 			m_workRequests.erase(wr);
 			fulfilledContracts++;
 		}
+        else
+        {
+            iI++;
+        }
 
 	}
 	logContractBroker(1, "     <%S>Fulfilled Contracts last turn: %d", m_ownerName, fulfilledContracts);
@@ -317,14 +322,30 @@ void CvContractBroker::advertiseTender(const CvCity* pCity, int iMinPriority)
 {
 	PROFILE_FUNC();
 
-	if (gCityLogLevel >= 3) logContractBroker(1, "      City %S tenders for unit builds at priority %d", pCity->getName().GetCString(), iMinPriority);
+	int iNumTenders = 1; // par d�faut
 
-	cityTender newTender;
+	iNumTenders = 1 + (pCity->getPopulation() / 10) + (pCity->getYieldRate(YIELD_PRODUCTION) / 100);
+	if (pCity->isCapital())
+	{
+		iNumTenders+=2;
+	}
 
-	newTender.iMinPriority = iMinPriority;
-	newTender.iCityId = pCity->getID();
+	
+	iNumTenders = std::min(iNumTenders, 4); // max 6
 
-	m_advertisingTenders.push_back(newTender);
+
+	for (int i = 0; i < iNumTenders; i++)
+	{
+		cityTender newTender;
+		newTender.iMinPriority = iMinPriority;
+		newTender.iCityId = pCity->getID();
+		m_advertisingTenders.push_back(newTender);
+
+		if (gCityLogLevel >= 3)
+			logContractBroker(1, "      City %S tenders (slot %d/%d) for unit builds at priority %d",
+				pCity->getName().GetCString(), i + 1, iNumTenders, iMinPriority);
+	}
+
 }
 
 //	Find out how many requests have already been made for units of a specified AI type
@@ -512,10 +533,28 @@ void CvContractBroker::finalizeTenderContracts()
 								iValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 								iValue /= iTurns;
 
+								//if the nb of turns is too high for a small city, don't consider the unit, unless there are no other options
+								if (iTurns > 20 && pCity->getPopulation() < 5 && m_advertisingTenders.size() > 3)
+								{
+									if (gCityLogLevel >= 3)
+									{
+										logContractBroker(1,
+											"      City %S give up for production of unit %S with base value %d, depreciated value (%d turn production) to %d",
+											pCity->getName().GetCString(),
+											GC.getUnitInfo(eUnit).getDescription(),
+											iBaseValue,
+											iTurns,
+											iValue
+										);
+									}
+									continue;
+								}
+
+								// generate the path to the destination, if it is too long the value of the unit drops. If no path, then can't supply the unit
 								if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 								{
 									const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
-									iValue /= (1 + iDistance);
+									iValue /= (1 + intSqrt(iDistance));
 
 									if (gCityLogLevel >= 3)
 									{
@@ -589,7 +628,12 @@ void CvContractBroker::finalizeTenderContracts()
 
 				// Queue up the build. Add to queue head if the current build is not a unit,
 				//	implies a local build below the priority of work the city tendered for.
-				const bool bAppend = pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN;
+				const bool bDanger = pBestCity->AI_isDanger();
+				const int iHammerCostPercent = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+				//if a production is nearly finished, don't insert a unit, add it to the queue.
+				const int iMaxTurntoLeave = (bDanger && pBestCity->getProductionUnit() == NO_UNIT ? 1 + GC.getGame().getGameSpeedType() / 4 : 1 + iHammerCostPercent / 50);
+				const bool bNearlyFinished = (pBestCity->getProductionTurnsLeft() <= iMaxTurntoLeave || (pBestCity->getProductionTurnsLeft()+3) <= pBestCity->getProductionTurnsLeft(eBestUnit, 1));
+				bool bAppend = (pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN) || bNearlyFinished;
 
 				pBestCity->pushOrder(
 					ORDER_TRAIN,
@@ -730,6 +774,7 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 				iAtY = contractedRequest->iAtY;
 
 				pJoinUnit = findUnit(contractedRequest->iUnitId);
+				FAssert(NULL != pJoinUnit);
 				return true;
 			}
 			return false;
@@ -792,7 +837,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 			{
 				int	iValue = 1;
 
-				if ((request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 || (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
+				if ((request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 && (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
 				{
 					if (request.eAIType == NO_UNITAI || unitX->AI_getUnitAIType() == request.eAIType)
 					{
@@ -835,6 +880,8 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 					int iPathTurns = 0;
 					int iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue < 1 ? MAX_INT : 5 * iValue / iBestValue));
 
+					iValue = applyDistanceScoringFactor(iValue, unitX->plot(), pTargetPlot, 1);
+
 					if (request.iMaxPath < iMaxPathTurns)
 					{
 						iMaxPathTurns = request.iMaxPath;
@@ -845,7 +892,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 					|| !bThisPlotOnly
 					&& unitX->generatePath(pTargetPlot, MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS, true, &iPathTurns, iMaxPathTurns))
 					{
-						iValue /= (iPathTurns + 1);
+						//iValue /= (iPathTurns + 1);
 
 						if (iValue > iBestValue)
 						{

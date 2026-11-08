@@ -86,8 +86,7 @@ class EventTriggerScreen:
 					i = 0
 					iLetter = 0
 					iTemp = W_INDEX * iList
-					if iTemp - iX > 0:
-						iX = 4 + iTemp
+					iX = 4 + iTemp
 				szLetter = str(szName[:1])
 				szHeader = szFont + "<color=245,245,0,255>" + "-----  " + szLetter + "  -----"
 				do(LIST[iList], szHeader, eWidGen, -1, 0, 1<<2)
@@ -104,7 +103,6 @@ class EventTriggerScreen:
 
 		import HandleInputUtil
 		self.debugInput = HandleInputUtil.debugInput
-		self.mouseFlags = HandleInputUtil.MOUSE_FLAGS.get
 
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
@@ -118,8 +116,6 @@ class EventTriggerScreen:
 
 	def handleInput(self, inputClass):
 		iCode	= inputClass.eNotifyCode
-		#iData	= inputClass.iData
-		#ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
 		iData1	= inputClass.iData1
 

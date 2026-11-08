@@ -63,7 +63,7 @@ def onUnitBuilt( argsList):
 				iNumCoast = 0
 				iTaiga = GC.getInfoTypeForString('TERRAIN_TAIGA')
 				iTundra = GC.getInfoTypeForString('TERRAIN_TUNDRA')
-				iPermafrost = GC.getInfoTypeForString('TERRAIN_TUNDRA')
+				iPermafrost = GC.getInfoTypeForString('TERRAIN_PERMAFROST')
 				iSnow = GC.getInfoTypeForString('TERRAIN_ICE')
 				iDesert = GC.getTERRAIN_DESERT()
 				iDunes = GC.getInfoTypeForString('TERRAIN_DUNES')

@@ -181,12 +181,9 @@ class WBCityDataScreen:
 			screen.addPullDownString("YieldType", GC.getYieldInfo(i).getDescription(), i, i, iSelectedYield == i)
 		for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
 			screen.addPullDownString("YieldType", GC.getCommerceInfo(i).getDescription(), i + YieldTypes.NUM_YIELD_TYPES, i + YieldTypes.NUM_YIELD_TYPES, iSelectedYield == i + YieldTypes.NUM_YIELD_TYPES)
-
-	## Disabled because neither is working correctly with BTS dll ##
-	#	iTotal = YieldTypes.NUM_YIELD_TYPES + CommerceTypes.NUM_COMMERCE_TYPES
-	#	screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HAPPINESS", ()), iTotal, iTotal, iSelectedYield == iTotal)
-	#	screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HEALTH", ()), iTotal + 1, iTotal + 1, iSelectedYield == iTotal + 1)
-	## Disabled because neither is working correctly with BTS dll ##
+		iHappyIndex = YieldTypes.NUM_YIELD_TYPES + CommerceTypes.NUM_COMMERCE_TYPES
+		screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HAPPINESS", ()), iHappyIndex, iHappyIndex, iSelectedYield == iHappyIndex)
+		screen.addPullDownString("YieldType", CyTranslator().getText("TXT_KEY_CONCEPT_HEALTH", ()), iHappyIndex + 1, iHappyIndex + 1, iSelectedYield == iHappyIndex + 1)
 
 		iY += 30
 		iHeight = (screen.getYResolution()/2 - iY) / 24 * 24 + 2
@@ -198,24 +195,24 @@ class WBCityDataScreen:
 			iRow = screen.appendTableRow("WBModifyBuilding")
 			screen.setTableText("WBModifyBuilding", 0, iRow, "<font=3>" + item[0] + "</font>", info.getButton(), WidgetTypes.WIDGET_HELP_BUILDING, item[1], -1, 1<<0)
 			sText = ""
-			iChange = pCity.getBuildingHappyChange(item[1])
-			if iChange > 0:
-				sText += u"%d%s" %(iChange, CyTranslator().getText("[ICON_HAPPY]", ()))
-			elif iChange < 0:
-				sText += u"%d%s" %(-iChange, CyTranslator().getText("[ICON_UNHAPPY]", ()))
-			iChange = pCity.getBuildingHealthChange(item[1])
-			if iChange > 0:
-				sText += u"%d%s" %(iChange, CyTranslator().getText("[ICON_HEALTHY]", ()))
-			elif iChange < 0:
-				sText += u"%d%s" %(-iChange, CyTranslator().getText("[ICON_UNHEALTHY]", ()))
+			iVal = pCity.getBuildingHappyChange(item[1])
+			if iVal > 0:
+				sText += u"%d%s" %(iVal, CyTranslator().getText("[ICON_HAPPY]", ()))
+			elif iVal < 0:
+				sText += u"%d%s" %(-iVal, CyTranslator().getText("[ICON_UNHAPPY]", ()))
+			iVal = pCity.getBuildingHealthChange(item[1])
+			if iVal > 0:
+				sText += u"%d%s" %(iVal, CyTranslator().getText("[ICON_HEALTHY]", ()))
+			elif iVal < 0:
+				sText += u"%d%s" %(-iVal, CyTranslator().getText("[ICON_UNHEALTHY]", ()))
 			for j in xrange(YieldTypes.NUM_YIELD_TYPES):
-				iChange = pCity.getBuildingYieldChange(item[1], j)
-				if iChange != 0:
-					sText += u"%d%c" %(iChange, GC.getYieldInfo(j).getChar())
+				iVal = pCity.getBuildingYieldChange(item[1], j)
+				if iVal != 0:
+					sText += u"%d%c" %(iVal, GC.getYieldInfo(j).getChar())
 			for j in xrange(CommerceTypes.NUM_COMMERCE_TYPES):
-				iChange = pCity.getBuildingCommerceChange(item[1], j)
-				if iChange != 0:
-					sText += u"%d%c" %(iChange, GC.getCommerceInfo(j).getChar())
+				iVal = pCity.getBuildingCommerceChange(item[1], j)
+				if iVal != 0:
+					sText += u"%d%c" %(iVal, GC.getCommerceInfo(j).getChar())
 			screen.setTableInt("WBModifyBuilding", 1, iRow, "<font=3>" + sText + "</font>", "", WidgetTypes.WIDGET_HELP_BUILDING, item[1], -1, 1<<0)
 
 	def placeSpecialist(self):
@@ -308,7 +305,7 @@ class WBCityDataScreen:
 			if iNum > 0:
 				sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 				sItem += " (" + str(iNum) + ")"
-			screen.setTableText("WBBonus", 0, iRow, "<font=3>" + sColor + sItem, GC.getBonusInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7878, item[1], 1<<0 )
+			screen.setTableText("WBBonus", 0, iRow, "<font=3>" + sColor + sItem + "</font></color>", GC.getBonusInfo(item[1]).getButton(), WidgetTypes.WIDGET_PYTHON, 7878, item[1], 1<<0 )
 
 	def handleInput(self, inputClass):
 		screen = CyGInterfaceScreen( "WBCityDataScreen", CvScreenEnums.WB_CITYDATA)
@@ -397,7 +394,7 @@ class WBCityDataScreen:
 			self.placeGreatPeople()
 
 		elif inputClass.getFunctionName() == "BonusClass":
-			iSelectedClass = inputClass.getData() - 1
+			iSelectedClass = inputClass.getData()
 			self.createBonusList()
 			self.placeBonus()
 

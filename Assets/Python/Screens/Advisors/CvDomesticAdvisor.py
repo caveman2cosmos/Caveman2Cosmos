@@ -351,11 +351,11 @@ class CvDomesticAdvisor:
 			szfontEdge = "<font=2b>"
 
 		if xRes > 1700:
-			self.aFontList = aFontList = [szfontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
+			self.aFontList = [szfontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>"]
 		elif xRes > 1400:
-			self.aFontList = aFontList = [szfontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
+			self.aFontList = [szfontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>"]
 		else:
-			self.aFontList = aFontList = [szfontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
+			self.aFontList = [szfontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>"]
 
 		xMid = xRes / 2
 		# Dimension of the table
@@ -485,7 +485,7 @@ class CvDomesticAdvisor:
 		self.drawContents(screen)
 
 	def calculateFounded(self, CyCity, szKey, arg):
-		iTurn = CyCity.getGameTurnFounded()
+		iTurn = CyCity.getGameDateFounded()
 		if iTurn < 10000:
 			return TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,))
 
@@ -575,7 +575,7 @@ class CvDomesticAdvisor:
 
 		nTotalTradeProfit //= 100
 		if nTotalTradeProfit < 0:
-			return "-%d" % nTotalTradeProfit
+			return "%d" % nTotalTradeProfit
 
 		return "%d" % nTotalTradeProfit
 
@@ -736,8 +736,10 @@ class CvDomesticAdvisor:
 		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit(self, city, szKey, arg):
-		szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription() )
-		return szReturn
+		iUnit = city.getConscriptUnit()
+		if iUnit == -1:
+			return u""
+		return unicode(GC.getUnitInfo(iUnit).getDescription())
 
 	def calculateConscriptUnit(self, city, szKey, arg):
 		if city.canConscript():
@@ -1577,8 +1579,6 @@ class CvDomesticAdvisor:
 		iData	= inputClass.iData
 		ID		= inputClass.iItemID
 		NAME	= inputClass.szFunctionName
-		iData1	= inputClass.iData1
-		iData2	= inputClass.iData2
 		iCol	= inputClass.getMouseX()
 		iRow	= inputClass.getMouseY()
 		szFlag	= HandleInputUtil.MOUSE_FLAGS.get(inputClass.uiFlags, "UNKNOWN")

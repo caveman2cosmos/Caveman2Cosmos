@@ -4,7 +4,7 @@
 		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
 				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
 				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
-				ignore underlaying terrain cost.
+				ignore underlying terrain cost.
 				Presence of a feature without an improvement on it increases cultural distance by 1
 				unless bIgnoreTerrainCulture is true.
 				Both can be used together; this in effect replaces the terrain distance with only
@@ -138,7 +138,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-20</iHealthPercent>
-			<iDefense>50</iDefense>
+			<iDefense>20</iDefense>
 			<iGrowth>10</iGrowth>
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
@@ -367,10 +367,10 @@
 			<Civilopedia>TXT_KEY_FEATURE_FLOOD_PLAINS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_FLOOD_PLAINS</ArtDefineTag>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<RiverYieldChange>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</RiverYieldChange>
@@ -399,6 +399,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -497,7 +501,7 @@
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>25</iHealthPercent>
-			<iDefense>50</iDefense>
+			<iDefense>15</iDefense>
 			<iWarmingDefense>2</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
@@ -519,6 +523,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -619,7 +627,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>400</iAppearance>
-			<iDefense>20</iDefense>
+			<iDefense>10</iDefense>
 			<iGrowth>15</iGrowth>
 			<iHealthPercent>25</iHealthPercent>
 			<iPopDestroys>3</iPopDestroys>
@@ -643,6 +651,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -739,7 +751,7 @@
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>100</iAppearance>
-			<iDefense>15</iDefense>
+			<iDefense>5</iDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -760,6 +772,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -842,12 +858,12 @@
 			<ArtDefineTag>ART_DEF_FEATURE_FOREST_ANCIENT</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>50</iHealthPercent>
-			<iDefense>50</iDefense>
+			<iDefense>20</iDefense>
 			<iAppearance>300</iAppearance>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
@@ -869,6 +885,10 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -966,7 +986,7 @@
 			<iMovement>3</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-50</iHealthPercent>
-			<iDefense>25</iDefense>
+			<iDefense>10</iDefense>
 			<iAppearance>200</iAppearance>
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>6</iPopDestroys>
@@ -1549,7 +1569,7 @@
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>50</iDefense>
+			<iDefense>10</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
 			<iPopDestroys>5</iPopDestroys>
@@ -1654,7 +1674,6 @@
 			<ArtDefineTag>ART_DEF_FEATURE_CACTUS</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>800</iAppearance>
 			<iGrowth>10</iGrowth>
@@ -1770,15 +1789,11 @@
 				<iYield>1</iYield>
 			</RiverYieldChange>
 			<iHealthPercent>25</iHealthPercent>
-			<iDefense>10</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>1000</iAppearance>
 			<iGrowth>15</iGrowth>
 			<iPopDestroys>8</iPopDestroys>
 			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
 					<bTerrain>1</bTerrain>
@@ -1889,7 +1904,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_MANGROVE</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>10</iDefense>
 			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<bCoastalOnly>1</bCoastalOnly>
@@ -1980,7 +1995,7 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iHealthPercent>10</iHealthPercent>
-			<iDefense>15</iDefense>
+			<iDefense>5</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
 			<iPopDestroys>3</iPopDestroys>
@@ -2003,14 +2018,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2103,6 +2110,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_VOLCANO_ACTIVE</ArtDefineTag>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
@@ -2320,7 +2328,7 @@
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CRATER</ArtDefineTag>
 			<iMovement>1</iMovement>
-			<iDefense>-15</iDefense>
+			<iDefense>-25</iDefense>
 			<iAppearance>60</iAppearance>
 			<iPopDestroys>20</iPopDestroys>
 			<TerrainBooleans>
@@ -2458,6 +2466,7 @@
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iDefense>-50</iDefense>
@@ -2516,6 +2525,22 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -2610,7 +2635,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_ARCH1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -2706,7 +2731,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_ARCH2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -2803,7 +2828,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_FORM1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -2900,7 +2925,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_FORM2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -2997,7 +3022,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_FORM3</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3094,7 +3119,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_POLAR_ROCK_FORM4</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3191,7 +3216,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_ARCH1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3275,7 +3300,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_ARCH2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3360,7 +3385,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_FORM1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3445,7 +3470,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_FORM2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3530,7 +3555,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_FORM3</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3615,7 +3640,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DARK_ROCK_FORM4</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3700,7 +3725,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_ARCH1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3792,7 +3817,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_ARCH2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3885,7 +3910,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_FORM1</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -3978,7 +4003,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_FORM2</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -4071,7 +4096,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_FORM3</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -4164,7 +4189,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ROCK_FORM4</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
@@ -4408,7 +4433,7 @@
 			</RiverYieldChange>
 			<iMovement>2</iMovement>
 			<iHealthPercent>-50</iHealthPercent>
-			<iDefense>25</iDefense>
+			<iDefense>10</iDefense>
 			<iAppearance>80</iAppearance>
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>-1</iPopDestroys>
@@ -4427,6 +4452,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -5236,11 +5269,11 @@
 			<Description>TXT_KEY_FEATURE_CAVES</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CAVES_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CAVES</ArtDefineTag>
-			<iDefense>30</iDefense>
+			<iDefense>20</iDefense>
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
-			<iCultureDistance>-1</iCultureDistance>
+			<iCultureDistance>-2</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -5308,6 +5341,14 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_HILL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -5383,7 +5424,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_CITY_RUINS</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>10</iDefense>
 			<iPopDestroys>0</iPopDestroys>
 			<FootstepSounds>
 				<FootstepSound>
@@ -5520,7 +5561,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ARCOLOGY_RUINS</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>15</iDefense>
+			<iDefense>0</iDefense>
 			<iPopDestroys>0</iPopDestroys>
 			<FootstepSounds>
 				<FootstepSound>
@@ -6027,7 +6068,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_BASALT_ORGAN</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>5</iDefense>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
@@ -6057,7 +6098,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_DEVILS_TABLE</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>5</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
@@ -6252,7 +6293,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_PRAVCICKA_BRANA</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>5</iDefense>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
@@ -6282,7 +6323,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_SHARK_BAY</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>5</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
@@ -6361,7 +6402,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_ULURU</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDefense>25</iDefense>
+			<iDefense>5</iDefense>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>

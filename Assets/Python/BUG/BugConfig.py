@@ -236,6 +236,7 @@ class Handler:
 					if j > 4:
 						break
 					attr[j + 1] = values[j]
+				self.attributes[i] = tuple(attr)
 				break
 		else:
 			raise BugUtil.ConfigError("Missing attribute %s", name)

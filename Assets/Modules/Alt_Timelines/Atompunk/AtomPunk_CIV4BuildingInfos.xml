@@ -221,7 +221,7 @@
 				<iYield>50</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-12</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -244,9 +244,10 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
+				<iYield>2</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>2</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
@@ -686,10 +687,8 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>15</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>3</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
@@ -728,37 +727,65 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
+            <TechYieldChanges>
+                <TechYieldChange>
+                    <PrereqTech>TECH_CLONING</PrereqTech>
+                    <TechYield>
+                        <iYield>800</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
+                    <TechYield>
+                        <iYield>700</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
+                    <TechYield>
+                        <iYield>700</iYield>
+                    </TechYield>
+                </TechYieldChange>
+                <TechYieldChange>
+                    <PrereqTech>TECH_ROBOTICS</PrereqTech>
+                    <TechYield>
+                        <iYield>0</iYield>
+                        <iYield>700</iYield>
+                    </TechYield>
+                </TechYieldChange>
+            </TechYieldChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_LUNAR_EXPLORATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SPACE_STATIONS</TechType>
 					<CommercePercents>
-						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ROBOTICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_CLONING</TechType>
 					<CommercePercents>
-						<iCommercePercent>800</iCommercePercent>
+						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>

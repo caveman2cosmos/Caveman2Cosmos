@@ -832,6 +832,8 @@ class CvUnitDesc:
 		)
 		if unit.isCommander():
 			f.write("\t\tCommander=1\n")
+		if unit.isCommodore():
+			f.write("\t\tCommodore=1\n")
 		if unit.getNameNoDesc():
 			f.write("\t\tUnitName=%s\n" % unit.getNameNoDesc().encode(fEncode))
 		if unit.getLeaderUnitType() != -1:
@@ -886,6 +888,7 @@ class CvUnitDesc:
 		self.isPatrol = False
 		self.isPlunder = False
 		self.bCommander = False
+		self.bCommodore = False
 		self.szUnitAIType = "NO_UNITAI"
 		self.iImmobile = 0
 		self.iBaseCombatStr = -1
@@ -918,6 +921,11 @@ class CvUnitDesc:
 				self.bCommander = True
 				continue
 
+			v = parser.findTokenValue(toks, "Commodore")
+			if v != -1:
+				self.bCommodore = True
+				continue
+
 			v = parser.findTokenValue(toks, "LeaderUnitType")
 			if v != -1:
 				self.leaderUnitType = v
@@ -942,7 +950,7 @@ class CvUnitDesc:
 
 			v = parser.findTokenValue(toks, "FacingDirection")
 			if v != -1:
-				self.facingDirection = (DirectionTypes(v))
+				self.facingDirection = DirectionTypes(int(v))
 				continue
 
 			if parser.findTokenValue(toks, "Sleep") != -1:
@@ -1009,6 +1017,8 @@ class CvUnitDesc:
 
 		if self.bCommander:
 			unit.setCommander(True)
+		if self.bCommodore:
+			unit.setCommodore(True)
 		if self.leaderUnitType != None:
 			leaderUnitTypeNum = GC.getInfoTypeForString(self.leaderUnitType)
 			if leaderUnitTypeNum > -1:
@@ -1328,29 +1338,6 @@ class CvCityDesc:
 				self.iExtraTrade = int(v)
 				continue
 
-			v = parser.findTokenValue(toks, "ModifiedBuilding")
-			if v != -1:
-				iBuilding = GC.getInfoTypeForString(v)
-				v = parser.findTokenValue(toks, "Yield")
-				if v != -1:
-					self.lBuildingYield.append([iBuilding, GC.getInfoTypeForString(v), int(parser.findTokenValue(toks, "Amount"))])
-					continue
-
-				v = parser.findTokenValue(toks, "Commerce")
-				if v != -1:
-					self.lBuildingCommerce.append([iBuilding, GC.getInfoTypeForString(v), int(parser.findTokenValue(toks, "Amount"))])
-					continue
-
-				v = parser.findTokenValue(toks, "Happy")
-				if v != -1:
-					self.lBuildingHappy.append([iBuilding, int(v)])
-					continue
-
-				v = parser.findTokenValue(toks, "Health")
-				if v != -1:
-					self.lBuildingHealth.append([iBuilding, int(v)])
-					continue
-
 			if parser.findTokenValue(toks, "EndCity") != -1:
 				break
 
@@ -1583,7 +1570,7 @@ class CvPlotDesc:
 
 				v = parser.findTokenValue(toks, "RiverNSDirection")
 				if v != -1:
-					self.riverNSDirection = (CardinalDirectionTypes(v))
+					self.riverNSDirection = CardinalDirectionTypes(int(v))
 					continue
 
 				if parser.findTokenValue(toks, "isNOfRiver") != -1:
@@ -1592,7 +1579,7 @@ class CvPlotDesc:
 
 				v = parser.findTokenValue(toks, "RiverWEDirection")
 				if v != -1:
-					self.riverWEDirection = (CardinalDirectionTypes(v))
+					self.riverWEDirection = CardinalDirectionTypes(int(v))
 					continue
 
 				if parser.findTokenValue(toks, "isWOfRiver") != -1:
@@ -1633,7 +1620,7 @@ class CvPlotDesc:
 
 				v = parser.findTokenValue(toks, "PlotType")
 				if v != -1:
-					self.plotType = PlotTypes(v)
+					self.plotType = PlotTypes(int(v))
 					continue
 
 				# Units
@@ -1779,8 +1766,13 @@ class CvSignDesc:
 
 
 	def apply(self):
-		CyEngine().addSign(GC.getMap().plot(self.iX, self.iY), self.playerType, self.szCaption)
-		print "sign added at %dx%dy for player %d with caption: '%s'" %(self.iX, self.iY, self.playerType, self.szCaption)
+		print "sign will be added at %dx%dy for player %d with caption: '%s'" %(self.iX, self.iY, self.playerType, self.szCaption)
+		pPlot = GC.getMap().plot(self.iX, self.iY)
+		if pPlot and not pPlot.isNone():
+			CyEngine().addSign(pPlot, self.playerType, self.szCaption)
+			print "sign added at %dx%dy for player %d with caption: '%s'" %(self.iX, self.iY, self.playerType, self.szCaption)
+		else:
+			print "Plot invalide : x = %d, y = %d" % (self.iX, self.iY)
 
 # handles saving/loading a worldbuilder description file
 class CvWBDesc:
@@ -1908,7 +1900,9 @@ Randomize Resources=0\nEndMap\n"
 
 	# after reading setup the map
 	def applyMap(self):
-		self.gameDesc.apply()
+		if GAME.getCurrentMap() == MapTypes.MAP_EARTH:
+			self.gameDesc.apply()
+
 		MAP = GC.getMap()
 		# recreate map
 		print("map rebuild. gridw=%d, gridh=%d" %(self.mapDesc.iGridW, self.mapDesc.iGridH))

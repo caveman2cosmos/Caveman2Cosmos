@@ -88,10 +88,10 @@ g_dispatcher = None
 ## Configuration
 
 def addModuleUtils(utils, override=False, log=None):
-	getDispatcher()._addModuleUtils(utils, log)
+	getDispatcher()._addModuleUtils(utils, override, log)
 
 def addClassUtils(utils, override=False, log=None):
-	getDispatcher()._addClassUtils(utils, log)
+	getDispatcher()._addClassUtils(utils, override, log)
 
 
 def addHandler(func, override=False, log=None):
@@ -104,7 +104,7 @@ def addBoundHandler(utils, func, override=False, log=None):
 	addNamedBoundHandler(func.__name__, utils, func, override, log)
 
 def addNamedBoundHandler(name, utils, func, override=False, log=None):
-	getDispatcher()._addBoundHandler(name, func, override, log)
+	getDispatcher()._addBoundHandler(name, utils, func, override, log)
 
 
 def addListener(func, log=None):

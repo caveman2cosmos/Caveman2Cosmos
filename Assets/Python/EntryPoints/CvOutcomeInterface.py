@@ -171,7 +171,7 @@ def doRemoveWVHumanSacrifice(argsList):
 				CyCity.changeHasBuilding(iWVSacrifice, False)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(CyPlayer.getID(),False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(CyCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),CyCity.getX(),CyCity.getY(),True,True)
+				CyInterface().addMessage(CyPlayer.getID(),False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(CyCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,CyUnit.getButton(),ColorTypes(8),CyCity.getX(),CyCity.getY(),True,True)
 
 			# Remove the worldview token building
 			CyCity.changeHasBuilding(iToken, False)
@@ -756,7 +756,7 @@ def canBuildPigBonus(argsList):
 	if pPlot.getFeatureType() not in (
 		GC.getFEATURE_FOREST(), GC.getInfoTypeForString("FEATURE_FOREST_ANCIENT"),
 		GC.getFEATURE_JUNGLE(), GC.getFEATURE_FLOOD_PLAINS()
-		): return f
+		): return 0
 	if pPlot.getTerrainType() not in (
 		GC.getInfoTypeForString("TERRAIN_SCRUB"), GC.getInfoTypeForString("TERRAIN_GRASSLAND"), GC.getInfoTypeForString("TERRAIN_PLAINS"),
 		GC.getInfoTypeForString("TERRAIN_LUSH"), GC.getInfoTypeForString("TERRAIN_MUDDY"), GC.getInfoTypeForString("TERRAIN_MARSH")

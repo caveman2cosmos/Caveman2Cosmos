@@ -20,6 +20,7 @@ class CvReplayMessage;
 class CvReplayInfo;
 class CvUnit;
 class CvUnitCombatInfo;
+class CvTalkingHeadMessage;
 
 //	Max number of barbarian units in existence for a spawn of a new one to be allowed
 //	This allows a 'space' for 'real' barbarians to be built before we use up the entire
@@ -183,6 +184,7 @@ public:
 	int getTurnYear(int iGameTurn);
 	int getGameTurnYear();
 	CvDate getCurrentDate();
+	int getTurnHACValue(int iTurn) const;
 
 	// A unique ID for this game that is persistent across sessions
 	const CvString getGameId() const { return m_gameId; }
@@ -358,6 +360,7 @@ public:
 
 protected:
 	void doFlexibleDifficulty();
+	void doCalculateCurrentTick();
 	void doHightoLow();
 	void doIncreasingDifficulty();
 	void doFinalFive();
@@ -380,6 +383,7 @@ protected:
 	int m_iEstimateEndTurn;
 	CvDate m_currentDate;
 	int m_iDateTurn;
+	std::map<int, int> turnHACValues;
 
 	int m_iTurnSlice;
 	int m_iMinGameSliceToCycleUnit;
@@ -881,6 +885,9 @@ public:
 	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
 
 	void setWorldBuilder(const bool bNewValue);
+
+	void writeRealtimeLogMetadata(bool bTruncate = false);
+	void addRealtimeLogEvent(PlayerTypes ePlayer, const CvTalkingHeadMessage& message);
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

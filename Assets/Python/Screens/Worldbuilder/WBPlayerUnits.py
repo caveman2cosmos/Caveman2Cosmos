@@ -103,7 +103,6 @@ class WBPlayerUnits:
 		self.addPageSwitch()
 
 	def sortUnits(self):
-		screen = CyGInterfaceScreen( "WBPlayerUnits", CvScreenEnums.WB_UNITLIST)
 		global iUnitID
 		global lUnits
 		global iUnitOwner
@@ -156,7 +155,6 @@ class WBPlayerUnits:
 		self.placeCurrentUnit()
 
 	def sortCities(self):
-		screen = CyGInterfaceScreen( "WBPlayerUnits", CvScreenEnums.WB_UNITLIST)
 		global iCityID
 		global lCities
 		global iCityOwner
@@ -526,7 +524,7 @@ class WBPlayerUnits:
 		elif sName == "DeleteCurrentCity":
 			if pCityOwner:
 				pCity = pCityOwner.getCity(iCityID)
-				if not pCity:
+				if pCity:
 					pCity.kill()
 					iCityID = -1
 					self.sortCities()

@@ -163,6 +163,7 @@ class Revolution:
 		customEM.addEventHandler("kbdEvent", self.onKbdEvent)
 		self.customEM.setPopupHandler(RevDefs.revolutionPopup, ["revolutionPopup",self.revolutionPopupHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.joinHumanPopup, ["joinHumanPopup",self.joinHumanHandler,self.blankHandler])
+		self.customEM.setPopupHandler(RevDefs.controlLostPopup, ["controlLostPopup",self.blankHandler,self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.revWatchPopup, ["revWatchPopup", self.revWatchHandler, self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.pickCityPopup, ["pickCityPopup", self.pickCityHandler, self.blankHandler])
 		self.customEM.setPopupHandler(RevDefs.bribeCityPopup, ["bribeCityPopup", self.bribeCityHandler, self.blankHandler])
@@ -333,7 +334,7 @@ class Revolution:
 		if self.isLocalHumanPlayer(iPlayer):
 			lCity = []
 			for city in GC.getPlayer(iPlayer).cities():
-				lCity.append((pCity.getRevolutionIndex(), pCity.getName(), pCity.getID()))
+				lCity.append((city.getRevolutionIndex(), city.getName(), city.getID()))
 
 			if not lCity:
 				popup = CyPopup(-1, EventContextTypes.NO_EVENTCONTEXT, True)
@@ -385,7 +386,7 @@ class Revolution:
 			elif reason == 'No Need':
 				popup.setBodyString(TRNSLTR.getText("TXT_KEY_REV_BRIBE_CITY_NO_NEED",()) % pCity.getName(), 1<<0)
 			else:
-				popup.setBodyString('Error! unknown reason for inability to bribe #s: %s' % (pCity.getName(), reason), 1<<0)
+				popup.setBodyString('Error! unknown reason for inability to bribe %s: %s' % (pCity.getName(), reason), 1<<0)
 				print '[ERROR] unknown reason for inability to bribe %s: %s' % (pCity.getName(), reason)
 
 			popupData['Buttons'] = [['None',-1]]
@@ -1102,7 +1103,7 @@ class Revolution:
 				deltaX = min(deltaX, map.getGridWidth() - deltaX)
 			deltaY = abs(pCity.getY() - capital.getY())
 			if map.isWrapY():
-				deltaY = min(deltaY, map.getGridWidth() - deltaY)
+				deltaY = min(deltaY, map.getGridHeight() - deltaY)
 			cityDistRaw = ( deltaX**2 + deltaY**2 )**0.5
 			cityDistMapModifier = ( map.getGridWidth()**2 + map.getGridHeight()**2 )**0.5
 
@@ -2084,7 +2085,7 @@ class Revolution:
 					avgHappiness = 0
 					for happi in revIdxHist['Happiness'] :
 						avgHappiness += happi
-					avgHappiness /= len(revIdxHist['Happiness'])
+					avgHappiness /= float(len(revIdxHist['Happiness']))
 
 					if( revIdxHist['Health'][0] > 20 ) :
 						odds = max([250.0,odds*2.5])
@@ -2099,11 +2100,11 @@ class Revolution:
 						odds *= 1.5
 						factors += 'Quickly worsening local, '
 
-					if( revIdxHist['Garrison'] < -5 ) :
+					if( revIdxHist['Garrison'][0] < -5 ) :
 						odds *= 0.6
 						odds = min([odds,150.0])
 						factors += 'Very strong gar, '
-					elif( revIdxHist['Garrison'] < -3 ) :
+					elif( revIdxHist['Garrison'][0] < -3 ) :
 						odds *= 0.8
 						odds = min([odds,200.0])
 						factors += 'Strong gar, '
@@ -2533,6 +2534,8 @@ class Revolution:
 						if self.LOG_DEBUG: print "[REV] Revolt: Cult player is dead, trying to reform"
 						bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CULT_PEACE_REFORM",()) + ' ' + cultPlayer.getCivilizationShortDescription(0) + '.'
 						pRevPlayer = cultPlayer
+						bIsJoinWar = False
+						joinPlayer = None
 
 
 					bodStr += '  ' + TRNSLTR.getText("TXT_KEY_REV_CULT_PEACE",())
@@ -3492,7 +3495,7 @@ class Revolution:
 					else :
 						vassalStyle = 'free'
 						if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen from size" % vassalStyle
-				elif( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FURIOUS or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FURIOUS ) :
+				elif( pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_FRIENDLY or pRevPlayer.AI_getAttitude(iPlayer) == AttitudeTypes.ATTITUDE_PLEASED ) :
 					vassalStyle = 'free'
 					if self.LOG_DEBUG: print "[REV] Revolt: Vassal style %s chosen from attitude" % vassalStyle
 
@@ -3576,7 +3579,7 @@ class Revolution:
 				if cultPlayer.getID() == iParentPlayer or cultPlayer.isNPC() or cultPlayer.isMinorCiv():
 					cultPlayer = None
 
-				elif bJoinCultureWar and ownerTeam.isAtWarWith(cultPlayer.getID()) and cultPlayer.isAlive():
+				elif bJoinCultureWar and ownerTeam.isAtWarWith(cultPlayer.getTeam()) and cultPlayer.isAlive():
 					# If at war with significant culture, join them
 					if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with dominant culture player " + cultPlayer.getCivilizationDescription(0)
 					pRevPlayer = cultPlayer
@@ -3933,16 +3936,16 @@ class Revolution:
 			iBuyOffCost = revData.dict.get( 'iBuyOffCost', -1 )
 
 			if( bPeaceful ) :
-				if( numRevCities > pPlayer.getNumCities()/2 ) :
+				if( 2 * numRevCities > pPlayer.getNumCities() ) :
 					iOdds = 70
-				elif( numRevCities < pPlayer.getNumCities()/4 ) :
+				elif( 4 * numRevCities < pPlayer.getNumCities() ) :
 					iOdds = 25
 				else :
 					iOdds = 40
 			else :
-				if( numRevCities > pPlayer.getNumCities()/2 ) :
+				if( 2 * numRevCities > pPlayer.getNumCities() ) :
 					iOdds = 80
-				elif( numRevCities < pPlayer.getNumCities()/4 ) :
+				elif( 4 * numRevCities < pPlayer.getNumCities() ) :
 					iOdds = 40
 				else :
 					iOdds = 60
@@ -4149,7 +4152,7 @@ class Revolution:
 				iHappiness = 100
 
 			# Adjusted approval rating based on num cities in revolt
-			if( numRevCities > pPlayer.getNumCities()/2 ) :
+			if( 2 * numRevCities > pPlayer.getNumCities() ) :
 				if self.LOG_DEBUG: print "[REV] Revolt: Approval rating (initially %d) adjusted due to %d of %d cities revolting"%(iHappiness,numRevCities,pPlayer.getNumCities())
 				iHappiness = int( iHappiness - 100*(numRevCities - pPlayer.getNumCities()/2)/(2.0*pPlayer.getNumCities()) )
 				iHappiness = max([iHappiness,25])
@@ -4163,7 +4166,7 @@ class Revolution:
 			# Other potential factors:
 			# Player rank
 
-			if( numRevCities > pPlayer.getNumCities()/2 ) :
+			if( 2 * numRevCities > pPlayer.getNumCities() ) :
 				iOdds = 50
 				if( bPeaceful ) :
 					iOdds -= 20
@@ -4172,7 +4175,7 @@ class Revolution:
 						iOdds += 10
 				if( pPlayer.hasTrait(iAggressive) ) :
 					iOdds -= 30
-			elif( numRevCities < pPlayer.getNumCities()/4 ) :
+			elif( 4 * numRevCities < pPlayer.getNumCities() ) :
 				iOdds = 25
 				if( bPeaceful ) :
 					iOdds -= 20
@@ -4297,10 +4300,10 @@ class Revolution:
 
 			[iOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds( pPlayer, victim, cityList[0].area(), allowAttackerVassal = False, allowBreakVassal = self.bAllowBreakVassal )
 
-			if( numRevCities > pPlayer.getNumCities()/2 ) :
+			if( 2 * numRevCities > pPlayer.getNumCities() ) :
 				iOdds += 50
 
-			elif( numRevCities < pPlayer.getNumCities()/4 ) :
+			elif( 4 * numRevCities < pPlayer.getNumCities() ) :
 				iOdds += 20
 
 			else :
@@ -4366,7 +4369,7 @@ class Revolution:
 
 			area = cityList[0].area()
 
-			if( numRevCities > pPlayer.getNumCities()/2 ) :
+			if( 2 * numRevCities > pPlayer.getNumCities() ) :
 				if( not pRevPlayer == None and pTeam.isAtWarWith(pRevPlayer.getTeam()) ) :
 					if( area.getPower(pRevPlayer.getID()) > 1.5*area.getPower(pPlayer.getID()) and bOfferPeace ) :
 						iOdds = 30
@@ -4383,11 +4386,11 @@ class Revolution:
 				if( pTeam.getAtWarCount(True) > 1 ) :
 					iOdds += 5
 				if( bOfferPeace ) :
-					if( iNumHandoverCities < pPlayer.getNumCities()/4 ) :
+					if( 4 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds = max([iOdds + 25, 20])
-					elif( iNumHandoverCities < pPlayer.getNumCities()/3 ) :
+					elif( 3 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 15
-					elif( iNumHandoverCities < pPlayer.getNumCities()/2 ) :
+					elif( 2 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 10
 					else :
 						iOdds -= 0
@@ -4397,7 +4400,7 @@ class Revolution:
 							iOdds = 0
 						else :
 							iOdds -= 20
-			elif( numRevCities < pPlayer.getNumCities()/4 ) :
+			elif( 4 * numRevCities < pPlayer.getNumCities() ) :
 				if( not pRevPlayer == None and pTeam.isAtWarWith(pRevPlayer.getTeam()) ) :
 					if( area.getPower(pRevPlayer.getID()) > area.getPower(pPlayer.getID()) ) :
 						iOdds = 10
@@ -4420,11 +4423,11 @@ class Revolution:
 				if( pTeam.getAtWarCount(True) > 1 ) :
 					iOdds += 10
 				if( bOfferPeace ) :
-					if( iNumHandoverCities < pPlayer.getNumCities()/4 ) :
+					if( 4 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds = max([iOdds + 20, 20])
-					elif( iNumHandoverCities < pPlayer.getNumCities()/3 ) :
+					elif( 3 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 10
-					elif( iNumHandoverCities < pPlayer.getNumCities()/2 ) :
+					elif( 2 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 0
 					else :
 						iOdds -= 20
@@ -4456,11 +4459,11 @@ class Revolution:
 				if( pTeam.getAtWarCount(True) > 1 ) :
 					iOdds += 10
 				if( bOfferPeace ) :
-					if( iNumHandoverCities < pPlayer.getNumCities()/4 ) :
+					if( 4 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds = max([iOdds + 20, 20])
-					elif( iNumHandoverCities < pPlayer.getNumCities()/3 ) :
+					elif( 3 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 15
-					elif( iNumHandoverCities < pPlayer.getNumCities()/2 ) :
+					elif( 2 * iNumHandoverCities < pPlayer.getNumCities() ) :
 						iOdds += 0
 					else :
 						iOdds -= 10
@@ -4687,6 +4690,7 @@ class Revolution:
 
 		elif buttonLabel == 'defect':
 			termsAccepted = False
+			bSwitchToRevs = True
 			revData.dict['bSwitchToRevs'] = True
 			# Release this player turn to the AI, human player changed below so that human now will control rebels
 			GAME.setForcedAIAutoPlay(iPlayerID, 1, True)
@@ -5681,7 +5685,7 @@ class Revolution:
 			if pCity:
 				cityList.append(pCity)
 			elif self.LOG_DEBUG:
-				print "[REV] Revolt: %s no longer owned by former owner" % pCity.getName()
+				print "[REV] Revolt: %s no longer owned by former owner" % iCity.getName()
 
 		if not cityList:
 			if self.LOG_DEBUG:

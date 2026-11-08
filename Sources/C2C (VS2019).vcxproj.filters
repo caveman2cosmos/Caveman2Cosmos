@@ -265,6 +265,9 @@
     <Filter Include="Source\DataDefinitions">
       <UniqueIdentifier>{3be3e26d-e7a2-4fe2-a227-e848ce210a71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Base\Army">
+      <UniqueIdentifier>{e81796e9-a40c-45e3-a2b6-d6230ade5ffd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FDataIOStream.cpp">
@@ -755,6 +758,12 @@
     </ClCompile>
     <ClCompile Include="CvHallOfFameInfo.cpp">
       <Filter>Source\Base\Infos</Filter>
+    </ClCompile>
+    <ClCompile Include="CvUnitSelectionCriteria.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CvArmy.cpp">
+      <Filter>Source\Base\Army</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1306,6 +1315,9 @@
     </ClInclude>
     <ClInclude Include="CvTraitInfo.h">
       <Filter>Source\DataDefinitions</Filter>
+    </ClInclude>
+    <ClInclude Include="CvArmy.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

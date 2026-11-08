@@ -9,7 +9,7 @@
 import BugOptionsTab
 
 class BugMapOptionsTab(BugOptionsTab.BugOptionsTab):
-	"BUG Nap Options Screen Tab"
+	"BUG Map Options Screen Tab"
 
 	def __init__(self, screen):
 		BugOptionsTab.BugOptionsTab.__init__(self, "Map", "Map")

@@ -89,7 +89,8 @@ public:
 
 	void updateFlagSymbolsInternal(bool bForce);
 	void updateFlagSymbols();
-	void updateFog();
+	void updateFog(const bool bApplyDecay = false);
+	void InitFogDecay(const bool bWithRandom = false);
 	void updateVisibility();
 	void updateSymbolVisibility();
 	void updateSymbols();

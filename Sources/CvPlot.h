@@ -187,8 +187,15 @@ public:
 	void checkCityRevolt();
 	void checkFortRevolt();
 
-	void updateFog();
+	void updateFog(const bool bApplyDecay = false);
 	void updateVisibility();
+#ifdef ENABLE_FOGWAR_DECAY
+	void InitFogDecay(const bool pWithRandom = false);
+	short getVisibilityDecayBonus(const bool pSeaPlot = false);
+	short getVisibilityDecay(TeamTypes eTeam) const;
+	void setVisibilityDecay(TeamTypes eTeam, short iNewValue);
+	void changeVisibilityDecay(TeamTypes eTeam, short iChange);
+#endif
 
 	void updateSymbolDisplay();
 	void updateSymbolVisibility();
@@ -368,6 +375,7 @@ public:
 	bool isActsAsCity() const;
 	bool isCanMoveSeaUnits() const;
 	bool isSeaTunnel() const;
+	bool isAreaConnectedViaSeaTunnel(int iOtherAreaID) const;
 	int getRevoltProtection() const;
 	int getAverageEnemyStrength(TeamTypes eTeam) const;
 	int getAverageEnemyDamage(TeamTypes eTeam) const;
@@ -387,7 +395,7 @@ public:
 	int getTerrainTurnDamage(const CvUnit* pUnit = NULL) const;
 	int getFeatureTurnDamage() const;
 	int getTotalTurnDamage(const CvUnit* pUnit = NULL) const;
-	CvUnit* getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
+	CvUnit* getWorstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false) const;
 	bool isBorder(bool bIgnoreWater = false) const;
 
 	int getNumVisibleAdjacentEnemyDefenders(const CvUnit* pUnit) const;
@@ -817,7 +825,7 @@ public:
 	void updateRiverCrossing();
 
 	DllExport bool isRevealed(TeamTypes eTeam, bool bDebug) const;
-	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup);
+	void setRevealed(const TeamTypes eTeam, const bool bNewValue, const bool bTerrainOnly, const TeamTypes eFromTeam, const bool bUpdatePlotGroup, const bool bUpdateFog = true);
 	bool isAdjacentRevealed(TeamTypes eTeam, bool bDebug = false) const;
 	bool isAdjacentNonrevealed(TeamTypes eTeam) const;
 
@@ -1038,6 +1046,10 @@ protected:
 
 	short* m_aiLastSeenTurn;
 
+#ifdef ENABLE_FOGWAR_DECAY
+	short* m_aiVisibilityDecay;
+#endif
+
 	//	This array will be sparsely populated on most plots so not worth
 	//	an indirection, but look to find a way to use the sparseness to reduce memory usage
 	//	at some point
@@ -1093,7 +1105,9 @@ public:
 	void doPreAttackTraps(CvUnit* pAttacker);
 
 	void countCommander(bool bNewVal, const CvUnit* pUnit);
+	void countCommodore(bool bNewVal, const CvUnit* pUnit);
 	bool inCommandField(const PlayerTypes ePlayer) const;
+	bool inCommandCommodoreField(const PlayerTypes ePlayer) const;
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:
@@ -1113,7 +1127,9 @@ private:
 	bool m_bPlotGroupsDirty;
 
 	std::map<uint8_t, uint16_t> m_commanderCount; // PlayerType : CommanderCount
+	std::map<uint8_t, uint16_t> m_commodoreCount; // PlayerType : CommodoreCount
 	void changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd);
+	void changeCommodoreCount(const PlayerTypes ePlayer, const bool bAdd);
 
 	static bool bDeferPlotGroupRecalculation;
 

@@ -148,7 +148,6 @@ class WBInfoScreen:
 		screen = CyGInterfaceScreen("WBInfoScreen", CvScreenEnums.WB_INFO)
 		global lSelectedItem
 		screen.minimapClearAllFlashingTiles()
-		sHeader = ""
 		if iItem == -1:
 			screen.hide("InfoHeader")
 			return
@@ -161,6 +160,7 @@ class WBInfoScreen:
 		iHeight = (screen.getYResolution() - iY - 40) / 24 * 24 + 2
 
 		nColumns = iWidth / self.iMinColWidth
+		screen.deleteWidget("PlotTable")
 		screen.addTableControlGFC("PlotTable", nColumns, iX, iY, iWidth, iHeight, False, True, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		for i in xrange(nColumns):
 			screen.setTableColumnHeader("PlotTable", i, "", iWidth/nColumns)
@@ -202,9 +202,10 @@ class WBInfoScreen:
 				sText = sColor + pUnit.getName()
 				screen.setTableText("PlotTable", iColumn, iRow, "<font=3>" + sText + "</color></font>", pUnit.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + iPlayer, iUnit, 1<<0)
 				screen.minimapFlashPlot(iX, iY, iColorB, -1)
-			pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
-			if pUnit:
-				screen.minimapFlashPlot(pUnit.getX(), pUnit.getY(), iColorA, -1)
+			if lSelectedItem[0] > -1 and lSelectedItem[1] > -1:
+				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
+				if pUnit:
+					screen.minimapFlashPlot(pUnit.getX(), pUnit.getY(), iColorB, -1)
 		elif iMode < 6:
 			for lPlots in lItems[iItem][5]:
 				iPlayer = lPlots[0]
@@ -301,8 +302,7 @@ class WBInfoScreen:
 						if iPlayerX == iSelectedPlayer:
 							lItems[iItemX][1] += 1
 						lItems[iItemX][2] += 1
-						if not [loopUnit.getX(), loopUnit.getY()] in lItems[iItemX][5]:
-							lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
+						lItems[iItemX][5].append([iPlayerX, loopUnit.getID()])
 		elif iMode == 1:
 			iData1 = 7873
 			for i in xrange(GC.getNumPromotionInfos()):
@@ -337,7 +337,6 @@ class WBInfoScreen:
 									lItems[iItemX][5].append([iPlayerX, loopCity.getID()])
 		elif iMode == 3:
 			iData1 = 7879
-			pPlayer = GC.getPlayer(iSelectedPlayer)
 			for i in xrange(GC.getNumSpecialistInfos()):
 				Info = GC.getSpecialistInfo(i)
 				lItems.append([Info.getDescription(), 0, 0, i, Info.getButton(), []])
@@ -496,7 +495,8 @@ class WBInfoScreen:
 							lItems[iItemX][2] += iCount
 							lItems[iItemX][5].append([iTeamX, -1])
 		if iItem > -1:
-			if lItems[iItem][2] == 0:
+			match = next((item for item in lItems if item[3] == iItem), None)
+			if match is None or match[2] == 0:
 				iItem = -1
 
 		for item in lItems:
@@ -566,9 +566,10 @@ class WBInfoScreen:
 					lSelectedItem = [iPlayer, iUnit]
 					screen.minimapFlashPlot(pNewUnit.getX(), pNewUnit.getY(), iColorA, -1)
 			elif iMode < 6:
-				pCity = GC.getPlayer(lSelectedItem[0]).getCity(lSelectedItem[1])
-				if pCity:
-					screen.minimapFlashPlot(pCity.getX(), pCity.getY(), iColorB, -1)
+				if lSelectedItem[0] > -1 and lSelectedItem[1] > -1:
+					pCity = GC.getPlayer(lSelectedItem[0]).getCity(lSelectedItem[1])
+					if pCity:
+						screen.minimapFlashPlot(pCity.getX(), pCity.getY(), iColorA, -1)
 				iPlayer = inputClass.getData1() - 7200
 				iCity = inputClass.getData2()
 				pNewCity = GC.getPlayer(iPlayer).getCity(iCity)

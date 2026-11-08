@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../XML/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_DEFENDER</Tag>
+		<English>Build Defender</English>
+		<French>Construire un [COLOR_BUILDING_TEXT]Défenseur[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_DEFENDER_HELP</Tag>
+		<English>Builds a defending unit.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_RECON</Tag>
+		<English>Build Recon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_RECON_HELP</Tag>
+		<English>Builds a recon unit.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_RESEARCH</Tag>
+		<English>Research</English>
+		<French>Recherche</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_RESEARCH_HELP</Tag>
+		<English>Think about what you have learned in the world and teach it.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BREAKTHROUGH</Tag>
+		<English>Breakthrough</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BREAKTHROUGH_MESSAGE</Tag>
+		<English>Our %s1 has brought forth great new knowledge</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_DEFENDER</Tag>
+		<English>Build defender</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_DEFENDER_MESSAGE</Tag>
+		<English>Our %s1 has built a new defending unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_RECON</Tag>
+		<English>Build recon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_RECON_MESSAGE</Tag>
+		<English>Our %s1 has built a new recon unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_RESEARCH</Tag>
+		<English>New knowledge</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_RESEARCH_MESSAGE</Tag>
+		<English>Our %s1 has brought forth new knowledge</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT</Tag>
+		<English>Fruit</English>
+		<French>Fruits</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Fruit by %D1</English>
+		<French>[ICON_BULLET]Change les Fruits de %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Fruit in all cities by %D1</English>
+		<French>[ICON_BULLET]Change les Fruits dans toutes les villes de %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT_DISPLAY</Tag>
+		<English>Fruit: %D1</English>
+		<French>Fruits : %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Fruit of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert des Fruits en dessous de %D1[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_FRUIT_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Fruit of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert des Fruits d'au moins %D1[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT</Tag>
+		<English>Hunt</English>
+		<French>Chasse</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Hunt by %D1</English>
+		<French>[ICON_BULLET]Change la Chasse de %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Hunt in all cities by %D1</English>
+		<French>[ICON_BULLET]Change la Chasse dans toutes les villes de %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT_DISPLAY</Tag>
+		<English>Hunt: %D1</English>
+		<French>Chasse : %D1</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Hunt of at most %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert de la Chasse en dessous de %D1[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_HUNT_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Hunt of at least %D1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert de la Chasse d'au moins %D1[COLOR_REVERT]</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE</Tag>
+		<English>Lore</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Lore by %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Lore in all cities by %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE_DISPLAY</Tag>
+		<English>Lore: %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Lore of at most %D1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_LORE_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Lore of at least %D1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL</Tag>
+		<English>Material</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL_CHANGE</Tag>
+		<English>[ICON_BULLET]Changes Material by %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]Changes Material in all cities by %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL_DISPLAY</Tag>
+		<English>Material: %D1</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL_PREREQ_MAX</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Material of at most %D1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROPERTY_MATERIAL_PREREQ_MIN</Tag>
+		<English>[COLOR_WARNING_TEXT]Needs Material of at least %D1[COLOR_REVERT]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_FORAGE_CAMP</Tag>
+		<English>Build Forage Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_FORAGE_CAMP_HELP</Tag>
+		<English>Spends Hunt and Material to establish a permanent Forage Camp, passively generating extra Fruit every turn from then on.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_HUNTING_CAMP</Tag>
+		<English>Build Hunting Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_HUNTING_CAMP_HELP</Tag>
+		<English>Spends Fruit and Material to establish a permanent Hunting Camp, passively generating extra Hunt every turn from then on.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_LORE_CIRCLE</Tag>
+		<English>Build Lore Circle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_LORE_CIRCLE_HELP</Tag>
+		<English>Spends Fruit and Hunt to establish a permanent Lore Circle, passively generating extra Lore every turn from then on.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_FORAGE_CAMP</Tag>
+		<English>Forage Camp established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_FORAGE_CAMP_MESSAGE</Tag>
+		<English>Our %s1 has established a Forage Camp, gathering extra Fruit every turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_HUNTING_CAMP</Tag>
+		<English>Hunting Camp established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_HUNTING_CAMP_MESSAGE</Tag>
+		<English>Our %s1 has established a Hunting Camp, gathering extra Hunt every turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_LORE_CIRCLE</Tag>
+		<English>Lore Circle established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_LORE_CIRCLE_MESSAGE</Tag>
+		<English>Our %s1 has established a Lore Circle, gathering extra Lore every turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_CAMPFIRE</Tag>
+		<English>Build Campfire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_CAMPFIRE_HELP</Tag>
+		<English>Spends Fruit and Material to establish a permanent Campfire, granting the Band a lasting combat bonus.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_CAMPFIRE</Tag>
+		<English>Campfire established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_CAMPFIRE_MESSAGE</Tag>
+		<English>Our %s1 has established a Campfire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_SHELTER</Tag>
+		<English>Build Shelter</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_SHELTER_HELP</Tag>
+		<English>Spends Hunt and Material to establish a permanent Shelter, granting the Band a lasting defense bonus.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_SHELTER</Tag>
+		<English>Shelter established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_SHELTER_MESSAGE</Tag>
+		<English>Our %s1 has established a Shelter</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_TRADING_POST</Tag>
+		<English>Build Trading Post</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_TRADING_POST_HELP</Tag>
+		<English>Spends Fruit and Lore to establish a permanent Trading Post, passively generating extra Material every turn from then on.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_TRADING_POST</Tag>
+		<English>Trading Post established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_TRADING_POST_MESSAGE</Tag>
+		<English>Our %s1 has established a Trading Post, gathering extra Material every turn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_TRAPS</Tag>
+		<English>Build Snare Traps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_TRAPS_HELP</Tag>
+		<English>Spends Fruit and Material to set permanent Snare Traps, granting the Band an extra move.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_TRAPS</Tag>
+		<English>Snare Traps set</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_TRAPS_MESSAGE</Tag>
+		<English>Our %s1 has set Snare Traps</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_DRUM_CIRCLE</Tag>
+		<English>Build Drum Circle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_DRUM_CIRCLE_HELP</Tag>
+		<English>Spends Hunt and Lore to establish a permanent Drum Circle, granting the Band bonus experience.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_DRUM_CIRCLE</Tag>
+		<English>Drum Circle established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_DRUM_CIRCLE_MESSAGE</Tag>
+		<English>Our %s1 has established a Drum Circle</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_RITUAL_SITE</Tag>
+		<English>Build Ritual Site</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_RITUAL_SITE_HELP</Tag>
+		<English>Spends Fruit and Hunt to establish a permanent Ritual Site, granting the Band a chance to survive combat it would otherwise die from.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_RITUAL_SITE</Tag>
+		<English>Ritual Site established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_RITUAL_SITE_MESSAGE</Tag>
+		<English>Our %s1 has established a Ritual Site</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_COOKING_PIT</Tag>
+		<English>Build Cooking Pit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_NOMAD_BUILD_COOKING_PIT_HELP</Tag>
+		<English>Spends Material and Lore to establish a permanent Cooking Pit, granting the Band improved healing.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_COOKING_PIT</Tag>
+		<English>Cooking Pit established</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_NOMAD_BUILD_COOKING_PIT_MESSAGE</Tag>
+		<English>Our %s1 has established a Cooking Pit</English>
+	</TEXT>
+</Civ4GameText>

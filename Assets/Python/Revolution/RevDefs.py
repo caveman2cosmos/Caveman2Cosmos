@@ -85,6 +85,8 @@ playerData['CapitalName'] = None
 class RevoltData:
 
 	def __init__( self, iPlayer, iRevTurn, cityList, revType, bPeaceful, specialDataDict = dict() ) :
+		if specialDataDict is None:
+			specialDataDict = dict()
 
 		# Player whose cities are in revolt
 		self.iPlayer = iPlayer

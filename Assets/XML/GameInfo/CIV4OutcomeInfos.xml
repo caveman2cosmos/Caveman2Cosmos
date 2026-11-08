@@ -549,6 +549,12 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 		</OutcomeInfo>
 		<OutcomeInfo>
+			<Type>OUTCOME_BONUS_SPAWNED_SEA</Type>
+			<Description>TXT_KEY_OUTCOME_BONUS_SPAWNED</Description>
+			<Message>TXT_KEY_OUTCOME_SEA_BONUS_SPAWNED_MESSAGE</Message>
+			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
+		</OutcomeInfo>
+		<OutcomeInfo>
 			<Type>OUTCOME_LAWYER_LITIGATION</Type>
 			<Description>TXT_KEY_OUTCOME_LAWYER_LITIGATION</Description>
 			<Message>TXT_KEY_OUTCOME_LAWYER_LITIGATION_MESSAGE</Message>
@@ -582,6 +588,14 @@
 			<ExtraChancePromotions>
 				<ExtraChancePromotion>
 					<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
+					<iExtraChance>20</iExtraChance>
+				</ExtraChancePromotion>
+				<ExtraChancePromotion>
+					<PromotionType>PROMOTION_VERY_EXPERIENCED_ARTIST</PromotionType>
+					<iExtraChance>20</iExtraChance>
+				</ExtraChancePromotion>
+				<ExtraChancePromotion>
+					<PromotionType>PROMOTION_ELITE_ARTIST</PromotionType>
 					<iExtraChance>20</iExtraChance>
 				</ExtraChancePromotion>
 			</ExtraChancePromotions>
@@ -1131,6 +1145,15 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 		</OutcomeInfo>
+        <OutcomeInfo>
+            <Type>OUTCOME_SLAY_ANIMAL</Type>
+            <Description>TXT_KEY_OUTCOME_SLAY_ANIMAL</Description>
+            <Message>TXT_KEY_OUTCOME_SLAY_ANIMAL_MESSAGE</Message>
+            <PrereqTech>NONE</PrereqTech>
+            <bNeutralTerritory>0</bNeutralTerritory>
+            <bHostileTerritory>0</bHostileTerritory>
+            <bCity>1</bCity>
+        </OutcomeInfo>
 		<OutcomeInfo>
 			<Type>OUTCOME_SLAVE_SALE_NOT_SLAVERY</Type>
 			<Description>TXT_KEY_OUTCOME_SELL_CAPTIVE_NOT_SLAVERY</Description>

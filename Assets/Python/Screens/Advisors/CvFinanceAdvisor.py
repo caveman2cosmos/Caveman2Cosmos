@@ -3,6 +3,7 @@ from CvPythonExtensions import *
 # globals
 GC = CyGlobalContext()
 TRNSLTR = CyTranslator()
+MAX_COMMERCE_RATE_MODIFIER_VALUE = 10000000
 
 class CvFinanceAdvisor:
 
@@ -27,22 +28,19 @@ class CvFinanceAdvisor:
 		self.yRes = yRes = SR.y
 		# Calibrate variables.
 		if yRes > 1000:
-			H_BOT_ROW = 110
 			H_EDGE_PANEL = 38
 			uFontEdge = "<font=4b>"
 		elif yRes > 800:
-			H_BOT_ROW = 92
 			H_EDGE_PANEL = 32
 			uFontEdge = "<font=3b>"
 		else:
-			H_BOT_ROW = 78
 			H_EDGE_PANEL = 29
 			uFontEdge = "<font=2b>"
 
 		self.aFontList = aFontList = [uFontEdge] + SR.aFontList
 
 		self.Y_TOP_PAGE = Y_TOP_PAGE = H_EDGE_PANEL - 6
-		self.H_PAGE = H_PAGE = yRes - Y_TOP_PAGE - H_EDGE_PANEL + 8
+		self.H_PAGE = yRes - Y_TOP_PAGE - H_EDGE_PANEL + 8
 		self.Y_BOT_TEXT = yRes - H_EDGE_PANEL + 10
 
 		self.CyPlayer = CyPlayer = GC.getActivePlayer()
@@ -116,7 +114,6 @@ class CvFinanceAdvisor:
 		ePanelHudHelp = PanelStyles.PANEL_STYLE_HUD_HELP
 		# Variables
 		xRes = self.xRes
-		yRes = self.yRes
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
 		CyPlayer = self.CyPlayer
 		iPlayer = self.iPlayer
@@ -205,7 +202,7 @@ class CvFinanceAdvisor:
 
 		# buildings
 		iTotalCommerce = CyPlayer.calculateTotalYield(YieldTypes.YIELD_COMMERCE)
-		# buildings includes 50% capital bonus for Bureaucracy civic
+		# buildings include 50% capital bonus for Bureaucracy civic
 		iBuildings = iTotalCommerce - iCommerce
 		if iBuildings > 0:
 			szText = TRNSLTR.getText("TXT_KEY_WB_BUILDINGS", ())
@@ -348,6 +345,13 @@ class CvFinanceAdvisor:
 		# Content
 		x = xRes / 3 - xRes / 24 - 24
 		y = self.yCommerceSlider
+		Btnsize = 20
+		xBtnOffset = 0
+		yBtnOffset = 0
+		if (xRes > 2500) :
+			Btnsize = 30
+			xBtnOffset = 60
+			yBtnOffset = -2
 		Pnl = "FinAdv_Scroll_1"
 		# Slider percentages
 		iInc = GC.getDefineINT("COMMERCE_PERCENT_CHANGE_INCREMENTS")
@@ -361,14 +365,14 @@ class CvFinanceAdvisor:
 				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 8, y + 2, 0, eGameFont, eWidGen, 1, 1)
 
 				Btn = aName()
-				screen.setImageButtonAt(Btn, Pnl, "", 26, y, 20, 20, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, iInc)
+				screen.setImageButtonAt(Btn, Pnl, "", 26, y+yBtnOffset, Btnsize, Btnsize, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, iInc)
 				screen.setStyle(Btn, "Button_Plus_Style")
 				Btn = aName()
-				screen.setImageButtonAt(Btn, Pnl, "", 48, y, 20, 20, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, -iInc)
+				screen.setImageButtonAt(Btn, Pnl, "", 28+Btnsize, y+yBtnOffset, Btnsize, Btnsize, WidgetTypes.WIDGET_CHANGE_PERCENT, iType, -iInc)
 				screen.setStyle(Btn, "Button_Minus_Style")
 
 				szText = uFont2b + str(CyPlayer.getCommercePercent(iType)) + "%"
-				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 112, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 112+xBtnOffset, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				if CommerceTypes(iType) == CommerceTypes.COMMERCE_RESEARCH:
 					# Research is subject to modifiers.
@@ -377,20 +381,20 @@ class CvFinanceAdvisor:
 					iRate = CyPlayer.getCommerceRate(CommerceTypes(iType))
 				szRate = uFont2b + str(iRate) + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szRate, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
-				y += 20
+				y += Btnsize
 			elif iType == eComGold:
-				y += 8
+				y += Btnsize - 12
 				szText = uFont2b + iconCommerceList[iType]
 				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 8, y + 2, 0, eGameFont, eWidGen, 1, 1)
 
 				szText = uFont2b + GC.getCommerceInfo(iType).getDescription()
-				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 26, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<0, 26, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				szText = uFont2b + str(CyPlayer.getCommercePercent(iType)) + "%"
-				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 108, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szText, 1<<1, 108+xBtnOffset, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 				szCommerce = uFont2b + str(iIncome) + iconCommerceList[iType]
-				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
+				screen.setLabelAt(aName(), Pnl, szCommerce, 1<<1, x, y+yBtnOffset, 0, eGameFont, eWidGen, 1, 1)
 
 		if CyPlayer.isAnarchy():
 			return
@@ -479,7 +483,7 @@ class CvFinanceAdvisor:
 						entry[3] += 1
 						entry[4] += fCityTotal * entry[1] / 100.0
 
-		iTotalMinusTaxes = int(fBuildings) + int(fHeadquarters) + int(fShrines) + iCorporations + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect)
+		iTotalMinusTaxes = min(MAX_COMMERCE_RATE_MODIFIER_VALUE,int(fBuildings) + int(fHeadquarters) + int(fShrines) + iCorporations + int(fSpecialists) + int(fWealth) + int(fPlayerGoldModifierEffect) + int(fBonusGoldModifierEffect))
 		for entry in multipliers:
 			if entry[3]:
 				iTotalMinusTaxes += int(entry[4])
@@ -572,7 +576,7 @@ class CvFinanceAdvisor:
 			if iCount and fGold < 0:
 				y += 20
 				szText = GC.getBuildingInfo(iType).getDescription() + " "
-				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %(fGold / iCount)))
+				szText += TRNSLTR.getText("TXT_KEY_BUG_FINANCIAL_ADVISOR_BUILDING_COUNT_AVERAGE", (iCount, "%.2f" %(fGold / iCount), "%.2f" %fGold))
 				screen.setLabelAt(aName(), Pnl, uFont2 + szText, 1<<0, 8, y, 0, eGameFont, eWidGen, 1, 1)
 				screen.setLabelAt(aName(), Pnl, uFont2 + str(int(fGold)), 1<<1, x, y, 0, eGameFont, eWidGen, 1, 1)
 
@@ -619,6 +623,9 @@ class CvFinanceAdvisor:
 		elif iCode == 11: # List Select
 			self.iPlayer = screen.getPullDownData("FinAdv_DebugDD", inputClass.iData)
 			self.CyPlayer = GC.getPlayer(self.iPlayer)
+			screen.deleteWidget("FinAdv_Scroll_1")
+			screen.deleteWidget("FinAdv_Scroll_2")
+			screen.deleteWidget("FinAdv_Scroll_3")
 			self.drawBase()
 			self.updateContents()
 			return 1
@@ -627,5 +634,5 @@ class CvFinanceAdvisor:
 	def onClose(self):
 		screen = self.getScreen()
 		screen.setDying(True)
-		del self.nWidgetCount, self.CyPlayer, self.iPlayer, self.bStrike, self.aFontList, self.iconCommerceList, \
+		del self.nWidgetCount, self.goldFromCivs, self.CyPlayer, self.iPlayer, self.bStrike, self.aFontList, self.iconCommerceList, \
 			self.szTreasury, self.yCommerceSlider, self.yBuildingExpenses

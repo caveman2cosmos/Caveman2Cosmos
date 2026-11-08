@@ -59,13 +59,13 @@ class TheScreen:
 
 		if iResX > 1700:
 			self.SIZE = 64
-			self.aFontList = aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1>"]
+			self.aFontList = [uFontEdge, "<font=4b>", "<font=4>", "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1>"]
 		elif iResX > 1400:
 			self.SIZE = 56
-			self.aFontList = aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0>"]
+			self.aFontList = [uFontEdge, "<font=3b>", "<font=3>", "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0>"]
 		else:
 			self.SIZE = 48
-			self.aFontList = aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>", "<font=0>"]
+			self.aFontList = [uFontEdge, "<font=2b>", "<font=2>", "<font=1b>", "<font=1>", "<font=0b>", "<font=0>", "<font=0>"]
 
 		self.Y_TOP_PAGE = Y_TOP_PAGE = H_EDGE_PANEL - 6
 		self.H_PAGE = iResY - Y_TOP_PAGE - H_EDGE_PANEL + 8
@@ -416,7 +416,7 @@ class TheScreen:
 		self.x1 = x1 = x + dx1
 		self.x2 = x2 = x + dx2
 		self.y1 = y1 = y + dy1 * 2
-		self.y2 = y2 = y + dy2 + 4
+		self.y2 = y + dy2 + 4
 
 		# Mission selection list
 		LIST = "CityMissionList1"
@@ -471,6 +471,10 @@ class TheScreen:
 		iMissionAct = self.iMissionAct
 
 		# City selection list and "Mission Cost per City" table.
+		screen.deleteWidget("CityMissionList0")
+		screen.deleteWidget("CityMissionTable0")
+		screen.deleteWidget(self.EffectsTable)
+		screen.deleteWidget("CityMissionTable1")
 		LIST = "CityMissionList0"
 		screen.addListBoxGFC(LIST, "", x1, y1 + 26, x2 - x1 - 16, dy - 64, iTableStd)
 		screen.enableSelect(LIST, True)
@@ -597,11 +601,8 @@ class TheScreen:
 	def drawSpyvSpyTab(self, screen):
 		bDebug = GAME.isDebugMode()
 		iPlayerAct = self.iPlayerAct
-		CyPlayerAct = self.CyPlayerAct
 		iTeamAct = self.iTeamAct
 		CyTeamAct = self.CyTeamAct
-
-		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
 
 		iWidGen			= WidgetTypes.WIDGET_GENERAL
 		iPanelStd		= PanelStyles.PANEL_STYLE_STANDARD

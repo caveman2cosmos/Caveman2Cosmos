@@ -49,7 +49,7 @@ def init():
 	#bTeamNaming = REV_OPTIONS.isTeamNaming()
 	#bLeaveHumanName = REV_OPTIONS.isLeaveHumanPlayerName()
 
-	if not GAME.isFinalInitialized or GAME.getGameTurn() == GAME.getStartTurn():
+	if not GAME.isFinalInitialized() or GAME.getGameTurn() == GAME.getStartTurn():
 		for i in xrange(GC.getMAX_PC_PLAYERS()):
 			onSetPlayerAlive([i, GC.getPlayer(i).isAlive()])
 
@@ -319,7 +319,7 @@ def newNameByCivics(iPlayer):
 
 	eGovCivic = pPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_GOVERNMENT"))
 	ePowerCivic = pPlayer.getCivics(GC.getInfoTypeForString("CIVICOPTION_POWER"))
-	bNoRealElections = (GC.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or GC.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or GC.getInfoTypeForString("CIVIC_DESPOTISM") == eGovCivic or GC.getInfoTypeForString("CIVIC_TOTALITARIANISM") == eGovCivic)
+	bNoRealElections = (GC.getInfoTypeForString("CIVIC_CHIEFDOM") == eGovCivic or GC.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic or GC.getInfoTypeForString("CIVIC_DESPOTISM") == eGovCivic or GC.getInfoTypeForString("CIVIC_TOTALITARIANISM") == eGovCivic)
 
 	bFederal = (GC.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic and (ePowerCivic == GC.getInfoTypeForString("CIVIC_LEGISLATURE")))
 	bConfederation = (not bFederal and (GC.getInfoTypeForString("CIVIC_FEDERALISM") == eGovCivic))
@@ -374,7 +374,7 @@ def newNameByCivics(iPlayer):
 	sPeoplesRep = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REP", ()).replace('%s','').strip()
 
 	# Anarchy Naming
-	if pPlayer.isAnarchy and pPlayer.getAnarchyTurns() > 1:
+	if pPlayer.isAnarchy() and pPlayer.getAnarchyTurns() > 1:
 		# Don't want the anarchy name to change during multiple turns of anarchy
 		if (iPlayer + pPlayer.getNumCities())%2 == 1:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PROVISIONAL_GOV", ())%(curAdj)
@@ -382,7 +382,7 @@ def newNameByCivics(iPlayer):
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PROVISIONAL_AUTH", ())%(curAdj)
 		return [newName, curShort, curAdj]
 
-	if (not pPlayer.isAnarchy or pPlayer.getAnarchyTurns() < 2) and "Provisional" in curDesc:
+	if (not pPlayer.isAnarchy() or pPlayer.getAnarchyTurns() < 2) and "Provisional" in curDesc:
 		if GC.getInfoTypeForString("CIVIC_MONARCHY") == eGovCivic:
 			newName = curAdj + ' ' + TRNSLTR.getText("TXT_KEY_MOD_DCN_KINGDOM", ())
 		elif GC.getInfoTypeForString("CIVIC_REPUBLIC") == eGovCivic:
@@ -517,7 +517,7 @@ def newNameByCivics(iPlayer):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_GREAT_KINGDOM", ())%(curAdj,sKingdom)
 			else:
 				sOf = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ()).replace('%s','')
-				if sKingdom in curDesc and (not sOf in curDesc or pPlayer.getNumCities < 6) and not sGreat in curDesc:
+				if sKingdom in curDesc and (not sOf in curDesc or pPlayer.getNumCities() < 6) and not sGreat in curDesc:
 					newName = curDesc
 				elif 50 <= GAME.getSorenRandNum(100,'Rev: Naming'):
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_BLANK_OF", ())%(sKingdom,curShort)

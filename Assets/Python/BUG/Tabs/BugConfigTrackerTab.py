@@ -22,14 +22,9 @@ class BugConfigTrackerTab(BugOptionsTab.BugOptionsTab):
 
 		items = BugConfigTracker.combine()
 		itemNum = 0
-#		first = True
 		for item in items:
 			itemNum += 1
 			subitemNum = 0
-#			if not first:
-#				screen.attachHSeparator(column, "ItemSep-%d" % itemNum)
-#			else:
-#				first = False
 			self.addLabel(screen, column, item[0], item[0])
 			for value in item[1]:
 				subitemNum += 1

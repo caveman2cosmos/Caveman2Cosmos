@@ -82,6 +82,8 @@ void CvPythonPlayerLoader::CyPlayerPythonInterface1(boost::python::class_<CyPlay
 		.def("canConstruct", &CyPlayer::canConstruct, "bool (int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)")
 		.def("canCreate", &CyPlayer::canCreate, "bool (int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible)")
 		.def("getUnitProductionNeeded", &CyPlayer::getUnitProductionNeeded, "int (int /*UnitTypes*/ iIndex)")
+		.def("getUnitProductionNeededPreMerged", &CyPlayer::getUnitProductionNeededPreMerged, "int (int /*UnitTypes*/ iIndex)")
+		.def("isPreMergedUnitBuildEnabled", &CyPlayer::isPreMergedUnitBuildEnabled, "bool ()")
 		.def("getBuildingProductionNeeded", &CyPlayer::getBuildingProductionNeeded, "int (int /*BuildingTypes*/ iIndex)")
 		.def("getProjectProductionNeeded", &CyPlayer::getProjectProductionNeeded, "bool (int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible)")
 

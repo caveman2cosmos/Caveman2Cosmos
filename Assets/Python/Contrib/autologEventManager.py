@@ -340,7 +340,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if iMaxTurns:
 				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn(), iMaxTurns)
 			else:
-				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn()
+				sTurn = "%i" % (GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn())
 
 			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
@@ -422,9 +422,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 	def onFirstContact(self, argsList):
 		if (AutologOpt.isLogContact()):
 			iTeamX,iHasMetTeamY = argsList
-			if (iTeamX == 0
-			and GAME.getGameTurn() > 0):
-
+			if (GC.getPlayer(GAME.getActivePlayer()).getTeam() in (iTeamX, iHasMetTeamY) and GAME.getGameTurn() > 0):
 				sMsgArray = []
 				sLeader = GC.getTeam(iHasMetTeamY).getName()
 				message = TRNSLTR.getText("TXT_KEY_AUTOLOG_FIRST_CONTACT_TEAM", (sLeader, ))
@@ -772,7 +770,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				iOverflow = getModifiedIntValue(CyPlayer.getOverflowResearch(), CyPlayer.calculateResearchModifier(CyPlayer.getCurrentResearch()))
 				iTechCost = CyTeam.getResearchCost(CyPlayer.getCurrentResearch())
 				iRate = CyPlayer.calculateResearchRate(-1)
-				if iRate == -1:
+				if iRate <= 0:
 					print "Divide by zero in autologEventManager | onTechSelected"
 				else:
 					zTurns = (iTechCost - iProgress - iOverflow) / iRate + 1
@@ -849,7 +847,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				if iOwner == iActivePlayer:
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CORP_REMOVED_IN", (GC.getCorporationInfo(iCorporation).getDescription(), CyCity.getName()))
 				else:
-					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CORP_REMOVED_OUT", (GC.getCorporationInfo(iCorporation).getDescription(), CyCity.getName(), player.getCivilizationDescription(0)))
+					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CORP_REMOVED_OUT", (GC.getCorporationInfo(iCorporation).getDescription(), CyCity.getName(), GC.getPlayer(iOwner).getCivilizationDescription(0)))
 				Logger.writeLog(message, vColor="DarkOrange")
 
 	def onGoldenAge(self, argsList):

@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_DOMESTIC_GREAT_GENERAL_MODIFIER_C2C</Tag>
-		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders</English>
+		<English>[ICON_BULLET]%D1%% Great Military People Emergence inside Cultural Borders.</English>
 		<French>[ICON_BULLET]%D1%% Émergence des militaires illustres à l'intérieur des frontières culturelles</French>
 		<German>[ICON_BULLET]%D1%% Geburtenrate für Große Feldherren innerhalb der eigenen Grenzen</German>
 		<Russian>[ICON_BULLET]%D1%% шансов на рождение Великого генерала внутри культурных границ</Russian>
@@ -11,18 +11,18 @@
 		<Tag>TXT_KEY_TRAITHELP_AIR_UNIT_CAPACITY</Tag>
 		<English>[ICON_BULLET]%D1_Amount Air Unit Capacity in all cities.</English>
 		<French>[ICON_BULLET]%D1_Amount de capacité d'accueil d'unité aériennes dans toutes les Villes.</French>
-		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount in tutte le città.</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount in tutte le città.</Italian> <!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Ilo&#156;ci mo&#191;liwych stacjonuj&#185;cych Jednostek Powietrznych we wszystkich miastach.</Polish>
 		<Russian>[ICON_BULLET]%D1_Amount воздушных отрядов во всех городах.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_NEGATIVE</Tag>
-		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait)</English>
+		<English>[ICON_BULLET]%D1_Num Diplomacy Penalty (inverts to a bonus with Leaders with same trait).</English>
 		<French>[ICON_BULLET]%D1_Num Pénalité Diplomatique (se compense avec un bonus pour un Leader du meme trait)</French>
 		<German>[ICON_BULLET]Diplomatische Strafe: %D1_Num (wird zu einem Bonus bei Anführern mit derselben Charaktereigenschaft)</German>
 		<Italian>[ICON_BULLET]%D1_Num di penalità nei rapporti diplomatici (diventa un bonus nei confronti di leader con lo stesso tratto)</Italian>
 		<Polish>[ICON_BULLET]%D1_Num Kary do Dyplomacji (zamienne na bonus do Przyw&#243;dc&#243;w z t&#185; sam&#185; cech&#185;)</Polish>
-		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с той же чертой)</Russian>
+		<Russian>[ICON_BULLET]%D1_Num штрафа к Дипломатии (превращается в бонус с лидерами с тем же качеством)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ATTITUDE_MODIFIER_POSITIVE</Tag>
@@ -35,10 +35,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BOMBARD_DEFENSE_MOD</Tag>
-		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities</English>
+		<English>[ICON_BULLET]%D1_Mod%% Damage to Defenses and Units from Bombardment and Ranged Assault in all cities.</English>
 		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements dans toutes les villes</French>
 		<German>[ICON_BULLET]%D1_Mod%% Schaden an der Verteidigung durch Bombardierung in all cities</German>
-		<Italian>[ICON_BULLET]Danni da bombardamento in tutte le tue città %D1_Mod%%</Italian><!--Aerial CT trait in the pedia-->
+		<Italian>[ICON_BULLET]Danni da bombardamento in tutte le tue città %D1_Mod%%</Italian> <!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Mod%% Obra&#191;e&#241; do Obrony przed Bombardowaniem we wszystkich Miastach</Polish>
 		<Russian>[ICON_BULLET]%D1_Mod%% ущерба защитным сооружениям и отрядам от обстрела и дальнего боя во всех городах</Russian>
 	</TEXT>
@@ -46,19 +46,22 @@
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_ADDITIONAL</Tag>
 		<English>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</English>
 		<French>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</French>
-		<Italian>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_END and CHANGE_FIRST-->
+		<Italian>, [LINK=%s1_Bonus]%s2_Bonus[\LINK]</Italian> <!--Aerial CT trait in the pedia, appears with  _CHANGE_END and CHANGE_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_END</Tag>
 		<English>Resources</English>
-		<Italian> </Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_FIRST-->
+		<French>Ressources</French>
+		<Italian> </Italian>
+		<Russian>Ресурсы</Russian>
+		<!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BONUS_HAPPINESS_CHANGE_FIRST</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from access to [LINK=%s3_Bonus]%s4_Bonus[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth de l'accès aux Ressources : [LINK=%s3_Bonus]%s4_Bonus[\LINK]</French>
 		<Russian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth от доступа к [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Russian>
-		<Italian>[ICON_BULLET]Felicità %D1_Change %F2_HappyOrHealth per l'accesso alle risorse: [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Italian><!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_END-->
+		<Italian>[ICON_BULLET]Felicità %D1_Change %F2_HappyOrHealth per l'accesso alle risorse: [LINK=%s3_Bonus]%s4_Bonus[\LINK]</Italian> <!--Aerial CT trait in the pedia, appears with  _CHANGE_ADDITIONA and CHANGE_END-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_BUILDING_HAPPINESS</Tag>
@@ -72,7 +75,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CAPITAL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in a Capital or Government Center.</English>
 		<French>[ICON_BULLET]%D1%% EXP gratuite à toutes les unités formées dans la capitale ou un centre gouvernemental</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella capitale</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego do&#156;wiadczenia dla jednostek wytrenowanych w Stolicy</Polish>
@@ -80,7 +83,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CITY_START_CULTURE</Tag>
-		<English>[ICON_BULLET]New cities begin with %D1 culture</English>
+		<English>[ICON_BULLET]New cities begin with %D1 Culture.</English>
 		<French>[ICON_BULLET]Les nouvelles Villes commencent avec %D1 culture</French>
 		<Italian>[ICON_BULLET]Le nuove città cominciano con %D1 cultura</Italian>
 		<Polish>[ICON_BULLET]Nowe miasta rozpoczynaj&#185; z: %D1 kultury</Polish>
@@ -104,7 +107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CIVIC_LEVEL_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions</English>
+		<English>[ICON_BULLET]%D1%% XP Needed for Unit Promotions.</English>
 		<French>[ICON_BULLET]%D1%% EXP pour la promotion des unités</French>
 		<German>[ICON_BULLET]%D1%% EP für Einheitenbeförderungen erforderlich</German>
 		<Italian>[ICON_BULLET]%D1%% XP richiesti per la promozione</Italian>
@@ -120,15 +123,15 @@
 		<Italian>[ICON_BULLET]Costi di mantenimento della forma di governo %D1%%</Italian><!--Aerial CT trait in the pedia-->
 		<Spanish>[ICON_BULLET]%D1%% al mantenimiento de principios</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Utrzymania Doktryny</Polish>
-		<Russian>[ICON_BULLET]%D1%% для обслуживания Парадигм</Russian>
+		<Russian>[ICON_BULLET]%D1%% для обслуживания парадигм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_CIVILIZATION</Tag>
-		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections</English>
+		<English>[ICON_BULLET]Civilizations can Earn this Trait - Not available for Leader selections.</English>
 		<French>[ICON_BULLET]Les Civilizations peuvent avoir ce Trait - N'est pas disponible à la sélection</French>
 		<Italian>[ICON_BULLET]Le civiltà possono ottenere questo tratto; non è disponibile nella selezione dei leader</Italian>
 		<Polish>[ICON_BULLET]Tylko Cywilizacja mo&#191;e otrzyma&#230; t&#185; cech&#234; - Niedost&#234;pne dla Przyw&#243;dc&#243;w</Polish>
-		<Russian>[ICON_BULLET]Цивилизации могут получить эту черту, недоступную на выбор лидеру</Russian>
+		<Russian>[ICON_BULLET]Цивилизации могут получить это качество, недоступное на выбор лидеру</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_COMMERCE_CHANGES</Tag>
@@ -149,28 +152,28 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISABLED_OFF</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when playing the Developing Leader Option[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs ayant activé l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nur bei aktivierter Einstellung "Führungskräfteentwicklung" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dost&#234;pna tylko dla Przyw&#243;dc&#243;w w grze z opcj&#185; Ulepszenie Przyw&#243;dc&#243;w[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам при игре в режиме с «Развивающимися лидерами».[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это качество доступно только лидерам, если включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISABLED_ON</Tag>
-		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_WARNING_TEXT]This trait is only for leaders when not playing the Developing Leader Option[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Ce trait est uniquement pour les joueurs n'utilisant pas l'option Développement des Leader[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]bei aktivierter Einstellung "Führungskräfteentwicklung" nicht verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo tratto è disponibile solo se l'opzione "Personalità in sviluppo" è disattivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Cecha dost&#234;pna tylko dla Przyw&#243;dc&#243;w bez gry z opcj&#185; Ulepszenie Przyw&#243;dc&#243;w[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Эта черта доступна только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это качество доступно только лидерам, если не включена опция «Развивающиеся лидеры».[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DISALLOWED</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Leaders with this trait may not select %s1_Trait Trait[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Les leaders possédant ce trait ne peuvent pas sélectionner le Trait : %s1_Trait[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]"%s1_Trait" nicht gleichzeitig auswählbar[COLOR_REVERT]</German>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этой особенностью не могут выбирать черту %s1_Trait[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Лидеры с этим особенностью не могут выбирать качество %s1_Trait[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_DOUBLE_SPEED</Tag>
@@ -210,7 +213,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FLIGHT_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air units.</English>
+		<English>[ICON_BULLET]%D1_Amount Flight Operation Range for Air Units.</English>
 		<French>[ICON_BULLET]%D1_Amount de portée opérationnelle pour les unités aériennes.</French>
 		<Italian>[ICON_BULLET]Raggio d'azione per le unità aeree %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Zasi&#234;gu Operacyjnego dla jednostek Powietrznych.</Polish>
@@ -230,7 +233,7 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Nationale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni Meraviglia Nazionale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Cud Narodowy kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Национальное Чудо, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное национальное чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_SPEC_TP</Tag>
@@ -246,11 +249,12 @@
 		<French>[ICON_BULLET]Reçoit un Spécialiste gratuit pour chaque Merveille Mondiale construite.</French>
 		<Italian>[ICON_BULLET]Ottieni un cittadino specialista gratuito per ogni meraviglia mondiale nella città in cui è costruito.</Italian>
 		<Polish>[ICON_BULLET]Otrzymujesz darmowego Specjaliste na ka&#191;dy Wielki Cud kt&#243;ry wybudujesz.</Polish>
-		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое Чудо Света, где оно построено.</Russian>
+		<Russian>[ICON_BULLET]Получает бесплатного специалиста за каждое построенное великое чудо.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_FREE_UNIT_UPKEEP_MILITARY_PER_100_POP</Tag>
 		<English>[ICON_BULLET]Free military unit upkeep per 100 population: %D1</English>
+		<French>[ICON_BULLET]Entretien gratuit d'unités militaires par 100 de population : %D1</French>
 		<German>[ICON_BULLET]freie militärische Einheiten pro 100 Bürger: %D1</German>
 		<Russian>[ICON_BULLET]Бесплатных отрядов на каждые 100 жителей: %D1</Russian>
 	</TEXT>
@@ -283,13 +287,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_NON_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in Holy Cities of Non-State Religions.</English>
 		<French>[ICON_BULLET]%D1%% EXP Gratuite pour toutes les unités formées dans les Villes Saintes des religions non étatiques</French>
 		<Russian>[ICON_BULLET]%D1%% бесплатного опыта всем отрядам, обученным в Священных городах негос. религий</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_HOLY_CITY_STATE_REL_XP_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion</English>
+		<English>[ICON_BULLET]%D1%% Free Experience to all units trained in the Holy City of your State Religion.</English>
 		<French>[ICON_BULLET]%D1%% Expérience gratuite pour toutes les unités formées dans la ville sainte de votre religion d'État</French>
 		<Italian>[ICON_BULLET]%D1%% esperienza gratuita a tutte le unità addestrate nella Città santa della tua religione di stato.</Italian>
 		<Polish>[ICON_BULLET]%D1%% Darmowego do&#156;wiadczenia dla jednostek wytrenowanych w &#140;wi&#234;tym Mie&#156;cie Twojej Religi Narodowej</Polish>
@@ -313,7 +317,7 @@
 		<Italian>[ICON_BULLET]%d1 [NUM1:turno massimo:turni massimi] di Anarchia</Italian>
 		<Spanish>[ICON_BULLET]Máx. %d1 [NUM1:turno:turnos] de anarquía</Spanish>
 		<Polish>[ICON_BULLET]Maksymalna ilo&#156;&#230; tur Anarchii: %d1</Polish>
-		<Russian>[ICON_BULLET]Макс. %d1 [NUM1:Turn:Turns] к продолжительности Анархии</Russian>
+		<Russian>[ICON_BULLET]Максимум ходов анархии: %d1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MAX_TRADE_ROUTES</Tag>
@@ -334,7 +338,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying units.</English>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all Missile Carrying Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités de transport de missiles.</French>
 		<Italian>[ICON_BULLET]Spazio di carico %D1_Amount per tutte le unità di trasporto missili.</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla Rakiet dla jednostek przewo&#191;&#185;cych rakiety.</Polish>
@@ -342,7 +346,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_MISSILE_RANGE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile units.</English>
+		<English>[ICON_BULLET]%D1_Amount Mission Operation Range for Missile Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Portée opérationnelle pour les unités de missiles.</French>
 		<Russian>[ICON_BULLET]%D1_Amount к радиусу действия для всех типов ракет.</Russian>
 		<Italian>[ICON_BULLET]Raggio di azione per le unità missilistiche %D1_Amount</Italian><!--Aerial CT trait in the pedia-->
@@ -359,7 +363,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NAVAL_CARGO_SPACE</Tag>
-		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval units.</English>
+		<English>[ICON_BULLET]%D1_Amount Cargo Space for all transport-capable Naval Units.</English>
 		<French>[ICON_BULLET]%D1_Amount Espace de chargement pour toutes les unités navales de transport.</French>
 		<Italian>[ICON_BULLET]%D1_Amount allo spazio di trasporto per tutte le unità navali da trasporto.</Italian>
 		<Polish>[ICON_BULLET]%D1_Amount Miejsc dla wszystkich jednostek transportuj&#185;cych - morskich.</Polish>
@@ -372,11 +376,11 @@
 		<German>[ICON_BULLET][COLOR_WARNING_TEXT]negative Charaktereigenschaft[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Questo è un tratto negativo[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]To jest Negatywna Cecha[COLOR_REVERT]</Polish>
-		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Это негативная черта[COLOR_REVERT]</Russian>
+		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Негативное качество[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NONSTATE_RELIGIOUS_COMMERCE</Tag>
-		<English>[ICON_BULLET]Non State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
+		<English>[ICON_BULLET]Non-State [ICON_RELIGION] Still produces base [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH] amounts.</English>
 		<French>
 			<Text>[ICON_BULLET]Le [ICON_RELIGION] (non officielle) produit encore [ICON_CULTURE], [ICON_GOLD], [ICON_RESEARCH]</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -394,7 +398,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NON_STATE_REL_SPREAD_MODIFIER</Tag>
-		<English>[ICON_BULLET]%D1%% chance to Spread Non State Religion with your Missionaries.</English>
+		<English>[ICON_BULLET]%D1%% chance to Spread Non-State Religion with your Missionaries.</English>
 		<French>[ICON_BULLET]%D1%% chances de propager la religion non étatique avec vos missionnaires.</French>
 		<Italian>[ICON_BULLET]%D1%% di diffondere una religione non di stato con i tuoi missionari.</Italian>
 		<Polish>[ICON_BULLET]%D1%% do szansy rozszerzenia Religi Nie-Pa&#241;stwowej przez Misjonarzy.</Polish>
@@ -402,7 +406,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_NOT_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Deactivated when the %s2_Option Game Option is in use[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]désactivé lorsque l'option %s2_Option est active[COLOR_REVERT]</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Inattivo se l'opzione %s2_Option è attivata[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Dezaktywuje si&#234; gdy opcja: %s2_Option jest aktywna[COLOR_REVERT]</Polish>
@@ -430,7 +434,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_ON_GAME_OPTION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT]</English>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Only active when the %s1_Option Game Option is in use[COLOR_REVERT].</English>
 		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]actif uniquement lorsque l'option %s1_Option est active[COLOR_REVERT]</French>
 		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]nur bei aktivierter Einstellung "%s1_Option" verfügbar[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tratto attivo solo se l'opzione %s1_Option è stata selezionata[COLOR_REVERT]</Italian>
@@ -498,7 +502,8 @@
 		<Russian>[ICON_BULLET][COLOR_WARNING_TEXT]Требуется знание %s1_TechName[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag><!--Aerial CT trait in the pedia, appears with RESEARCH_MODIFIER_END and _RESEARCH_MODIFIER_FIRST-->
+		<Tag>TXT_KEY_TRAITHELP_TECH_RESEARCH_MODIFIER_ADDITIONAL</Tag>
+		<!--Aerial CT trait in the pedia, appears with RESEARCH_MODIFIER_END and _RESEARCH_MODIFIER_FIRST-->
 		<English>, [LINK=%s1_Tech]%s2_Tech[\LINK]</English>
 		<French>, [LINK=%s1_Tech]%s2_Tech[\LINK]</French>
 	</TEXT>
@@ -526,14 +531,16 @@
 		<Russian>[ICON_BULLET]%D1%% %F2_yield от [ICON_TRADE]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag><!--Aerial CT trait in the pedia appears with FREE_XP_END and XP_FIRST-->
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_ADDITIONAL</Tag>
+		<!--Aerial CT trait in the pedia appears with FREE_XP_END and XP_FIRST-->
 		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag><!--Aerial CT trait in the pedia appears with _XP_ADDITIONAL and XP_FIRST-->
+		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_END</Tag>
 		<English>Unit Types</English>
-		<Italian> </Italian>
+		<French>Types d'unités</French>
+		<Italian> </Italian> <!--Aerial CT trait in the pedia appears with _XP_ADDITIONAL and XP_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_COMBAT_FREE_XP_FIRST</Tag>
@@ -545,13 +552,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_ADDITIONAL</Tag>
-		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English><!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_END and PRODUCTION_FIRST-->
+		<English>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</English>
+		<!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_END and PRODUCTION_FIRST-->
 		<French>, [LINK=%s1_CombatClass]%s2_CombatClass[\LINK]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_END</Tag>
 		<English>Unit Types</English>
-		<Italian> </Italian><!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_ADDITIONAL and PRODUCTION_FIRST-->
+		<French>Types d'unités</French>
+		<Italian> </Italian> <!--Aerial CT trait in the pedia appear with UNIT_PRODUCTION_ADDITIONAL and PRODUCTION_FIRST-->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_UNIT_PRODUCTION_FIRST</Tag>
@@ -568,23 +577,23 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di Meraviglie</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Produkcji Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_NEGATIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements with a %D1_Modifier%% speed penalty</English>
+		<English>[ICON_BULLET]Workers build Improvements with a %D1_Modifier%% speed penalty.</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements avec un pénalité de %D1_Modifier%%</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti con una velocità modificata del %D1_Modifier%%</Italian><!--Aerial CT trait in the pedia-->
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia z pr&#234;dko&#156;ci&#185;: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% медленнее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% медленнее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORKER_SPEED_POSITIVE</Tag>
-		<English>[ICON_BULLET]Workers build improvements %D1_Modifier%% faster</English>
+		<English>[ICON_BULLET]Workers build Improvements %D1_Modifier%% faster.</English>
 		<French>[ICON_BULLET]Les Ouvriers construisent les aménagements %D1_Modifier%% plus vite</French>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Modifier%% più velocemente</Italian>
 		<Polish>[ICON_BULLET]Robotnicy buduj&#185; ulepszenia szybciej o: %D1_Modifier%%</Polish>
-		<Russian>[ICON_BULLET]Рабочие строят улучшения на %D1_Modifier%% быстрее</Russian>
+		<Russian>[ICON_BULLET]Рабочие создают надстройки на %D1_Modifier%% быстрее</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_WORLD_WONDER_PRODUCTION_MODIFIER</Tag>
@@ -594,7 +603,7 @@
 		<Italian>[ICON_BULLET]%D1%% produzione di meraviglie mondiali</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la producción de maravillas del mundo</Spanish>
 		<Polish>[ICON_BULLET]%D1%% do Budowy Wielkich Cud&#243;w</Polish>
-		<Russian>[ICON_BULLET]%D1%% к строительству Великих Чудес</Russian>
+		<Russian>[ICON_BULLET]%D1%% к строительству великих чудес</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAITHELP_YIELD_CHANGES</Tag>
@@ -622,12 +631,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Agresywny:Agresywna:Agresywny:Agresywna</Polish>
-		<Russian>Ìèëèòàðèñò</Russian>
+		<Russian>Милитаризм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE0</Tag>
-		<English>Aggressive 0</English>
+		<English>Aggressive I</English>
+		<French>Agressif I</French>
 		<Italian>Aggressivo I</Italian>
+		<Russian>Милитаризм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGGRESSIVE_PEDIA</Tag>
@@ -642,6 +653,7 @@
 		<French>Agr</French>
 		<German>Agg</German>
 		<Italian>Aggressivo</Italian>
+		<Russian>Млт.</Russian>
 		<Spanish>Agr</Spanish>
 	</TEXT>
 	<TEXT>
@@ -656,193 +668,217 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rolniczy</Polish>
-		<Russian>Çåìëåäåëåö</Russian>
+		<Russian>Сельское хозяйство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL0</Tag>
-		<English>Agricultural 0</English>
+		<English>Agricultural I</English>
+		<French>Agricole I</French>
 		<Italian>Agricolo I</Italian>
+		<Russian>Сельское хозяйство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_PEDIA</Tag>
 		<English>This leaders likes agriculture</English>
+		<French>Ce dirigeant aime l'agriculture</French>
+		<Russian>Эти лидеры любят сельское хозяйство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_AGRICULTURAL_SHORT</Tag>
 		<English>Agr</English>
 		<French>Agr.</French>
 		<Polish>Rol.</Polish>
-		<Russian>Çåìë.</Russian>
+		<Russian>Слхз.</Russian>
 		<Italian>Agricolo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR</Tag>
 		<English>Ancient Way of the Centaur</English>
 		<French>Ancienne voie du centaure</French>
-		<Russian>«Путь Кентавра»</Russian>
+		<Russian>Древний путь кентавра</Russian>
 		<Italian>Antica tradizione del centauro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_PEDIA</Tag>
 		<English>Way of the Centaur Trait is only available with the Ancient Ways Group Wonders. All Mounted Units gain the Way of the Centaur promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Centaure est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités Montées gagnent la promotion Voie du Centaure, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Путь Кентавра доступен только с Чудесами группы Древних Путей. Все Конные Отряды получают повышение по пути «Кентавр», давая им +1 Силу. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_SHORT</Tag>
 		<English>AWotCentaur</English>
+		<French>VACentaure</French>
 		<Italian>Centauro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
 		<French>Ancienne Voie de la Plume</French>
-		<Russian>«Путь Пера»</Russian>
+		<Russian>Древний путь пера</Russian>
 		<Italian>Antica tradizione della piuma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_PEDIA</Tag>
 		<English>Way of the Feather Trait is only available with the Ancient Ways Group Wonders. All Archery Units gain the Way of the Feather promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie de la Plume est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités d'Archerie gagnent la promotion Voie de la Plume, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Пути Пера» доступна только в группе чудес Древних Путей. Все отряды стрельбы из лука получают повышение по Пути Пера, давая им +1 Силе. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_SHORT</Tag>
 		<English>AWotFeather</English>
+		<French>VAPlume</French>
 		<Italian>Piuma</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
 		<English>Ancient Way of the Fist</English>
 		<French>Ancienne voie du poing</French>
-		<Russian>«Путь кулака»</Russian>
+		<Russian>Древний путь кулака</Russian>
 		<Italian>Antica tradizione del pugno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_PEDIA</Tag>
 		<English>Way of the Fist Trait is only available with the Ancient Ways Group Wonders. All Law Enforcements Units gain the Way of the Fist promotion, giving them an additional 1.5% Investigation (To find local criminals), -4 Crime Turn/City and -2 Crime Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Poing est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités d'Application de la Loi gagnent la promotion Voie du Poing, leur donnant 1,5% d'Investigation supplémentaire (pour trouver des criminels locaux), -4 Crime Tour/Ville et -2 Crime Tour/Parcelle. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Путь кулака» доступна только для группы «Древние пути». Все подразделения правоохранительных органов получают продвижение «Путь кулака», что дает им дополнительно 1,5% расследования (для поиска местных преступников), -4 от преступности/в городе и -2 от преступности/ на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</Tag>
 		<English>AWotFist</English>
+		<French>VAPoing</French>
 		<Italian>Pugno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
 		<French>Ancienne Voie de la Goule</French>
-		<Russian>«Путь пиявки»</Russian>
+		<Russian>Древний путь пиявки</Russian>
 		<Italian>Antica tradizione della sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
 		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical.</English>
-		<Russian>«Путь пиявки» доступен только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
+		<French>Le trait Voie de la Sangsue est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités de Soins de Santé gagnent la promotion Voie de la Sangsue, leur donnant la capacité de guérir les Unités sur la même case avec 8% de Dégâts/tour supplémentaires, -4 Maladie Tour/Ville et -2 Maladie Tour/Parcelle. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec l'ère Classique.</French>
+		<Russian>Качество «Древний путь пиявки» доступно только с чудесами группы Древних Путей. Все подразделения здравоохранения получают поощрение «Путь пиявки», что дает им возможность лечить отряды в одной и той же плитке, дополнительно 8% урона/за ход, -4 хода от заболеваемости/в городе и -2 хода от заболеваемости/на местности. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
 		<English>AWotLeech</English>
+		<French>VASangsue</French>
 		<Italian>Sanguisuga</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
 		<English>Ancient Way of the Shadows</English>
 		<French>Ancienne Voie des Ombres</French>
-		<Russian>«Путь теней»</Russian>
+		<Russian>Древний путь теней</Russian>
 		<Italian>Antica tradizione dell'ombra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_PEDIA</Tag>
 		<English>Way of the Shadows Trait is only available with the Ancient Ways Group Wonders. All Criminal, Ruffian and Strike Team Units gain the Way of the Shadows promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie des Ombres est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités Criminelles, Voyous et Équipes d'Assaut gagnent la promotion Voie des Ombres, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Путь теней» доступна только в группе чудес Древних Путей. Все криминальные, рейдерские и атакующие командные юниты получают повышение по способу «Путь теней», давая им +1 к силе. Эта акция доступна только в Древнюю эпоху, она устаревает с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_SHORT</Tag>
 		<English>AWotShadows</English>
+		<French>VAOmbres</French>
 		<Italian>Ombra</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
 		<French>Ancienne Voie du Guerrier</French>
-		<Russian>«Путь воина»</Russian>
+		<Russian>Древний путь воина</Russian>
 		<Italian>Antica tradizione del guerriero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_PEDIA</Tag>
 		<English>Way of the Warrior Trait is only available with the Ancient Ways Group Wonders. All Melee Units gain the Way of the Warrior promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Guerrier est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités de Mêlée gagnent la promotion Voie du Guerrier, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Путь воина» доступна только для группы «Древние пути». Все юниты ближнего боя получают повышение по пути Воина, давая им +1 к Силе. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_SHORT</Tag>
 		<English>AWotWarrior</English>
+		<French>VAGuerrier</French>
 		<Italian>Guerriero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
 		<English>Ancient Way of the Waves</English>
 		<French>Ancienne Voie des Vagues</French>
-		<Russian>«Путь волн»</Russian>
+		<Russian>Древний путь волн</Russian>
 		<Italian>Antica tradizione delle onde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_PEDIA</Tag>
 		<English>Way of the Waves Trait is only available with the Ancient Ways Group Wonders. All Naval Combat Units gain the Way of the Waves promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie des Vagues est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités de Combat Naval gagnent la promotion Voie des Vagues, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Путь волн» доступна только для Wonders группы Ancient Ways. Все военно-морские боевые подразделения получают продвижение по пути волнений, подтверждают им +1 к силе. Эта акция доступна только в Древнюю эпоху.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_SHORT</Tag>
 		<English>AWotWaves</English>
+		<French>VAVagues</French>
 		<Italian>Onde</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
-		<Russian>«Путь дикости»</Russian>
+		<Russian>Древний путь дикаря</Russian>
 		<Italian>Antica tradizione della natura selvaggia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
 		<English>Way of the Wild Trait is only available with the Ancient Ways Group Wonders. All Explorer Units gain the Way of the Wild promotion, giving them +1 Movement, -1 Mobility Cost and +1 Vision Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Sauvage est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités d'Explorateur gagnent la promotion Voie du Sauvage, leur donnant +1 de Mouvement, -1 Coût de Mobilité et +1 de Portée de Vision. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Путь «Дикости» доступен только для группы «Древние пути». Все отряды исследователей получают продвижение «Путь дикой природы», давая им +1 к движению, -1 от стоимости к подвижности и +1 к дальности обзора. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_SHORT</Tag>
 		<English>AWotWild</English>
+		<French>VASauvage</French>
 		<Italian>Selvaggio</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
 		<English>Ancient Way of the Wind</English>
 		<French>Ancienne Voie du Vent</French>
-		<Russian>«Путь Ветра»</Russian>
+		<Russian>Древний путь ветра</Russian>
 		<Italian>Antica tradizione del vento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_PEDIA</Tag>
 		<English>Way of the Wind Trait is only available with the Ancient Ways Group Wonders. All Throwing Units gain the Way of the Wind promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Vent est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités de Lancer gagnent la promotion Voie du Vent, leur donnant +1 de Force. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Пути Ветра» доступна только в группе чудес Древних Путей. Все стрелковые и метательные отряды получают повышение по Пути Ветра, давая им +1 к силе. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_SHORT</Tag>
 		<English>AWotWind</English>
+		<French>VAVent</French>
 		<Italian>Vento</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
 		<French>Ancienne voie du Loup</French>
-		<Russian>«Путь Волка»</Russian>
+		<Russian>Древний путь волка</Russian>
 		<Italian>Antica tradizione del lupo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_PEDIA</Tag>
 		<English>Way of the Wolf Trait is only available with the Ancient Ways Group Wonders. All Canine Units gain the Way of the Wolf promotion, giving them +1 Movement, -1 Mobility Cost and +1 Vision Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+		<French>Le trait Voie du Loup est uniquement disponible avec les Merveilles du Groupe des Voies Anciennes. Toutes les Unités Canines gagnent la promotion Voie du Loup, leur donnant +1 de Mouvement, -1 Coût de Mobilité et +1 de Portée de Vision. Cette promotion n'est disponible que pendant l'ère Antique, elle deviendra obsolète avec la Technologie du Mode de vie Classique.</French>
 		<Russian>Черта «Пути Волка» доступна только с группой чудес Древних Путей. Все Клыки получают продвижение Путь Волка, давая им +1 к движению, -1 от стоимости движения и +1 к радиусу обзора. Эта акция доступна только в Древнюю эпоху, она будет устаревшей с технологией Античного образа жизни.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_SHORT</Tag>
 		<English>AWotWolf</English>
+		<French>VALoup</French>
 		<Italian>Lupo</Italian>
 	</TEXT>
 	<TEXT>
@@ -865,16 +901,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Anty-Klerykalny</Polish>
-		<Russian>Áåçáîæíèê</Russian>
+		<Russian>Антиклерикализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL0</Tag>
-		<English>Anti Clerical 0</English>
+		<English>Anti Clerical I</English>
+		<French>Anticlérical I</French>
 		<Italian>Anticlericale I</Italian>
+		<Russian>Антиклерикализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL_PEDIA</Tag>
 		<English>This leader finds strong opposition from clergy of his country, due to his actions against the church, heretical ideas or something similar. As clergy doesn't want to voice its support for the ruler great people take a -15% hit. Monasteries all have a negative happiness bonus. Holy Cities in heathen lands cause extra negative revolution implications as do rival religions in your cities. - TR Team.</English>
+		<French>Ce dirigeant rencontre une forte opposition du clergé de son pays, en raison de ses actions contre l'église, de ses idées hérétiques ou de quelque chose de similaire. Comme le clergé ne veut pas exprimer son soutien au dirigeant, les personnages illustres subissent une pénalité de -15%. Tous les monastères ont un bonus de bonheur négatif. Les Villes Saintes en terres païennes causent des implications révolutionnaires négatives supplémentaires, tout comme les religions rivales dans vos villes. - Équipe TR.</French>
 		<Italian>Questo leader trova una forte opposizione da parte del clero del suo stato, a causa delle sue azioni contro la chiesa, di idee eretiche o cose del genere. Dato che il clero non supporta il leader, i grandi personaggi nascono con una frequenza minore del 15%. Tutti i monasteri hanno delle penalità alla felicità. Le città sante nei territori degli infedeli aumentano i sentimenti rivoluzionari, allo stesso modo in cui le religioni rivali influenzano le tue città.</Italian>
 		<Russian>Этот лидер вызывает сильное сопротивление со стороны духовенства своей страны из-за его действий против церкви, еретических идей или чего-то подобного. Поскольку духовенство не хочет выражать свою поддержку такому правителю, великие люди получают минус 15% к рождаемости. Все монастыри имеют отрицательный бонус к счастью. Священные города в родных землях вызывают дополнительные негативные последствия революции, как и конкурирующие религии в ваших городах.</Russian>
 	</TEXT>
@@ -898,39 +937,46 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>AnK</Polish>
-		<Russian>Áåçá.</Russian>
+		<Russian>Анкл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Tag>
 		<English>Astrological Influence of Aquarius</English>
+		<French>Influence Astrologique du Verseau</French>
 		<Italian>Influenza astrologica dell'acquario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_SHORT</Tag>
 		<English>Aquarius</English>
+		<French>Verseau</French>
 		<Italian>Acquario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
 		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Vision during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Verseau est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Verseau. Tous les Navires en Bois reçoivent la promotion Influence de Saturne, leur donnant un bonus de Force et de Vision pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
 		<English>Astrological Influence of Aries</English>
+		<French>Influence Astrologique du Bélier</French>
 		<Italian>Influenza astrologica dell'ariete</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_SHORT</Tag>
 		<English>Aries</English>
+		<French>Bélier</French>
 		<Italian>Ariete</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Tag>
 		<English>Astrological Influence of Aries trait is only available with the Astrological Influence of Aries Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Bélier est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Bélier. Toutes les unités d'Application de la Loi reçoivent la promotion Influence de Mars, leur donnant un bonus de Force et de Prévention du Crime pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER</Tag>
 		<English>Astrological Influence of Cancer</English>
+		<French>Influence Astrologique du Cancer</French>
 		<Italian>Influenza astrologica del cancro</Italian>
 	</TEXT>
 	<TEXT>
@@ -941,140 +987,168 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Tag>
 		<English>Astrological Influence of Cancer trait is only available with the Astrological Influence of Cancer Group Wonder. All Heal People units receive the Influence of the Moon promotion, giving bonus to numbers heal and Disease Control during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Cancer est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Cancer. Toutes les unités de Guérison reçoivent la promotion Influence de la Lune, leur donnant un bonus de guérison et de Contrôle des Maladies pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Tag>
 		<English>Astrological Influence of Capricorn</English>
+		<French>Influence Astrologique du Capricorne</French>
 		<Italian>Influenza astrologica del capricorno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_SHORT</Tag>
 		<English>Capricorn</English>
+		<French>Capricorne</French>
 		<Italian>Capricorno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
 		<English>Astrological Influence of Capricorn trait is only available with the Astrological Influence of Capricorn Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Vision during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Capricorne est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Capricorne. Tous les Navires en Bois reçoivent la promotion Influence de Saturne, leur donnant un bonus de Force et de Vision pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Tag>
 		<English>Astrological Influence of Gemini</English>
+		<French>Influence Astrologique des Gémeaux</French>
 		<Italian>Influenza astrologica dei gemelli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_SHORT</Tag>
 		<English>Gemini</English>
+		<French>Gémeaux</French>
 		<Italian>Gemelli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Tag>
 		<English>Astrological Influence of Gemini trait is only available with the Astrological Influence of Gemini Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
+		<French>Le trait Influence Astrologique des Gémeaux est uniquement disponible avec la Merveille du Groupe Influence Astrologique des Gémeaux. Toutes les unités de Siège reçoivent la promotion Influence de Mercure, leur donnant un bonus de Force et de Précision pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Tag>
 		<English>Astrological Influence of Leo</English>
+		<French>Influence Astrologique du Lion</French>
 		<Italian>Influenza astrologica del leone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_SHORT</Tag>
 		<English>Leo</English>
+		<French>Lion</French>
 		<Italian>Leone</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Tag>
 		<English>Astrological Influence of Leo trait is only available with the Astrological Influence of Leo Group Wonder. All Melee units receive the Influence of the Sun promotion, giving bonus to Strength and Experience during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Lion est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Lion. Toutes les unités de Mêlée reçoivent la promotion Influence du Soleil, leur donnant un bonus de Force et d'Expérience pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Tag>
 		<English>Astrological Influence of Libra</English>
+		<French>Influence Astrologique de la Balance</French>
 		<Italian>Influenza astrologica della bilancia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_SHORT</Tag>
 		<English>Libra</English>
+		<French>Balance</French>
 		<Italian>Bilancia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Tag>
 		<English>Astrological Influence of Libra trait is only available with the Astrological Influence of Libra Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
+		<French>Le trait Influence Astrologique de la Balance est uniquement disponible avec la Merveille du Groupe Influence Astrologique de la Balance. Toutes les unités d'Archerie et de Lancer reçoivent la promotion Influence de Vénus, leur donnant un bonus de Force et de Défense de Ville pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Tag>
 		<English>Astrological Influence of Pisces</English>
+		<French>Influence Astrologique des Poissons</French>
 		<Italian>Influenza astrologica dei pesci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_SHORT</Tag>
 		<English>Pisces</English>
+		<French>Poissons</French>
 		<Italian>Pesci</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Tag>
 		<English>Astrological Influence of Pisces trait is only available with the Astrological Influence of Pisces Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
+		<French>Le trait Influence Astrologique des Poissons est uniquement disponible avec la Merveille du Groupe Influence Astrologique des Poissons. Toutes les unités Montées reçoivent la promotion Influence de Jupiter, leur donnant un bonus de Force et de Repli pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Tag>
 		<English>Astrological Influence of Sagittarius</English>
+		<French>Influence Astrologique du Sagittaire</French>
 		<Italian>Influenza astrologica del sagittario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_SHORT</Tag>
 		<English>Sagittarius</English>
+		<French>Sagittaire</French>
 		<Italian>Sagittario</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Tag>
 		<English>Astrological Influence of Sagittarius trait is only available with the Astrological Influence of Sagittarius Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Sagittaire est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Sagittaire. Toutes les unités Montées reçoivent la promotion Influence de Jupiter, leur donnant un bonus de Force et de Repli pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Tag>
 		<English>Astrological Influence of Scorpio</English>
+		<French>Influence Astrologique du Scorpion</French>
 		<Italian>Influenza astrologica dello scorpione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_SHORT</Tag>
 		<English>Scorpio</English>
+		<French>Scorpion</French>
 		<Italian>Scorpione</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Tag>
 		<English>Astrological Influence of Scorpio trait is only available with the Astrological Influence of Scorpio Group Wonder. All Law Enforcement units receive the Influence of Mars promotion, giving bonus to Strength and Crime prevention during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Scorpion est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Scorpion. Toutes les unités d'Application de la Loi reçoivent la promotion Influence de Mars, leur donnant un bonus de Force et de Prévention du Crime pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Tag>
 		<English>Astrological Influence of Taurus</English>
+		<French>Influence Astrologique du Taureau</French>
 		<Italian>Influenza astrologica del toro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_SHORT</Tag>
 		<English>Taurus</English>
+		<French>Taureau</French>
 		<Italian>Toro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Tag>
 		<English>Astrological Influence of Taurus trait is only available with the Astrological Influence of Taurus Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
+		<French>Le trait Influence Astrologique du Taureau est uniquement disponible avec la Merveille du Groupe Influence Astrologique du Taureau. Toutes les unités d'Archerie et de Lancer reçoivent la promotion Influence de Vénus, leur donnant un bonus de Force et de Défense de Ville pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Tag>
 		<English>Astrological Influence of Virgo</English>
+		<French>Influence Astrologique de la Vierge</French>
 		<Italian>Influenza astrologica della vergine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_SHORT</Tag>
 		<English>Virgo</English>
+		<French>Vierge</French>
 		<Italian>Vergine</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Tag>
 		<English>Astrological Influence of Virgo trait is only available with the Astrological Influence of Virgo Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
+		<French>Le trait Influence Astrologique de la Vierge est uniquement disponible avec la Merveille du Groupe Influence Astrologique de la Vierge. Toutes les unités de Siège reçoivent la promotion Influence de Mercure, leur donnant un bonus de Force et de Précision pendant l'Ère Classique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN</Tag>
 		<English>Barbarian</English>
 		<French>
-			<Text>Barbare</Text>
+			<Text>Barbares</Text>
 			<Gender>Male</Gender>
-			<Plural>0</Plural>
+			<Plural>1</Plural>
 		</French>
 		<German>
 			<Text>Barbarisch</Text>
@@ -1088,7 +1162,7 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Dziki</Polish>
-		<Russian>Âàðâàð</Russian>
+		<Russian>Варварство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIAN_PEDIA</Tag>
@@ -1115,7 +1189,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Dzi</Polish>
-		<Russian>Âàðâ.</Russian>
+		<Russian>Врвр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC</Tag>
@@ -1141,16 +1215,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Barbarzy&#241;ski</Polish>
-		<Russian>Ãðóáûé</Russian>
+		<Russian>Неотесанность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC0</Tag>
-		<English>Barbaric 0</English>
+		<English>Barbaric I</English>
+		<French>Barbare I</French>
 		<Italian>Barbaro I</Italian>
+		<Russian>Неотесанность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_BARBARIC_PEDIA</Tag>
 		<English>This leader never got any real education, and sees sponsorship of poets and playwrights as a needless waste of money. They should be happy he doesn't order to execute all those spineless wimps for swaying his troops from their spartan ways! Foreign infidels are viewed as just that, inferior scum who better get down with his ways, or lay down at the hands of his sword.</English>
+		<French>Ce dirigeant n'a jamais reçu d'éducation réelle et considère le parrainage des poètes et des dramaturges comme un gaspillage d'argent inutile. Ils devraient être heureux qu'il n'ordonne pas l'exécution de tous ces mauviettes sans colonne vertébrale qui détournent ses troupes de leurs manières spartiates ! Les infidèles étrangers sont considérés comme tels, une racaille inférieure qui ferait mieux de se plier à ses méthodes, ou de succomber sous le tranchant de son épée.</French>
 		<Russian>У этого лидера никогда не было настоящего образования, и он считает спонсорство поэтов и драматургов напрасной тратой денег. Они должны быть счастливы, что он не приказал казнить всех этих бесхребетных слабаков за то, что они сбили его войска с их спартанских привычек! Иностранные неверные рассматриваются как низшие подонки, которым лучше расступаться на его пути или пасть перед ним ниц.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1173,7 +1250,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Barb</Polish>
-		<Russian>Ãðóá.</Russian>
+		<Russian>Неот.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC</Tag>
@@ -1194,11 +1271,14 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Харизма</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC0</Tag>
-		<English>Charismatic 0</English>
+		<English>Charismatic I</English>
+		<French>Charismatique I</French>
 		<Italian>Carismatico I</Italian>
+		<Russian>Харизма I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CHARISMATIC_PEDIA</Tag>
@@ -1222,12 +1302,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Kreatywny:Kreatywna:Kreatywny:Kreatywna'</Polish>
-		<Russian>Ìåöåíàò</Russian>
+		<Russian>Меценатство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE0</Tag>
-		<English>Creative 0</English>
+		<English>Creative I</English>
+		<French>Créatif I</French>
 		<Italian>Creativo I</Italian>
+		<Russian>Меценатство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CREATIVE_PEDIA</Tag>
@@ -1242,6 +1324,7 @@
 		<German>Kre</German>
 		<Italian>Creativo</Italian>
 		<Spanish>Cre</Spanish>
+		<Russian>Мцнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL</Tag>
@@ -1263,16 +1346,18 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Okrutny</Polish>
-		<Russian>Æåñòîêèé</Russian>
+		<Russian>Жестокость</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL0</Tag>
-		<English>Cruel 0</English>
+		<English>Cruel I</English>
 		<Italian>Crudele I</Italian>
+		<Russian>Жестокость I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_CRUEL_PEDIA</Tag>
 		<English>This leader believes it is better to be feared than to be loved, and diligently works to instill that fear into parts of his society he deems most dangerous to his own dominance. Constant purges in the army leave its leadership weakened, with less able men eligible for promotions. - TR Team.</English>
+		<French>Ce dirigeant croit qu'il vaut mieux être craint qu'être aimé, et travaille diligemment pour instiller cette peur dans les parties de sa société qu'il juge les plus dangereuses pour sa propre domination. Des purges constantes dans l'armée laissent son leadership affaibli, avec moins d'hommes capables éligibles aux promotions. - Équipe TR.</French>
 		<Italian>Questo leader crede che sia meglio essere temuti che amati, e si impegna diligentemente per instillare la paura nelle parti della società che ritiene più pericolose per il suo governo. Purghe costanti nell'esercito rendono più debole la sua leadership, con pochi uomini abili che possono ottenere le promozioni.</Italian>
 		<Russian>Этот лидер считает, что правителя должны больше бояться, нежели любить, и усердно работает над тем, чтобы внушить этот страх тем частям своего общества, которые он считает наиболее опасными для своего собственного правления. Постоянные чистки в армии ослабляют ее руководство, и менее способные люди получают возможность возвыситься.</Russian>
 	</TEXT>
@@ -1296,7 +1381,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Okr</Polish>
-		<Russian>Æåñò.</Russian>
+		<Russian>Жест.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER</Tag>
@@ -1310,16 +1395,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>K&#179;amca</Polish>
-		<Russian>Èíòðèãàí</Russian>
+		<Russian>Интриганство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER0</Tag>
-		<English>Deceiver 0</English>
+		<English>Deceiver I</English>
+		<French>Trompeur I</French>
 		<Italian>Imbroglione I</Italian>
+		<Russian>Интриганство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_PEDIA</Tag>
 		<English>Deception is favourite past time of leader</English>
+		<French>La tromperie est le passe-temps favori de ce dirigeant</French>
+		<Russian>Плетение интриг - любимое занятие таких лидеров.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_DECEIVER_SHORT</Tag>
@@ -1329,7 +1418,7 @@
 		<Italian>Imbroglione</Italian>
 		<Spanish>Tra</Spanish>
 		<Polish>K&#179;a</Polish>
-		<Russian>Èíòð.</Russian>
+		<Russian>Интр.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE</Tag>
@@ -1351,17 +1440,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Przesadny</Polish>
-		<Russian>Íåóìåðåííûé</Russian>
+		<Russian>Расточительность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE0</Tag>
-		<English>Excessive 0</English>
+		<English>Excessive I</English>
+		<French>Excessif I</French>
 		<Italian>Eccessivo I</Italian>
+		<Russian>Расточительность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_PEDIA</Tag>
 		<English>The opulent court of this ruler is a real strain on the state budget. - TR Team.</English>
-		<Russian>Пышный двор этого правителя ложится тяжелым бременем на государственный бюджет.</Russian>
+		<French>La cour opulente de ce dirigeant représente une réelle contrainte pour le budget de l'État. - Équipe TR.</French>
+		<Russian>Пышный двор этих лидеров ложится тяжелым бременем на государственный бюджет.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXCESSIVE_SHORT</Tag>
@@ -1383,7 +1475,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Prze</Polish>
-		<Russian>Íåóì.</Russian>
+		<Russian>Рстч.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE</Tag>
@@ -1405,12 +1497,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Ekspansywny:Ekspansywna:Ekspansywny:Ekspansywna</Polish>
-		<Russian>Ýêñïàíñèîíèñò</Russian>
+		<Russian>Экспансионизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE0</Tag>
-		<English>Expansive 0</English>
+		<English>Expansive I</English>
+		<French>Expansif I</French>
 		<Italian>Espansionista I</Italian>
+		<Russian>Экспансионизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_EXPANSIVE_PEDIA</Tag>
@@ -1425,6 +1519,7 @@
 		<German>Exp</German>
 		<Italian>Espansionista</Italian>
 		<Spanish>Com</Spanish>
+		<Russian>Эксп.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL</Tag>
@@ -1446,17 +1541,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Fanatyczny</Polish>
-		<Russian>Ôàíàòèê</Russian>
+		<Russian>Фанатизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL0</Tag>
-		<English>Fanatical 0</English>
+		<English>Fanatical I</English>
+		<French>Fanatique I</French>
 		<Italian>Fanatico I</Italian>
+		<Russian>Фанатизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_PEDIA</Tag>
 		<English>This ruler puts blind faith above all other merits; talented but sceptically minded people will find themselves unwanted at his court. - TR Team.</English>
-		<Russian>Этот правитель ставит слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при его дворе.</Russian>
+		<French>Ce dirigeant place la foi aveugle au-dessus de tous les autres mérites ; les personnes talentueuses mais d'esprit sceptique se retrouveront indésirables à sa cour. - Équipe TR.</French>
+		<Russian>Эти лидеры ставят слепую веру выше всех других достоинств; талантливые, но скептически настроенные люди окажутся нежелательными при их дворе.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FANATICAL_SHORT</Tag>
@@ -1477,7 +1575,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ôàí.</Russian>
+		<Russian>Фнт.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL</Tag>
@@ -1495,12 +1593,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Finansowy:Finansowa:Finansowy:Finansowa'</Polish>
-		<Russian>Ôèíàíñèñò</Russian>
+		<Russian>Коммерция</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL0</Tag>
-		<English>Financial 0</English>
+		<English>Financial I</English>
+		<French>Financier I</French>
 		<Italian>Economista I</Italian>
+		<Russian>Коммерция I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FINANCIAL_PEDIA</Tag>
@@ -1514,6 +1614,7 @@
 		<German>Fin</German>
 		<Italian>Economista</Italian>
 		<Spanish>Fin</Spanish>
+		<Russian>Комм.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN</Tag>
@@ -1535,12 +1636,14 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Cudoziemski</Polish>
-		<Russian>Êñåíîôèë</Russian>
+		<Russian>Ксенофилия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN0</Tag>
-		<English>Foreign 0</English>
+		<English>Foreign I</English>
+		<French>Étranger I</French>
 		<Italian>Straniero I</Italian>
+		<Russian>Ксенофилия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_FOREIGN_PEDIA</Tag>
@@ -1567,7 +1670,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Cdz</Polish>
-		<Russian>Êñåí.</Russian>
+		<Russian>Ксфл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN</Tag>
@@ -1581,23 +1684,27 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Humanitarny</Polish>
-		<Russian>Ãóìàíèñò</Russian>
+		<Russian>Гуманизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN0</Tag>
-		<English>Humanitarian 0</English>
+		<English>Humanitarian I</English>
+		<French>Humanitaire I</French>
 		<Italian>Filantropo I</Italian>
+		<Russian>Гуманизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_PEDIA</Tag>
 		<English>Humanitarian leaders try to make everyone happy and healthy</English>
+		<French>Les dirigeants humanitaires essaient de rendre tout le monde heureux et en bonne santé</French>
+		<Russian>Такие лидеры стараются сделать всех счастливыми и здоровыми.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUMANITARIAN_SHORT</Tag>
 		<English>Hum</English>
 		<French>Hum</French>
 		<Italian>Filantropo</Italian>
-		<Russian>Ãóì.</Russian>
+		<Russian>Гум.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER</Tag>
@@ -1619,16 +1726,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#163;owco-Zbieracz</Polish>
-		<Russian>Ñîáèðàòåëü</Russian>
+		<Russian>Охота и собирательство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER0</Tag>
-		<English>Hunter-Gatherer 0</English>
+		<English>Hunter-Gatherer I</English>
+		<French>Chasseur-Cueilleur I</French>
 		<Italian>Cacciatore-raccoglitore I</Italian>
+		<Russian>Охота и собирательство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
 		<English>A hunter-gatherer society is one whose primary subsistence method involves the direct procurement of edible plants and animals from the wild, foraging and hunting without significant recourse to the domestication of either. Up to 80% of the food is obtained by gathering.</English>
+		<French>Une société de chasseurs-cueilleurs est une société dont la principale méthode de subsistance implique l'approvisionnement direct en plantes et animaux comestibles sauvages, la cueillette et la chasse sans recours significatif à la domestication de l'un ou l'autre. Jusqu'à 80% de la nourriture est obtenue par la cueillette.</French>
 		<Russian>Общество охотников-собирателей - это социум, основной способ существования которого включает прямые поставки съедобных растений и животных из дикой природы, добычу пищи и охоту без значительного одомашнивания того и другого. До 80% продовольствия получают путем охоты и собирательства.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1651,7 +1761,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>&#163;-Z</Polish>
-		<Russian>Ñîá.</Russian>
+		<Russian>О-С.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC</Tag>
@@ -1673,16 +1783,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Perfekcjonista</Polish>
-		<Russian>Èäåàëèñò</Russian>
+		<Russian>Идеализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC0</Tag>
-		<English>Idealistic 0</English>
+		<English>Idealistic I</English>
+		<French>Idéaliste I</French>
 		<Italian>Idealista I</Italian>
+		<Russian>Идеализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IDEALISTIC_PEDIA</Tag>
 		<English>This leader's belief in an exalted ideal leads to strict guidelines to follow. This spills out across the government meaning gross inefficiency, longer civic anarchy and higher upkeep. This exalted ideal does however possess a certain quality that lingers in the minds of the great thinkers from within the nation, meaning a greater affinity towards to desire to actually 'think' and the aspiration to be a 'thinker'.</English>
+		<French>La croyance de ce dirigeant en un idéal exalté conduit à des directives strictes à suivre. Cela se répercute sur l'ensemble du gouvernement, entraînant une inefficacité flagrante, une anarchie civique plus longue et des coûts d'entretien plus élevés. Cet idéal exalté possède cependant une certaine qualité qui persiste dans l'esprit des grands penseurs de la nation, signifiant une plus grande affinité envers le désir de réellement 'penser' et l'aspiration à être un 'penseur'.</French>
 		<Italian>Le credenze di questo leader negli ideali umanisti gli fa preferire la diplomazia alla forza militare per risolvere i conflitti. Naturalmente, viene criticato dal suo stesso staff militare e dai politici più famelici, che cercano di minare i suoi sforzi.</Italian>
 		<Russian>Вера этого лидера в возвышенные идеалы ведет к засилью строгих правил и норм, которым нужно следовать. Это распространяется на правительство, что означает грубую неэффективность, более длительную гражданскую анархию и более высокий уровень содержания. Этот возвышенный идеал, однако, обладает определенным качеством, которое сохраняется в умах великих мыслителей внутри нации, что означает большую тягу к желанию действительно «думать» и стремление быть «мыслителем».</Russian>
 	</TEXT>
@@ -1706,7 +1819,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Perf</Polish>
-		<Russian>Èä.</Russian>
+		<Russian>Идеа.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST</Tag>
@@ -1719,11 +1832,14 @@
 		</German>
 		<Italian>Imperialista</Italian>
 		<Spanish>Imperialista</Spanish>
+		<Russian>Империализм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST0</Tag>
-		<English>Imperialistic 0</English>
+		<English>Imperialistic I</English>
+		<French>Impérialiste I</French>
 		<Italian>Imperialista I</Italian>
+		<Russian>Империализм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_IMPERIALIST_PEDIA</Tag>
@@ -1746,12 +1862,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pracowity:Pracowita:Pracowity:Pracowita</Polish>
-		<Russian>Òðóäîëþáèâûé</Russian>
+		<Russian>Строительство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS0</Tag>
-		<English>Industrious 0</English>
+		<English>Industrious I</English>
+		<French>Industrieux I</French>
 		<Italian>Industrioso I</Italian>
+		<Russian>Строительство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_INDUSTRIOUS_PEDIA</Tag>
@@ -1765,6 +1883,7 @@
 		<German>Ind</German>
 		<Italian>Industrioso</Italian>
 		<Spanish>Dil</Spanish>
+		<Russian>Стро.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST</Tag>
@@ -1786,17 +1905,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Izolacjonista</Polish>
-		<Russian>Èçîëÿöèîíèñò</Russian>
+		<Russian>Изоляционизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST0</Tag>
-		<English>Isolationist 0</English>
+		<English>Isolationist I</English>
+		<French>Isolationniste I</French>
 		<Italian>Isolazionista I</Italian>
+		<Russian>Изоляционизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_PEDIA</Tag>
 		<English>This leader believes in completely self-reliant state to the point where he is ready to cut off most connections to the outside world. - TR Team.</English>
-		<Russian>Этот лидер верит в успешность полностью самодостаточного государства до такой степени, что он готов отсечь большинство связей с внешним миром.</Russian>
+		<French>Ce dirigeant croit en un État complètement autosuffisant au point où il est prêt à couper la plupart des connexions avec le monde extérieur. - Équipe TR.</French>
+		<Russian>Эти лидеры верят в успешность полностью самодостаточного государства до такой степени, что готовы отсечь большинство связей с внешним миром.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ISOLATIONIST_SHORT</Tag>
@@ -1818,7 +1940,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Izo</Polish>
-		<Russian>Èçîë.</Russian>
+		<Russian>Изол.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC</Tag>
@@ -1840,16 +1962,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Megaloman</Polish>
-		<Russian>Ìåãàëîìàíüÿê</Russian>
+		<Russian>Мегаломания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC0</Tag>
-		<English>Megalomaniac 0</English>
+		<English>Megalomaniac I</English>
+		<French>Mégalomane I</French>
 		<Italian>Megalomane I</Italian>
+		<Russian>Мегаломания I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_MEGALOMANIAC_PEDIA</Tag>
 		<English>Nothing less than the whole world will satisfy this man. He already sees himself as the world's greatest ruler, and demands that every project to immortalize his glory be accordingly grandiose. Or maybe he is just compensating for something? - TR Team.</English>
+		<French>Rien de moins que le monde entier ne satisfera cet homme. Il se voit déjà comme le plus grand dirigeant du monde et exige que chaque projet visant à immortaliser sa gloire soit grandiose en conséquence. Ou peut-être compense-t-il simplement quelque chose ? - Équipe TR.</French>
 		<Russian>Ничто меньшее, чем весь мир, не удовлетворит тщеславие этого человека. Он уже считает себя величайшим правителем мира и требует, чтобы каждый проект по увековечиванию его славы был соответственно грандиозным. Или может он просто что-то компенсирует?</Russian>
 	</TEXT>
 	<TEXT>
@@ -1871,7 +1996,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ìåã.</Russian>
+		<Russian>Мгл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD</Tag>
@@ -1885,16 +2010,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Koczownik</Polish>
-		<Russian>Êî÷åâíèê</Russian>
+		<Russian>Кочевничество</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD0</Tag>
-		<English>Nomad 0</English>
+		<English>Nomad I</English>
+		<French>Nomade I</French>
 		<Italian>Nomade I</Italian>
+		<Russian>Кочевничество I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_PEDIA</Tag>
 		<English>This leader dislikes being stationary</English>
+		<French>Ce dirigeant n'aime pas être sédentaire</French>
+		<Russian>Такие лидеры не любят жить на одном месте.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_NOMAD_SHORT</Tag>
@@ -1902,8 +2031,8 @@
 		<French>Nom.</French>
 		<Spanish>Nóm</Spanish>
 		<Polish>Kcz</Polish>
-		<Russian>Êî÷.</Russian>
 		<Italian>Nomade</Italian>
+		<Russian>Кчв.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED</Tag>
@@ -1921,17 +2050,19 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Zorganizowany:Zorganizowana:Zorganizowany:Zorganizowana</Polish>
-		<Russian>Îðãàíèçàòîð</Russian>
+		<Russian>Организованность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED0</Tag>
-		<English>Organized 0</English>
+		<English>Organized I</English>
+		<French>Organisé I</French>
 		<Italian>Organizzato I</Italian>
+		<Russian>Организованность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_PEDIA</Tag>
 		<English>Although Organized has a direct economic benefit--reducing the overhead of civics--it isn't nearly as big a boost in that regard as Financial. Nevertheless, saved GPT is saved GPT and is nothing to sneeze at.[PARAGRAPH:1][H1]High-Priority Technologies[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Monotheism[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Code of Laws[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Sailing[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Assembly Line[\LINK][PARAGRAPH:1][H1]Useful Wonders[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]The Great Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]The Forbidden Palace[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Cristo Redentor[\LINK][PARAGRAPH:1][H1]Best Buildings[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Courthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Lighthouse[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Factory[\LINK][PARAGRAPH:1][H1]Useful Civics[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Bureaucracy[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]State Property[\LINK][PARAGRAPH:1][H1]How to Use It[\H1][PARAGRAPH:1]Similar to Spiritual, technologies that enable civics--especially higher cost civics--are priorities. Unlike Spiritual, however, switching civics is not something to do constantly (unless you're Asoka, who has the best of both worlds in this regard). Also remember to choose a civic because you'll benefit from it, not just because it's available or because Organized will make it cheaper.[PARAGRAPH:1]The big benefits from Organized, however, are the cheap buildings--three of the best in the game. To leverage the lighthouses, try to build several coastal cities. Cheap courthouses make new cities cheaper, so you can employ this into a REX strategy or into warmongering or both.[PARAGRAPH:1]In fact, I tend to consider Organized to be a warmonger's trait (especially for Hammurabi, Julius Caesar, and Napoleon, whose companion traits are also warmonger-friendly). This is because my first build in a conquered city is a courthouse to reduce its maintenance cost, and Organized makes those courthouses cheaper to build--or whip.[PARAGRAPH:1]Finally, factories are one of the best late-game buildings, and the 2.08 patch has made them cheap for Organized.[PARAGRAPH:1]Technology priorities are obviously Sailing, Code of Laws, and Assembly Line for the cheap buildings. Other tech targets are those that enable some of the more useful but expensive civics, especially Civil Service for the powerful Bureaucracy civic. Its high upkeep cost will be cut in half for an Organized leader, increasing its utility. The same goes for Organized Religion (enabled by Monotheism) and Police State (enabled by Fascism).[PARAGRAPH:1][H1]The Downside[\H1][PARAGRAPH:1]Like many traits, as the game progresses, Organized gets weaker. Your economy grows and high-upkeep civics gradually become more affordable. As a result, the addition of a late cheap building (factories) in the 2.08 patch was a welcome late-game boost to Organized. Nevertheless, the best period for Organized is definitely the mid-game when you're probably running Bureaucracy and Organized Religion and are still building your economy.</English>
-		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание Парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» чертам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих черт). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать черту Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие черты также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие черты, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
+		<Russian>Хотя у Организованного лидера есть прямая экономическая выгода - сокращение накладных расходов на обслуживание парадигм - это столь сильное преимущество, как финансовые выгоды.[PARAGRAPH:1][H1]Приоритетные технологии[\H1][PARAGRAPH:1][ICON_BULLET][LINK=TECH_MONOTHEISM]Единобожие[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_CODE_OF_LAWS]Свод законов[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_SAILING]Парусное оснащение[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=TECH_ASSEMBLY_LINE]Сборочная линия[\LINK][PARAGRAPH:1][H1]Полезные Чудеса[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_THE_GREAT_LIGHTHOUSE]Великий Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FORBIDDEN_PALACE]Запретный дворец[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_CRISTO_REDENTOR]Кристо Редентор[\LINK][PARAGRAPH:1][H1]Лучшие Здания[\H1][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_COURTHOUSE]Здание суда[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_LIGHTHOUSE]Маяк[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=BUILDING_FACTORY]Фабрика[\LINK][PARAGRAPH:1][H1]Полезные парадигмы[\H1][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_BUREAUCRACY]Бюрократия[\LINK][PARAGRAPH:1][ICON_BULLET][LINK=CIVIC_STATE_OWNED]Государственная собственность[\LINK][PARAGRAPH:1][H1]Как это использовать?[\H1][PARAGRAPH:1]Подобно «Духовным» качествам, технологии, обеспечивающие гражданское право, особенно гражданские, с более высокими затратами, являются приоритетными для такого типа лидеров. Однако, в отличие от Духовного лидера, переключение гражданских навыков не является чем-то постоянным (если только вы не царь Ашока, у которого в этом отношении есть лучшее из обеих качеств). Также не забудьте выбирать соответствующие парадигмы сообразно их пользе, а не только потому, что они легко доступны или потому что Организованный лидер сделает их дешевле.[PARAGRAPH:1]Однако наибольшие преимущества у Организованных лидеров - это дешевые здания, три из лучших в игре. Чтобы использовать маяки, постарайтесь построить несколько прибрежных городов. Дешевые здания суда делают новые города дешевле, так что вы можете использовать это в стратегии REX или в войне или в обоих.[PARAGRAPH:1]Фактически, я склонен расценивать качество Организованный идеальной для поджигателей войны (особенно для Хаммурапи, Юлия Цезаря и Наполеона, чьи сопутствующие качества также подходят для провоцирования войны). Поэтому моя первая постройка в завоеванном городе - это здание суда, чтобы уменьшить расходы на его обслуживание, и Организованный лидер делает эти здания дешевле в строительстве или при ускорении производства.[PARAGRAPH:1]Наконец, фабрики - одно из лучших зданий поздней игры, и патч 2.08 сделал их дешевыми для Организованных лидеров.[PARAGRAPH:1]Технологические приоритеты - это Парусный спорт, Свод законов и Сборочный конвейер для дешевых зданий. Другими техническими целями являются те, которые позволяют использовать некоторые из более полезных, но дорогих гражданских прав, особенно государственную службу для влиятельной гражданской бюрократии. Его высокая стоимость обслуживания будет сокращена вдвое для Организованного лидера, что увеличит его полезность. То же самое касается Организованной Религии (включенной Монотеизмом) и Полицейского Государства (включенной Фашизмом).[PARAGRAPH:1][H1]Обратная сторона[\H1][PARAGRAPH:1]Как и многие качества, по ходу игры, Организованный становится слабее. Ваша экономика растет, и гражданское население с высоким уровнем содержания постепенно становится более доступным. В результате, добавление позднего дешевого здания (фабрики) в патч 2.08 стало долгожданным дополнением поздней игры для Организованный. Тем не менее, лучший период для Организованного - это определенно середина игры, когда вы, вероятно, используете бюрократию и Организованную религию и все еще строите свою экономику.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ORGANIZED_SHORT</Tag>
@@ -1940,6 +2071,7 @@
 		<German>Org</German>
 		<Italian>Organizzato</Italian>
 		<Spanish>Org</Spanish>
+		<Russian>Орг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL</Tag>
@@ -1957,12 +2089,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Filozoficzny:Filozoficzna:Filozoficzny:Filozoficzna</Polish>
-		<Russian>Ôèëîñîô</Russian>
+		<Russian>Философия</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL0</Tag>
-		<English>Philosophical 0</English>
+		<English>Philosophical I</English>
+		<French>Philosophe I</French>
 		<Italian>Filosofo I</Italian>
+		<Russian>Философия I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PHILOSOPHICAL_PEDIA</Tag>
@@ -1976,6 +2110,7 @@
 		<German>Phi</German>
 		<Italian>Filosofo</Italian>
 		<Spanish>Fil</Spanish>
+		<Russian>Фил.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN</Tag>
@@ -1997,12 +2132,14 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Polityk</Polish>
-		<Russian>Ïîëèòèêàí</Russian>
+		<Russian>Политика</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN0</Tag>
-		<English>Politician 0</English>
+		<English>Politician I</English>
+		<French>Politicien I</French>
 		<Italian>Politico I</Italian>
+		<Russian>Политика I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
@@ -2029,7 +2166,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîë.</Russian>
+		<Russian>Плтк.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST</Tag>
@@ -2051,16 +2188,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Populista</Polish>
-		<Russian>Ïîïóëèñò</Russian>
+		<Russian>Популизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST0</Tag>
-		<English>Populist 0</English>
+		<English>Populist I</English>
+		<French>Populiste I</French>
 		<Italian>Populista I</Italian>
+		<Russian>Популизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
 		<English>This ruler owes his position to popular support, and he never forgets about it. He diverts more resources than most to keeping the people happy with his reign.</English>
+		<French>Ce dirigeant doit sa position au soutien populaire, et il ne l'oublie jamais. Il détourne plus de ressources que la plupart pour maintenir le peuple satisfait de son règne.</French>
 		<Russian>Этот правитель обязан своим положением народной поддержкой, и он никогда не забывает об этом. Он тратит намного больше ресурсов, чем прочие лидеры, чтобы люди были довольны его правлением.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2082,7 +2222,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-		<Russian>Ïîï.</Russian>
+		<Russian>Пплз.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST</Tag>
@@ -2104,16 +2244,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Progresywny</Polish>
-		<Russian>Ïðîãðåññèâíûé</Russian>
+		<Russian>Прогрессивизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST0</Tag>
-		<English>Progressist 0</English>
+		<English>Progressist I</English>
+		<French>Progressiste I</French>
 		<Italian>Progressista I</Italian>
+		<Russian>Прогрессивизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
 		<English>Progressivism is a political attitude favoring or advocating changes or reform. Progressivism is often viewed in opposition to conservative or reactionary ideologies. The Progressive Movement began in cities with settlement workers and reformers who were interested in helping those facing harsh conditions at home and at work. The reformers spoke out about the need for laws regulating tenement housing and child labor. They also called for better working conditions for women.</English>
+		<French>Le progressisme est une attitude politique favorisant ou préconisant des changements ou des réformes. Le progressisme est souvent considéré comme opposé aux idéologies conservatrices ou réactionnaires. Le Mouvement progressiste a commencé dans les villes avec des travailleurs sociaux et des réformateurs qui s'intéressaient à aider ceux qui faisaient face à des conditions difficiles à la maison et au travail. Les réformateurs ont dénoncé la nécessité de lois réglementant les logements insalubres et le travail des enfants. Ils ont également appelé à de meilleures conditions de travail pour les femmes.</French>
 		<Italian>Il progressismo è un atteggiamento politico che favorisce o richiede cambiamenti e riforme. Il progressismo è spesso in contrapposizione con le ideologie conservative o reazionarie. Il movimento progressista iniziò nelle città con insediamenti di lavoratori e di riformatori che erano interessati nell'aiutare coloro che affrontavano condizioni difficili a casa e al lavoro. I riformatori parlavano del bisogno di leggi che regolavano le abitazioni e il lavoro minorile; chiedevano anche condizioni di lavoro migliori per le donne.</Italian>
 		<Russian>Прогрессивизм - это политическая позиция, поддерживающая или сочувствующая изменениям или реформам. Прогрессивизм часто рассматривается в противовес консервативным или реакционным идеологиям. Прогрессивное движение началось в городах с мощным социалистическими и либерал-реформистскими настроениями, жители которых были заинтересованы в помощи тем, кто сталкивается с суровыми условиями дома и на работе. Реформаторы высказались о необходимости принятия законов, регулирующих арендуемое жилье и детский труд. Они также призвали к улучшению условий труда для женщин.</Russian>
 	</TEXT>
@@ -2137,7 +2280,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Pro</Polish>
-		<Russian>Ïðîã.</Russian>
+		<Russian>Пргc.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE</Tag>
@@ -2158,11 +2301,14 @@
 			<Gender>Male:Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+		<Russian>Защита</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE0</Tag>
-		<English>Protective 0</English>
+		<English>Protective I</English>
+		<French>Protecteur I</French>
 		<Italian>Protettivo I</Italian>
+		<Russian>Защита I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROTECTIVE_PEDIA</Tag>
@@ -2189,12 +2335,14 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Rewolucyjny</Polish>
-		<Russian>Ðåâîëþöèîíåð</Russian>
+		<Russian>Революционность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY0</Tag>
-		<English>Revolutionary 0</English>
+		<English>Revolutionary I</English>
+		<French>Révolutionnaire I</French>
 		<Italian>Rivoluzionario I</Italian>
+		<Russian>Революционность I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
@@ -2221,7 +2369,7 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Rew</Polish>
-		<Russian>Ðåâ.</Russian>
+		<Russian>Рвлц.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC</Tag>
@@ -2235,16 +2383,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Naukowy</Polish>
-		<Russian>Ó÷åíûé</Russian>
+		<Russian>Наука</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC0</Tag>
-		<English>Scientific 0</English>
+		<English>Scientific I</English>
+		<French>Scientifique I</French>
 		<Italian>Scientifico I</Italian>
+		<Russian>Наука I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_PEDIA</Tag>
 		<English>This leader gets boost to research</English>
+		<French>Ce dirigeant obtient un bonus à la recherche</French>
+		<Russian>Такие лидеры ускоряют исследования.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SCIENTIFIC_SHORT</Tag>
@@ -2253,7 +2405,7 @@
 		<German>Wis</German>
 		<Spanish>Cie</Spanish>
 		<Polish>Nau</Polish>
-		<Russian>Ó÷.</Russian>
+		<Russian>Нк.</Russian>
 		<Italian>Scientifico</Italian>
 	</TEXT>
 	<TEXT>
@@ -2268,16 +2420,20 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>&#175;eglarski</Polish>
-		<Russian>Ìîðåïëàâàòåëü</Russian>
+		<Russian>Мореплавание</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING0</Tag>
-		<English>Seafaring 0</English>
+		<English>Seafaring I</English>
+		<French>Maritime I</French>
 		<Italian>Marinaio I</Italian>
+		<Russian>Мореплавание I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_PEDIA</Tag>
 		<English>This leader specializes in seafaring</English>
+		<French>Ce dirigeant se spécialise dans la navigation maritime</French>
+		<Russian>Такие лидеры специализируются на плавании по воде.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SEAFARING_SHORT</Tag>
@@ -2287,7 +2443,7 @@
 		<Italian>Marinaio</Italian>
 		<Spanish>Mar</Spanish>
 		<Polish>&#175;eg.</Polish>
-		<Russian>Ìîð.</Russian>
+		<Russian>Мрпл.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL</Tag>
@@ -2305,12 +2461,14 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Uduchowiony:Uduchowiona:Uduchowiony:Uduchowiona'</Polish>
-		<Russian>Ìèñòèê</Russian>
+		<Russian>Мистицизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL0</Tag>
-		<English>Spiritual 0</English>
+		<English>Spiritual I</English>
+		<French>Spirituel I</French>
 		<Italian>Spirituale I</Italian>
+		<Russian>Мистицизм I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_SPIRITUAL_PEDIA</Tag>
@@ -2324,6 +2482,7 @@
 		<German>Spi</German>
 		<Italian>Spirituale</Italian>
 		<Spanish>Esp</Spanish>
+		<Russian>Мист.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL</Tag>
@@ -2345,16 +2504,19 @@
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
 		<Polish>Wybuchowy</Polish>
-		<Russian>Òåìïåðàìåíòíûé</Russian>
+		<Russian>Непостоянство</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL0</Tag>
-		<English>Temperamental 0</English>
+		<English>Temperamental I</English>
+		<French>Capricieux I</French>
 		<Italian>Volubile I</Italian>
+		<Russian>Непостоянство I</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
 		<English>Having a leader that is temperamental leads its nation toward general inefficiency. The nation is burdened with a leader whose temperamental differences with certain projects or advancement, comes at a cost. In particular those individuals within his/her nation who are deemed worthy of 'promotion' or a status of greatness are few in the eyes of its leader. The culture of his/her people inevitably suffers and the dedication and training of his/her military will remain unmotivated.</English>
+		<French>Avoir un dirigeant capricieux conduit sa nation vers une inefficacité générale. La nation est accablée par un dirigeant dont les différences de tempérament avec certains projets ou avancées ont un coût. En particulier, les individus au sein de sa nation qui sont jugés dignes d'une 'promotion' ou d'un statut de grandeur sont peu nombreux aux yeux de son dirigeant. La culture de son peuple en souffre inévitablement et le dévouement et l'entraînement de son armée resteront démotivés.</French>
 		<Russian>Наличие темпераментного лидера ведет страну к общей неэффективности. Держава изнывает от руководства лидера, чьи темпераментные отличия от определенных проектов или достижений имеют свою цену. В частности, на взгляд такого правителя в пределах его/ее державы будет совсем немного людей, считающихся достойными «продвижения по службе» или в должности. Культура его/ее народа неизбежно пострадает, а самоотверженность и подготовка его/ее военных останутся немотивированными.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2377,6 +2539,6 @@
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Wyb</Polish>
-		<Russian>Òåìï.</Russian>
+		<Russian>Нпст.</Russian>
 	</TEXT>
 </Civ4GameText>

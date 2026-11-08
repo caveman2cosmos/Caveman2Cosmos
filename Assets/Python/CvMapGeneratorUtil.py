@@ -95,7 +95,7 @@ class FractalWorld:
 
 	def findBestSplitY(self, stripRadius):
 		stripSize = 2*stripRadius
-		if stripSize > self.iNumPlotsX:
+		if stripSize > self.iNumPlotsY:
 			return 0
 
 		numPlots = self.iNumPlotsX * self.iNumPlotsY
@@ -640,7 +640,7 @@ class MultilayeredFractal:
 	def shiftRegionPlots(self, iRegionWidth, iRegionHeight, iStrip=15):
 		# Minimizes land plots along the region's edges by shifting the coordinates.
 		stripRadius = min(15, iStrip)
-		stripRadius = max(3, iStrip)
+		stripRadius = max(3, stripRadius)
 		best_split_x, best_split_y = 0,0
 		best_split_x = self.findBestRegionSplitX(iRegionWidth, iRegionHeight, stripRadius)
 		best_split_y = self.findBestRegionSplitY(iRegionWidth, iRegionHeight, stripRadius)
@@ -663,7 +663,7 @@ class MultilayeredFractal:
 
 	def findBestRegionSplitY(self, iRegionWidth, iRegionHeight, stripRadius):
 		stripSize = 2*stripRadius
-		if stripSize > iRegionWidth:
+		if stripSize > iRegionHeight:
 			return 0
 
 		numPlots = iRegionWidth * iRegionHeight

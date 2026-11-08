@@ -229,6 +229,12 @@ bool isWorldUnit(UnitTypes eUnit);
 bool isNationalUnit(UnitTypes eUnit);
 bool isLimitedUnit(UnitTypes eUnit);
 
+// eUnit plus all its UnitUpgrades ancestors and descendants (units directly reachable by
+// repeatedly upgrading forward, or that repeatedly upgrade forward into eUnit). Does NOT include
+// unrelated units that merely share a common upgrade target/source with eUnit. Static XML-derived
+// data, cached on first use for the life of the process.
+const std::vector<UnitTypes>& getUnitUpgradeChainGroup(UnitTypes eUnit);
+
 bool isWorldWonder(BuildingTypes eBuilding);
 bool isTeamWonder(BuildingTypes eBuilding);
 bool isNationalWonder(BuildingTypes eBuilding);
@@ -356,6 +362,8 @@ DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
 void shuffle(int* piShuffle, int iNum, CvRandom& rand);
 
+int calculateCurrentTick();
+int getMinimalTickForEras(GameSpeedTypes eGameSpeed);
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 
@@ -421,4 +429,29 @@ protected:
 // Toffer
 void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals = false, int iNumDecimals = 2);
 // ! Toffer
+
+int applyDistanceScoringFactor(int score, const CvPlot* sourcePlot, const CvPlot* targetPlot, const int currentPlotBoost = 1);
+
+int encodeACDateturn(int decodeda, int b);
+
+int decodeACDate(int n);
+
+int decodeACTurn(int n);
+
+int mapValue(int x);
+
+int inverseMapValue(int y);
+
+// Conversion enum -> brut string (MISSION_XXXXX
+CvString MissionAITypeToString(MissionAITypes eMissionAI);
+
+// Conversion enum -> brut string found a city..., Move to...
+CvString MissionAITypeToDescription(MissionAITypes eMissionAI);
+
+CvString AutomateTypeToDescription(AutomateTypes eAutomateAI);
+
+char remove_diacritic_char(unsigned char c);
+
+CvString remove_diacritics(const CvString& input);
+
 #endif

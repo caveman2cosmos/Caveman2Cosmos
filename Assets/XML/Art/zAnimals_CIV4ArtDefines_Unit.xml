@@ -777,7 +777,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HAAST_EAGLE</Type>
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
-			<fScale>60.0</fScale>
+			<fScale>30.0</fScale>
 			<fInterfaceScale>0.70</fInterfaceScale>
 			<NIF>Art/Units/Animals/Haastseagle/Haastseagle.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -979,7 +979,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_KANGAROO_RED</Type>
 			<Button>Art/Interface/Buttons/Units/Kangaroo.dds</Button>
-			<fScale>30.0</fScale>
+			<fScale>25.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/Animals/Kangaroo/Kangaroo.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -2290,7 +2290,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_DINGO</Type>
 			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-			<fScale>35.0</fScale>
+			<fScale>28.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/animals/Dingo/Dingo.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -2804,7 +2804,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SEAEAGLE</Type>
 			<Button>Art/Interface/Buttons/Units/Seaeagle.dds</Button>
-			<fScale>11.0</fScale>
+			<fScale>9.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/animals/Seaeagle/Seaeagle.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
@@ -2852,7 +2852,7 @@
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HARPYEAGLE</Type>
 			<Button>Art/Interface/Buttons/Units/Harpyeagle.dds</Button>
-			<fScale>35.0</fScale>
+			<fScale>28.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
 			<NIF>Art/Units/animals/Harpyeagle/Harpyeagle.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>

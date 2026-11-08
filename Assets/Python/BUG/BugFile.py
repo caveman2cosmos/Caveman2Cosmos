@@ -14,6 +14,8 @@ class BugFileInstance:
 	def __init__(self, bHoldOpen=False):
 		self.MsgStore = []
 		self.HoldOpen = bHoldOpen
+		self.File = None
+		self.FileName = "Autolog.txt"
 
 	def setFileName(self, sFileName):
 		self.FileName = sFileName
@@ -28,7 +30,7 @@ class BugFileInstance:
 			return
 
 		if len(self.MsgStore) > 0:
-			self.openFile(self.FileName)
+			self.openFile()
 			for sMsg in self.MsgStore:
 				self.File.write(sMsg)
 			self.closeFile()
@@ -39,7 +41,10 @@ class BugFileInstance:
 		self.closeFile()
 
 	def openFile(self, bForce=False, sWrite='a'):
-		if (self.HoldOpen and not bForce):
+		# In hold-open mode, reuse an existing handle instead of reopening every write.
+		if (self.HoldOpen and not bForce
+		and self.File is not None
+		and not self.File.closed):
 			return
 
 		szPath = BugFile.getFilePath()
@@ -56,7 +61,8 @@ class BugFileInstance:
 		if (self.HoldOpen and not bForce):
 			return
 
-		self.File.close()
+		if self.File is not None and not self.File.closed:
+			self.File.close()
 
 	def buildMsg(self, vMsg, vColor="Black", vBold=False, vUnderline=False, vPrefix=""):
 		if vPrefix != "":

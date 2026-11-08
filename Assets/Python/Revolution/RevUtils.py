@@ -126,7 +126,7 @@ def getNumDefendersNearPlot( iPlotX, iPlotY, iPlayer, iRange = 2, bIncludePlot =
 	# bIncludePlot takes precedence over bIncludeCities
 	iNumUnits = 0
 
-	for [radius,pPlot] in plotGenerator(GC.getMap().plot(iPlotX,iPlotY), iRange):
+	for [_, pPlot] in plotGenerator(GC.getMap().plot(iPlotX, iPlotY), iRange):
 
 		if pPlot.getX() == iPlotX and pPlot.getY() == iPlotY:
 			if not bIncludePlot:
@@ -500,14 +500,15 @@ def giveTechs(toPlayer, fromPlayer):
 			knownTechs += (iTech,)
 			iCost = GC.getTechInfo(iTech).getResearchCost()
 			if iCost > iMinCostly:
-				iMin = iCost
 				for i in xrange(iNumCostly):
 					iTechX, iCostX = costlyTechs[i]
 					if iCostX == iMinCostly:
 						costlyTechs[i] = (iTech, iCost)
-					elif iCostX < iMin:
-						iMin = iCostX
-				iMinCostly = iMin
+						break
+				iMinCostly = costlyTechs[0][1]
+				for i in xrange(1, iNumCostly):
+					if costlyTechs[i][1] < iMinCostly:
+						iMinCostly = costlyTechs[i][1]
 
 	# Simplify costly tech list
 	bestTechs = ()

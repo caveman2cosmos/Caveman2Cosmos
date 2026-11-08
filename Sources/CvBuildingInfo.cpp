@@ -14,6 +14,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfoUtil.h"
@@ -50,6 +51,10 @@ m_iFreeAreaBuilding(NO_BUILDING),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
+m_iProductionCostSize(-1),
+m_iProductionCostCount(-1),
+m_iProductionCostMaterials(-1),
+m_iProductionCostComplexity(-1),
 m_iHurryCostModifier(0),
 m_iHurryAngerModifier(0),
 m_iMinAreaSize(0),
@@ -1565,7 +1570,59 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t iThis)
 			GC.getBuildingInfo((BuildingTypes)getReplacementBuilding(i)).setReplacedBuilding(iId);
 		}
 	}
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)iThis);
+	// C2C Optimization: Pre-calculate which buildings are enabled by this building and map bonus-providing relationships.
+	// This dramatically reduces CPU cycles spent in loop scans (e.g., in CvCityAI::CalculateAllBuildingValues).
+	m_aEnabledBuildingsList.clear();
+	std::vector<GOMQuery> queries;
+	GOMQuery query;
+	query.GOM = GOM_BUILDING;
+	query.id = iThis;
+	queries.push_back(query);
+	query.GOM = GOM_BONUS;
+	foreach_(const BonusModifier& kFreeBonus, getFreeBonuses())
+	{
+		query.id = kFreeBonus.first;
+		queries.push_back(query);
+		GC.getBonusInfo(kFreeBonus.first).addBuildingProvidingBonus((BuildingTypes)iThis);
+	}
+
+	for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+	{
+		const BuildingTypes eType = static_cast<BuildingTypes>(iJ);
+		const CvBuildingInfo& loopBuilding = GC.getBuildingInfo(eType);
+
+		bool bEnables = false;
+		if (loopBuilding.isPrereqInCityBuilding(iThis) || loopBuilding.isPrereqOrBuilding(iThis))
+		{
+			bEnables = true;
+		}
+		else
+		{
+			foreach_(const BonusTypes eFreeBonus, getFreeBonuses() | map_keys)
+			{
+				if (loopBuilding.getPrereqAndBonus() == eFreeBonus || algo::any_of_equal(loopBuilding.getPrereqOrBonuses(), eFreeBonus))
+				{
+					bEnables = true;
+					break;
+				}
+			}
+		}
+
+		if (!bEnables)
+		{
+			const BoolExpr* condition = loopBuilding.getConstructCondition();
+			if (condition != NULL && condition->getInvolvesGOM(queries))
+			{
+				bEnables = true;
+			}
+		}
+
+		if (bEnables)
+		{
+			m_aEnabledBuildingsList.push_back(eType);
+		}
+	}
+	m_bEnablesOtherBuildings = !m_aEnabledBuildingsList.empty();
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)iThis);
 
 	if (getHolyCity() != NO_RELIGION)
@@ -1590,6 +1647,10 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCivicOption);
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
+	CheckSum(iSum, m_iProductionCostSize);
+	CheckSum(iSum, m_iProductionCostCount);
+	CheckSum(iSum, m_iProductionCostMaterials);
+	CheckSum(iSum, m_iProductionCostComplexity);
 	CheckSum(iSum, m_iHurryCostModifier);
 	CheckSum(iSum, m_iHurryAngerModifier);
 	CheckSum(iSum, m_iMinAreaSize);
@@ -2109,6 +2170,15 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bStateReligionInCity, L"bNeedStateReligionInCity");
 	pXML->GetOptionalChildXmlValByName(&m_iAIWeight, L"iAIWeight");
 	pXML->GetOptionalChildXmlValByName(&m_iProductionCost, L"iCost", -1);
+
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostSizeModifier");
+	m_iProductionCostSize = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostCountModifier");
+	m_iProductionCostCount = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostMaterialsModifier");
+	m_iProductionCostMaterials = pXML->GetInfoClass(szTextVal);
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"CostComplexityModifier");
+	m_iProductionCostComplexity = pXML->GetInfoClass(szTextVal);
 	pXML->GetOptionalChildXmlValByName(&m_iHurryCostModifier, L"iHurryCostModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iHurryAngerModifier, L"iHurryAngerModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iMinAreaSize, L"iMinAreaSize");
@@ -3345,6 +3415,10 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getAIWeight() == iDefault) m_iAIWeight = pClassInfo->getAIWeight();
 	if (m_iProductionCost == iTextDefault) m_iProductionCost = pClassInfo->getProductionCost();
+	if (m_iProductionCostSize == iTextDefault) m_iProductionCostSize = pClassInfo->getProductionCostSize();
+	if (m_iProductionCostCount == iTextDefault) m_iProductionCostCount = pClassInfo->getProductionCostCount();
+	if (m_iProductionCostMaterials == iTextDefault) m_iProductionCostMaterials = pClassInfo->getProductionCostMaterials();
+	if (m_iProductionCostComplexity == iTextDefault) m_iProductionCostComplexity = pClassInfo->getProductionCostComplexity();
 	if (getHurryCostModifier() == iDefault) m_iHurryCostModifier = pClassInfo->getHurryCostModifier();
 	if (getHurryAngerModifier() == iDefault) m_iHurryAngerModifier = pClassInfo->getHurryAngerModifier();
 	if (getMinAreaSize() == iDefault) m_iMinAreaSize = pClassInfo->getMinAreaSize();

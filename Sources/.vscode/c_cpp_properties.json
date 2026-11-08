@@ -12,7 +12,13 @@
         "${workspaceFolder}\\..\\Build\\deps\\Boost-1.55.0\\include",
         "${workspaceFolder}\\..\\Build\\deps\\Python24\\include"
       ],
-      "defines": [],
+      "defines": [
+        "_DEBUG",
+        "_UNICODE",
+        "_MSC_VER=900",
+        "FP_PROFILE_EXTRA_ENABLE",
+        "_MOD_FRACTRADE"
+      ],
       "windowsSdkVersion": "10.0.22621.0",
       "compilerPath": "cl.exe",
       "cStandard": "c99",

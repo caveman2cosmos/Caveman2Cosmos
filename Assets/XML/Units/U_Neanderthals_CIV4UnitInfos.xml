@@ -78,7 +78,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_WARRIOR</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -556,7 +556,7 @@
 				<UnitType>UNIT_NEANDERTHAL_ENFORCER</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>25</iCost>
+			<iCost>21</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -692,7 +692,7 @@
 				<UnitType>UNIT_TOWN_WATCHMEN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>62</iCost>
+			<iCost>69</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -927,6 +927,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -956,8 +957,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -980,7 +979,6 @@
 			<iXPValueDefense>2</iXPValueDefense>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>2</iCombat>
 			<iNumHealSupport>3</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1041,6 +1039,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -1070,8 +1069,6 @@
 			</UnitAIs>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<bNoCapture>1</bNoCapture>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -1092,7 +1089,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1154,6 +1150,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
@@ -1181,7 +1178,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<PrereqBonuses>
@@ -1214,7 +1210,6 @@
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iCombat>3</iCombat>
 			<iNumHealSupport>4</iNumHealSupport>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
@@ -1335,7 +1330,7 @@
 				<UnitType>UNIT_WARDOG</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
@@ -1345,7 +1340,7 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensityType>
 			</VisibilityIntensityTypes>
-			<iCombat>5</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>3</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iAnimalCombat>15</iAnimalCombat>
@@ -1375,7 +1370,7 @@
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<Domain>DOMAIN_IMMOBILE</Domain>
+			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MELEE</SubCombatType>
@@ -1392,6 +1387,7 @@
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_TRIBAL_GUARD</SubCombatType>
 			</SubCombatTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
 			<UnitAIs>
@@ -1408,9 +1404,9 @@
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<UnitUpgrades>
-				<UnitType>UNIT_ENFORCERS</UnitType>
+				<UnitType>UNIT_PALACE_GUARD</UnitType>
 			</UnitUpgrades>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -1508,7 +1504,7 @@
 				<UnitType>UNIT_OUTRIGGER</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>108</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1733,7 +1729,7 @@
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>108</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -2082,7 +2078,7 @@
 				<UnitType>UNIT_BATTERING_RAM</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>107</iCost>
+			<iCost>111</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -2196,8 +2192,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
 			</UnitUpgrades>
-			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
-			<iCost>122</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>350</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
@@ -2307,7 +2303,7 @@
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -2617,7 +2613,7 @@
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>103</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -2716,7 +2712,7 @@
 				<UnitType>UNIT_AXEMAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -2925,7 +2921,7 @@
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>92</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -3074,7 +3070,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_HUNTER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3133,7 +3129,7 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3146,7 +3142,7 @@
 			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>5</iCombat>
+			<iCombat>4</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -3191,7 +3187,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_TRACKER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3213,7 +3209,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3244,7 +3239,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
@@ -3257,7 +3252,7 @@
 			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
@@ -3310,7 +3305,7 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_CHASER</Type>
-			<iInstanceCostModifier>10</iInstanceCostModifier>
+			<iInstanceCostModifier>5</iInstanceCostModifier>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -3350,7 +3345,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<bAssassin>1</bAssassin>
+			<bNoAmbush>1</bNoAmbush>
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
@@ -3366,7 +3361,7 @@
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
-			<iCost>31</iCost>
+			<iCost>27</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -3429,6 +3424,363 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_NEANDERTHAL_MASTER_CHASER</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <EnabledCivilizationTypes>
+                <EnabledCivilizationType>
+                    <CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+                </EnabledCivilizationType>
+            </EnabledCivilizationTypes>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Combat>UNITCOMBAT_HUNTER</Combat>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_PRIMARY_PLUS_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_FIST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <Description>TXT_KEY_UNIT_NEANDERTHAL_MASTER_CHASER</Description>
+            <Civilopedia>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Civilopedia>
+            <Advisor>ADVISOR_GROWTH</Advisor>
+            <DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_HUNTER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_HUNTER_ESCORT</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
+            <bNoAmbush>1</bNoAmbush>
+            <bNoBadGoodies>1</bNoBadGoodies>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_BY_THE_HORNS</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
+            <PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+                <BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
+            </PrereqAndBuildings>
+            <UnitUpgrades>
+                <UnitType>UNIT_NEANDERTHAL_MASTER_TRACKER</UnitType>
+            </UnitUpgrades>
+            <ObsoleteTech>TECH_TRACKING</ObsoleteTech>
+            <iCost>-1</iCost>
+            <iBaseUpkeep>1</iBaseUpkeep>
+            <iMoves>3</iMoves>
+            <iCombat>3</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iPursuit>20</iPursuit>
+            <iCityAttack>-75</iCityAttack>
+            <iAnimalCombat>125</iAnimalCombat>
+            <iEarlyWithdraw>30</iEarlyWithdraw>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+                    <iUnitCombatMod>50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</UnitCombatType>
+                    <iUnitCombatMod>-50</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</UnitCombatType>
+                    <iUnitCombatMod>-25</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+                    <iUnitCombatMod>-25</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombatTargets>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+            </UnitCombatTargets>
+            <iAsset>1</iAsset>
+            <iPower>1</iPower>
+            <UnitMeshGroups>
+                <iGroupSize>2</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>2</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_CHASER</EarlyArtDefineTag>
+                </UnitMeshGroup>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_HUNTER_DOG</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+        </UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_NEANDERTHAL_MASTER_TRACKER</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Combat>UNITCOMBAT_HUNTER</Combat>
+            <EnabledCivilizationTypes>
+                <EnabledCivilizationType>
+                    <CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+                </EnabledCivilizationType>
+            </EnabledCivilizationTypes>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Description>TXT_KEY_UNIT_NEANDERTHAL_MASTER_TRACKER</Description>
+            <Civilopedia>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Civilopedia>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+            <Advisor>ADVISOR_GROWTH</Advisor>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_HUNTER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_ATTACK</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <bNoAmbush>1</bNoAmbush>
+            <bNoBadGoodies>1</bNoBadGoodies>
+            <PrereqTech>TECH_TRACKING</PrereqTech>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+                <BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
+            </PrereqAndBuildings>
+            <UnitUpgrades>
+                <UnitType>UNIT_NEANDERTHAL_MASTER_HUNTER</UnitType>
+            </UnitUpgrades>
+            <iCost>-1</iCost>
+            <iBaseUpkeep>1</iBaseUpkeep>
+            <iMoves>3</iMoves>
+            <iCombat>4</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityAttack>-75</iCityAttack>
+            <iPursuit>30</iPursuit>
+            <iAnimalCombat>125</iAnimalCombat>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</UnitCombatType>
+                    <iUnitCombatMod>20</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</UnitCombatType>
+                    <iUnitCombatMod>20</iUnitCombatMod>
+                </UnitCombatMod>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombatTargets>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+            </UnitCombatTargets>
+            <iAsset>2</iAsset>
+            <iPower>2</iPower>
+            <UnitMeshGroups>
+                <iGroupSize>2</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>2</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_TRACKER</EarlyArtDefineTag>
+                </UnitMeshGroup>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_HUNTER_DOG</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
+            <ObsoleteTech>TECH_HUNTING</ObsoleteTech>
+        </UnitInfo>
+        <UnitInfo>
+            <Type>UNIT_NEANDERTHAL_MASTER_HUNTER</Type>
+            <iMaxPlayerInstances>1</iMaxPlayerInstances>
+            <Special>SPECIALUNIT_PEOPLE</Special>
+            <Combat>UNITCOMBAT_HUNTER</Combat>
+            <EnabledCivilizationTypes>
+                <EnabledCivilizationType>
+                    <CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
+                </EnabledCivilizationType>
+            </EnabledCivilizationTypes>
+            <SubCombatTypes>
+                <SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_SECONDARY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_H2H_KNIFE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
+                <SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+                <SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
+                <SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
+                <SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+                <SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+            </SubCombatTypes>
+            <Domain>DOMAIN_LAND</Domain>
+            <DefaultUnitAI>UNITAI_HUNTER</DefaultUnitAI>
+            <Description>TXT_KEY_UNIT_NEANDERTHAL_MASTER_HUNTER</Description>
+            <Civilopedia>TXT_KEY_UNIT_MASTER_HUNTER_PEDIA</Civilopedia>
+            <MapCategoryTypes>
+                <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+            </MapCategoryTypes>
+            <Advisor>ADVISOR_GROWTH</Advisor>
+            <bNoBadGoodies>1</bNoBadGoodies>
+            <bNoAmbush>1</bNoAmbush>
+            <UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_HUNTER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_ATTACK</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <PrereqTech>TECH_HUNTING</PrereqTech>
+            <PrereqAndBuildings>
+                <BuildingType>BUILDING_C_AC_NEANDERTHAL</BuildingType>
+                <BuildingType>BUILDING_C_L_NEANDERTHAL</BuildingType>
+            </PrereqAndBuildings>
+            <iCost>-1</iCost>
+            <iBaseUpkeep>1</iBaseUpkeep>
+            <iMoves>3</iMoves>
+            <UnitUpgrades>
+                <UnitType>UNIT_MASTER_RANGER</UnitType>
+            </UnitUpgrades>
+            <iCombat>5</iCombat>
+            <iXPValueAttack>1</iXPValueAttack>
+            <iXPValueDefense>2</iXPValueDefense>
+            <iCityAttack>-75</iCityAttack>
+            <iPursuit>40</iPursuit>
+            <iAnimalCombat>125</iAnimalCombat>
+            <UnitCombatMods>
+                <UnitCombatMod>
+                    <UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
+                    <iUnitCombatMod>25</iUnitCombatMod>
+                </UnitCombatMod>
+            </UnitCombatMods>
+            <UnitCombatTargets>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+                <UnitCombatTarget>
+                    <UnitCombatTargetType>UNITCOMBAT_PROMOTED_ARMED_GUARD</UnitCombatTargetType>
+                    <bUnitCombatTarget>1</bUnitCombatTarget>
+                </UnitCombatTarget>
+            </UnitCombatTargets>
+            <iAsset>3</iAsset>
+            <iPower>5</iPower>
+            <UnitMeshGroups>
+                <iGroupSize>2</iGroupSize>
+                <fMaxSpeed>1.75</fMaxSpeed>
+                <fPadTime>1</fPadTime>
+                <iMeleeWaveSize>2</iMeleeWaveSize>
+                <iRangedWaveSize>0</iRangedWaveSize>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_HUNTER</EarlyArtDefineTag>
+                </UnitMeshGroup>
+                <UnitMeshGroup>
+                    <iRequired>1</iRequired>
+                    <EarlyArtDefineTag>ART_DEF_UNIT_MASTER_HUNTER_DOG</EarlyArtDefineTag>
+                </UnitMeshGroup>
+            </UnitMeshGroups>
+            <FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+            <FreePromotions>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_MASTER_HUNTER1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+                <FreePromotion>
+                    <PromotionType>PROMOTION_HUNTING_SIGHT1</PromotionType>
+                    <bFreePromotion>1</bFreePromotion>
+                </FreePromotion>
+            </FreePromotions>
+            <ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
+        </UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_NEANDERTHAL_SCOUT</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
@@ -3453,7 +3805,6 @@
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_BACKUP_SINGLE_HAND_ONLY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_H2H_AXE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_SLING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ARMOR_LIGHT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3502,10 +3853,10 @@
 				<UnitType>UNIT_GUIDE</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iCost>25</iCost>
+			<iCost>21</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iCombat>4</iCombat>
+			<iCombat>3</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>4</iXPValueDefense>
 			<iWithdrawalProb>40</iWithdrawalProb>
@@ -3559,7 +3910,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_FOOD</BuildingType>
@@ -3641,30 +3991,82 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<!-- <Action>
-					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_GATHERER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_FOOD</MissionType>
 					<ActionOutcomes>
 						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_GATHERER</OutcomeType>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_FOOD</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_GATHERER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
 							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesFood</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
 							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveFood</PythonCallback>
 						</Outcome>
 					</ActionOutcomes>
-				</Action> -->
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_PRODUCTION</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_PRODUCTION</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesProduction</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveProduction</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_ENTERTAINMENT</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesEntertainment</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveEntertainment</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
+				<Action>
+					<MissionType>MISSION_JOIN_CITY_AS_SLAVE_MILITARY</MissionType>
+					<ActionOutcomes>
+						<Outcome>
+							<OutcomeType>OUTCOME_JOIN_AS_SLAVE_MILITARY</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<And>
+									<Greater>
+										<Python>getNumNonSpecialistSlavesMilitary</Python>
+										<Constant>0</Constant>
+									</Greater>
+									<Is>TAG_OWNED</Is>
+								</And>
+							</PlotCondition>
+							<PythonCallback>doAddSettledSlaveMilitary</PythonCallback>
+						</Outcome>
+					</ActionOutcomes>
+				</Action>
 				<Action>
 					<MissionType>MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</MissionType>
 					<iCost>
@@ -3677,7 +4079,7 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+							<UnitType>UNIT_NEANDERTHAL</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>
@@ -3701,7 +4103,7 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_UPGRADE_TO_NEANDERTHAL_TRACKER</OutcomeType>
 							<iChance>100</iChance>
-							<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
+							<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 							<bUnitToCity>
 								<Constant>0</Constant>
 							</bUnitToCity>

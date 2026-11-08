@@ -50,7 +50,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CITY_UNHAPPINESS</Tag>
-		<English>Foment Unhappiness</English>
+		<English>Forment Unhappiness</English>
 		<French>Comploter du mécontentement</French>
 		<German>Unzufriedenheit schüren</German>
 		<Italian>Fomenta infelicità</Italian>
@@ -178,7 +178,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_WAR_WEARINESS</Tag>
-		<English>Will temporarily increase the war weariness in %s1 by %d2%.</English>
+		<English>Will temporarily increase the War Weariness in %s1 by %d2%.</English>
 		<French>Augmente temporairement le mécontentement lié à la guerre de %d2% dans la ville de %s1.</French>
 		<German>Steigert vorübergehend die Kriegsmüdigkeit in %s1 um %d2%.</German>
 		<Italian>Aumenta temporaneamente la stanchezza di guerra nella città di %s1 del %d2%.</Italian>

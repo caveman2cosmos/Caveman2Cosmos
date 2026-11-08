@@ -590,6 +590,15 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/commanders.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_COMMODORE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_COMMODORE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
+			</Categories>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/units/sparth/categories/commanders.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_TRADE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_TRADE</Description>
 			<Categories>
@@ -3074,27 +3083,16 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_DIST_SLING</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SLING</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Category>
-			</Categories>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_WEAPON_DIST_JAVELIN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DIST_JAVELIN</Description>
-			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Category>
-			</Categories>
-			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WEAPON_DIST_BOOMERANG</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DIST_BOOMERANG</Description>
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Category>
 			</Categories>
+			<iDCMBombRangeBase>1</iDCMBombRangeBase>
+			<iDCMBombAccuracyBase>25</iDCMBombAccuracyBase>
+			<iRBombardDamageBase>15</iRBombardDamageBase>
+			<iRBombardDamageLimitBase>10</iRBombardDamageLimitBase>
+			<iRBombardDamageMaxUnitsBase>3</iRBombardDamageMaxUnitsBase>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -3190,6 +3188,32 @@
 			<iRBombardDamageBase>20</iRBombardDamageBase>
 			<iRBombardDamageLimitBase>15</iRBombardDamageLimitBase>
 			<iRBombardDamageMaxUnitsBase>2</iRBombardDamageMaxUnitsBase>
+			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_WEAPON_DIST_SLING</Type>
+			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DIST_SLING</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Category>
+			</Categories>
+			<iDCMBombRangeBase>1</iDCMBombRangeBase>
+			<iDCMBombAccuracyBase>15</iDCMBombAccuracyBase>
+			<iRBombardDamageBase>15</iRBombardDamageBase>
+			<iRBombardDamageLimitBase>10</iRBombardDamageLimitBase>
+			<iRBombardDamageMaxUnitsBase>1</iRBombardDamageMaxUnitsBase>
+			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_WEAPON_DIST_JAVELIN</Type>
+			<Description>TXT_KEY_UNITCOMBAT_WEAPON_DIST_JAVELIN</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Category>
+			</Categories>
+			<iDCMBombRangeBase>1</iDCMBombRangeBase>
+			<iDCMBombAccuracyBase>20</iDCMBombAccuracyBase>
+			<iRBombardDamageBase>40</iRBombardDamageBase>
+			<iRBombardDamageLimitBase>20</iRBombardDamageLimitBase>
+			<iRBombardDamageMaxUnitsBase>1</iRBombardDamageMaxUnitsBase>
 			<Button>Art/Interface/Buttons/units/sparth/categories/wields_distance.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4244,55 +4268,6 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_TAXONOMY</Category>
 			</Categories>
-			<InvisibleTerrainChanges>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<iIntensity>2</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-			</InvisibleTerrainChanges>
-			<InvisibleFeatureChanges>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
-					<iIntensity>2</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>2</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_VERY_TALL_GRASS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-			</InvisibleFeatureChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -4415,7 +4390,7 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4435,7 +4410,7 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
@@ -4486,6 +4461,45 @@
 			</Categories>
 			<iStealthStrikesChange>1</iStealthStrikesChange>
 			<iStealthCombatModifierChange>25</iStealthCombatModifierChange>
+			<InvisibleTerrainChanges>
+				<InvisibleTerrainChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<iIntensity>1</iIntensity>
+				</InvisibleTerrainChange>
+				<InvisibleTerrainChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<iIntensity>1</iIntensity>
+				</InvisibleTerrainChange>
+			</InvisibleTerrainChanges>
+			<InvisibleFeatureChanges>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_OASIS</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_MANGROVE</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+			</InvisibleFeatureChanges>
 			<Button>Art/Interface/Buttons/units/sparth/categories/reptile.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5085,6 +5099,12 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_NATURAL</Category>
 			</Categories>
 			<iWithdrawalChange>5</iWithdrawalChange>
+			<InvisibilityIntensityChangeTypes>
+				<InvisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</InvisibilityIntensityChangeType>
+			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_burrowing.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5235,7 +5255,7 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>1</iIntensity>
+					<iIntensity>2</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/nature_camoflaged.dds</Button>
@@ -5382,11 +5402,6 @@
 			</WithdrawModifierOnTerrainTypeChanges>
 			<InvisibleTerrainChanges>
 				<InvisibleTerrainChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<iIntensity>1</iIntensity>
-				</InvisibleTerrainChange>
-				<InvisibleTerrainChange>
 					<InvisibleType>INVISIBLE_SUBMARINE</InvisibleType>
 					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<iIntensity>1</iIntensity>
@@ -5480,27 +5495,7 @@
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_KELP</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_OASIS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
@@ -5521,11 +5516,6 @@
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_SEA_GRASS</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -5566,27 +5556,12 @@
 			<InvisibleFeatureChanges>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_FOREST</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 				<InvisibleFeatureChange>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<iIntensity>1</iIntensity>
-				</InvisibleFeatureChange>
-				<InvisibleFeatureChange>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<FeatureType>FEATURE_SWAMP</FeatureType>
 					<iIntensity>1</iIntensity>
 				</InvisibleFeatureChange>
 			</InvisibleFeatureChanges>
@@ -8826,6 +8801,14 @@
 			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
+			<Type>UNITCOMBAT_TRIBAL_GUARD</Type>
+			<Description>TXT_KEY_UNITCOMBAT_TRIBAL_GUARD</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_ABILITIES</Category>
+			</Categories>
+			<Button>,Art/Buttons/Promotions/ArmedGuard1Promotion.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_REPTILE_DINOSAUR</Type>
 			<Description>TXT_KEY_UNITCOMBAT_REPTILE_DINOSAUR</Description>
 			<Categories>
@@ -8840,6 +8823,7 @@
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<iMovesChange>1</iMovesChange>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>30</iCaptureResistanceModifierChange>
 			<Button>Art/Interface/Buttons/units/sparth/categories/tamed.dds</Button>

@@ -109,6 +109,9 @@ public:
 	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
+	int getArmyID() const { return m_iArmyID; }
+	void setArmyID(int iArmyID) { m_iArmyID = iArmyID; }
+
 	bool canAllSelectedMove() const;
 	DllExport bool canAllMove() const;
 	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
@@ -331,7 +334,7 @@ public:
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
 	virtual CvUnit* AI_getMissionAIUnit() const = 0;
 	virtual CvUnit* AI_ejectBestDefender(const CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;
-	virtual bool AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity) const = 0;
+	virtual bool AI_hasBeneficialPropertyEffectForCity(const CvCity* pCity, PropertyTypes pProperty) const = 0;
 	virtual CvUnit* AI_ejectBestPropertyManipulator(const CvCity* pTargetCity) = 0;
 	virtual void AI_separateNonAI(UnitAITypes eUnitAI) = 0;
 	virtual void AI_separateAI(UnitAITypes eUnitAI) = 0;
@@ -346,6 +349,7 @@ public:
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;
 	bool hasCommander() const;
+	bool hasCommodore() const;
 	bool hasUnitOfAI(UnitAITypes eUnitAI) const;
 	int	getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat = NO_UNITCOMBAT) const;
 	void validateLocations(bool bFixup = false) const;
@@ -439,6 +443,7 @@ private:
 	static const CvSelectionGroup* m_pCachedMovementGroup;
 	static bst::scoped_ptr<CachedPathGenerator> m_cachedPathGenerator;
 	static CachedPathGenerator& getCachedPathGenerator();
+	int m_iArmyID;
 
 public:
 	static void setGroupToCacheFor(CvSelectionGroup* group);

@@ -101,6 +101,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_paszDiplomacyPowerTypes(NULL)
 	, m_paszAutomateTypes(NULL)
 	, m_paszDirectionTypes(NULL)
+	, m_paszBuildingCostSizeTypes(NULL)
+	, m_paszBuildingCostCountTypes(NULL)
+	, m_paszBuildingCostMaterialsTypes(NULL)
+	, m_paszBuildingCostComplexityTypes(NULL)
 	, m_paszFootstepAudioTypes(NULL)
 	, m_paszFootstepAudioTags(NULL)
 	, m_bGraphicsInitialized(false)
@@ -136,6 +140,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
 	, m_fPLOT_SIZE(0)
+	, m_ppbBonusAssociatedBuildings(NULL)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
 	// BBAI Options
@@ -152,8 +157,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumPlayableCivilizationInfos(0)
 	, m_iNumAIPlayableCivilizationInfos(0)
 	, m_iTotalNumModules(0) // Modular loading control
-	, iStuckUnitID(0)
-	, iStuckUnitCount(0)
 	, m_iniInitCore(NULL)
 	, m_loadedInitCore (NULL)
 	, m_bResourceLayerOn(false)
@@ -472,6 +475,7 @@ void cvInternalGlobals::uninit()
 	SAFE_DELETE_ARRAY(m_aiCityPlotPriority);
 	SAFE_DELETE_ARRAY(m_aeTurnLeftDirection);
 	SAFE_DELETE_ARRAY(m_aeTurnRightDirection);
+	SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
 
 	SAFE_DELETE(m_game);
 
@@ -1436,6 +1440,8 @@ CvInfoBase& cvInternalGlobals::getUnitAIInfo(UnitAITypes eUnitAINum) const
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAINum);
 	return *(m_paUnitAIInfos[eUnitAINum]);
 }
+
+
 void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 {
 	FAssertMsg(m_paUnitAIInfos.size() == enumVal, "enumVal not expected value");
@@ -1445,6 +1451,9 @@ void cvInternalGlobals::registerUnitAI(const char* szType, int enumVal)
 	m_paUnitAIInfos.push_back(entry);
 	setInfoTypeFromString(szType, enumVal);
 }
+
+
+
 
 #define	REGISTER_UNITAI(x)	registerUnitAI(#x,x)
 
@@ -1733,6 +1742,7 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_HURRY_FOOD);
 	REGISTER_MISSION(MISSION_ESPIONAGE_SLEEP);
 	REGISTER_MISSION(MISSION_GREAT_COMMANDER);
+	REGISTER_MISSION(MISSION_GREAT_COMMODORE);
 	REGISTER_MISSION(MISSION_SHADOW);
 	REGISTER_MISSION(MISSION_GOTO);
 	REGISTER_MISSION(MISSION_BUTCHER);
@@ -1761,6 +1771,7 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR);
 	REGISTER_MISSION(MISSION_SELL_CAPTIVE);
 	REGISTER_MISSION(MISSION_FREE_CAPTIVE);
+	REGISTER_MISSION(MISSION_SLAY_ANIMAL);
 	REGISTER_MISSION(MISSION_JOIN_CITY_FREED_SLAVE);
 	REGISTER_MISSION(MISSION_RECORD_TALE);
 	REGISTER_MISSION(MISSION_RECORD_TALE_ORAL);
@@ -1772,6 +1783,7 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_GATHERER);
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
 	REGISTER_MISSION(MISSION_HERITAGE);
+	REGISTER_MISSION(MISSION_HUNT);
 
 #ifdef _MOD_SENTRY
 	REGISTER_MISSION(MISSION_MOVE_TO_SENTRY);
@@ -2384,6 +2396,50 @@ CvString& cvInternalGlobals::getDirectionTypes(AutomateTypes e)
 	return m_paszDirectionTypes[e];
 }
 
+CvString*& cvInternalGlobals::getBuildingCostSizeTypes()
+{
+	return m_paszBuildingCostSizeTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostSizeTypes(BuildingCostSizeTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTSIZE_TYPES, e);
+	return m_paszBuildingCostSizeTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostCountTypes()
+{
+	return m_paszBuildingCostCountTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostCountTypes(BuildingCostCountTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTCOUNT_TYPES, e);
+	return m_paszBuildingCostCountTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostMaterialsTypes()
+{
+	return m_paszBuildingCostMaterialsTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostMaterialsTypes(BuildingCostMaterialsTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTMATERIALS_TYPES, e);
+	return m_paszBuildingCostMaterialsTypes[e];
+}
+
+CvString*& cvInternalGlobals::getBuildingCostComplexityTypes()
+{
+	return m_paszBuildingCostComplexityTypes;
+}
+
+CvString& cvInternalGlobals::getBuildingCostComplexityTypes(BuildingCostComplexityTypes e)
+{
+	FASSERT_BOUNDS(0, NUM_BUILDINGCOSTCOMPLEXITY_TYPES, e);
+	return m_paszBuildingCostComplexityTypes[e];
+}
+
 int cvInternalGlobals::getNumPropertyInfos() const
 {
 	return (int)m_paPropertyInfo.size();
@@ -2612,7 +2668,11 @@ void cvInternalGlobals::enableDLLProfiler(bool bEnable)
 
 bool cvInternalGlobals::isDLLProfilerEnabled() const
 {
+#ifdef USE_INTERNAL_PROFILER
+	return true;
+#else
 	return m_bDLLProfiler;
+#endif
 }
 
 const char* cvInternalGlobals::alternateProfileSampleName() const
@@ -2635,6 +2695,10 @@ void cvInternalGlobals::deleteInfoArrays()
 	SAFE_DELETE_ARRAY(GC.getDiplomacyPowerTypes());
 	SAFE_DELETE_ARRAY(GC.getAutomateTypes());
 	SAFE_DELETE_ARRAY(GC.getDirectionTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostSizeTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostCountTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostMaterialsTypes());
+	SAFE_DELETE_ARRAY(GC.getBuildingCostComplexityTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTypes());
 	SAFE_DELETE_ARRAY(GC.getFootstepAudioTags());
 
@@ -2884,39 +2948,39 @@ CvMap& cvInternalGlobals::getMap() const
 	return *m_maps[CURRENT_MAP];
 }
 
-FAStar& cvInternalGlobals::getPathFinder() const
+FAStar& cvInternalGlobals::getPathFinder(MapTypes map) const
 {
-	return *m_pathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_pathFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getInterfacePathFinder() const
+FAStar& cvInternalGlobals::getInterfacePathFinder(MapTypes map) const
 {
-	return *m_interfacePathFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_interfacePathFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getStepFinder() const
+FAStar& cvInternalGlobals::getStepFinder(MapTypes map) const
 {
-	return *m_stepFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_stepFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getRouteFinder() const
+FAStar& cvInternalGlobals::getRouteFinder(MapTypes map) const
 {
-	return *m_routeFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_routeFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getBorderFinder() const
+FAStar& cvInternalGlobals::getBorderFinder(MapTypes map) const
 {
-	return *m_borderFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_borderFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getAreaFinder() const
+FAStar& cvInternalGlobals::getAreaFinder(MapTypes map) const
 {
-	return *m_areaFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_areaFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
-FAStar& cvInternalGlobals::getPlotGroupFinder() const
+FAStar& cvInternalGlobals::getPlotGroupFinder(MapTypes map) const
 {
-	return *m_plotGroupFinders[m_game ? CURRENT_MAP : MAP_EARTH];
+	return *m_plotGroupFinders[map == NO_MAP ? (m_game ? CURRENT_MAP : MAP_EARTH) : map];
 }
 
 CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
@@ -3017,6 +3081,15 @@ void cvInternalGlobals::refreshOptionsBUG()
 	gCityLogLevel = getBugOptionINT("Autolog__LogLevelCityBBAI", 0);
 	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
 	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
+
+#ifdef _DEBUG
+	gPlayerLogLevel = 4;
+	gTeamLogLevel = 4;
+	gCityLogLevel = 4;
+	gUnitLogLevel = 4;
+#endif // DEBUG
+
+
 
 	OutputRatios::setBaseOutputWeights(
 		getBugOptionINT("CityScreen__BaseWeightFood", 10),
@@ -3129,6 +3202,80 @@ void cvInternalGlobals::doPostLoadCaching()
 	}
 
 	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
+
+	{
+		// C2C Optimization: Precompute the mapping of BonusTypes to all BuildingTypes that interact with or require that bonus.
+		// This replaces expensive loops over all building infos (thousands of items) with a fast cached vector lookup in AI evaluation.
+		SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
+		const int iNumBonusInfos = getNumBonusInfos();
+		m_ppbBonusAssociatedBuildings = new std::vector<BuildingTypes>[iNumBonusInfos];
+		for (int iI = 0; iI < getNumBuildingInfos(); iI++)
+		{
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+			const CvBuildingInfo& kBuilding = getBuildingInfo(eBuilding);
+			for (int iB = 0; iB < iNumBonusInfos; iB++)
+			{
+				const BonusTypes eBonus = static_cast<BonusTypes>(iB);
+				bool bRelated = false;
+				if (kBuilding.getPrereqAndBonus() == eBonus)
+				{
+					bRelated = true;
+				}
+				else if (algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus))
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusProductionModifier(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getPowerBonus() == eBonus)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusDefenseChanges(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else
+				{
+					for (int iY = 0; iY < NUM_YIELD_TYPES; iY++)
+					{
+						if (kBuilding.getBonusYieldModifier(eBonus, iY) != 0 ||
+							kBuilding.getBonusYieldChanges(eBonus, iY) != 0)
+						{
+							bRelated = true;
+							break;
+						}
+					}
+					if (!bRelated)
+					{
+						for (int iC = 0; iC < NUM_COMMERCE_TYPES; iC++)
+						{
+							if (kBuilding.getBonusCommercePercentChanges(eBonus, iC) != 0 ||
+								kBuilding.getBonusCommerceModifier(eBonus, iC) != 0)
+							{
+								bRelated = true;
+								break;
+							}
+						}
+					}
+					if (!bRelated)
+					{
+						if (kBuilding.getBonusHappinessChanges().getValue(eBonus) != 0 ||
+							kBuilding.getBonusHealthChanges().getValue(eBonus) != 0)
+						{
+							bRelated = true;
+						}
+					}
+				}
+				if (bRelated)
+				{
+					m_ppbBonusAssociatedBuildings[eBonus].push_back(eBuilding);
+				}
+			}
+		}
+	}
 }
 
 void cvInternalGlobals::checkInitialCivics()
@@ -3179,4 +3326,14 @@ void cvInternalGlobals::cacheGameSpecificValues()
 		}
 		else info->setLevel(-1);
 	}
+}
+
+const std::vector<BuildingTypes>& cvInternalGlobals::getBonusAssociatedBuildings(BonusTypes eBonus) const
+{
+	if (eBonus < 0 || eBonus >= getNumBonusInfos() || m_ppbBonusAssociatedBuildings == NULL)
+	{
+		static const std::vector<BuildingTypes> empty;
+		return empty;
+	}
+	return m_ppbBonusAssociatedBuildings[eBonus];
 }

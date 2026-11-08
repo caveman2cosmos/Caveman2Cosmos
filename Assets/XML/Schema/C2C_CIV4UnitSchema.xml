@@ -403,6 +403,7 @@
 	<ElementType name="bAttackOnlyCities" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesAdd" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAttackOnlyCitiesSubtract" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bOnlyAttackAnimals" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevel" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevelAdd" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bIgnoreNoEntryLevelSubtract" content="textOnly" dt:type="boolean"/>
@@ -1265,6 +1266,7 @@
 	<ElementType name="bNoBadGoodies" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bOnlyDefensive" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCapture" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoAmbush" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRivalTerritory" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryHappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitarySupport" content="textOnly" dt:type="boolean"/>
@@ -1778,6 +1780,7 @@
 		<element type="bKill" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
 		<element type="PayerType" minOccurs="0"/>
+		<element type="UnitCondition" minOccurs="0"/>
 		<element type="PropertyCost" minOccurs="0"/>
 		<element type="ActionOutcomes"/>
 	</ElementType>
@@ -1895,6 +1898,7 @@
 		<element type="FlankingStrikes" minOccurs="0"/>
 		<element type="UnitAIs" minOccurs="0"/>
 		<element type="NotUnitAIs" minOccurs="0"/>
+		<element type="bNoAmbush" minOccurs="0"/>
 		<element type="Builds" minOccurs="0"/>
 		<element type="ReligionSpreads" minOccurs="0"/>
 		<element type="CorporationSpreads" minOccurs="0"/>
@@ -2037,6 +2041,7 @@
 		<element type="iTaunt" minOccurs="0"/>
 		<element type="iMaxHP" minOccurs="0"/>
 		<element type="bAttackOnlyCities" minOccurs="0"/>
+		<element type="bOnlyAttackAnimals" minOccurs="0"/>
 		<element type="bIgnoreNoEntryLevel" minOccurs="0"/>
 		<element type="bIgnoreZoneofControl" minOccurs="0"/>
 		<element type="iCombatModifierPerSizeMore" minOccurs="0"/>
@@ -2238,11 +2243,13 @@
 	<ElementType name="PromotionPrereqOr1" content="textOnly"/>
 	<ElementType name="PromotionPrereqOr2" content="textOnly"/>
 	<ElementType name="TechPrereq" content="textOnly"/>
+	<ElementType name="GrantsBuildingOnFound" content="textOnly"/>
 	<ElementType name="StateReligionPrereq" content="textOnly"/>
 	<ElementType name="bLeader" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBlitz" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAmphib" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRiver" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bRiverMoveIgnore" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bEnemyRoute" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bAlwaysHeal" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHillsDoubleMove" content="textOnly" dt:type="boolean"/>
@@ -2315,6 +2322,7 @@
 		<element type="PromotionPrereqOr1" minOccurs="0"/>
 		<element type="PromotionPrereqOr2" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
+		<element type="GrantsBuildingOnFound" minOccurs="0"/>
 		<element type="MinEraType" minOccurs="0"/>
 		<element type="MaxEraType" minOccurs="0"/>
 		<element type="StateReligionPrereq" minOccurs="0"/>
@@ -2364,6 +2372,7 @@
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
+		<element type="bRiverMoveIgnore" minOccurs="0"/>
 		<element type="bEnemyRoute" minOccurs="0"/>
 		<element type="bAlwaysHeal" minOccurs="0"/>
 		<element type="bHillsDoubleMove" minOccurs="0"/>
@@ -3043,6 +3052,7 @@
 		<element type="bBlitz" minOccurs="0"/>
 		<element type="bAmphib" minOccurs="0"/>
 		<element type="bRiver" minOccurs="0"/>
+		<element type="bRiverMoveIgnore" minOccurs="0"/>
 		<element type="bEnemyRoute" minOccurs="0"/>
 		<element type="bAlwaysHeal" minOccurs="0"/>
 		<element type="bHillsDoubleMove" minOccurs="0"/>
