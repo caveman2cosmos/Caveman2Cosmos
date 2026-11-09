@@ -1275,9 +1275,12 @@ int CvContractBroker::groupDefenseReinforcements(CvUnit* leader,const CvPlot* ta
         CvUnit* unit=findUnit(info.iUnitId);
         if(!unit || unit->plot()!=origin || unit->AI_getUnitAIType()!=leader->AI_getUnitAIType()
             || !canReleaseDefender(unit) || !unit->canJoinGroup(origin,leader->getGroup()))continue;
+        const int iRequestMaxPath=request->iMaxPath; // capture before joinGroup() - it can run AI/group
+                                                      // logic that posts a new work request, reallocating
+                                                      // m_workRequests and invalidating `request`
         unit->joinGroup(leader->getGroup());
         if(unit->getGroup()==leader->getGroup())
-        {joined.push_back(unit->getID());pathLimit=std::min(pathLimit,request->iMaxPath);}
+        {joined.push_back(unit->getID());pathLimit=std::min(pathLimit,iRequestMaxPath);}
     }
     // Individual routes need not be a legal common route for a mixed stack.
     // If the native group path fails, restore individual reserved responders.
