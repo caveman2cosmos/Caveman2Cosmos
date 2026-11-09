@@ -796,8 +796,26 @@ class CvEventManager:
 		# The turn is not really handed over to the next player before after onEndPlayerTurn has been called.
 		iGameTurn, iPlayer = argsList
 		CyPlayer = GC.getPlayer(iPlayer)
-		# Building effects
 		aWonderTuple = self.aWonderTuple
+		# Self-heal: onTechAcquired only purges a wonder's cached entry when it
+		# personally fires for the wonder's owner with the matching obsolete tech.
+		# Tech reaching a team through other means (trades, free-tech effects,
+		# scenario/WorldBuilder grants, or onTechAcquired's own iPlayer == -1
+		# early-out) never triggers that cleanup, so an already-obsolete wonder
+		# (e.g. Wembley Stadium) can stay "active" in the cache and keep paying
+		# out every turn forever. Re-validate against the engine here instead of
+		# trusting the cache.
+		if iPlayer in aWonderTuple[4]:
+			CyTeam = GC.getTeam(CyPlayer.getTeam())
+			temp = list(aWonderTuple[4])
+			n = 0
+			for i, iPlayerX in enumerate(temp):
+				if iPlayerX != iPlayer: continue
+				idx = i - n
+				if CyTeam.isObsoleteBuilding(aWonderTuple[1][idx]):
+					del aWonderTuple[0][idx], aWonderTuple[1][idx], aWonderTuple[2][idx], aWonderTuple[3][idx], aWonderTuple[4][idx]
+					n += 1
+		# Building effects
 		if iPlayer in aWonderTuple[4]:
 			for i, iPlayerX in enumerate(aWonderTuple[4]):
 				if iPlayerX != iPlayer: continue
