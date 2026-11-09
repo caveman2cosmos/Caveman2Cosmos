@@ -13,7 +13,7 @@
 // admissibility of every pruning bound (no plot the old code would have
 // chosen is ever pruned).
 
-namespace CvSafetyPruning
+namespace safety
 {
 	// Score weight awarded per defending unit already stationed at the candidate plot.
 	static const int DEFENDING_UNIT_WEIGHT = 100;
@@ -29,8 +29,8 @@ namespace CvSafetyPruning
 	static const int THEORETICAL_MAX_RANDOM_ROLL = RANDOM_SAFETY_ROLL_MAX - 1;
 
 	// Scale and offset constants used in the turn distance discount formula:
-	//   iDiscountedScore = (iPreDistanceScore * DISTANCE_DISCOUNT_SCALE) / (iPathTurns + DISTANCE_DISCOUNT_OFFSET)
-	// For iPathTurns = 0, this evaluates to 5/4 = 1.25x; for iPathTurns = 1, it evaluates to 5/5 = 1.0x.
+	//   discountedScore = (preDistanceScore * DISTANCE_DISCOUNT_SCALE) / (pathTurns + DISTANCE_DISCOUNT_OFFSET)
+	// For pathTurns = 0, this evaluates to 5/4 = 1.25x; for pathTurns = 1, it evaluates to 5/5 = 1.0x.
 	static const int DISTANCE_DISCOUNT_SCALE = 5;
 	static const int DISTANCE_DISCOUNT_OFFSET = 4;
 
@@ -38,7 +38,7 @@ namespace CvSafetyPruning
 	static const int FULL_HEALTH_PERCENT = 100;
 	static const int TERRAIN_DAMAGE_DIVISOR = 200;
 
-	// Penalty divisor applied when the candidate plot is marked in danger and beats iBestValue.
+	// Penalty divisor applied when the candidate plot is marked in danger and beats bestValue.
 	static const int IN_DANGER_SCORE_DIVISOR = 2;
 
 	// Sea movement step multiplier (naval promotions or coastal travel can at most double effective speed).
@@ -65,18 +65,18 @@ namespace CvSafetyPruning
 	// Passing this struct replaces multiple scalar/boolean parameters across pruning routines.
 	struct UnitMovementProfile
 	{
-		int iBaseMoves;
-		int iMovesLeft;
-		int iDomain; // SafetyPruningDomain or engine DomainTypes
-		bool bFlatMovementCost;
+		int baseMoves;
+		int movesLeft;
+		int domain; // SafetyPruningDomain or engine DomainTypes
+		bool flatMovementCost;
 
 		UnitMovementProfile()
-			: iBaseMoves(1), iMovesLeft(0), iDomain(SAFETY_DOMAIN_LAND), bFlatMovementCost(false)
+			: baseMoves(1), movesLeft(0), domain(SAFETY_DOMAIN_LAND), flatMovementCost(false)
 		{
 		}
 
-		UnitMovementProfile(int iBaseMovesIn, int iMovesLeftIn, int iDomainIn, bool bFlatMovementCostIn)
-			: iBaseMoves(iBaseMovesIn), iMovesLeft(iMovesLeftIn), iDomain(iDomainIn), bFlatMovementCost(bFlatMovementCostIn)
+		UnitMovementProfile(int baseMovesIn, int movesLeftIn, int domainIn, bool flatMovementCostIn)
+			: baseMoves(baseMovesIn), movesLeft(movesLeftIn), domain(domainIn), flatMovementCost(flatMovementCostIn)
 		{
 		}
 	};
@@ -87,95 +87,95 @@ namespace CvSafetyPruning
 	// the pruning bounds unsound.
 
 	inline int calcDeterministicPlotBase(
-		int iDefendingUnitCount,
-		bool bAnimalDanger,
-		bool bOwnedByUnitOwner,
-		bool bOwnedByNonHostile,
-		int iDefenseModifier)
+		int defendingUnitCount,
+		bool animalDanger,
+		bool ownedByUnitOwner,
+		bool ownedByNonHostile,
+		int defenseModifier)
 	{
-		int iBase = iDefendingUnitCount * DEFENDING_UNIT_WEIGHT;
-		if (bAnimalDanger)
+		int base = defendingUnitCount * DEFENDING_UNIT_WEIGHT;
+		if (animalDanger)
 		{
-			if (bOwnedByUnitOwner)
+			if (ownedByUnitOwner)
 			{
-				iBase += ANIMAL_DANGER_OWNED_TERRITORY_BONUS;
+				base += ANIMAL_DANGER_OWNED_TERRITORY_BONUS;
 			}
-			else if (bOwnedByNonHostile)
+			else if (ownedByNonHostile)
 			{
-				iBase += ANIMAL_DANGER_NON_HOSTILE_TERRITORY_BONUS;
+				base += ANIMAL_DANGER_NON_HOSTILE_TERRITORY_BONUS;
 			}
 		}
-		iBase += iDefenseModifier;
-		return iBase;
+		base += defenseModifier;
+		return base;
 	}
 
-	inline int applyTerrainTurnDamage(int iValue, int iUnitDamagePercent, int iTerrainTurnDamage)
+	inline int applyTerrainTurnDamage(int value, int unitDamagePercent, int terrainTurnDamage)
 	{
-		if (iTerrainTurnDamage > 0)
+		if (terrainTurnDamage > 0)
 		{
-			const int iEffectiveHealthPercent = std::max(1, FULL_HEALTH_PERCENT - iUnitDamagePercent - iTerrainTurnDamage);
-			iValue *= iEffectiveHealthPercent;
-			iValue /= TERRAIN_DAMAGE_DIVISOR;
+			const int effectiveHealthPercent = std::max(1, FULL_HEALTH_PERCENT - unitDamagePercent - terrainTurnDamage);
+			value *= effectiveHealthPercent;
+			value /= TERRAIN_DAMAGE_DIVISOR;
 		}
-		return iValue;
+		return value;
 	}
 
 	inline int calcFinalPlotScore(
-		int iDeterministicBase,
-		int iBonusOrRoll,
-		int iUnitDamagePercent,
-		int iTerrainTurnDamage,
-		int iPathTurns,
-		int iBestValue,
-		bool bPlotInDanger)
+		int deterministicBase,
+		int bonusOrRoll,
+		int unitDamagePercent,
+		int terrainTurnDamage,
+		int pathTurns,
+		int bestValue,
+		bool plotInDanger)
 	{
-		int iValue = iDeterministicBase + iBonusOrRoll;
-		iValue = applyTerrainTurnDamage(iValue, iUnitDamagePercent, iTerrainTurnDamage);
-		iValue = (iValue * DISTANCE_DISCOUNT_SCALE) / (iPathTurns + DISTANCE_DISCOUNT_OFFSET);
-		if (iValue > iBestValue && bPlotInDanger)
+		int value = deterministicBase + bonusOrRoll;
+		value = applyTerrainTurnDamage(value, unitDamagePercent, terrainTurnDamage);
+		value = (value * DISTANCE_DISCOUNT_SCALE) / (pathTurns + DISTANCE_DISCOUNT_OFFSET);
+		if (value > bestValue && plotInDanger)
 		{
-			iValue /= IN_DANGER_SCORE_DIVISOR;
+			value /= IN_DANGER_SCORE_DIVISOR;
 		}
-		return iValue;
+		return value;
 	}
 
-	// Sound lower bound on path turns (iMinTurns <= iPathTurns is guaranteed):
+	// Sound lower bound on path turns (minTurns <= pathTurns is guaranteed):
 	// - At current plot: 0 turns.
 	// - Off current plot with 0 movement remaining: at least 1 turn.
 	// - Air domain or flat movement cost: at most max(1, baseMoves) tiles/turn.
 	// - Sea domain (no water routes; promotions at most halve step cost): at most max(1, 2 * baseMoves) tiles/turn.
 	// - Land domain without flat movement cost: routes (roads/trails/railroads) and double-move
-	//   promotions can reach distant tiles on the current turn (0 path turns), so iMinTurns = 0.
+	//   promotions can reach distant tiles on the current turn (0 path turns), so minTurns = 0.
 	inline int calcMinPossiblePathTurns(
-		bool bAtPlot,
-		int iStepDistance,
+		bool atPlot,
+		int stepDistance,
 		const UnitMovementProfile& profile)
 	{
-		if (bAtPlot || iStepDistance <= 0)
+		if (atPlot || stepDistance <= 0)
 		{
 			return 0;
 		}
-		if (profile.iMovesLeft <= 0)
+		if (profile.movesLeft <= 0)
 		{
 			return MIN_EXHAUSTED_MOVES_PATH_TURNS;
 		}
-		if (profile.bFlatMovementCost)
+		if (profile.flatMovementCost)
 		{
-			const int iMoves = std::max(1, profile.iBaseMoves);
-			return std::max(0, (iStepDistance - 1) / iMoves);
+			const int moves = std::max(1, profile.baseMoves);
+			return std::max(0, (stepDistance - 1) / moves);
 		}
 
-		switch (profile.iDomain)
+		switch (profile.domain)
 		{
 		case SAFETY_DOMAIN_AIR:
 			{
-				const int iAirMoves = std::max(1, profile.iBaseMoves);
-				return std::max(0, (iStepDistance - 1) / iAirMoves);
+				const int airMoves = std::max(1, profile.baseMoves);
+				return std::max(0, (stepDistance - 1) / airMoves);
 			}
 		case SAFETY_DOMAIN_SEA:
 			{
-				const int iMaxSeaSteps = std::max(1, MAX_SEA_SPEED_MULTIPLIER * profile.iBaseMoves);
-				return std::max(0, (iStepDistance - 1) / iMaxSeaSteps);
+				const int maxSeaSteps = std::max(1, MAX_SEA_SPEED_MULTIPLIER * profile.baseMoves);
+				return std::max(0, (stepDistance - 1) / maxSeaSteps);
 			}
 		case SAFETY_DOMAIN_IMMOBILE:
 			return MIN_IMMOBILE_PATH_TURNS;
@@ -187,52 +187,55 @@ namespace CvSafetyPruning
 
 	// Fast upper bound without querying terrain turn damage or plot danger.
 	inline int calcFastUpperScore(
-		int iDeterministicBase,
-		bool bAtPlot,
-		int iStepDistance,
+		int deterministicBase,
+		bool atPlot,
+		int stepDistance,
 		const UnitMovementProfile& profile)
 	{
-		const int iMaxPreDamage = iDeterministicBase + (bAtPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL);
-		if (iMaxPreDamage <= 0)
+		const int maxPreDamage = deterministicBase + (atPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL);
+		if (maxPreDamage <= 0)
 		{
 			return 0;
 		}
-		const int iMinTurns = calcMinPossiblePathTurns(bAtPlot, iStepDistance, profile);
-		return (iMaxPreDamage * DISTANCE_DISCOUNT_SCALE) / (iMinTurns + DISTANCE_DISCOUNT_OFFSET);
+		const int minTurns = calcMinPossiblePathTurns(atPlot, stepDistance, profile);
+		return (maxPreDamage * DISTANCE_DISCOUNT_SCALE) / (minTurns + DISTANCE_DISCOUNT_OFFSET);
 	}
 
 	// Returns true iff the plot's theoretical maximum score (under maximum RNG roll
-	// THEORETICAL_MAX_RANDOM_ROLL and minimum possible path turns) cannot beat iBestValue.
+	// THEORETICAL_MAX_RANDOM_ROLL and minimum possible path turns) cannot beat bestValue.
 	inline bool shouldPruneBeforePath(
-		int iDeterministicBase,
-		bool bAtPlot,
-		int iUnitDamagePercent,
-		int iTerrainTurnDamage,
-		bool bPlotInDanger,
-		int iStepDistance,
+		int deterministicBase,
+		bool atPlot,
+		int unitDamagePercent,
+		int terrainTurnDamage,
+		bool plotInDanger,
+		int stepDistance,
 		const UnitMovementProfile& profile,
-		int iBestValue)
+		int bestValue)
 	{
-		if (iBestValue <= 0)
+		if (bestValue <= 0)
 		{
 			return false;
 		}
-		const int iMaxPreDamage = iDeterministicBase + (bAtPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL);
-		if (iMaxPreDamage <= 0)
+		const int maxPreDamage = deterministicBase + (atPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL);
+		if (maxPreDamage <= 0)
 		{
 			return true;
 		}
-		const int iMinTurns = calcMinPossiblePathTurns(bAtPlot, iStepDistance, profile);
-		const int iMaxScore = calcFinalPlotScore(
-			iDeterministicBase,
-			bAtPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL,
-			iUnitDamagePercent,
-			iTerrainTurnDamage,
-			iMinTurns,
-			iBestValue,
-			bPlotInDanger);
-		return iMaxScore <= iBestValue;
+		const int minTurns = calcMinPossiblePathTurns(atPlot, stepDistance, profile);
+		const int maxScore = calcFinalPlotScore(
+			deterministicBase,
+			atPlot ? CURRENT_PLOT_STAY_BONUS : THEORETICAL_MAX_RANDOM_ROLL,
+			unitDamagePercent,
+			terrainTurnDamage,
+			minTurns,
+			bestValue,
+			plotInDanger);
+		return maxScore <= bestValue;
 	}
 }
+
+// Backward-compatibility alias for callers using the CvSafetyPruning namespace
+namespace CvSafetyPruning = safety;
 
 #endif // CV_SAFETY_PRUNING_H

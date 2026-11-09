@@ -38,11 +38,11 @@
 // Pin the engine-free domain mirror in CvSafetyPruning.h against the real
 // DomainTypes enum (CvEnums.h). If domains are reordered, renumbered, or the
 // mirror drifts, this fails the build instead of silently mis-routing the
-// min-path-turn model in CvSafetyPruning::calcMinPossiblePathTurns.
-STATIC_ASSERT(CvSafetyPruning::SAFETY_DOMAIN_SEA == DOMAIN_SEA, safety_pruning_mirror_DOMAIN_SEA_mismatch);
-STATIC_ASSERT(CvSafetyPruning::SAFETY_DOMAIN_AIR == DOMAIN_AIR, safety_pruning_mirror_DOMAIN_AIR_mismatch);
-STATIC_ASSERT(CvSafetyPruning::SAFETY_DOMAIN_LAND == DOMAIN_LAND, safety_pruning_mirror_DOMAIN_LAND_mismatch);
-STATIC_ASSERT(CvSafetyPruning::SAFETY_DOMAIN_IMMOBILE == DOMAIN_IMMOBILE, safety_pruning_mirror_DOMAIN_IMMOBILE_mismatch);
+// min-path-turn model in safety::calcMinPossiblePathTurns.
+STATIC_ASSERT(safety::SAFETY_DOMAIN_SEA == DOMAIN_SEA, safety_pruning_mirror_DOMAIN_SEA_mismatch);
+STATIC_ASSERT(safety::SAFETY_DOMAIN_AIR == DOMAIN_AIR, safety_pruning_mirror_DOMAIN_AIR_mismatch);
+STATIC_ASSERT(safety::SAFETY_DOMAIN_LAND == DOMAIN_LAND, safety_pruning_mirror_DOMAIN_LAND_mismatch);
+STATIC_ASSERT(safety::SAFETY_DOMAIN_IMMOBILE == DOMAIN_IMMOBILE, safety_pruning_mirror_DOMAIN_IMMOBILE_mismatch);
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet* CvUnitAI::m_cachedMissionaryPlotset = NULL;
@@ -16555,7 +16555,7 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	// borders is defense to at least the animal component of the current danger
 	const bool bOwnedBySelf = (plotX->getOwner() == getOwner());
 	const bool bOwnedByNonHostile = (!bOwnedBySelf && plotX->getOwner() != NO_PLAYER && !atWar(plotX->getTeam(), getTeam()));
-	const int iDeterministicBase = CvSafetyPruning::calcDeterministicPlotBase(
+	const int iDeterministicBase = safety::calcDeterministicPlotBase(
 		iStationedDefendersCount,
 		bAnimalDanger,
 		bOwnedBySelf,
@@ -16564,8 +16564,8 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 
 	const bool bAtPlot = atPlot(plotX);
 	const int iStepDist = bAtPlot ? 0 : stepDistance(getX(), getY(), plotX->getX(), plotX->getY());
-	FAssertMsg(getDomainType() >= 0 && getDomainType() < NUM_DOMAIN_TYPES, "getDomainType outside NUM_DOMAIN_TYPES breaks CvSafetyPruning domain switch");
-	const CvSafetyPruning::UnitMovementProfile movementProfile(
+	FAssertMsg(getDomainType() >= 0 && getDomainType() < NUM_DOMAIN_TYPES, "getDomainType outside NUM_DOMAIN_TYPES breaks safety domain switch");
+	const safety::UnitMovementProfile movementProfile(
 		baseMoves(),
 		getGroup()->movesLeft(),
 		getDomainType(),
@@ -16573,7 +16573,7 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	);
 
 	// Stage 1 pruning: fast upper bound before querying terrain damage or plot danger
-	if (iBestValue > 0 && CvSafetyPruning::calcFastUpperScore(iDeterministicBase, bAtPlot, iStepDist, movementProfile) <= iBestValue)
+	if (iBestValue > 0 && safety::calcFastUpperScore(iDeterministicBase, bAtPlot, iStepDist, movementProfile) <= iBestValue)
 	{
 		return;
 	}
@@ -16582,7 +16582,7 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	const int iUnitDamage = getDamagePercent();
 
 	// Stage 2a pruning: upper bound with terrain damage alone (without querying plot danger)
-	if (iTerrainDamage > 0 && CvSafetyPruning::shouldPruneBeforePath(
+	if (iTerrainDamage > 0 && safety::shouldPruneBeforePath(
 		iDeterministicBase,
 		bAtPlot,
 		iUnitDamage,
@@ -16599,7 +16599,7 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	// would actually cause this plot to be pruned.
 	bool bDangerChecked = false;
 	bool bPlotInDanger = false;
-	if (CvSafetyPruning::shouldPruneBeforePath(
+	if (safety::shouldPruneBeforePath(
 		iDeterministicBase,
 		bAtPlot,
 		iUnitDamage,
@@ -16624,9 +16624,9 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 	}
 
 	const int iBonusOrRoll = bAtPlot
-		? CvSafetyPruning::CURRENT_PLOT_STAY_BONUS
-		: GC.getGame().getSorenRandNum(CvSafetyPruning::RANDOM_SAFETY_ROLL_MAX, "AI Safety");
-	int iValue = CvSafetyPruning::calcFinalPlotScore(
+		? safety::CURRENT_PLOT_STAY_BONUS
+		: GC.getGame().getSorenRandNum(safety::RANDOM_SAFETY_ROLL_MAX, "AI Safety");
+	int iValue = safety::calcFinalPlotScore(
 		iDeterministicBase,
 		iBonusOrRoll,
 		iUnitDamage,
@@ -16643,7 +16643,7 @@ void CvUnitAI::AI_safetyEval(const CvPlot* plotX, const int iPass, const int iRa
 		}
 		if (bPlotInDanger)
 		{
-			iValue /= CvSafetyPruning::IN_DANGER_SCORE_DIVISOR;
+			iValue /= safety::IN_DANGER_SCORE_DIVISOR;
 		}
 		if (iValue > iBestValue)
 		{
