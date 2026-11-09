@@ -1,7 +1,16 @@
 #include "CvGameCoreDLL.h"
+#include "FProfiler.h"
+
 #include "CombatData.h"
 #include "CvInfos.h"
 #include "CvUnit.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CvUnitCombatInfo.h"
+#include "CvEventReporter.h"
+#include "CvDLLEntityIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+
 
 CombatData::CombatData(CvUnit* attacker, CvUnit* defender, CvPlot* pPlot)
 {
@@ -35,13 +44,80 @@ CombatData::CombatData(CvUnit* attacker, CvUnit* defender, CvPlot* pPlot)
 	m_bStealthDefense = false;
 	m_bDeathMessaged = true;
 	m_bNeverMelee = true;
+	m_bAttackerHasLostNoHP = true;
+	m_bAttackerWithdrawn = false;
 
 	m_iTurnCount = 0;
 	m_iAttacksCount = 0;
+	m_iAttackerInitialDamage = attacker->getDamage();
+	m_iDefenderInitialDamage = defender->getDamage();
+	m_iInitialAttXP = attacker->getExperience100();
+	m_iInitialDefXP = defender->getExperience100();
+	m_iInitialAttGGXP = GET_PLAYER(attacker->getOwner()).getCombatExperience();
+	m_iInitialDefGGXP = GET_PLAYER(defender->getOwner()).getCombatExperience();
+	m_iAttackerFirstStrikes = attacker->getCombatFirstStrikes();
+	m_iDefenderFirstStrikes = defender->getCombatFirstStrikes();
+	m_iAttackerDodge = attacker->dodgeVSOpponentProbTotal(defender);
+	m_iDefenderDodge = defender->dodgeVSOpponentProbTotal(attacker);
+	m_iAttackerPrecision = attacker->precisionVSOpponentProbTotal(defender);
+	m_iDefenderPrecision = defender->precisionVSOpponentProbTotal(attacker);
+
+	if (attacker->getCombatPowerShots() > 0)
+	{
+		m_iAttackerPrecision += attacker->powerShotPrecisionModifierTotal();
+	}
+	if (defender->getCombatPowerShots() > 0)
+	{
+		m_iDefenderPrecision += defender->powerShotPrecisionModifierTotal();
+	}
 
 }
 CombatData::~CombatData() { }
 
+void CombatData::setStealthDefense(const bool bNew)
+{
+	m_bStealthDefense = bNew;
+}
+
+bool CombatData::getStealthDefense() const
+{
+	return m_bStealthDefense;
+}
+
+namespace {
+
+	bool unitsAtWar(const TeamTypes ourTeam, const CvUnit* theirUnit)
+	{
+		return GET_TEAM(theirUnit->getTeam()).isAtWar(ourTeam);
+	}
+
+	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
+	{
+		return plot != ignorePlot && algo::any_of(plot->units(), bind(unitsAtWar, ourTeam, _1));
+	}
+/*
+	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
+	{
+		return algo::any_of(plot->adjacent(), bind(plotHasEnemy, ourTeam, ignorePlot, _1));
+	}
+*/
+	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
+	{
+		return withdrawingUnit->canEnterPlot(toPlot)
+			&& !plotHasEnemy(withdrawingUnit->getTeam(), withdrawingUnit->plot(), toPlot)
+			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
+			;
+	}
+
+	bst::optional<CvPlot*> selectWithdrawPlot(bool bSamePlotCombat, const CvUnit* withdrawingUnit)
+	{
+		if (bSamePlotCombat)
+		{
+			return withdrawingUnit->plot();
+		}
+		return algo::find_if(withdrawingUnit->plot()->adjacent(), bind(canWithdrawToPlot, withdrawingUnit, _1));
+	}
+}
 
 void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 {
@@ -57,44 +133,15 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 	int iDefenderStrength = 0;
 	int iAttackerDamage = 0;
 	int iDefenderDamage = 0;
+
 	int iDefenderOdds = 0;
-
-	bool bAttackerWithdrawn = false;
-
-	int temporarypursuit = 0;
-	const int iDefenderDodge = m_defender->dodgeVSOpponentProbTotal(m_attacker);
-	int iDefenderPrecision = m_defender->precisionVSOpponentProbTotal(m_attacker);
-	const int iAttackerDodge = m_attacker->dodgeVSOpponentProbTotal(m_defender);
-	int iAttackerPrecision = m_attacker->precisionVSOpponentProbTotal(m_defender);
-	bool bBreakdown = false;
-	const int iDefenderFirstStrikes = m_defender->getCombatFirstStrikes();
-	const int iAttackerFirstStrikes = m_attacker->getCombatFirstStrikes();
-	//TB Combat Mods End
-	bool bAttackerHasLostNoHP = true;
-	int iAttackerInitialDamage = m_attacker->getDamage();
-	int iDefenderInitialDamage = m_defender->getDamage();
-	int iDefenderCombatRoll = 0;
-	int iAttackerCombatRoll = 0;
-	int WithdrawalRollResult = 0;
-	int DefenderWithdrawalRollResult = 0;
-	int RepelRollResult = 0;
-	int PursuitRollResult = 0;
-	int iAttackerHitModifier = 0;
-	int iDefenderHitModifier = 0;
-	int iAttackerOdds = 0;
-	int	iDefenderHitChance = 0;
-	int	iAttackerHitChance = 0;
-	int iInitialDefXP = m_defender->getExperience100();
-	int iInitialAttXP = m_attacker->getExperience100();
-	int iInitialAttGGXP = GET_PLAYER(m_attacker->getOwner()).getCombatExperience();
-	int iInitialDefGGXP = GET_PLAYER(m_defender->getOwner()).getCombatExperience();
 	const bool bDynamicXP = GC.getGame().isModderGameOption(MODDERGAMEOPTION_IMPROVED_XP);
 
-	getDefenderCombatValues(*m_defender, m_plot, iAttackerStrength, iAttackerFirepower, iDefenderOdds, iDefenderStrength, iAttackerDamage, iDefenderDamage, &cdDefenderDetails, m_defender);
+	m_attacker->getDefenderCombatValues(*m_defender, m_plot, iAttackerStrength, iAttackerFirepower, iDefenderOdds, iDefenderStrength, iAttackerDamage, iDefenderDamage, &cdDefenderDetails, m_defender);
 	int iInitialAttackerStrength = iAttackerStrength;
 	int iInitialDefenderStrength = iDefenderStrength;
-#ifdef OUTBREAKS_AND_AFFLICTIONS
-	//TB Combat Mods Begin
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS //TB Combat Mods Begin
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		if (m_attacker->hasAfflictOnAttackType((PromotionLineTypes)iI))
@@ -106,23 +153,21 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 			m_defender->setAfflictOnAttackTypeAttemptedCount((PromotionLineTypes)iI, 0);
 		}
 	}
-#endif
+#endif //TB Combat Mods End
+
 	//  Determine Attack Withdraw odds
 	int iHitLimitThem = m_defender->getMaxHP() - m_attacker->combatLimit(m_defender);
 
 	int iNeededRoundsUs = (iDefenderDamage == 0 ? MAX_INT : (std::max(0, m_defender->getHP() - iHitLimitThem) + iDefenderDamage - 1 ) / iDefenderDamage);
 	int iNeededRoundsThem = (iAttackerDamage == 0 ? MAX_INT : (std::max(0, m_attacker->getHP()) + iAttackerDamage - 1 ) / iAttackerDamage);
+
 	int iAttackerWithdraw = m_attacker->withdrawVSOpponentProbTotal(m_defender, m_plot);
 	int iDefenderPursuit = m_defender->pursuitVSOpponentProbTotal(m_attacker);
 	int iAttackerEarly = m_attacker->earlyWithdrawTotal();
 
-	int AdjustedAttWithdrawalstep1 = iAttackerWithdraw - iDefenderPursuit;
-	int AdjustedAttWithdrawalstep2 = std::min(100, AdjustedAttWithdrawalstep1);
-	int AdjustedAttWithdrawal = std::max(0, AdjustedAttWithdrawalstep2);
+	int AdjustedAttWithdrawal = std::max(0, std::min(100, iAttackerWithdraw - iDefenderPursuit));
 
-	int expectedrndcnt = std::min(iNeededRoundsUs, iNeededRoundsThem);
-	int expectedrnds = ((expectedrndcnt * iAttackerEarly)/100);
-
+	int expectedrnds = (std::min(iNeededRoundsUs, iNeededRoundsThem) * iAttackerEarly) / 100;
 	int y = AdjustedAttWithdrawal;
 	int z = AdjustedAttWithdrawal;
 	int Time;
@@ -134,30 +179,22 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 
 	int EvaluatedAttWithdrawOdds = z;
 
-
 	int iAttackerKnockback = m_attacker->knockbackVSOpponentProbTotal(m_defender);
-	int iDefenderUnyielding = m_defender->unyieldingTotal();
 	int iAttackerKnockbackTries = m_attacker->knockbackRetriesTotal();
-
-	int AdjustedKnockbackstep1 = iAttackerKnockback - iDefenderUnyielding;
-	int AdjustedKnockbackstep2 = ((AdjustedKnockbackstep1 > 100) ? 100 : AdjustedKnockbackstep1);
-	int AdjustedKnockback = ((AdjustedKnockbackstep2 < 0) ? 0 : AdjustedKnockbackstep2);
+	int AdjustedKnockback = range(iAttackerKnockback - m_defender->unyieldingTotal(), 0, 100);
 
 	y = AdjustedKnockback;
 	z = AdjustedKnockback;
 
 	for (Time = 0; Time < iAttackerKnockbackTries; ++Time)
 	{
-		z += ((AdjustedKnockback * y)/100);
+		z += (AdjustedKnockback * y)/100;
 		y = ((AdjustedKnockback * (100 - z))/100);	//	Prob next round is prob per round times prob you haven't already
 	}
-
 	int EvaluatedKnockbackOdds = z;
-	//Original: int iAttackerKillOdds = iDefenderOdds * (100 - withdrawalProbability()) / 100;
-	int iAttackerKillOdds = iDefenderOdds * (100 - (EvaluatedAttWithdrawOdds)) / 100;
 
-	iAttackerKillOdds *= (100 - (EvaluatedKnockbackOdds));
-	iAttackerKillOdds /= 100;
+	int iAttackerKillOdds = (100 - EvaluatedKnockbackOdds) * iDefenderOdds * (100 - EvaluatedAttWithdrawOdds) / 10000;
+
 	//TB Combat Mods End
 
 	if (m_attacker->isHuman() || m_defender->isHuman())
@@ -170,7 +207,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 		CvEventReporter::getInstance().genericEvent("combatLogCalc", pyArgsCD.makeFunctionArgs());
 	}
 
-	collateralCombat(m_plot, m_defender);
+	m_attacker->collateralCombat(m_plot, m_defender);
 
 	int iCloseCombatRoundNum = -1;
 	//bool bTryMobileWithdraw = false;	//if unit will be trying to withdraw from a plot it occupies
@@ -184,31 +221,32 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 	m_iTurnCount++;
 	//Compile the Repel values only once as necessary
 	int iDefenderRepel = m_defender->repelVSOpponentProbTotal(m_attacker);
-	int iAttackerUnyielding = m_attacker->unyieldingTotal();
 
-	int AdjustedRepelstep1 = iDefenderRepel - iAttackerUnyielding;
-	int AdjustedRepelstep2 = ((AdjustedRepelstep1 > 100) ? 100 : AdjustedRepelstep1);
-	int AdjustedRepel = ((AdjustedRepelstep2 < 0) ? 0 : AdjustedRepelstep2);
+	int AdjustedRepel = range(iDefenderRepel - m_attacker->unyieldingTotal(), 0, 100);
+
 	bool bNoFurtherDamagetoDefender = false;
-
 
 	int iDefenderWithdraw = m_defender->withdrawVSOpponentProbTotal(m_attacker, m_plot);
 	int iAttackerPursuit = m_attacker->pursuitVSOpponentProbTotal(m_defender);
 	int iDefenderEarlyWithdraw = m_defender->earlyWithdrawTotal();
+	int AdjustedDefWithdraw = range(iDefenderWithdraw - iAttackerPursuit, 0, 100);
 
-	int AdjustedDefWithdrawstep1 = iDefenderWithdraw - iAttackerPursuit;
-	int AdjustedDefWithdrawstep2 = ((AdjustedDefWithdrawstep1 > 100) ? 100 : AdjustedDefWithdrawstep1);
-	int AdjustedDefWithdraw = ((AdjustedDefWithdrawstep2 < 0) ? 0 : AdjustedDefWithdrawstep2);
+	int	iDefenderHitChance = 0;
+	int	iAttackerHitChance = 0;
 
-	bool bVanillaCombat = GC.getGame().isOption(GAMEOPTION_COMBAT_VANILLA_ENGINE);
+	const bool bVanillaCombat = GC.getGame().isOption(GAMEOPTION_COMBAT_VANILLA_ENGINE);
 	if (bVanillaCombat)
 	{
 		iAttackerStrength = m_attacker->currCombatStr(NULL, NULL, &cdAttackerDetails);
 		iAttackerFirepower = m_attacker->currFirepower(NULL, NULL);
 		m_attacker->getDefenderCombatValues(*m_defender, m_plot, iAttackerStrength, iAttackerFirepower, iDefenderOdds, iDefenderStrength, iAttackerDamage, iDefenderDamage, &cdDefenderDetails, m_defender);
-		iDefenderHitChance = std::max(5, iDefenderOdds + ((iDefenderHitModifier * iDefenderOdds)/100));
-		iAttackerHitChance = std::max(5, iAttackerOdds + ((iAttackerHitModifier * iAttackerOdds)/100));
+		iDefenderHitChance = std::max(5, iDefenderOdds);
+		iAttackerHitChance = 5;
 	}
+	int iAttackerHitModifier = m_iAttackerPrecision - m_iDefenderDodge;
+	int iDefenderHitModifier = m_iDefenderPrecision - m_iAttackerDodge;
+	int temporarypursuit = 0;
+	int iAttackerOdds = 0;
 
 	while (true)
 	{
@@ -224,25 +262,15 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 		}
 
 		//Check if this is a Breakdown Attack round and adjust the local bool so as to avoid reprocessing the Breakdown check multiple times per round.
-		bBreakdown = m_attacker->isBreakdownCombat(m_plot, m_bSamePlot) && m_defender->getCombatFirstStrikes() == 0;
+		bool bBreakdown = m_attacker->isBreakdownCombat(m_plot, m_bSamePlot) && m_defender->getCombatFirstStrikes() == 0;
 
-		if (m_attacker->getCombatPowerShots() > 0)
-		{
-			iAttackerPrecision += m_attacker->powerShotPrecisionModifierTotal();
-		}
-		if (m_defender->getCombatPowerShots() > 0)
-		{
-			iDefenderPrecision += m_defender->powerShotPrecisionModifierTotal();
-		}
-		iAttackerHitModifier = iAttackerPrecision - iDefenderDodge;
-		iDefenderHitModifier = iDefenderPrecision - iAttackerDodge;
-		iAttackerOdds = std::max((GC.getCOMBAT_DIE_SIDES() - iDefenderOdds), 0);
-		iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
-		iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
-		WithdrawalRollResult = GC.getGame().getSorenRandNum(100, "Withdrawal");
-		DefenderWithdrawalRollResult = GC.getGame().getSorenRandNum(100, "DefenderWithdrawal");
-		RepelRollResult = GC.getGame().getSorenRandNum(100, "Repel");
-		PursuitRollResult = GC.getGame().getSorenRandNum(100, "Pursuit");
+		iAttackerOdds = std::max(GC.getCOMBAT_DIE_SIDES() - iDefenderOdds, 0);
+		int iDefenderCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "DefenderCombatRoll");
+		int iAttackerCombatRoll = GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "AttackerCombatRoll");
+		int WithdrawalRollResult = GC.getGame().getSorenRandNum(100, "Withdrawal");
+		int DefenderWithdrawalRollResult = GC.getGame().getSorenRandNum(100, "DefenderWithdrawal");
+		int RepelRollResult = GC.getGame().getSorenRandNum(100, "Repel");
+		int PursuitRollResult = GC.getGame().getSorenRandNum(100, "Pursuit");
 		//Breakdown attack round?  If so we make the damage the defender would be dealt 0 and the chance of the attcker
 		//hitting absolute so as to get through all normal checks to roll the chance for damaging the defenses while the
 		//unit really does not engage in any counterattack against the defender.
@@ -291,7 +319,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 					if (WithdrawalRollResult < AdjustedAttWithdrawal)
 					{
 						m_attacker->flankingStrikeCombat(m_plot, iAttackerStrength, iAttackerFirepower, iAttackerKillOdds, iDefenderDamage, m_defender);
-						bAttackerWithdrawn = true;
+						m_bAttackerWithdrawn = true;
 
 						if (!bDynamicXP)
 						{
@@ -334,7 +362,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 				}
 				//TB Combat Mod end
 
-				bAttackerHasLostNoHP = false;
+				m_bAttackerHasLostNoHP = false;
 
 				if (m_defender->getCombatFirstStrikes() > 0 && m_defender->isRanged())
 				{
@@ -365,7 +393,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 
 						if (!bDynamicXP)
 						{
-							m_defender->changeExperience100(getExperiencefromWithdrawal(AdjustedRepel) * 15 / 100, 100 * m_defender->maxXPValue(m_attacker), true, m_plot->getOwner() == getOwner(), true);
+							m_defender->changeExperience100(m_attacker->getExperiencefromWithdrawal(AdjustedRepel) * 15 / 100, 100 * m_defender->maxXPValue(m_attacker), true, m_plot->getOwner() == m_attacker->getOwner(), true);
 						}
 						break;
 					}
@@ -504,7 +532,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 
 							if (bDynamicXP)
 							{
-								m_attacker->doDynamicXP(m_defender, m_plot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage);
+								m_attacker->doDynamicXP(m_defender, m_plot, m_iAttackerInitialDamage, iWinningOdds, m_iDefenderInitialDamage);
 							}
 							else
 							{
@@ -580,7 +608,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 
 								if (bDynamicXP)
 								{
-									m_attacker->doDynamicXP(m_defender, m_plot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage);
+									m_attacker->doDynamicXP(m_defender, m_plot, m_iAttackerInitialDamage, iWinningOdds, m_iDefenderInitialDamage);
 								}
 								else
 								{
@@ -687,7 +715,7 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 		//TB Combat Mods end
 		if (m_defender->getCombatStuns() == 0 && m_attacker->getCombatFirstStrikes() > 0)
 		{
-			changeCombatFirstStrikes(-1);
+			m_attacker->changeCombatFirstStrikes(-1);
 		}
 
 		if (m_attacker->getCombatStuns() == 0 && m_defender->getCombatFirstStrikes() > 0)
@@ -728,24 +756,406 @@ void CombatData::resolveCombat(CvBattleDefinition& kBattle)
 
 	bool bPromotion = false;
 	bool bDefPromotion = false;
-	//TB Note: for both doBattleFieldPromotions and doDynamicXP, the iWinningOdds needs adjusted by YOUR ability to withdraw - if you have withdrawn at least.  Check the instance there.
+	//TB Note: for both doBattleFieldPromotions and doDynamicXP, the iWinningOdds needs adjusted by YOUR ability to withdraw - if you have withdrawn at least. Check the instance there.
 	int iNonLethalAttackWinChance = std::max(0, std::max(AdjustedAttWithdrawal, AdjustedKnockback));
 	int iNonLethalDefenseWinChance = std::max(0, std::max(AdjustedDefWithdraw, AdjustedRepel));
-	m_attacker->doBattleFieldPromotions(
-		m_defender, cdDefenderDetails, m_plot,
-		bAttackerHasLostNoHP, bAttackerWithdrawn,
-		iAttackerInitialDamage, iWinningOdds,
-		iInitialAttXP, iInitialAttGGXP, iDefenderInitialDamage,
-		iInitialDefXP, iInitialDefGGXP, bPromotion, bDefPromotion,
-		iNonLethalAttackWinChance, iNonLethalDefenseWinChance,
-		iDefenderFirstStrikes, iAttackerFirstStrikes
-	);
+
+	doBattleFieldPromotions(cdDefenderDetails, iWinningOdds, bPromotion, bDefPromotion, iNonLethalAttackWinChance, iNonLethalDefenseWinChance);
+
 	if (bDynamicXP)
 	{
-		m_attacker->doDynamicXP(m_defender, m_plot, iAttackerInitialDamage, iWinningOdds, iDefenderInitialDamage, bPromotion, bDefPromotion);
+		m_attacker->doDynamicXP(m_defender, m_plot, iWinningOdds, m_iDefenderInitialDamage, bPromotion, bDefPromotion);
 	}
 }
 
+
+void CombatData::doBattleFieldPromotions(CombatDetails &cdDefenderDetails, int iWinningOdds, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance)
+{
+	PROFILE_EXTRA_FUNC();
+	if (!GC.getGame().getModderGameOption(MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS)
+		||
+		m_attacker->getUnitCombatType() == NO_UNITCOMBAT
+		||
+		m_defender->getUnitCombatType() == NO_UNITCOMBAT)
+	{
+		return;
+	}
+
+	const bool bNoDefBon = m_attacker->noDefensiveBonus();
+	std::vector<PromotionTypes> aAttackerAvailablePromotions;
+	std::vector<PromotionTypes> aDefenderAvailablePromotions;
+
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	{
+		const PromotionTypes promotionType = static_cast<PromotionTypes>(iI);
+		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(promotionType);
+		/* Block These Promotions */
+		if (kPromotion.getKamikazePercent() > 0 ||
+			kPromotion.isLeader() ||
+			kPromotion.hasNegativeEffects())
+		{
+			continue;
+		}
+
+		//TB Combat Mods Begin
+		if (m_defender->isDead() || m_bDefenderKnockedBack)
+		{
+			if (!m_attacker->canAcquirePromotion(promotionType)) //attacker can not acquire this promotion
+			{
+				continue;
+			}
+			//* attacker may receive pursuit
+			if (m_bDefenderWithdrawn && kPromotion.getPursuitChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (m_bDefenderPursued && kPromotion.getPursuitChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was attacking a fortified defender and may receive Overrun
+			if (cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getOverrunChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was unyielding against a Repel
+			if (!bNoDefBon)
+			{
+				if (m_bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+				{
+					aAttackerAvailablePromotions.push_back(promotionType);
+				}
+			}
+			//* attacker Knocked back defender
+			if (m_bDefenderKnockedBack && kPromotion.getKnockbackChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker was attacking with S&D bonus
+			if (kPromotion.getLungeChange() > 0 && m_attacker->surroundedDefenseModifier(m_plot, m_defender) != 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker had less dodge than defender's precision
+			if (kPromotion.getDodgeModifierChange() > 0 && (m_iAttackerDodge < m_iDefenderPrecision))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* defender had more dodge than attacker's precision
+			if (kPromotion.getPrecisionModifierChange() > 0 && (m_iDefenderDodge > m_iAttackerPrecision))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker is developing critical chance
+			if (kPromotion.getCriticalModifierChange() > 0 && (m_attacker->criticalVSOpponentProbTotal(m_defender) > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker is developing endurance
+			if (kPromotion.getEnduranceChange() > 0 && (m_attacker->enduranceTotal() > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* attacker was crossing river
+			if (kPromotion.isRiver() && cdDefenderDetails.iRiverAttackModifier != 0)	//this bonus is being applied to defender
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack from water
+			if (kPromotion.isAmphib() && cdDefenderDetails.iAmphibAttackModifier != 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack terrain
+			if (kPromotion.getTerrainAttackPercent((int)m_plot->getTerrainType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack feature
+			if (m_plot->getFeatureType() != NO_FEATURE &&
+				kPromotion.getFeatureAttackPercent((int)m_plot->getFeatureType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack hills
+			if (kPromotion.getHillsAttackPercent() > 0 && m_plot->isHills())
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* attack city
+			if (kPromotion.getCityAttackPercent() > 0 && m_plot->isCity(true))	//count forts too
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* first strikes/chanses promotions
+			if ((kPromotion.getFirstStrikesChange() > 0 ||
+				kPromotion.getChanceFirstStrikesChange() > 0) && (m_attacker->firstStrikes() > 0 || m_attacker->chanceFirstStrikes() > 0))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* unit combat mod
+			if (kPromotion.getUnitCombatModifierPercent((int)m_defender->getUnitCombatType()) > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods Begin * anti-barbarian combat mod
+			if (kPromotion.getVSBarbsChange() > 0 && (m_defender->isHominid()))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getStrengthChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getAttackCombatModifierChange() > 0)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* combat strength promotions
+			if (kPromotion.getCombatPercent() > 0 && !kPromotion.isAmphib())
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* domain mod
+			if (kPromotion.getDomainModifierPercent((int)m_defender->getDomainType()))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			//* blitz
+			if (kPromotion.isBlitz() && m_bAttackerHasLostNoHP)
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+		}	//if defender is dead or withdrawn
+		//* defender withdrawn, give him withdrawal promo
+		else if (m_bDefenderWithdrawn)
+		{
+			if (kPromotion.getWithdrawalChange() > 0 &&
+				m_defender->canAcquirePromotion(promotionType))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}
+		//* attacker withdrawn
+		else if (m_bAttackerWithdrawn)
+		{
+			if (kPromotion.getWithdrawalChange() > 0 &&
+				m_attacker->canAcquirePromotion(promotionType))
+			{
+				aAttackerAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getPursuitChange() > 0 &&
+				m_defender->canAcquirePromotion(promotionType))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}
+		//* attacker is presumably dead
+		else
+		{
+			FAssertMsg(m_attacker->isDead(), "Attacker is expected to be dead");
+			if (!m_defender->canAcquirePromotion(promotionType))
+			{
+				continue;
+			}
+			//TB Combat Mods Begin
+			//* Defender may recieve pursuit
+			if (m_bAttackerPursued && kPromotion.getPursuitChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Repelled Attacker
+			if (!bNoDefBon)
+			{
+				if (m_bAttackerRepelled && kPromotion.getRepelChange() > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* Defender Repelled Attacker while Fortified
+				if (m_bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* defend terrain
+				if (kPromotion.getTerrainDefensePercent((int)m_plot->getTerrainType()) > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* defend feature
+				if (m_plot->getFeatureType() != NO_FEATURE && kPromotion.getFeatureDefensePercent((int)m_plot->getFeatureType()) > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* defend hills
+				if (kPromotion.getHillsDefensePercent() > 0 && m_plot->isHills())
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				//* defend city
+				if (kPromotion.getCityDefensePercent() > 0 && m_plot->isCity(true)) //count forts too
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+				if (kPromotion.getDefenseCombatModifierChange() > 0)
+				{
+					aDefenderAvailablePromotions.push_back(promotionType);
+				}
+			}
+			//* Defender Refused to be Knocked Back
+			if (m_bDefenderRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* Defender Suffered Surround and Destroy Modifier
+			if (kPromotion.getDynamicDefenseChange() > 0 && m_attacker->surroundedDefenseModifier(m_plot, m_defender) != 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getStrengthChange() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			if (kPromotion.getAnimalIgnoresBordersChange() > 0 && m_defender->isAnimal() && !GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+
+			//* first strikes/chanses promotions
+			if ((kPromotion.getFirstStrikesChange() > 0 ||
+				kPromotion.getChanceFirstStrikesChange() > 0) &&
+				(m_defender->firstStrikes() > 0 || m_defender->chanceFirstStrikes() > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* unit combat mod vs attacker unit type
+			if (kPromotion.getUnitCombatModifierPercent((int)m_attacker->getUnitCombatType()) > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods Begin * anti-barbarian combat mod
+			if (kPromotion.getVSBarbsChange() > 0 && m_attacker->isHominid())
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+
+			//* defemder had less dodge than attacker's precision
+			if (kPromotion.getDodgeModifierChange() > 0 && (m_defender->dodgeVSOpponentProbTotal(m_attacker) < m_attacker->precisionVSOpponentProbTotal(m_defender)))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* attacker had more dodge than defender's precision
+			if (kPromotion.getPrecisionModifierChange() > 0 && (m_attacker->dodgeVSOpponentProbTotal(m_defender) > m_defender->precisionVSOpponentProbTotal(m_attacker)))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defender is developing critical chance
+			if (kPromotion.getCriticalModifierChange() > 0 && (m_defender->criticalVSOpponentProbTotal(m_attacker) > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* defender is developing endurance
+			if (kPromotion.getEnduranceChange() > 0 && (m_defender->enduranceTotal() > 0))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//TB Combat Mods End
+			//* combat strength promotions
+			if (kPromotion.getCombatPercent() > 0)
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+			//* domain mod
+			if (kPromotion.getDomainModifierPercent((int)m_attacker->getDomainType()))
+			{
+				aDefenderAvailablePromotions.push_back(promotionType);
+			}
+		}	//if attacker withdrawn
+	}	//end promotion types cycle
+
+	//promote attacker:
+	if (!m_attacker->isDead() && aAttackerAvailablePromotions.size() > 0)
+	{
+		FAssertMsg(getMaxHP() - m_iAttackerInitialDamage > 0, "Attacker is Dead!");
+
+		int iPromotionChance = (
+			(
+				GC.getCOMBAT_DIE_SIDES()
+				-
+				std::max(iWinningOdds, iNonLethalAttackWinChance * 10)
+			)
+			/
+			std::max(1, 1 + m_iAttackerFirstStrikes)
+		);
+
+		if (GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
+		{
+			//select random promotion from available
+			PromotionTypes ptPromotion = aAttackerAvailablePromotions[
+				GC.getGame().getSorenRandNum(aAttackerAvailablePromotions.size(), "Select Promotion Type")];
+			//promote
+			//TB Combat Mod next line
+			m_attacker->setHasPromotion(ptPromotion, true, false);
+			bAttackerPromoted = true;
+
+			m_attacker->setExperience100(m_iInitialAttXP);
+			GET_PLAYER(m_attacker->getOwner()).setCombatExperience(m_iInitialAttGGXP, m_attacker->getGGExperienceEarnedTowardsType());
+
+			//show message
+			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", m_attacker->getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
+			AddDLLMessage(
+				m_attacker->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
+				GC.getCOLOR_GREEN(), m_attacker->getX(), m_attacker->getY()
+			);
+		}
+	}
+
+	//promote defender:
+	if (!m_defender->isDead() && aDefenderAvailablePromotions.size() > 0)
+	{
+		FAssertMsg(m_defender->getMaxHP() - m_iDefenderInitialDamage > 0, "Defender is Dead!");
+
+		int iPromotionChance = (
+			std::min(
+				iWinningOdds,
+				std::max(
+					0,
+					GC.getCOMBAT_DIE_SIDES() - iNonLethalDefenseWinChance * 10
+				)
+			)
+			/
+			std::max(1, 1 + m_iDefenderFirstStrikes)
+		);
+
+		if (GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
+		{
+			//select random promotion from available
+			PromotionTypes ptPromotion = aDefenderAvailablePromotions[
+				GC.getGame().getSorenRandNum(aDefenderAvailablePromotions.size(), "Select Promotion Type")];
+			//promote
+			//TB Combat Mod next line
+			m_defender->setHasPromotion(ptPromotion, true, false);
+
+			m_defender->setExperience100(m_iInitialDefXP);
+			GET_PLAYER(m_defender->getOwner()).setCombatExperience(m_iInitialDefGGXP, m_defender->getGGExperienceEarnedTowardsType());
+			bDefenderPromoted = true;
+
+			//show message
+			{
+
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", m_defender->getNameKey(),
+					GC.getPromotionInfo(ptPromotion).getText());
+				AddDLLMessage(
+					m_defender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
+					GC.getCOLOR_GREEN(), m_plot->getX(), m_plot->getY());
+			}
+		}
+	}
+}
 
 void CombatData::endCombat()
 {
@@ -774,7 +1184,7 @@ void CombatData::endCombat()
 	const bool bHumanDefender = m_defender->isHuman();
 
 	const PlayerTypes eAttacker = m_attacker->getVisualOwner(m_defender->getTeam());
-	const PlayerTypes eDefender = m_defender->getVisualOwner(getTeam());
+	const PlayerTypes eDefender = m_defender->getVisualOwner(m_attacker->getTeam());
 
 #ifdef STRENGTH_IN_NUMBERS
 	//TB Combat Mod begin
@@ -965,7 +1375,7 @@ void CombatData::endCombat()
 						m_attacker->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText(
 							"TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN",
-							getNameKey(), m_defender->getVisualCivAdjective(m_defender->getTeam()), m_defender->getNameKey()
+							m_attacker->getNameKey(), m_defender->getVisualCivAdjective(m_defender->getTeam()), m_defender->getNameKey()
 						),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), m_plot->getX(), m_plot->getY()
 					);
@@ -987,7 +1397,7 @@ void CombatData::endCombat()
 					AddDLLMessage(
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN",
-						m_defender->getNameKey(), m_attacker->getVisualCivAdjective(getTeam()), m_attacker->getNameKey()),
+						m_defender->getNameKey(), m_attacker->getVisualCivAdjective(m_attacker->getTeam()), m_attacker->getNameKey()),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), m_plot->getX(), m_plot->getY()
 					);
 				}
@@ -1035,7 +1445,7 @@ void CombatData::endCombat()
 					AddDLLMessage(
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_ATTACKER_UNYIELDING_SUSTAIN",
-						m_attacker->getVisualCivAdjective(getTeam()), m_defender->getNameKey(), m_attacker->getNameKey()),
+						m_attacker->getVisualCivAdjective(m_attacker->getTeam()), m_defender->getNameKey(), m_attacker->getNameKey()),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), m_plot->getX(), m_plot->getY()
 					);
 				}
@@ -1080,7 +1490,7 @@ void CombatData::endCombat()
 					AddDLLMessage(
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_DEFENDER_UNYIELDING_SUSTAIN",
-						m_defender->getNameKey(), m_attacker->getVisualCivAdjective(getTeam()), m_attacker->getNameKey()),
+						m_defender->getNameKey(), m_attacker->getVisualCivAdjective(m_attacker->getTeam()), m_attacker->getNameKey()),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), m_plot->getX(), m_plot->getY()
 					);
 				}
@@ -1576,7 +1986,7 @@ void CombatData::endCombat()
 				{
 					AddDLLMessage(
 						m_attacker->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_HIDDEN", getNameKey(), m_defender->getNameKey()),
+						gDLL->getText("TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_HIDDEN", m_attacker->getNameKey(), m_defender->getNameKey()),
 						"AS2D_OUR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), m_plot->getX(), m_plot->getY()
 					);
 				}
@@ -1653,7 +2063,7 @@ void CombatData::endCombat()
 				if (BARBARIAN_PLAYER != eDefender)
 				{
 					AddDLLMessage(
-						getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+						m_attacker->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText(
 							"TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT",
 							m_attacker->getNameKey(), m_attacker->getVisualCivAdjective(m_defender->getTeam()), m_defender->getNameKey()
@@ -1678,7 +2088,7 @@ void CombatData::endCombat()
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText(
 							"TXT_KEY_MISC_ATTACKER_REPELLED_ONSLAUGHT",
-							m_attacker->getVisualCivAdjective(getTeam()), m_attacker->getNameKey(), m_defender->getNameKey()
+							m_attacker->getVisualCivAdjective(m_attacker->getTeam()), m_attacker->getNameKey(), m_defender->getNameKey()
 						),
 						"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), m_plot->getX(), m_plot->getY()
 					);
@@ -1952,7 +2362,7 @@ void CombatData::endCombat()
 					"AS2D_THEIR_WITHDRAWL", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_YELLOW(), m_plot->getX(), m_plot->getY()
 				);
 			}
-			attack(m_plot);
+			m_attacker->attack(m_plot);
 		}
 		else if (m_bAttackerOnslaught)
 		{
@@ -2139,7 +2549,7 @@ void CombatData::endCombat()
 					AddDLLMessage(
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS", GET_PLAYER(m_attacker->getOwner()).getCivilizationAdjective()),
-						"AS2D_COMBAT", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_YELLOW(), m_attacker->getX(), m_attacker->getY(), true, true
 					);
 				}
 				else
@@ -2147,7 +2557,7 @@ void CombatData::endCombat()
 					AddDLLMessage(
 						m_defender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 						gDLL->getText("TXT_KEY_MISC_ENEMY_FIELD_MEDIC_ATTACKERS_HIDDEN"),
-						"AS2D_COMBAT", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_YELLOW(), getX(), getY(), true, true
+						"AS2D_COMBAT", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_YELLOW(), m_attacker->getX(), m_attacker->getY(), true, true
 					);
 				}
 			}
@@ -2156,7 +2566,7 @@ void CombatData::endCombat()
 				AddDLLMessage(
 					m_attacker->getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
 					gDLL->getText("TXT_KEY_MISC_FIELD_MEDIC_ATTACKERS", m_attacker->getNameKey(), iUnitsHealed),
-					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_GREEN(), getX(), getY()
+					"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, m_attacker->getButton(), GC.getCOLOR_GREEN(), m_attacker->getX(), m_attacker->getY()
 				);
 			}
 		}
@@ -2325,7 +2735,7 @@ void CombatData::endCombat()
 		//std::vector<UnitCombatTypes> aDefenderCombats;
 		CvOutcomeListMerged mergedList;
 		mergedList.addOutcomeList(m_defender->getUnitInfo().getKillOutcomeList());
-		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_unitCombatKeyedInfo.begin(), end = m_unitCombatKeyedInfo.end(); it != end; ++it)
+		for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = m_attacker->getUnitCombatKeyedInfo().begin(), end = m_attacker->getUnitCombatKeyedInfo().end(); it != end; ++it)
 		{
 			if (it->second.m_bHasUnitCombat)
 			{
@@ -2361,22 +2771,25 @@ void CombatData::endCombat()
 			const bool bAdvance = !m_bSamePlot && m_attacker->canAdvance(m_plot, m_defender->canDefend());
 
 			// TBMaybeproblem - should this come before the generation of the captive which takes place above at the add outcome step?
-			if (bAdvance && !m_attacker->isNoCapture())
+			if (bAdvance && !m_attacker->isNoCapture() && !m_attacker->isAnimal())
 			{
-				m_defender->setCapturingPlayer(getOwner());
+				m_defender->setCapturingPlayer(m_attacker->getOwner());
 				m_defender->setCapturingUnit(m_attacker);
 			}
-			m_defender->kill(true, NO_PLAYER, true);
+			m_defender->killUnconditional(false, NO_PLAYER, true);
 			m_defender = NULL;
 
-			if (m_bSamePlot || !bAdvance)
+			if (!bAdvance)
 			{
-				if (bCombatFinished || !m_bAttackerStampedes && !m_bAttackerOnslaught)
+				if (!m_bAttackerStampedes && !m_bAttackerOnslaught && !m_bStealthDefense)
 				{
 					m_attacker->changeMoves(std::max(GC.getMOVE_DENOMINATOR(), m_plot->movementCost(m_attacker, m_attacker->plot())));
 				}
 			}
-			else if (bCombatFinished) m_attacker->getGroup()->groupMove(m_plot, true, m_attacker);
+			else if (m_bQuick || !m_attacker->getGroup()->isCombat())
+			{
+				m_attacker->getGroup()->groupMove(m_plot, true, m_attacker);
+			}
 		}
 		//TB Combat Mods End
 
@@ -2388,4 +2801,3 @@ void CombatData::endCombat()
 		gDLL->getInterfaceIFace()->removeFromSelectionList(m_attacker);
 	}
 }
-

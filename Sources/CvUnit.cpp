@@ -24,6 +24,7 @@
 #include "CvTeamAI.h"
 #include "CvUnit.h"
 #include "CvUnitSelectionCriteria.h"
+#include "CombatData.h"
 #include "CvViewport.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
@@ -2344,41 +2345,6 @@ void CvUnit::endAirCombat()
 	}
 }
 
-namespace {
-	bool unitsAtWar(const TeamTypes ourTeam, const CvUnit* theirUnit)
-	{
-		return GET_TEAM(theirUnit->getTeam()).isAtWar(ourTeam);
-	}
-
-	bool plotHasEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
-	{
-		return plot != ignorePlot && algo::any_of(plot->units(), bind(unitsAtWar, ourTeam, _1));
-	}
-
-	bool plotHasAdjacentEnemy(const TeamTypes ourTeam, const CvPlot* ignorePlot, const CvPlot* plot)
-	{
-		return algo::any_of(plot->adjacent(), bind(plotHasEnemy, ourTeam, ignorePlot, _1));
-	}
-
-	bool canWithdrawToPlot(const CvUnit* withdrawingUnit, const CvPlot* toPlot)
-	{
-		return withdrawingUnit->canEnterPlot(toPlot)
-			&& !plotHasEnemy(withdrawingUnit->getTeam(), withdrawingUnit->plot(), toPlot)
-			// && !plotHasAdjacentEnemy(withdrawingUnit.getTeam(), *withdrawingUnit.plot(), toPlot)
-			;
-	}
-
-	bst::optional<CvPlot*> selectWithdrawPlot(bool bSamePlotCombat, const CvUnit* withdrawingUnit)
-	{
-		if (bSamePlotCombat)
-		{
-			return withdrawingUnit->plot();
-		}
-		return algo::find_if(withdrawingUnit->plot()->adjacent(), bind(canWithdrawToPlot, withdrawingUnit, _1));
-	}
-}
-
-
 
 void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, bool bStealth, bool bNoCache)
 {
@@ -2415,7 +2381,7 @@ void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, 
 			return;
 		}
 	}
-	CombatData combat = new CombatData(this, pDefender, combatPlot);
+	CombatData* combat = new CombatData(this, pDefender, combatPlot);
 	//check if quick combat
 	const bool bQuick = combatPlot == plot() || !isCombatVisible(pDefender);
 
@@ -2517,7 +2483,9 @@ void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, 
 				}
 			}
 		}
-		m_combatResult.bStealthDefense = bStealthDefense && pDefender->plot() != plot();//Note this information is transferred to bStealthDefense during bFinish routine to help define whether units should lose movement or not.
+		//Note this information is transferred to bStealthDefense during bFinish routine to help define whether units should lose movement or not.
+		combat->setStealthDefense(bStealthDefense && pDefender->plot() != plot());
+
 		//TBMaybeproblem : I'd like to elminate this from attackers in a stealth defense situation - they shouldn't be counted as having attacked for being ambushed.
 		if (!canStampede() && !canOnslaught() && !bStealthDefense)
 		{
@@ -2606,7 +2574,7 @@ void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, 
 
 			GC.getGame().incrementTurnTimer(getCombatTimer());
 		}
-		else bFinish = true;
+		else combat->endCombat();;
 
 		// Kill them!
 		pDefender->setDamage(pDefender->getMaxHP());
@@ -2665,7 +2633,7 @@ void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, 
 				addMission(kBattle);
 			}
 		}
-		else if (m_combatResult.bStealthDefense)
+		else if (combat->getStealthDefense())
 		{
 			// Stealth defense is initialized in the endCombat function,
 			//	so the previous fight should wrap up before this next combat does so.
@@ -2673,9 +2641,9 @@ void CvUnit::startCombat(CvPlot* combatPlot, CvUnit* pDefender, bool bSamePlot, 
 			setCombatTimer(1);
 			GC.getGame().incrementTurnTimer(1);
 		}
-		else endCombat(pDefender, bSamePlot); // No need to update timers for quick combat
+		else combat->endCombat(); // No need to update timers for quick combat
 	}
-	else endCombat(pDefender, bSamePlot); //Attacker died before it could even engage
+	else combat->endCombat(); //Attacker died before it could even engage
 }
 
 
@@ -26729,384 +26697,6 @@ int CvUnit::interceptionChance(const CvPlot* pPlot) const
 PlayerTypes CvUnit::getOriginalOwner() const
 {
 	return m_eOriginalOwner;
-}
-
-void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool& bAttackerPromoted, bool& bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes)
-{
-	PROFILE_EXTRA_FUNC();
-	if (!GC.getGame().getModderGameOption(MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS) ||
-		getUnitCombatType() == NO_UNITCOMBAT || pDefender->getUnitCombatType() == NO_UNITCOMBAT)
-	{
-		return;
-	}
-
-	bool bNoDefBon = noDefensiveBonus();
-	std::vector<PromotionTypes> aAttackerAvailablePromotions;
-	std::vector<PromotionTypes> aDefenderAvailablePromotions;
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		const PromotionTypes promotionType = static_cast<PromotionTypes>(iI);
-		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(promotionType);
-		/* Block These Promotions */
-		if (kPromotion.getKamikazePercent() > 0 ||
-			kPromotion.isLeader() ||
-			kPromotion.hasNegativeEffects())
-		{
-			continue;
-		}
-
-		//TB Combat Mods Begin
-		if (pDefender->isDead() || m_combatResult.bDefenderKnockedBack)
-		{
-			if (!canAcquirePromotion(promotionType)) //attacker can not acquire this promotion
-			{
-				continue;
-			}
-			//* attacker may receive pursuit
-			if (m_combatResult.bDefenderWithdrawn && kPromotion.getPursuitChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			if (m_combatResult.bDefenderPursued && kPromotion.getPursuitChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker was attacking a fortified defender and may receive Overrun
-			if (cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getOverrunChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker was unyielding against a Repel
-			if (!bNoDefBon)
-			{
-				if (m_combatResult.bAttackerRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
-				{
-					aAttackerAvailablePromotions.push_back(promotionType);
-				}
-			}
-			//* attacker Knocked back defender
-			if (m_combatResult.bDefenderKnockedBack && kPromotion.getKnockbackChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker was attacking with S&D bonus
-			if (kPromotion.getLungeChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker had less dodge than defender's precision
-			if (kPromotion.getDodgeModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) < pDefender->precisionVSOpponentProbTotal(this)))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* defender had more dodge than attacker's precision
-			if (kPromotion.getPrecisionModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) > precisionVSOpponentProbTotal(pDefender)))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker is developing critical chance
-			if (kPromotion.getCriticalModifierChange() > 0 && (criticalVSOpponentProbTotal(pDefender) > 0))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker is developing endurance
-			if (kPromotion.getEnduranceChange() > 0 && (enduranceTotal() > 0))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods End
-			//* attacker was crossing river
-			if (kPromotion.isRiver() && cdDefenderDetails.iRiverAttackModifier != 0)	//this bonus is being applied to defender
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attack from water
-			if (kPromotion.isAmphib() && cdDefenderDetails.iAmphibAttackModifier != 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attack terrain
-			if (kPromotion.getTerrainAttackPercent((int)pPlot->getTerrainType()) > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attack feature
-			if (pPlot->getFeatureType() != NO_FEATURE &&
-				kPromotion.getFeatureAttackPercent((int)pPlot->getFeatureType()) > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attack hills
-			if (kPromotion.getHillsAttackPercent() > 0 && pPlot->isHills())
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* attack city
-			if (kPromotion.getCityAttackPercent() > 0 && pPlot->isCity(true))	//count forts too
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* first strikes/chanses promotions
-			if ((kPromotion.getFirstStrikesChange() > 0 ||
-				kPromotion.getChanceFirstStrikesChange() > 0) && (firstStrikes() > 0 || chanceFirstStrikes() > 0))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* unit combat mod
-			if (kPromotion.getUnitCombatModifierPercent((int)pDefender->getUnitCombatType()) > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods Begin * anti-barbarian combat mod
-			if (kPromotion.getVSBarbsChange() > 0 && (pDefender->isHominid()))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			if (kPromotion.getStrengthChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			if (kPromotion.getAttackCombatModifierChange() > 0)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods End
-			//* combat strength promotions
-			if (kPromotion.getCombatPercent() > 0 && !kPromotion.isAmphib())
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* domain mod
-			if (kPromotion.getDomainModifierPercent((int)pDefender->getDomainType()))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			//* blitz
-			if (kPromotion.isBlitz() && bAttackerHasLostNoHP)
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-		}	//if defender is dead or withdrawn
-		//* defender withdrawn, give him withdrawal promo
-		else if (m_combatResult.bDefenderWithdrawn)
-		{
-			if (kPromotion.getWithdrawalChange() > 0 &&
-				pDefender->canAcquirePromotion(promotionType))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-		}
-		//* attacker withdrawn
-		else if (bAttackerWithdrawn)
-		{
-			if (kPromotion.getWithdrawalChange() > 0 &&
-				canAcquirePromotion(promotionType))
-			{
-				aAttackerAvailablePromotions.push_back(promotionType);
-			}
-			if (kPromotion.getPursuitChange() > 0 &&
-				pDefender->canAcquirePromotion(promotionType))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-		}
-		//* attacker is presumably dead
-		else
-		{
-			FAssertMsg(isDead(), "Attacker is expected to be dead");
-			if (!pDefender->canAcquirePromotion(promotionType))
-			{
-				continue;
-			}
-			//TB Combat Mods Begin
-				//* Defender may recieve pursuit
-			if (m_combatResult.bAttackerPursued && kPromotion.getPursuitChange() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* Defender Repelled Attacker
-			if (!bNoDefBon)
-			{
-				if (m_combatResult.bAttackerRepelled && kPromotion.getRepelChange() > 0)
-				{
-					aDefenderAvailablePromotions.push_back(promotionType);
-				}
-				//* Defender Repelled Attacker while Fortified
-				if (m_combatResult.bAttackerRepelled && cdDefenderDetails.iFortifyModifier > 0 && kPromotion.getFortRepelChange() > 0)
-				{
-					aDefenderAvailablePromotions.push_back(promotionType);
-				}
-			}
-			//* Defender Refused to be Knocked Back
-			if (m_combatResult.bDefenderRefusedtoYield && kPromotion.getUnyieldingChange() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* Defender Suffered Surround and Destroy Modifier
-			if (kPromotion.getDynamicDefenseChange() > 0 && surroundedDefenseModifier(pPlot, pDefender) != 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			if (kPromotion.getStrengthChange() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			if (kPromotion.getAnimalIgnoresBordersChange() > 0 && pDefender->isAnimal() && !GC.getGame().isOption(GAMEOPTION_ANIMAL_STAY_OUT))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods End
-			//* defend terrain
-			if (!noDefensiveBonus() && (kPromotion.getTerrainDefensePercent((int)pPlot->getTerrainType()) > 0))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defend feature
-			if (!noDefensiveBonus() && (pPlot->getFeatureType() != NO_FEATURE &&
-				kPromotion.getFeatureDefensePercent((int)pPlot->getFeatureType()) > 0))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defend hills
-			if (!noDefensiveBonus() && (kPromotion.getHillsDefensePercent() > 0 && pPlot->isHills()))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defend city
-			if (!noDefensiveBonus() && kPromotion.getCityDefensePercent() > 0 && pPlot->isCity(true))	//count forts too
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* first strikes/chanses promotions
-			if ((kPromotion.getFirstStrikesChange() > 0 ||
-				kPromotion.getChanceFirstStrikesChange() > 0) &&
-				(pDefender->firstStrikes() > 0 || pDefender->chanceFirstStrikes() > 0))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* unit combat mod vs attacker unit type
-			if (kPromotion.getUnitCombatModifierPercent((int)getUnitCombatType()) > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods Begin * anti-barbarian combat mod
-			if (kPromotion.getVSBarbsChange() > 0 && isHominid())
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-
-			if (!noDefensiveBonus() && kPromotion.getDefenseCombatModifierChange() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defemder had less dodge than attacker's precision
-			if (kPromotion.getDodgeModifierChange() > 0 && (pDefender->dodgeVSOpponentProbTotal(this) < precisionVSOpponentProbTotal(pDefender)))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* attacker had more dodge than defender's precision
-			if (kPromotion.getPrecisionModifierChange() > 0 && (dodgeVSOpponentProbTotal(pDefender) > pDefender->precisionVSOpponentProbTotal(this)))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defender is developing critical chance
-			if (kPromotion.getCriticalModifierChange() > 0 && (pDefender->criticalVSOpponentProbTotal(this) > 0))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* defender is developing endurance
-			if (kPromotion.getEnduranceChange() > 0 && (pDefender->enduranceTotal() > 0))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//TB Combat Mods End
-			//* combat strength promotions
-			if (kPromotion.getCombatPercent() > 0)
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-			//* domain mod
-			if (kPromotion.getDomainModifierPercent((int)getDomainType()))
-			{
-				aDefenderAvailablePromotions.push_back(promotionType);
-			}
-		}	//if attacker withdrawn
-	}	//end promotion types cycle
-
-	//promote attacker:
-	if (!isDead() && aAttackerAvailablePromotions.size() > 0)
-	{
-		FAssertMsg(getMaxHP() - iAttackerInitialDamage > 0, "Attacker is Dead!");
-		int iHealthPercent = (getMaxHP() - getDamage()) * 100 / std::max(1, getMaxHP() - iAttackerInitialDamage);
-		iNonLethalAttackWinChance *= 10;
-		int iOdds = std::max(iWinningOdds, iNonLethalAttackWinChance);
-		int iPromotionChance = (GC.getCOMBAT_DIE_SIDES() - iOdds)/* * (100 + iPromotionChanceModifier) / 100*/;
-
-		int iFirstStrikes = 1 + iAttackerFirstStrikes;
-		iFirstStrikes = std::max(1, iFirstStrikes);
-
-		iPromotionChance /= iFirstStrikes;
-		if (GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
-		{
-			//select random promotion from available
-			PromotionTypes ptPromotion = aAttackerAvailablePromotions[
-				GC.getGame().getSorenRandNum(aAttackerAvailablePromotions.size(), "Select Promotion Type")];
-			//promote
-			//TB Combat Mod next line
-			setHasPromotion(ptPromotion, true, false);
-			bAttackerPromoted = true;
-
-			setExperience100(iInitialAttXP);
-			GET_PLAYER(getOwner()).setCombatExperience(iInitialAttGGXP, getGGExperienceEarnedTowardsType());
-
-			//show message
-			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
-			AddDLLMessage(
-				getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-				GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
-				GC.getCOLOR_GREEN(), getX(), getY()
-			);
-		}
-	}
-
-	//promote defender:
-	if (!pDefender->isDead() && aDefenderAvailablePromotions.size() > 0)
-	{
-		FAssertMsg(pDefender->getMaxHP() - iDefenderInitialDamage > 0, "Defender is Dead!");
-		int iHealthPercent = (pDefender->getMaxHP() - pDefender->getDamage()) * 100 / std::max(1, pDefender->getMaxHP() - iDefenderInitialDamage);
-		iNonLethalDefenseWinChance *= 10;
-		iNonLethalDefenseWinChance = std::max(0, (GC.getCOMBAT_DIE_SIDES() - iNonLethalDefenseWinChance));
-		int iOdds = std::min(iWinningOdds, iNonLethalDefenseWinChance);
-		int iPromotionChance = iOdds/* * (100 + iPromotionChanceModifier) / 100*/;
-		int iFirstStrikes = 1 + iDefenderFirstStrikes;
-		//change to stealth strikes if stealth combat
-		iFirstStrikes = std::max(1, iFirstStrikes);
-		iPromotionChance /= iFirstStrikes;
-		if (GC.getGame().getSorenRandNum(GC.getCOMBAT_DIE_SIDES(), "Occasional Promotion") < iPromotionChance)
-		{
-			//select random promotion from available
-			PromotionTypes ptPromotion = aDefenderAvailablePromotions[
-				GC.getGame().getSorenRandNum(aDefenderAvailablePromotions.size(), "Select Promotion Type")];
-			//promote
-			//TB Combat Mod next line
-			pDefender->setHasPromotion(ptPromotion, true, false);
-
-			pDefender->setExperience100(iInitialDefXP);
-			GET_PLAYER(pDefender->getOwner()).setCombatExperience(iInitialDefGGXP, pDefender->getGGExperienceEarnedTowardsType());
-			bDefenderPromoted = true;
-
-			//show message
-			{
-
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", pDefender->getNameKey(),
-					GC.getPromotionInfo(ptPromotion).getText());
-				AddDLLMessage(
-					pDefender->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
-					GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-			}
-		}
-	}
 }
 
 

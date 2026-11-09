@@ -579,8 +579,6 @@ public:
 	void setExperience100(int iNewValue);
 	void changeExperience100(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);
 
-	void doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
-
 	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion = false, bool bDefPromotion = false);
 	void applyDynamicXP(const int iExperience, const bool bHomeTerritory, int iMaxTotalXP);
 	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
@@ -1654,6 +1652,13 @@ public:
 	void deselect(const bool bQuick = false);
 	void forceInvalidCoordinates();
 
+	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
+		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
+	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit);
+	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
+	int doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
+	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
+
 protected:
 	int m_iDCMBombRange;
 	int m_iDCMBombAccuracy;
@@ -2013,10 +2018,7 @@ protected:
 	mutable std::map<FeatureTypes, FeatureKeyedInfo>		m_featureKeyedInfo;
 	mutable std::map<UnitCombatTypes, UnitCombatKeyedInfo>	m_unitCombatKeyedInfo;
 
-	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
-	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
-	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit);
 
 	bool interceptTest(const CvPlot* pPlot);
 	CvUnit* airStrikeTarget(const CvPlot* pPlot) const;
@@ -2025,6 +2027,7 @@ protected:
 public:
 	bool canAirStrike(const CvPlot* pPlot) const;
 	bool airStrike(CvPlot* pPlot);
+	bool isCombatVisible(const CvUnit* pDefender) const;
 protected:
 	// ! Dale
 
@@ -2034,15 +2037,10 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
-		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
-
-	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
-	int doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
 	void influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier);
 	int doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
