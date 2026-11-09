@@ -42,7 +42,10 @@ public:
 	DllExport bool canDeclareWar(TeamTypes eTeam) const;
 
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
-	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan);
+	// eInstigatorTeam: set only for pact/vassal-obligated joins pulled in by declareWar() itself
+	// (see CvTeam.cpp) to credit the team whose own choice caused this join, rather than blaming
+	// the coerced team as if it had freely declared war. Leave NO_TEAM for a real, voluntary declaration.
+	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, TeamTypes eInstigatorTeam = NO_TEAM);
 
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true);
 	bool canContact(TeamTypes eTeam) const;

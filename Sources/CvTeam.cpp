@@ -1202,11 +1202,12 @@ bool CvTeam::canEventuallyDeclareWar(TeamTypes eTeam) const
 }
 
 
-void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
+void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, TeamTypes eInstigatorTeam)
 {
 	PROFILE_FUNC();
 	FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
 	FAssertMsg(eTeam != getID(), "eTeam is not expected to be equal with getID()");
+	FAssertMsg(eInstigatorTeam != eTeam, "eInstigatorTeam is not expected to be equal with eTeam");
 
 	CvTeamAI& teamFoe = GET_TEAM(eTeam);
 
@@ -1388,27 +1389,56 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				}
 			}
 
-			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			if (eInstigatorTeam == NO_TEAM)
 			{
-				// Players from our Team
-				if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+					// Players from our Team
+					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 					{
-						// Players not from our Team
-						if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID(), false))
+						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 						{
-							// Who we declared war on ...
-							if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
+							// Players not from our Team
+							if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID(), false))
 							{
-								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount((PlayerTypes)iI, MEMORY_DECLARED_WAR, 1);
+								// Who we declared war on ...
+								if (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam)
+								{
+									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount((PlayerTypes)iI, MEMORY_DECLARED_WAR, 1);
+								}
+								// ... or their friends
+								else if (teamFoe.isHasMet(GET_PLAYER((PlayerTypes)iJ).getTeam())
+								&& GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).AI_getAttitude(eTeam) >= ATTITUDE_PLEASED
+								&& !GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).isAtWar(eTeam))
+								{
+									GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount((PlayerTypes)iI, MEMORY_DECLARED_WAR_ON_FRIEND, 1);
+								}
 							}
-							// ... or their friends
-							else if (teamFoe.isHasMet(GET_PLAYER((PlayerTypes)iJ).getTeam())
-							&& GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).AI_getAttitude(eTeam) >= ATTITUDE_PLEASED
-							&& !GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).isAtWar(eTeam))
+						}
+					}
+				}
+			}
+			else
+			{
+				// getID() didn't choose this fight - it was pulled in by a pact/vassal obligation
+				// to eInstigatorTeam. Blame eInstigatorTeam (the team whose own declaration actually
+				// caused this join) for having brought in a war ally, instead of blaming the coerced
+				// team as if it had freely declared war on eTeam or eTeam's friends.
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+				{
+					// Players from the real instigator's team
+					if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(eInstigatorTeam))
+					{
+						for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+						{
+							// Players not from the coerced team
+							if (GET_PLAYER((PlayerTypes)iJ).isAliveAndTeam(getID(), false)
+							&& (GET_PLAYER((PlayerTypes)iJ).getTeam() == eTeam
+								|| (teamFoe.isHasMet(GET_PLAYER((PlayerTypes)iJ).getTeam())
+									&& GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).AI_getAttitude(eTeam) >= ATTITUDE_PLEASED
+									&& !GET_TEAM(GET_PLAYER((PlayerTypes)iJ).getTeam()).isAtWar(eTeam))))
 							{
-								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount((PlayerTypes)iI, MEMORY_DECLARED_WAR_ON_FRIEND, 1);
+								GET_PLAYER((PlayerTypes)iJ).AI_changeMemoryCount((PlayerTypes)iI, MEMORY_HIRED_WAR_ALLY, 1);
 							}
 						}
 					}
@@ -1551,7 +1581,9 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 					else if (GET_TEAM((TeamTypes)iI).isDefensivePact(getID()))
 					{
 						// For alliance option.  This teams pacts are canceled above if not using alliance option.
-						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE);
+						// iI is pulled in on our (the aggressor's) side solely because of its pact/vassal
+						// obligation to us - credit us, not iI, as the instigator for attitude purposes.
+						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
 					}
 				}
 			}
@@ -1571,7 +1603,9 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 					}
 					else if (GET_TEAM((TeamTypes)iI).isVassal(getID()) || isVassal((TeamTypes)iI))
 					{
-						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE);
+						// iI is pulled in on our (the aggressor's) side solely because of its pact/vassal
+						// obligation to us - credit us, not iI, as the instigator for attitude purposes.
+						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
 					}
 				}
 			}
