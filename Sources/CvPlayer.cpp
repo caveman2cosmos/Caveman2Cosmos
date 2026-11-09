@@ -27731,7 +27731,16 @@ int CvPlayer::doMultipleResearch(int iOverflow)
 		{
 			AI_chooseResearch();
 		}
+
+		// Safety net: AI_chooseResearch() above is what actually advances the queue head for
+		// AI players. Humans get nothing here - this just hopes setHasTech()'s internal
+		// popResearch() moved the head past eCurrentTech. If it didn't (empty queue, a
+		// re-queued/duplicate tech, etc.), the loop condition above trivially stays true on an
+		// already-completed tech (cost - progress <= 0 <= iOverflow) and spins forever. Bail if
+		// the head didn't actually move.
+		const TechTypes ePreviousTech = eCurrentTech;
 		eCurrentTech = getCurrentResearch();
+		if (eCurrentTech == ePreviousTech) break;
 	}
 	return std::max(0, iOverflow);
 }
