@@ -2,15 +2,12 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
-#include "StatusPromotionDefaults.h"
 #include "CvBuildingInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
 #include "CvInfos.h"
-#include "PromotionTraversal.h"
-#include "DoctrinePromotions.h"
 #include "CvDiplomacyClasses.h"
 #include "CvUnitCombatInfo.h"
 #include "CvPlayerOptionInfo.h"
@@ -794,10 +791,6 @@ void cvInternalGlobals::updateReplacements()
 	m_SpecialBuildingInfoReplacements.updateReplacements(m_paSpecialBuildingInfo);
 
 	m_HandicapInfoReplacements.updateReplacements(m_paHandicapInfo);
-	// The shared resource/building index must follow the currently selected XML variants.
-	cacheBonusAssociatedBuildings();
-	cacheAutoBuildBuildings();
-	cacheAIConstructionBuildings();
 //ReplacementStep: search down here for 'CvInfoReplacements'
 }
 
@@ -1039,25 +1032,9 @@ PromotionTypes cvInternalGlobals::getStatusPromotion(int i) const
 	return m_aiStatusPromotions[i];
 }
 
-PromotionTypes cvInternalGlobals::getStatusDefaultPromotion(int i) const
-{
-	return m_aiStatusDefaultPromotions[i];
-}
-
 int cvInternalGlobals::getNumStatusPromotions() const
 {
 	return (int)m_aiStatusPromotions.size();
-}
-
-const std::vector<PromotionTypes>& cvInternalGlobals::getFreeUnitCombatPromotions(UnitCombatTypes combat) const
-{
-	static const std::vector<PromotionTypes> empty;
-	return combat >= 0 && combat < (int)m_freeUnitCombatPromotions.size() ? m_freeUnitCombatPromotions[combat] : empty;
-}
-
-void cvInternalGlobals::cacheFreeUnitCombatPromotions()
-{
-	PromotionTraversal::cacheFreeUnitCombat(*this, m_freeUnitCombatPromotions);
 }
 
 int cvInternalGlobals::getNumFeatureInfos() const
@@ -3216,8 +3193,6 @@ void cvInternalGlobals::doPostLoadCaching()
 		}
 	}
 
-	cacheStatusPromotionDefaults(*this, m_aiStatusDefaultPromotions);
-
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
 		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
@@ -3228,139 +3203,76 @@ void cvInternalGlobals::doPostLoadCaching()
 
 	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
 
-	cacheBonusAssociatedBuildings();
-	cacheAutoBuildBuildings();
-	cacheAIConstructionBuildings();
-	cacheFreeUnitCombatPromotions();
-	DoctrinePromotions::cache();
-}
-
-const std::vector<BuildingTypes>& cvInternalGlobals::getAIPropertyBuildings(PropertyTypes property) const
-{
-	static const std::vector<BuildingTypes> empty;
-	return property >= 0 && property < (int)m_aiPropertyBuildings.size() ? m_aiPropertyBuildings[property] : empty;
-}
-
-void cvInternalGlobals::cacheAIConstructionBuildings()
-{
-	m_aiConstructionBuildings.clear();
-	m_aiIndirectBuildings.clear();
-	m_aiConditionalBuildings.clear();
-	m_aiCapitalBuildings.clear();
-	m_aiPropertyBuildings.clear();
-	m_aiPropertyBuildings.resize(getNumPropertyInfos());
-	for (int i = 0; i < getNumBuildingInfos(); ++i)
 	{
-		const BuildingTypes building = (BuildingTypes)i;
-		const CvBuildingInfo& info = getBuildingInfo(building);
-		// Keep every expression, including automatic definitions, so scoring retains
-		// the original expression evaluation order and possible side effects.
-		if(info.getConstructCondition()!=NULL)m_aiConditionalBuildings.push_back(building);
-		// Match the player's hard manual-construction rejection, including cost-zero definitions.
-		if (info.getProductionCost() == -1) continue;
-		m_aiConstructionBuildings.push_back(building);
-		if (info.EnablesOtherBuildings() || info.getFreeBuilding() != NO_BUILDING || info.getFreeAreaBuilding() != NO_BUILDING)
+		// C2C Optimization: Precompute the mapping of BonusTypes to all BuildingTypes that interact with or require that bonus.
+		// This replaces expensive loops over all building infos (thousands of items) with a fast cached vector lookup in AI evaluation.
+		SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
+		const int iNumBonusInfos = getNumBonusInfos();
+		m_ppbBonusAssociatedBuildings = new std::vector<BuildingTypes>[iNumBonusInfos];
+		for (int iI = 0; iI < getNumBuildingInfos(); iI++)
 		{
-			m_aiIndirectBuildings.push_back(building);
-		}
-		if (info.isCapital()) m_aiCapitalBuildings.push_back(building);
-		foreach_(const CvPropertySource* source, info.getPropertyManipulators()->getSources())
-		{
-			const PropertyTypes property = source->getProperty();
-			if (source->getType() == PROPERTYSOURCE_CONSTANT && property >= 0 && property < getNumPropertyInfos())
+			const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
+			const CvBuildingInfo& kBuilding = getBuildingInfo(eBuilding);
+			for (int iB = 0; iB < iNumBonusInfos; iB++)
 			{
-				std::vector<BuildingTypes>& candidates = m_aiPropertyBuildings[property];
-				if (candidates.empty() || candidates.back() != building) candidates.push_back(building);
-			}
-		}
-	}
-}
-
-void cvInternalGlobals::cacheAutoBuildBuildings()
-{
-	m_autoBuildBuildings.clear();
-	// Preserve the old descending pass: earlier autobuilds may affect later candidates.
-	for (int i = getNumBuildingInfos() - 1; i >= 0; --i)
-	{
-		const BuildingTypes building = static_cast<BuildingTypes>(i);
-		const CvBuildingInfo& info = getBuildingInfo(building);
-		if (info.isAutoBuild())
-		{
-			m_autoBuildBuildings.push_back(building);
-		}
-	}
-}
-
-void cvInternalGlobals::cacheBonusAssociatedBuildings()
-{
-	// C2C Optimization: Precompute the mapping of BonusTypes to all BuildingTypes that interact with or require that bonus.
-	// This replaces expensive loops over all building infos (thousands of items) with a fast cached vector lookup in AI evaluation.
-	SAFE_DELETE_ARRAY(m_ppbBonusAssociatedBuildings);
-	const int iNumBonusInfos = getNumBonusInfos();
-	m_ppbBonusAssociatedBuildings = new std::vector<BuildingTypes>[iNumBonusInfos];
-	for (int iI = 0; iI < getNumBuildingInfos(); iI++)
-	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-		const CvBuildingInfo& kBuilding = getBuildingInfo(eBuilding);
-		for (int iB = 0; iB < iNumBonusInfos; iB++)
-		{
-			const BonusTypes eBonus = static_cast<BonusTypes>(iB);
-			bool bRelated = false;
-			if (kBuilding.getPrereqAndBonus() == eBonus)
-			{
-				bRelated = true;
-			}
-			else if (algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus))
-			{
-				bRelated = true;
-			}
-			else if (kBuilding.getBonusProductionModifier(eBonus) != 0)
-			{
-				bRelated = true;
-			}
-			else if (kBuilding.getPowerBonus() == eBonus)
-			{
-				bRelated = true;
-			}
-			else if (kBuilding.getBonusDefenseChanges(eBonus) != 0)
-			{
-				bRelated = true;
-			}
-			else
-			{
-				for (int iY = 0; iY < NUM_YIELD_TYPES; iY++)
+				const BonusTypes eBonus = static_cast<BonusTypes>(iB);
+				bool bRelated = false;
+				if (kBuilding.getPrereqAndBonus() == eBonus)
 				{
-					if (kBuilding.getBonusYieldModifier(eBonus, iY) != 0 ||
-						kBuilding.getBonusYieldChanges(eBonus, iY) != 0)
-					{
-						bRelated = true;
-						break;
-					}
+					bRelated = true;
 				}
-				if (!bRelated)
+				else if (algo::any_of_equal(kBuilding.getPrereqOrBonuses(), eBonus))
 				{
-					for (int iC = 0; iC < NUM_COMMERCE_TYPES; iC++)
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusProductionModifier(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getPowerBonus() == eBonus)
+				{
+					bRelated = true;
+				}
+				else if (kBuilding.getBonusDefenseChanges(eBonus) != 0)
+				{
+					bRelated = true;
+				}
+				else
+				{
+					for (int iY = 0; iY < NUM_YIELD_TYPES; iY++)
 					{
-						if (kBuilding.getBonusCommercePercentChanges(eBonus, iC) != 0 ||
-							kBuilding.getBonusCommerceModifier(eBonus, iC) != 0)
+						if (kBuilding.getBonusYieldModifier(eBonus, iY) != 0 ||
+							kBuilding.getBonusYieldChanges(eBonus, iY) != 0)
 						{
 							bRelated = true;
 							break;
 						}
 					}
-				}
-				if (!bRelated)
-				{
-					if (kBuilding.getBonusHappinessChanges().getValue(eBonus) != 0 ||
-						kBuilding.getBonusHealthChanges().getValue(eBonus) != 0)
+					if (!bRelated)
 					{
-						bRelated = true;
+						for (int iC = 0; iC < NUM_COMMERCE_TYPES; iC++)
+						{
+							if (kBuilding.getBonusCommercePercentChanges(eBonus, iC) != 0 ||
+								kBuilding.getBonusCommerceModifier(eBonus, iC) != 0)
+							{
+								bRelated = true;
+								break;
+							}
+						}
+					}
+					if (!bRelated)
+					{
+						if (kBuilding.getBonusHappinessChanges().getValue(eBonus) != 0 ||
+							kBuilding.getBonusHealthChanges().getValue(eBonus) != 0)
+						{
+							bRelated = true;
+						}
 					}
 				}
-			}
-			if (bRelated)
-			{
-				m_ppbBonusAssociatedBuildings[eBonus].push_back(eBuilding);
+				if (bRelated)
+				{
+					m_ppbBonusAssociatedBuildings[eBonus].push_back(eBuilding);
+				}
 			}
 		}
 	}

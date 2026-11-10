@@ -25,7 +25,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="NativePromotions\NativePromotions.py" />
     <Compile Include="Afforess\ANewDawnSettings.py" />
     <Compile Include="Afforess\AutomatedSettings.py" />
     <Compile Include="Afforess\DiplomacySettings.py" />
@@ -149,13 +148,11 @@
     <Compile Include="EntryPoints\InputData.py" />
     <Compile Include="EntryPoints\PbMain.py" />
     <Compile Include="MapScriptTools.py" />
-    <Compile Include="MultipleImprovements\MultipleImprovements.py" />
     <Compile Include="OOSLogger.py" />
     <Compile Include="PitBoss\PbAdmin.py" />
     <Compile Include="PitBoss\PbWizard.py" />
     <Compile Include="Platyping\NaturalWonders.py" />
     <Compile Include="Platyping\NaturalWonder_EM.py" />
-    <Compile Include="PrimitiveMaps\PrimitiveMaps.py" />
     <Compile Include="pyWB\CvWBDesc.py" />
     <Compile Include="Revolution\Development\ChangePlayer.py" />
     <Compile Include="Revolution\Gameready\AIAutoPlay.py" />
@@ -273,10 +270,8 @@
     <Folder Include="DataStorage\" />
     <Folder Include="EnhancedTechConquestUtils\" />
     <Folder Include="EntryPoints\" />
-    <Folder Include="MultipleImprovements\" />
     <Folder Include="PitBoss\" />
     <Folder Include="Platyping\" />
-    <Folder Include="PrimitiveMaps\" />
     <Folder Include="pyWB\" />
     <Folder Include="Revolution\" />
     <Folder Include="Revolution\Development\" />

@@ -5,14 +5,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "PerformancePortTest.h"
-#include "TransportRequests.h"
-#include "UnitTravelConnectivity.h"
-#include "DoctrinePromotions.h"
-#include "NavalDecisionDiagnostics.h"
-#include "TargetDecisionDiagnostics.h"
-#include "RailRoadRevolution.h"
-#include "AIPerf.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -584,13 +576,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 		// Is a modifier recalc needed?
 		GC.getInitCore().checkVersions();
-		GC.getInitCore().checkRailRoadRevolutionOption();
-		GC.getInitCore().checkPrimitiveMapsOption();
-		GC.getInitCore().checkMultipleImprovementsOption();
 		GC.getInitCore().checkStackPromotionsOption();
-		GC.getInitCore().checkNativePromotionsOption();
-		GC.getInitCore().checkDoctrinePromotionsOption();
-		refreshNativePromotionBuildings();
 	}
 	// Set the unit/building filters to default state now that game is fully initialized.
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
@@ -600,9 +586,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 	OutputDebugString("onFinalInitialized: End\n");
 
-	RailRoadRevolution::resetCaches();
-	if(bNewGame)RailRoadRevolution::migrateLegacyRoutes();
-	CvPlot::flushMovementCostCache();
 	writeRealtimeLogMetadata(true);
 }
 
@@ -625,10 +608,6 @@ void CvGame::doPreTurn0()
 	}
 	{
 		PROFILE("CvGame::update.AutoSave");
-
-#ifdef C2C_PERFORMANCE_PORT_TEST
-		if(!PerformancePortTest::active())
-#endif
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
@@ -865,10 +844,6 @@ CvString create_game_id()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
-	TransportRequests::reset();
-    UnitTravelConnectivity::reset();
-
-	AI_PERF_RESET();
 	StackPromotions::reset();
 	PROFILE_EXTRA_FUNC();
 	CvPlotPaging::ResetPaging();
@@ -5005,21 +4980,7 @@ bool CvGame::isOption(GameOptionTypes eIndex) const
 
 void CvGame::setOption(GameOptionTypes eIndex, bool bEnabled)
 {
-    UnitTravelConnectivity::Change travelChange(isOption(eIndex)!=bEnabled);
-	const bool changed = isOption(eIndex) != bEnabled;
-	// Remove while the old ON state still permits processing; restore after ON.
-	if (changed && isFinalInitialized() && eIndex == GAMEOPTION_COMBAT_MILITARY_DOCTRINES && !bEnabled)
-		DoctrinePromotions::processOwned(false);
 	GC.getInitCore().setOption(eIndex, bEnabled);
-	if (changed && isFinalInitialized() && eIndex == GAMEOPTION_COMBAT_MILITARY_DOCTRINES && bEnabled)
-		DoctrinePromotions::processOwned(true);
-	// A live option change can expose/hide military improvement layers.
-	// During initialization all derived player indices start invalid already.
-	if (changed && isFinalInitialized())
-	{
-		for (int player = 0; player < MAX_PLAYERS; ++player)
-			GET_PLAYER((PlayerTypes)player).invalidateDefensivePostCandidates();
-	}
 }
 
 
@@ -5790,17 +5751,12 @@ void CvGame::addGreatPersonBornName(const CvWString& szName)
 
 void CvGame::doTurn()
 {
-    TARGET_DIAG_TURN(getGameTurn());
-
-    NAVAL_DIAG_TURN(GC.getGame().getGameTurn());
-
 	StackPromotions::writeStats();
 	PROFILE_BEGIN("CvGame::doTurn()",DOTURN1);
 
 	writeRealtimeLogMetadata(false);
 
 	// END OF TURN
-	RailRoadRevolution::logTurn();
 	CvEventReporter::getInstance().beginGameTurn( getGameTurn() );
 
 	doUpdateCacheOnTurn();
@@ -5897,7 +5853,6 @@ void CvGame::doTurn()
 		}
 	}
 	CvEventReporter::getInstance().endGameTurn(getGameTurn());
-	AI_PERF_FLUSH(getGameTurn());
 	incrementGameTurn();
 	incrementElapsedGameTurns();
 
@@ -5978,10 +5933,6 @@ void CvGame::doTurn()
 	}
 
 	stopProfilingDLL(true);
-
-#ifdef C2C_PERFORMANCE_PORT_TEST
-	if(!PerformancePortTest::active())
-#endif
 	gDLL->getEngineIFace()->AutoSave();
 
 #ifdef MEMTRACK
@@ -7194,7 +7145,6 @@ void CvGame::createBarbarianUnits()
 
 void CvGame::updateMoves()
 {
-	AI_PERF_SCOPE(UPDATE_MOVES);
 	PROFILE_FUNC();
 
 	int aiShuffle[MAX_PLAYERS];
@@ -7234,10 +7184,7 @@ void CvGame::updateMoves()
 				{
 					player.AI_unitUpdate();
 				}
-				{
-					AI_PERF_SCOPE(AUTO_MISSIONS);
-					algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-				}
+				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 				if (!player.hasBusyUnit())
 				{
@@ -7261,10 +7208,7 @@ void CvGame::updateMoves()
 		{
 			PROFILE("CvGame::updateMoves.AI");
 
-			{
-				AI_PERF_SCOPE(AUTO_MISSIONS);
-				algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
-			}
+			algo::for_each(player.groups(), CvSelectionGroup::fn::autoMission());
 
 			if (!isAutoMoves)
 			{
@@ -11510,19 +11454,6 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 }
 
 
-void CvGame::refreshNativePromotionBuildings()
-{
-	for (int i = 0; i < MAX_PLAYERS; ++i)
-	{
-		CvPlayer& player = GET_PLAYER(static_cast<PlayerTypes>(i));
-		if (!player.isAlive()) continue;
-		foreach_(CvCity* city, player.cities())
-		{
-			city->updateNativePromotionBuildings();
-		}
-	}
-}
-
 void CvGame::recalculateModifiers()
 {
 	StackPromotions::reset();
@@ -11531,10 +11462,6 @@ void CvGame::recalculateModifiers()
 	PROFILE_FUNC();
 
 	m_bRecalculatingModifiers = true;
-    RailRoadRevolution::resetCaches();
-    RailRoadRevolution::migrateLegacyRoutes();
-
-	foreach_(CvMap* map, GC.getMaps()) map->migrateAdditionalImprovements();
 
 	//establish improvement costs
 	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)

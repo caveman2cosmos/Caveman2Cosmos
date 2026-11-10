@@ -10,7 +10,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "UnitTravelConnectivity.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -59,7 +58,6 @@ CvMap::CvMap(MapTypes eType)
 	, m_bUnitsDisplayed(true)
 	, m_pMapPlots(NULL)
 	, m_climateZones(NULL)
-	, m_bAdditionalImprovementsMigrated(false)
 {
 	OutputDebugString("Calling constructor for Map: Start\n");
 
@@ -131,32 +129,9 @@ void CvMap::init(CvMapInitData* pInitInfo/*=NULL*/)
 }
 
 
-namespace
-{
-    struct PathGeographyMap
-    {
-        CvMap* map;
-        explicit PathGeographyMap(CvMap* m):map(m){}
-        int size() const { return map->numPlots(); }
-        CvPlot* neighbor(int id, int direction) const
-        {
-            const CvPlot* p=map->plotByIndex(id);
-            return map->plot(p->getX()+GC.getPlotDirectionX()[direction],
-                             p->getY()+GC.getPlotDirectionY()[direction]);
-        }
-    };
-}
-
-void CvMap::preparePathGeography()
-{
-    m_pathGeography.build(PathGeographyMap(this));
-}
-
 void CvMap::uninit()
 {
 	PROFILE_EXTRA_FUNC();
-	// Clear cached plot pointers before releasing map storage.
-	m_pathGeography.clear();
 	SAFE_DELETE_ARRAY(m_paiNumBonus);
 	SAFE_DELETE_ARRAY(m_paiNumBonusOnLand);
 
@@ -176,11 +151,8 @@ void CvMap::uninit()
 // Initializes data members that are serialized.
 void CvMap::reset(CvMapInitData* pInitInfo)
 {
-    UnitTravelConnectivity::Change travelChange;
-
 	StackPromotions::reset();
 	PROFILE_EXTRA_FUNC();
-	m_bAdditionalImprovementsMigrated = false;
 	//--------------------------------
 	// Uninit class
 	uninit();
@@ -1211,8 +1183,6 @@ CvArea* CvMap::nextArea(int *pIterIdx, bool bRev) const
 
 void CvMap::recalculateAreas()
 {
-    UnitTravelConnectivity::Change travelChange;
-
 	PROFILE("CvMap::recalculateAreas");
 
 	for (int iI = 0; iI < numPlots(); iI++)
@@ -1321,8 +1291,6 @@ const std::pair<CvPlot*, CvPlot*> CvMap::plots() const
 //
 void CvMap::read(FDataStreamBase* pStream)
 {
-    UnitTravelConnectivity::Change travelChange;
-
 	PROFILE_EXTRA_FUNC();
 	OutputDebugString("Reading Map: Start\n");
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
@@ -1347,7 +1315,6 @@ void CvMap::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvMap", &m_iBottomLatitude);
 	WRAPPER_READ(wrapper, "CvMap", &m_iNextRiverID);
 
-	WRAPPER_READ(wrapper, "CvMap", &m_bAdditionalImprovementsMigrated);
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapX);
 	WRAPPER_READ(wrapper, "CvMap", &m_bWrapY);
 
@@ -1389,17 +1356,6 @@ void CvMap::read(FDataStreamBase* pStream)
 
 }
 
-// Called only by modifier recalculation, never during ordinary save loading.
-void CvMap::migrateAdditionalImprovements()
-{
-	// Check for feature-backed additions even in saves migrated by older builds.
-	if (!CvAdditionalImprovements::enabled()) return;
-	bool complete = true;
-	for (int i = 0; i < numPlots(); ++i)
-		if (!plotByIndex(i)->migrateAdditionalImprovement()) complete = false;
-	m_bAdditionalImprovementsMigrated = complete;
-}
-
 // save object to a stream
 // used during save
 //
@@ -1420,7 +1376,6 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvMap", m_iBottomLatitude);
 	WRAPPER_WRITE(wrapper, "CvMap", m_iNextRiverID);
 
-	WRAPPER_WRITE(wrapper, "CvMap", m_bAdditionalImprovementsMigrated);
 	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapX);
 	WRAPPER_WRITE(wrapper, "CvMap", m_bWrapY);
 

@@ -536,9 +536,6 @@ class PromotionsGraph(UnitUpgradesGraph):
 
 	def getGraphEdges(self, graph):
 		for unitA in graph.iterkeys():
-			if GC.getGame().isOption(GameOptionTypes.GAMEOPTION_PROMOTIONS_NATIVE):
-				unitNative = GC.getPromotionInfo(unitA).getNativePrereqPromotion()
-				self.addUpgradePath(graph, unitNative, unitA)
 			unitD = GC.getPromotionInfo(unitA).getPrereqPromotion()
 			self.addUpgradePath(graph, unitD, unitA)
 			unitB = GC.getPromotionInfo(unitA).getPrereqOrPromotion1()

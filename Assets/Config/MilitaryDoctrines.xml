@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mod id="MilitaryDoctrines" module="DoctrineOptions">
-    <!-- Unsaved UI mirror: the game option in the save is authoritative. -->
-    <option id="Enabled" type="boolean" default="False" get="isEnabled" set="setEnabled">
-        <change module="DoctrineOptions" function="onChanged"/>
-    </option>
-    <event type="OnLoad" function="onLoad"/>
-    <event type="GameStart" function="onLoad"/>
-</mod>

@@ -384,24 +384,12 @@ public:
 	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 	const std::vector<BuildingTypes>& getBonusAssociatedBuildings(BonusTypes eBonus) const;
-	void cacheBonusAssociatedBuildings();
-	const std::vector<BuildingTypes>& getAutoBuildBuildings() const { return m_autoBuildBuildings; }
-	void cacheAutoBuildBuildings();
-	const std::vector<BuildingTypes>& getAIConstructionBuildings() const { return m_aiConstructionBuildings; }
-	const std::vector<BuildingTypes>& getAIIndirectBuildings() const { return m_aiIndirectBuildings; }
-	const std::vector<BuildingTypes>& getAIConditionalBuildings() const { return m_aiConditionalBuildings; }
-	const std::vector<BuildingTypes>& getAICapitalBuildings() const { return m_aiCapitalBuildings; }
-	const std::vector<BuildingTypes>& getAIPropertyBuildings(PropertyTypes property) const;
-	void cacheAIConstructionBuildings();
 
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
 
 	PromotionTypes getStatusPromotion(int i) const;
-	PromotionTypes getStatusDefaultPromotion(int i) const;
 	int getNumStatusPromotions() const;
-	const std::vector<PromotionTypes>& getFreeUnitCombatPromotions(UnitCombatTypes combat) const;
-	void cacheFreeUnitCombatPromotions();
 
 	inline PromotionTypes getStarsign(int i) const { return m_starsigns[i]; }
 	inline int getNumStarsigns() const { return (int)m_starsigns.size(); }
@@ -882,13 +870,6 @@ protected:
 	std::vector<CvInterfaceModeInfo*> m_paInterfaceModeInfo;
 
 	std::vector<BuildingTypes>* m_ppbBonusAssociatedBuildings;
-	std::vector<BuildingTypes> m_autoBuildBuildings; // Shared XML candidates, not city activation state.
-	// Shared definition indexes only; city constructibility and values keep their existing caches.
-	std::vector<BuildingTypes> m_aiConstructionBuildings;
-	std::vector<BuildingTypes> m_aiIndirectBuildings;
-	std::vector<BuildingTypes> m_aiConditionalBuildings;
-	std::vector<BuildingTypes> m_aiCapitalBuildings;
-	std::vector<std::vector<BuildingTypes> > m_aiPropertyBuildings;
 
 	/***********************************************************************************************************************
 	Globals loaded from XML
@@ -1155,9 +1136,7 @@ protected:
 	CvString m_szDllProfileText;
 
 	std::vector<BonusTypes> m_mapBonuses;
-	std::vector<std::vector<PromotionTypes> > m_freeUnitCombatPromotions;
 	std::vector<PromotionTypes> m_aiStatusPromotions;
-	std::vector<PromotionTypes> m_aiStatusDefaultPromotions;
 	std::vector<PromotionTypes> m_starsigns;
 
 // BBAI Options

@@ -74,7 +74,7 @@ public:
 	void parseSpecialistHelpActual(CvWStringBuffer &szHelpString, SpecialistTypes eSpecialist, CvCity* pCity, bool bCivilopediaText = false, int iChange = 0);
 	void parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const CvCity& kCity);
 	void parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline = NEWLINE);
-	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines, bool bCivilopediaBodyText = false);
+	void parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines);
 	void parseCivicInfo(CvWStringBuffer &szBuffer, CivicTypes eCivic, bool bCivilopediaText = false, bool bPlayerContext = false, bool bSkipName = false);
 	void parsePlayerTraits(CvWStringBuffer &szBuffer, PlayerTypes ePlayer);
 	void parsePlayerHasFixedBorders(CvWStringBuffer &szBuffer, PlayerTypes eThisPlayer);

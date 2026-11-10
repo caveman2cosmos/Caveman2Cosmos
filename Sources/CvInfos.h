@@ -14,7 +14,6 @@
 #define CV_INFO_H
 
 #include "FProfiler.h"
-#include "PromotionValueEffects.h"
 
 #include "CvProperties.h"
 #include "CvPropertySource.h"
@@ -570,15 +569,11 @@ public:
 	const std::vector<UnitCombatTypes>& getStackSupportRecipientNot() const { return m_stackSupportRecipientNot; }
 	const CvString& getStackSupportProviderUnits() const { return m_szStackSupportProviderUnits; }
 
-	unsigned int getAIValueEffectMask() const;
-
 	CvPromotionInfo();
 	virtual ~CvPromotionInfo();
 
 	int getLayerAnimationPath() const;
 	PromotionTypes getPrereqPromotion() const { return m_iPrereqPromotion; }
-	PromotionTypes getNativePrereqPromotion() const { return m_eNativePrereqPromotion; }
-	bool isNative() const { return m_bNative; }
 	PromotionTypes getPrereqOrPromotion1() const { return m_iPrereqOrPromotion1; }
 	PromotionTypes getPrereqOrPromotion2() const { return m_iPrereqOrPromotion2; }
 
@@ -1115,11 +1110,8 @@ private:
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-	mutable PromotionValueEffectCache m_aiValueEffects;
 	int m_iLayerAnimationPath;
 	PromotionTypes m_iPrereqPromotion;
-	PromotionTypes m_eNativePrereqPromotion;
-	bool m_bNative;
 	PromotionTypes m_iPrereqOrPromotion1;
 	PromotionTypes m_iPrereqOrPromotion2;
 
@@ -1842,8 +1834,6 @@ public:
 	bool isGreatGeneral() const;
 	bool isSlave() const;
 	bool getPassableRouteNeeded(int i) const;
-	bool hasPassableRouteNeeded() const { return m_pbPassableRouteNeeded != NULL; }
-	bool isRailOnly() const { return m_bRailOnly; }
 	int getBaseFoodChange() const;
 	int getControlPoints() const;
 	int getCommandRange() const;
@@ -2268,7 +2258,7 @@ public:
 	int getNumUnitUpgrades() const;
 	bool isUnitUpgrade(int i) const;
 
-	const std::vector<int>& getUnitUpgradeChain() const;
+	std::vector<int> getUnitUpgradeChain() const;
 	void addUnitToUpgradeChain(int i);
 
 	bool getTargetUnitCombat(int i) const;
@@ -2684,8 +2674,6 @@ private:
 
 	//Pediahelp
 	std::vector<int> m_aiQualifiedPromotionTypes;
-	// Append extension data; preserve every existing CvUnitInfo field offset.
-	bool m_bRailOnly;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4041,7 +4029,6 @@ public:
 	int getPrereqBonus() const;
 
 	bool isSeaTunnel() const;
-	bool isRailInfrastructure() const { return m_bRailInfrastructure; }
 
 	// Arrays
 	int getYieldChange(int i) const;
@@ -4074,7 +4061,6 @@ private:
 	int m_zobristValue;
 
 	bool m_bSeaTunnel;
-	bool m_bRailInfrastructure;
 
 	// Arrays
 	int* m_piYieldChange;

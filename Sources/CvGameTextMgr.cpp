@@ -14,7 +14,6 @@
 #include "FProfiler.h"
 #include "CvGameCoreUtils.h"
 #include "CvGameCoreDLL.h"
-#include "RailRoadRevolution.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -9675,12 +9674,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			szTempBuffer.Format(L"%.2f%c ", (float)iRouteCost / GC.getMOVE_DENOMINATOR(), gDLL->getSymbolID(MOVES_CHAR));
 
 			szString.append(gDLL->getText("TXT_KEY_PLOT_ROUTE_MOVEMENT_COST", szTempBuffer.GetCString(), eRoute.getDescription()));
-            if(RailRoadRevolution::enabled() && eRoute.isRailInfrastructure())
-            {
-                const RouteTypes road=pPlot->getRevealedRoadRouteType(eActiveTeam,true);
-                szString.append(NEWLINE);
-                szString.append(road==NO_ROUTE ? gDLL->getText(!pPlot->isVisible(eActiveTeam,false)&&!bDebug?"TXT_KEY_RRR_ROAD_UNKNOWN":"TXT_KEY_RRR_NO_ROAD") : gDLL->getText("TXT_KEY_RRR_UNDERLYING_ROAD",GC.getRouteInfo(road).getDescription()));
-            }
 		}
 
 		{
@@ -9981,7 +9974,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					{
 						eBestBuild = NO_BUILD;
 					}
-					else if (kBestBuild.getRoute() != NO_ROUTE && (pPlot->isWater() || kBestBuild.getRoute() == pPlot->getRouteTypeForBuild((RouteTypes)kBestBuild.getRoute())))
+					else if (kBestBuild.getRoute() != NO_ROUTE && (pPlot->isWater() || kBestBuild.getRoute() == pPlot->getRouteType()))
 					{
 						eBestBuild = NO_BUILD;
 					}
@@ -12933,7 +12926,7 @@ void CvGameTextMgr::parsePromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes
 	parsePromotionHelpInternal(szBuffer, ePromotion, pcNewline, true);
 }
 
-void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines, bool bCivilopediaBodyText)
+void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, const wchar_t* pcNewline, bool bAccrueLines)
 {
 	PROFILE_FUNC();
 
@@ -12944,11 +12937,6 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_COMBAT_HIDE_SEEK);
 
 	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
-	if (GC.getGame().isOption(GAMEOPTION_PROMOTIONS_NATIVE) && promo.getNativePrereqPromotion() != NO_PROMOTION)
-	{
-		szBuffer.append(pcNewline);
-		szBuffer.append(gDLL->getText("TXT_KEY_NATIVE_PROMOTION_PREREQUISITE", GC.getPromotionInfo(promo.getNativePrereqPromotion()).getTextKeyWide()));
-	}
 	const int iLinePriority = promo.getLinePriority();
 	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
 	const CvPromotionLineInfo* promoLine = ePromoLine != NO_PROMOTIONLINE ? &GC.getPromotionLineInfo(ePromoLine) : NULL;
@@ -15667,10 +15655,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_DEF_WARN"));
 	}
 
-	// Assigned stack promotions need only their concrete effects on hover.
-	// Keep the general explanation in both Civilopedia entry paths.
-	if (promo.getHelp()[0] != '\0'
-		&& (promo.getStackSupportKind() == 0 || bCivilopediaBodyText || GC.getIsInPedia()))
+	if (promo.getHelp()[0] != '\0')
 	{
 		szBuffer.append(pcNewline);
 		szBuffer.append(promo.getHelp());
@@ -20024,12 +20009,6 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			}
 			setListHelp(szBuffer, szTempBuffer, szTerrain, L", ", bFirst);
 			bFirst = false;
-		}
-
-		if (kUnit.isRailOnly())
-		{
-			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_RAIL_ONLY"));
 		}
 
 		//May only Traverse
@@ -28251,10 +28230,9 @@ void CvGameTextMgr::setPromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes e
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getPromotionInfo(ePromotion).getDescription());
 			szBuffer.append(szTempBuffer);
 		}
-		parsePromotionHelpInternal(szBuffer, ePromotion, NEWLINE, !GC.getIsInPedia(), bCivilopediaBodyText);
+		parsePromotionHelpInternal(szBuffer, ePromotion, NEWLINE, !GC.getIsInPedia());
         const CvPromotionInfo& aid = GC.getPromotionInfo(ePromotion);
-        if ((bCivilopediaBodyText || GC.getIsInPedia())
-            && aid.getStackSupportKind() == 1 && aid.getTechPrereq() != NO_TECH)
+        if (aid.getStackSupportKind() == 1 && aid.getTechPrereq() != NO_TECH)
         {
             szBuffer.append(NEWLINE);
             szBuffer.append(gDLL->getText("TXT_KEY_REQUIRES_LINK",

@@ -46,7 +46,7 @@ class PythonToolTip:
 		screen.hide("Tooltip")
 		self.bLockedTT = False
 
-def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox, maxWidth=None, maxHeight=None, returnGeometry=False):
+def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox):
 	bSetX = False
 	bSetY = False
 	if xPos == -1: bSetX = True
@@ -86,7 +86,6 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox, maxWidth=None, maxHei
 	aList = szTxt.split('\n')
 	aWidthList = []
 	dxMax = xRes/3
-	if maxWidth is not None: dxMax = min(dxMax, maxWidth)
 	dx = 0
 	for aLine in aList:
 		iWidth = CyIF.determineWidth(uFont + aLine)
@@ -176,7 +175,6 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox, maxWidth=None, maxHei
 			COLOR = evalColorCodes(aLine, COLOR)
 	# Find text height in pixels
 	dy = len(aList) * 22 + 16
-	if maxHeight is not None: dy = min(dy, maxHeight)
 	# Find best position.
 	if xPos > xRes / 2:
 		x = xPos - 32 - dx
@@ -208,7 +206,6 @@ def makeTooltip(screen, xPos, yPos, szTxt, uFont, listBox, maxWidth=None, maxHei
 	for i, aLine in enumerate(aList):
 		screen.appendTableRow(listBox)
 		screen.setTableText(listBox, 0, i, uFont + aLine, "", WidgetTypes.WIDGET_GENERAL, 0, 0, 1<<0)
-	if returnGeometry: return x, y, dx + 24, dy
 	return x, y
 
 

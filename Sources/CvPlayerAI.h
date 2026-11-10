@@ -23,7 +23,7 @@ class CvArmy;
  */
 struct MissionTargetInfo
 {
-	MissionTargetInfo() : iCount(0), iClosest(MAX_INT), iVolume(0) {}
+	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
 
 	int	iCount;		//	Num units targeting the mission target
 	int iClosest;	//	How close is the closest
@@ -314,7 +314,6 @@ public:
 	//int AI_PotentialDefenders(CvPlot* pPlot, bool bTestVisible = true) const;
 	int AI_totalMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_areaMissionAIs(const CvArea* pArea, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	void AI_invalidateMissionTargetCache(MissionAITypes eMissionAI) const;
 	int AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
@@ -649,17 +648,12 @@ protected:
 
 	static CvPlayerAI* m_aPlayers;
 
-	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same selection
-	// group keeps being the thing AI_unitUpdate() is dealing with across many consecutive engine
-	// ticks - whether that's because hasBusyUnit() is stuck true for it, or because it's picked by
-	// the !hasBusyUnit() AI group-priority loop and keeps "succeeding" there without ever actually
-	// going busy - something is stuck and not making progress on its own. Both call sites in
-	// AI_unitUpdate() share this single counter (rather than one each) deliberately: a group whose
-	// mission briefly flips it busy and then clears again almost immediately would otherwise
-	// ping-pong between two separate per-branch counters forever, never accumulating 500 in either
-	// one. Transient, not saved: resets naturally via group ID mismatch.
-	int m_iStuckGroupID;
-	int m_iStuckGroupTicks;
+	// Last-resort watchdog for CvGame::updateMoves()/AI_unitUpdate(): if the exact same
+	// selection group is still the (sole) reason hasBusyUnit() is true across many
+	// consecutive engine ticks, something is stuck and not making progress on its own -
+	// see AI_unitUpdate(). Transient, not saved: resets naturally via group ID mismatch.
+	int m_iStuckBusyGroupID;
+	int m_iStuckBusyGroupTicks;
 
 	// How many times the watchdog above has had to force-resolve a given unit (keyed by head
 	// unit ID), across however many separate stuck episodes. A unit that keeps tripping the
@@ -802,7 +796,6 @@ private:
 
 	typedef stdext::hash_map<const CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
 	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
-	const PlotMissionTargetMap& getMissionTargetMap(MissionAITypes eMissionAI) const;
 	mutable MissionPlotTargetMap m_missionTargetCache;
 };
 

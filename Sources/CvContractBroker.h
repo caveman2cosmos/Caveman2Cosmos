@@ -4,16 +4,9 @@
 #define CvContractBroker_h__
 
 #include "CvUnitSelectionCriteria.h"
-#include <set>
-#include <map>
-#include "DefenseNeedCache.h"
 
 class CvCity;
 class CvUnit;
-class CvPlot;
-class CvSelectionGroup;
-class ReadOnlyPathFailures;
-class ReadOnlyPathFailurePhase;
 
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING
@@ -43,9 +36,6 @@ typedef struct
 	int						iWorkRequestId;
 	int						iRequiredStrengthTimes100;
 	bool					bFulfilled;
-	bool                    bDefenseDemand;
-	int                     iDefenseCount;
-	mutable int             iDefenseAttemptEpoch;
 	CvUnitSelectionCriteria	criteria;
 } workRequest;
 
@@ -101,8 +91,6 @@ typedef struct
 class CvContractBroker : bst::noncopyable
 {
 public:
-	static bool isTransportCommitted(const CvUnit* unit);
-
 	CvContractBroker();
 	virtual ~CvContractBroker();
 
@@ -125,7 +113,7 @@ public:
 	//		eUnitFlags indicate the type(s) of unit sought
 	//		(iAtX,iAtY) is (roughly) where the work will be
 	//		pJoinUnit may be NULL but if not it is a request to join that unit's group
-	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, const CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, const CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT, bool bDefenseDemand = false, int iDefenseCount = 0);
+	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, const CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, const CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
 	//	Advertise a tender to build units
 	//		iMinPriority indicates the lowest priority request this tender is appropriate for
 	void	advertiseTender(const CvCity* pCity, int iMinPriority);
@@ -138,47 +126,18 @@ public:
 	//	advertising units and work, then search the resulting set for the work
 	//	of the requested unit
 	//	returns true if a contract is made along with the details of what to do
-	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly, bool* pDefenseDemand = NULL, int* pDefenseMaxTurns = NULL);
-	void noteDefenderAvailability(const CvUnit* unit);
-	bool defenseNeedsDefender(const CvPlot* plot);
-	bool canReleaseDefender(const CvUnit* unit) const;
-	int groupDefenseReinforcements(CvUnit* leader,const CvPlot* target,int maxTurns);
-	void noteDefenseGroupChanged(const CvSelectionGroup* group);
-	void cancelDefenseAssignment(int unitId);
+	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);
 	void	finalizeTenderContracts();
 	void postProcessUnitsLookingForWork();
-	int fulfillCityPropertyRequests(const CvPlot* plot, const std::vector<int>& remainingNeed);
 
 private:
-    // Stack-owned scratch phase, never serialized or retained between ticks.
-    ReadOnlyPathFailurePhase* m_pathFailurePhase;
-	void refreshDefenderRequests();
-	void refreshDefenseCommitments();
-	int defenseStationed(const CvPlot* target) const;
-	bool defenseCityDefended(CvCity* city,int extra,bool any) const;
-	bool defenseCityHappy(const CvCity* city,int extra) const;
-	int defensePostRequirement(const CvUnit* unit,const CvPlot* target) const;
-	bool defenseCacheLookup(const CvPlot* target,int kind,int extra,int any,int& value) const;
-	void defenseCacheRemember(const CvPlot* target,int kind,int extra,int any,int value) const;
-	mutable DefenseNeedCache m_defenseNeedCache;
-	DefenseCommitments m_defenseCommitments;
-	DefenseFortRetries m_defenseFortRetries;
-	advertisingUnit* findDemandDefender(const workRequest& request, bool thisPlotOnly, ReadOnlyPathFailures& failures);
-	int m_defenseDemandTurn, m_defenseAvailabilityEpoch;
-	std::set<int> m_pendingDefenders;
-	std::map<int,std::pair<int,int> > m_defenseReservations;
-	std::map<int,int> m_defenseRequirements;
-	// Scratch candidates for one read-only makeContract pass. Rebuild before
-	// the next call, since units may move or become available between calls.
-	bool m_defenseCandidatesReady;
-	std::vector<int> m_defenseCandidates;
 
 	void log(int level, char* format, ...);
 	void internalRemoveUnit(const int unitId);
 
 	const workRequest* findWorkRequest(int iWorkRequestId) const;
 	workRequest* findWorkRequestByUnitId(int userId);
-	advertisingUnit* findBestUnit(const workRequest& request, bool bThisPlotOnly, const std::vector<int>& candidates, ReadOnlyPathFailures& failedPaths);
+	advertisingUnit* findBestUnit(const workRequest& request, bool bThisPlotOnly);
 	CvUnit* findUnit(int iUnitId) const;
 	int					lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided) const;
 	UnitValueFlags		unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities) const;

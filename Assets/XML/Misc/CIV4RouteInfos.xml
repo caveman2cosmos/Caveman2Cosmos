@@ -60,7 +60,6 @@
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iMovement>40</iMovement>
 			<iFlatMovement>16</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<BonusType>BONUS_COAL</BonusType>
@@ -80,7 +79,6 @@
 			<iAdvancedStartCost>18</iAdvancedStartCost>
 			<iMovement>36</iMovement>
 			<iFlatMovement>12</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqOrBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
@@ -109,7 +107,6 @@
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iMovement>22</iMovement>
 			<iFlatMovement>11</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>BONUS_COPPER_WARES</BonusType>
 			<PrereqOrBonuses>
 				<BonusType>BONUS_PLASTIC</BonusType>
@@ -130,7 +127,6 @@
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iMovement>20</iMovement>
 			<iFlatMovement>8</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
 				<iYield>0</iYield>
@@ -152,7 +148,6 @@
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iMovement>15</iMovement>
 			<iFlatMovement>5</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>BONUS_LIQUID_METAL</BonusType>
 			<Yields>
 				<iYield>0</iYield>
@@ -169,7 +164,6 @@
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>15</iMovement>
 			<iFlatMovement>3</iFlatMovement>
-			<bRailInfrastructure>1</bRailInfrastructure>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>

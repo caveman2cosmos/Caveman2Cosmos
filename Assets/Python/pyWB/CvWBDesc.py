@@ -1464,17 +1464,10 @@ class CvPlotDesc:
 			f.write("\tBonusType=%s\n" % GC.getBonusInfo(plot.getBonusType(-1)).getType())
 		if plot.getImprovementType() != -1:
 			f.write("\tImprovementType=%s\n" % GC.getImprovementInfo(plot.getImprovementType()).getType())
-		for slot in xrange(plot.getNumAdditionalImprovements()):
-			f.write("\tAdditionalImprovementType=%s\n" % GC.getImprovementInfo(plot.getAdditionalImprovementType(slot)).getType())
 		if plot.getFeatureType() != -1:
 			f.write("\tFeatureType=%s, FeatureVariety=%d\n" %(GC.getFeatureInfo(plot.getFeatureType()).getType(), plot.getFeatureVariety()))
 		if plot.getRouteType() != -1:
 			f.write("\tRouteType=%s\n" % GC.getRouteInfo(plot.getRouteType()).getType())
-			if plot.getRailRouteType() != -1:
-				road = plot.getRoadRouteType()
-				roadName = 'NONE'
-				if road >= 0: roadName = GC.getRouteInfo(road).getType()
-				f.write("\tRoadRouteType=%s\n" % roadName)
 		if plot.getTerrainType() != -1:
 			f.write("\tTerrainType=%s\n" % GC.getTerrainInfo(plot.getTerrainType()).getType())
 		if plot.getPlotType() != PlotTypes.NO_PLOT:
@@ -1530,11 +1523,9 @@ class CvPlotDesc:
 			self.isStartingPlot = 0
 			self.bonusType = None
 			self.improvementType = None
-			self.additionalImprovementTypes = []
 			self.featureType = None
 			self.featureVariety = 0
 			self.routeType = None
-			self.roadRouteType = None
 			self.terrainType = None
 			self.plotType = PlotTypes.NO_PLOT
 			self.unitDescs = list()
@@ -1604,11 +1595,6 @@ class CvPlotDesc:
 					self.bonusType = v
 					continue
 
-				v = parser.findTokenValue(toks, "AdditionalImprovementType")
-				if v != -1:
-					self.additionalImprovementTypes.append(v)
-					continue
-
 				v = parser.findTokenValue(toks, "ImprovementType")
 				if v != -1:
 					self.improvementType = v
@@ -1622,10 +1608,6 @@ class CvPlotDesc:
 						self.featureVariety = int(v)
 					continue
 
-				v = parser.findTokenValue(toks, "RoadRouteType")
-				if v != -1:
-					self.roadRouteType = v
-					continue
 				v = parser.findTokenValue(toks, "RouteType")
 				if v != -1:
 					self.routeType = v
@@ -1711,17 +1693,7 @@ class CvPlotDesc:
 		if self.routeType:
 			iRoute = GC.getInfoTypeForString(self.routeType)
 			if iRoute > -1:
-				if self.roadRouteType is not None:
-					iRoad = -1
-					if self.roadRouteType != 'NONE': iRoad = GC.getInfoTypeForString(self.roadRouteType)
-					plot.setRouteLayers(iRoad, iRoute)
-				else:
-					plot.setRouteType(iRoute)
-
-		for typeName in self.additionalImprovementTypes:
-			typeID = GC.getInfoTypeForString(typeName)
-			if typeID >= 0:
-				plot.setAdditionalImprovementType(typeID)
+				plot.setRouteType(iRoute)
 
 		if self.szLandmark:
 			CyEngine().addLandmark(plot, "%s" %(self.szLandmark))

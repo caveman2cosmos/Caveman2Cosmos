@@ -4,7 +4,6 @@
 #include "CvArtFileMgr.h"
 #include "CvDefines.h"
 #include "CvImprovementInfo.h"
-#include "CvAdditionalImprovements.h"
 #include "CvInfoUtil.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
@@ -82,7 +81,6 @@ CvImprovementInfo::CvImprovementInfo() :
 	, m_bGlobal(false)
 	//,m_iHighestCost(0)
 	, m_iBonusChange(NO_BONUS)
-	, m_iSecondaryLayerBit(-1)
 {
 	CvInfoUtil(this).initDataMembers();
 }
@@ -544,7 +542,6 @@ bool CvImprovementInfo::isCategory(int i) const
 void CvImprovementInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
-		.add(m_bSecondaryLayer, L"bSecondaryLayer")
 		//.addEnum(m_iObsoleteTech, L"ObsoleteTech")
 		//.add(m_piBonusHealthChanges, L"BonusHealthChanges")
 	;
@@ -1099,7 +1096,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	{
 		for (int j = 0; j < NUM_YIELD_TYPES; j++)
 		{
-			if ((m_ppiRouteYieldChanges && m_ppiRouteYieldChanges[i] ? m_ppiRouteYieldChanges[i][j] : 0) == iDefault && (pClassInfo->m_ppiRouteYieldChanges && pClassInfo->m_ppiRouteYieldChanges[i] ? pClassInfo->m_ppiRouteYieldChanges[i][j] : 0) != iDefault)
+			if (getRouteYieldChanges(i, j) == iDefault && pClassInfo->getRouteYieldChanges(i, j) != iDefault)
 			{
 				if (NULL == m_ppiRouteYieldChanges)
 				{
@@ -1109,7 +1106,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 				{
 					CvXMLLoadUtility::InitList(&m_ppiRouteYieldChanges[i], NUM_YIELD_TYPES, iDefault);
 				}
-				m_ppiRouteYieldChanges[i][j] = (pClassInfo->m_ppiRouteYieldChanges && pClassInfo->m_ppiRouteYieldChanges[i] ? pClassInfo->m_ppiRouteYieldChanges[i][j] : 0);
+				m_ppiRouteYieldChanges[i][j] = pClassInfo->getRouteYieldChanges(i, j);
 			}
 		}
 	}
@@ -1172,14 +1169,6 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 void CvImprovementInfo::doPostLoadCaching(uint32_t iThis)
 {
 	PROFILE_EXTRA_FUNC();
-	m_iSecondaryLayerBit = -1;
-	if (isSecondaryLayer())
-	{
-		int bit = 0;
-		for (uint32_t i = 0; i < iThis; ++i) if (GC.getImprovementInfo((ImprovementTypes)i).isSecondaryLayer()) ++bit;
-		m_iSecondaryLayerBit = bit;
-		CvAdditionalImprovements::registerType(bit, (ImprovementTypes)iThis);
-	}
 	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
 	{
 		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == iThis)

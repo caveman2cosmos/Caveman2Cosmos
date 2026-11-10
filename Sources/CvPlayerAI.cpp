@@ -1,9 +1,6 @@
 // playerAI.cpp
 
 #include "CvGameCoreDLL.h"
-#include "TransportRequests.h"
-#include "DefenseNeedEvents.h"
-#include "AIPerf.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
@@ -25,7 +22,6 @@
 #include "CvPlot.h"
 #include "CvPathGenerator.h"
 #include "CvPlayerAI.h"
-#include "UnitAIRoleFilter.h"
 #include "CvPopupInfo.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
@@ -38,7 +34,6 @@
 #include "BetterBTSAI.h"
 #include "FAStarNode.h"
 #include "CvArmy.h"
-#include "ArmyRecruitment.h"
 
 // Plot danger cache
 //#define DANGER_RANGE						(4)
@@ -219,8 +214,8 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	PROFILE_EXTRA_FUNC();
 	AI_uninit();
 
-	m_iStuckGroupID = -1;
-	m_iStuckGroupTicks = 0;
+	m_iStuckBusyGroupID = -1;
+	m_iStuckBusyGroupTicks = 0;
 	m_stuckUnitRecoveryCounts.clear();
 
 	m_iPeaceWeight = 0;
@@ -552,7 +547,6 @@ void CvPlayerAI::AI_doTurnPost()
 
 void CvPlayerAI::AI_doTurnUnitsPre()
 {
-	AI_PERF_CONTEXT(getID(),-1);
 	PROFILE_FUNC();
 
 	//	Clear cached defensive status info on each city
@@ -639,7 +633,6 @@ namespace {
 
 void CvPlayerAI::AI_doTurnUnitsPost()
 {
-	AI_PERF_CONTEXT(getID(),-1);
 	PROFILE_FUNC();
 
 	if (!isHumanPlayer() || isOption(PLAYEROPTION_AUTO_PROMOTION))
@@ -789,7 +782,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				{
 					if (unitPlot->isCity())
 					{
-						if (unitPlot->isBestDefender(unitX)
+						if (unitPlot->getBestDefender(getID()) == unitX
 						// try to upgrade units which are in danger... but don't get obsessed
 						|| pLastUpgradePlot != unitPlot && AI_getAnyPlotDanger(unitPlot, 1, false))
 						{
@@ -898,7 +891,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		));
 	}
 	AI_doSplit();
-    CvUnitAI::AI_dispatchCityPropertyRequests(*this);
 }
 
 
@@ -1214,7 +1206,6 @@ void CvPlayerAI::AI_doPeace()
 
 void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 {
-	AI_PERF_CONTEXT(getID(),-1);
 	PROFILE_FUNC();
 
 	const bool bSetup = getNumCities() == 0;
@@ -1404,10 +1395,7 @@ int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 
 void CvPlayerAI::AI_unitUpdate()
 {
-	AI_PERF_CONTEXT(getID(),-1);
-	AI_PERF_SCOPE(UNIT_UPDATE);
 	PROFILE_FUNC();
-	TransportRequests::prepare(getID());
 
 	//	Do delayed death here so that empty groups are removed now
 	foreach_(CvSelectionGroup * pLoopSelectionGroup, groups())
@@ -1541,23 +1529,19 @@ void CvPlayerAI::AI_unitUpdate()
 				logAiEvaluations(4,"AI_unitUpdate : Setting the GroupList for Player %d", getID());
 			});
 
+			for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 			{
-				AI_PERF_SCOPE(GROUP_PRIORITIES);
-				for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
-				{
-					CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
-					FAssert(pLoopSelectionGroup != NULL);
-					AI_PERF_COUNT(GROUP_PRIORITY_EVALUATIONS, 1);
+				CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pCurrUnitNode->m_data);
+				FAssert(pLoopSelectionGroup != NULL);
 
-					int iPriority = AI_movementPriority(pLoopSelectionGroup);
-					groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
-					LOG_PLAYER_BLOCK(4, {
-						logAiEvaluations(4,"item : %d; %d", iPriority, pCurrUnitNode->m_data);
-					});
-				}
-
-				algo::sort(groupList);
+				int iPriority = AI_movementPriority(pLoopSelectionGroup);
+				groupList.push_back(std::make_pair(iPriority, pCurrUnitNode->m_data));
+				LOG_PLAYER_BLOCK(4, {
+					logAiEvaluations(4,"item : %d; %d", iPriority, pCurrUnitNode->m_data);
+				});
 			}
+
+			algo::sort(groupList);
 
 			LOG_PLAYER_BLOCK(4, {
 				logAiEvaluations(4,"AI_unitUpdate : List sorted, Applying AI_update for each item for Player %d", getID());
@@ -1570,63 +1554,6 @@ void CvPlayerAI::AI_unitUpdate()
 				if (pLoopSelectionGroup && pLoopSelectionGroup->AI_update())
 				{
 					FAssert(pLoopSelectionGroup && pLoopSelectionGroup->getNumUnits() > 0);
-
-					// Companion to the hasBusyUnit() watchdog below: that one can only see a group
-					// that's stuck busy, but a group whose AI_update() keeps "doing something" (and
-					// so returning true, stopping this loop for the tick) without that ever actually
-					// making it busy would never trip it, since hasBusyUnit() never becomes true. If
-					// the exact same group keeps winning this pick every tick, it's stuck the same
-					// way, just without the busy flag - force it to finish for the same reason.
-					if (groupList[i].second == m_iStuckGroupID)
-					{
-						if (++m_iStuckGroupTicks > 100)
-						{
-							CvUnit* pHeadUnit = pLoopSelectionGroup->getHeadUnit();
-							const int iRecoveryCount = (pHeadUnit != NULL)
-								? ++m_stuckUnitRecoveryCounts[pHeadUnit->getID()]
-								: 0;
-							const bool bScrap = (pHeadUnit != NULL) && (iRecoveryCount >= 3);
-
-							char szOut[1024];
-							if (pHeadUnit != NULL)
-							{
-								CvWString szTempString;
-								getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-								sprintf(szOut, "Player %d (%S) group %d stuck re-deciding without going busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
-									getID(), getName(), pLoopSelectionGroup->getID(), m_iStuckGroupTicks, iRecoveryCount,
-									bScrap ? "scrapping the unit" : "forcing it to finish",
-									pHeadUnit->getName().GetCString(), pLoopSelectionGroup->getNumUnits(),
-									pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
-							}
-							else
-							{
-								sprintf(szOut, "Player %d (%S) group %d stuck re-deciding without going busy for %d ticks with no head unit - forcing it to finish\n",
-									getID(), getName(), pLoopSelectionGroup->getID(), m_iStuckGroupTicks);
-							}
-							gDLL->messageControlLog(szOut);
-							FErrorMsg(szOut);
-
-							if (bScrap)
-							{
-								m_stuckUnitRecoveryCounts.erase(pHeadUnit->getID());
-								pHeadUnit->scrap(); // may be a delayed death - group/remaining units still need releasing below
-							}
-
-							pLoopSelectionGroup->clearMissionQueue();
-							foreach_(CvUnit* pUnit, pLoopSelectionGroup->units())
-							{
-								pUnit->finishMoves();
-							}
-
-							m_iStuckGroupID = -1;
-							m_iStuckGroupTicks = 0;
-						}
-					}
-					else
-					{
-						m_iStuckGroupID = groupList[i].second;
-						m_iStuckGroupTicks = 1;
-					}
 					break;
 				}
 			}
@@ -1653,9 +1580,9 @@ void CvPlayerAI::AI_unitUpdate()
 			break;
 		}
 
-		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckGroupID)
+		if (pBusyGroup != NULL && pBusyGroup->getID() == m_iStuckBusyGroupID)
 		{
-			if (++m_iStuckGroupTicks > 100)
+			if (++m_iStuckBusyGroupTicks > 500)
 			{
 				CvUnit* pHeadUnit = pBusyGroup->getHeadUnit();
 
@@ -1674,7 +1601,7 @@ void CvPlayerAI::AI_unitUpdate()
 					CvWString szTempString;
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks (recovery #%d for this unit) - %s: %S [%d units][%d, %d] (%S)\n",
-						getID(), getName(), pBusyGroup->getID(), m_iStuckGroupTicks, iRecoveryCount,
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks, iRecoveryCount,
 						bScrap ? "scrapping the unit" : "forcing it to finish",
 						pHeadUnit->getName().GetCString(), pBusyGroup->getNumUnits(),
 						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
@@ -1682,7 +1609,7 @@ void CvPlayerAI::AI_unitUpdate()
 				else
 				{
 					sprintf(szOut, "Player %d (%S) group %d stuck busy for %d ticks with no head unit - forcing it to finish\n",
-						getID(), getName(), pBusyGroup->getID(), m_iStuckGroupTicks);
+						getID(), getName(), pBusyGroup->getID(), m_iStuckBusyGroupTicks);
 				}
 				gDLL->messageControlLog(szOut);
 				FErrorMsg(szOut);
@@ -1699,14 +1626,14 @@ void CvPlayerAI::AI_unitUpdate()
 					pUnit->finishMoves();
 				}
 
-				m_iStuckGroupID = -1;
-				m_iStuckGroupTicks = 0;
+				m_iStuckBusyGroupID = -1;
+				m_iStuckBusyGroupTicks = 0;
 			}
 		}
 		else
 		{
-			m_iStuckGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
-			m_iStuckGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
+			m_iStuckBusyGroupID = (pBusyGroup != NULL) ? pBusyGroup->getID() : -1;
+			m_iStuckBusyGroupTicks = (pBusyGroup != NULL) ? 1 : 0;
 		}
 	}
 }
@@ -3602,7 +3529,7 @@ CvCity* CvPlayerAI::AI_findTargetCity(const CvArea* pArea) const
 			{
 				foreach_(CvCity * pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					if (pLoopCity->area() == pArea && pLoopCity->plot()->isRevealed(getTeam(), false))
+					if (pLoopCity->area() == pArea)
 					{
 						const int iValue = AI_targetCityValue(pLoopCity, true);
 
@@ -3674,10 +3601,9 @@ bool CvPlayerAI::AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool b
 // is either known to be safe for the player who is currently moving, or for whether the plot is
 // known to be a plot bordering an enemy of this team and therefore unsafe.
 //
-// Boolean safe/danger answers are scoped to one read-only path query of the active
-// player, outside simultaneous turns. A new token prevents stale answers after
-// any gameplay changes between queries, without a map-wide invalidation walk.
-// Numeric danger has different semantics and must not share these answers.
+// The safe plot cache is only for the active moving player and is only set if this is not a
+// multiplayer game with simultaneous turns.  The safety cache for all plots is reset when the active
+// player changes or a new game is loaded.
 //
 // The border cache is done by team and works for all game types.  The border cache is reset for all plots
 // when war or peace are declared, and reset over a limited range whenever a ownership over a plot changes.
@@ -3734,9 +3660,7 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 
 	if (iRange == -1) iRange = DANGER_RANGE;
 
-	const bool bCache = isTurnActive() && PlotDangerCacheScope::matches(getID())
-		&& !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS);
-	if (bCache)
+	if (isTurnActive())
 	{
 		PROFILE("CvPlayerAI::AI_getAnyPlotDanger.ActiveTurn");
 
@@ -3844,12 +3768,10 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 					}
 				}
 			}
-			// One visible attacker is enough for this boolean query.
-			if (bResult) break;
 		}
 	}
 
-	if (bCache)
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		if (bResult)
 		{
@@ -3858,7 +3780,7 @@ bool CvPlayerAI::AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange, bool bTest
 				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
 			}
 		}
-		else if (iRange > pPlot->getActivePlayerSafeRangeCache(bTestMoves))
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
 		{
 			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
 		}
@@ -3875,13 +3797,10 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 	int iCount = 0;
 	int iBorderDanger = 0;
 
-#ifdef _DEBUG
-	// A numeric-cache miss is a hot path; format diagnostic text only in debug builds.
 	OutputDebugString(CvString::format("AI_getPlotDanger for (%d,%d) at range %d (bTestMoves=%d)\n",
 		pPlot->getX(), pPlot->getY(),
 		iRange,
 		bTestMoves).c_str());
-#endif
 
 	foreach_(const CvPlot * plotX, pPlot->rect(iRange, iRange))
 	{
@@ -3923,8 +3842,20 @@ int CvPlayerAI::AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool b
 		iCount += (1 + iBorderDanger) / 2;
 	}
 
-	// The numeric result can be negative (friendly defenders). It neither reads
-	// nor populates the boolean safety cache.
+	if (isTurnActive() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
+	{
+		if (iCount > 0)
+		{
+			if (iRange <= DANGER_RANGE)
+			{
+				pPlot->setActivePlayerHasDangerCache(true, bTestMoves);
+			}
+		}
+		else if (iRange < pPlot->getActivePlayerSafeRangeCache(bTestMoves))
+		{
+			pPlot->setActivePlayerSafeRangeCache(iRange, bTestMoves);
+		}
+	}
 	return iCount;
 }
 
@@ -3941,6 +3872,11 @@ int CvPlayerAI::AI_getPlotDanger(const CvPlot* pPlot, int iRange, bool bTestMove
 	if (iRange == -1)
 	{
 		iRange = DANGER_RANGE;
+	}
+
+	if (isTurnActive() && iRange <= pPlot->getActivePlayerSafeRangeCache(bTestMoves))
+	{
+		return 0;
 	}
 
 #ifdef PLOT_DANGER_CACHING
@@ -10658,12 +10594,6 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 	}
 
 	int iGeneralPropertyValue = AI_unitPropertyValue(eUnit);
-	// Preserve property expression evaluation (including possible RNG/Python)
-	// before omitting validation of a role the XML cannot assign to this unit.
-	if (!kUnitInfo.getUnitAIType(eUnitAI) && unitAIRequiresXMLAssignment(eUnitAI))
-	{
-		return 0;
-	}
 	bool bisNegativePropertyUnit = (iGeneralPropertyValue < 0);
 	bool bisPositivePropertyUnit = (iGeneralPropertyValue > 0);
 	bool bUndefinedValid = false, bValid = false;
@@ -13017,7 +12947,7 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITy
 			{
 				int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pMissionPlot->getX(), pMissionPlot->getY());
 
-				if (iRange == 0 ? pMissionPlot == pPlot : iDistance <= iRange)
+				if (iDistance <= iRange)
 				{
 					iCount += pLoopSelectionGroup->getNumUnits();
 
@@ -13060,7 +12990,7 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot
 			{
 				const int iDistance = stepDistance(pPlot->getX(), pPlot->getY(), pMissionPlot->getX(), pMissionPlot->getY());
 
-				if (iRange == 0 ? pMissionPlot == pPlot : iDistance <= iRange)
+				if (iDistance <= iRange)
 				{
 					iCount += pLoopSelectionGroup->getNumUnitCargoVolumeTotal();
 
@@ -13081,30 +13011,6 @@ int CvPlayerAI::AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot
 	return iCount;
 }
 
-void CvPlayerAI::AI_invalidateMissionTargetCache(MissionAITypes eMissionAI) const
-{
- m_missionTargetCache.erase(eMissionAI);
-}
-
-const CvPlayerAI::PlotMissionTargetMap& CvPlayerAI::getMissionTargetMap(MissionAITypes eMissionAI) const
-{
- MissionPlotTargetMap::iterator found=m_missionTargetCache.find(eMissionAI);
- if(found!=m_missionTargetCache.end())return found->second;
- PlotMissionTargetMap& targets=m_missionTargetCache[eMissionAI];
- // Both public query forms share this map. Populate both quantities in one
- // pass, regardless of whether the first caller asks for units or volume.
- foreach_(const CvSelectionGroup* group,groups())
- {
-  if(group->AI_getMissionAIType()!=eMissionAI)continue;
-  const CvPlot* target=group->AI_getMissionAIPlot();if(target==NULL)continue;
-  MissionTargetInfo& info=targets[target];
-  info.iCount+=group->getNumUnits();
-  info.iVolume+=group->getNumUnitCargoVolumeTotal();
-  info.iClosest=std::min(info.iClosest,stepDistance(group->getX(),group->getY(),target->getX(),target->getY()));
- }
- return targets;
-}
-
 int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup, int iRange, int* piClosest) const
 {
 	PROFILE_FUNC();
@@ -13115,36 +13021,74 @@ int CvPlayerAI::AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, Missio
 		*piClosest = MAX_INT;
 	}
 
-	// A group can move without changing its mission target. Recompute requested
-	// nearest distances from live groups; reuse aggregates for counts/volume only.
-	if (eMissionAI != NO_MISSIONAI && iRange >= 0 && piClosest == NULL)
+	//	Only cache 0-range, specific mission AI results
+	MissionPlotTargetMap::const_iterator foundMissionPlotMapItr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
+
+	if (foundMissionPlotMapItr == m_missionTargetCache.end())
 	{
-		const PlotMissionTargetMap& targets = getMissionTargetMap(eMissionAI);
-		if (iRange == 0)
+		if (iRange == 0 && eMissionAI != NO_MISSIONAI)
 		{
-			PlotMissionTargetMap::const_iterator found = targets.find(pPlot);
-			if (found != targets.end())
+			PlotMissionTargetMap& plotMissionMap = m_missionTargetCache[eMissionAI];
+
+			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
+			foreach_(const CvSelectionGroup * group, groups())
 			{
-				iCount = found->second.iVolume;
-				if (piClosest != NULL) *piClosest = found->second.iClosest;
+				const MissionAITypes eGroupMissionAI = group->AI_getMissionAIType();
+				if (eGroupMissionAI != eMissionAI)
+					continue;
+
+				const CvPlot* pMissionPlot = group->AI_getMissionAIPlot();
+				if (pMissionPlot == NULL)
+					continue;
+
+				const int iDistance = stepDistance(group->getX(), group->getY(), pMissionPlot->getX(), pMissionPlot->getY());
+				{
+					// Update cache
+					MissionTargetInfo& info = plotMissionMap[pMissionPlot];
+					info.iVolume += group->getNumUnitCargoVolumeTotal();
+					info.iClosest = std::min(info.iClosest, iDistance);
+				}
+
+				if (pMissionPlot == pPlot)
+				{
+					iCount += group->getNumUnitCargoVolumeTotal();
+
+					if (piClosest != NULL)
+					{
+						*piClosest = std::min(*piClosest, iDistance);
+					}
+				}
 			}
 		}
 		else
 		{
-			for (PlotMissionTargetMap::const_iterator it = targets.begin(); it != targets.end(); ++it)
-			{
-				const CvPlot* target = it->first;
-				if (stepDistance(pPlot->getX(), pPlot->getY(), target->getX(), target->getY()) <= iRange)
-					iCount += it->second.iVolume;
-			}
+			iCount = AI_plotTargetMissionAIsInternalinCargoVolume(pPlot, eMissionAI, iRange, piClosest);
 		}
 	}
- else iCount=AI_plotTargetMissionAIsInternalinCargoVolume(pPlot,eMissionAI,iRange,piClosest);
+	else
+	{
+		const PlotMissionTargetMap& plotMissionTargetMap = foundMissionPlotMapItr->second;
+		PlotMissionTargetMap::const_iterator foundPlotInfoItr = plotMissionTargetMap.find(pPlot);
 
-	const CvPlot* skippedTarget=pSkipSelectionGroup ? pSkipSelectionGroup->AI_getMissionAIPlot() : NULL;
+		if (foundPlotInfoItr != plotMissionTargetMap.end())
+		{
+			const MissionTargetInfo& info = foundPlotInfoItr->second;
+
+			iCount = info.iVolume;
+			if (piClosest != NULL)
+			{
+				*piClosest = info.iClosest;
+			}
+		}
+		else
+		{
+			iCount = 0;
+		}
+	}
+
 	if (pSkipSelectionGroup != NULL &&
 		 (pSkipSelectionGroup->AI_getMissionAIType() == eMissionAI || eMissionAI == NO_MISSIONAI) &&
-		 skippedTarget != NULL && (iRange == 0 ? pPlot == skippedTarget : iRange > 0 && stepDistance(pPlot->getX(),pPlot->getY(),skippedTarget->getX(),skippedTarget->getY()) <= iRange))
+		 pPlot == pSkipSelectionGroup->AI_getMissionAIPlot())
 	{
 		iCount -= pSkipSelectionGroup->getNumUnitCargoVolumeTotal();
 	}
@@ -13162,36 +13106,83 @@ int CvPlayerAI::AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMis
 		*piClosest = MAX_INT;
 	}
 
-	// A group can move without changing its mission target. Recompute requested
-	// nearest distances from live groups; reuse aggregates for counts/volume only.
-	if (eMissionAI != NO_MISSIONAI && iRange >= 0 && piClosest == NULL)
+	//	Only cache 0-range, specific mission AI results
+	MissionPlotTargetMap::const_iterator itr = ((iRange == 0 && eMissionAI != NO_MISSIONAI) ? m_missionTargetCache.find(eMissionAI) : m_missionTargetCache.end());
+
+	if (itr == m_missionTargetCache.end())
 	{
-		const PlotMissionTargetMap& targets = getMissionTargetMap(eMissionAI);
-		if (iRange == 0)
+		if (iRange == 0 && eMissionAI != NO_MISSIONAI)
 		{
-			PlotMissionTargetMap::const_iterator found = targets.find(pPlot);
-			if (found != targets.end())
+			PlotMissionTargetMap& plotMissionTargetMap = m_missionTargetCache[eMissionAI];
+
+			//	Since we have to walk all the groups now anyway populate the full cache map for this missionAI
+			foreach_(const CvSelectionGroup * pLoopSelectionGroup, groups())
 			{
-				iCount = found->second.iCount;
-				if (piClosest != NULL) *piClosest = found->second.iClosest;
+				const MissionAITypes eGroupMissionAI = pLoopSelectionGroup->AI_getMissionAIType();
+
+				if (eGroupMissionAI != eMissionAI)
+					continue;
+				const CvPlot* pMissionPlot = pLoopSelectionGroup->AI_getMissionAIPlot();
+				if (pMissionPlot == NULL)
+					continue;
+
+				const int iDistance = stepDistance(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), pMissionPlot->getX(), pMissionPlot->getY());
+				PlotMissionTargetMap::iterator plotMissionTargetItr = plotMissionTargetMap.find(pMissionPlot);
+
+				if (plotMissionTargetItr != plotMissionTargetMap.end())
+				{
+					MissionTargetInfo& info = plotMissionTargetItr->second;
+					info.iCount += pLoopSelectionGroup->getNumUnits();
+					info.iClosest = std::min(info.iClosest, iDistance);
+				}
+				else
+				{
+					MissionTargetInfo info;
+
+					info.iCount = 0;
+					info.iClosest = iDistance;
+					info.iCount = pLoopSelectionGroup->getNumUnits();
+
+					plotMissionTargetMap.insert(std::make_pair(pMissionPlot, info));
+				}
+
+				if (pMissionPlot == pPlot)
+				{
+					iCount += pLoopSelectionGroup->getNumUnits();
+
+					if (piClosest != NULL)
+					{
+						*piClosest = std::min(*piClosest, iDistance);
+					}
+				}
 			}
 		}
 		else
 		{
-			for (PlotMissionTargetMap::const_iterator it = targets.begin(); it != targets.end(); ++it)
-			{
-				const CvPlot* target = it->first;
-				if (stepDistance(pPlot->getX(), pPlot->getY(), target->getX(), target->getY()) <= iRange)
-					iCount += it->second.iCount;
-			}
+			iCount = AI_plotTargetMissionAIsInternal(pPlot, eMissionAI, iRange, piClosest);
 		}
 	}
- else iCount=AI_plotTargetMissionAIsInternal(pPlot,eMissionAI,iRange,piClosest);
+	else
+	{
+		PlotMissionTargetMap::const_iterator plotMissionTargetItr = itr->second.find(pPlot);
 
-	const CvPlot* skippedTarget=pSkipSelectionGroup ? pSkipSelectionGroup->AI_getMissionAIPlot() : NULL;
+		if (plotMissionTargetItr != itr->second.end())
+		{
+			iCount = plotMissionTargetItr->second.iCount;
+			if (piClosest != NULL)
+			{
+				*piClosest = plotMissionTargetItr->second.iClosest;
+			}
+		}
+		else
+		{
+			iCount = 0;
+		}
+	}
+
 	if (pSkipSelectionGroup != NULL &&
 		 (pSkipSelectionGroup->AI_getMissionAIType() == eMissionAI || eMissionAI == NO_MISSIONAI) &&
-		 skippedTarget != NULL && (iRange == 0 ? pPlot == skippedTarget : iRange > 0 && stepDistance(pPlot->getX(),pPlot->getY(),skippedTarget->getX(),skippedTarget->getY()) <= iRange))
+		 pPlot == pSkipSelectionGroup->AI_getMissionAIPlot())
 	{
 		iCount -= pSkipSelectionGroup->getNumUnits();
 	}
@@ -13277,7 +13268,6 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 
 int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns, bool bCargo) const
 {
-	AI_PERF_SCOPE(UNIT_TARGET_QUERY);
 	PROFILE_FUNC();
 
 	int iCount = 0;
@@ -13288,27 +13278,6 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 		{
 			continue;
 		}
-#ifndef C2C_AI_PERF_BASELINE
-		// A path cannot contribute to the count if none of the requested missions match.
-		bool bMissionMatches = false;
-		for (int iMissionAIIndex = 0; iMissionAIIndex < iMissionAICount; ++iMissionAIIndex)
-		{
-			if (aeMissionAI[iMissionAIIndex] == NO_MISSIONAI
-			|| aeMissionAI[iMissionAIIndex] == group->AI_getMissionAIType())
-			{
-				bMissionMatches = true;
-				break;
-			}
-		}
-		if (!bMissionMatches)
-		{
-#ifdef C2C_AI_PERF_ENABLE
-			if (iMaxPathTurns >= 0 && pUnit->plot() != NULL && group->plot() != NULL)
-				AI_PERF_COUNT(TARGET_PATHS_PRUNED, 1);
-#endif
-			continue;
-		}
-#endif
 		int iPathTurns = MAX_INT;
 
 		if (iMaxPathTurns >= 0 && pUnit->plot() != NULL && group->plot() != NULL)
@@ -16865,7 +16834,6 @@ int CvPlayerAI::AI_getNumAIUnits(UnitAITypes eIndex) const
 
 void CvPlayerAI::AI_changeNumAIUnits(UnitAITypes eIndex, int iChange)
 {
-	if (iChange != 0) invalidateUnitRoleCandidates();
 	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eIndex);
 	m_aiNumAIUnits[eIndex] += iChange;
 	FASSERT_NOT_NEGATIVE(AI_getNumAIUnits(eIndex));
@@ -22995,7 +22963,6 @@ bool CvPlayerAI::AI_isDoStrategy(int iStrategy) const
 
 void CvPlayerAI::AI_forceUpdateStrategies()
 {
-    DefenseNeedEvents::changed();
 	//this forces a recache.
 	m_iStrategyHashCacheTurn = -1;
 }
@@ -27673,7 +27640,6 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	int iExtra;
 	int iValue = 0;
 	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
-	const unsigned int effectMask = kPromotion.getAIValueEffectMask();
 	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 	const CvPlot* pPlot = pUnit ? pUnit->plot() : NULL;
 	const int iMoves = pUnit ? pUnit->maxMoves() : kUnit.getMoves();
@@ -29900,7 +29866,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	for (int iI = 0; (effectMask & PromotionValueEffectCache::FLANKING) && iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		iTemp = kPromotion.getFlankingStrengthbyUnitCombatTypeChange(iI);
 		if (iTemp != 0)
@@ -31355,7 +31321,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	int iPass = 0;
 	int iTempValue = 0;
-	for (int iI = 0; (effectMask & PromotionValueEffectCache::BUILD) && iI < GC.getNumBuildInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		//Team Project (4)
 		//WorkRateMod
@@ -31399,7 +31365,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		const bool bTerrainDamage = GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE);
 		int iPass = 0;
 		int iTempValue = 0;
-		for (int iI = 0; (effectMask & PromotionValueEffectCache::TERRAIN) && iI < GC.getNumTerrainInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumTerrainInfos(); iI++)
 		{
 			if (kPromotion.getTerrainAttackPercent(iI)
 			||  kPromotion.getTerrainDefensePercent(iI)
@@ -31597,7 +31563,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		int iPass = 0;
 		int iTempValue = 0;
-		for (int iI = 0; (effectMask & PromotionValueEffectCache::FEATURE) && iI < GC.getNumFeatureInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
 			if (kPromotion.getFeatureAttackPercent(iI)
 			||  kPromotion.getFeatureDefensePercent(iI)
@@ -31757,13 +31723,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 
 	if ((pUnit && pUnit->canFight() || !pUnit && kUnit.getCombat() > 0))
 	{
-		// unitCombatModifier may select and remember a commander/commodore.
-		// Keep that first read even when this promotion has no combat modifier.
-		if (pUnit && !(effectMask & PromotionValueEffectCache::UNIT_COMBAT) && GC.getNumUnitCombatInfos() > 0)
-		{
-			(void)pUnit->unitCombatModifier((UnitCombatTypes)0);
-		}
-		for (int iI = 0; (effectMask & PromotionValueEffectCache::UNIT_COMBAT) && iI < GC.getNumUnitCombatInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 		{
 			if (pUnit ? pUnit->unitCombatModifier((UnitCombatTypes)iI) >= 0 : kUnit.getUnitCombatModifier(iI) >= 0)
 			{
@@ -36063,17 +36023,6 @@ void CvPlayerAI::AI_formArmies()
 		}
 	}
 
-	// Recycle disbanded/ineligible armies before applying the three-army cap.
-	// Collect IDs first: removing a trash-array entry invalidates its iterator.
-	std::vector<int> obsoleteArmies;
-	for (FFreeListTrashArray<CvArmy>::iterator army = m_armies.begin(); army != m_armies.end(); ++army)
-	{
-		if (army->getMission() == ARMY_MISSION_ATTACK_CITY
-			&& !ArmyRecruitment::eligible(army->getLeader())) obsoleteArmies.push_back(army->getID());
-	}
-	for (size_t army = 0; army < obsoleteArmies.size(); ++army) deleteArmy(obsoleteArmies[army]);
-	// End recycling; individual unit AI remains responsible for released groups.
-
 	if (GET_TEAM(getTeam()).isAtWar() && !isNPC())
 	{
 		// Keep forming armies until the maximum is reached
@@ -36099,7 +36048,7 @@ void CvPlayerAI::AI_formArmies()
 				}
 
 
-				if (!ArmyRecruitment::eligible(pGroup) || pGroup->getArmyID() != -1) // already assigned or not an assault group
+				if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->getArmyID() != -1) // already part of an army
 					continue;
 
 
@@ -36189,7 +36138,7 @@ void CvPlayerAI::AI_formArmies()
 				if (pGroup == NULL || pGroup == pBestLeader || pGroup->getHeadUnit() == NULL)
 					continue;
 
-				if (!ArmyRecruitment::eligible(pGroup) || pGroup->getArmyID() != -1) // already assigned or not an assault group
+				if (pGroup->getDomainType() != DOMAIN_LAND || pGroup->getArmyID() != -1) // already part of an army
 					continue;
 
 				if (((pGroup->AI_getMissionAIType() == MISSIONAI_ASSAULT || pGroup->getHeadUnit()->AI_getUnitAIType() == UNITAI_ATTACK_CITY) &&

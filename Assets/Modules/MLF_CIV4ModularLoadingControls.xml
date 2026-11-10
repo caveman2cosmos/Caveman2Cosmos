@@ -41,14 +41,6 @@
 					<Directory>NomadDemo</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module> <!-- Native origin promotions and city effects -->
-					<Directory>NativePromotions</Directory>
-					<bLoad>1</bLoad>
-				</Module>
-				<Module> <!-- National military doctrine schools -->
-					<Directory>DoctrinePromotions</Directory>
-					<bLoad>1</bLoad>
-				</Module>
 				<Module> <!-- This module contains unfinished/early stage work, and things meant to be templates -->
 					<Directory>zWIP</Directory>
 					<bLoad>0</bLoad>

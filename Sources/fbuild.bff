@@ -146,35 +146,6 @@ Settings
     .ConfigName     = 'Release'
 ]
 
-// Matching instrumentation, compiler settings and assets for AI comparisons.
-// Baseline disables only the four optimizations introduced with AIPerf.
-.ConfigAIPerfBaseline =
-[
-    Using(.ConfigNonDebugCommon)
-    .ConfigName = 'AIPerfBaseline'
-    .CLOptions + ' /DC2C_AI_PERF_ENABLE /DC2C_AI_PERF_BASELINE'
-]
-.ConfigAIPerfOptimized =
-[
-    Using(.ConfigNonDebugCommon)
-    .ConfigName = 'AIPerfOptimized'
-    .CLOptions + ' /DC2C_AI_PERF_ENABLE'
-]
-
-// Isolates AI_safety work while keeping earlier performance changes enabled.
-.ConfigAISafetyBaseline =
-[
-    Using(.ConfigNonDebugCommon)
-    .ConfigName = 'AISafetyBaseline'
-    .CLOptions + ' /DC2C_AI_PERF_ENABLE /DC2C_AI_SAFETY_BASELINE'
-]
-.ConfigAISafetyOptimized =
-[
-    Using(.ConfigNonDebugCommon)
-    .ConfigName = 'AISafetyOptimized'
-    .CLOptions + ' /DC2C_AI_PERF_ENABLE'
-]
-
 .ConfigAssert = 
 [
     Using(.ConfigNonDebugCommon)
@@ -220,7 +191,7 @@ Settings
 ]
 
 .Configs = { .ConfigDebug, .ConfigRelease, .ConfigAssert, .ConfigProfile, .ConfigProfileExtra, .ConfigTesting, 
-	.ConfigFinalRelease, .ConfigAIPerfBaseline, .ConfigAIPerfOptimized, .ConfigAISafetyBaseline, .ConfigAISafetyOptimized }
+	.ConfigFinalRelease }
 
 .AllTargets = {}
 
@@ -230,7 +201,7 @@ Unity( 'Sources-Unity' )
     .UnityInputExcludePattern = '*/Cy*'
     // Keep our pch file out of the unity files
     .UnityInputExcludedFiles = { "CvGameCoreDLL.cpp" }
-    .UnityInputIsolatedFiles = { "CvGameTextMgr.cpp", "CvPythonCityLoader.cpp", "CvPythonGlobalContextLoader.cpp" }
+    .UnityInputIsolatedFiles = { "CvGameTextMgr.cpp" }
     .UnityOutputPath        = '$BUILD_DIR$\unity'
     .UnityInputPathRecurse  = false
     .UnityNumFiles          = 20

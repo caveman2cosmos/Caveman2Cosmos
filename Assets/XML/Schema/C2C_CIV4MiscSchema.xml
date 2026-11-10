@@ -139,7 +139,6 @@
 	<ElementType name="iFlatMovement" content="textOnly" dt:type="int"/>
 	<ElementType name="fZBias" content="textOnly"/>
 	<!-- JOOYO_ADDON							START -->
-	<ElementType name="bRailInfrastructure" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bSeaTunnel" content="textOnly" dt:type="boolean"/>
 	<!-- JOOYO_ADDON							END -->
 	<ElementType name="RouteInfo" content="eltOnly">
@@ -156,7 +155,6 @@
 		<element type="iFlatMovement" minOccurs="0"/>
 		<!-- JOOYO_ADDON							START -->
 		<element type="bSeaTunnel" minOccurs="0"/>
-		<element type="bRailInfrastructure" minOccurs="0"/>
 		<!-- JOOYO_ADDON							END -->
 		<element type="BonusType" minOccurs="0"/>
 		<element type="PrereqOrBonuses" minOccurs="0"/>

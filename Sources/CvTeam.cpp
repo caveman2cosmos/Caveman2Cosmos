@@ -4,8 +4,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "UnitTravelConnectivity.h"
-#include "RailRoadRevolution.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
@@ -1582,8 +1580,8 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 					{
 						// For alliance option.  This teams pacts are canceled above if not using alliance option.
 						// iI is pulled in on our (the aggressor's) side solely because of its pact/vassal
-						// obligation to us - credit us, not iI, as the instigator for attitude purposes.
-						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
+					// obligation to us - credit us, not iI, as the instigator for attitude purposes.
+					GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
 					}
 				}
 			}
@@ -1604,8 +1602,8 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 					else if (GET_TEAM((TeamTypes)iI).isVassal(getID()) || isVassal((TeamTypes)iI))
 					{
 						// iI is pulled in on our (the aggressor's) side solely because of its pact/vassal
-						// obligation to us - credit us, not iI, as the instigator for attitude purposes.
-						GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
+					// obligation to us - credit us, not iI, as the instigator for attitude purposes.
+					GET_TEAM((TeamTypes)iI).declareWar(eTeam, bNewDiplo, WARPLAN_DOGPILE, getID());
 					}
 				}
 			}
@@ -3819,8 +3817,6 @@ bool CvTeam::isAtWar(const bool bCountMinors) const
 
 void CvTeam::setAtWar(TeamTypes eIndex, bool bNewValue)
 {
-    UnitTravelConnectivity::Change travelChange(isAtWar(eIndex)!=bNewValue);
-
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
@@ -3898,8 +3894,6 @@ bool CvTeam::isOpenBorders(TeamTypes eIndex) const
 
 void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 {
-    UnitTravelConnectivity::Change travelChange(isOpenBorders(eIndex)!=bNewValue);
-
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
@@ -4034,8 +4028,6 @@ bool CvTeam::isVassal(TeamTypes eIndex) const
 
 void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 {
-    UnitTravelConnectivity::Change travelChange(isVassal(eIndex)!=bNewValue);
-
 	PROFILE_EXTRA_FUNC();
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	FAssertMsg(!bNewValue || !GET_TEAM(eIndex).isAVassal(), "can't become a vassal of a vassal");
@@ -5210,7 +5202,6 @@ void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 
 void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bool bFirst, bool bAnnounce)
 {
-	if(RailRoadRevolution::enabled())RailRoadRevolution::resetCaches();
 	PROFILE_FUNC();
 
 	if (eTech == NO_TECH)

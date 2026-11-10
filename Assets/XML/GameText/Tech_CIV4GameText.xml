@@ -24570,32 +24570,4 @@
 		<Polish>"Jednak&#191;e jedyn&#185; nagrod&#185; cz&#179;owieka jest, &#191;e kiedy zwierz&#234;ta, by prze&#191;y&#230; dostosowuj&#185; si&#234; do &#156;rodowiska, cz&#179;owiek &#191;yje dostosowuj&#185;c &#156;rodowisko do siebie." - Ayn Rand</Polish>
 		<Russian>«Уникальный дар человека состоит в том, что в то время как животные выживают, приспосабливаясь под свое происхождение, человек выживает, приспосабливая под себя свое происхождение». - Айн Рэнд</Russian>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_PETROGLYPHS_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, city and natural-wonder plots remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_PICTOGRAPHS_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, mountain peak and volcano plots remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_IDEOGRAMS_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, plots crossed by rivers remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_WRITING_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, foreign border plots remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_COMPASS_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, water plots remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_SURVEYING_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, plots containing strategic resources remain visible on your map after they fall under the fog of war.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_CARTOGRAPHY_PRIMITIVE_MAPS_HELP</Tag>
-		<English>Under Primitive Maps, all newly explored plots remain visible on your map after they fall under the fog of war. Plots forgotten before Cartography are not restored.</English>
-	</TEXT>
 </Civ4GameText>

@@ -145,14 +145,11 @@ void PropertyPropagatorContext::doCorrect(CvPropertySolver* pSolver)
 	PROFILE_EXTRA_FUNC();
 	const PropertyTypes eProperty = m_pPropagator->getProperty();
 	std::vector<int>& aiPredict = pSolver->getCache1();
-	// Scratch belongs to this context only: the previous prediction/correction
-	// must not remain at the front and be mistaken for these target values.
-	aiPredict.resize(m_apTargetObjects.size());
 	for(int i=0; i<(int)m_apTargetObjects.size(); i++)
 	{
-		aiPredict[i] = pSolver->getPredictValue(m_apTargetObjects[i], eProperty);
+		aiPredict.push_back(pSolver->getPredictValue(m_apTargetObjects[i], eProperty));
 	}
-	std::vector<int>& aiCorrect = pSolver->getCache2();
+	std::vector<int> aiCorrect = pSolver->getCache2();
 	aiCorrect.resize(m_aiCurrentAmount.size());
 	m_pPropagator->getCorrect(m_aiCurrentAmount, aiPredict, aiCorrect);
 	for(int i=0; i<(int)aiCorrect.size(); i++)

@@ -653,7 +653,6 @@
 	<ElementType name="iDefenseModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iPillageGold" content="textOnly" dt:type="int"/>
 	<ElementType name="bOutsideBorders" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bSecondaryLayer" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMilitaryStructure" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPlacesBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPlacesFeature" content="textOnly" dt:type="boolean"/>
@@ -703,7 +702,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="Categories" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
-		<element type="bSecondaryLayer" minOccurs="0"/>
 		<element type="PrereqNatureYields" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverSideYieldChange" minOccurs="0"/>

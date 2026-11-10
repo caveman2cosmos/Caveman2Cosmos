@@ -682,7 +682,7 @@ int IntExprIntegrateCount::evaluate(const CvGameObject* pObject) const
 {
 	PROFILE_EXTRA_FUNC();
 	int iAcc = 0;
-	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc), m_iData);
+	pObject->foreachRelated(m_eType, m_eRelation, bind(evalExprIntegrateCount, _1, m_pExpr, &iAcc));
 	return iAcc;
 }
 

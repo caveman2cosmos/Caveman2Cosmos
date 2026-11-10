@@ -6,18 +6,14 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-#include "PlotDangerCacheScope.h"
-#include "CvAdditionalImprovements.h"
 #include "copy_iterator.h"
 #include "CvGameObject.h"
 #include "CvProperties.h"
 #include "CvPlotPaging.h"
 #include "idinfo_iterator_base.h"
-#include "DefenseNeedEvents.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class MovementCostCache;
 class CvArea;
 class CvMap;
 class CvPlotBuilder;
@@ -286,7 +282,6 @@ public:
 	CvUnit* getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker) const;
 
 	CvUnit* getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bAssassinate = false, bool bClearCache = false) const;
-	bool isBestDefender(const CvUnit* candidate) const;
 	// Deprecated, use the function above
 	CvUnit* getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false) const;
 
@@ -333,23 +328,9 @@ public:
 	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
 	int calculatePathDistanceToPlot( TeamTypes eTeam, CvPlot* pTargetPlot ) const;
 
-	// Read-only boolean danger query cache; not part of the save format.
-	inline void prepareActivePlayerDangerCache() const
-	{
-		const unsigned int token = PlotDangerCacheScope::token();
-		if (m_iActivePlayerDangerCacheContext != token)
-		{
-			m_iActivePlayerDangerCacheContext = token;
-			m_iReadOnlyCarrierPresence = -1;
-			m_iActivePlayerSafeRangeCache = -1;
-			m_iActivePlayerSafeRangeCacheTestMoves = -1;
-			m_bActivePlayerHasDangerCache = false;
-			m_bActivePlayerHasDangerCacheTestMoves = false;
-		}
-	}
+	// Plot danger cache
 	inline int getActivePlayerSafeRangeCache(const bool bTestMoves) const
 	{
-		if (!PlotDangerCacheScope::token() || m_iActivePlayerDangerCacheContext != PlotDangerCacheScope::token()) return -1;
 		if (bTestMoves)
 		{
 			return m_iActivePlayerSafeRangeCacheTestMoves;
@@ -358,7 +339,6 @@ public:
 	}
 	inline void setActivePlayerSafeRangeCache(const int iRange, const bool bTestMoves) const 
 	{
-		prepareActivePlayerDangerCache();
 		if (bTestMoves)
 		{
 			m_iActivePlayerSafeRangeCacheTestMoves = iRange;
@@ -367,7 +347,6 @@ public:
 	}
 	inline bool getActivePlayerHasDangerCache(const bool bTestMoves) const
 	{
-		if (!PlotDangerCacheScope::token() || m_iActivePlayerDangerCacheContext != PlotDangerCacheScope::token()) return false;
 		if (bTestMoves)
 		{
 			return m_bActivePlayerHasDangerCacheTestMoves;
@@ -376,7 +355,6 @@ public:
 	}
 	inline void setActivePlayerHasDangerCache(const bool bNewValue, const bool bTestMoves) const
 	{
-		prepareActivePlayerDangerCache();
 		if (bTestMoves)
 		{
 			m_bActivePlayerHasDangerCacheTestMoves = bNewValue;
@@ -450,7 +428,7 @@ protected:
 	CvWString m_szLandmarkName;
 	LandmarkTypes m_eLandmarkType;
 	bool m_bCounted;
-	static MovementCostCache* m_movementCostCache;
+	static stdext::hash_map<int,int>* m_resultHashMap;
 
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
@@ -463,7 +441,6 @@ public:
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
 	int plotCount(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
-	int plotCountUpTo(int maxCount, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 	CvUnit* plotCheck(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1) const;
 	int plotStrength(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 	int plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
@@ -749,39 +726,10 @@ public:
 
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
-	int getNumAdditionalImprovements() const;
-	ImprovementTypes getAdditionalImprovementType(int slot) const;
-	ImprovementTypes getRevealedAdditionalImprovementType(int slot, TeamTypes team) const;
-	bool hasImprovement(ImprovementTypes type) const;
-	bool hasAnyImprovement() const;
-	ImprovementTypes getImprovementInLayer(ImprovementTypes type) const;
-	ImprovementTypes getMilitaryImprovementType(TeamTypes revealedTeam = NO_TEAM) const;
-	ImprovementTypes getPillageImprovementType() const;
-	void pillageImprovement();
-	bool canAddAdditionalImprovement(ImprovementTypes type) const;
-	bool setAdditionalImprovementType(ImprovementTypes type, ImprovementTypes oldType = NO_IMPROVEMENT);
-	bool migrateAdditionalImprovement();
-	void doAdditionalImprovementUpgrades();
-	int calculateAdditionalImprovementYield(YieldTypes yield, PlayerTypes player, ImprovementTypes replacement = NO_IMPROVEMENT, TeamTypes revealedTeam = NO_TEAM) const;
-	int calculateYieldWithImprovement(ImprovementTypes type, YieldTypes yield, PlayerTypes player, bool bestRoute = false) const;
-	bool isImprovementBonusTrade(BonusTypes bonus) const;
-	bool isImprovementBonusTradeWith(ImprovementTypes candidate, BonusTypes bonus) const;
-	int getImprovementVisibilityChange() const;
-	int getImprovementSeeFrom() const;
-	void clearAllImprovements();
-	void updateAdditionalImprovementGraphics();
 
 	bool isImprovementDestructible() const;
 
 	RouteTypes getRouteType() const;
-	void setRouteLayers(RouteTypes road, RouteTypes rail, bool updateGroups = true);
-	RouteTypes getRoadRouteType() const;
-	RouteTypes getRailRouteType() const;
-	bool hasUsableRailway() const;
-	RouteTypes getRouteTypeForBuild(RouteTypes route) const;
-	RouteTypes getRevealedRoadRouteType(TeamTypes team, bool debug = false) const;
-	int getRailRoadMovementCost(const CvUnit* unit, const CvPlot* from) const;
-	void migrateRailRoadRevolution();
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
 
@@ -938,11 +886,9 @@ public:
 	void CachePathValidityResult(void* entity, bool bIsAlternateResult, bool cachedResult);
 
 	int getNumUnits() const;
-	// Conservative outside a read-only search; cached intrinsic presence inside it.
-	bool mayHaveCarrierForLoading() const;
 	CvUnit* getUnitByIndex(int iIndex) const;
 	unsigned getStackSupportRevision() const { return m_stackSupportRevision; }
-	void invalidateStackSupport() { if (++m_stackSupportRevision == 0) ++m_stackSupportRevision; DefenseNeedEvents::changed(); }
+	void invalidateStackSupport() { if (++m_stackSupportRevision == 0) ++m_stackSupportRevision; }
 	void addUnit(CvUnit* pUnit, bool bUpdate = true);
 	void removeUnit(CvUnit* pUnit, bool bUpdate = true);
 	DllExport CLLNode<IDInfo>* nextUnitNode(CLLNode<IDInfo>* pNode) const;
@@ -1008,6 +954,7 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
+	unsigned m_stackSupportRevision; // Transient; never serialized.
 	short m_iX;
 	short m_iY;
 	int m_iArea;
@@ -1058,12 +1005,10 @@ protected:
 	IDInfo m_workingCityOverride;
 
 	// Plot danger cache
-	mutable unsigned int m_iActivePlayerDangerCacheContext;
 	mutable int m_iActivePlayerSafeRangeCache;
 	mutable int m_iActivePlayerSafeRangeCacheTestMoves;
 	mutable bool m_bActivePlayerHasDangerCache;
 	mutable bool m_bActivePlayerHasDangerCacheTestMoves;
-	mutable signed char m_iReadOnlyCarrierPresence; // -1 unknown; independent of danger results, transient.
 	mutable bool* m_borderDangerCache;
 
 	static	int m_iGlobalCachePathEpoch;
@@ -1244,9 +1189,6 @@ protected:
 	ECvPlotGraphics::type m_requiredVisibleGraphics;
 	ECvPlotGraphics::type m_visibleGraphics;
 	CvPlotPaging::paging_handle m_pagingHandle;
-	// Keep existing engine-visible fields at their original offsets.
-	CvAdditionalImprovements m_additionalImprovements;
-	unsigned m_stackSupportRevision; // Append transient state; preserve EXE field offsets.
 
 public:
 	//
@@ -1287,13 +1229,6 @@ public:
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
 	};
-protected:
-	// Append route layers; never shift the EXE-visible CvPlot layout.
-	short /*RouteTypes*/ m_eUnderlyingRoadType;
-	bool m_bRailRoadLayerSeparated;
-	short* /*RouteTypes*/ m_aeRevealedRoadRouteType;
-	CvRoute* m_pUnderlyingRouteSymbol;
-
 };
 
 #endif // CvPlot_h__

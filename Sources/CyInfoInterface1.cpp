@@ -118,8 +118,6 @@ void CyInfoPythonInterface1()
 	python::class_<CvPromotionInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPromotionInfo", python::no_init)
 
 		.def("getPrereqPromotion", &CvPromotionInfo::getPrereqPromotion, "int ()")
-		.def("getNativePrereqPromotion", &CvPromotionInfo::getNativePrereqPromotion, "int ()")
-		.def("isNative", &CvPromotionInfo::isNative, "bool ()")
 		.def("getPrereqOrPromotion1", &CvPromotionInfo::getPrereqOrPromotion1, "int ()")
 		.def("getPrereqOrPromotion2", &CvPromotionInfo::getPrereqOrPromotion2, "int ()")
 		.def("getActionInfoIndex", &CvPromotionInfo::getActionInfoIndex, "int ()")

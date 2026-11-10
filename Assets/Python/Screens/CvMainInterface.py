@@ -5,7 +5,6 @@ import CvScreenEnums
 import CvScreensInterface as UP
 import HandleInputUtil
 import PythonToolTip as pyTT
-import MultipleImprovements
 import AbandonCityEventManager as ACEM
 import TextUtil
 import RevInstances
@@ -1205,7 +1204,6 @@ class CvMainInterface:
 
 	# Will update the screen (every 250 ms)
 	def updateScreen(self):
-		MultipleImprovements.updateHelpState(self)
 		screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 		IFT = self.iInterfaceType
 
@@ -1410,7 +1408,6 @@ class CvMainInterface:
 		if CyIF.isDirty(InterfaceDirtyBits.Help_DIRTY_BIT):
 			if CyIF.isFocused():
 				screen.hide("PlotHelp")
-				MultipleImprovements.hidePlotHelp(screen)
 
 			elif not self.bPlotHelpBan and not self.bTooltip and self.iInterfaceType not in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 				self.updatePlotHelp(screen)
@@ -1680,7 +1677,6 @@ class CvMainInterface:
 		elif IFT in (InterfaceVisibility.INTERFACE_HIDE_ALL, InterfaceVisibility.INTERFACE_MINIMAP_ONLY):
 			screen.moveItem("EndTurnText", 0, self.yRes - 128, 0)
 			screen.hide("PlotHelp")
-			MultipleImprovements.hidePlotHelp(screen)
 			self.hidePlotList(screen)
 			if not self.bHelpTextFullY:
 				screen.setHelpTextArea(self.xRes/3, FontTypes.GAME_FONT, 4, self.yRes - 8, 0, False, "", True, False, 1<<0, 0)
@@ -5163,18 +5159,15 @@ class CvMainInterface:
 
 		if POINT.x < 40 or POINT.x > self.xRes - 40 or POINT.y > self.yBotBar or POINT.y < 60:
 			screen.hide("PlotHelp")
-			MultipleImprovements.hidePlotHelp(screen)
 			return
 
 		szPlotHelp = CyIF.getHelpString()
 		if not szPlotHelp:
 			screen.hide("PlotHelp")
-			MultipleImprovements.hidePlotHelp(screen)
 			return
 
 		if szPlotHelp == self.szPlotHelp:
-			if not MultipleImprovements.showPlotHelp(screen, self, szPlotHelp, uFont or self.aFontList[5]):
-				pyTT.makeTooltip(screen, -12, self.yBotBar + 8, szPlotHelp, uFont or self.aFontList[5], "PlotHelp")
+			pyTT.makeTooltip(screen, -12, self.yBotBar + 8, szPlotHelp, uFont or self.aFontList[5], "PlotHelp")
 			screen.moveToFront("PlotHelp")
 			screen.show("PlotHelp")
 			return
@@ -5183,12 +5176,11 @@ class CvMainInterface:
 			szPlotHelp = szPlotHelp[1:]
 		if not uFont:
 			uFont=self.aFontList[5]
-		if not MultipleImprovements.showPlotHelp(screen, self, szPlotHelp, uFont):
-			pyTT.makeTooltip(screen, -12, self.yBotBar + 8, szPlotHelp, uFont, "PlotHelp")
+		pyTT.makeTooltip(screen, -12, self.yBotBar + 8, szPlotHelp, uFont, "PlotHelp")
 
 		# if shift pressed for plot help with unit on.
 		plot = CyIF.getMouseOverPlot()
-		if plot and self.InputData.getModifierKeys()[2] and not MultipleImprovements.hasMultipleKnownImprovements(plot):
+		if plot and self.InputData.getModifierKeys()[2]:
 			unit = CyIF.getInterfacePlotUnit(plot, 0)
 			if unit:
 				self.bLockPlotHelp = True
@@ -5234,7 +5226,6 @@ class CvMainInterface:
 			screen.show("Tooltip")
 		self.bTooltip = True
 		screen.hide("PlotHelp")
-		MultipleImprovements.hidePlotHelp(screen)
 
 	def helpGreatPersonBar(self, screen):
 		CyCity, iTurns = GPUtil.getDisplayCity()
@@ -5695,7 +5686,6 @@ class CvMainInterface:
 				self.bPlotHelpBan = True
 				screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 				screen.hide("PlotHelp")
-				MultipleImprovements.hidePlotHelp(screen)
 				POINT = Win32.getCursorPos()
 				self.xMouseNoPlotHelp = POINT.x; self.yMouseNoPlotHelp = POINT.y
 

@@ -380,8 +380,6 @@ class PediaImprovement:
 			H_MID_ROW += H_BOT_ROW
 		# Effects and History
 		szEffects = CyGameTextMgr().getImprovementHelp(iTheImprove, False)
-		if CvTheImproveInfo.isSecondaryLayer():
-			szEffects += "\n" + TRNSLTR.getText("TXT_KEY_PEDIA_COMPLEMENTARY_IMPROVEMENT", ())
 		i = szEffects.find("\n") + 1
 		if not i:
 			szEffects = ""

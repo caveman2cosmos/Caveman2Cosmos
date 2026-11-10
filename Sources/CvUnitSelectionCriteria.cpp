@@ -11,7 +11,6 @@
 #include "CvGlobals.h"
 #include "CvInfos.h"
 #include "CvUnitSelectionCriteria.h"
-#include "CvUnitCombatInfo.h"
 
 
 	CvString CvUnitSelectionCriteria::getDescription() const

@@ -410,16 +410,6 @@ void CyPlot::setBonusType(int /*BonusTypes*/ eNewValue)
 	if (m_pPlot) m_pPlot->setBonusType((BonusTypes)eNewValue);
 }
 
-int CyPlot::getRevealedPrimaryImprovementType(int team) const { return m_pPlot ? m_pPlot->getRevealedImprovementType((TeamTypes)team, true) : -1; }
-int CyPlot::getNumAdditionalImprovements() const { return m_pPlot ? m_pPlot->getNumAdditionalImprovements() : 0; }
-int CyPlot::getAdditionalImprovementType(int slot) const { return m_pPlot ? m_pPlot->getAdditionalImprovementType(slot) : -1; }
-int CyPlot::getRevealedAdditionalImprovementType(int slot, int team) const { return m_pPlot ? m_pPlot->getRevealedAdditionalImprovementType(slot, (TeamTypes)team) : -1; }
-bool CyPlot::hasImprovement(int type) const { return m_pPlot && m_pPlot->hasImprovement((ImprovementTypes)type); }
-bool CyPlot::setAdditionalImprovementType(int type) { return m_pPlot && m_pPlot->setAdditionalImprovementType((ImprovementTypes)type); }
-bool CyPlot::removeAdditionalImprovementType(int type) { return m_pPlot && m_pPlot->setAdditionalImprovementType(NO_IMPROVEMENT, (ImprovementTypes)type); }
-int CyPlot::getPillageImprovementType() const { return m_pPlot ? m_pPlot->getPillageImprovementType() : -1; }
-int CyPlot::getDisplayedYield(int yield) const { return m_pPlot ? m_pPlot->calculateYield((YieldTypes)yield, true) : 0; }
-
 int /*ImprovementTypes*/ CyPlot::getImprovementType() const
 {
 	return m_pPlot ? m_pPlot->getImprovementType() : -1;
@@ -434,9 +424,6 @@ int /*RouteTypes*/ CyPlot::getRouteType() const
 {
 	return m_pPlot ? m_pPlot->getRouteType() : -1;
 }
-
-int CyPlot::getRoadRouteType() const { return m_pPlot ? m_pPlot->getRoadRouteType() : NO_ROUTE; }
-int CyPlot::getRailRouteType() const { return m_pPlot ? m_pPlot->getRailRouteType() : NO_ROUTE; }
 
 void CyPlot::setRouteType(int /*RouteTypes*/ eNewValue)
 {
@@ -644,5 +631,3 @@ python::list CyPlot::rect(int halfWid, int halfHgt) const
 	}
 	return list;
 }
-
-void CyPlot::setRouteLayers(int road,int rail) { if(m_pPlot)m_pPlot->setRouteLayers((RouteTypes)road,(RouteTypes)rail); }

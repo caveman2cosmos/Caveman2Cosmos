@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!-- Primitive Maps fog-of-war memory rules -->
-<mod id="PrimitiveMaps" module="PrimitiveMaps">
-	<event type="plotRevealed" function="onPlotRevealed"/>
-	<event type="BeginPlayerTurn" function="onBeginPlayerTurn"/>
-</mod>

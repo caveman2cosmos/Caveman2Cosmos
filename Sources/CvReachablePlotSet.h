@@ -62,21 +62,13 @@ public:
 	const_iterator find(CvPlot* plot) const;
 
 	void Populate(int iRange);
-	// Lazily obtain this exact range only after caller-specific cheap filters.
-	bool containsWithinRange(CvPlot* plot, int iRange);
-	// Private target view: stop after all requested plots are found; never publish
-	// an incomplete flood as a complete shared cache entry.
-	void PopulateForTargets(const std::vector<CvPlot*>& targets, int iRange = MAX_INT);
-	// Attach an existing complete view without allocating, expanding or evicting.
-	bool tryPopulateFromCache(int iRange);
 
 	static void ClearCache();
 private:
 
 	static bool canMoveBetweenWithFlags(const CvSelectionGroup* group, const CvPlot* pFromPlot, const CvPlot* pToPlot, int iFlags);
 
-	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*, int> >& prevRing,
-		const std::vector<CvPlot*>* targets = NULL, int* completedDepth = NULL);
+	void enumerateReachablePlotsInternal(int iRange, int iDepth, std::vector< std::pair<CvPlot*, int> >& prevRing);
 
 	int getRange() const;
 	void setRange(int iRange);
@@ -90,8 +82,6 @@ protected:
 	int					m_iOutsideOwnedRange;
 	CvReachablePlotSet* m_proxyTo;
 	bool				m_bCachable;
-	// Only the outer requested ring, including terminal-only nodes.
-	std::vector<std::pair<CvPlot*,int> > m_savedFrontier;
 };
 
 #endif // CvReachablePlotSet_h__

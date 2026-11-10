@@ -2,7 +2,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
@@ -46,8 +45,6 @@ void CvDLLWidgetData::freeInstance()
 // Toffer - Exe won't call this if widgetDataStruct.m_iData2 == 0.
 void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &widgetDataStruct)
 {
-    StackPromotions::MechanicsScope exactMechanics;
-    StackPromotions::EvaluationScope aidEvaluation(true);
 	switch (widgetDataStruct.m_eWidgetType)
 	{
 	case WIDGET_PLOT_LIST:
@@ -2174,10 +2171,10 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			}
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_PILLAGE)
 			{
-				if (pMissionPlot->getPillageImprovementType() != NO_IMPROVEMENT)
+				if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DESTROY_IMP", GC.getImprovementInfo(pMissionPlot->getPillageImprovementType()).getTextKeyWide()));
+					szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DESTROY_IMP", GC.getImprovementInfo(pMissionPlot->getImprovementType()).getTextKeyWide()));
 				}
 				else if (pMissionPlot->getRouteType() != NO_ROUTE)
 				{
@@ -2703,20 +2700,6 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				FAssert(eBuild != NO_BUILD);
 				ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 				const CvImprovementInfo* improvement = eImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(eImprovement) : NULL;
-				const ImprovementTypes eReplacedImprovement = pMissionPlot->getImprovementInLayer(eImprovement);
-				if (CvAdditionalImprovements::usesSecondaryLayer(eImprovement))
-				{
-					szBuffer.append(NEWLINE);
-					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT_OVER", GC.getImprovementInfo(pMissionPlot->getImprovementType()).getTextKeyWide()));
-					else
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT"));
-					if (eReplacedImprovement != NO_IMPROVEMENT && eReplacedImprovement != eImprovement)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_COMPLEMENTARY_IMPROVEMENT_REPLACES", GC.getImprovementInfo(eReplacedImprovement).getTextKeyWide()));
-					}
-				}
 				CvTeam& team = GET_TEAM(pHeadSelectedUnit->getTeam());
 				RouteTypes eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
 
@@ -2739,12 +2722,11 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 
 					// Assuming neither using FeatureChange/TerrainChange nor placing routes will remove improvements (though former may remove prereqs for imps...)
-					if (eReplacedImprovement != NO_IMPROVEMENT
+					if (pMissionPlot->getImprovementType() != NO_IMPROVEMENT
 					&&  eRoute == NO_ROUTE
 					&&  !bIsFeatureChange && !bIsTerrainChange)
 					{
-						// Only the improvement in the build's own layer is replaced.
-						iYield -= pMissionPlot->calculateImprovementYieldChange(eReplacedImprovement, ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
+						iYield -= pMissionPlot->calculateImprovementYieldChange(pMissionPlot->getImprovementType(), ((YieldTypes)iI), pHeadSelectedUnit->getOwner());
 					}
 
 					// Yield deltas from removing/changing features
@@ -2982,7 +2964,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
-				if (eImprovement != NO_IMPROVEMENT && !CvAdditionalImprovements::usesSecondaryLayer(eImprovement) && pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
+				if (eImprovement != NO_IMPROVEMENT && pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
 					if (!bIsFeatureChange && !bIsTerrainChange)

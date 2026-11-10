@@ -12,7 +12,6 @@
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
 #include "CityOutputHistory.h"
-#include "DisabledBuildingSet.h"
 #include "CvGameObject.h"
 
 class CvArea;
@@ -106,7 +105,6 @@ public:
 
 	void doTurn();
 	void doAutobuild();
-	void updateNativePromotionBuildings();
 	void checkPropertyBuildings();
 	void doFireCheck();
 
@@ -1322,7 +1320,6 @@ public:
 	void clearRawVicinityBonusCache(BonusTypes eBonus);
 	void invalidateVicinityCache();
 	bool hasRawVicinityBonus(BonusTypes eBonus) const;
-	void updateVicinityBonusHistory();
 	void checkBuildings(bool bAlertOwner = true);
 	void doVicinityBonus();
 	bool isDevelopingCity() const;
@@ -1700,7 +1697,6 @@ protected:
 
 	std::vector<short> m_vFreeBuildings;
 	std::vector<short> m_vDisabledBuildings;
-	DisabledBuildingSet::Lookup m_disabledBuildingLookup; // Derived; not serialized.
 	std::map<short, uint16_t> m_freeAreaBuildingCount;
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;

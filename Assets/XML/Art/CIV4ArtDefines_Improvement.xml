@@ -56,15 +56,6 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_FISHING_BOATS_ABOVE_REEF</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Nets/Nets_Above_Reef_Ancient.nif</NIF>
-			<KFM>Art/Structures/Improvements/Nets/Nets.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WHALING_BOATS</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>

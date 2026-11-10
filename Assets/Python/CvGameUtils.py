@@ -169,7 +169,7 @@ class CvGameUtils:
 		if iPlayer > -1 and GC.getPlayer(iPlayer).hasBuilding(self.iHimejiCastle):
 			return 0
 
-		iTemp = GC.getImprovementInfo(CyPlot.getPillageImprovementType()).getPillageGold()
+		iTemp = GC.getImprovementInfo(CyPlot.getImprovementType()).getPillageGold()
 		gold = GAME.getSorenRandNum(iTemp, "Pillage Gold 1")
 		gold += GAME.getSorenRandNum(iTemp, "Pillage Gold 2")
 

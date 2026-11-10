@@ -4,7 +4,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "DefenseNeedEvents.h"
 #include "CvArea.h"
 #include "CvBonusInfo.h"
 #include "CvCity.h"
@@ -988,7 +987,6 @@ AreaAITypes CvArea::getAreaAIType(TeamTypes eIndex) const
 void CvArea::setAreaAIType(TeamTypes eIndex, AreaAITypes eNewValue)
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
-    if(m_aeAreaAIType[eIndex]!=eNewValue)DefenseNeedEvents::changed();
 	m_aeAreaAIType[eIndex] = eNewValue;
 }
 

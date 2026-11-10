@@ -1,9 +1,4 @@
-#include "UnitTravelConnectivity.h"
 #include "CvGameCoreDLL.h"
-#include "WorkerRoutePerf.h"
-#include "WorkerRouteQueryMemo.h"
-#include "NativeRoutePolicy.h"
-#include "PathHeuristicCache.h"
 #include "CvBuildingInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
@@ -2503,16 +2498,7 @@ int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY,
 	//PROFILE_FUNC();
 
 	int iStepDistance = stepDistance(iFromX, iFromY, iToX, iToY);
-	int cachedHeuristic;
-	bool memoizing;
-	if (PathHeuristicContext::lookupHeuristic(pGroup,iStepDistance,cachedHeuristic,iLimitCost,memoizing))
-	{
-		return cachedHeuristic;
-	}
 	int	iHeuristicCost = GC.getMOVE_DENOMINATOR()*PATH_MOVEMENT_WEIGHT*iStepDistance;
-	// The out parameter is also memoized. Unsupported/immobile domains must
-	// never publish a caller's stale value as an admissible pruning bound.
-	iLimitCost = 0;
 
 	if ( iStepDistance > 0 )
 	{
@@ -2533,20 +2519,15 @@ int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY,
 
 					iLimitCost = (iHeuristicCost*iRouteCost)/GC.getMOVE_DENOMINATOR();
 
-					int iMin;
-					if (!PathHeuristicContext::lookup(pGroup,iMin))
-					{
-						iMin = MAX_INT;
-						foreach_(const CvUnit* pLoopUnit, pGroup->units())
-						{
-							if (iMin > pLoopUnit->maxMoves())
-							{
-								iMin = pLoopUnit->maxMoves();
-							}
-						}
-						PathHeuristicContext::remember(pGroup,iMin);
-					}
+					int iMin = MAX_INT;
 
+					foreach_(const CvUnit* pLoopUnit, pGroup->units())
+					{
+						if (iMin > pLoopUnit->maxMoves())
+						{
+							iMin = pLoopUnit->maxMoves();
+						}
+					}
 
 					int iPotentialExtraMoveEvery = iMin/iRouteCost;
 					int iMoves = 0;
@@ -2575,7 +2556,6 @@ int	NewPathHeuristicFunc(const CvSelectionGroup* pGroup, int iFromX, int iFromY,
 		iLimitCost = iHeuristicCost;
 	}
 
-	if (memoizing) PathHeuristicContext::rememberHeuristic(pGroup,iStepDistance,iHeuristicCost,iLimitCost);
 	return iHeuristicCost;
 }
 
@@ -3181,15 +3161,15 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 	}
 
 	const bool bAIControl = pSelectionGroup->AI_isControlled();
-	if(bAIControl && !UnitTravelConnectivity::seaUnitCanReach(pSelectionGroup->getHeadUnit(),pToPlot,true))return false;
 
 	if (bAIControl)
 	{
 		if (pSelectionGroup->getDomainType() == DOMAIN_LAND)
 		{
+			const int iGroupAreaID = pSelectionGroup->getArea();
 
-			if (!pSelectionGroup->canMoveAllTerrain()
-			&& !UnitTravelConnectivity::landOrAdjacent(pSelectionGroup->getHeadOwner(),pSelectionGroup->plot(),pToPlot,true))
+			if (pToPlot->getArea() != iGroupAreaID && !pSelectionGroup->canMoveAllTerrain() && !pToPlot->isAdjacentToArea(iGroupAreaID)
+			&& !pToPlot->isAreaConnectedViaSeaTunnel(iGroupAreaID))
 			{
 				return false;
 			}
@@ -3661,12 +3641,11 @@ int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* point
 
 	const PlayerTypes ePlayer = (PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder);
 
-    signed char* memo = WorkerRouteQueryMemo::entry(ePlayer, GC.getMap().getType(),
-        GC.getMap().plotNum(node->m_iX, node->m_iY));
-    if (memo && *memo >= 0) return *memo;
-	const bool valid = NativeRoutePolicy::accepts(GET_PLAYER(ePlayer),pNewPlot);
-    if (memo) *memo = valid ? 1 : 0;
-    return valid;
+	return (
+		(!pNewPlot->isOwned() || pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam())
+		&&
+		pNewPlot->getRouteType() == GET_PLAYER(ePlayer).getBestRoute(pNewPlot)
+	);
 }
 
 
@@ -3777,7 +3756,7 @@ int countPlotGroup(FAStarNode* parent, FAStarNode* node, int data, const void* p
 		pPlot->m_groupGenerationNumber = checkInfo->groupGenerationNumber;
 		checkInfo->hashInfo.allNodesHash ^= pPlot->getZobristContribution();
 
-		if (pPlot->isCity() || pPlot->hasAnyImprovement() && pPlot->getBonusType() != NO_BONUS)
+		if (pPlot->isCity() || pPlot->getImprovementType() != NO_IMPROVEMENT && pPlot->getBonusType() != NO_BONUS)
 		{
 			checkInfo->hashInfo.resourceNodesHash ^= pPlot->getZobristContribution();
 		}

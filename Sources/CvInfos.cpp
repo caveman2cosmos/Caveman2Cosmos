@@ -7,7 +7,6 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "RailRoadRevolution.h"
 #include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
 #include "CvHeritageInfo.h"
@@ -4734,22 +4733,13 @@ void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_stackSupportRecipientNot, L"StackSupportRecipientNot")
 		.add(m_szStackSupportProviderUnits, L"StackSupportProviderUnits")
 		.addEnum(m_iPrereqPromotion, L"PromotionPrereq")
-		.addEnum(m_eNativePrereqPromotion, L"NativePrereqPromotion")
-		.add(m_bNative, L"bNative")
 		.addEnum(m_iPrereqOrPromotion1, L"PromotionPrereqOr1")
 		.addEnum(m_iPrereqOrPromotion2, L"PromotionPrereqOr2")
 	;
 }
 
-unsigned int CvPromotionInfo::getAIValueEffectMask() const
-{
-	return m_aiValueEffects.get(*this, GC.getNumBuildInfos(), GC.getNumTerrainInfos(),
-		GC.getNumFeatureInfos(), GC.getNumUnitCombatInfos());
-}
-
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
-	m_aiValueEffects.invalidate();
 	PROFILE_EXTRA_FUNC();
 	CvInfoUtil(this).readXml(pXML);
 
@@ -5446,7 +5436,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 
 void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 {
-	m_aiValueEffects.invalidate();
 	PROFILE_EXTRA_FUNC();
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 
@@ -12288,8 +12277,7 @@ int CvBuildInfo::getFeatureChange() const
 
 TechTypes CvBuildInfo::getObsoleteTech() const
 {
-	if(m_iRoute==NO_ROUTE || m_iObsoleteTech==NO_TECH)return m_iObsoleteTech;
-	return RailRoadRevolution::effectiveRoadObsoleteTech((RouteTypes)m_iRoute,m_iObsoleteTech);
+	return m_iObsoleteTech;
 }
 
 bool CvBuildInfo::isDisabled() const
@@ -12478,8 +12466,7 @@ void CvBuildInfo::copyNonDefaults(const CvBuildInfo* pClassInfo)
 	if (getRoute() == iTextDefault) m_iRoute = pClassInfo->getRoute();
 	if (getTerrainChange() == iTextDefault) m_iTerrainChange = pClassInfo->getTerrainChange();
 	if (getFeatureChange() == iTextDefault) m_iFeatureChange = pClassInfo->getFeatureChange();
-	// Copy authored XML, independent of the currently selected game option.
-	if (m_iObsoleteTech == iTextDefault) m_iObsoleteTech = pClassInfo->m_iObsoleteTech;
+	if (getObsoleteTech() == iTextDefault) m_iObsoleteTech = pClassInfo->getObsoleteTech();
 	if (getEntityEvent() == iTextDefault) m_iEntityEvent = pClassInfo->getEntityEvent();
 
 	for ( int i = 0; i < GC.getNumFeatureInfos(); i++)
@@ -12819,7 +12806,6 @@ m_iValue(0),
 m_iMovementCost(0),
 m_iFlatMovementCost(0),
 m_bSeaTunnel(false),
-m_bRailInfrastructure(false),
 m_iPrereqBonus(NO_BONUS),
 m_piYieldChange(NULL),
 m_piTechMovementChange(NULL),
@@ -12930,7 +12916,6 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMovementCost, L"iMovement");
 	pXML->GetOptionalChildXmlValByName(&m_iFlatMovementCost, L"iFlatMovement");
 	pXML->GetOptionalChildXmlValByName(&m_bSeaTunnel, L"bSeaTunnel");
-	pXML->GetOptionalChildXmlValByName(&m_bRailInfrastructure, L"bRailInfrastructure");
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"BonusType");
 	m_iPrereqBonus = pXML->GetInfoClass(szTextVal);
@@ -12978,7 +12963,6 @@ void CvRouteInfo::copyNonDefaults(const CvRouteInfo* pClassInfo)
 /*																							  */
 /************************************************************************************************/
 	if (!isSeaTunnel()) m_bSeaTunnel = pClassInfo->isSeaTunnel();
-	if (!m_bRailInfrastructure) m_bRailInfrastructure = pClassInfo->m_bRailInfrastructure;
 /************************************************************************************************/
 /* JOOYO_ADDON						  END													 */
 /************************************************************************************************/
@@ -12986,13 +12970,13 @@ void CvRouteInfo::copyNonDefaults(const CvRouteInfo* pClassInfo)
 
 	for ( int i = 0;  i < NUM_YIELD_TYPES; i++)
 	{
-		if ((m_piYieldChange ? m_piYieldChange[i] : 0) == iDefault && (pClassInfo->m_piYieldChange ? pClassInfo->m_piYieldChange[i] : 0) != iDefault)
+		if (getYieldChange(i) == iDefault && pClassInfo->getYieldChange(i) != iDefault)
 		{
 			if ( m_piYieldChange == NULL )
 			{
 				CvXMLLoadUtility::InitList(&m_piYieldChange, NUM_YIELD_TYPES);
 			}
-			m_piYieldChange[i] = (pClassInfo->m_piYieldChange ? pClassInfo->m_piYieldChange[i] : 0);
+			m_piYieldChange[i] = pClassInfo->getYieldChange(i);
 		}
 	}
 
@@ -13024,7 +13008,6 @@ void CvRouteInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iFlatMovementCost);
 
 	CheckSum(iSum, m_bSeaTunnel);
-	CheckSum(iSum, m_bRailInfrastructure);
 	CheckSum(iSum, m_iPrereqBonus);
 
 	// Arrays

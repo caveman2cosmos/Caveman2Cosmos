@@ -1871,7 +1871,6 @@
             <Type>TECH_PETROGLYPHS</Type>
             <Description>TXT_KEY_TECH_PETROGLYPHS</Description>
             <Civilopedia>TXT_KEY_TECH_PETROGLYPHS_PEDIA</Civilopedia>
-            <Help>TXT_KEY_TECH_PETROGLYPHS_PRIMITIVE_MAPS_HELP</Help>
             <Advisor>ADVISOR_CULTURE</Advisor>
             <iCost>17</iCost>
             <Era>C2C_ERA_PREHISTORIC</Era>
@@ -2949,7 +2948,6 @@
             <Type>TECH_PICTOGRAPHS</Type>
             <Description>TXT_KEY_TECH_PICTOGRAPHS</Description>
             <Civilopedia>TXT_KEY_TECH_PICTOGRAPHS_PEDIA</Civilopedia>
-            <Help>TXT_KEY_TECH_PICTOGRAPHS_PRIMITIVE_MAPS_HELP</Help>
             <Advisor>ADVISOR_SCIENCE</Advisor>
             <iCost>39</iCost>
             <Era>C2C_ERA_PREHISTORIC</Era>
@@ -3489,7 +3487,6 @@
 			<Type>TECH_IDEOGRAMS</Type>
 			<Description>TXT_KEY_TECH_IDEOGRAMS</Description>
 			<Civilopedia>TXT_KEY_TECH_IDEOGRAMS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_IDEOGRAMS_PRIMITIVE_MAPS_HELP</Help>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>84</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -6150,7 +6147,6 @@
             <iStackSupportLimitChange>1</iStackSupportLimitChange>
 			<Description>TXT_KEY_TECH_WRITING</Description>
 			<Civilopedia>TXT_KEY_TECH_WRITING_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_WRITING_PRIMITIVE_MAPS_HELP</Help>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAIWeight>100</iAIWeight>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -10042,7 +10038,6 @@
 			<Type>TECH_SURVEYING</Type>
 			<Description>TXT_KEY_TECH_SURVEYING</Description>
 			<Civilopedia>TXT_KEY_TECH_SURVEYING_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_SURVEYING_PRIMITIVE_MAPS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>1230</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>
@@ -11214,7 +11209,6 @@
 			<Type>TECH_CARTOGRAPHY</Type>
 			<Description>TXT_KEY_TECH_CARTOGRAPHY</Description>
 			<Civilopedia>TXT_KEY_TECH_CARTOGRAPHY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_CARTOGRAPHY_PRIMITIVE_MAPS_HELP</Help>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>1688</iCost>
@@ -11697,7 +11691,6 @@
 			<Type>TECH_COMPASS</Type>
 			<Description>TXT_KEY_TECH_COMPASS</Description>
 			<Civilopedia>TXT_KEY_TECH_COMPASS_PEDIA</Civilopedia>
-			<Help>TXT_KEY_TECH_COMPASS_PRIMITIVE_MAPS_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>1960</iCost>
 			<Era>C2C_ERA_MEDIEVAL</Era>

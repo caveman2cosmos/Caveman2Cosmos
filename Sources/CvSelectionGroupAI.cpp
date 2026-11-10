@@ -4,14 +4,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "TransportRequests.h"
-#include "AttackSelectionStrengthCache.h"
-#include "DefenseNeedEvents.h"
-#include "DefenseDemandPerf.h"
-#include "CvContractBroker.h"
-#include "NavalDecisionDiagnostics.h"
-#include "StackPromotions.h"
-#include "AIPerf.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
@@ -109,8 +101,6 @@ void CvSelectionGroupAI::AI_separateEmptyTransports()
 // Returns true if the group has become busy...
 bool CvSelectionGroupAI::AI_update()
 {
-    StackPromotions::EvaluationScope aidEvaluation(isHuman() || !StackPromotions::enabled());
-	AI_PERF_SCOPE(GROUP_UPDATE);
 	PROFILE("CvSelectionGroupAI::AI_update");
 
 	FAssert(getOwner() != NO_PLAYER);
@@ -119,7 +109,6 @@ bool CvSelectionGroupAI::AI_update()
 	{
 		return false;
 	}
-	if (!AI_isGroupAttack() && TransportRequests::advanceLand(this))return false;
 
 	if (!isHuman() && !getHeadUnit()->isCargo() && getActivityType() == ACTIVITY_SLEEP)
 	{
@@ -323,23 +312,18 @@ bool CvSelectionGroupAI::AI_update()
 // Returns attack odds out of 100 (the higher, the better...)
 int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce, bool* bWin, int iThreshold) const
 {
-    NAVAL_DIAG_QUERY(ODDS,getOwner(),getID(),plot()->getX(),plot()->getY(),pPlot->getX(),pPlot->getY(),bPotentialEnemy,bForce,iThreshold,bWin!=NULL,0);
-
-    StackPromotions::EvaluationScope aidEvaluation(true);
 #define	ODDS_CACHE_VALUE_MASK	1023
 #define	ODDS_CACHE_WIN_BIT		1024
 	static std::map<const CvPlot*, int>*	g_attackOddsCache = NULL;
-	static bool g_attackOddsCacheExactAid = true;
 	static const CvSelectionGroupAI*		g_attackOddsCacheGroup = NULL;
 	int iResult;
 	bool bIsWin = false;
 
 	PROFILE_FUNC();
 
-	if ( g_attackOddsCacheGroup != this || g_attackOddsCacheExactAid != StackPromotions::detailed() )
+	if ( g_attackOddsCacheGroup != this )
 	{
 		g_attackOddsCacheGroup = this;
-        g_attackOddsCacheExactAid = StackPromotions::detailed();
 
 		if ( g_attackOddsCache == NULL )
 		{
@@ -361,7 +345,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 				*bWin = ((itr->second & ODDS_CACHE_WIN_BIT) != 0);
 			}
 
-			NAVAL_DIAG_QUERY_RETURN((iResult));
+			return iResult;
 		}
 	}
 
@@ -374,7 +358,7 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 
 		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))
 		{
-			NAVAL_DIAG_QUERY_RETURN((100)); // Disagrees with earlier count
+			return 100; // Disagrees with earlier count
 		}
 
 		// Initialize predicted health for all units involved
@@ -594,19 +578,30 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 		}
 	}
 
-	NAVAL_DIAG_QUERY_RETURN((iResult));
+	return iResult;
 }
 
-static int attackComparisonModifiers(const CvUnit* pUnit)
+static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* pPlot)
 {
+	PROFILE_FUNC();
+
+	if (pUnit->currEffectiveStr(pPlot, pUnit) < pOtherUnit->currEffectiveStr(pPlot, pOtherUnit)
+	// First strikes
+	|| pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes())
+	{
+		return false;
+	}
 	int	iTotalCombatMods = 0;
+	int	iOtherTotalCombatMods = 0;
 
 	//	Unit combat modifiers
 	const CvUnitInfo& kUnit = pUnit->getUnitInfo();
+	const CvUnitInfo& kOtherUnit = pOtherUnit->getUnitInfo();
 
 	for (int i = GC.getNumUnitCombatInfos() - 1; i > -1; i--)
 	{
 		iTotalCombatMods += kUnit.getUnitCombatModifier(i);
+		iOtherTotalCombatMods += kOtherUnit.getUnitCombatModifier(i);
 	}
 
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pUnit->getUnitCombatKeyedInfo().begin(), end = pUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
@@ -638,20 +633,36 @@ static int attackComparisonModifiers(const CvUnit* pUnit)
 		}
 	}
 
-	return iTotalCombatMods;
-}
-
-static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* pPlot, AttackSelectionStrengthCache<CvUnit,CvPlot>& strengths)
-{
-	PROFILE_FUNC();
-
-	if (strengths.get(pUnit) < strengths.get(pOtherUnit)
-	// First strikes
-	|| pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes())
+	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherUnit->getUnitCombatKeyedInfo().begin(), end = pOtherUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
 	{
-		return false;
+		iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
 	}
-	return strengths.modifiers(pUnit,attackComparisonModifiers) >= strengths.modifiers(pOtherUnit,attackComparisonModifiers);
+
+	if (!pOtherUnit->isCommander())
+	{
+		const CvUnit* pOtherCommander = pOtherUnit->getCommander();
+		if (pOtherCommander)
+		{
+			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommander->getUnitCombatKeyedInfo().begin(), end = pOtherCommander->getUnitCombatKeyedInfo().end(); it != end; ++it)
+			{
+				iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+			}
+		}
+	}
+
+    if (!pOtherUnit->isCommodore())
+    	{
+    		const CvUnit* pOtherCommodore = pOtherUnit->getCommodore();
+    		if (pOtherCommodore)
+    		{
+    			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommodore->getUnitCombatKeyedInfo().begin(), end = pOtherCommodore->getUnitCombatKeyedInfo().end(); it != end; ++it)
+    			{
+    				iOtherTotalCombatMods += it->second.m_iExtraUnitCombatModifier;
+    			}
+    		}
+    	}
+
+	return iTotalCombatMods >= iOtherTotalCombatMods;
 }
 
 CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
@@ -665,12 +676,6 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 	bool bIgnoreMadeAttack,
 	const std::set<int>& ignoreUnitID) const
 {
-    StackPromotions::EvaluationScope aidEvaluation(true);
-
-    AI_PERF_SCOPE(ATTACK_CHOICE);
-    AI_PERF_COUNT(ATTACK_CHOICE_SCANS,1);
-    // Evaluation mode only: when the Aid option is OFF, effects stay empty.
-    AI_PERF_COUNT(ATTACK_CHOICE_EXACT_AID,StackPromotions::detailed()?1:0);
 	PROFILE_FUNC();
 
 	const bool bIsHuman = isHuman();
@@ -681,8 +686,6 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 		(bAssassinate ? MoveCheck::Assassinate : MoveCheck::None) |
 		(bSuprise ? MoveCheck::Suprise : MoveCheck::None);
 
-	// Small groups rarely repay a map; this threshold only bypasses caching.
-	AttackSelectionStrengthCache<CvUnit,CvPlot> strengths(pPlot,getNumUnits() >= 16);
 	int iBestOdds = 0;
 	int iBestValue = 0;
 	CvUnit* pBestUnit = NULL;
@@ -691,7 +694,7 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 	{
 		if (unitX->isDead()
 		|| ignoreUnitID.find(unitX->getID()) != ignoreUnitID.end()
-		|| pBestUnit && isClearlySuperior(pBestUnit, unitX, pPlot, strengths))
+		|| pBestUnit && isClearlySuperior(pBestUnit, unitX, pPlot))
 		{
 			continue;
 		}
@@ -752,10 +755,6 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(
 		}
 	}
 
-	AI_PERF_COUNT(ATTACK_STRENGTH_CACHE_HITS,strengths.hits());
-	AI_PERF_COUNT(ATTACK_STRENGTH_CACHE_MISSES,strengths.misses());
-	AI_PERF_COUNT(ATTACK_MODIFIER_CACHE_HITS,strengths.modifierHits());
-	AI_PERF_COUNT(ATTACK_MODIFIER_CACHE_MISSES,strengths.modifierMisses());
 	if (ppDefender && pBestUnit)
 	{
 		PROFILE("AI_getBestGroupAttacker.FinalOdds");
@@ -1096,8 +1095,6 @@ MissionAITypes CvSelectionGroupAI::AI_getMissionAIType() const
 
 void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 {
-    if(DefenseDemandPerf::cacheFieldsEnabled())DefenseNeedEvents::changed();
-    if(getOwner()!=NO_PLAYER && (!getHeadUnit() || !getHeadUnit()->isTempUnit()))GET_PLAYER(getOwner()).getContractBroker().noteDefenseGroupChanged(this);
 	if ( m_eMissionAIType != NO_MISSIONAI )
 	{
 		const CvPlot* pPlot = AI_getMissionAIPlot();
@@ -1111,9 +1108,6 @@ void CvSelectionGroupAI::AI_noteSizeChange(int iChange, int iVolume)
 
 void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* newPlot, const CvUnit* pNewUnit)
 {
-	if (TransportRequests::enabled()) invalidateIsStrandedCache();
-    NAVAL_DIAG_BARRIER();
-
 	PROFILE_FUNC();
 	const CvPlot* oldPlot = AI_getMissionAIPlot();
 	const MissionAITypes eOldMissionAI = m_eMissionAIType;
@@ -1207,7 +1201,6 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 		m_missionAIUnit = pNewUnit->getIDInfo();
 	}
 	else m_missionAIUnit.reset();
-    if(getOwner()!=NO_PLAYER && (!getHeadUnit() || !getHeadUnit()->isTempUnit()))GET_PLAYER(getOwner()).getContractBroker().noteDefenseGroupChanged(this);
 }
 
 

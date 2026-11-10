@@ -15,7 +15,6 @@
 #include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
-#include "PathGeography.h"
 #include "index_iterator_base.h"
 
 class CvCity;
@@ -199,20 +198,6 @@ public:
 		return &(m_pMapPlots[plotNum(iX, iY)]);
 	}
 
-	// Geometry is shared across all groups/teams. Exact movement rules remain
-	// in the pathfinder; these pointers expose no terrain or hidden units.
-	inline CvPlot* const* pathNeighbors(const CvPlot* plot)
-	{
-		if (m_pathGeography.empty()) preparePathGeography();
-		return m_pathGeography.neighbors(plotNum(plot->getX(), plot->getY()));
-	}
-	inline CvPlot* pathAdjacentPlot(const CvPlot* plot, int direction)
-	{
-		if (m_pathGeography.empty()) preparePathGeography();
-		return m_pathGeography.neighbor(plotNum(plot->getX(), plot->getY()), direction);
-	}
-	std::size_t pathGeographyBytes() const { return m_pathGeography.bytes(); }
-
 	CvPlot* pointToPlot(float fX, float fY) const;
 
 	int getIndexAfterLastArea() const;
@@ -248,7 +233,6 @@ public:
 	const std::pair<CvPlot*, CvPlot*> plots() const;
 
 	// Serialization:
-	void migrateAdditionalImprovements();
 	 virtual void read(FDataStreamBase* pStream);
 	 virtual void write(FDataStreamBase* pStream);
 
@@ -293,11 +277,6 @@ private:
 
 	std::vector<TravelingUnit*> m_IncomingUnits;
 	ClimateZoneTypes* m_climateZones;
-	// Append transient DLL-only state; keep existing field offsets.
-	PathGeography<CvPlot> m_pathGeography;
-	void preparePathGeography();
-	// Keep existing engine-visible fields at their original offsets.
-	bool m_bAdditionalImprovementsMigrated;
 };
 
 #endif

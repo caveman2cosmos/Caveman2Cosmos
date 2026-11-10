@@ -79,10 +79,6 @@ class PediaPromotion:
 		if iType > -1:
 			aList1.append((GC.getReligionInfo(iType).getButton(), "RELIGION" + str(iType), szLogic))
 			szLogic = szAnd
-		iNative = CvThePromotionInfo.getNativePrereqPromotion()
-		if iNative > -1 and GC.getGame().isOption(GameOptionTypes.GAMEOPTION_PROMOTIONS_NATIVE):
-			aList1.append((GC.getPromotionInfo(iNative).getButton(), "PROMO" + str(iNative), szLogic))
-			szLogic = szAnd
 		iType = CvThePromotionInfo.getPrereqPromotion()
 		if iType > -1:
 			aList1.append((GC.getPromotionInfo(iType).getButton(), "PROMO" + str(iType), szLogic))
@@ -99,7 +95,7 @@ class PediaPromotion:
 		aList2 = [] # Leads To
 		for iType in xrange(GC.getNumPromotionInfos()):
 			CvPromotionInfo = GC.getPromotionInfo(iType)
-			if iThePromotion in (CvPromotionInfo.getPrereqPromotion(), CvPromotionInfo.getPrereqOrPromotion1(), CvPromotionInfo.getPrereqOrPromotion2(), CvPromotionInfo.getNativePrereqPromotion()):
+			if iThePromotion in (CvPromotionInfo.getPrereqPromotion(), CvPromotionInfo.getPrereqOrPromotion1(), CvPromotionInfo.getPrereqOrPromotion2()):
 				aList2.append((CvPromotionInfo.getButton(), "PROMO" + str(iType)))
 		if aList1 or aList2:
 			iListLength1 = len(aList1)

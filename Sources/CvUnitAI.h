@@ -7,8 +7,6 @@
 
 #include "CvUnit.h"
 #include "GroupingParams.h"
-#include "NavalCommitment.h"
-#include "CivilianDecision.h"
 
 typedef enum
 {
@@ -20,7 +18,6 @@ typedef enum
 } ContractualState;
 
 class CvCity;
-class CvPlayerAI;
 class CvPlot;
 class CvReachablePlotSet;
 class CvSelectionGroup;
@@ -194,14 +191,6 @@ public:
      * Returns true if the unit is awaiting a contract.
      */
 	bool AI_isAwaitingContract() const;
-	bool AI_isAvailableForDefenseDemand() const;
-	int AI_defenderDemandForPlot(const CvPlot* target) const;
-	bool AI_fulfillDefenseDemand(const CvPlot* target,int maxTurns);
-	bool AI_continueDefenseDemand();
-	bool AI_hasDefenseDemandDestination() const;
-	static bool AI_canRegroupDefense(const CvUnit* source,const CvUnit* target);
-	bool AI_defenseDemandAdjacentAttack();
-	void AI_finishDefenseDemandContract() { contractFulfilled(); }
 
     /**
      * Returns true if the unit is awaiting an answer to a work request this turn
@@ -348,8 +337,6 @@ public:
      *   3. Return true if action taken.
      */
     bool AI_fulfillPropertyControlNeed();
-    static void AI_dispatchCityPropertyRequests(CvPlayerAI& player);
-    bool AI_followCityPropertyRequest();
 
     /**
      * Attempts to arrest units or criminals in the current plot.
@@ -410,7 +397,6 @@ public:
      *   4. Select the best group to join.
      *   5. Merge into the selected group and return true if successful.
      */
-    bool AI_rallyToStrongerGroup();
     bool AI_group(const GroupingParams& params);
 
     /**
@@ -442,7 +428,7 @@ public:
      *   2. Evaluate activity type and plot compatibility.
      *   3. Return true if allowed.
      */
-    bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI, bool bMergeWholeGroup = false) const;
+    bool AI_allowGroup(const CvUnit* pUnit, UnitAITypes eUnitAI) const;
 
     /**
      * Calculates the number of workers needed for a plot and build.
@@ -1186,7 +1172,6 @@ protected:
      *   3. Moves to city and assigns as defender.
      *   4. Returns true if a mission was pushed.
      */
-	bool AI_keepCityGuardPost(const CvCity* pCity);
 	bool AI_guardCity(bool bLeave = false, bool bSearch = false, int iMaxPath = MAX_INT);
 
     /**
@@ -1284,31 +1269,7 @@ protected:
      *   3. Moves to healing location or skips turn.
      *   4. Returns true if a mission was pushed.
      */
-    int m_aiNavalCommitment[NavalCommitment::COUNT];
-    CivilianDecision::State m_civilianDecision;
-    void AI_rememberCivilianDecision(int kind, const CvPlot* target, int range = 0);
-    bool AI_civilianDecisionContext() const;
-    std::vector<int> AI_civilianCitySites() const;
-    std::vector<int> AI_civilianLocalUnits() const;
-    std::vector<int> AI_civilianRouteEvidence(const CvPlot* target) const;
-    bool AI_continueWorkerRoute();
-    bool AI_continueSettlerEscort();
-    bool AI_continueFoundingMission();
-    void AI_requestSettlerEscort();
-    bool AI_canPlanColony() const;
-    bool AI_colonyShipCanReach(const CvUnit* ship, const CvPlot* target) const;
-    bool AI_continueOverseasSettlement();
-    bool AI_loadForColony(CvPlot* target);
-    int AI_colonyPassengers(const CvPlot* port) const;
-    void AI_rememberNavalCommitment(int kind, const CvPlot* target, int flags = 0,
-        MissionAITypes mission = NO_MISSIONAI, const CvUnit* passenger = NULL);
-    bool AI_continueNavalCommitment();
-    bool AI_continueNavalBoarding();
-    bool AI_navalPickupStillNeeded(const CvPlot* target);
-    bool AI_navalDeliveryStillUseful(const CvPlot* target);
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
-	bool AI_healingSafety(int iMaxPath);
-	bool AI_healingCity();
 
     /**
      * Handles post-attack actions for the unit.
@@ -1481,7 +1442,7 @@ protected:
      *   2. Moves to the plot and performs construction.
      *   3. Returns true if construction was performed.
      */
-	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 0, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false, bool doctrinesOnly = false);
+	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 0, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
 
     /**
      * Attempts to construct a heritage with this unit.
@@ -1491,7 +1452,7 @@ protected:
      *   2. Moves to the plot and performs construction.
      *   3. Returns true if construction was performed.
      */
-	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding, bool doctrinesOnly = false);
+	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 
     /**
      * Attempts to construct a building or heritage at a target plot.
@@ -1686,7 +1647,6 @@ protected:
      *   2. Selects the best city based on criteria.
      *   3. Returns a pointer to the target city.
      */
-	bool AI_isCachedTargetCityValid(const CvCity* city, bool huntBarbarians);
 	CvCity* AI_pickTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, bool bHuntBarbs = false);
 
     /**
@@ -1748,7 +1708,6 @@ protected:
      *   3. Returns true if attack was performed.
      */
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
-	bool AI_hasLocalAttackCandidate(int iSearchRange, int iOddsThreshold, int iMinStack, bool bAllowCities, class AttackCandidateMemo* memo = NULL);
 
     /**
      * Attempts a ranged bombardment on a plot.
@@ -1838,7 +1797,7 @@ protected:
      *   1. Evaluates strategic value and path turns.
      *   2. Returns the computed blockade value.
      */
-	int  AI_blockadeValue(const CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot, int iMinValue = 0, int iCityValue = -1) const;
+	int  AI_blockadeValue(const CvPlot* pLoopPlot, const CvCity* pCity, CvPlot*& endTurnPlot) const;
 
     /**
      * Attempts a pirate blockade.
@@ -1942,10 +1901,6 @@ protected:
      *   4. Returns true if ferry was performed.
      */
 	bool AI_settlerSeaFerry();
-	bool AI_bonusPlantBuild(const CvCity* city, CvPlot** job, BuildTypes* build) const;
-	bool AI_bonusPlantMove();
-	bool AI_workerFerryJob(const CvCity* city, bool* planterJob = NULL) const;
-	bool AI_workerFerryDestination(const CvUnitAI* ship) const;
 
     /**
      * Attempts a special sea transport mission for missionaries.
@@ -1978,7 +1933,6 @@ protected:
      *   3. Unloads air units if possible.
      *   4. Returns true if transport was performed.
      */
-	int AI_carrierPositionValue(const CvPlot* station, int airRange, std::vector<std::pair<int,int> >& targetValues) const;
 	bool AI_carrierSeaTransport();
 
     /**
@@ -2059,7 +2013,7 @@ protected:
      *   2. Moves to and builds improvement.
      *   3. Returns true if improvement was performed.
      */
-	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL, const std::vector<int>* bonusCandidates = NULL);
+	bool AI_improveBonus(int iMinValue = 0, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, int* piBestValue = NULL);
 
     /**
      * Attempts to improve a plot.

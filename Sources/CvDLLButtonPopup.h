@@ -70,12 +70,7 @@ private:
 	bool launchFoundReligionPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchGetSaveFormatPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchModifierRecalculationPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchRailRoadRevolutionMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchPrimitiveMapsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchMultipleImprovementsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchStackPromotionsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchNativePromotionsMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
-	bool launchMilitaryDoctrinesMigrationPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchNameListPopup(CvPopup* pPopup, CvPopupInfo &info);
 	bool launchGoToCityPopup(CvPopup* pPopup, CvPopupInfo &info);
 

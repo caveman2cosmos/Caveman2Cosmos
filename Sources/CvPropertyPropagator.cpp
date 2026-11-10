@@ -14,7 +14,6 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
-#include "CvGameAI.h"
 #include "CvInfos.h"
 #include "CvPropertyPropagator.h"
 #include "CvXMLLoadUtility.h"

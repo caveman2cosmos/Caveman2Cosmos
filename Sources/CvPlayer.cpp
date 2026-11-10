@@ -4,11 +4,6 @@
 #include "FProfiler.h"
 
 #include "CvGameCoreDLL.h"
-#include "UnitTravelConnectivity.h"
-#include "DoctrinePromotions.h"
-#include "DefenseNeedEvents.h"
-#include "TargetDecisionDiagnostics.h"
-#include "RailRoadRevolution.h"
 #include "StackPromotions.h"
 #include "CvArea.h"
 #include "CvArtFileMgr.h"
@@ -655,10 +650,6 @@ void CvPlayer::resetPlotAndCityData()
 
 void CvPlayer::uninit()
 {
-	invalidateOwnedPlotCandidates();
-	invalidateDefensivePostCandidates();
-	invalidateUnitRoleCandidates();
-	invalidateAirInterceptionCandidates();
 	PROFILE_EXTRA_FUNC();
 	SAFE_DELETE_ARRAY(m_paiImprovementCount);
 	SAFE_DELETE_ARRAY(m_paiFeatureHappiness);
@@ -1359,17 +1350,14 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 		m_pabAutomatedCanBuild = new bool [GC.getNumBuildInfos()];
 		//TB Traits begin
 		FAssertMsg(m_paiBuildWorkerSpeedModifierSpecific==NULL, "about to leak memory, CvPlayer::m_paiBuildWorkerSpeedModifierSpecific");
-		// Legacy saves serialize this per-build array using the improvement
-		// class/count. Keep that on-disk format readable even when the mod has
-		// more improvements than builds; the extra slots are compatibility
-		// padding, never new build actions. The writer needs the same capacity.
-		const int buildSpeedSlots = std::max(GC.getNumBuildInfos(), GC.getNumImprovementInfos());
-		m_paiBuildWorkerSpeedModifierSpecific = new int [buildSpeedSlots];
-		std::fill(m_paiBuildWorkerSpeedModifierSpecific, m_paiBuildWorkerSpeedModifierSpecific + buildSpeedSlots, 0);
+		m_paiBuildWorkerSpeedModifierSpecific = new int [GC.getNumBuildInfos()];
 		//TB Traits end
 		for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
 		{
 			m_pabAutomatedCanBuild[iI] = true;
+			//TB Traits begin
+			m_paiBuildWorkerSpeedModifierSpecific[iI] = 0;
+			//TB Traits end
 		}
 
 		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but it is used to allocate memory in CvPlayer::reset");
@@ -2039,26 +2027,6 @@ UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 		}
 	}
 	return eBestUnit;
-}
-
-// Existence query, not a best-unit selector. Preserve the original canTrain /
-// valuation order up to the first positive, available unit; no turn cache.
-bool CvPlayer::hasTrainableUnitForAI(UnitAITypes eUnitAI) const
-{
-    TARGET_DIAG_TIMER(ESCORT_AVAILABILITY);
-    TARGET_DIAG_COUNT(ESCORT_QUERIES, 1);
-    TARGET_DIAG_ACCUM(escortTypes, ESCORT_UNIT_TYPES);
-    for (int i = 0; i < GC.getNumUnitInfos(); ++i)
-    {
-        TARGET_DIAG_VISIT(escortTypes);
-        if (algo::none_of(cities(), CvCity::fn::canTrain((UnitTypes)i))) continue;
-        if (AI_unitValue((UnitTypes)i, eUnitAI, NULL) > 0)
-        {
-            TARGET_DIAG_COUNT(ESCORT_EXISTS, 1);
-            return true;
-        }
-    }
-    return false;
 }
 
 int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
@@ -2998,7 +2966,6 @@ bool CvPlayer::isCityNameValid(CvWString& szName, bool bTestDestroyed) const
 
 CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 {
-	DefenseNeedEvents::IgnoreTemporary ignoreTemporary(true);
 	if (m_pTempUnit)
 	{
 		if (m_pTempUnit->plot())
@@ -3013,7 +2980,6 @@ CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 	else
 	{
 		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
-		invalidateAirInterceptionCandidates(); // The unit iterator now excludes this temporary unit.
 		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(), -1); // This one doesn't count
 		removeGroupCycle(m_pTempUnit->getGroup()->getID());
 	}
@@ -3025,7 +2991,6 @@ CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 
 void CvPlayer::releaseTempUnit()
 {
-	DefenseNeedEvents::IgnoreTemporary ignoreTemporary(true);
 	//GC.getGame().logOOSSpecial(10, m_pTempUnit->getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
 	m_pTempUnit->setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 }
@@ -4213,7 +4178,9 @@ void CvPlayer::doTurnUnits()
 
 			if (eNonObsoleteBonus != NO_BONUS)
 			{
-				if (pLoopPlot->isImprovementBonusTrade(eNonObsoleteBonus))
+				const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+				if ((eImprovement != NO_IMPROVEMENT) && GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus))
 				{
 					m_guardableResourcePlots[iI] = eNonObsoleteBonus;
 				}
@@ -4879,9 +4846,13 @@ int CvPlayer::countUnimprovedBonuses(const CvArea* pArea, const CvPlot* pFromPlo
 			}
 			continue;
 		}
+		const ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
 		if (
-			// Already improved correctly on either layer?
-			pLoopPlot->isImprovementBonusTrade(eNonObsoleteBonus)
+			// Already improved correctly?
+			eImprovement != NO_IMPROVEMENT
+			&&
+			GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eNonObsoleteBonus)
 		|| // Unreachable?
 			pFromPlot
 			&&
@@ -7708,8 +7679,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	changeBuildingHappiness(kBuilding.getGlobalHappiness() * iChange);
 	changeWorkerSpeedModifier(kBuilding.getWorkerSpeedModifier() * iChange);
 	changeSpaceProductionModifier(kBuilding.getGlobalSpaceProductionModifier() * iChange);
-	if (!DoctrinePromotions::isFoundation(eBuilding) || DoctrinePromotions::enabled())
-		changeCityDefenseModifier(kBuilding.getAllCityDefenseModifier() * iChange);
+	changeCityDefenseModifier(kBuilding.getAllCityDefenseModifier() * iChange);
 
 	changeUnitUpgradePriceModifier(kBuilding.getUnitUpgradePriceModifier() * iChange);
 	changeRevIdxNational(kBuilding.getRevIdxNational() * iChange);
@@ -7785,25 +7755,15 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisibl
 {
 	PROFILE_FUNC();
 
+	if (pPlot && !pPlot->canBuild(eBuild, getID(), bTestVisible, bIncludePythonOverrides))
+	{
+		return false;
+	}
+
 	const CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
 	if (kBuild.isDisabled()
 	||	kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech(kBuild.getObsoleteTech()))
-	{
-		return false;
-	}
-
-	// Reject globally unavailable actions before plot geometry, improvement and
-	// optional Python checks. These same requirements used to be checked below.
-	const TechTypes eTechPrereq = kBuild.getTechPrereq();
-	const bool bCheckPrerequisites = pPlot && (!bTestVisible
-		|| eTechPrereq != NO_TECH && getCurrentEra() < GC.getTechInfo(eTechPrereq).getEra());
-	if (bCheckPrerequisites && eTechPrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(eTechPrereq))
-	{
-		return false;
-	}
-
-	if (pPlot && !pPlot->canBuild(eBuild, getID(), bTestVisible, bIncludePythonOverrides))
 	{
 		return false;
 	}
@@ -7817,8 +7777,15 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisibl
 			return false;
 		}
 
-		if (bCheckPrerequisites)
+		const TechTypes eTechPrereq = kBuild.getTechPrereq();
+
+		if (!bTestVisible || eTechPrereq != NO_TECH && getCurrentEra() < GC.getTechInfo(eTechPrereq).getEra())
 		{
+			if (eTechPrereq != NO_TECH && !GET_TEAM(getTeam()).isHasTech(eTechPrereq))
+			{
+				return false;
+			}
+
 			if (kBuild.getRoute() == NO_ROUTE || GC.getGame().isOption(GAMEOPTION_ADVANCED_ROUTES) || GC.getRouteInfo((RouteTypes)kBuild.getRoute()).isSeaTunnel())
 			{
 				{
@@ -7886,11 +7853,11 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 	int iCost = GC.getBuildInfo(eBuild).getCost();
 	if (iCost != 0)
 	{
-		if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteTypeForBuild((RouteTypes)GC.getBuildInfo(eBuild).getRoute()) != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
+		if (GC.getBuildInfo(eBuild).getRoute() != NO_ROUTE && pPlot->getRouteType() != NO_ROUTE && GC.getDefineINT("ROUTES_UPGRADE") > 0)
 		{
 			for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 			{
-				if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteTypeForBuild((RouteTypes)GC.getBuildInfo(eBuild).getRoute()))
+				if (GC.getBuildInfo((BuildTypes)iI).getRoute() == pPlot->getRouteType())
 				{
 					iCost = std::max(0, iCost - GC.getBuildInfo((BuildTypes)iI).getCost());
 					break;
@@ -7906,12 +7873,9 @@ int CvPlayer::getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const
 // Checks route validity from either plot/builder specific standpoint or player in-general standpoint based on args
 bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const
 {
-	// Reject unsupported actions before terrain/resource/Python build checks.
-	if (pBuilder != NULL && !pBuilder->hasBuild(eRouteBuild)) return false;
 	// Player in general; have tech reqs and not obsolete?
 	if (pPlot == NULL)
 	{
-		if (GC.getBuildInfo(eRouteBuild).isDisabled()) return false;
 		if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
 		|| GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
 		&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
@@ -7919,11 +7883,11 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvP
 			return false;
 		}
 	}
-	else if (pBuilder == NULL && pPlot->getRouteTypeForBuild(eRoute) != eRoute && !canBuild(pPlot, eRouteBuild))
+	else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
 	{
 		return false;
 	}
-	// Unit canBuild already includes the player check; do it only once.
+	// unit specific query; Cv::Unit canBuild is big func...
 	return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
 }
 
@@ -7936,15 +7900,12 @@ RouteTypes CvPlayer::getBestRoute(const CvPlot* pPlot, bool bConnect, const CvUn
 	if (m_eBestRoute == NO_ROUTE)
 	{
 		// Set cache to the best route by tech level ignoring unit capability/map behavior
-		// The shared preference must not depend on the first queried tile.
-		m_eBestRoute = getBestRouteInternal(NULL, true, NULL, &m_eBestRouteBuild);
+		m_eBestRoute = getBestRouteInternal(pPlot, bConnect, NULL, &m_eBestRouteBuild);
 	}
 
-	if (m_eBestRoute != NO_ROUTE && (!RailRoadRevolution::enabled() || pPlot==NULL || bConnect || !GC.getRouteInfo(m_eBestRoute).isRailInfrastructure() || RailRoadRevolution::usefulRailPlot(*pPlot,getID())))
+	if (m_eBestRoute != NO_ROUTE && isRouteValid(m_eBestRoute, m_eBestRouteBuild, pPlot, pBuilder))
 	{
-		if (isRouteValid(m_eBestRoute, m_eBestRouteBuild, pPlot, pBuilder)) return m_eBestRoute;
-		// Only this exact action was rejected; another build for the same route may work.
-		return getBestRouteInternal(pPlot, bConnect, pBuilder, NULL, m_eBestRouteBuild);
+		return m_eBestRoute;
 		/* Blaze - Possible temporary hack to work around routes with same value. System MUST be overhauled if more are included...
 		// Maybe store a bool per plot if tile has best route available, updating whenever improvement change/relevant tech acquired/worker on plot/etc?
 		if (pPlot == NULL ||
@@ -7960,8 +7921,6 @@ RouteTypes CvPlayer::getBestRoute(const CvPlot* pPlot, bool bConnect, const CvUn
 // Find the yield difference from current plot yield for given yieldType, if eRoute is placed on pPlot
 int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const
 {
-	// Building the independent road layer leaves an existing railway's yields intact.
-	if (RailRoadRevolution::enabled() && pPlot->getRailRouteType() != NO_ROUTE && !GC.getRouteInfo(eRoute).isRailInfrastructure()) return 0;
 	// We're always gaining the yield type from the proposed route to place; might need to subtract existing route/improvement yields though.
 	int iYield = GC.getRouteInfo(eRoute).getYieldChange(eYield);
 
@@ -7988,33 +7947,20 @@ int CvPlayer::calculatePlotRouteYieldDifference(const CvPlot* pPlot, const Route
 }
 
 
-RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild, BuildTypes eRejectedBuild) const
+RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild) const
 {
 	PROFILE_EXTRA_FUNC();
 	int iBestValue = 0;
 	RouteTypes eBestRoute = NO_ROUTE;
 
-	const bool revolution=RailRoadRevolution::enabled();
-    const std::vector<BuildTypes>& routeBuilds=RailRoadRevolution::routeBuilds();
-    const int numBuildInfos=revolution?(int)routeBuilds.size():GC.getNumBuildInfos();
-    const bool railUseful=revolution&&(pPlot==NULL||bConnect||RailRoadRevolution::usefulRailPlot(*pPlot,getID()));
+	const int numBuildInfos = GC.getNumBuildInfos();
 
 	// Find best valid route; xml value most important, tiebreakers in form of yield change and cost.
 	for (int iI = 0; iI < numBuildInfos; iI++)
 	{
-		const BuildTypes build = revolution ? routeBuilds[iI] : (BuildTypes)iI;
-		if (build == eRejectedBuild) continue;
-		const CvBuildInfo& routeBuild = GC.getBuildInfo(build);
-		const RouteTypes eRoute = (RouteTypes)routeBuild.getRoute();
-		if (revolution && eRoute != NO_ROUTE && GC.getRouteInfo(eRoute).isRailInfrastructure() && !railUseful) continue;
-		// Mandatory unit/player prerequisites, before plot yields or Python legality.
-		// Keep NULL-builder queries unchanged: an existing route can bypass them.
-		if (eRoute != NO_ROUTE && pBuilder != NULL && (!pBuilder->hasBuild(build) || routeBuild.isDisabled()
-			|| (routeBuild.getTechPrereq() != NO_TECH && !GET_TEAM(pBuilder->getTeam()).isHasTech(routeBuild.getTechPrereq()))
-			|| (routeBuild.getObsoleteTech() != NO_TECH && GET_TEAM(pBuilder->getTeam()).isHasTech(routeBuild.getObsoleteTech())))) continue;
+		const RouteTypes eRoute = (RouteTypes)GC.getBuildInfo((BuildTypes)iI).getRoute();
 
-		// Score first: a route that cannot beat the incumbent needs no build query.
-		if (eRoute != NO_ROUTE)
+		if (eRoute != NO_ROUTE && isRouteValid(eRoute, (BuildTypes)iI, pPlot, pBuilder))
 		{
 			int iValue = 0;
 
@@ -8022,20 +7968,20 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 			if (bConnect)
 			{
 				iValue  = 1000 * GC.getRouteInfo(eRoute).getValue();
-				iValue -= GC.getBuildInfo(build).getCost();
+				iValue -= GC.getBuildInfo((BuildTypes)iI).getCost();
 			}
 			// if AI is in trouble, only consider cost and nothing else
 			else if (AI_isFinancialTrouble())
 			{
-				iValue = 1000 - GC.getBuildInfo(build).getCost();
+				iValue = 1000 - GC.getBuildInfo((BuildTypes)iI).getCost();
 			}
 			else
 			{
 				iValue = 1000 * GC.getRouteInfo(eRoute).getValue();
-				if (pPlot->getRouteTypeForBuild(eRoute) != NO_ROUTE)
+				if (pPlot->getRouteType() != NO_ROUTE)
 				{
 					// Parallel upgrade check
-					iValue -= 1000 * GC.getRouteInfo(pPlot->getRouteTypeForBuild(eRoute)).getValue();
+					iValue -= 1000 * GC.getRouteInfo(pPlot->getRouteType()).getValue();
 				}
 
 				// Add (or subtract!) value based on yield diffs
@@ -8046,20 +7992,19 @@ RouteTypes CvPlayer::getBestRouteInternal(const CvPlot* pPlot, bool bConnect, co
 				}
 				iValue += 100 * iYieldSum;
 
-				iValue -= GC.getBuildInfo(build).getCost();
+				iValue -= GC.getBuildInfo((BuildTypes)iI).getCost();
 
 				// Extra movement is dependant on unit speed; iMovement != iFlatMovement, so this isn't a very useful measure...
 				// iValue += std::max(0, baseMoves / std::min(baseMoves, GC.getRouteInfo(eRoute).getMovementCost()) - 1);
 			}
 
-			if(revolution && GC.getRouteInfo(eRoute).isRailInfrastructure())iValue+=100000;
-			if (iValue > iBestValue && isRouteValid(eRoute, build, pPlot, pBuilder))
+			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
 				eBestRoute = eRoute;
 				if ( eBestRouteBuild )
 				{
-					*eBestRouteBuild = build;
+					*eBestRouteBuild = (BuildTypes)iI;
 				}
 			}
 		}
@@ -8433,10 +8378,10 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 							{
 								knownExp += GC.getDefineFLOAT("TECH_DIFFUSION_TRADE_CONNECTED_BONUS");
 								break;
+							}
+						}
 					}
 				}
-			}
-		}
 			}
 		}
 
@@ -9456,7 +9401,7 @@ void CvPlayer::killGoldenAgeUnits(CvUnit* pUnitAlive)
 
 					if (pUnitAlive)
 					{
-					iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
+						iValue /= (plotDistance(pLoopUnit->getX(), pLoopUnit->getY(), pUnitAlive->getX(), pUnitAlive->getY()) + 1);
 					}
 
 					if (iValue > iBestValue)
@@ -10770,7 +10715,6 @@ void CvPlayer::changeHappyPerMilitaryUnit(int iChange, bool bLimited)
 	if (iChange != 0)
 	{
 		m_iHappyPerMilitaryUnit += iChange;
-		DefenseNeedEvents::changed();
 
 		if (!bLimited)
 		{
@@ -12877,7 +12821,6 @@ void CvPlayer::setCurrentEra(EraTypes eNewValue)
 	{
 		EraTypes eOldEra = m_eCurrentEra;
 		m_eCurrentEra = eNewValue;
-        DefenseNeedEvents::changed();
 
 		// Toffer - Heritage may change commerce output with era.
 		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
@@ -13068,8 +13011,6 @@ void CvPlayer::updateTeamType()
 
 void CvPlayer::setTeam(TeamTypes eTeam)
 {
-    UnitTravelConnectivity::Change travelChange(getTeam()!=eTeam);
-
 	PROFILE_EXTRA_FUNC();
 	FAssert(eTeam != NO_TEAM);
 
@@ -13851,7 +13792,6 @@ int CvPlayer::getImprovementCount(ImprovementTypes eIndex) const
 
 void CvPlayer::changeImprovementCount(ImprovementTypes eIndex, int iChange)
 {
-	if (iChange != 0) invalidateDefensivePostCandidates();
 	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), eIndex);
 	m_paiImprovementCount[eIndex] += iChange;
 	FASSERT_NOT_NEGATIVE(getImprovementCount(eIndex));
@@ -14048,18 +13988,18 @@ bool CvPlayer::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra, const Un
 
    if (iMaxUnits == 5)
    {
-	const int iInitialLimitOverride = GC.getDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", -1);
-	if (iInitialLimitOverride >= 0)
-	{
-		iMaxUnits = iInitialLimitOverride;
-	}
+   	const int iInitialLimitOverride = GC.getDefineINT("NATIONAL_UNIT_LIMIT_INITIAL", -1);
+   	if (iInitialLimitOverride >= 0)
+   	{
+   		iMaxUnits = iInitialLimitOverride;
+   	}
 
-	const int iPerEraScale = GC.getDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", 5);
+   	const int iPerEraScale = GC.getDefineINT("NATIONAL_UNIT_LIMIT_PER_ERA", 5);
    	int iEra = getCurrentEra(); // 0 = Prehistoric, 1 = Ancient, etc.
 
    	if (iEra > 0)
    	{
-		iMaxUnits += iEra * iPerEraScale;
+   		iMaxUnits += iEra * iPerEraScale;
    	}
    }
 
@@ -15587,101 +15527,14 @@ CvUnit* CvPlayer::getUnit(int iID) const
 	return m_units[CURRENT_MAP]->getAt(iID);
 }
 
-const std::vector<int>& CvPlayer::getOwnedPlotIndices() const
-{
-	if (!m_ownedPlotCandidates.ready(CURRENT_MAP))
-	{
-		m_ownedPlotCandidates.begin(CURRENT_MAP);
-		for (int i = 0; i < GC.getMap().numPlots(); ++i)
-		{
-			if (GC.getMap().plotByIndex(i)->getOwner() == getID()) m_ownedPlotCandidates.append(i);
-		}
-		m_ownedPlotCandidates.complete();
-	}
-	return m_ownedPlotCandidates.get();
-}
-
-const std::vector<int>& CvPlayer::getDefensivePostPlotIndices() const
-{
-	if (!m_defensivePostCandidates.ready(CURRENT_MAP))
-	{
-		m_defensivePostCandidates.begin(CURRENT_MAP);
-		for (int i = 0; i < GC.getMap().numPlots(); ++i)
-		{
-			const CvPlot* tile = GC.getMap().plotByIndex(i);
-			if (tile->getOwner() != getID()) continue;
-			const ImprovementTypes improvement = tile->getMilitaryImprovementType();
-			if (improvement != NO_IMPROVEMENT &&
-				(GC.getImprovementInfo(improvement).isMilitaryStructure() ||
-				 GC.getImprovementInfo(improvement).isUpgradeRequiresFortify() ||
-			 GC.getImprovementInfo(improvement).isActsAsCity()))
-			{
-				m_defensivePostCandidates.append(i);
-			}
-		}
-		m_defensivePostCandidates.complete();
-	}
-	return m_defensivePostCandidates.get();
-}
-
-const std::vector<CvUnit*>& CvPlayer::getUnitsByAIRole(UnitAITypes role) const
-{
-	if (!m_unitRoleCandidates.ready(CURRENT_MAP))
-	{
-		m_unitRoleCandidates.begin(CURRENT_MAP);
-		// Exactly the original unit-iterator order, including its temp-unit filter.
-		foreach_(CvUnit* unit, units())
-		{
-			m_unitRoleCandidates.append(unit->AI_getUnitAIType(), unit);
-		}
-		m_unitRoleCandidates.complete();
-	}
-	return m_unitRoleCandidates.get(role);
-}
-
-const std::vector<CvUnit*>& CvPlayer::getAirInterceptionCandidates() const
-{
-    TARGET_DIAG_COUNT(INDEX_QUERIES,1);
-    // Commanders and exact stack effects can grant interception to a unit with
-    // no intrinsic ability. Keep the full ordered list in those contexts.
-    const bool intrinsicOnly = !GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMANDERS)
-        && !GC.getGame().isOption(GAMEOPTION_UNIT_GREAT_COMMODORES)
-        && !(StackPromotions::enabled() && StackPromotions::detailed());
-    if (!m_airInterceptionCandidates.ready(CURRENT_MAP))
-    {
-        TARGET_DIAG_TIMER(INDEX_BUILD);
-        TARGET_DIAG_COUNT(INDEX_BUILDS,1);
-        TARGET_DIAG_LOCAL(visited);
-        m_airInterceptionCandidates.begin(CURRENT_MAP);
-        foreach_(CvUnit* unit, units())
-        {
-            TARGET_DIAG_VISIT(visited);
-            const bool intrinsic = unit->getUnitInfo().getInterceptionProbability()!=0
-                || unit->getExtraIntercept(true,true,true)!=0;
-            m_airInterceptionCandidates.append(unit,intrinsic);
-        }
-        m_airInterceptionCandidates.complete();
-        TARGET_DIAG_COUNT(INDEX_VISITS,visited);
-    }
-    const std::vector<CvUnit*>& result=m_airInterceptionCandidates.get(intrinsicOnly);
-    TARGET_DIAG_COUNT(INDEX_RETURNED,result.size());
-    TARGET_DIAG_COUNT(INDEX_FILTERED_OUT,m_airInterceptionCandidates.get(false).size()-result.size());
-    TARGET_DIAG_COUNT(INDEX_FALLBACK,!intrinsicOnly);
-    return result;
-}
-
 CvUnit* CvPlayer::addUnit()
 {
-	invalidateUnitRoleCandidates();
-	invalidateAirInterceptionCandidates();
 	return m_units[CURRENT_MAP]->add();
 }
 
 
 void CvPlayer::deleteUnit(int iID)
 {
-	invalidateUnitRoleCandidates();
-	invalidateAirInterceptionCandidates();
 	m_units[CURRENT_MAP]->removeAt(iID);
 }
 
@@ -19094,10 +18947,6 @@ void CvPlayer::setPbemNewTurn(bool bNew)
 //
 void CvPlayer::read(FDataStreamBase* pStream)
 {
-	invalidateOwnedPlotCandidates();
-	invalidateDefensivePostCandidates();
-	invalidateUnitRoleCandidates();
-	invalidateAirInterceptionCandidates();
 	PROFILE_EXTRA_FUNC();
 
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
@@ -20503,7 +20352,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 	}
 	// Toffer - To stop auto end turn on decision-less turns from kicking in immediately when loading a save
 	setTurnHadUIInteraction(true);
-	invalidateAirInterceptionCandidates();
 }
 
 //
@@ -27889,9 +27737,6 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		return;
 	}
 	int iConsumption = 0;
-	// XML associations cover every bonus effect summed below. Reuse the
-	// registry rather than copying/scanning every city building per bonus.
-	const std::vector<BuildingTypes>& associatedBuildings = GC.getBonusAssociatedBuildings(eBonus);
 
 	for (city_iterator cityIt = beginCities(); cityIt != endCities(); ++cityIt)
 	{
@@ -27958,27 +27803,32 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		}
 
 		// --- Building Effects ---
-		int aiBaseYieldRate[NUM_YIELD_TYPES];
-		for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
-			aiBaseYieldRate[iJ] = cityX->getBaseYieldRate((YieldTypes)iJ);
-		for (std::vector<BuildingTypes>::const_iterator bldIt = associatedBuildings.begin(); bldIt != associatedBuildings.end(); ++bldIt)
+		const std::vector<BuildingTypes>& hasBuildings = cityX->getHasBuildings();
+		for (std::vector<BuildingTypes>::const_iterator bldIt = hasBuildings.begin(); bldIt != hasBuildings.end(); ++bldIt)
 		{
-			const BuildingTypes eTypeX = *bldIt;
-			if (!cityX->hasBuilding(eTypeX) || cityX->isDisabledBuilding(eTypeX)) continue;
+			BuildingTypes eTypeX = *bldIt;
+			if (cityX->isDisabledBuilding(eTypeX))
+				continue;
+
 			const CvBuildingInfo& buildingX = GC.getBuildingInfo(eTypeX);
-			iConsumption += buildingX.getBonusHappinessChanges().getValue(eBonus) * 12
-				+ buildingX.getBonusHealthChanges().getValue(eBonus) * 8
-				+ buildingX.getBonusDefenseChanges(eBonus);
-			const int* changes = buildingX.isAnyBonusYieldChanges() ? buildingX.getBonusYieldChangesArray(eBonus) : NULL;
-			const int* modifiers = buildingX.isAnyBonusYieldModifiers() ? buildingX.getBonusYieldModifierArray(eBonus) : NULL;
-			if (changes || modifiers)
+			iConsumption += (
+					buildingX.getBonusHappinessChanges().getValue(eBonus) * 12
+				+	buildingX.getBonusHealthChanges().getValue(eBonus) * 8
+				+	buildingX.getBonusDefenseChanges(eBonus)
+			);
+
 			for (int iJ = 0; iJ < NUM_YIELD_TYPES; ++iJ)
-					iConsumption += (changes ? changes[iJ] * 3 : 0)
-						+ (modifiers ? modifiers[iJ] * aiBaseYieldRate[iJ] / 33 : 0);
-			const int* commerce = buildingX.isAnyBonusCommerceModifiers() ? buildingX.getBonusCommerceModifierArray(eBonus) : NULL;
-			if (commerce)
+			{
+				int baseYield = cityX->getBaseYieldRate((YieldTypes)iJ);
+				iConsumption += (
+						buildingX.getBonusYieldChanges(eBonus, iJ) * 3
+					+ buildingX.getBonusYieldModifier(eBonus, iJ) * baseYield / 33
+				);
+			}
 			for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; ++iJ)
-					iConsumption += aiBaseCommerceRate[iJ] * commerce[iJ] / 33;
+			{
+				iConsumption += aiBaseCommerceRate[iJ] * buildingX.getBonusCommerceModifier(eBonus, iJ) / 33;
+			}
 		}
 	}
 
@@ -29351,8 +29201,6 @@ void CvPlayer::processTrait(TraitTypes eTrait, int iChange)
 
 void CvPlayer::recalculateModifiers()
 {
-	invalidateOwnedPlotCandidates();
-	invalidateDefensivePostCandidates();
 	PROFILE_EXTRA_FUNC();
 	OutputDebugString("\nStarting recalculateModifiers...");
 
@@ -29740,37 +29588,28 @@ void CvPlayer::processNewRoutes()
 bool CvPlayer::canHaveBuilder(BuildTypes eBuild) const
 {
 	PROFILE_EXTRA_FUNC();
-	// Nonnegative entries name a live owned witness. Revalidate the unit and
-	// its current build actions, so death, transfer and extra-build changes
-	// require no new invalidation mechanism. Negative entries retain the
-	// existing per-turn canTrain result: -1 trainable, -2 unavailable.
-	std::map<int, int>::const_iterator itr = m_canHaveBuilder.find((int)eBuild);
+	std::map<int, bool>::const_iterator itr = m_canHaveBuilder.find((int)eBuild);
+
 	if (itr != m_canHaveBuilder.end())
 	{
-		if (itr->second < 0) return itr->second == -1;
-		const CvUnit* witness = getUnit(itr->second);
-		if (witness != NULL && witness != m_pTempUnit && witness->hasBuild(eBuild)) return true;
+		return itr->second;
 	}
+	bool hasSuitableUnit = algo::any_of(units(), CvUnit::fn::hasBuild(eBuild));
 
-	foreach_(const CvUnit* unit, units())
+	if (!hasSuitableUnit)
 	{
-		if (unit->hasBuild(eBuild))
-		{
-			m_canHaveBuilder[eBuild] = unit->getID();
-			return true;
-		}
-	}
-	bool trainable = false;
-	for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		// Could we build one?
+		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
 			if (GC.getUnitInfo((UnitTypes)iI).hasBuild(eBuild) && canTrain((UnitTypes)iI))
 			{
-			trainable = true;
+				hasSuitableUnit = true;
 				break;
 			}
 		}
-	m_canHaveBuilder[eBuild] = trainable ? -1 : -2;
-	return trainable;
+		m_canHaveBuilder[eBuild] = hasSuitableUnit;
+	}
+	return hasSuitableUnit;
 }
 
 
@@ -31780,7 +31619,7 @@ void CvPlayer::deleteArmy(int iArmyID)
 	if (pArmy != NULL)
 	{
 		pArmy->disband();       // nettoyer les groupes
-		m_armies.removeAt(iArmyID);
+		m_armies.removeAt(iArmyID); // supprime lâ€™objet de la liste
 	}
 }
 

@@ -103,14 +103,9 @@
 	<load mod="CaptureSlaves"/>
 	<load mod="Partisan"/>
 	<load mod="InitMilitaryPromos"/>
-	<load mod="NativePromotions"/>
-	<load mod="MilitaryDoctrines"/>
 	<load mod="NaturalWonders"/>
-	<load mod="PrimitiveMaps"/>
-	<load mod="MultipleImprovements"/>
 	<load mod="GreatPersonBornDisplay"/>
 	<event type="kbdEvent" module="ParallelMapsInput" function="handleInput"/>
 	<events module="WoodlandCycle"/>
-	<load mod="RailRoadRevolution"/>
 	<events module="VolcanoCycle"/>
 </bug>
