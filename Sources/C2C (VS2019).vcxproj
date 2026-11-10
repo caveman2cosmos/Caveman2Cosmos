@@ -407,6 +407,7 @@
     <ClInclude Include="CounterSet.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
+    <ClInclude Include="CvSafetyPruning.h" />
     <ClInclude Include="CvSettlerAI.h" />
     <ClInclude Include="CvValueService.h" />
     <ClInclude Include="CvWorkerAI.h" />

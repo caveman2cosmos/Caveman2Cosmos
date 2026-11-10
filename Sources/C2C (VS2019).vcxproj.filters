@@ -839,6 +839,9 @@
     <ClInclude Include="CvUnitAI.h">
       <Filter>Source\Base\Unit</Filter>
     </ClInclude>
+    <ClInclude Include="CvSafetyPruning.h">
+      <Filter>Source\Base\Unit\Capabilities</Filter>
+    </ClInclude>
     <ClInclude Include="CvWorkerAI.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClInclude>
